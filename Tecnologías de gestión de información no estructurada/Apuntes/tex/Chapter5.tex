@@ -1,0 +1,159 @@
+\chapter{Motores de búsqueda}\label{Chapter5} 
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+\section{Componentes de los motores de búsqueda}
+
+Sea un buscador de proposito general o especializado (vertical o corporativo) los motores de búsqueda tienen una serie de componentes comunes que se pueden identificar en todos ellos. A continuación se describen los componentes más comunes de un motor de búsqueda:
+\begin{itemize}
+\item Tokenizador. Convierte las cadenas de texto curdas en \textit{tokens}. Esto se debe hacer bien y de forma homogenea en todas las partes del sistema, o de lo contrario afectará a las mismas.
+\item Índice. Indexa los documentos en estructuras de datos apropiadas contra las que se puede buscar. Esto se puede hacer offline, pero debe ser rapido con una cantidad limitada de memoria. En colecciones dinamicas se debe poder borrar, añadir y modificar elementos.
+\item \textit{Scorer}/\textit{Ranker}. Recibe una consulta y, yendo contra el índice, devuelve una lista rankeada de documentos. Este si es online y debe ser rapido. 
+\item En algunos casos hay \textit{feedback} del usuario. Si se tiene, ese ciclo de \textit{feedback} puede retroalimentar al sistema para hacer una búsqueda mejor.  El \textit{relevance feedback} no es muy realista, al ser los usuarios poco propensos a participar. Para eso se tiene el \textit{pseudofeedback}. Aqui el buscador asume que el top 5-10 son muy relevantes. Busca y mejora la búsqueda en base a minería en esos documentos (en general, mejora el rendimiento aunque a  veces falla en gran medida). 
+\end{itemize}
+
+Desde el punto de vista de la eficiencia, hay que mejorar la velocidad y el uso del disco. Para ello, los sistemas incorporan una estructura de índice invertido (se llama así porque en origen se buscan documentos y en ellos palabras, pero al buscar en una consulta se quiere de palabras a documentos). 
+
+Desde el punto de vista de la eficiencia, hay que Por supuesto, uso de el uso de ahorrar lo más posible en disco entonces por ejemplo sistemas incorporados en la estructura de índice invertido (es la forma de buscar de los motores de busqueda, 
+
+
+no se guardan en origen sino comprimidos. En el caso de la web, el posting list(PL) es muy grande y es el gran peso de la estructura de datos. Esta lista se comprime y gano dos cosas: espacio en disco (el posting list debe estar en disco) y auqnue haya que descomprimir, es mas rapido que haberlo guardado todo en disco.
+
+Otro elemenot importante es el tema de los caches para por ejemplo guardar terminos muy frecuentes, y guardar en cache el posting list de ese termino o incluso los resultados de la busqueda. 
+
+\section{Tokenizadores}
+
+ademas de tokenizar puede ir acumulando el numero de apariciones de cada token, lo que puede servir para fases posteriores de scoring. No mete pesos TFIDf. El IDF es una metrica global del corpus, por lo que al procesar el documento no se puede calcular la IDF de un termino. La forma del TF depende del modelo de busqueda que se vaya a usar. Es posterior porque si lo hace el tokenizar, este solo serviria para ese modelo explicito. 
+
+
+\subsection{Doc and term IDs}
+
+como el tokenizador hace un parseado basico del texto, tambien puede asignar ids de documentos (los numeros que van al pl). Es mas eficiente guardar los numeros en el indice que todo el texto de una URL. Las palabras del vocabulario tendran un identificador cada una. A medida que detecta nuevas palabras asignara nuevos numeros. La mayoria de las dimensiones tendran cuenta de cero al ser todo el vocabulario. REpresentacion sparse muchos ceros y pocos numeros
+
+
+Vectorización Representacion numerico de los textos 
+
+
+\section{Indexador}
+
+Produce el indice invertido con sus dos partes, la posting list (lista de ocurrencia) con ocurrencias y el vocabulario o lexicon. Indexa datos mas grandes que la memoria del ordenador que la esta haciendo . Por tanto, no cabe todo el indice en memoria, se deberan guardar subindices por ejemplo y luego mezclar. El indice esta pensado para recuperar informacion o estadisticas de los terminos de forma rapida. Seria inviable ir por cada documento buscando una palabra. 
+
+Lexicon: una tabla de información específica de cada termino. 
+
+Por defecto, se guarda la posting list por orden de docID para facilitar la compresión. La PL es mucho mayor que el vocabulario. Se asume que el lexicon puede caber en memoria. Lo bueno de este proceso es que es muy paralelizable. Paralalizamos el parseado, cada una de ellas emite informacion de clave valor (termino, docID) (proceso de map) y luego se recoge y se da la posting list ordenada por docID en un proceso de reduce. El tamaño lo conoce porque sabe cuantos se han emitido para cada clave. 
+
+SORTING-BASED INDEXING
+
+este proceso en esencia lo que hace es meter cosas en un indice parcial (invertido) hasta llenar la memoria y, al alcanzar ese limite, se vuelca a disco el indice incompleto y sigue con el siguiente. De este modo, se tiene gran cantidad de indices invertidos incompletos en disco. PAra mezclarlo se usa un algoritmo de merge que los mezcla dos a dos. Esto es relativamente rapido. 
+
+
+FORWAR INDEX 
+
+El indice invetido es la Estructura de datos basica para que las busquedad vayan rapido. 
+
+Tambien existe sin embargo el indice directo, de documentos a palabras. Este indice se usa para mostrar los resultados de la busqueda (un titulo y un snippet) al usuario. El snippet es dinamico, depende de la consulta. PAra hacer el snippet rapido se necesita el indice directo, ya que se debe hacer online. 
+
+Scorer
+
+El scorer solo tira contra el indice . Los docuemntos que no tienen ninguna palabra de la query no entran en el juego de aparecer en el ranking (en los metodos clasicos, los neuronales son otro rollo).
+
+Para hacer este ranking, una forma es term ar a time. Si la query es a, b, c, primero hago a luego b y luego c. Cualquier formula de scoring clasica de las vistas, se tiene un sumatorio de los matching terms y dentro un peso que puede variar de mas a menos sofisticado. Sumar el score de a, el de b y el de c, para cada w en la query. Pregunto al indice los documentos que tiene con w, y devuelve las entradas de la posting list para w, en que documentos esta y cuantas veces en cada uno. Se mira el score de cada documento por tener esa palabra y se obtiene el score parcial de los documentos en cuanto a su contribucion al score parcial de una parte de la query (acumuladores). Al final se tiene un score de cada documento y se ordena en un top k. Esto tiene el problema de que hay muchos documentos que entren a puntuar , y se deben guardar hasta el final. 
+
+APra paliar esto de tiene DOC AT A time
+
+Cada vez que encuentro un documento, se calcula el score total de ese documento. Esto permite mantener guardados solo los k mejores acumuladores y uno nuevo solo entra si es mejor que el peor de los k.
+
+
+
+FILTERING DOCUMETNS 
+
+Solo documentos que cumplan un criterio un filtrado booleano
+
+
+INDEX SHARDING 
+
+En realidad el indice esta troceado en varias maquina.
+
+
+CACHE
+
+Pueden servir para muchas cosas. En la realidad, los buscadores web personalizan los rankings en funcion del usuario, por lo que en sistemas de gran personalizacion es dificil reusar una query anterior, aunque sea de hace 2 segundos. 
+
+La cache no puede ser infinita y para manejar a quien se echa de la cache se usan algoritmos tipo menor recientemente usado (LRU). En un caso ideal se puede reusar toda la query. A veces preguntan algo parecido, por lo que si me quee la posting list, me ahorro buscar en disco y la descompresión de los terminos de antes. 
+
+La mayoria de las queries son unicas y algunas se repiten mucho, lo que hace que guardarlas en cache sea recomendable (Zipf law)
+
+
+
+
+
+
+
+
+TEMA 6 - Evaluacion de sistemas de busqueda
+
+Tradicionalmente se viene haciendo de varias formas con medidas que reflejan la utilidad de personas reales  en la aplicacion. PAra ello se pueden hacer estudios de usuario (user studies). 
+
+
+QUE VAMOS A MEDIR 
+
+ALgo fundamental para estos sistemas, que da como de relevante son los resultados para la busqueda. REsume un bechmark de retrieval (CRANFIEL EVALUATIOM) debe tener un banco de documentos sobre el que buscar, tener casos de prueba y, el cuello de botella, hay que saber cuales son los documentos relevantes del corpus para cada caso de busqueda. Es el cuello de botella para construir el benchmark porque es facil conseguir documentos y consultas, haciendo crawling en la web, pero es dificil saber cuales son relevantes.
+
+Una vez que tenemos los tres ingredientes, necesitamos metricas que cuantfiquen como de bien el sistema responde a esas busquedas. eSto configura una comparación justa. Construir el bencharm puede ser costoso, pero una vez hecho, se puede usar indefinidamente (reusabilidad). 
+
+FIgure 9.1. Imaginemos una query Q1. Para un sistema tipo web, que los usuarios no quieren ver muchos documents, queremos un sistema preciso. Sin embargo, para un sistema de busqueda de patentes por ejemplo, queremos ver muchos de los relevantes. 
+
+SET RETRIEVAL EVALUTATION
+
+Metricas basadas en conjuntos (set based): la primera de ellas es la precision, cuantos con rlevantes de los que me das? La segunda es el recall: de los relevantes en el corpus para esa consulta, cuantos me has dado? Un recall perfecto es trivial y no inteeresa, ya que devuelve gran cantidad de documentos. 
+
+Estas dos metricas estas en tension la una con la otra. Gran precisio bajo recall. Si optimizo recall caera la precision. ESto era valido antes, pero actualmetne es complicado conocer el denominador. Las busquedas web necesitan precision at k (P\@k), que es la precision en los primeros k documentos (este no lo usan google y tal).
+
+Medida F es parametrizada por un parametro beta, es una agregacion de preciison y recal. Se suele combinar con la media armonica de ambas (beta=1). Intenta tener ambas notables en vez de una muy buena y otr mala.
+
+EVALUATION OF A RANDER list
+
+No tiene que ser monotono decreciente. De sistema A y B, el mejor de la derecha apra buscadores es B porque nos interesa la zona de bajo recall 
+
+
+AP 
+
+(1/1 + 2/2 + 3/5 + 4/8)
+
+Si la ubicacion de los buenos encontrados varia, el AP varia. El unico AP perfecto es el que tenga todos los relevantes primero, queremos que penalice si los relevantes van hacia abajo. 
+
+MAP 
+
+Media de los AP de cada query, con m todas las queries que tenga en el benchmark. 
+
+KNOW ITEM SEARCH - buscamos por una pagina que ya sabemos cual es pero no queremos guardarla. Me pone esa pagina en la que ya estuve lo mas arriba posible
+
+Otra metrica de rendimiento. MRR: casos de busqueda donde solo importa la posicion del primer relevante. Si esta el primero, 1, si esta el segundo 1/2, si esta el k, 1/k. 
+
+
+NDCG - Normalized Discounted Cumulative Gain
+
+La que optimizan continuamente google y bing. Esta medida no tiene la opcion binaria de relevancia de las anteriores, permite opciones no binarias de relvancia. Acumula ganancias de arriba a abajo en funcion de los que se van dando. 
+
+No debe ser ganancia lineal, la ganancia de un 3 por ejemplo en la posicion 1 y otro en la 10 no es la misma, costo mas esfuerzo llegar a la 10. Un tipico discount que se aplica es uno logaritmico. Porque queremos algoritmos orientados a tener los muy relevantes arriba. Esto se calcula en un determinado corte (at k). A google o bing le interesa un NDCG@10, que son los que se muestran en la primera pagina. Para darle un significado, se normaliza dividiendo por el DCG ideal, es decir, el top k ideal de la query. El ideal en la web en principio no se sabe
+
+Los documentos deben ser representativos del corpus sobre el que busca la gente, así como las queries deben ser realistas respecto a las que hara la gente. Querriamos juiciios completos de relevancias, pero es inviable. Queremos medida que tengan asociacion con la utilidad de los usuarios. No se puede usar un P\@ 5 para la web, porque cualquier permutacion de esos dara el mismo valor. 
+
+
+STATISTICAL SIGNIFICANCE TESTS 
+
+Supongamos que tenemos una variante A y otra B, con NDCG\@10 son 0.75 y 0.77. ¿Es significativo? No, porque vemos en la tabla por ejemplo que al ser una media, puede haber fluctuaciones muy grandes. Queremos que haya mejora estadistica transversal (para todos los casos). Para eso hay que hacer test de significacion estadistica para ver si uno es consistentemente mejor que otro. No nos metemos en cuales se suelen aplicar. Nos miden si hay consistencia estadistica en la diferencia de medias.
+
+
+
+BUILDING INCOMPLETE relevance
+
+Es imposible etiquetar un corpus grande hoy en dia. Los juicios de relevancia deben ser necesariamente incompletos. Hay que hacer un pool, coger una muestra de la web y etiquetarla. Si sacamos un numero aleatorio de TODA la web, seran todos irrelevantes, por lo que no srive. Sesgamos la muestra de lo que etiquetamos a documentos que potencialmente sean relevantes. 
+
+Ver ejemplo obama. Hago N sistemas de busqueda, cuanto mas variados sean mejor. CAda uno recibe la query del benchmark y hace un ranking. Cortamos estos rankings a una profundidad dada. Habra documentos en comun en los rankings. Todos estos los uno en un pool y los etiqueto usando humanos. Esto funciona bien si hay diversidad en los sistemas de busqueda. Se pierden relevantes porque habra documentos que no salgan en ningun ranking. Con esto ya se hace el NDCG.  
+
+
+
+LEER EL LIBRO LOS CAPS QUE DICE EN EL CAMPUS

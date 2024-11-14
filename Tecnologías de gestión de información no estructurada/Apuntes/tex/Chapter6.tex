@@ -1,0 +1,17 @@
+\chapter{Representaciones avanzadas de texto}\label{Chapter5} 
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+HAce 10 años empezo una revolucion en el campo de la representacion de texto con Word2vec. Pasamos de representaciones sprse a representaciones densas de mebeddngs que capturan mejor la semantica y significado del texto. 
+
+CHATGPT tiene un impacto social enorme
+
+
+Esta revolucion que cambia y por que cambia. Lo tradicional en claisifcacion automatica, el paradigma, se tiene un traing data etiqueta, se lo doy al sistema aprende y puedo poner en produccion. El cuello de botella es que necesito etiquetas en el training data. Da capacidades limitadas de compresion de lenguaje, ya que para ello tendria que meter gran cantidad de formas de decir lo mismo, incluir toda la casuistica.
+
+Primera vuelta de tuerca, preentrenar y finetune. LOs modelos se preentrenan: cogemos una gran cantidad de datos (no toda la web pero casi) y jugando al juego de ocultar palabras (haciendo masking) y predecir la palabra oculta. Si lo dice mal, la penalizo. Si lo hace bien, consigo un modelo que entiende bien el lenguaje, la semantica, otros tipos de conocimientos sobre el mundo. Esto es autoentrenamiento sin etiquetado.  
+
+
+Una vez entrenado, lo ajusto y personalizo para mi tarea con el fine tune (adaptation). 
