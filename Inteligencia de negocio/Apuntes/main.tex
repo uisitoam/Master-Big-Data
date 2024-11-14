@@ -1,0 +1,135 @@
+\documentclass[11pt, english, singlespacing, liststotoc, toctotoc, headsepline, chapterinoneline]{ClassThesis} % The class file specifying the document structure
+
+\input{tex/preambulo}
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage[backend=bibtex, style=authoryear, natbib=true, maxcitenames=2, maxbibnames=20, minbibnames=1]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA) % sorting=none for citation order
+\addbibresource{references.bib} % The filename of the bibliography
+\setlength\bibitemsep{1.5\itemsep}
+
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Inteligencia de negocio} % \ttitle
+\supervisor{Joaquín Ángel Triñanes Fernández} % \supname
+\examiner{} % \examname
+\degree{Master en Tecnoloxías de Análise \\ de Datos Masivos: Big Data} % \degreename
+\author{Luis Ardévol Mesa} % \authorname
+\addresses{} % \addressname
+
+\subject{} % Subject area, print it elsewhere with \subjectname
+\keywords{} %\keywordnames
+\university{Universidad de Santiago de Compostela} % \univname
+\department{} % \deptname
+\group{} % \groupname
+\faculty{Escola Técnica Superior de Enxeñaría} % \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{.06\textheight}
+{\scshape\LARGE \textcolor{mdtRed}{\univname}\par}\vspace{1.5cm} 
+\textsc{}\\[0.5cm] 
+
+\HRule{} \\[0.4cm]
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} 
+\HRule{} \\[1.5cm] 
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{}\\
+\textcolor{mdtRed}{\authorname} 
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Profesor:} \\
+\textcolor{mdtRed}{\supname} 
+\end{flushright}
+\end{minipage}\\[3cm]
+ 
+\vspace{3cm}
+
+\large \textit{\facname\\ \degreename}\\[0.8cm] 
+ 
+\vspace{1cm}
+
+{\large Curso 2024-2025}\\[4cm] % Date
+%\includegraphics{Logo} 
+ 
+\vfill
+\end{center}
+\end{titlepage}
+
+
+\newgeometry{
+	inner=2.25cm, % Inner margin
+	outer=2.75cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=3cm, % Top margin
+	bottom=3cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\setcounter{tocdepth}{2}
+\tableofcontents % Prints the main table of contents
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter{} % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+\include{tex/Chapter1}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc, title=References]
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  

@@ -1,0 +1,17 @@
+# Fdb version 4
+["pdflatex"] 1729069469.38535 "/Users/luisi/Documents/Master/1. Inteligencia de negocio/Trabajo_dirigido/mainMain.tex" "build/mainMain.pdf" "mainMain" 1729069469.60196 2
+  "/Users/luisi/Documents/Master/1. Inteligencia de negocio/Trabajo_dirigido/mainMain.tex" 1729069468.6886 1175 72b71995dea88853084745c37274a743 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/bk10.clo" 1705352648 8288 82eb4750175f9093ea089563156e1d65 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/book.cls" 1705352648 23268 80674e17dbdc75804bd4d067e837600a ""
+  "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
+  "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714491104 8221416 71c8040c626895d4f8d14b7696612575 ""
+  "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "build/mainMain.aux" 0 -1 0 "pdflatex"
+  "build/opticajournal.sty" 0 -1 0 ""
+  "mainMain.tex" 1729069468.6886 1175 72b71995dea88853084745c37274a743 ""
+  "opticajournal.sty" 0 -1 0 ""
+  (generated)
+  "build/mainMain.aux"
+  "build/mainMain.log"
+  "build/mainMain.pdf"
+  (rewritten before read)

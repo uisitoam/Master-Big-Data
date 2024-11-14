@@ -1,0 +1,17 @@
+# Fdb version 4
+["pdflatex"] 1728148783.93551 "/Users/luisi/Documents/Master/1. Inteligencia de negocio/Apuntes/tex/Chapter1.tex" "build/Chapter1.pdf" "Chapter1" 1728148785.4255 2
+  "/Users/luisi/Documents/Master/1. Inteligencia de negocio/Apuntes/tex/Chapter1.tex" 1728148781.87798 15340 dd0d8d563385777dd4132b1633f9b0aa ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
+  "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1714491164.43273 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
+  "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714491104 8221416 71c8040c626895d4f8d14b7696612575 ""
+  "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "Chapter1.tex" 1728148781.87798 15340 dd0d8d563385777dd4132b1633f9b0aa ""
+  "build/Chapter1.aux" 0 -1 0 "pdflatex"
+  (generated)
+  "build/Chapter1.aux"
+  "build/Chapter1.log"
+  "build/Chapter1.pdf"
+  (rewritten before read)
