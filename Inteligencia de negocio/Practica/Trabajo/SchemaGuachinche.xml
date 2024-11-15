@@ -1,0 +1,98 @@
+<Schema name="New Schema2">
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Tiempo">
+    <Hierarchy name="jerarquiaTiempo" visible="true" hasAll="true" primaryKey="id">
+      <Table name="tiempo" schema="public">
+      </Table>
+      <Level name="ano" visible="true" table="tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="mes" visible="true" table="tiempo" column="mes" nameColumn="mes_texto" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Restaurante">
+    <Hierarchy name="jerarquiaRestaurantes" visible="true" hasAll="true" primaryKey="id">
+      <Table name="restaurante" schema="public">
+      </Table>
+      <Level name="pais" visible="true" table="restaurante" column="pais" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ciudad" visible="true" table="restaurante" column="ciudad" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Productos">
+    <Hierarchy name="jerarquiaProductos" visible="true" hasAll="true" primaryKey="id">
+      <Table name="productos" schema="public">
+      </Table>
+      <Level name="nombre" visible="true" table="productos" column="nombre" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Finanzas" visible="true" cache="true" enabled="true">
+    <Table name="finanzas" schema="public">
+    </Table>
+    <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Restaurante" name="Restaurante" visible="true" foreignKey="restaurante" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Alquiler" column="alquiler" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Personal" column="personal" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Proveedores" column="proveedores" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gastos adicionales" column="extra" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Ingresos presencial" column="ingresos_presencial" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Ingresos domicilio" column="ingresos_domicilio" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Numero clientes presencial" column="numero_clientes_presencial" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Nuevos clientes presencial" column="nuevos_clientes_presencial" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Numero clientes domicilio" column="numero_clientes_domicilio" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Nuevos clientes domicilio" column="nuevos_clientes_domicilio" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Gastos totales" formula="[Measures].[Alquiler]+[Measures].[Personal]+[Measures].[Proveedores]+[Measures].[Gastos adicionales]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Ingresos totales" formula="[Measures].[Ingresos presencial]+[Measures].[Ingresos domicilio]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Beneficio" formula="[Measures].[Ingresos totales]-[Measures].[Gastos totales]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Numero clientes" formula="[Measures].[Numero clientes presencial]+[Measures].[Numero clientes domicilio]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Nuevos clientes" formula="[Measures].[Nuevos clientes presencial]+[Measures].[Nuevos clientes domicilio]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Producto" visible="true" cache="true" enabled="true">
+    <Table name="producto" schema="public">
+    </Table>
+    <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Restaurante" name="Restaurante" visible="true" foreignKey="restaurante" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Productos" name="Producto" visible="true" foreignKey="producto" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Ventas" column="ventas" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Ingresos por producto" formatString="" formula="[Measures].[Ventas]*[Productos].[nombre].CurrentMember.Properties(\&#34;precio\&#34;)" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Feedback" visible="true" cache="true" enabled="true">
+    <Table name="feedback" schema="public" alias="">
+    </Table>
+    <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha">
+    </DimensionUsage>
+    <DimensionUsage source="Restaurante" name="Restaurante" visible="true" foreignKey="restaurante">
+    </DimensionUsage>
+    <Measure name="Valoracion personal" column="valoracion_personal" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="Valoracion ambiente" column="valoracion_ambiente" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="Valoracion comida" column="valoracion_comida" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="Valoracion domicilio" column="valoracion_domicilio" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
