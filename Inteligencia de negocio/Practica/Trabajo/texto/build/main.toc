@@ -1,0 +1,10 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {section}{\numberline {2}Diseño y construcción del almacén de datos}{2}{section.2}%
+\contentsline {subsection}{\numberline {A}Diseño del almacén de datos}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {B}Creación de los cubos de datos}{8}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Extracción, transformación y carga de datos}{10}{section.3}%
+\contentsline {section}{\numberline {4}Análisis de datos con MDX y ROLAP}{10}{section.4}%
+\contentsline {subsection}{\numberline {A}Consultas MDX}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {B}Consultas ROLAP}{10}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Cuadros de mando e informes}{10}{section.5}%

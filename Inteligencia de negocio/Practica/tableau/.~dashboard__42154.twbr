@@ -1,0 +1,1748 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <CascadingFiltersHamburgerUI />
+    <Layers />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelRelationshipPerfOptions />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='routes+ (vuelos)' inline='true' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.0kzstqn0e66cbj13frh5q1uadiw1'>
+            <connection authentication='username-password' class='postgres' dbname='vuelos' one-time-sql='' port='5432' server='localhost' username='luisi' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='routes' table='[public].[routes]' type='table' />
+          <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='airports1' table='[public].[airports]' type='table' />
+          <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='airports' table='[public].[airports]' type='table' />
+        </relation>
+        <cols>
+          <map key='[airline_code]' value='[routes].[airline_code]' />
+          <map key='[airline_id]' value='[routes].[airline_id]' />
+          <map key='[airport_id (airports1)]' value='[airports1].[airport_id]' />
+          <map key='[airport_id]' value='[airports].[airport_id]' />
+          <map key='[altitude (airports1)]' value='[airports1].[altitude]' />
+          <map key='[altitude]' value='[airports].[altitude]' />
+          <map key='[city (airports1)]' value='[airports1].[city]' />
+          <map key='[city]' value='[airports].[city]' />
+          <map key='[codeshare]' value='[routes].[codeshare]' />
+          <map key='[country (airports1)]' value='[airports1].[country]' />
+          <map key='[country]' value='[airports].[country]' />
+          <map key='[destination_airport_code]' value='[routes].[destination_airport_code]' />
+          <map key='[destination_airport_id]' value='[routes].[destination_airport_id]' />
+          <map key='[distancia_km]' value='[routes].[distancia_km]' />
+          <map key='[dst (airports1)]' value='[airports1].[dst]' />
+          <map key='[dst]' value='[airports].[dst]' />
+          <map key='[equipment]' value='[routes].[equipment]' />
+          <map key='[iata_code (airports1)]' value='[airports1].[iata_code]' />
+          <map key='[iata_code]' value='[airports].[iata_code]' />
+          <map key='[icao_code (airports1)]' value='[airports1].[icao_code]' />
+          <map key='[icao_code]' value='[airports].[icao_code]' />
+          <map key='[latitude (airports1)]' value='[airports1].[latitude]' />
+          <map key='[latitude]' value='[airports].[latitude]' />
+          <map key='[longitude (airports1)]' value='[airports1].[longitude]' />
+          <map key='[longitude]' value='[airports].[longitude]' />
+          <map key='[name (airports1)]' value='[airports1].[name]' />
+          <map key='[name]' value='[airports].[name]' />
+          <map key='[source (airports1)]' value='[airports1].[source]' />
+          <map key='[source]' value='[airports].[source]' />
+          <map key='[source_airport_code]' value='[routes].[source_airport_code]' />
+          <map key='[source_airport_id]' value='[routes].[source_airport_id]' />
+          <map key='[stops]' value='[routes].[stops]' />
+          <map key='[timezone_name (airports1)]' value='[airports1].[timezone_name]' />
+          <map key='[timezone_name]' value='[airports].[timezone_name]' />
+          <map key='[timezone_offset (airports1)]' value='[airports1].[timezone_offset]' />
+          <map key='[timezone_offset]' value='[airports].[timezone_offset]' />
+          <map key='[type (airports1)]' value='[airports1].[type]' />
+          <map key='[type]' value='[airports].[type]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>airline_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[airline_code]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>airline_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>airline_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[airline_id]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>airline_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_airport_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source_airport_code]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>source_airport_code</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_airport_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[source_airport_id]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>source_airport_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>destination_airport_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[destination_airport_code]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>destination_airport_code</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>destination_airport_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[destination_airport_id]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>destination_airport_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>codeshare</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[codeshare]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>codeshare</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stops</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[stops]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>stops</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>equipment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[equipment]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>equipment</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distancia_km</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[distancia_km]</local-name>
+            <parent-name>[routes]</parent-name>
+            <remote-alias>distancia_km</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[routes_818271991CAC48AB9DCC91B2D00F6C7F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>airport_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[airport_id (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>airport_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iata_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[iata_code (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>iata_code</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icao_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[icao_code (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>icao_code</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>altitude</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[altitude (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>altitude</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timezone_offset</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[timezone_offset (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>timezone_offset</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dst</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dst (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>dst</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timezone_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[timezone_name (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>timezone_name</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source (airports1)]</local-name>
+            <parent-name>[airports1]</parent-name>
+            <remote-alias>source</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EC4E06FA1CFA49999133CFC6C58581CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>airport_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[airport_id]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>airport_id</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iata_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[iata_code]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>iata_code</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icao_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[icao_code]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>icao_code</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>altitude</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[altitude]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>altitude</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timezone_offset</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[timezone_offset]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>timezone_offset</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dst</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dst]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>dst</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>1</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timezone_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[timezone_name]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>timezone_name</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source]</local-name>
+            <parent-name>[airports]</parent-name>
+            <remote-alias>source</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Parejas de paises' datatype='string' name='[Calculation_974607122812309504]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[country] + &quot; - &quot; + [country (airports1)]' />
+      </column>
+      <column caption='Origin point ' datatype='spatial' name='[Calculation_974607122824167425]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='MAKEPOINT([latitude], [longitude])' />
+      </column>
+      <column caption='Destination point' datatype='spatial' name='[Calculation_974607122825396226]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='MAKEPOINT([latitude (airports1)], [longitude (airports1)])' />
+      </column>
+      <column caption='Flight Path' datatype='spatial' name='[Calculation_974607122826883075]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='MAKELINE([Calculation_974607122824167425], [Calculation_974607122825396226])' />
+      </column>
+      <column caption='rutasLog' datatype='real' name='[Calculation_974607123045785604]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='LOG(COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]))' />
+      </column>
+      <column caption='Cálculo2' datatype='integer' name='[Calculation_974607123049349126]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F])' />
+      </column>
+      <column caption='airports destination' datatype='table' name='[__tableau_internal_object_id__].[airports_EC4E06FA1CFA49999133CFC6C58581CB]' role='measure' type='quantitative' />
+      <column caption='airports origin' datatype='table' name='[__tableau_internal_object_id__].[airports_EEE2B7A2F35946F0AC712FB4CBD4963B]' role='measure' type='quantitative' />
+      <column caption='routes' datatype='table' name='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' role='measure' type='quantitative' />
+      <column caption='Airline Code' datatype='string' name='[airline_code]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Airline Id' datatype='integer' name='[airline_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Airport Id (Airports1)' datatype='integer' name='[airport_id (airports1)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Airport Id' datatype='integer' name='[airport_id]' role='dimension' type='ordinal' />
+      <column caption='Altitude (Airports1)' datatype='integer' name='[altitude (airports1)]' role='measure' type='quantitative' />
+      <column caption='Altitude' datatype='integer' name='[altitude]' role='measure' type='quantitative' />
+      <column caption='City (Airports1)' datatype='string' name='[city (airports1)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Codeshare' datatype='string' name='[codeshare]' role='dimension' type='nominal' />
+      <column caption='Pais Destino' datatype='string' name='[country (airports1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Destination Airport Code' datatype='string' name='[destination_airport_code]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Destination Airport Id' datatype='integer' name='[destination_airport_id]' role='dimension' type='ordinal' />
+      <column caption='Distancia Km' datatype='real' name='[distancia_km]' role='measure' type='quantitative' />
+      <column caption='Dst (Airports1)' datatype='string' name='[dst (airports1)]' role='dimension' type='nominal' />
+      <column caption='Dst' datatype='string' name='[dst]' role='dimension' type='nominal' />
+      <column caption='Equipment' datatype='string' name='[equipment]' role='dimension' type='nominal' />
+      <column caption='Iata Code (Airports1)' datatype='string' name='[iata_code (airports1)]' role='dimension' type='nominal' />
+      <column caption='Iata Code' datatype='string' name='[iata_code]' role='dimension' type='nominal' />
+      <column caption='Icao Code (Airports1)' datatype='string' name='[icao_code (airports1)]' role='dimension' type='nominal' />
+      <column caption='Icao Code' datatype='string' name='[icao_code]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude (Airports1)' datatype='real' name='[latitude (airports1)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude (Airports1)' datatype='real' name='[longitude (airports1)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Name (Airports1)' datatype='string' name='[name (airports1)]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Source (Airports1)' datatype='string' name='[source (airports1)]' role='dimension' type='nominal' />
+      <column caption='Source' datatype='string' name='[source]' role='dimension' type='nominal' />
+      <column caption='Source Airport Code' datatype='string' name='[source_airport_code]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Source Airport Id' datatype='integer' name='[source_airport_id]' role='dimension' type='ordinal' />
+      <column caption='Stops' datatype='integer' name='[stops]' role='measure' type='quantitative' />
+      <column caption='Timezone Name (Airports1)' datatype='string' name='[timezone_name (airports1)]' role='dimension' type='nominal' />
+      <column caption='Timezone Name' datatype='string' name='[timezone_name]' role='dimension' type='nominal' />
+      <column caption='Timezone Offset (Airports1)' datatype='real' name='[timezone_offset (airports1)]' role='measure' type='quantitative' />
+      <column caption='Timezone Offset' datatype='real' name='[timezone_offset]' role='measure' type='quantitative' />
+      <column caption='Type (Airports1)' datatype='string' name='[type (airports1)]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <drill-paths>
+        <drill-path name='country, city'>
+          <field>[country]</field>
+          <field>[city]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='airport_id' />
+        <field-sort-custom-order field='name' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='country' />
+        <field-sort-custom-order field='iata_code' />
+        <field-sort-custom-order field='icao_code' />
+        <field-sort-custom-order field='latitude' />
+        <field-sort-custom-order field='longitude' />
+        <field-sort-custom-order field='altitude' />
+        <field-sort-custom-order field='timezone_offset' />
+        <field-sort-custom-order field='dst' />
+        <field-sort-custom-order field='timezone_name' />
+        <field-sort-custom-order field='type' />
+        <field-sort-custom-order field='source' />
+        <field-sort-custom-order field='Calculation_974607122824167425' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='airports destination' id='airports_EC4E06FA1CFA49999133CFC6C58581CB'>
+            <properties context=''>
+              <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='airports1' table='[public].[airports]' type='table' />
+            </properties>
+          </object>
+          <object caption='airports origin' id='airports_EEE2B7A2F35946F0AC712FB4CBD4963B'>
+            <properties context=''>
+              <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='airports' table='[public].[airports]' type='table' />
+            </properties>
+          </object>
+          <object caption='routes' id='routes_818271991CAC48AB9DCC91B2D00F6C7F'>
+            <properties context=''>
+              <relation connection='postgres.0kzstqn0e66cbj13frh5q1uadiw1' name='routes' table='[public].[routes]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[destination_airport_id]' />
+              <expression op='[airport_id (airports1)]' />
+            </expression>
+            <first-end-point object-id='routes_818271991CAC48AB9DCC91B2D00F6C7F' />
+            <second-end-point is-db-set-unique-key='true' object-id='airports_EC4E06FA1CFA49999133CFC6C58581CB' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[source_airport_id]' />
+              <expression op='[airport_id]' />
+            </expression>
+            <first-end-point object-id='routes_818271991CAC48AB9DCC91B2D00F6C7F' />
+            <second-end-point is-db-set-unique-key='true' object-id='airports_EEE2B7A2F35946F0AC712FB4CBD4963B' unique-key='true' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Rutas'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='routes+ (vuelos)' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0v97vcb0nugfrw15j1fs80fg57gp'>
+            <column caption='rutasLog' datatype='real' name='[Calculation_974607123045785604]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOG(COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]))' />
+            </column>
+            <column-instance column='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' pivot='key' type='quantitative' />
+            <column caption='routes' datatype='table' name='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' role='measure' type='quantitative' />
+            <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_974607123045785604]' derivation='User' name='[usr:Calculation_974607123045785604:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]' included-values='non-null' />
+          <filter class='categorical' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='cascading' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Argentina&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Australia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Austria&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Brazil&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Burkina Faso&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cambodia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cape Verde&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;China&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Congo (Kinshasa)&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Costa Rica&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cuba&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Egypt&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Finland&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Germany&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Greece&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Guinea&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;India&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Indonesia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Madagascar&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Spain&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United Kingdom&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United States&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Vanuatu&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Zambia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Zimbabwe&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>4.1205739312058496</max>
+          </filter>
+          <slices>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]</column>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]</column>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]</column>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]' field-type='quantitative' max='20069748.199402705' min='-19191250.99676612' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]' field-type='quantitative' max='18089004.138713844' min='-14844493.820806418' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' max='3000' min='0' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e0e3</color>
+                <color>#f3ced5</color>
+                <color>#f5bdc7</color>
+                <color>#f6abb9</color>
+                <color>#f89aab</color>
+                <color>#f9889d</color>
+                <color>#fa758e</color>
+                <color>#fc637f</color>
+                <color>#fd5071</color>
+                <color>#ff3e62</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' max='4.1205739312058496' min='0.0' palette='red_blue_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' value='log10(recuento de rutas)'>
+              <formatted-text>
+                <run>log10(recuento de rutas)</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' value='log10(recuento de rutas)&#10;'>
+              <formatted-text>
+                <run>log10(recuento de rutas)&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' />
+              <geometry column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>País:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Rutas:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]</rows>
+        <cols>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B4D1DFBC-0B31-4B5E-A076-7A1480FCF7EB}' />
+    </worksheet>
+    <worksheet name='Rutas '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='routes+ (vuelos)' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0v97vcb0nugfrw15j1fs80fg57gp'>
+            <column caption='rutasLog' datatype='real' name='[Calculation_974607123045785604]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOG(COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]))' />
+            </column>
+            <column-instance column='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' pivot='key' type='quantitative' />
+            <column caption='routes' datatype='table' name='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' role='measure' type='quantitative' />
+            <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_974607123045785604]' derivation='User' name='[usr:Calculation_974607123045785604:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]' field-type='quantitative' max='20069748.199402705' min='-19191250.99676612' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]' field-type='quantitative' max='18089004.138713844' min='-14844493.820806418' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' max='3000' min='0' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e0e3</color>
+                <color>#f3ced5</color>
+                <color>#f5bdc7</color>
+                <color>#f6abb9</color>
+                <color>#f89aab</color>
+                <color>#f9889d</color>
+                <color>#fa758e</color>
+                <color>#fc637f</color>
+                <color>#fd5071</color>
+                <color>#ff3e62</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' max='4.1205739312058496' min='0.0' palette='red_blue_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' value='log10(recuento de rutas)'>
+              <formatted-text>
+                <run>log10(recuento de rutas)</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' value='log10(recuento de rutas)&#10;'>
+              <formatted-text>
+                <run>log10(recuento de rutas)&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' />
+              <geometry column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>País:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Rutas:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]</rows>
+        <cols>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{F8961B4B-7FB8-4600-B410-A9D9DE58D747}' />
+    </worksheet>
+    <worksheet name='Rutas entre paises'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='routes+ (vuelos)' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v97vcb0nugfrw15j1fs80fg57gp'>
+            <column caption='rutasLog' datatype='real' name='[Calculation_974607123045785604]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='LOG(COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]))' />
+            </column>
+            <column-instance column='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' pivot='key' type='quantitative' />
+            <column caption='routes' datatype='table' name='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' role='measure' type='quantitative' />
+            <column caption='Pais Destino' datatype='string' name='[country (airports1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country (airports1)]' derivation='None' name='[none:country (airports1):nk]' pivot='key' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_974607123045785604]' derivation='User' name='[usr:Calculation_974607123045785604:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Argentina&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Australia&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Austria&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Brazil&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Cambodia&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Cape Verde&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;China&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Congo (Kinshasa)&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Cuba&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Egypt&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Finland&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Germany&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Greece&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Iceland&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;India&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Indonesia&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Spain&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;United Kingdom&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;United States&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Vanuatu&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Zambia&quot;' />
+              <groupfilter function='member' level='[none:country (airports1):nk]' member='&quot;Zimbabwe&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' filter-group='3'>
+            <groupfilter function='union' user:ui-domain='cascading' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Argentina&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Australia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Austria&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Brazil&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Burkina Faso&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cambodia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cape Verde&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;China&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Congo (Kinshasa)&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Costa Rica&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Cuba&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Egypt&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Finland&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Germany&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Greece&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Guinea&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;India&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Indonesia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Madagascar&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Spain&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United Kingdom&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United States&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Vanuatu&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Zambia&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;Zimbabwe&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]</column>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='total-label' data-class='subtotal' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='Total' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dee4</color>
+                <color>#f3cbd7</color>
+                <color>#f5b8cb</color>
+                <color>#f6a4be</color>
+                <color>#f891b1</color>
+                <color>#f97da3</color>
+                <color>#fa6996</color>
+                <color>#fc5588</color>
+                <color>#fd407a</color>
+                <color>#ff2c6d</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' max='4.120573931' min='0.0' palette='red_blue_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' value='País de origen&#10;'>
+              <formatted-text>
+                <run>País de origen&#10;</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' value='log10(recuento de rutas)'>
+              <formatted-text>
+                <run>log10(recuento de rutas)</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]' value='País de destino&#10;'>
+              <formatted-text>
+                <run>País de destino&#10;</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Destino:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Origen:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Rutas:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]</rows>
+        <cols>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]</cols>
+      </table>
+      <simple-id uuid='{80D8C5BB-88E8-4E27-9B35-4FAE43CAAD1D}' />
+    </worksheet>
+    <worksheet name='Tráfico'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>Sheet Name</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='routes+ (vuelos)' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0v97vcb0nugfrw15j1fs80fg57gp'>
+            <column caption='Origin point ' datatype='spatial' name='[Calculation_974607122824167425]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='MAKEPOINT([latitude], [longitude])' />
+            </column>
+            <column caption='Destination point' datatype='spatial' name='[Calculation_974607122825396226]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='MAKEPOINT([latitude (airports1)], [longitude (airports1)])' />
+            </column>
+            <column caption='Flight Path' datatype='spatial' name='[Calculation_974607122826883075]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='MAKELINE([Calculation_974607122824167425], [Calculation_974607122825396226])' />
+            </column>
+            <column-instance column='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' pivot='key' type='quantitative' />
+            <column caption='routes' datatype='table' name='[__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]' role='measure' type='quantitative' />
+            <column-instance column='[distancia_km]' derivation='Avg' name='[avg:distancia_km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_974607122824167425]' derivation='Collect' name='[clct:Calculation_974607122824167425:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_974607122825396226]' derivation='Collect' name='[clct:Calculation_974607122825396226:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_974607122826883075]' derivation='Collect' name='[clct:Calculation_974607122826883075:nk]' pivot='key' type='nominal' />
+            <column caption='Pais Destino' datatype='string' name='[country (airports1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Distancia Km' datatype='real' name='[distancia_km]' role='measure' type='quantitative' />
+            <column aggregation='Avg' caption='Latitude (Airports1)' datatype='real' name='[latitude (airports1)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude (Airports1)' datatype='real' name='[longitude (airports1)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Name (Airports1)' datatype='string' name='[name (airports1)]' role='dimension' type='nominal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[country (airports1)]' derivation='None' name='[none:country (airports1):nk]' pivot='key' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name (airports1)]' derivation='None' name='[none:name (airports1):nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]' included-values='non-null' />
+          <filter class='categorical' column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]'>
+            <groupfilter function='member' level='[none:country:nk]' member='&quot;Spain&quot;' user:ui-domain='cascading' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]</column>
+            <column>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]' field-type='quantitative' max='14557597.775987532' min='-20823988.270175692' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]' field-type='quantitative' max='18281014.237811454' min='-11398296.419407217' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' value='Distancia km'>
+              <formatted-text>
+                <run fontsize='8'>Distancia km</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes customization-axis='layer'>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane generated-title='airports origin.Origin point' id='10' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122824167425:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name:nk]' />
+              <geometry column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122824167425:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Aeropuerto:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane generated-title='airports destination.Destination point' id='11' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122825396226:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name (airports1):nk]' />
+              <geometry column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122825396226:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Aeropuerto:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name (airports1):nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ff00ee' />
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane generated-title='Flight Path' id='8' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' />
+              <size column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122826883075:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name (airports1):nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' />
+              <lod column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]' />
+              <geometry column='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[clct:Calculation_974607122826883075:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Origen:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name:nk]> (<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]>)]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Destino:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:name (airports1):nk]> (<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]>)]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Rutas:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[__tableau_internal_object_id__].[cnt:routes_818271991CAC48AB9DCC91B2D00F6C7F:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Distancia Km:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.031988948583602905' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Latitude (generated)]</rows>
+        <cols>[federated.0v97vcb0nugfrw15j1fs80fg57gp].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{1A3C1DFB-BE1B-411D-83D0-D1F35CCC2B6C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='routes+ (vuelos)' name='federated.0v97vcb0nugfrw15j1fs80fg57gp' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0v97vcb0nugfrw15j1fs80fg57gp'>
+        <column caption='rutasLog' datatype='real' name='[Calculation_974607123045785604]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='LOG(COUNT([__tableau_internal_object_id__].[routes_818271991CAC48AB9DCC91B2D00F6C7F]))' />
+        </column>
+        <column caption='Pais Destino' datatype='string' name='[country (airports1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column caption='Pais Origen' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+        <column-instance column='[country (airports1)]' derivation='None' name='[none:country (airports1):nk]' pivot='key' type='nominal' />
+        <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_974607123045785604]' derivation='User' name='[usr:Calculation_974607123045785604:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='22' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='20' type-v2='layout-basic' w='98400' x='800' y='1000'>
+              <zone h='49000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='50000'>
+                <zone h='49000' id='5' type-v2='layout-basic' w='98400' x='800' y='50000'>
+                  <zone h='44750' id='13' name='Tráfico' w='49200' x='800' y='54250'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4250' id='14' name='Tráfico' pane-specification-id='8' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' type-v2='color' w='33200' x='16800' y='50000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='4250' id='23' mode='dropdown' name='Tráfico' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' type-v2='filter' values='cascading' w='16000' x='800' y='50000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='49000' id='15' name='Rutas' w='49200' x='50000' y='50000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone forceUpdate='true' h='9375' id='19' type-v2='text' w='98400' x='800' y='1000'>
+                <formatted-text>
+                  <run bold='true' fontsize='24'>Tráfico aéreo internacional por países</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='39625' id='3' name='Rutas entre paises' w='82400' x='800' y='10375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='11250' id='17' name='Rutas' pane-specification-id='0' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type-v2='color' w='16000' x='83200' y='28750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9250' id='18' mode='checkdropdown' name='Rutas entre paises' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' type-v2='filter' values='cascading' w='16000' x='83200' y='10375'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10000' id='16' name='Rutas' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type-v2='filter' values='database' w='16000' x='83200' y='40000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9125' id='10' mode='checkdropdown' name='Rutas entre paises' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]' type-v2='filter' values='database' w='16000' x='83200' y='19625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='30' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone forceUpdate='true' h='9375' id='19' type-v2='text' w='98400' x='800' y='1000'>
+                  <formatted-text>
+                    <run bold='true' fontsize='24'>Tráfico aéreo internacional por países</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9250' id='18' mode='checkdropdown' name='Rutas entre paises' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' type-v2='filter' values='cascading' w='16000' x='83200' y='10375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9125' id='10' mode='checkdropdown' name='Rutas entre paises' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country (airports1):nk]' type-v2='filter' values='database' w='16000' x='83200' y='19625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39625' id='3' is-fixed='true' name='Rutas entre paises' w='82400' x='800' y='10375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10000' id='16' name='Rutas' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type-v2='filter' values='database' w='16000' x='83200' y='40000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='15' is-fixed='true' name='Rutas' w='49200' x='50000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11250' id='17' name='Rutas' pane-specification-id='0' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type-v2='color' w='16000' x='83200' y='28750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4250' id='23' mode='checkdropdown' name='Tráfico' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[none:country:nk]' type-v2='filter' values='cascading' w='16000' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44750' id='13' is-fixed='true' name='Tráfico' w='49200' x='800' y='54250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4250' id='14' name='Tráfico' pane-specification-id='8' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' type-v2='color' w='33200' x='16800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{27A63FA2-1F4B-422A-BEFE-0B8B05F13CAC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Rutas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{A58AB7C3-3FE5-46D3-9F4E-09D6B9D3523C}' />
+    </window>
+    <window class='worksheet' name='Rutas '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[usr:Calculation_974607123045785604:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{061CAD12-4581-4591-8035-419FD7655219}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Rutas entre paises'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8775BCCC-3221-4ABC-8068-2A59B1A4E6E8}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Rutas'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rutas entre paises' />
+        <viewpoint name='Tráfico'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{023B3BD1-7A22-47FB-AA95-0458FAE177F0}' />
+    </window>
+    <window class='worksheet' name='Tráfico'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='8' param='[federated.0v97vcb0nugfrw15j1fs80fg57gp].[avg:distancia_km:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{CEBD568C-AC46-4C8D-8CEF-6EFABE7497FC}' />
+    </window>
+  </windows>
+</workbook>

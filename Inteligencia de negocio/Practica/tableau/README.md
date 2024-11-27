@@ -1,0 +1,1 @@
+Si al abrir el dashboard en Tableau aparece un error: "Dashboard no disponible. Se produjo un problema al conectar la fuente de datos 'routes+(vuelos)'", simplemente volver a configurar la conexion a la base de datos (localhost 5432) y esperar unos segundos a que cargue el dashboard (debería conectarse sin problemas a pesar de lanzar el error inicial)

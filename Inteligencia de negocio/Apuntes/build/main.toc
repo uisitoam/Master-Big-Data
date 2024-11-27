@@ -1,0 +1,18 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Contents}{ii}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introducción a BI}{1}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Sistemas de información}{1}{section.3}%
+\contentsline {subsection}{\numberline {1.1.1}Sistemas de información empresarial}{2}{subsection.7}%
+\contentsline {subsection}{\numberline {1.1.2}Evolución de los sistemas de información}{3}{subsection.8}%
+\contentsline {subsection}{\numberline {1.1.3}Tipos de sistemas de información}{3}{subsection.10}%
+\contentsline {subsubsection}{Sistemas de información operacional}{3}{section*.12}%
+\contentsline {subsubsection}{Sistemas de soporte de decisión}{4}{section*.13}%
+\contentsline {subsubsection}{Sistemas estratégicos}{4}{section*.14}%
+\contentsline {section}{\numberline {1.2}Inteligencia de negocio}{5}{section.16}%
+\contentsline {section}{\numberline {1.3}Modelos de madurez}{5}{section.18}%
+\contentsline {subsection}{\numberline {1.3.1}The Data Warehousing Institute (TDWI) Analytics MM}{6}{subsection.19}%
+\contentsline {subsection}{\numberline {1.3.2}HP BI MM}{7}{subsection.22}%
+\contentsline {subsection}{\numberline {1.3.3}Gartner BI MM}{8}{subsection.25}%
+\contentsline {section}{\numberline {1.4}Metodología}{9}{section.28}%
+\contentsline {subsection}{\numberline {1.4.1}Larissa Moss}{9}{subsection.29}%
+\contentsline {subsection}{\numberline {1.4.2}CRISP-DM}{11}{subsection.36}%
