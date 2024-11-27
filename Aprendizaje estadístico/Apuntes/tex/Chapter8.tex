@@ -1,0 +1,106 @@
+\chapter{Arboles}\label{Chapter8} 
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+
+En un arbol de decision se tiene muy claro de donde viene la salida (interpretable), pero no puede competir con los mejores modelos de predicción. Solo veremos CART, que vale para regresión y clasificación.
+
+EXAMPLE:
+
+Los menores de 4.5 (estricto) se da el valor directametne. Si es mayor igual de 4.5, analizamos los golpes, si es menos, 6, si es mayor, 6.74. El primer nodo de años divide el eje de años en dos partes (no tienen por qué ser iguales). En el siguiente nodo se divide la parte correspondiente a una de las partes anteriores por el eje Hits. Divides en regiones y cuando una muestra cae en una región, se da la media de los datos de entrenamiento de esa región. La division en años, puede hacerse de tantas formas como años se disponga en los datos. 
+
+REGRESSION TREES:
+el tamaño del arbol es el hiperparametro que controlara el subaprendizaje o subaprendizaje del algoritmo (determina el tamaño del arbol). arbol pequeño subapredndio. Buscamos la division de regiones que minimiza la formula del RSS vista.
+
+USAMOS METODOS APROXIMADO. RECURSIVE BINARY SPLITTING.
+
+En cada punto escogemos la mejor variable y el mejor umbral. Decisiones individuales y no globales para que sea computacionalmente mas eficiente. No hay garantia de encontrar el optimo para si una bueno. El criterio es la formaulas que salen ahi para R1 y R2 minimizando ese error. 
+
+\begin{example}
+Sea dos variables $X_1 = (-3, -2, 0, 2, 5)$ e $Y = (4, 6, -2, 8, 10)$. Buscamos las posibles particiones para esas variables. En este caso entre los datos (punto medio), $(-2.5, -1, 1, 3.5)$. Cada umbral divide el conjunto en dos regiones, la de la izquierda de los datos y la de la derecha. Habría que calcular los errores, ejemplo con particion en +1. \\
+
+Esta particion nos deja dos regiones $R_1 = \{(-3, 4), (-2, 6), (0, -2)\}$ y $R_2 = \{(2, 8), (5, 10)\}$. Calculamos la media de las salidas de cada región: $\hat{y}_{R_1} = 8/3$ y $\hat{y}_{R_2} = 9$. Calculamos ahora el error
+\begin{align}
+\underbrace{(4 - 8/3)^2 + (6 - 8/3)^2 + (-2 - 8/3)^2}_{R_1} + \underbrace{(8 - 9)^2 + (10 - 9)^2}_{R_2}
+\end{align}
+Lo repetimos para los 4 umbrales posibles y nos quedamos con el que minimice el error. Luego repetimos con $X_2$ y nos quedamos con el que minimice el error. Así con todas las variables y umbrales posibles.
+\end{example}
+
+Paramos de dividir en una rama cuando se cumple el criterio de parada (esto nos dara por tanto el tamaño del arbol) usamos el tamaño minimo de nodo: cuando en un nodo hay menos de los ejemplos fijados, dejamos de dividirlo. Para sobreaprender, el tamaño de nodo deberá ser pequeño, por lo que el arbol sera grande. Este es el que mejor funciona en general. Unico hiperparametro que usaremos. 
+
+Hay otro criterio para parar: que todas las salidas de un nodo sean las mismas, no tendria sentido seguir dividiendo (este se ve mejor en clasificacion). 
+
+Problema de maxima profundidad, todas las ramas u hojas son del mimso tamaño
+
+Otro se calcula el error de la division y si no mejora en un porcentaje, se para (comparar el error de una region con el error de la division de ambas (sumado obvio con la formula)). Problema: hacer mas divisiones puede mejorar el error, aunque una concreta no lo haga. 
+
+
+De cada nodo tenemos media y desviacion, por lo que podemos dar confianza ($\pm$) en la prediccion.
+
+PODADO DEL ARBOL (PRUNING):
+
+Probar quitar cada uno de los nodos es ineficiente. Usamos el cost complexity pruning. Podamos los nodos que nos aumenten menos el error, (de forma local, no global). EL TAMAÑO DEL ARBOL ES EL NUMERO DE REGIONES (NUMERO DE HOJAS n) Construimos el arbol de n-1 hojas y podamos el nodo que menos aumente el error (NO PODEMOS PODAR HOJAS O COMBINACIONES QUE NO VIENEN DEL MISMO NODO INMEDIATO) (en ejemplo, 5.487 y 4.622 no son una rama que podar). El que gana se une, dando un arbol de n-1 hojas. Repetimos el proceso hasta que no podamos mas.lo que da la grafica que vemos. En esa grafica vemos que el de 2 esta bastante bien. El profe prefiere no podar y usar el tamaño minimo de nodo.
+
+
+EN CLASIFICACION.
+
+Lo mismo pero sin usar el error cuadratico como error. La salida ahora sera la categoria mayoritaria en la region donde caiga el dato a predecir. Lo intuitivo sería usar el error de clasificacion. Esto es para binary splitting cuidado! Usamos el indice de Gini o la entropia. 
+\begin{itemize}
+\item El indice de Ginny (mide la varianza entre todas las clases)
+\item Entropia: probabilidad por logaritmo de la probabilida y sumado sobre todas las clases. (- para que a probabilidad pequeña de valor grande). Usamos este criterio para hacer el proceso de recursive binary spliting (hacer crecer el arbol)
+\end{itemize}
+
+En la figura, los puntos de principio y fin de arco, es decir, 0 y 1, son los nodos puros ya que solo hay una clase. El maximo es el error en 0.5. El del error de clasificacion no aumenta lo suficientemente rapido para que sea un buen criterio. 
+
+El numero de muestras de una region influye en el alculo del error de regresión. En clasificación, no.
+
+\begin{example}
+\begin{align}
+R_1: \; 25 \; 1 \; : \; -0\log(0) + 1\log(1) = 0\\
+R_1: \; 25 \; 1 \text{ y } 50 \; 0 \; : \; - \frac{2}{3}\log(\frac{2}{3}) - \frac{1}{3}\log(\frac{1}{3}) = 0.918
+\end{align}
+Para otro problema distinto, donde 
+\begin{align}
+R_1: \; 50 \; 1 \; : \; -0\log(0) - 1\log(1) \\
+R_1: \; 10 \; 1 \text{ y } 20 \; 0 \; : \; - \frac{2}{3}\log(\frac{2}{3}) - \frac{1}{3}\log(\frac{1}{3})
+\end{align}
+
+Con criterios quedan iguales. El mejor sin embargo es el segundo, ya que clasifico 50 bien y luego en $R_2$ me equivoco en 10.
+\end{example}
+
+Por esto, no usamos tal cual entropia, sino 
+\begin{equation}
+\frac{|R_1|}{|R|} S_1 + \frac{|R_2|}{|R|} S_2
+\end{equation}
+
+donde $|R|$ es el tamaño del nodo $R$. nodos puros cuanto mas grandes mejor.
+
+\begin{example}
+Usamos el recursive binary tree. Sea una variable $X_1 = (-4, -2, -2, -1, 1, 3)$ y $Y = (-, -, +, +, -, +)$. Posibles puntos de división: $(-3, -1.5, 0, 2)$. Hay que coger todos los umbrales y quedarnos con el menor como antes. Cogemos por ejemplo el $-1.5$. Tamaño de $R_1$ es 3, tamaño de $R$ es 6, $p_+ = 2/3$ y $p_-=1/2$. Tamaño de $R_2$ es 3, $p_+ = 1/3$ y $p_- = 2/3$. Calculamos la entropia de cada región
+\begin{align}
+S = \underbrace{\frac{3}{6}\left(-\frac{2}{3}\log(\frac{2}{3}) - \frac{1}{3}\log(\frac{1}{3})\right)}_{R_1} + \underbrace{\frac{3}{6} \left(-\frac{1}{3}\log(\frac{1}{3}) - -\frac{2}{3}\log(\frac{2}{3})\right)}_{R_2}\\
+\end{align}
+
+Repetimos para todos los umbrales y nos quedamos con el que minimice el error. Luego repetimos con cada variable y nos quedamos con el que minimice el error. 
+\end{example}
+
+ESTE ES EL UNICO DE MODELOS QUE VAMOS A VER QUE TRABAJA CON VARIABLES CUALITATIVAS DE FORMA NATURAL.
+
+PREDICTORES CATEGORICAS: 
+\begin{example}
+Sea una variable con cuatro posibles valores ($q = 4$) $X_1 = (A, B, C, D)$, para particionar podemos hacer del 7 formas distintas: 
+\begin{equation}
+\{(A, BCD), (B, ACD), (C, ABD), (D, ABC), (AB, CD), (AC, BD), (AD, BC)\}
+\end{equation}
+Podemos reducir el numero de particiones a calcular 
+Sea $X_1 \in (A, B, C, D)$. Supongamos que de los ejemplos de $X_1 = A$, $p_+ = 0.2$ y $p_- = 0.8$. Para $X_1 = B$, $p_+ = 0.3$ y $p_- = 0.7$. Para $X_1 = C$, $p_+ = 0.4$ y $p_- = 0.6$. Para $X_1 = D$, $p_+ = 0.1$ y $p_- = 0.9$. 
+
+Ordenamos en orden creciente de la clase positiva. El valor más bajo es D con 0.1, el siguiente A con 0.2, luego B con 0.3 y finalmente C con 0.4. Analizando umbrales ahora (que serían tres), garantizamos solución optima en cuanto a gini y entropia. ESTO SOLO ES VALIDO PARA CLASIFICACION BINARIA, independientemente de q. PARA MULTICLASIFICACION hay que probar todas las posibles particiones sin hacer este truco de reducir.
+\end{example}
+
+Este truco se puede usar para regresión pero de la sigueinte forma. En vez de usar las $p_+$, calculamos la media de los ejemplos apra cada uno de los posibles valores de la clase $X_1$. Ordenamos por medias de forma creciente y calculamos los umbrales. Aplicamos lo de siempre.
+
+
+

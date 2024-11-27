@@ -1,0 +1,116 @@
+\chapter{Evaluación y selección de modelos}\label{Chapter4} 
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+Lo mas importante del curso. 
+
+\begin{itemize}
+\item Empezamos por regresion. Tenemos una variable de salida $Y$ que toma valores en un ontinuo y con p predictores-. Modelamos con una funcion y añadimos el temrino de error. Siempre tendremos este error. nosotros determinamos la $\hat{Y}$ con $\hat{f}$. El error cuadratico medio es la media de los errores al cuadrado.
+\item Como evaluamos el error de entrenamineto, que metricas, etc. En ridge, el parametro es beta, loque aprende el modelo. El coeficiente de regularizacion, es decir, $\lambda$, es el hiperparámetro, se lo damos nosotros. No free lunch teorem. algo muy importante!
+\item Empezamos a evaluar la calidad del ajuste. No dice nada relevante. $R^2$ no le gusta mucho a el. Esta metrica primero calcula el eror que obtendria el sistema de aprendizake que se nos puede ocurrir: dar como salida la media de todos nuestros ejemplos (TSS da como salida la media). Luego calcula la diferencia entre eso y la suma de los cuadrados y normalizandolo. HAciendolo peor que la media esta metrica daria negativa incluso (muy dificil). Gusta porque el error se acota entre 0 (dificil bajarla) y 1. No le gusta a el porque es engañoso, los problemas no son comparables y por tanto los valores de la metrica tampoco. Se suele usar el MSE porque no depende del numero de ejemplos. 
+
+menor MSE train no garantiza menor MSE test! Interesamos en el modelo con mejor error de test. 
+\item Diapositiva importante !! Sobreaprendizaje y subaprendizaje. EL modleo verde es el de menor MSE de train pero el azul el de menor MSE de test. Flexibilidad = complejidad de modelo, mejor se va a adaptar a los datos del modelo. Error de train y test alto = subaprendizaje, modelo demasiado simple para nuestros datos. Error de train bajo y test alto = sobreaprendizaje, modelo demasiado complejo. Al hacer exploracion hay que intentar conseguir siempre la curva para llegar al subaprendizaje y sobreaprendizaje, asi aseguramos que barremos todo el rango de hiperparametros.
+\item Tanto el amarillo como el azul son mas o menos buenos. A igualdad, preferimos modelos sencillos, ya que tiene mayor capacidad de generalizacion. 
+\item Habria que explorar mas modelos, se sobreajuste
+\item Dos formas de estimar el error de test (1) teoricamente, cogemos un subconjunto datos y calculamos el error de test sobre otro conjunto de entrenamiento. (2) lo mimos ??? La varianza nos dice cuanto cambia la funcion si cambiamos algunos de los datos de entrenamiento. Modelos sencillos tienen poca varianza, variar un dato no lo cambia mucho. Modelos complejos tienen mucha varianza, variar un dato lo cambia mucho.
+\item Bias: def. el modelo amarillo de la 2.9 tiene mucho bias, modelo verde casi nulo.  
+\item La curva roja es el error total, es decir, suma el bias, avarianza y el error irreducible.Minimos cuadrados es un modelo sobreaprendido. La flexibilidad de ridge y laso va entonces con $1/\lambda$, a mayor lambda menor lambda el modelo tiende al sobreaprendizaje. 
+\item Ahora lo mismo peroapra clasificacion. PAra medir la calidad de modelo se suele usar el error de clasificacion: contamos el numero de ejemplos en los que nos estamos equivocando. No profundizara en el clasificador de bayes. LDA hace una aproximacion al clasificador de bayes porque no se conocen las probabilidades; LDA asume una distribucion normal.
+\item Como tenemos el ejemplo, si podemos usar el de Bayes
+\item Asumimos un problema de clasificacion binario. Ahi podemos construir una matriz de confusion. $N^*$ son los negativos que estima el modelo ($N \neq N^*$).
+\item La curva ROC se usa para medir la calidad de clasificadores binarios 
+\end{itemize}
+
+\section{Selección de subconjuntos} \label{sec:4.1}
+
+\subsection{Selección del mejor subconjunto}
+
+Para hacer la selección del mejor subconjunto, se debe ajustar una regresión de mínimos cuadrados distinta para cada combinación de los $p$ predictores. Esto es, se ajustan todos los $p$ modelos que contienen exactamente un predictor, los $\binom{p}{2} = p(p-1)/2$ modelos que contienen exactamente dos predictores, y así sucesivamente. Luego, se selecciona el mejor modelo. \\
+
+El problema viene en elegir el mejor de entre las $2^p$ posibilidades consideradas. Esto se suele hacer en dos etapas:
+\begin{enumerate}
+\item Sea $\mathcal{M}_0$ el modelo nulo que no contiene ningún predictor. Este modelo predice la media de la muestra para cada observación.
+\item Para $k = 1, 2, \ldots, p$:
+\begin{enumerate}
+\item Ajustar todos los $\binom{p}{k}$ modelos que contienen exactamente $k$ predictores.
+\item Elegir el mejor modelo entre los $\binom{p}{k}$ modelos, y llamarlo $\mathcal{M}_k$. Aquí, ``mejor'' se refiere a tener el menor RSS o, equivalentemente, el mayor $R^2$. Tras esto, el problema se reduce de $2^p$ posibilidades a $p+1$. 
+\end{enumerate}
+\item Elegir un único ``mejor'' modelo de entre $\mathcal{M}_0, \dots, \mathcal{M}_p$ usando predicción de error validada de forma cruzada, $C_p$ (AIC), BIC, o $R^2$ ajustado.
+\end{enumerate}
+
+Para elegir el mejor modelo hay que elegir entre los $p+1$ modelos $\mathcal{M}_i$, con $i = 0, \dots, p$. Hay que tener en cuenta que el RSS de estos modelos decrece de forma monótona, mientras que el $R^2$ aumenta de forma monótona. Por tanto, si se usa estos estadísticos para elegir el mejor modelo, siempre se acabará con un modelo que incluya todas las variables. El problema es que un RSS bajo o un $R^2$ alto indica un modelo con un error de entrenamiento bajo, mientras que lo que se quiere es elegir un modelo con un error de \textit{test} bajo. Por tanto, en el paso 3, se usa la predicción de error validada de forma cruzada, $C_p$, BIC o $R^2$ ajustado para elegir entre $\mathcal{M}_0, \mathcal{M}_1, \dots, \mathcal{M}_p$. 
+
+\subsection{Selección por pasos}
+
+Por motivos computacionales, la selección del mejor subconjunto no sirve para $p$ grandes, caso donde puede sufrir de porblemas estadísticos. Cuando mayor sea el espacio de búsqueda, mayor será la posibilidad de encontrar modelos que ajusten bien el conjunto de entrenamiento, aunque no tenga buen poder predictivo. Entonces, un gran espacio de búsqueda puede conducir a \textit{overfitting} y una gran variación de los coeficientes estimados. Los modelos de selección por pasos exploran un conjunto restringido de modelos, por lo que resultan una buena alterantiva. 
+
+\subsubsection{Selección por pasos hacia adelante}
+
+Este método resulta más eficiente computacionalmente que la selcción del mejor subconjunto. Este método comienza con un modelo que no contenga predictores, y va añadiendo predictores al modelo, uno a uno, hasta que todos los predictores están dentro del modelo. En particular, en cada paso, se añade la variable que dé la mayor mejora al ajuste. Formalmente:
+\begin{enumerate}
+\item Sea $\mathcal{M}_0$ el modelo nulo, que no contiene predictores.
+\item Para $k = 0, \dots, p-1$:
+\begin{enumerate}
+\item Considera los $p-k$ modelos que aumentan los predictores en $\mathcal{M}_k$ con un predictor adicional.
+\item Elige el mejor entre estos $p-k$ modelos y lo denota $\mathcal{M}_{k+1}$. Aquí el ``mejor'' es aquel con menor RSS o mayor $R^2$. 
+\end{enumerate}
+\item Elige el mejor modelo entre $\mathcal{M}_0, \dots, \mathcal{M}_p$ usando predicción de error validada de forma cruzada, $C_p$ (AIC), (BIC) o $R^2$ ajustado.
+\end{enumerate}
+
+A diferencia de la selección del mejor subconjunto, que necesita ajustar $2^p$ modelos, la selección por pasos hacia adelante necesita ajustar un modelo nulo, junto con $p-k$ modelos en la iteración k-ésima para $k = 0, \dots, p-1$. Esto resulta en un total de $1 \sum_{k=0}^{p-1}(p-k) = 1 + p(p+1)/2$ modelos. \\
+
+En el segundo paso, el apartado (b), se debe elegir el mejor modelo entre los $p-k$ modelos que aumentan $\mathcal{M}_k$ con un predictor adicional. Esto se puede hacer eligiendo el modelo con menor RSS o mayor $R^2$. Sin embargo, en el paso 3, se debe elegir el mejor modelo entre un conjunto de modelos con diferente número de variables. Esto es más complicado y se discute en la sección 6.1.3. \\
+
+La ventaja computacional del método de selección por pasos hacia adelante sobre la selección del mejor subconjunto es clara. Aunque el método de selección por pasos hacia adelante tiende a funcionar bien en la práctica, no está garantizado que encuentre el mejor modelo posible de entre los $2^p$ modelos que contienen subconjuntos de los $p$ predictores. Por ejemplo, sea un conjunto de datos con $p = 3$ predictores, el mejor modelo de una variable contiene $X_1$, y el mejor modelo de dos variables contiene $X_2$ y $X_3$. Entonces, la selección por pasos hacia adelante no seleccionará el mejor modelo de dos variables, porque $\mathcal{M}_1$ contendrá $X_1$, por lo que $\mathcal{M}_2$ también debe contener $X_1$ junto con una variable adicional. \\
+
+La selección por pasos hacia adelante se puede aplicar incluso en el caso de gran dimensión donde $n < p$, aunque en este caso, solo se pueden construir submodelos $M_0, \dots, M_{n-1}$, ya que cada submodelo se ajusta utilizando mínimos cuadrados, lo que no dará una solución única si $p \geq n$.
+
+\subsubsection{Selección por pasos hacia atrás}
+
+Este método comienza con el modelo de mínimos cuadrados que contiene todos los predictores, y luego elimina uno a uno los predictores que menos contribuyen al ajuste. Formalmente:
+\begin{enumerate}
+\item Sea $\mathcal{M}_p$ el modelo completo que contiene los $p$ predictores.
+\item Para $k = p, p-1, \dots, 1$:
+\begin{enumerate}
+\item Considera los $k$ modelos que contienen todos menos uno de los predictores en $\mathcal{M}_k$, para un total de $k-1$ predictores.
+\item Elige el mejor entre estos $k$ modelos y lo denota $\mathcal{M}_{k-1}$. Aquí el ``mejor'' es aquel con menor RSS o mayor $R^2$.
+\end{enumerate}
+\item Elige el mejor modelo entre $\mathcal{M}_0, \dots, \mathcal{M}_p$ usando predicción de error validada de forma cruzada, $C_p$ (AIC), (BIC) o $R^2$ ajustado.
+\end{enumerate}
+
+La selección por pasos hacia atrás también necesita ajustar $1 + p(p+1)/2$ modelos, al igual que la selección por pasos hacia adelante, y también puede aplicarse para el caso en el que $p$ es demasiado grande como para aplicar la selección del mejor conjunto. Este método tampoco garantiza encontrar el mejor modelo de entre los $2^p$ posibles. \\
+
+La selección por pasos hacia detrás no se puede aplicar en el caso en el que $n < p$, ya que el modelo completo no se puede ajustar en este caso.
+
+\subsubsection{Modelos híbridos}
+
+En general, no se obtienen los mismos modelos de selección por pasos hacia adelante y hacia atrás. Como alternativa, se pueden considerar versiones híbridas de selección por pasos hacia adelante y hacia atrás, en las que las variables se agregan al modelo secuencialmente, de manera análoga a la selección hacia adelante, pero después de agregar cada nueva variable, el método puede eliminar cualquier variable que ya no proporcione una mejora en el ajuste del modelo. Este enfoque intenta imitar más de cerca la selección del mejor subconjunto, mientras mantiene las ventajas computacionales de la selección por pasos hacia adelante y hacia atrás.
+
+\subsection{Selección del modelo óptimo}
+
+\begin{equation}
+C_p = \frac{1}{n}(RSS + 2d\hat{\sigma}^2)
+\end{equation}
+
+\begin{equation}
+AIC = \frac{1}{n\hat{\sigma}^2}(RSS + 2d\hat{\sigma}^2)
+\end{equation}
+
+\begin{equation}
+BIC = \frac{1}{n}(RSS + \log(n)d\hat{\sigma}^2)
+\end{equation}
+
+\begin{equation}
+R^2_{\text{ajustado}} = 1 - \frac{RSS/(n-d-1)}{TSS/(n-1)}
+\end{equation}
+
+\subsubsection{Validación y validación cruzada}
+
+\subsubsection{Reduciendo de error}
+
+En situacion de subaprendizaje, añadir mas datos no va a ayudar. PAra resolverlo hay que ir a un modelo más complejo. Podemos añadir caracteristicas o variables nuevas y/o decrementar la regularización (en ridge lasso seria disminuir $\lambda$) (este es el más directo y sencillo). \\
+
+En situacion de sobreaprendizaje, añadir mas datos si que ayuda. Hay que ir a un modelo más simple. Podemos eliminar caracteristicas o variables y/o incrementar la regularización .

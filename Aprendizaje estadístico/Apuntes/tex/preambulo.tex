@@ -1,0 +1,38 @@
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+%\usepackage{mathpazo} % Use the Palatino font by default
+%\usepackage{mathptmx}
+%\usepackage{stix} % tipo de fuente
+\usepackage{microtype} 
+
+\usepackage{mathtools} % símbolos extensibles (contiene amsmath)
+\usepackage{amssymb} % símbolos matemáticos
+\usepackage{amsthm} % para teoremas, lemas, ...
+\usepackage{mathrsfs} % para usar \mathscr{}
+\usepackage{tensor} % índices en cualquier lado
+\usepackage{cancel} % tachar
+\usepackage{dsfont} % usar fuente bbm en modo mates (para poner la identidad en vd)
+
+\usepackage{array} % arrays
+\usepackage{multirow} % redimensionar, unir celdas, ...
+\usepackage{blkarray} % arrays en bloques
+\usepackage{footnote} % notas a pie de pagina
+\usepackage{multicol}
+
+\usepackage{float} % para figuras (las fija, [H], ...)
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\thefigure}{\Roman{figure}} 
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+\newcommand\diagram[2]{\schema{\schemabox{#1}}{\schemabox{#2}}}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{example}{Ejemplo}[section]
+\newtheorem{lemma}{Lema}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{comentario}{Comentario}[section]
+\def\proof{\paragraph{Demostraci\'on:\\}}
+\def\endproof{\hfill$\blacksquare$}
+
