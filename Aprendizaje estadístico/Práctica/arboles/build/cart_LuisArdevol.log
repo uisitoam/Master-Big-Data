@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  27 NOV 2024 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  28 NOV 2024 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -651,40 +651,45 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
+<fotos/arbol.pdf, id=7, 1189.44376pt x 1090.0725pt>
+File: fotos/arbol.pdf Graphic file (type pdf)
+<use fotos/arbol.pdf>
+Package pdftex.def Info: fotos/arbol.pdf  used on input line 35.
+(pdftex.def)             Requested size: 243.1288pt x 222.80098pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 36.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 41.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<fotos/ej2_1.pdf, id=7, 2168.1pt x 1445.4pt>
+<fotos/ej2_1.pdf, id=8, 2168.1pt x 1445.4pt>
 File: fotos/ej2_1.pdf Graphic file (type pdf)
 <use fotos/ej2_1.pdf>
-Package pdftex.def Info: fotos/ej2_1.pdf  used on input line 40.
+Package pdftex.def Info: fotos/ej2_1.pdf  used on input line 45.
 (pdftex.def)             Requested size: 437.62888pt x 291.74353pt.
-<fotos/ej2_2.pdf, id=8, 2168.1pt x 1445.4pt>
+<fotos/ej2_2.pdf, id=9, 2168.1pt x 1445.4pt>
 File: fotos/ej2_2.pdf Graphic file (type pdf)
 <use fotos/ej2_2.pdf>
-Package pdftex.def Info: fotos/ej2_2.pdf  used on input line 45.
+Package pdftex.def Info: fotos/ej2_2.pdf  used on input line 50.
 (pdftex.def)             Requested size: 437.62888pt x 291.74353pt.
  [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/ej2_1.pdf>]
-<fotos/ej3_1.pdf, id=63, 1084.05pt x 578.16pt>
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/arbol.pdf> <./fotos/ej2_1.pdf>]
+<fotos/ej3_1.pdf, id=69, 1084.05pt x 578.16pt>
 File: fotos/ej3_1.pdf Graphic file (type pdf)
 <use fotos/ej3_1.pdf>
-Package pdftex.def Info: fotos/ej3_1.pdf  used on input line 57.
+Package pdftex.def Info: fotos/ej3_1.pdf  used on input line 62.
 (pdftex.def)             Requested size: 364.6932pt x 194.49863pt.
-<fotos/ej3_2.pdf, id=64, 722.7pt x 578.16pt>
+<fotos/ej3_2.pdf, id=70, 722.7pt x 578.16pt>
 File: fotos/ej3_2.pdf Graphic file (type pdf)
 <use fotos/ej3_2.pdf>
-Package pdftex.def Info: fotos/ej3_2.pdf  used on input line 62.
+Package pdftex.def Info: fotos/ej3_2.pdf  used on input line 67.
 (pdftex.def)             Requested size: 364.6932pt x 291.75235pt.
  [2 <./fotos/ej2_2.pdf> <./fotos/ej3_1.pdf
 
@@ -703,18 +708,18 @@ Package rerunfilecheck Info: File `cart_LuisArdevol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24714 strings out of 474116
- 451408 string characters out of 5743682
+ 24722 strings out of 474116
+ 451601 string characters out of 5743682
  1931187 words of memory out of 5000000
- 46684 multiletter control sequences out of 15000+600000
+ 46691 multiletter control sequences out of 15000+600000
  566293 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,7n,107p,513b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on build/cart_LuisArdevol.pdf (3 pages, 122244 bytes).
+Output written on build/cart_LuisArdevol.pdf (3 pages, 362369 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

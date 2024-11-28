@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732725080.57565 "/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex" "build/cart_LuisArdevol.pdf" "cart_LuisArdevol" 1732725081.48743 0
-  "/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex" 1732725080.3426 2616 431a624f25866126114aa12edd46bb32 ""
+["pdflatex"] 1732826642.34896 "/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex" "build/cart_LuisArdevol.pdf" "cart_LuisArdevol" 1732826643.22165 0
+  "/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex" 1732826642.14622 2713 814df586e89209e78bd30b214190c2ac ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -168,12 +168,13 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1714491164.43273 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714491104 8221416 71c8040c626895d4f8d14b7696612575 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "build/cart_LuisArdevol.aux" 1732725081.41274 346 6ba35f84758e2b39f609008fcab8465e "pdflatex"
-  "build/cart_LuisArdevol.out" 1732725081.22843 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "fotos/ej2_1.pdf" 1732724948.83758 17059 aa11a63dcaa939144466d6d8bea829d8 ""
-  "fotos/ej2_2.pdf" 1732724954.37286 19048 d8a3e6043b3882deccd7442c7b22d5b4 ""
-  "fotos/ej3_1.pdf" 1732724958.45351 16727 ffa82bdb2a6a2753710d512f0ff30382 ""
-  "fotos/ej3_2.pdf" 1732724960.45438 18653 972c52054c5ea577ae555e7b83c8a001 ""
+  "build/cart_LuisArdevol.aux" 1732826643.14584 346 6ba35f84758e2b39f609008fcab8465e "pdflatex"
+  "build/cart_LuisArdevol.out" 1732826642.96682 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "fotos/arbol.pdf" 1732826475 240440 212a7f465cdfc0c18450851abeb6a40e ""
+  "fotos/ej2_1.pdf" 1732798534.24659 17059 b332475787d25a322e38549d1681612c ""
+  "fotos/ej2_2.pdf" 1732798538.46032 19048 13878ffd186fc3e4ce8393f5a05bac4d ""
+  "fotos/ej3_1.pdf" 1732798540.87831 16727 7af93d09f18ab2b05cf542fa1717651b ""
+  "fotos/ej3_2.pdf" 1732798543.47747 18889 65d564046ec526828de2c0e6ba181edf ""
   (generated)
   "build/cart_LuisArdevol.aux"
   "build/cart_LuisArdevol.log"
