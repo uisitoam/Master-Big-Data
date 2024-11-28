@@ -293,14 +293,13 @@ with rival_nadal as (
     where pg -> 'torneo' ->> 'nombre' = 'Roland Garros' 
     	and pg ->> 'ronda' = 'R128'
 		and extract(year from (pg ->> 'fecha')::date) = 2018
-        and tjr.jugador->>'id' = pg ->> 'rival'
+        and tjr.jugador ->> 'id' = pg ->> 'rival'
         and ((tj.jugador ->> 'nombre' = 'Rafael' and tj.jugador ->> 'apellido' = 'Nadal') 
         	or (tjr.jugador ->> 'nombre' = 'Rafael' and tjr.jugador ->> 'apellido' = 'Nadal'))
 )
 
-select tj.jugador->>'nombre' || ' ' || (tj.jugador->>'apellido')::text as jugador, 
-	tj.pais->>'codigo_iso2' as pais
+select tj.jugador ->> 'nombre' || ' ' || (tj.jugador ->> 'apellido')::text as jugador, 
+	tj.pais ->> 'codigo_iso2' as pais
 from rival_nadal rn, tenisjson tj, jsonb_array_elements(tj.partidos_perdidos) as partidos(pg)
-where rn.id_jugador = (pg->>'rival')::integer 
-	and extract(year from (pg->>'fecha')::date) = 2018
-   
+where rn.id_jugador = (pg ->> 'rival')::integer 
+	and extract(year from (pg ->> 'fecha')::date) = 2018
