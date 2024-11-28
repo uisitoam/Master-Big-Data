@@ -1,4 +1,4 @@
--- Q1 (0.003s)
+-- Q1
 select j.nombre, j.apellido, extract(year from p.fecha) as ano
 from jugador j, partido p, torneo t
 where j.id = p.ganador 
@@ -9,9 +9,7 @@ order by ano
 
 
 
-
-
--- Q2 (0.022s)
+-- Q2
 select extract(year from et.fecha) as ano, count(distinct t.id) as numero_torneos, string_agg(t.nombre, ', ' order by et.fecha) as torneos
 from jugador j, partido p, torneo t, edicion_torneo et
 where j.id = p.ganador
@@ -27,8 +25,7 @@ group by ano
 
 
 
-
--- Q3 (0.027s)
+-- Q3
 select p.ronda, p.desenlace, jg.nombre || ' ' || jg.apellido AS ganador, jp.nombre || ' ' || jp.apellido AS perdedor, STRING_AGG(sp.juegos_ganador || '-' || sp.juegos_perdedor ||
       case
           when sp.puntos_tiebreak_perdedor is not null then
@@ -51,7 +48,7 @@ group by p.ronda, p.desenlace, jg.nombre, jg.apellido, jp.nombre, jp.apellido, p
 
 
 
--- Q4 (0.062s)
+-- Q4
 with jugadores_espanoles_ganadores as (
     select distinct j.id as id_jugador, j.nombre || ' ' || j.apellido as jugador
     from partido p, jugador j, edicion_torneo et 
@@ -90,7 +87,8 @@ group by jeg.jugador
 
 
 
--- Q5 (0.031s)
+
+-- Q5
 with rival_nadal as (
 	select case when jg.nombre = 'Rafael' then jp.id else jg.id end as id_jugador, 
 		case when jg.nombre = 'Rafael' then jp.nombre || ' ' || jp.apellido else jg.nombre || ' ' || jg.apellido end as jugador

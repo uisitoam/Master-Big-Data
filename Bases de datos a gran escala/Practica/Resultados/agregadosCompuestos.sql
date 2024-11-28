@@ -148,6 +148,9 @@ from public.partido p join public.edicion_torneo et on et.fecha = p.fecha and et
 
 
 
+	
+	
+
 
 -- CONSULTAS
 
