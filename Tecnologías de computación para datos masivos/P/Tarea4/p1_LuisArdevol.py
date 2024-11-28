@@ -19,54 +19,62 @@ def main():
 
     spark = SparkSession \
         .builder \
-        .appName("Practica 1 de Tomas") \
+        .appName("Practica PySpark Luis") \
         .getOrCreate()
 
     # Reducir la verbosidad de los logs
     spark.sparkContext.setLogLevel("FATAL")
 
-    # a) Procesar cite75_99.txt para obtener el número de citas por patente
-    # Leer el archivo cite75_99.txt desde HDFS
+    # a) A partir del fichero cite75_99.txt obtener el número de citas que ha recibido cada patente
+    # leemos el archivo cite75_99.txt desde HDFS
     df_cite = spark.read.csv(path_cite75_99, inferSchema=True, header=False)
 
-    # Renombrar las columnas
+    # renombramos las columnas
     df_cite = df_cite.withColumnRenamed("_c0", "citing").withColumnRenamed("_c1", "cited")
 
-    # Contar el número de citas por patente citada
+    # contamos el número de citas por patente citada
     df_ncitas = df_cite.groupBy("cited") \
         .count() \
         .withColumnRenamed("cited", "NPatente") \
         .withColumnRenamed("count", "ncitas")
 
-    # Convertir NPatente y ncitas a enteros
+    # conversion de tipos
     df_ncitas = df_ncitas.withColumn("NPatente", F.col("NPatente").cast("integer")) \
                          .withColumn("ncitas", F.col("ncitas").cast("integer"))
+    
+    #df_ncitas.show(5)
 
-    # b) Procesar apat63_99.txt para obtener NPatente, Pais y Anho
-    # Leer el archivo apat63_99.txt como texto desde HDFS
-    df_apat = spark.read.text(path_apat63_99)
-
-    # Extraer las columnas de interés según las posiciones de los caracteres
-    df_info = df_apat.select(
-        F.trim(F.substring(df_apat.value, 1, 7)).alias("NPatente"),
-        F.trim(F.substring(df_apat.value, 58, 2)).alias("Pais"),
-        F.trim(F.substring(df_apat.value, 66, 4)).alias("Anho")
+    # b) A partir del fichero apat63_99.txt, crear un DataFrame que contenga el 
+    #número de patente, el país y el año de concesión (columna GYEAR), descartando 
+    #el resto de campos del fichero.
+    df_apat = spark.read.csv(
+        path_apat63_99,
+        header=True,  # El archivo tiene cabecera
+        inferSchema=True  # Inferir tipos de datos automáticamente
     )
 
-    # Convertir tipos de datos
+    # seleccionamos y renombramos las columnas 
+    df_info = df_apat.select(
+        F.col("PATENT").alias("NPatente"),
+        F.col("COUNTRY").alias("Pais"),
+        F.col("GYEAR").alias("Anho")
+    )
+
+    # convertimos los tipos de datos y filtramos los 'no disponible'
     df_info = df_info.withColumn("NPatente", F.col("NPatente").cast("integer")) \
-                     .withColumn("Anho", F.col("Anho").cast("integer"))
+                     .withColumn("Anho", F.col("Anho").cast("integer")) \
+                     .filter(
+                        (F.col("Pais").isNotNull()) & 
+                        (F.col("Pais") != "") & 
+                        (F.col("Anho").isNotNull()) & 
+                        (F.col("Anho") >= 1963)
+                     )
+    
+    #df_info.show(5)
 
     # Guardar los DataFrames en formato Parquet con compresión gzip
     df_ncitas.write.parquet(output_dfCitas, mode="overwrite", compression="gzip")
     df_info.write.parquet(output_dfInfo, mode="overwrite", compression="gzip")
-
-    # Mostrar el número de particiones y archivos generados
-    num_partitions_ncitas = df_ncitas.rdd.getNumPartitions()
-    print("DataFrame df_ncitas tiene {} particiones.".format(num_partitions_ncitas))
-
-    num_partitions_info = df_info.rdd.getNumPartitions()
-    print("DataFrame df_info tiene {} particiones.".format(num_partitions_info))
 
     spark.stop()
 
