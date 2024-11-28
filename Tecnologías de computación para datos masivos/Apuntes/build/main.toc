@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Contents}{ii}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Big Data y Map Reduce}{1}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Introducción a Hadoop}{3}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Cluster Hadoop}{4}{chapter.23}%
