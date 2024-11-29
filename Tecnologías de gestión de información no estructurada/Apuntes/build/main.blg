@@ -5,10 +5,6 @@ The style file: biblatex.bst
 A level-1 auxiliary file: tex/Chapter1.aux
 A level-1 auxiliary file: tex/Chapter2.aux
 A level-1 auxiliary file: tex/Chapter3.aux
-A level-1 auxiliary file: tex/Chapter4.aux
-A level-1 auxiliary file: tex/Chapter5.aux
-A level-1 auxiliary file: tex/Chapter6.aux
-A level-1 auxiliary file: tex/Chapter7.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -31,7 +27,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 1 entry,
             6399 wiz_defined-function locations,
-            1210 strings with 9083 characters,
+            1206 strings with 9019 characters,
 and the built_in function-call counts, 1566 in all, are:
 = -- 74
 > -- 74

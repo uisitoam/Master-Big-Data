@@ -1,51 +1,30 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Contents}{ii}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.2}%
-\contentsline {section}{\numberline {1.1}Datos textuales como \textit {Big Data}}{2}{section.3}%
-\contentsline {subsection}{\numberline {1.1.1}Recuperación y minería de texto}{3}{subsection.4}%
-\contentsline {subsubsection}{Recuperación de texto (\textit {text retrieval})}{3}{section*.5}%
-\contentsline {subsubsection}{Minería de texto (DM)}{3}{section*.6}%
-\contentsline {subsection}{\numberline {1.1.2}Modos de acceso a la información: Pull vs Push}{3}{subsection.7}%
-\contentsline {section}{\numberline {1.2}Sistemas de Información Textual (TIS)}{3}{section.8}%
-\contentsline {subsection}{\numberline {1.2.1}Análisis del texto}{4}{subsection.9}%
-\contentsline {subsection}{\numberline {1.2.2}Sistemas de información textual}{4}{subsection.10}%
-\contentsline {chapter}{\numberline {2}Datos textuales}{6}{chapter.12}%
-\contentsline {section}{\numberline {2.1}Procesamiento de lenguaje natural}{6}{section.13}%
-\contentsline {subsection}{\numberline {2.1.1}Desafíos y ambigüedades}{7}{subsection.15}%
-\contentsline {subsection}{\numberline {2.1.2}Historia y estado del arte en NLP}{8}{subsection.16}%
-\contentsline {subsection}{\numberline {2.1.3}Procesamiento de lenguaje natural estadístico}{9}{subsection.17}%
-\contentsline {subsubsection}{Procesamiento de lenguaje natural superficial y profundo}{9}{section*.19}%
-\contentsline {section}{\numberline {2.2}Representación de texto}{9}{section.21}%
-\contentsline {section}{\numberline {2.3}Modelos de lenguaje estadísticos}{12}{section.24}%
-\contentsline {subsection}{\numberline {2.3.1}Usos de modelos del lenguaje}{12}{subsection.25}%
-\contentsline {subsection}{\numberline {2.3.2}Modelos de lenguaje}{13}{subsection.26}%
-\contentsline {chapter}{\numberline {3}Visión general del acceso a datos textuales}{16}{chapter.33}%
-\contentsline {section}{\numberline {3.1}Modos de acceso: \textit {pull} y \textit {push}}{16}{section.34}%
-\contentsline {subsubsection}{\textit {Pull}}{17}{section*.36}%
-\contentsline {subsubsection}{\textit {Push}}{17}{section*.37}%
-\contentsline {subsubsection}{Necesidad de información}{17}{section*.38}%
-\contentsline {section}{\numberline {3.2}Acceso interactivo multimodal}{18}{section.39}%
-\contentsline {section}{\numberline {3.3}Recuperación de texto}{19}{section.42}%
-\contentsline {section}{\numberline {3.4}Recuperación de texto vs recuperación de bases de datos}{20}{section.43}%
-\contentsline {section}{\numberline {3.5}Selección y clasificación de documentos}{22}{section.44}%
-\contentsline {chapter}{\numberline {4}Modelos de recuperación}{25}{chapter.45}%
-\contentsline {section}{\numberline {4.1}Visión general}{25}{section.46}%
-\contentsline {section}{\numberline {4.2}Forma general de la función de recuperación}{26}{section.47}%
-\contentsline {section}{\numberline {4.3}Modelos de recuperación de espacio vectorial}{27}{section.50}%
-\contentsline {section}{\numberline {4.4}Modelos de recuperación de espacio vectorial}{27}{section.51}%
-\contentsline {subsection}{\numberline {4.4.1}Modelo de espacio vectorial simple}{29}{subsection.53}%
-\contentsline {subsubsection}{Modelo VSP mejorado}{31}{section*.60}%
-\contentsline {chapter}{\numberline {5}Motores de búsqueda}{33}{chapter.63}%
-\contentsline {section}{\numberline {5.1}Componentes de los motores de búsqueda}{33}{section.64}%
-\contentsline {section}{\numberline {5.2}Tokenizadores}{33}{section.65}%
-\contentsline {subsection}{\numberline {5.2.1}Doc and term IDs}{34}{subsection.66}%
-\contentsline {section}{\numberline {5.3}Indexador}{34}{section.67}%
-\contentsline {chapter}{\numberline {6}Representaciones avanzadas de texto}{37}{chapter.68}%
-\contentsline {chapter}{\numberline {7}Web search}{39}{chapter.69}%
-\contentsline {section}{\numberline {7.1}Web Crawling}{40}{section.70}%
-\contentsline {section}{\numberline {7.2}Web Indexing}{41}{section.71}%
-\contentsline {section}{\numberline {7.3}Link Analysis}{43}{section.72}%
-\contentsline {subsection}{\numberline {7.3.1}PageRank}{44}{subsection.73}%
-\contentsline {subsection}{\numberline {7.3.2}HITS}{47}{subsection.79}%
-\contentsline {section}{\numberline {7.4}Aprendizaje para Clasificar}{48}{section.80}%
-\contentsline {section}{\numberline {7.5}Futuro del web search}{51}{section.84}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Datos textuales como \textit {Big Data}}{1}{section.3}%
+\contentsline {subsection}{\numberline {1.1.1}Recuperación y minería de texto}{2}{subsection.4}%
+\contentsline {subsubsection}{Recuperación de texto (\textit {text retrieval})}{2}{section*.5}%
+\contentsline {subsubsection}{Minería de texto (DM)}{2}{section*.6}%
+\contentsline {subsection}{\numberline {1.1.2}Modos de acceso a la información: Pull vs Push}{2}{subsection.7}%
+\contentsline {section}{\numberline {1.2}Sistemas de Información Textual (TIS)}{2}{section.8}%
+\contentsline {subsection}{\numberline {1.2.1}Análisis del texto}{3}{subsection.9}%
+\contentsline {subsection}{\numberline {1.2.2}Sistemas de información textual}{3}{subsection.10}%
+\contentsline {chapter}{\numberline {2}Datos textuales}{5}{chapter.12}%
+\contentsline {section}{\numberline {2.1}Procesamiento de lenguaje natural}{5}{section.13}%
+\contentsline {subsection}{\numberline {2.1.1}Desafíos y ambigüedades}{6}{subsection.15}%
+\contentsline {subsection}{\numberline {2.1.2}Historia y estado del arte en NLP}{7}{subsection.16}%
+\contentsline {subsection}{\numberline {2.1.3}Procesamiento de lenguaje natural estadístico}{8}{subsection.17}%
+\contentsline {subsubsection}{Procesamiento de lenguaje natural superficial y profundo}{8}{section*.19}%
+\contentsline {section}{\numberline {2.2}Representación de texto}{8}{section.21}%
+\contentsline {section}{\numberline {2.3}Modelos de lenguaje estadísticos}{11}{section.24}%
+\contentsline {subsection}{\numberline {2.3.1}Usos de modelos del lenguaje}{11}{subsection.25}%
+\contentsline {subsection}{\numberline {2.3.2}Modelos de lenguaje}{12}{subsection.26}%
+\contentsline {chapter}{\numberline {3}Visión general del acceso a datos textuales}{15}{chapter.33}%
+\contentsline {section}{\numberline {3.1}Modos de acceso: \textit {pull} y \textit {push}}{15}{section.34}%
+\contentsline {subsubsection}{\textit {Pull}}{16}{section*.36}%
+\contentsline {subsubsection}{\textit {Push}}{16}{section*.37}%
+\contentsline {subsubsection}{Necesidad de información}{16}{section*.38}%
+\contentsline {section}{\numberline {3.2}Acceso interactivo multimodal}{17}{section.39}%
+\contentsline {section}{\numberline {3.3}Recuperación de texto}{18}{section.42}%
+\contentsline {section}{\numberline {3.4}Recuperación de texto vs recuperación de bases de datos}{19}{section.43}%
+\contentsline {section}{\numberline {3.5}Selección y clasificación de documentos}{21}{section.44}%
