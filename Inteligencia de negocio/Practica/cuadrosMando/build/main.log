@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  17 NOV 2024 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  29 NOV 2024 20:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -836,15 +836,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 133.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 133.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 142.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 151.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 134.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -853,25 +845,50 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 172.
+(Font)              scaled to size 11.39996pt on input line 137.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 137.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.64998pt on input line 167.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 172.
+(Font)              scaled to size 7.29405pt on input line 167.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 172.
+(Font)              scaled to size 5.21004pt on input line 167.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 172.
+(Font)              scaled to size 7.29405pt on input line 167.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 172.
+(Font)              scaled to size 5.21004pt on input line 167.
  [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 189.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 189.
-LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 9.49997pt on input line 189.
- [2] [3] [4] [5] 
+<fotos/1.png, id=60, 1000.48781pt x 671.50874pt>
+File: fotos/1.png Graphic file (type png)
+<use fotos/1.png>
+Package pdftex.def Info: fotos/1.png  used on input line 210.
+(pdftex.def)             Requested size: 419.43759pt x 281.51942pt.
+ [2]
+<fotos/2.png, id=94, 1001.99344pt x 664.73344pt>
+File: fotos/2.png Graphic file (type png)
+<use fotos/2.png>
+Package pdftex.def Info: fotos/2.png  used on input line 216.
+(pdftex.def)             Requested size: 419.43759pt x 278.26312pt.
+<fotos/3.png, id=95, 999.735pt x 666.23906pt>
+File: fotos/3.png Graphic file (type png)
+<use fotos/3.png>
+Package pdftex.def Info: fotos/3.png  used on input line 222.
+(pdftex.def)             Requested size: 419.43759pt x 279.51352pt.
+ [3 <./fotos/1.png> <./fotos/2.png>]
+<fotos/5.png, id=104, 999.735pt x 664.73344pt>
+File: fotos/5.png Graphic file (type png)
+<use fotos/5.png>
+Package pdftex.def Info: fotos/5.png  used on input line 228.
+(pdftex.def)             Requested size: 419.43759pt x 278.88185pt.
+<fotos/4.png, id=105, 1005.00468pt x 668.4975pt>
+File: fotos/4.png Graphic file (type png)
+<use fotos/4.png>
+Package pdftex.def Info: fotos/4.png  used on input line 234.
+(pdftex.def)             Requested size: 419.43759pt x 278.99216pt.
+ [4 <./fotos/3.png> <./fotos/5.png>] [5 <./fotos/4.png>] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux)
  ***********
@@ -879,21 +896,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FEB6ADDD00E56E65D4E3CF2C676C333F;3116.
+(rerunfilecheck)             Checksum: 5D1662A34F61ACBD308663A8C14A13D2;1572.
  ) 
 Here is how much of TeX's memory you used:
- 32425 strings out of 474116
- 653173 string characters out of 5743682
- 2071187 words of memory out of 5000000
- 54152 multiletter control sequences out of 15000+600000
- 620761 words of font info for 212 fonts, out of 8000000 for 9000
+ 32400 strings out of 474116
+ 653109 string characters out of 5743682
+ 2132187 words of memory out of 5000000
+ 54183 multiletter control sequences out of 15000+600000
+ 613560 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,19n,93p,1088b,2397s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (5 pages, 131046 bytes).
+ 90i,18n,93p,1088b,1155s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on build/main.pdf (5 pages, 802385 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 69 named destinations out of 1000 (max. 500000)
- 78929 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 66634 words of extra memory for PDF output out of 74296 (max. 10000000)
 

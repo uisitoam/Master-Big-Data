@@ -122,7 +122,7 @@
 
 
 \begin{abstract}
-A
+Buscamos un cuadro de mando con 4 paneles que muestre el director (o combinaciones de directores) con mayor ROI promedio, y las productoras con mayor cuota de mercado en el año 2001. Además, se mostrarán \textit{rankings} de directores y productoras mejor valorados. Se proporcionan consultas SQL y MDX para obtener estos datos, así como distintas visualizaciones del cuadro de mando.
 \end{abstract}
 
 \setboolean{displaycopyright}{false} % Do not include copyright or licensing information in submission.
@@ -130,238 +130,109 @@ A
 \begin{document}
 
 \maketitle
-\section{Desarrollo de la Sección 6: Ranking de Directores y Productores según ROI Promedio (Con Dos Gráficos)}
 
-\textbf{Descripción:}
+En caso de no copiarse correctamente el código SQL o MDX, se pueden encontrar las consultas en el archivo \texttt{README} adjunto.
 
-Esta sección se enfoca en analizar el \textbf{Retorno de Inversión (ROI) promedio} de los proyectos realizados por combinaciones de \textbf{directores} y \textbf{productores}. Al identificar las combinaciones con mayor ROI, la productora puede tomar decisiones informadas sobre futuras colaboraciones y asignar recursos de manera óptima.
+ 
+\section{Consultas}
 
-\textbf{Objetivos:}
-
-\begin{itemize}
-    \item Identificar dúos creativos rentables.
-    \item Analizar tendencias en el desempeño financiero de colaboraciones específicas.
-    \item Visualizar los datos desde diferentes perspectivas para obtener \textit{insights} más profundos.
-\end{itemize}
-
-\subsection{1. Consulta MDX para Calcular el ROI Promedio}
-
-Utilizaremos una consulta MDX que calcule el ROI promedio por combinación de director y productor.
+\subsection{Consulta SQL que obtiene un ranking directores}
 
 \begin{lstlisting}[style=terminal]
-WITH 
--- Calculo del Beneficio
-MEMBER [Measures].[Beneficio] AS 
-  [Measures].[Ingresos] - [Measures].[Coste]
-
--- Calculo del ROI individual
-MEMBER [Measures].[ROI] AS 
-  IIF([Measures].[Coste] = 0, NULL, [Measures].[Beneficio] / [Measures].[Coste])
-
--- Calculo del ROI Promedio
-MEMBER [Measures].[ROI Promedio] AS 
-  AVG(
-    [Tiempo].[Ano].Members,
-    [Measures].[ROI]
-  )
-
-SELECT 
-  {[Measures].[ROI Promedio]} ON COLUMNS,
-  NONEMPTY(
-    CROSSJOIN(
-      [Director].[Nombre].[Nombre].Members,
-      [Productor].[Nombre].[Nombre].Members
-    )
-  ) ON ROWS
-FROM [Finanzas]
-ORDER BY [Measures].[ROI Promedio] DESC
+select d.nombre as director, cast(avg(su.satisfaccion) as numeric(2,1)) as valoracion, sum(su.votos) as votos
+from public.satisfaccion_usuarios su, public.tiempo t, public.director d
+where su.director = d.id
+	and su.tiempo_emision = t.id
+group by d.id
+order by valoracion desc
 \end{lstlisting}
 
-\subsection{2. Implementación en el Cuadro de Mando con Dos Gráficos}
+\subsection{Consulta MDX para el ROI promedio por director/es}
 
-Para enriquecer el análisis, implementaremos dos gráficos diferentes:
-
-\begin{enumerate}
-    \item \textbf{Gráfico de Barras Horizontales}: Muestra las combinaciones de directores y productores ordenadas por su ROI promedio.
-    \item \textbf{Gráfico de Dispersión}: Visualiza la relación entre el número de proyectos realizados y el ROI promedio de cada dúo, identificando patrones y anomalías.
-\end{enumerate}
-
-\subsubsection{Gráfico 1: Ranking de Combinaciones por ROI Promedio}
-
-\textbf{Tipo de Gráfico:} Gráfico de barras horizontales.
-
-\textbf{Descripción:}
-
-\begin{itemize}
-    \item \textbf{Eje X (Horizontal):} Valor del ROI Promedio.
-    \item \textbf{Eje Y (Vertical):} Combinaciones de Director y Productor (por ejemplo, ``Christopher Nolan - Emma Thomas'').
-    \item \textbf{Ordenación:} De mayor a menor ROI Promedio.
-\end{itemize}
-
-\textbf{Implementación:}
-
-\begin{itemize}
-    \item \textbf{Visualización:} Muestra los dúos creativos más rentables.
-    \item \textbf{Interactividad:}
-    \begin{itemize}
-        \item \textbf{Filtros:} Permitir filtrar por año, género, país u otros criterios relevantes.
-        \item \textbf{Detalles al Clic:} Al seleccionar una barra, mostrar información adicional como:
-        \begin{itemize}
-            \item Lista de películas realizadas por la combinación.
-            \item Ingresos y costes totales.
-            \item Tendencia del ROI a lo largo del tiempo para ese dúo.
-        \end{itemize}
-    \end{itemize}
-\end{itemize}
-
-\textbf{Beneficios:}
-
-\begin{itemize}
-    \item Identificación rápida de las combinaciones más rentables.
-    \item Facilita la comparación entre diferentes dúos.
-\end{itemize}
-
-\subsubsection{Gráfico 2: Relación entre Número de Proyectos y ROI Promedio}
-
-\textbf{Tipo de Gráfico:} Gráfico de dispersión (scatter plot).
-
-\textbf{Descripción:}
-
-\begin{itemize}
-    \item \textbf{Eje X (Horizontal):} Número de proyectos realizados por la combinación de director y productor.
-    \item \textbf{Eje Y (Vertical):} ROI Promedio de la combinación.
-    \item \textbf{Puntos Representados:} Cada punto representa una combinación de director y productor.
-\end{itemize}
-
-\textbf{Implementación:}
-
-\begin{itemize}
-    \item \textbf{Visualización:} Permite identificar si las combinaciones que han colaborado en más proyectos tienden a tener un ROI más alto o si existe algún patrón interesante.
-    \item \textbf{Interactividad:}
-    \begin{itemize}
-        \item \textbf{Hover Tooltip:} Al pasar el cursor sobre un punto, mostrar:
-        \begin{itemize}
-            \item Nombres del director y productor.
-            \item Número de proyectos.
-            \item ROI Promedio.
-        \end{itemize}
-        \item \textbf{Filtros:} Posibilidad de filtrar por rangos de número de proyectos o ROI.
-        \item \textbf{Zonas Destacadas:} Utilizar colores o áreas sombreadas para resaltar cuadrantes específicos (por ejemplo, alta cantidad de proyectos y alto ROI).
-    \end{itemize}
-\end{itemize}
-
-\textbf{Beneficios:}
-
-\begin{itemize}
-    \item Identifica correlaciones entre experiencia conjunta (número de proyectos) y rentabilidad.
-    \item Destaca combinaciones con alto ROI pero pocos proyectos, que pueden ser oportunidades emergentes.
-\end{itemize}
-
-\subsection{3. Pasos para Crear las Visualizaciones}
-
-\textbf{Para ambos gráficos:}
-
-\begin{enumerate}
-    \item \textbf{Configurar la Fuente de Datos:}
-    \begin{itemize}
-        \item Utiliza la consulta MDX proporcionada.
-        \item Asegúrate de que la conexión al cubo \textit{Finanzas} esté correctamente establecida.
-    \end{itemize}
-    \item \textbf{Crear los Gráficos en el Cuadro de Mando:}
-    \begin{itemize}
-        \item \textbf{Gráfico de Barras Horizontales (Gráfico 1):}
-        \begin{itemize}
-            \item Selecciona este tipo de gráfico en tu herramienta de dashboard.
-            \item Asigna el ROI Promedio al eje X y las combinaciones al eje Y.
-            \item Ordena las barras de mayor a menor ROI.
-        \end{itemize}
-        \item \textbf{Gráfico de Dispersión (Gráfico 2):}
-        \begin{itemize}
-            \item Elabora una nueva consulta MDX para obtener el número de proyectos por combinación.
-            \begin{lstlisting}[style=terminal]
-WITH 
-MEMBER [Measures].[Numero de Proyectos] AS 
-  [Measures].[Cantidad Proyectos]
-
-MEMBER [Measures].[ROI Promedio] AS 
-  AVG(
-    [Tiempo].[Ano].Members,
-    [Measures].[ROI]
-  )
-
-SELECT 
-  {[Measures].[Numero de Proyectos], [Measures].[ROI Promedio]} ON COLUMNS,
-  NONEMPTY(
-    CROSSJOIN(
-      [Director].[Nombre].[Nombre].Members,
-      [Productor].[Nombre].[Nombre].Members
-    )
+\begin{lstlisting}[style=terminal]
+WITH
+  MEMBER [Measures].[roiPromedio] AS
+    ([Measures].[beneficio] / [Measures].[coste])
+SET [~ROWS_director_director.jerarquiadirector] AS
+    {[director.jerarquiadirector].[niveldirector].Members} -- Solo directores
+SELECT
+  NON EMPTY {[Measures].[roiPromedio]} ON COLUMNS,
+  NON EMPTY TopCount(
+    [~ROWS_director_director.jerarquiadirector], 
+    30, 
+    [Measures].[roiPromedio]
   ) ON ROWS
-FROM [Finanzas]
-ORDER BY [Measures].[Numero de Proyectos] DESC
-            \end{lstlisting}
-            \item Nota: Asegúrate de tener definida la medida \texttt{[Measures].[Cantidad Proyectos]} que cuenta el número de proyectos realizados por cada combinación.
-        \end{itemize}
-    \end{itemize}
-    \item \textbf{Personalizar y Configurar Detalles:}
-    \begin{itemize}
-        \item \textbf{Etiquetas y Leyendas:} Asegura que sean claras y descriptivas.
-        \item \textbf{Colores y Estética:} Utiliza una paleta coherente que facilite la interpretación.
-        \item \textbf{Interactividad:} Configura las opciones mencionadas en cada gráfico.
-    \end{itemize}
-\end{enumerate}
+FROM [finanzas]
+\end{lstlisting}
+\newpage
+\subsection{Consulta SQL que obtiene un ranking de productoras}
 
-\subsection{4. Consideraciones Técnicas}
+\begin{lstlisting}[style=terminal]
+select p.nombre as productora, cast(avg(su.satisfaccion) as numeric(2,1)) as valoracion, sum(su.votos) as votos
+from public.satisfaccion_usuarios su, public.tiempo t, public.productora p
+where su.productora = p.id
+	and su.tiempo_emision = t.id
+	and position(',' in p.nombre) = 0
+group by p.id
+order by valoracion desc
+\end{lstlisting}
 
-\begin{itemize}
-    \item \textbf{Optimización de Consultas:}
-    \begin{itemize}
-        \item Si el volumen de datos es grande, considera limitar inicialmente el número de combinaciones mostradas o implementar paginación.
-    \end{itemize}
-    \item \textbf{Manejo de Datos Atípicos:}
-    \begin{itemize}
-        \item En el gráfico de dispersión, ten en cuenta las combinaciones con ROI extremadamente alto pero pocos proyectos, que pueden distorsionar la escala.
-    \end{itemize}
-    \item \textbf{Validación de Datos:}
-    \begin{itemize}
-        \item Asegura que los datos utilizados son correctos y actualizados.
-    \end{itemize}
-\end{itemize}
+\subsection{Consulta MDX para la cuota de mercado de las productoras en 2001}
 
-\subsection{5. Beneficios de Implementar Dos Gráficos}
+\begin{lstlisting}[style=terminal]
+WITH
+  MEMBER [Measures].[cuotaMercado] AS
+    ((100 * [Measures].[ingresos]) / 
+      Sum([productora].[nivelproductora].Members, [Measures].[ingresos]))
+SET [~ROWS_productora_productora.jerarquiaproductora] AS
+    {[productora.jerarquiaproductora].[nivelproductora].Members}
+SET [~ROWS_tiempoemision_tiempoemision.jerarquiatiempo] AS
+    {[tiempoemision.jerarquiatiempo].[anno].[2001]}
+SELECT
+  NON EMPTY {[Measures].[cuotaMercado]} ON COLUMNS,
+  NON EMPTY TopCount(
+    NonEmptyCrossJoin(
+      [~ROWS_productora_productora.jerarquiaproductora], 
+      [~ROWS_tiempoemision_tiempoemision.jerarquiatiempo]
+    ), 
+    10, 
+    [Measures].[ingresos]
+  ) ON ROWS
+FROM [finanzas]
+\end{lstlisting}
 
-\begin{itemize}
-    \item \textbf{Perspectivas Complementarias:} Los dos gráficos ofrecen diferentes visiones del mismo conjunto de datos, enriqueciendo el análisis.
-    \item \textbf{Identificación de Oportunidades Ocultas:} El gráfico de dispersión puede revelar combinaciones prometedoras que no destacan en el ranking tradicional.
-    \item \textbf{Mejora de la Toma de Decisiones:} Al disponer de más información visual, se facilita la identificación de tendencias y patrones clave.
-\end{itemize}
 
-\subsection{6. Ejemplo de Visualización}
 
-\textbf{Gráfico 1: Ranking de Combinaciones por ROI Promedio}
+\section{Visualizaciones}
 
-\begin{itemize}
-    \item \textbf{Título:} ``Top Combinaciones de Directores y Productores por ROI Promedio''
-    \item \textbf{Características Visuales:}
-    \begin{itemize}
-        \item Barras horizontales ordenadas de mayor a menor.
-        \item Colores que representen diferentes rangos de ROI.
-    \end{itemize}
-\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/1.png}
+\caption{Filtramos por Peter Cattaneo, segundo director con mayor ROI promedio y una valoración promedio de 4.2 sobre 5. Filtramos la valoración de la productor con mayor cuota de mercado en 2001.}
+\end{figure}
 
-\textbf{Gráfico 2: Relación entre Número de Proyectos y ROI Promedio}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/2.png}
+\caption{Mostramos la valoración de Warner Bros (junto con su cuota de mercado en 2001) y Walt Disney Pictures.}
+\end{figure}
 
-\begin{itemize}
-    \item \textbf{Título:} ``Relación entre Experiencia Conjunta y Rentabilidad''
-    \item \textbf{Características Visuales:}
-    \begin{itemize}
-        \item Puntos dispersos en el plano según su número de proyectos y ROI.
-        \item Posibilidad de diferenciar puntos por tamaño o color según otra métrica (por ejemplo, satisfacción de usuarios).
-    \end{itemize}
-\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/3.png}
+\caption{Estudiamos la valoración promedio del último director mostrado en la gráfica de mayor ROI promedio, James DeMonaco.}
+\end{figure}
 
-\subsection{7. Conclusión}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/5.png}
+\caption{Mostramos las estadísticas de la combinación de directores con mayor ROI promedio.}
+\end{figure}
 
-Desarrollar esta funcionalidad en tu cuadro de mando proporcionará a la productora una herramienta poderosa para analizar y potenciar las colaboraciones entre directores y productores. Al basar las decisiones en datos concretos de ROI, se maximiza la probabilidad de éxito financiero en futuros proyectos.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/4.png}
+\caption{Mostramos el cuadro de mando sin ningún tipo de filtro.}
+\end{figure}
 
 \end{document}
