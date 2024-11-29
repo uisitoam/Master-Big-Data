@@ -101,9 +101,9 @@ En la figura \ref{fig:6.3}, se ilustra la instanciación más simple del modelo 
 \label{fig:6.3}
 \end{figure}
 
-Una medida de similitud comúnmente utilizada es el producto escalar (cuenta el número de términos que coinciden, cuantos términos únicos de la consulta están presentes en el documento). Finalmente, se puede implementar una función de clasificación usando un lenguaje de programación y luego clasificar documentos en un corpus dada una consulta particular. \\
+Una medida de similitud comúnmente utilizada es el producto escalar (cuenta el número de términos que coinciden, cuantos términos únicos de la consulta están presentes en el documento). Finalmente, se puede implementar una función de clasificación o \textit{ranking} usando un lenguaje de programación y luego clasificar documentos en un corpus dada una consulta particular. \\
 
-Para evaluar si este modelo de espacio vectorial más simple realmente funciona bien, se muestra un ejemplo en la figura \ref{fig:6.4}.
+Para evaluar si este modelo de espacio vectorial más simple realmente funciona bien, se muestra un ejemplo en la figura \ref{fig:6.4}. \\
 
 \begin{figure}[h]
 \centering
@@ -121,9 +121,38 @@ Esta figura muestra algunos documentos de prueba y una consulta simple. La consu
 \label{fig:6.5}
 \end{figure}
 
-Ahora hay que ver si el modelo de espacio vectorial podría hacer lo mismo o algo cercano a la clasificación ideal. En la figura \ref{fig:6.5}, se muestran dos documentos, $d_1$ y $d_3$, junto con la consulta. En el modelo de espacio vectorial, primero se calculan los vectores para estos documentos y la consulta. La consulta tiene cuatro palabras, por lo que para estas cuatro palabras, habría un uno y para el resto habrá ceros. El documento $d_1$ tiene dos unos, ``noticias'' y ``sobre'', mientras que el resto de las dimensiones son ceros. Con los dos vectores, se puede calcular la similitud con el producto escalar, multiplicando los elementos correspondientes en cada vector. Cada par de vectores forma un producto, que representa la similitud entre los dos elementos. En este caso, el resultado será dos. Eso significa que este número es el valor de esta función de puntuación; es simplemente el recuento de cuántos términos únicos de la consulta coinciden en el documento. \\
+Ahora hay que ver si el modelo de espacio vectorial podría hacer lo mismo o algo cercano a la clasificación ideal. En la figura \ref{fig:6.5}, se muestran dos documentos, $d_1$ y $d_3$, junto con la consulta. En el modelo de espacio vectorial, primero se calculan los vectores para estos documentos y la consulta. La consulta tiene cuatro palabras, por lo que para estas cuatro palabras, habría un uno y para el resto habrá ceros. El documento $d_1$ tiene dos unos, ``noticias'' y ``sobre'', mientras que el resto de las dimensiones son ceros. Con los dos vectores, se puede calcular la similitud con el producto escalar, multiplicando los elementos correspondientes en cada vector. Cada par de vectores forma un producto, que representa la similitud entre los dos elementos. En este caso, el resultado será dos. Eso significa que este número es el valor de esta función de puntuación; es simplemente el recuento de cuántos términos únicos de la consulta coinciden en el documento. Esto es cómo interpretamos la puntuación. Ahora también podemos echar un vistazo a $d_3$. En este caso, puedes ver que el resultado es tres porque $d_3$ coincidió con las tres palabras de consulta distintas: \textit{news}, \textit{presidential} y \textit{campaign}, mientras que $d_1$ solo coincidió con dos. Basándonos en esto, $d_3$ está clasificado por encima de $d_1$. Eso se ve bastante bien.\\
 
-Sin embargo, examinando este modelo en detalle, se encuentran algunos problemas. La función de puntuación cuenta el número de términos únicos de la consulta que coinciden en cada documento. Si un documento coincide con más términos únicos de la consulta, entonces se asumirá que el documento es más relevante; eso parece tener sentido. El único problema es que hay tres documentos, $d_2$, $d_3$ y $d_4$, que están empatados con una puntuación de tres. Al inspeccionar más de cerca, parece que $d_4$ debería estar justo por encima de $d_3$ ya que $d_3$ solo mencionó ``presidencial'' una vez mientras que $d_4$ lo mencionó muchas más veces. Otro problema es que $d_2$ y $d_3$ también tienen la misma puntuación, ya que para $d_2$, ``noticias'', ``sobre'' y ``campaña'' coincidieron. En $d_3$, coincidieron ``noticias'', ``presidencial'' y ``campaña''. Intuitivamente, $d_3$ es más relevante y debería tener una puntuación más alta que $d_2$. Coincidir con ``presidencial'' es más importante que coincidir con ``sobre'' aunque ``sobre'' y ``presidencial'' estén ambos en la consulta.
+Sin embargo, examinando este modelo en detalle, se encuentran algunos problemas. La función de puntuación cuenta el número de términos únicos de la consulta que coinciden en cada documento. Si un documento coincide con más términos únicos de la consulta, entonces se asumirá que el documento es más relevante; eso parece tener sentido. El único problema es que hay tres documentos, $d_2$, $d_3$ y $d_4$, que están empatados con una puntuación de tres. Al inspeccionar más de cerca, parece que $d_4$ debería estar justo por encima de $d_3$ ya que $d_3$ solo mencionó ``presidencial'' una vez mientras que $d_4$ lo mencionó muchas más veces. Otro problema es que $d_2$ y $d_3$ también tienen la misma puntuación, ya que para $d_2$, ``noticias'', ``sobre'' y ``campaña'' coincidieron. En $d_3$, coincidieron ``noticias'', ``presidencial'' y ``campaña''. Intuitivamente, $d_3$ es más relevante y debería tener una puntuación más alta que $d_2$. Coincidir con ``presidencial'' es más importante que coincidir con ``sobre'' aunque ``sobre'' y ``presidencial'' estén ambos en la consulta. Pero este modelo no hace eso, y eso significa que tenemos que resolver estos problemas. \\
+
+Para resumir, hablamos sobre cómo instanciar un \textit{vector space model}. Necesitamos hacer tres cosas:
+\begin{enumerate}
+\item Definir las dimensiones (el concepto de lo que es un documento);
+\item Decidir cómo colocar documentos y consultas como vectores en el \textit{vector space}
+\item Definir la similitud entre dos vectores.
+\end{enumerate}
+
+Basándonos en esta idea, discutimos una forma muy simple de instanciar el \textit{vector space model}. De hecho, probablemente sea el modelo de espacio vectorial más simple que podemos derivar. Usamos cada palabra para definir una dimensión, con un vector de bits de cero y uno para representar un documento o una consulta. En este caso, solo nos importa la presencia o ausencia de palabras, ignorando la frecuencia. Para una medida de similitud, usamos el \textit{dot product} y demostramos que esta función de puntuación puntúa un documento basado en el número de palabras de consulta distintas que coinciden en él. También demostramos que un modelo de espacio vectorial tan simple todavía no funciona bien y necesitamos mejorarlo.
 
 \subsubsection{Modelo VSP mejorado}
 
+En esta sección, mejoraremos la representación de este modelo a partir del \textit{bit vector model}. Vimos que la representación de \textit{bit vector} esencialmente cuenta cuántos términos únicos de la consulta coinciden con el documento. En la figura \ref{fig:6.6} nos gustaría que $d_4$ se clasifique por encima de $d_3$, y $d_2$ realmente no es relevante. El problema aquí es que esta función no puede capturar las siguientes características.  \\
+
+Primero, nos gustaría darle más crédito a $d_4$ porque coincide con \textit{presidential} más que $d_3$.
+
+Segundo, coincidir con \textit{presidential} debería ser más importante que coincidir con \textit{about}, porque \textit{about} es una palabra muy común que ocurre en todas partes; no aporta tanto contenido.
+
+Vale la pena pensar en este punto sobre por qué tenemos estos problemas. Si volvemos a las suposiciones que hicimos al instanciar el \textit{VS model}, nos daremos cuenta de que el problema realmente proviene de algunas de esas suposiciones. En particular, tiene que ver con cómo colocamos los vectores en el \textit{vector space}. Naturalmente, para solucionar estos problemas, tenemos que revisar esas suposiciones. Un pensamiento natural es considerar múltiples ocurrencias de un término en un documento en lugar de una representación binaria; deberíamos considerar el \textit{TF} en lugar de solo la ausencia o presencia. Para considerar la diferencia entre un documento donde un término de la consulta ocurrió múltiples veces y uno donde el término de la consulta ocurrió solo una vez, tenemos que considerar la frecuencia del término, el conteo de un término en un documento. La forma más simple de expresar el TF de una palabra $w$ en un documento $d$ es
+
+\begin{equation}
+TF(w,d) = \text{count}(w,d).
+\end{equation}
+
+Con el \textit{bit vector}, solo capturamos la presencia o ausencia de un término, ignorando el número real de veces que un término ocurrió. Agreguemos la información de conteo de nuevo: representaremos un documento mediante un vector con el peso de cada dimensión. Es decir, los elementos tanto del \textit{query vector} como del \textit{document vector} no serán ceros y unos, sino que serán los conteos de una palabra en la consulta o en el documento, como se ilustra en la figura \ref{fig:6.7}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{fotos/22.png}
+\caption{Representación de un documento con un vector de términos.}
+\label{fig:6.7}
+\end{figure}

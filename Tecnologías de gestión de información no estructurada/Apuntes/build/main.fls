@@ -664,6 +664,11 @@ INPUT ./fotos/20.png
 INPUT ./fotos/20.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./fotos/22.png
+INPUT ./fotos/22.png
+INPUT ./fotos/22.png
+INPUT ./fotos/22.png
+INPUT ./fotos/22.png
 INPUT ./tex/Chapter5.tex
 INPUT ./tex/Chapter5.tex
 OUTPUT build/tex/Chapter5.aux

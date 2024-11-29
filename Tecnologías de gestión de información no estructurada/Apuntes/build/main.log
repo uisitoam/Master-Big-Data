@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  27 NOV 2024 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  29 NOV 2024 09:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1829,6 +1829,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
 <fotos/19.png, id=436, 443.6575pt x 247.92625pt>
 File: fotos/19.png Graphic file (type png)
 <use fotos/19.png>
@@ -1855,18 +1860,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[29 <./fotos/18.png>]) [30 <./fotos/19.png> <./fotos/20.png>]
+[29 <./fotos/18.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+[30 <./fotos/19.png> <./fotos/20.png>]
+
+LaTeX Warning: Reference `fig:6.6' on page 31 undefined on input line 139.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+<fotos/22.png, id=455, 560.0925pt x 206.7725pt>
+File: fotos/22.png Graphic file (type png)
+<use fotos/22.png>
+Package pdftex.def Info: fotos/22.png  used on input line 155.
+(pdftex.def)             Requested size: 220.50887pt x 81.40762pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [31] [32 <./fotos/22.png>]
 \openout2 = `tex/Chapter5.aux'.
 
  (./tex/Chapter5.tex
 Chapter 5.
 1: section
-[31
+[33
 
 
 
 
-] [32] [33]) [34]
+] [34] [35]) [36]
 \openout2 = `tex/Chapter6.aux'.
 
  (./tex/Chapter6.tex
@@ -1882,23 +1909,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
  []
 
 1: section
-[35
-
-
-
-
-]) [36]
-\openout2 = `tex/Chapter7.aux'.
-
- (./tex/Chapter7.tex
-Chapter 7.
-1: section
 [37
 
 
 
 
-] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]) [52]
+]) [38]
+\openout2 = `tex/Chapter7.aux'.
+
+ (./tex/Chapter7.tex
+Chapter 7.
+1: section
+[39
+
+
+
+
+] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]) [54]
 
 LaTeX Warning: Empty bibliography on input line 139.
 
@@ -1907,25 +1934,29 @@ LaTeX Warning: Empty bibliography on input line 139.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B77A3DE8878B28692B0DBD52D7DBA19E;8344.
+(rerunfilecheck)             Checksum: 7784B75A786455DBA3AFADFF1F3C20B4;8344.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44461 strings out of 474116
- 940350 string characters out of 5743682
+ 44496 strings out of 474116
+ 940818 string characters out of 5743682
  1952187 words of memory out of 5000000
- 65616 multiletter control sequences out of 15000+600000
- 661675 words of font info for 369 fonts, out of 8000000 for 9000
+ 65629 multiletter control sequences out of 15000+600000
+ 662800 words of font info for 379 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,20n,97p,2022b,2767s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on build/main.pdf (55 pages, 3625356 bytes).
+Output written on build/main.pdf (57 pages, 3669112 bytes).
 PDF statistics:
- 642 PDF objects out of 1000 (max. 8388607)
- 519 compressed objects within 6 object streams
- 135 named destinations out of 1000 (max. 500000)
- 100287 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 532 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 100292 words of extra memory for PDF output out of 106986 (max. 10000000)
 

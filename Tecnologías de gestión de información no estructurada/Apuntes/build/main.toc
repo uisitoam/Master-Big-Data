@@ -34,18 +34,18 @@
 \contentsline {section}{\numberline {4.3}Modelos de recuperación de espacio vectorial}{27}{section.50}%
 \contentsline {section}{\numberline {4.4}Modelos de recuperación de espacio vectorial}{27}{section.51}%
 \contentsline {subsection}{\numberline {4.4.1}Modelo de espacio vectorial simple}{29}{subsection.53}%
-\contentsline {subsubsection}{Modelo VSP mejorado}{30}{section*.57}%
-\contentsline {chapter}{\numberline {5}Motores de búsqueda}{31}{chapter.58}%
-\contentsline {section}{\numberline {5.1}Componentes de los motores de búsqueda}{31}{section.59}%
-\contentsline {section}{\numberline {5.2}Tokenizadores}{31}{section.60}%
-\contentsline {subsection}{\numberline {5.2.1}Doc and term IDs}{32}{subsection.61}%
-\contentsline {section}{\numberline {5.3}Indexador}{32}{section.62}%
-\contentsline {chapter}{\numberline {6}Representaciones avanzadas de texto}{35}{chapter.63}%
-\contentsline {chapter}{\numberline {7}Web search}{37}{chapter.64}%
-\contentsline {section}{\numberline {7.1}Web Crawling}{38}{section.65}%
-\contentsline {section}{\numberline {7.2}Web Indexing}{39}{section.66}%
-\contentsline {section}{\numberline {7.3}Link Analysis}{41}{section.67}%
-\contentsline {subsection}{\numberline {7.3.1}PageRank}{42}{subsection.68}%
-\contentsline {subsection}{\numberline {7.3.2}HITS}{45}{subsection.74}%
-\contentsline {section}{\numberline {7.4}Aprendizaje para Clasificar}{46}{section.75}%
-\contentsline {section}{\numberline {7.5}Futuro del web search}{49}{section.79}%
+\contentsline {subsubsection}{Modelo VSP mejorado}{31}{section*.60}%
+\contentsline {chapter}{\numberline {5}Motores de búsqueda}{33}{chapter.63}%
+\contentsline {section}{\numberline {5.1}Componentes de los motores de búsqueda}{33}{section.64}%
+\contentsline {section}{\numberline {5.2}Tokenizadores}{33}{section.65}%
+\contentsline {subsection}{\numberline {5.2.1}Doc and term IDs}{34}{subsection.66}%
+\contentsline {section}{\numberline {5.3}Indexador}{34}{section.67}%
+\contentsline {chapter}{\numberline {6}Representaciones avanzadas de texto}{37}{chapter.68}%
+\contentsline {chapter}{\numberline {7}Web search}{39}{chapter.69}%
+\contentsline {section}{\numberline {7.1}Web Crawling}{40}{section.70}%
+\contentsline {section}{\numberline {7.2}Web Indexing}{41}{section.71}%
+\contentsline {section}{\numberline {7.3}Link Analysis}{43}{section.72}%
+\contentsline {subsection}{\numberline {7.3.1}PageRank}{44}{subsection.73}%
+\contentsline {subsection}{\numberline {7.3.2}HITS}{47}{subsection.79}%
+\contentsline {section}{\numberline {7.4}Aprendizaje para Clasificar}{48}{section.80}%
+\contentsline {section}{\numberline {7.5}Futuro del web search}{51}{section.84}%
