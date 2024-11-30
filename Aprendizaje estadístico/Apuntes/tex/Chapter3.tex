@@ -7,9 +7,9 @@
 
 El modelo de regresión lineal presentado en el capítulo \ref{Chapter3} asume que la variable de respuesta $Y$ es cuantitativa. Sin embargo, en muchas situaciones, la variable de respuesta es cualitativa. A menudo las variables cualitativas se denominan categóricas. Los enfoques para predecir respuestas cualitativas son proceso conocidos como clasificación, ya que implica asignar la observación a una categoría o clase. Por otro lado, frecuentemente los métodos utilizados para clasificación primero predicen la probabilidad de cada una de las categorías de una variable cualitativa, como base para realizar la clasificación. En este sentido, también se comportan como métodos de regresión.
 
-\section{El entorno de clasificación}
+\section{El entorno de clasificación} \label{sec:3.1}
 
-Muchos de los conceptos encontrados en los capítulos anteriores, como el equilibrio entre sesgo y varianza, se transfieren al contexto de clasificación con solo algunas modificaciones debido a que $y_i$ ya no es numérica. Supongamos que se busca estimar $f$ basándose en observaciones de entrenamiento ${(x_1,y_1), \dots,(x_n,y_n)}$, donde ahora $y_1,...,y_n$ son cualitativas. El enfoque más común para cuantificar la precisión de nuestra estimación $\hat{f}$ es la tasa de error de entrenamiento, la proporción de errores que se cometen si se aplica la estimación $\hat{f}$ a las observaciones de entrenamiento:
+Muchos de los conceptos encontrados en los capítulos anteriores, como el equilibrio entre \textit{bias} y varianza, se transfieren al contexto de clasificación con solo algunas modificaciones debido a que $y_i$ ya no es numérica. Supongamos que se busca estimar $f$ basándose en observaciones de entrenamiento ${(x_1,y_1), \dots,(x_n,y_n)}$, donde ahora $y_1,...,y_n$ son cualitativas. El enfoque más común para cuantificar la precisión de nuestra estimación $\hat{f}$ es la tasa de error de entrenamiento, la proporción de errores que se cometen si se aplica la estimación $\hat{f}$ a las observaciones de entrenamiento:
 \begin{equation}
 \frac{1}{n}\sum_{i=1}^n I(y_i \neq \hat{y}_i)
 \label{eq:2.8}
@@ -333,44 +333,7 @@ Por lo tanto, el clasificador de Bayes, y por extensión LDA, usa un umbral del 
 \label{eq:4.22}
 \end{equation}
 
-Usar un umbral de 0.5, como en (\ref{eq:4.21}), minimiza la tasa de error general. Esto es de esperar, ya que el clasificador de Bayes usa un umbral de 0.5 y se sabe que tiene la tasa de error general más baja. Pero cuando se usa un umbral de 0.5, la tasa de error entre los individuos que incumplen es bastante alta (línea discontinua azul). A medida que se reduce el umbral, la tasa de error entre los individuos que incumplen disminuye constantemente, pero la tasa de error entre los individuos que no incumplen aumenta. \\
-
-La curva ROC es un gráfico popular para mostrar simultáneamente los dos tipos de errores para todos los umbrales posibles. El nombre ``ROC'' es histórico y proviene de la teoría de comunicaciones. Es un acrónimo de características operativas del receptor. El rendimiento general de un clasificador, resumido en todos los umbrales posibles, se da por el área bajo la curva (AUC). Una curva ROC ideal abrazará la esquina superior izquierda, por lo que cuanto mayor sea el AUC, mejor será el clasificador. Se espera que un clasificador que no funcione mejor que el azar tenga un AUC de 0.5 (cuando se evalúa en un conjunto de prueba independiente no utilizado en el entrenamiento del modelo). Las curvas ROC son útiles para comparar diferentes clasificadores, ya que tienen en cuenta todos los umbrales posibles. \\
-
-\begin{table}[h]
-\centering
-\begin{tabular}{c|c|c|c}
-\hline
-True class & \multicolumn{3}{c}{Clase predicha} \\ \hline
-& $-$ o nulo & $+$ or no nulo & Total \\ \hline
-$-$ o nulo & True Neg. (TN) & False Pos. (FP) & N \\ \hline
-$+$ o no nulo & False Neg. (FN) & True Pos. (TP) & P \\ \hline
-Total & N* & P* &  \\ \hline
-\end{tabular}
-\caption{Matriz de confusión. Posibles resultados al aplicar un clasificador a una población.}
-\label{tb:4.6}
-\end{table}
-
-Variar el umbral del clasificador cambia su tasa de verdaderos positivos y su tasa de falsos positivos. Estas también se llaman la sensibilidad y uno menos la especificidad del clasificador. Dado que hay una variedad casi desconcertante de términos utilizados en este contexto, ahora damos un resumen. La tabla \ref{tb:4.6} muestra los posibles resultados al aplicar un clasificador (o prueba de diagnóstico) a una población. \\
-
-\begin{table}[h]
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tabular}{c|c|c}
-\hline
-Nombre & Definición & Sinónimos \\ \hline
-Tasa de verdaderos positivos & $TP/P$ & 1 - Error de tipo 2, sensibilidad, recall, probabilidad de detección \\ \hline
-Tasa de falsos positivos & $FP/N$ & Error de tipo 1, 1 - especificidad \\ \hline
-Valor predictivo positivo & $TP/P^*$ & Precisión, 1 - proporcion de falsos descumbrimientos \\ \hline
-Valor predictivo negativo & $TN/N^*$ & \\ \hline
-\end{tabular}
-}
-\caption{Medidas de rendimiento para clasificación.}
-\label{tb:4.7}
-\end{table}
-
-La tabla \ref{tb:4.7} enumera muchas de las medidas de rendimiento populares que se utilizan en este contexto. Los denominadores para las tasas de falsos positivos y verdaderos positivos son los conteos de población reales en cada clase. En contraste, los denominadores para el valor predictivo positivo y el valor predictivo negativo son los conteos totales predichos para cada clase.
-
+Usar un umbral de 0.5, como en (\ref{eq:4.21}), minimiza la tasa de error general. Esto es de esperar, ya que el clasificador de Bayes usa un umbral de 0.5 y se sabe que tiene la tasa de error general más baja. Pero cuando se usa un umbral de 0.5, la tasa de error entre los individuos que incumplen es bastante alta (línea discontinua azul). A medida que se reduce el umbral, la tasa de error entre los individuos que incumplen disminuye constantemente, pero la tasa de error entre los individuos que no incumplen aumenta. Variar el umbral del clasificador cambia su tasa de verdaderos positivos y su tasa de falsos positivos. Estas también se llaman la sensibilidad y uno menos la especificidad del clasificador. \\
 \subsubsection{Análisis discriminante cuadrático}
 
 Como se ha discutido, LDA asume que las observaciones dentro de cada clase se extraen de una distribución gaussiana multivariante con un vector de media específico de la clase y una matriz de covarianza común a todas las $K$ clases. El análisis discriminante cuadrático (QDA) proporciona un enfoque alternativo. Al igual que LDA, el clasificador QDA resulta de asumir que las observaciones de cada clase se extraen de una distribución gaussiana, e insertar estimaciones para los parámetros en el teorema de Bayes para realizar la predicción. Sin embargo, a diferencia de LDA, QDA asume que cada clase tiene su propia matriz de covarianza. Es decir, asume que una observación de la $k$-ésima clase es de la forma $X \sim N(\mu_k, \Sigma_k)$, donde $\Sigma_k$ es una matriz de covarianza para la $k$-ésima clase. Bajo esta suposición, el clasificador de Bayes asigna una observación $X = x$ a la clase para la cual
@@ -382,7 +345,7 @@ Como se ha discutido, LDA asume que las observaciones dentro de cada clase se ex
 
 es mayor. Entonces, el clasificador QDA implica insertar estimaciones para $\Sigma_k$, $\mu_k$, y $\pi_k$ en (\ref{eq:4.23}), y luego asignar una observación $X = x$ a la clase para la cual esta cantidad es mayor. A diferencia de (\ref{eq:4.19}), la cantidad $x$ aparece como una función cuadrática en (\ref{eq:4.23}). Aquí es donde QDA obtiene su nombre. \\
 
-Elegir LDA o QDA radica en el equilibrio entre sesgo y varianza. Cuando hay $p$ predictores, estimar una matriz de covarianza requiere estimar $p(p+1)/2$ parámetros. QDA estima una matriz de covarianza separada para cada clase, para un total de $Kp(p+1)/2$ parámetros. Con 50 predictores, esto es un múltiplo de 1225, lo cual es una gran cantidad de parámetros. Al asumir en su lugar que las $K$ clases comparten una matriz de covarianza común, el modelo LDA se vuelve lineal en $x$, lo que significa que hay $Kp$ coeficientes lineales para estimar. En consecuencia, LDA es un clasificador mucho menos flexible que QDA, y por lo tanto tiene una varianza sustancialmente menor. Esto puede llevar potencialmente a un mejor rendimiento de predicción. Pero hay un compromiso: si la suposición de LDA de que las $K$ clases comparten una matriz de covarianza común es incorrecta, entonces LDA puede sufrir de alto sesgo. En términos generales, LDA tiende a ser una mejor opción que QDA si hay relativamente pocas observaciones de entrenamiento y por lo tanto reducir la varianza es crucial. En contraste, se recomienda QDA si el conjunto de entrenamiento es muy grande, de modo que la varianza del clasificador no sea una preocupación importante, o si la suposición de una matriz de covarianza común para las $K$ clases es claramente insostenible. \\
+Elegir LDA o QDA radica en el equilibrio entre \textit{bias} y varianza. Cuando hay $p$ predictores, estimar una matriz de covarianza requiere estimar $p(p+1)/2$ parámetros. QDA estima una matriz de covarianza separada para cada clase, para un total de $Kp(p+1)/2$ parámetros. Con 50 predictores, esto es un múltiplo de 1225, lo cual es una gran cantidad de parámetros. Al asumir en su lugar que las $K$ clases comparten una matriz de covarianza común, el modelo LDA se vuelve lineal en $x$, lo que significa que hay $Kp$ coeficientes lineales para estimar. En consecuencia, LDA es un clasificador mucho menos flexible que QDA, y por lo tanto tiene una varianza sustancialmente menor. Esto puede llevar potencialmente a un mejor rendimiento de predicción. Pero hay un compromiso: si la suposición de LDA de que las $K$ clases comparten una matriz de covarianza común es incorrecta, entonces LDA puede sufrir de alto \textit{bias}. En términos generales, LDA tiende a ser una mejor opción que QDA si hay relativamente pocas observaciones de entrenamiento y por lo tanto reducir la varianza es crucial. En contraste, se recomienda QDA si el conjunto de entrenamiento es muy grande, de modo que la varianza del clasificador no sea una preocupación importante, o si la suposición de una matriz de covarianza común para las $K$ clases es claramente insostenible. \\
 
 \begin{figure}[h]
 \centering
@@ -391,4 +354,4 @@ Elegir LDA o QDA radica en el equilibrio entre sesgo y varianza. Cuando hay $p$ 
 \label{fig:4.9}
 \end{figure}
 
-La figura \ref{fig:4.9} ilustra el rendimiento de LDA y QDA en dos escenarios. En el panel izquierdo, las dos clases gaussianas tienen una correlación común de 0.7 entre $X_1$ y $X_2$. Como resultado, la frontera de decisión de Bayes es lineal y es aproximada con precisión por la frontera de decisión de LDA. La frontera de decisión de QDA es inferior, porque sufre de mayor varianza sin una disminución correspondiente en el sesgo. En contraste, el panel derecho muestra una situación en la que la clase naranja tiene una correlación de 0.7 entre las variables y la clase azul tiene una correlación de $-0.7$. Ahora la frontera de decisión de Bayes es cuadrática, y por lo tanto QDA aproxima más precisamente esta frontera que LDA.
+La figura \ref{fig:4.9} ilustra el rendimiento de LDA y QDA en dos escenarios. En el panel izquierdo, las dos clases gaussianas tienen una correlación común de 0.7 entre $X_1$ y $X_2$. Como resultado, la frontera de decisión de Bayes es lineal y es aproximada con precisión por la frontera de decisión de LDA. La frontera de decisión de QDA es inferior, porque sufre de mayor varianza sin una disminución correspondiente en el \textit{bias}. En contraste, el panel derecho muestra una situación en la que la clase naranja tiene una correlación de 0.7 entre las variables y la clase azul tiene una correlación de $-0.7$. Ahora la frontera de decisión de Bayes es cuadrática, y por lo tanto QDA aproxima más precisamente esta frontera que LDA.
