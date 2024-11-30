@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732800406.41664 "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Practica/main.tex" "build/main.pdf" "main" 1732800408.02764 0
-  "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Practica/main.tex" 1732800406.18451 42067 2d6d0b402aa6506ae6e6aeb626925b7d ""
+["pdflatex"] 1733004493.50477 "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Practica/main.tex" "build/main.pdf" "main" 1733004495.17501 0
+  "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Practica/main.tex" 1733004493.29487 53923 0d4e7f5838444efcf5aeef81ac59c0ea ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -161,15 +161,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1714491164.43273 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714491104 8221416 71c8040c626895d4f8d14b7696612575 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "build/fullrefs.aux" 1732800407.93914 21 efc14468c3ea2941ae8eadc61f50dde2 "pdflatex"
+  "build/fullrefs.aux" 1733004495.08691 21 efc14468c3ea2941ae8eadc61f50dde2 "pdflatex"
   "build/jabbrv-ltwa-all.ldf" 1732730343.42228 68876 ed126cdbca28ab86c2c0668453444e21 ""
   "build/jabbrv-ltwa-en.ldf" 1732730343.42314 458692 02d8266b24704fe4f5f2f6e7c1b87e55 ""
   "build/legacy-styles/opticajournal.sty" 1732730343.42345 835 bf17c257c9a53669ac5762eaa5ed054d ""
-  "build/main.aux" 1732800407.93761 13456 11a6a5bb088b097dd2a9c5a36faf0edf "pdflatex"
-  "build/main.out" 1732800407.93878 49000 fbbd96e31ee86bb465232e1a68db0bf4 "pdflatex"
+  "build/main.aux" 1733004495.0854 13718 e19d1bc0a0267b9a3964c8765721b814 "pdflatex"
+  "build/main.out" 1733004495.08653 49335 0c2035dffa41f9a469b8b08b48435469 "pdflatex"
   "fotos/esquema.png" 1732730343.53656 79502 a0951b9fe9c5baa00d06715bacceee2e ""
   "jabbrv.sty" 1732730343.53676 19083 8ad38f742f44e820c6ecf9365b058cb9 ""
-  "main.tex" 1732800406.18451 42067 2d6d0b402aa6506ae6e6aeb626925b7d ""
+  "main.tex" 1733004493.29487 53923 0d4e7f5838444efcf5aeef81ac59c0ea ""
   "opticajnl.cls" 1732730343.53931 11400 ce6f423c93298aba0005fb9acf44041a ""
   (generated)
   "build/fullrefs.aux"
