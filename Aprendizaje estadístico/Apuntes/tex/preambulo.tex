@@ -22,10 +22,10 @@
 
 \usepackage{float} % para figuras (las fija, [H], ...)
 \usepackage{chngcntr}
-\counterwithout{figure}{chapter}
+\counterwithin{figure}{chapter}
 
 \renewcommand{\theenumi}{\roman{enumi}}
-\renewcommand{\thefigure}{\Roman{figure}} 
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}} 
 \renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand\diagram[2]{\schema{\schemabox{#1}}{\schemabox{#2}}}
 \newtheorem{theorem}{Teorema}[section]

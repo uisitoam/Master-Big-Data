@@ -1,27 +1,7 @@
-\chapter{KNN}\label{Chapter7} 
+\chapter{Redes neuronales}\label{Chapter7} 
 % chktex-file 8
 % chktex-file 12
 % chktex-file 13
 % chktex-file 44
 
-
-\begin{table}
-\centering
-\begin{tabular}{ccc}
- & superficie (m2) & distancia (km) \\
-superficie & 70 & 0.1 \\
-distancia & 90 & 5.0
-\end{tabular}
-\end{table}
-
-Si tenemos un piso de 85 m2 y 0.4 km de distancia, intuitivamente se parece más al primer piso que al segundo. Pero si calculamos la distancia euclidiana, obtenemos que la distancia al primer piso esta mucho mas lejos que el segundo. Sin embargo, si cambiamos la escala de km a m, esto no sucede. Por esto hay que estandarizar:
-
-\begin{equation}
-x \to \frac{x - \bar{x}}{\text{std}x} = x'
-\end{equation}
-
-Asi, la media de x' es 0 y la desviacion estandar 1. Para dar la salida hay que desentandarizar !!!
-
-Numero de vecino es el unico hiperparametro. Hay que estandarizar de forma obligatoria, pocos vecinos, sobreaprendizaje, muchos vecinos, subaprendizaje.
-
-Pcos datos de entrenamiento y alta dimensionalidad de entrada es el peor escenario en aprendizaje estadistico, no le sienta bien a ningun algoritmo.
+Vamos a ver redes poco profundas (no más de 2 capas ocultas). Transformamos conjunto de variables capa a capa hasta llegar a un conjunto de variables facilmente separables o regresables por la ultima capa. El resultado del pesado se pasa por una funcion de activacion no lineal. El peso $w_{ij}$ conecta la neurona j de la capa l con la neurona i de la capa l+1. No contamos el bias como neurona, asiq ue en el ejemplo que pone hay 3. El bias es un vector siempre, con dimension $\text{neuronas en esa capa} \times 1$. PAra el caso de la capa de entrada, la activacion es directametne la entrada. 

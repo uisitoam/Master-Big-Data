@@ -4,6 +4,13 @@
 % chktex-file 13
 % chktex-file 44
 
+Cualquier método de aprendizaje estadístico sufre en situaciones de pocos datos de entrenamiento y alta dimensionalidad de entrada. Además, una parte clave es la estandarización de los datos (predictores y variable/s dependiente/s); si bien hay métodos en los que no es necesario estandarizar alguna de estas, es recomendable hacerlo. \\
+\begin{equation}
+x \to \frac{x - \bar{x}}{\text{std}x} = x'
+\end{equation}
+    
+Al estandarizar una variable $x$ a $x'$, la media de $x'$ es 0 y la desviación estándar 1. Si se ha estandarizado la variable dependiente, es necesario desestandarizar la salida, así como su error y desviación estándar (para estas dos últimas basta con multiplicar el valor estandarizado por la varianza (desviación estándar al cuadrado) de la variable dependiente). \\
+
 La evaluación de modelos consiste en, dado un modelo, estimar su error de predicción (error de generalización) sobre nuevos datos. La selección de modelos se centra en estimar el rendimiento de diferentes modelos y elegir el mejor. Es importante destacar que ningún método de clasificación o regresión domina sobre el resto en todos los problemas (\textit{no free lunch theorem}). Por tanto, es necesario comparar diferentes métodos y seleccionar el mejor para un problema concreto. 
 
 \section{Contexto de regresión}

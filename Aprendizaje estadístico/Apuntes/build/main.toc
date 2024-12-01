@@ -58,30 +58,38 @@
 \contentsline {subsubsection}{Análisis discriminante lineal para $p > 1$}{32}{section*.151}%
 \contentsline {subsubsection}{Análisis discriminante cuadrático}{35}{section*.160}%
 \contentsline {chapter}{\numberline {4}Evaluación y selección de modelos}{37}{chapter.163}%
-\contentsline {section}{\numberline {4.1}Contexto de regresión}{37}{section.164}%
-\contentsline {subsection}{\numberline {4.1.1}Calidad del ajuste}{37}{subsection.166}%
-\contentsline {subsection}{\numberline {4.1.2}Compromiso entre \textit {bias} y varianza}{38}{subsection.170}%
-\contentsline {section}{\numberline {4.2}Contexto de clasificación}{39}{section.173}%
-\contentsline {section}{\numberline {4.3}Métodos de remuestreo}{40}{section.177}%
-\contentsline {subsection}{\numberline {4.3.1}Validación cruzada}{40}{subsection.178}%
-\contentsline {subsubsection}{Enfoque del Conjunto de Validación}{41}{section*.179}%
-\contentsline {subsection}{\numberline {4.3.2}Validación cruzada \textit {Leave-One-Out}}{42}{subsection.182}%
-\contentsline {subsection}{\numberline {4.3.3}Validación Cruzada k-Fold}{44}{subsection.189}%
-\contentsline {subsection}{\numberline {4.3.4}Compromiso \textit {bias}-varianza para la validación cruzada k-Fold}{44}{subsection.192}%
-\contentsline {subsection}{\numberline {4.3.5}Validación Cruzada en Problemas de Clasificación}{45}{subsection.193}%
-\contentsline {subsubsection}{Regla de una desviación estándar}{47}{section*.198}%
-\contentsline {subsubsection}{Forma correcta de hacer validación cruzada}{47}{section*.199}%
-\contentsline {section}{\numberline {4.4}Selección de subconjuntos}{48}{section.200}%
-\contentsline {subsection}{\numberline {4.4.1}Selección del mejor subconjunto}{48}{subsection.201}%
-\contentsline {subsection}{\numberline {4.4.2}Selección por pasos}{48}{subsection.207}%
-\contentsline {subsubsection}{Selección por pasos hacia adelante}{49}{section*.208}%
-\contentsline {subsubsection}{Selección por pasos hacia atrás}{49}{section*.214}%
-\contentsline {subsubsection}{Modelos híbridos}{50}{section*.220}%
-\contentsline {section}{\numberline {4.5}Reduciendo de error}{50}{section.221}%
-\contentsline {chapter}{\numberline {5}K vecinos más próximos}{51}{chapter.222}%
-\contentsline {section}{\numberline {5.1}Algoritmo KNN}{51}{section.223}%
-\contentsline {subsection}{\numberline {5.1.1}Alta dimensionalidad}{53}{subsection.229}%
-\contentsline {subsection}{\numberline {5.1.2}Consideraciones computacionales}{54}{subsection.232}%
-\contentsline {section}{\numberline {5.2}Ejercicio}{54}{section.233}%
-\contentsline {chapter}{\numberline {6}KNN}{55}{chapter.240}%
-\contentsline {chapter}{\numberline {7}Arboles}{56}{chapter.243}%
+\contentsline {section}{\numberline {4.1}Contexto de regresión}{37}{section.165}%
+\contentsline {subsection}{\numberline {4.1.1}Calidad del ajuste}{37}{subsection.167}%
+\contentsline {subsection}{\numberline {4.1.2}Compromiso entre \textit {bias} y varianza}{38}{subsection.171}%
+\contentsline {section}{\numberline {4.2}Contexto de clasificación}{39}{section.174}%
+\contentsline {section}{\numberline {4.3}Métodos de remuestreo}{40}{section.178}%
+\contentsline {subsection}{\numberline {4.3.1}Validación cruzada}{41}{subsection.179}%
+\contentsline {subsubsection}{Enfoque del Conjunto de Validación}{41}{section*.180}%
+\contentsline {subsection}{\numberline {4.3.2}Validación cruzada \textit {Leave-One-Out}}{42}{subsection.183}%
+\contentsline {subsection}{\numberline {4.3.3}Validación Cruzada k-Fold}{44}{subsection.190}%
+\contentsline {subsection}{\numberline {4.3.4}Compromiso \textit {bias}-varianza para la validación cruzada k-Fold}{44}{subsection.193}%
+\contentsline {subsection}{\numberline {4.3.5}Validación Cruzada en Problemas de Clasificación}{46}{subsection.194}%
+\contentsline {subsubsection}{Regla de una desviación estándar}{46}{section*.199}%
+\contentsline {subsubsection}{Forma correcta de hacer validación cruzada}{46}{section*.200}%
+\contentsline {section}{\numberline {4.4}Selección de subconjuntos}{48}{section.201}%
+\contentsline {subsection}{\numberline {4.4.1}Selección del mejor subconjunto}{48}{subsection.202}%
+\contentsline {subsection}{\numberline {4.4.2}Selección por pasos}{48}{subsection.208}%
+\contentsline {subsubsection}{Selección por pasos hacia adelante}{49}{section*.209}%
+\contentsline {subsubsection}{Selección por pasos hacia atrás}{49}{section*.215}%
+\contentsline {subsubsection}{Modelos híbridos}{50}{section*.221}%
+\contentsline {section}{\numberline {4.5}Reduciendo de error}{50}{section.222}%
+\contentsline {chapter}{\numberline {5}K vecinos más próximos}{51}{chapter.223}%
+\contentsline {section}{\numberline {5.1}Algoritmo KNN}{51}{section.224}%
+\contentsline {subsection}{\numberline {5.1.1}Alta dimensionalidad}{53}{subsection.230}%
+\contentsline {subsection}{\numberline {5.1.2}Consideraciones computacionales}{54}{subsection.233}%
+\contentsline {section}{\numberline {5.2}Ejercicio}{54}{section.234}%
+\contentsline {chapter}{\numberline {6}Árboles de decisión. Fundamentos}{55}{chapter.241}%
+\contentsline {section}{\numberline {6.1}Árboles de decisión}{55}{section.242}%
+\contentsline {subsection}{\numberline {6.1.1}Predicción mediante estratificación del espacio de características}{56}{subsection.246}%
+\contentsline {subsection}{\numberline {6.1.2}Poda del árbol}{58}{subsection.253}%
+\contentsline {subsection}{\numberline {6.1.3}Árboles de Clasificación}{59}{subsection.263}%
+\contentsline {subsection}{\numberline {6.1.4}Predictores categóricos}{63}{subsection.269}%
+\contentsline {subsection}{\numberline {6.1.5}Árboles vs Modelos lineales}{63}{subsection.272}%
+\contentsline {subsection}{\numberline {6.1.6}Ventajas y desventajas de los árboles}{64}{subsection.276}%
+\contentsline {section}{\numberline {6.2}Ejercicio}{64}{section.277}%
+\contentsline {chapter}{\numberline {7}Redes neuronales}{66}{chapter.285}%
