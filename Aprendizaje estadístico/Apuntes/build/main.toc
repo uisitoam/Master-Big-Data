@@ -1,95 +1,17 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Contents}{ii}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Aprendizaje estadístico}{2}{chapter.2}%
-\contentsline {section}{\numberline {1.1}Motivos para estimar $f$}{2}{section.4}%
-\contentsline {subsection}{\numberline {1.1.1}Predicción}{2}{subsection.5}%
-\contentsline {subsection}{\numberline {1.1.2}Inferencia}{3}{subsection.8}%
-\contentsline {section}{\numberline {1.2}Estimación de $f$}{3}{section.9}%
-\contentsline {subsection}{\numberline {1.2.1}Métodos paramétricos}{3}{subsection.10}%
-\contentsline {subsection}{\numberline {1.2.2}Métodos no paramétricos}{4}{subsection.13}%
-\contentsline {subsection}{\numberline {1.2.3}Exactitud vs interpretabilidad}{4}{subsection.14}%
-\contentsline {subsection}{\numberline {1.2.4}Aprendizaje supervisado y no supervisado}{5}{subsection.16}%
-\contentsline {subsection}{\numberline {1.2.5}Problemas de regresión y clasificación}{5}{subsection.18}%
-\contentsline {chapter}{\numberline {2}Regresión lineal}{6}{chapter.19}%
-\contentsline {section}{\numberline {2.1}Regresión lineal simple}{6}{section.21}%
-\contentsline {subsection}{\numberline {2.1.1}Estimación de los coeficientes}{6}{subsection.24}%
-\contentsline {subsection}{\numberline {2.1.2}Exactitud de la estimación de los coeficientes}{7}{subsection.27}%
-\contentsline {subsection}{\numberline {2.1.3}Exactitud del modelo}{8}{subsection.39}%
-\contentsline {subsubsection}{Error estándar residual}{8}{section*.40}%
-\contentsline {subsubsection}{Estadística $R^2$}{9}{section*.42}%
-\contentsline {section}{\numberline {2.2}Regresión multilineal}{9}{section.45}%
-\contentsline {subsection}{\numberline {2.2.1}Estimación de los coeficientes}{9}{subsection.48}%
-\contentsline {subsection}{\numberline {2.2.2}Algunas preguntas importantes}{10}{subsection.53}%
-\contentsline {subsubsection}{Relación entre la respuesta y los preditores}{10}{section*.54}%
-\contentsline {subsubsection}{Variables relevantes}{11}{section*.62}%
-\contentsline {subsubsection}{Ajuste del modelo}{11}{section*.63}%
-\contentsline {subsubsection}{Predicciones}{11}{section*.65}%
-\contentsline {subsection}{\numberline {2.2.3}Problemas potenciales}{12}{subsection.71}%
-\contentsline {section}{\numberline {2.3}Grandes conjuntos de variable correlacionadas}{12}{section.72}%
-\contentsline {section}{\numberline {2.4}Métodos de reducción}{12}{section.73}%
-\contentsline {subsection}{\numberline {2.4.1}Regresión de Ridge}{13}{subsection.75}%
-\contentsline {subsubsection}{Mejora de Ridge sobre mínimos cuadrados}{14}{section*.82}%
-\contentsline {subsection}{\numberline {2.4.2}Regresión Lasso}{15}{subsection.84}%
-\contentsline {subsubsection}{Propiedad de selección de variables en Lasso}{16}{section*.89}%
-\contentsline {subsubsection}{Comparación entre regresión Lasso y Ridge}{18}{section*.90}%
-\contentsline {subsection}{\numberline {2.4.3}Selección del parámetro de ajuste}{19}{subsection.93}%
-\contentsline {section}{\numberline {2.5}Reducción de dimensión}{19}{section.94}%
-\contentsline {subsection}{\numberline {2.5.1}Análisis de componentes principales}{20}{subsection.95}%
-\contentsline {subsubsection}{Una única muestra}{20}{section*.96}%
-\contentsline {subsubsection}{n muestras}{20}{section*.101}%
-\contentsline {subsection}{\numberline {2.5.2}Regresión de componentes principales}{21}{subsection.106}%
-\contentsline {subsection}{\numberline {2.5.3}Consideraciones en PCA}{21}{subsection.108}%
-\contentsline {subsubsection}{Escalado de variables}{21}{section*.109}%
-\contentsline {subsubsection}{Unicidad de las componentes principales}{22}{section*.111}%
-\contentsline {chapter}{\numberline {3}Clasificacion}{23}{chapter.112}%
-\contentsline {section}{\numberline {3.1}El entorno de clasificación}{23}{section.113}%
-\contentsline {subsection}{\numberline {3.1.1}El clasificador de Bayes}{24}{subsection.116}%
-\contentsline {subsection}{\numberline {3.1.2}¿Por qué no regresión lineal?}{25}{subsection.121}%
-\contentsline {section}{\numberline {3.2}Regresión logística}{27}{section.123}%
-\contentsline {subsection}{\numberline {3.2.1}Modelo logístico}{27}{subsection.124}%
-\contentsline {subsection}{\numberline {3.2.2}Estimación de los coeficientes}{28}{subsection.129}%
-\contentsline {subsection}{\numberline {3.2.3}Regresión logística múltiple}{28}{subsection.132}%
-\contentsline {subsection}{\numberline {3.2.4}Regresión logística no binaria}{29}{subsection.135}%
-\contentsline {section}{\numberline {3.3}Análisis discriminante lineal}{29}{section.136}%
-\contentsline {subsection}{\numberline {3.3.1}Teorema de Bayes para clasificación}{29}{subsection.137}%
-\contentsline {subsubsection}{Regla de Bayes}{29}{section*.138}%
-\contentsline {subsubsection}{Regla de Bayes en problemas de clasificación}{29}{section*.140}%
-\contentsline {subsubsection}{Análisis discriminante lineal para $p = 1$}{30}{section*.142}%
-\contentsline {subsubsection}{Análisis discriminante lineal para $p > 1$}{32}{section*.151}%
-\contentsline {subsubsection}{Análisis discriminante cuadrático}{35}{section*.160}%
-\contentsline {chapter}{\numberline {4}Evaluación y selección de modelos}{37}{chapter.163}%
-\contentsline {section}{\numberline {4.1}Contexto de regresión}{37}{section.165}%
-\contentsline {subsection}{\numberline {4.1.1}Calidad del ajuste}{37}{subsection.167}%
-\contentsline {subsection}{\numberline {4.1.2}Compromiso entre \textit {bias} y varianza}{38}{subsection.171}%
-\contentsline {section}{\numberline {4.2}Contexto de clasificación}{39}{section.174}%
-\contentsline {section}{\numberline {4.3}Métodos de remuestreo}{40}{section.178}%
-\contentsline {subsection}{\numberline {4.3.1}Validación cruzada}{41}{subsection.179}%
-\contentsline {subsubsection}{Enfoque del Conjunto de Validación}{41}{section*.180}%
-\contentsline {subsection}{\numberline {4.3.2}Validación cruzada \textit {Leave-One-Out}}{42}{subsection.183}%
-\contentsline {subsection}{\numberline {4.3.3}Validación Cruzada k-Fold}{44}{subsection.190}%
-\contentsline {subsection}{\numberline {4.3.4}Compromiso \textit {bias}-varianza para la validación cruzada k-Fold}{44}{subsection.193}%
-\contentsline {subsection}{\numberline {4.3.5}Validación Cruzada en Problemas de Clasificación}{46}{subsection.194}%
-\contentsline {subsubsection}{Regla de una desviación estándar}{46}{section*.199}%
-\contentsline {subsubsection}{Forma correcta de hacer validación cruzada}{46}{section*.200}%
-\contentsline {section}{\numberline {4.4}Selección de subconjuntos}{48}{section.201}%
-\contentsline {subsection}{\numberline {4.4.1}Selección del mejor subconjunto}{48}{subsection.202}%
-\contentsline {subsection}{\numberline {4.4.2}Selección por pasos}{48}{subsection.208}%
-\contentsline {subsubsection}{Selección por pasos hacia adelante}{49}{section*.209}%
-\contentsline {subsubsection}{Selección por pasos hacia atrás}{49}{section*.215}%
-\contentsline {subsubsection}{Modelos híbridos}{50}{section*.221}%
-\contentsline {section}{\numberline {4.5}Reduciendo de error}{50}{section.222}%
-\contentsline {chapter}{\numberline {5}K vecinos más próximos}{51}{chapter.223}%
-\contentsline {section}{\numberline {5.1}Algoritmo KNN}{51}{section.224}%
-\contentsline {subsection}{\numberline {5.1.1}Alta dimensionalidad}{53}{subsection.230}%
-\contentsline {subsection}{\numberline {5.1.2}Consideraciones computacionales}{54}{subsection.233}%
-\contentsline {section}{\numberline {5.2}Ejercicio}{54}{section.234}%
-\contentsline {chapter}{\numberline {6}Árboles de decisión. Fundamentos}{55}{chapter.241}%
-\contentsline {section}{\numberline {6.1}Árboles de decisión}{55}{section.242}%
-\contentsline {subsection}{\numberline {6.1.1}Predicción mediante estratificación del espacio de características}{56}{subsection.246}%
-\contentsline {subsection}{\numberline {6.1.2}Poda del árbol}{58}{subsection.253}%
-\contentsline {subsection}{\numberline {6.1.3}Árboles de Clasificación}{59}{subsection.263}%
-\contentsline {subsection}{\numberline {6.1.4}Predictores categóricos}{63}{subsection.269}%
-\contentsline {subsection}{\numberline {6.1.5}Árboles vs Modelos lineales}{63}{subsection.272}%
-\contentsline {subsection}{\numberline {6.1.6}Ventajas y desventajas de los árboles}{64}{subsection.276}%
-\contentsline {section}{\numberline {6.2}Ejercicio}{64}{section.277}%
-\contentsline {chapter}{\numberline {7}Redes neuronales}{66}{chapter.285}%
+\contentsline {chapter}{\numberline {1}Redes neuronales}{1}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Introducción}{1}{section.3}%
+\contentsline {subsection}{\numberline {1.1.1}Función de activación}{2}{subsection.6}%
+\contentsline {subsubsection}{Función sigmoide}{2}{section*.7}%
+\contentsline {subsubsection}{Tangente hiperbólica}{2}{section*.11}%
+\contentsline {subsubsection}{Función lineal rectificada ReLU}{2}{section*.13}%
+\contentsline {subsubsection}{Funciones gaussianas de base radial}{3}{section*.15}%
+\contentsline {section}{\numberline {1.2}Modelo de red neuronal}{3}{section.17}%
+\contentsline {section}{\numberline {1.3}Arquitecturas}{5}{section.30}%
+\contentsline {section}{\numberline {1.4}Funciones de coste o error}{6}{section.35}%
+\contentsline {subsection}{\numberline {1.4.1}Logartimo negativo de la verosimilitud}{6}{subsection.36}%
+\contentsline {subsection}{\numberline {1.4.2}Suma del error cuadrático}{7}{subsection.39}%
+\contentsline {subsection}{\numberline {1.4.3}Entropía cruzada}{7}{subsection.42}%
+\contentsline {subsubsection}{Entropía cruzada binaria}{7}{section*.43}%
+\contentsline {subsubsection}{Entropía cruzada}{7}{section*.47}%
