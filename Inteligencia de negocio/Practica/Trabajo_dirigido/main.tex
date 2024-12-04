@@ -369,8 +369,8 @@ Por tanto, el modelo conceptual del almacén de datos se muestra en la figura \r
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{fotos/3.png}
-\caption{Esquema conceptual del almacén de datos. \textcolor{red}{Hacer el bueno}}
+\includegraphics[width=0.6\textwidth]{fotos/3.pdf}
+\caption{Esquema conceptual del almacén de datos.}
 \label{fig:esquema_almacen}
 \end{figure}
 
@@ -389,7 +389,13 @@ Los detalles de la implementación del almacén de datos se describen en la sigu
 \multicolumn{1}{|l}{ano} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número correspondiente al año. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{mes} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número correspondiente al mes dentro del año. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{mes\_texto} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Texto con el nombre del mes. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\ \hline
+\multicolumn{1}{l}{} &  & \\
+\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{cll}
+\hline
 \multicolumn{3}{|c|}{Restaurante} \\ \hline \hline
 \multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
 \multicolumn{1}{|l}{id (pk)} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Identificador de cada local, generado por la central. \end{tabular}} \\ 
@@ -426,6 +432,13 @@ Los detalles de la implementación del almacén de datos se describen en la sigu
 \multicolumn{1}{|l}{nuevos\_clientes\_presencial} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes presenciales nuevos de un local. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{nuevos\_clientes\_domicilio} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes nuevos a domicilio de un local. \end{tabular}} \\ \hline
 \multicolumn{1}{l}{} &  & \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cll}
+\hline
 \multicolumn{3}{|c|}{Producto} \\ \hline \hline
 \multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
 \multicolumn{1}{|l}{ventas} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número total de ventas de un producto en un local. \end{tabular}} \\ \hline

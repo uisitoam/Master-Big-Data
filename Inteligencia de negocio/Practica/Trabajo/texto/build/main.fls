@@ -386,11 +386,11 @@ INPUT ./fotos/2.png
 INPUT ./fotos/2.png
 INPUT ./fotos/2.png
 INPUT ./fotos/2.png
-INPUT ./fotos/3.png
-INPUT ./fotos/3.png
-INPUT ./fotos/3.png
-INPUT ./fotos/3.png
-INPUT ./fotos/3.png
+INPUT ./fotos/3.pdf
+INPUT ./fotos/3.pdf
+INPUT ./fotos/3.pdf
+INPUT ./fotos/3.pdf
+INPUT ./fotos/3.pdf
 INPUT build/main.aux
 INPUT build/main.out
 INPUT build/main.out

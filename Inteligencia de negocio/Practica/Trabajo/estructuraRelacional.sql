@@ -65,7 +65,7 @@ create table feedback (
     valoracion_ambiente numeric(2, 1) check (valoracion_ambiente >= 0 and valoracion_ambiente <= 5),
     valoracion_personal numeric(2, 1) check (valoracion_personal >= 0 and valoracion_personal <= 5),
     valoracion_comida numeric(2, 1) check (valoracion_comida >= 0 and valoracion_comida <= 5),
-    constraint pk_feedback primary key (restaurante, fecha, valoracion_ambiente, valoracion_personal, valoracion_comida),
+    constraint pk_feedback primary key (restaurante, fecha),
     constraint fk_feedback_restaurante foreign key (restaurante) references restaurante(id) on update restrict on delete restrict,
     constraint fk_feedback_fecha foreign key (fecha) references tiempo(id) on update restrict on delete restrict
 );
