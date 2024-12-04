@@ -3,13 +3,12 @@ import sys
 import pkg_resources
 from packaging import version
 
-
 def check_and_install_packages():
     required_packages = {
         'torch': 'torch',
         'pandas': 'pandas',
         'transformers': 'transformers',
-        'accelerate': 'accelerate>=0.26.0',  # Agregado con versión mínima
+        'accelerate': 'accelerate>=0.26.0',  # versión mínima
         'numpy': 'numpy',
         'spacy': 'spacy',
         'scikit-learn': 'scikit-learn',
@@ -26,13 +25,12 @@ def check_and_install_packages():
     missing_packages = []
     upgrade_packages = []
     
-    # Verificar paquetes instalados y sus versiones
+    # verificar paquetes instalados y sus versiones
     installed_packages = {pkg.key: pkg.version for pkg in pkg_resources.working_set}
     
     for package, pip_name in required_packages.items():
         if '>' in pip_name or '<' in pip_name or '=' in pip_name:
-            # Manejar requisitos de versión
-            pkg_name, pkg_version = pip_name.split('>=') if '>=' in pip_name else (pip_name, None)
+            _, pkg_version = pip_name.split('>=') if '>=' in pip_name else (pip_name, None)
             pkg_key = package.lower()
             if pkg_key in installed_packages:
                 if pkg_version and version.parse(installed_packages[pkg_key]) < version.parse(pkg_version):
@@ -40,11 +38,11 @@ def check_and_install_packages():
             else:
                 missing_packages.append(pip_name)
         else:
-            # Paquetes sin requisitos de versión específicos
+            # paquetes sin requisitos de versión específicos
             if package.lower() not in installed_packages:
                 missing_packages.append(pip_name)
     
-    # Instalar paquetes faltantes
+    # instalar paquetes faltantes
     if missing_packages:
         print("Instalando paquetes necesarios...")
         for package in missing_packages:
@@ -53,7 +51,7 @@ def check_and_install_packages():
     else:
         print("Todos los paquetes necesarios ya están instalados.")
     
-    # Actualizar paquetes que no cumplen con la versión requerida
+    # actualizar paquetes que no cumplen con la versión requerida
     if upgrade_packages:
         print("Actualizando paquetes a las versiones requeridas...")
         for package in upgrade_packages:
@@ -62,7 +60,7 @@ def check_and_install_packages():
     else:
         print("Todas las versiones de los paquetes están actualizadas.")
     
-    # Verificar si el modelo 'en_core_web_sm' está instalado
+    # verificar si el modelo 'en_core_web_sm' está instalado
     try:
         import spacy
         spacy.load('en_core_web_sm')
@@ -90,14 +88,15 @@ import seaborn as sns
 import itertools
 import torch
 import torch.nn as nn
-from transformers import AutoModelForCausalLM, BertModel, GPT2LMHeadModel, AutoTokenizer, BertTokenizer, T5Tokenizer, T5ForConditionalGeneration
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from transformers import AutoModelForCausalLM, BertModel, GPT2LMHeadModel, AutoTokenizer, BertTokenizer, T5Tokenizer, T5ForConditionalGeneration, BertForSequenceClassification, Trainer, TrainingArguments
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_recall_fscore_support
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
+from datasets import Dataset
 
 
 
@@ -107,11 +106,27 @@ ruta_entrenamiento = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de ge
 df = pd.read_csv(ruta_entrenamiento, sep=' ')
 
 def get_topics_from_xml(data, xml_file):
+    """
+    Toma un DataFrame de Pandas y un archivo XML que contiene los tópicos de los documentos y los mapea a los tópicos reales.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Un DataFrame de Pandas que contiene los datos a los que se les mapearán los tópicos.
+    xml_file : str
+        La ruta al archivo XML que contiene los tópicos.
+
+    Returns
+    -------
+    DataFrame
+        Un DataFrame de Pandas con una nueva columna 'topic_text' que contiene la descripción del tópico.
+        
+    """
     # parseado del archivo XML
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
-    # Crear un diccionario para mapear número a descripción
+    # diccionario para mapear número a descripción
     number_to_description = {}
     for topic in root.findall('topic'):
         number = topic.find('number').text.strip()
@@ -127,48 +142,75 @@ xml_file = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de
 
 df = get_topics_from_xml(df, xml_file)
 
-
-
-# Cargar el modelo de spaCy
+# cargamos el modelo de spaCy
 nlp = spacy.load('en_core_web_sm')
 
-# Función para limpiar el texto
 def clean_text(text):
-    # Eliminar HTML y URLs
+    """
+    Toma un texto y realiza las siguientes operaciones:
+    - Elimina HTML y URLs
+    - Elimina hashtags
+    - Elimina caracteres no latinos
+    - Elimina caracteres especiales y puntuación
+    - Convierte a minúsculas
+    - Reemplaza múltiples espacios por un solo espacio
+    - Elimina stop words y lematiza
+
+    Parameters
+    ----------
+    text : str
+        El texto a limpiar.
+
+    Returns
+    -------
+    str
+        El texto limpio.
+        
+    """
+    # eliminar HTML y URLs
     text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
     text = re.sub(r'<.*?>', '', text)
-    # Eliminar hashtags
+    # eliminar hashtags
     text = re.sub(r'#\w+', '', text)
-    # Eliminar caracteres no latinos
+    # eliminar caracteres no latinos
     text = re.sub(r'[^a-zA-Z\s]', '', text)
     
-    # Eliminar caracteres especiales y puntuación
+    # eliminar caracteres especiales y puntuación
     text = text.translate(str.maketrans('', '', string.punctuation))
     
-    # Convertir a minúsculas
+    # convertir a minúsculas
     text = text.lower()
 
-    # Reemplazar múltiples espacios por un solo espacio
+    # cambiar múltiples espacios por un solo espacio
     text = re.sub(r'\s+', ' ', text).strip()
     
-    # Procesar el texto con spaCy
+    # procesar el texto con spaCy
     doc = nlp(text)
     
-    # Eliminar stop words y lematizar
+    # eliminar stop words y lematizar
     tokens = [token.lemma_ for token in doc if not token.is_stop]
     
     return ' '.join(tokens)
 
-# Ejemplo de texto
 df['cleaned_passage'] = df['passage'].apply(clean_text)
 
-# Mostrar los primeros elementos de la columna limpiada
 df.to_csv('df.csv', index=False)
 
 
 
 
+
+
 class Attention(nn.Module):
+    """
+    Implementación de una capa de atención para combinar embeddings.
+
+    Parameters
+    ----------
+    embed_dim : int
+        La dimensión de los embeddings de entrada.
+
+    """
     def __init__(self, embed_dim):
         super(Attention, self).__init__()
         self.attention = nn.Linear(embed_dim, 1)
@@ -179,6 +221,22 @@ class Attention(nn.Module):
         return weighted_sum
     
 def combine_embeddings_attention(embeddings, attention_layer):
+    """
+    Combina embeddings utilizando una capa de atención.
+
+    Parameters
+    ----------
+    embeddings : np.ndarray
+        Un array de NumPy con los embeddings de las palabras.
+    attention_layer : nn.Module
+        La capa de atención a utilizar.
+
+    Returns
+    -------
+    np.ndarray
+        Un array de NumPy con los embeddings combinados.
+        
+    """
     embeddings_tensor = torch.tensor(embeddings)
     return attention_layer(embeddings_tensor).detach().numpy()
 
@@ -197,16 +255,62 @@ attention_layer_biomed = Attention(embed_dim=embed_dim_biomed)
 attention_layer_bert = Attention(embed_dim=embed_dim_bert)
 
 
-device = torch.device('cpu')
 
-# dividir el texto en fragmentos de 512 tokens
+
+
+device = torch.device('cpu') # CPU en mac, GPU en collab
+
 def split_into_chunks(text, tokenizer, max_length=512):
+    """
+    Divide un texto en fragmentos de un tamaño máximo dado.
+
+    Parameters
+    ----------
+    text : str
+        El texto a dividir.
+    tokenizer : transformers.PreTrainedTokenizer
+        El tokenizador a utilizar.
+    max_length : int, default 512
+        La longitud máxima de los fragmentos.
+
+    Returns
+    -------
+    List[str]
+        Una lista con los fragmentos del texto.
+
+    """
     tokens = tokenizer.tokenize(text)
     chunks = [tokens[i:i + max_length] for i in range(0, len(tokens), max_length)]
     return chunks
 
-# procesar cada fragmento y combinar los resultados
 def process_text(text, tokenizer, model, attention_layer):
+    """
+    Procesa un texto utilizando un modelo y una capa de atención y combina los embeddings resultantes.
+
+    Parameters
+    ----------
+    text : str
+        El texto a procesar.
+    tokenizer : transformers.PreTrainedTokenizer
+        El tokenizador a utilizar.
+    model : transformers.PreTrainedModel
+        El modelo a utilizar.
+    attention_layer : Attention
+        La capa de atención a utilizar.
+
+    Returns
+    -------
+    np.ndarray
+        Un array de NumPy con los embeddings combinados.
+
+    Asserts
+    ------
+    'text' debe ser una cadena de texto
+    'tokenizer' debe ser un tokenizador de Hugging Face
+    'attention_layer' debe ser una capa de atención de la clase Attention
+
+    """
+    
     assert isinstance(text, str), "'text' debe ser una cadena de texto" 
     assert hasattr(tokenizer, 'convert_tokens_to_ids'), "'tokenizer' debe ser un tokenizador de Hugging Face"
     assert isinstance(attention_layer, Attention), "'attention_layer' debe ser una capa de atención de la clase Attention"
@@ -218,7 +322,7 @@ def process_text(text, tokenizer, model, attention_layer):
         tokens = tokenizer.convert_tokens_to_ids(chunk)
         tokens_tensor = torch.tensor([tokens]).to(device)
         
-        # extraer la representación del [CLS] token (primer token, captura la represetnacion semantica de la secuencia)
+        # extraemos la representación del [CLS] token (primer token, captura la represetnacion semantica de la secuencia)
         with torch.no_grad():
             if isinstance(model, GPT2LMHeadModel):
                 outputs = model(tokens_tensor, output_hidden_states=True)
@@ -234,13 +338,14 @@ def process_text(text, tokenizer, model, attention_layer):
         cls_embedding = np.squeeze(cls_embedding)
         embeddings.append(cls_embedding)
     
-    # convertir la lista de arrays de NumPy a un solo array de NumPy
+    # convertimos la lista de arrays de NumPy a un solo array de NumPy
     embeddings_array = np.array(embeddings)
 
-    # combinar las representaciones
+    # combinamos las representaciones
     combined_embedding = combine_embeddings_attention(embeddings_array, attention_layer)
     
     return combined_embedding
+
 
 
 
@@ -250,7 +355,40 @@ tqdm.pandas()
 biomed_tokenizer = AutoTokenizer.from_pretrained("stanford-crfm/BioMedLM")
 bert_tokenizer = BertTokenizer.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')
 
-def exec_process(data, modelos=[(biomed_model, 'biomed'), (bert_model, 'bioclinicalbert')], tokenizadores=[biomed_tokenizer, bert_tokenizer], attention_layers=[attention_layer_biomed, attention_layer_bert], filename='embeddings.csv'):
+def exec_process(data, modelos=[(biomed_model, 'biomed'), (bert_model, 'bioclinicalbert')], 
+                 tokenizadores=[biomed_tokenizer, bert_tokenizer], 
+                 attention_layers=[attention_layer_biomed, attention_layer_bert], 
+                 filename='embeddings.csv'):
+    """
+    Procesa un DataFrame de Pandas con pasajes de texto y obtiene los embeddings usando uno o varios modelos y tokenizadores.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Un DataFrame de Pandas con los pasajes de texto.
+    modelos : list, default [(biomed_model, 'biomed'), (bert_model, 'bioclinicalbert')]
+        Una lista de tuplas con los modelos a utilizar y sus nombres.
+    tokenizadores : list, default [biomed_tokenizer, bert_tokenizer]
+        Una lista de tokenizadores de Hugging Face.
+    attention_layers : list, default [attention_layer_biomed, attention_layer_bert]
+        Una lista de capas de atención.
+    filename : str, default 'embeddings.csv'
+        El nombre del archivo CSV donde se guardarán los resultados.
+
+    Returns
+    -------
+    DataFrame
+        Un DataFrame de Pandas con los embeddings de los pasajes de texto.
+
+    Asserts
+    ------
+    'data' debe ser un DataFrame de pandas
+    'modelos' debe ser una lista
+    'tokenizadores' debe ser una lista
+    'attention_layers' debe ser una lista
+    Las listas 'modelos', 'tokenizadores' y 'attention_layers' deben tener la misma longitud
+    """
+    
     assert isinstance(data, pd.DataFrame), "'data' debe ser un DataFrame de pandas"
     assert isinstance(modelos, list), "'modelos' debe ser una lista"
     assert isinstance(tokenizadores, list), "'tokenizadores' debe ser una lista"
@@ -260,7 +398,7 @@ def exec_process(data, modelos=[(biomed_model, 'biomed'), (bert_model, 'bioclini
     assert all(isinstance(modelo, tuple) and len(modelo) == 2 and isinstance(modelo[1], str) 
                for modelo in modelos), "Cada elemento de 'modelos' debe ser una tupla con al menos dos elementos, donde el segundo es un string"
 
-    # Procesar cada pasaje y obtener los embeddings
+    # procesamos cada pasaje y obtenemos los embeddings
     for ii in range(len(modelos)):
         model, model_name = modelos[ii]
         tokenizador = tokenizadores[ii]
@@ -270,15 +408,14 @@ def exec_process(data, modelos=[(biomed_model, 'biomed'), (bert_model, 'bioclini
         data[col_name] = data.progress_apply(lambda row: process_text(row['cleaned_passage'], tokenizer=tokenizador, model=model, attention_layer=capa_atencion), axis=1)
         data[col_name] = data[col_name].apply(lambda x: x.tolist() if isinstance(x, np.ndarray) else x)
     
-        # Guardar el DataFrame como un archivo CSV
+        # guardamos como csv
         data.to_csv(f'{filename}.csv', index=False)
 
     return data
 
 
+
 data_embeddings = exec_process(df, filename='embeddings')
-
-
 ruta_embeddings = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/embeddings.csv'
 data_embeddings = pd.read_csv(ruta_embeddings)
 
@@ -308,11 +445,44 @@ X_tfidf_val = vectorizer.transform(val_data['cleaned_passage']).toarray()
 
 
 def modeloClasificacion(x_train, y_train, type_model, data_type, max_iter=100000, kernel='linear', nest=100, random_state=42):
+    """
+    Entrena un modelo de clasificación y lo guarda en un archivo.
+
+    Parameters
+    ----------
+    x_train : np.ndarray
+        Un array de NumPy con los datos de entrenamiento.
+    y_train : np.ndarray
+        Un array de NumPy con las etiquetas de entrenamiento.
+    type_model : str
+        El tipo de modelo a entrenar entre los siguientes: 'lr', 'svm', 'rf', 'xgb'.
+    data_type : str
+        El tipo de datos utilizados para entrenar el modelo. Para nombrar el archivo de forma explicita.
+    max_iter : int, default 100000
+        El número máximo de iteraciones para el modelo de regresión logística.
+    kernel : str, default 'linear'
+        El kernel a utilizar para el modelo SVM.
+    nest : int, default 100
+        El número de estimadores para el modelo de bosque aleatorio.
+    random_state : int, default 42 
+        La semilla aleatoria para reproducibilidad.
+
+    Returns
+    -------
+    object
+        El modelo entrenado.
+
+    Asserts
+    ------
+    Los datos de entrenamiento no deben ser nulos
+    El modelo debe ser uno de los implementados: 'lr', 'svm', 'rf', 'xgb'
+
+    """
 
     assert x_train is not None and y_train is not None, "Datos de entrenamiento no proporcionados"
     assert type_model in ['lr', 'svm', 'rf', 'xgb'], "Modelo no válido"
 
-    # Inicializar modelo base
+    # inicializamos el modelo base
     if type_model == 'lr':
         model = LogisticRegression(max_iter=max_iter)
     elif type_model == 'svm':
@@ -324,13 +494,30 @@ def modeloClasificacion(x_train, y_train, type_model, data_type, max_iter=100000
 
     model.fit(x_train, y_train)
 
-    # Guardar el modelo en un archivo
+    # guardamos el modelo
     os.makedirs('modelos', exist_ok=True)
     joblib.dump(model, f'modelos/{type(model).__name__}_{data_type}_entrenado.pkl')
         
     return model
 
 def cargar_modelo(filename, variable_name):
+    """
+    Carga un modelo de un archivo a una variable si no existe en el entorno global.
+
+    Parameters
+    ----------
+    filename : str
+        El nombre del archivo que contiene el modelo.
+    variable_name : str
+        El nombre de la variable donde se almacenará el modelo.
+
+    Returns
+    -------
+    object
+        El modelo cargado en la variable especificada o, si existe, la variable global.
+
+    """
+    
     assert isinstance(filename, str), "El nombre del archivo debe ser un string"
     return joblib.load('modelos/{filename}.pkl') if variable_name not in globals() else globals()[variable_name]
 
@@ -356,13 +543,24 @@ modelo_xgb_tfidf = modeloClasificacion(X_tfidf_train, y_train, type_model='xgb',
 
 
 def evaluacion(y_true, y_pred):
+    """
+    Evalúa un modelo de clasificación y muestra métricas y una matriz de confusión.
+
+    Parameters
+    ----------
+    y_true : np.ndarray
+        Un array de NumPy con las etiquetas reales.
+    y_pred : np.ndarray
+        Un array de NumPy con las etiquetas predichas.
+
+    """
     print(f"Accuracy: {accuracy_score(y_true, y_pred):.4f}")
     print("\nReporte de clasificación:")
     print(classification_report(y_true, y_pred))
-    # Calcular matriz de confusión
+    # matriz de confusión
     cm = confusion_matrix(y_true, y_pred)
 
-    # Crear visualización
+    # visualización
     fig, ax = plt.subplots(figsize=(6, 4))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax)
     ax.set_title('Matriz de Confusión')
@@ -372,7 +570,33 @@ def evaluacion(y_true, y_pred):
     return 
 
 
-def predicciones(x, modelo, y=None, data=None, filename=None, evaluation=evaluacion): # debe recibir el x_test_scaled
+
+def predicciones(x, modelo, y=None, data=None, filename=None, evaluation=evaluacion): 
+    """
+    Realiza predicciones con un modelo de clasificación y muestra métricas (validacion) o guarda los resultados en un archivo (prueba/test).
+
+    Parameters
+    ----------
+    x : np.ndarray
+        Un array de NumPy con los datos de entrada.
+    modelo : object
+        El modelo de clasificación a utilizar.
+    y : np.ndarray, default None
+        Un array de NumPy con las etiquetas reales.
+    data : DataFrame, default None
+        Un DataFrame de Pandas con los datos de entrada para sacar los topicos y docID y guardar las predicciones.
+    filename : str, default None
+        El nombre del archivo donde se guardarán las predicciones.
+    evaluation : function, default evaluacion
+        La función de evaluación a utilizar.
+
+    Returns
+    -------
+    list or np.ndarray
+        Una lista con las predicciones y, si el modelo tiene el método 'predict_proba', las probabilidades.
+
+    """
+    
     assert len(x) == len(y) if y is not None else True, "Las filas de 'x' e 'y' no coinciden"
     assert hasattr(modelo, 'predict'), "Modelo no válido: el modelo no tiene un método 'predict'"
 
@@ -392,7 +616,7 @@ def predicciones(x, modelo, y=None, data=None, filename=None, evaluation=evaluac
             'correctness': predicciones
         })
 
-        # Guardar en un archivo CSV con separador de espacio
+        # guardamos en un archivo csv con separador de espacio
         os.makedirs('predicciones', exist_ok=True)
         df_result.to_csv(f'predicciones/{filename}.csv', sep=' ', index=False)
     
@@ -403,6 +627,8 @@ def predicciones(x, modelo, y=None, data=None, filename=None, evaluation=evaluac
         return predicciones
     
 
+
+#biomedlm
 modelo_lr_biomedlm = cargar_modelo('LogisticRegression_biomedlm_entrenado.pkl', 'modelo_lr_biomedlm')
 modelo_rf_biomedlm = cargar_modelo('RandomForestClassifier_biomedlm_entrenado.pkl', 'modelo_rf_biomedlm')
 modelo_xgb_biomedlm = cargar_modelo('XGBClassifier_biomedlm_entrenado.pkl', 'modelo_xgb_biomedlm')
@@ -414,7 +640,7 @@ preds_rf_biomedlm = predicciones(X_biomedlm_val, modelo_rf_biomedlm, y=y_val)
 preds_xgb_biomedlm = predicciones(X_biomedlm_val, modelo_xgb_biomedlm, y=y_val)
 preds_svm_biomedlm = predicciones(X_biomedlm_val, modelo_svm_biomedlm, y=y_val)
 
-
+#bioclnicalbert
 modelo_lr_bioclinical = cargar_modelo('LogisticRegression_bioclinical_entrenado.pkl', 'modelo_lr_bioclinical')
 modelo_rf_bioclinical = cargar_modelo('RandomForestClassifier_bioclinical_entrenado.pkl', 'modelo_rf_bioclinical')
 modelo_xgb_bioclinical = cargar_modelo('XGBClassifier_bioclinical_entrenado.pkl', 'modelo_xgb_bioclinical')
@@ -426,7 +652,7 @@ preds_rf_bioclinical = predicciones(X_bioclinical_val, modelo_rf_bioclinical, y=
 preds_xgb_bioclinical = predicciones(X_bioclinical_val, modelo_xgb_bioclinical, y=y_val)
 preds_svm_bioclinical = predicciones(X_bioclinical_val, modelo_svm_bioclinical, y=y_val)
 
-
+#tfidf
 modelo_lr_tfidf = cargar_modelo('LogisticRegression_tfidf_entrenado.pkl', 'modelo_lr_tfidf')
 modelo_rf_tfidf = cargar_modelo('RandomForestClassifier_tfidf_entrenado.pkl', 'modelo_rf_tfidf')
 modelo_xgb_tfidf = cargar_modelo('XGBClassifier_tfidf_entrenado.pkl', 'modelo_xgb_tfidf')
@@ -441,7 +667,36 @@ preds_svm_tfidf = predicciones(X_tfidf_val, modelo_svm_tfidf, y=y_val)
 
 
 
+
 def combinacion(modelos, y_test=None, w = None, tipo='votacion', save=None, evaluation=evaluacion):
+    """
+    Combina las predicciones de varios modelos utilizando diferentes métodos y muestra la matriz de confusión (validacion) o guarda los resultados en un archivo (prueba/test). 
+    - 'votacion': predicción con más votos
+    - 'promedio': promedio de las predicciones (con pesos opcionales)
+    - 'find_promedio': encuentra los mejores pesos para combinar los modelos y devuelve los pesos del mejor modelo combinado.
+
+    Parameters
+    ----------
+    modelos : list
+        Una lista de modelos entrenados.
+    y_test : np.ndarray, default None
+        Un array de NumPy con las etiquetas reales.
+    w : list, default None
+        Una lista con los pesos a utilizar para la combinación promedio.
+    tipo : str, default 'votacion'
+        El tipo de combinación a utilizar: 'votacion', 'promedio' o 'find_promedio'.
+    save : list, default None
+        Una lista con un DataFrame de Pandas y un nombre de archivo para guardar las predicciones.
+    evaluation : function, default evaluacion
+        La función de evaluación a utilizar.
+
+    Returns
+    -------
+    list
+        Una lista con los pesos del mejor modelo combinado si 'tipo' es 'find_promedio'.
+
+    """
+    
     assert isinstance(modelos, list), "'modelos' debe ser una lista de modelos"
     if w is not None:
         assert isinstance(w, list) , "'w' debe ser una lista"
@@ -479,7 +734,7 @@ def combinacion(modelos, y_test=None, w = None, tipo='votacion', save=None, eval
 
             best_w[combined_accuracy] = pesos
         
-        # Coger el modelo de mayor precisión
+        # elegimos el modelo de mayor precisión
         assert best_acc == max(list(best_w.keys()))
         casi_buenos = [(elem, best_w[elem]) for elem in list(best_w.keys()) if elem > (best_acc - 0.01)]
         print(f"Otras combinaciones con precisión similar:\n" + "\n".join(map(str, casi_buenos)))
@@ -504,10 +759,13 @@ def combinacion(modelos, y_test=None, w = None, tipo='votacion', save=None, eval
             'correctness': predictions
         })
 
-        # Guardar en un archivo CSV con separador de espacio
+        # guardamos en un archivo csv con separador de espacio
         os.makedirs('predicciones', exist_ok=True)
         df_result.to_csv(f'predicciones/{filename}.csv', sep=' ', index=False)
         
+
+
+
 
 
 combinacion([preds_xgb_biomedlm[0], preds_rf_biomedlm[0], preds_lr_bioclinical[0], preds_svm_tfidf[0]], y_test=y_val) # votacion mayoritaria
@@ -515,14 +773,12 @@ combinacion([preds_xgb_biomedlm[1], preds_rf_biomedlm[1], preds_lr_bioclinical[1
 best_weights = combinacion([preds_rf_biomedlm[1], preds_lr_bioclinical[1]], y_test=y_val, tipo='find_promedio') # encontrar mejores pesos
 
 
+# TEST
 df_new = pd.read_csv('/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/ficheros necesarios/test_data_with_no_correctness_label.csv', sep=' ')
 df_new = get_topics_from_xml(df_new, xml_file)
 df_new['cleaned_passage'] = df_new['passage'].apply(clean_text)
 df_new.to_csv('df_new.csv', index=False)
-
-
 data_embeddings_new = exec_process(df_new, filename='embeddingsTest')
-
 ruta_embeddings_new = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/embeddingsTest.csv'
 data_embeddings_new = pd.read_csv(ruta_embeddings_new)
 
@@ -534,6 +790,7 @@ X_bioclinical_prueba = np.array(data_embeddings_new['bioclinicalbert_embeddings'
 
 # modelo tfidf (convertimos matriz sparse a matriz densa)
 X_tfidf_prueba = vectorizer.transform(data_embeddings_new['cleaned_passage']).toarray()
+
 
 modelo_rf_biomedlm = cargar_modelo('RandomForestClassifier_biomedlm_entrenado.pkl', 'modelo_rf_biomedlm')
 modelo_lr_bioclinical = cargar_modelo('LogisticRegression_bioclinical_entrenado.pkl', 'modelo_lr_bioclinical')
@@ -548,13 +805,13 @@ preds_prueba_svm_tfidf = predicciones(X_tfidf_prueba, modelo_svm_tfidf, data=dat
 preds_prueba_rf_tfidf = predicciones(X_tfidf_prueba, modelo_rf_tfidf, data=data_embeddings_new, filename='predicciones_rf_tfidf')
 preds_prueba_xgb_tfidf = predicciones(X_tfidf_prueba, modelo_xgb_tfidf, data=data_embeddings_new, filename='predicciones_xgb_tfidf')
 
+
 combinacion([preds_prueba_rf_biomedlm[1], preds_prueba_lr_bioclinical[1]], w=list(best_weights), save=[df_new, 'rf_biomed_lr_bioclinical'], tipo='promedio') # promedio pesado
-
-
 
 
 ruta_tabla = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/df.csv'
 df2 = pd.read_csv(ruta_tabla)
+
 
 
 
@@ -563,6 +820,29 @@ tokenizer_T5 = T5Tokenizer.from_pretrained('t5-base')
 modelo_T5 = T5ForConditionalGeneration.from_pretrained('t5-base')
 
 def summarize(question, passage, model=modelo_T5, tokenizer=tokenizer_T5, max_length=500):
+    """
+    Genera un resumen de un pasaje basado en una pregunta utilizando un modelo base T5.
+
+    Parameters
+    ----------
+    question : str
+        La pregunta relacionada con el pasaje.
+    passage : str
+        El pasaje de texto a resumir.
+    model : transformers.PreTrainedModel
+        El modelo a utilizar.
+    tokenizer : transformers.PreTrainedTokenizer
+        El tokenizador a utilizar.
+    max_length : int, default 500
+        La longitud máxima del resumen.
+
+    Returns
+    -------
+    str
+        El resumen del pasaje basado en la pregunta
+
+    """
+
     # combinamos la pregunta y el pasaje
     input_text = f"summarize: question: {question} context: {passage}"
     # tokenizar el texto de entrada, sin truncar
@@ -576,10 +856,28 @@ def summarize(question, passage, model=modelo_T5, tokenizer=tokenizer_T5, max_le
     return output
 
 def summarize_row(row, resumen=summarize):
+    """
+    Genera un resumen de un pasaje basado en una pregunta utilizando la funcion especificada en 'resumen'.  
+
+    Parameters
+    ----------
+    row : pd.Series
+        Una fila de un DataFrame de Pandas con los datos necesarios para generar el resumen.
+    resumen : function, default 'summarize'
+        La función a utilizar para generar el resumen.
+
+    Returns
+    -------
+    str
+        El resumen del pasaje basado en la pregunta.
+
+    """
+    
     question = row['topic_text']
     passage = row['cleaned_passage']
     summary = resumen(question, passage)
     return summary
+
 
 tqdm.pandas()
 
@@ -594,6 +892,8 @@ df2['token_length'] = df2['cleaned_passage'].apply(lambda x: len(tokenizer_T5.to
 
 df2.to_csv(f'cleanT5.csv', index=False)
 
+
+
 biomed_model = AutoModelForCausalLM.from_pretrained("stanford-crfm/BioMedLM")
 bert_model = BertModel.from_pretrained('emilyalsentzer/Bio_ClinicalBERT', num_labels=2)
 
@@ -603,11 +903,12 @@ attention_layer_bert = Attention(embed_dim=embed_dim_bert)
 biomed_tokenizer = AutoTokenizer.from_pretrained("stanford-crfm/BioMedLM")
 bert_tokenizer = BertTokenizer.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')
 
+
+
 data_embeddingsResumen = exec_process(df2, modelos=[(biomed_model, 'biomedlm'), (bert_model, 'bioclinicalbert')], tokenizadores=[biomed_tokenizer, bert_tokenizer], attention_layers=[attention_layer_biomed, attention_layer_bert], filename='embeddingsResumen')
-
-
 ruta_embeddingsResumen = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/embeddingsResumen.csv'
 data_embeddingsResumen = pd.read_csv(ruta_embeddingsResumen)
+
 
 train_dataResumen, val_dataResumen = train_test_split(data_embeddingsResumen, test_size=0.2, random_state=42, stratify=data_embeddingsResumen['correctness'])
 
@@ -628,7 +929,6 @@ vectorizer = TfidfVectorizer(max_features=5000)
 X_tfidf_trainResumen = vectorizer.fit_transform(train_dataResumen['cleaned_passage']).toarray()
 X_tfidf_valResumen = vectorizer.transform(val_dataResumen['cleaned_passage']).toarray()
 
-
 modelo_lr_biomedlmResumen = modeloClasificacion(X_biomedlm_trainResumen, y_trainResumen, type_model='lr', data_type='biomedlm_resumen')
 modelo_lr_bioclinicalResumen = modeloClasificacion(X_bioclinical_trainResumen, y_trainResumen, type_model='lr', data_type='bioclinical_resumen')
 modelo_lr_tfidfResumen = modeloClasificacion(X_tfidf_trainResumen, y_trainResumen, type_model='lr', data_type='tfidf_resumen')
@@ -645,6 +945,8 @@ modelo_xgb_biomedlmResumen = modeloClasificacion(X_biomedlm_trainResumen, y_trai
 modelo_xgb_bioclinicalResumen = modeloClasificacion(X_bioclinical_trainResumen, y_trainResumen, type_model='xgb', data_type='bioclinical_resumen')
 modelo_xgb_tfidfResumen = modeloClasificacion(X_tfidf_trainResumen, y_trainResumen, type_model='xgb', data_type='tfidf_resumen')
 
+
+# biomedlm
 modelo_lr_biomedlmResumen = cargar_modelo('LogisticRegression_biomedlm_resumen_entrenado.pkl', 'modelo_lr_biomedlmResumen')
 modelo_rf_biomedlmResumen = cargar_modelo('RandomForestClassifier_biomedlm_resumen_entrenado.pkl', 'modelo_rf_biomedlmResumen')
 modelo_xgb_biomedlmResumen = cargar_modelo('XGBClassifier_biomedlm_resumen_entrenado.pkl', 'modelo_xgb_biomedlmResumen')
@@ -656,6 +958,8 @@ preds_rf_biomedlmResumen = predicciones(X_biomedlm_valResumen, modelo_rf_biomedl
 preds_xgb_biomedlmResumen = predicciones(X_biomedlm_valResumen, modelo_xgb_biomedlmResumen, y=y_valResumen)
 preds_svm_biomedlmResumen = predicciones(X_biomedlm_valResumen, modelo_svm_biomedlmResumen, y=y_valResumen)
 
+
+# bioclinicalbert
 modelo_lr_bioclinicalResumen = cargar_modelo('LogisticRegression_bioclinical_resumen_entrenado.pkl', 'modelo_lr_bioclinicalResumen')
 modelo_rf_bioclinicalResumen = cargar_modelo('RandomForestClassifier_bioclinical_resumen_entrenado.pkl', 'modelo_rf_bioclinicalResumen')
 modelo_xgb_bioclinicalResumen = cargar_modelo('XGBClassifier_bioclinical_resumen_entrenado.pkl', 'modelo_xgb_bioclinicalResumen')
@@ -667,6 +971,8 @@ preds_rf_bioclinicalResumen = predicciones(X_bioclinical_valResumen, modelo_rf_b
 preds_xgb_bioclinicalResumen = predicciones(X_bioclinical_valResumen, modelo_xgb_bioclinicalResumen, y=y_valResumen)
 preds_svm_bioclinicalResumen = predicciones(X_bioclinical_valResumen, modelo_svm_bioclinicalResumen, y=y_valResumen)
 
+ 
+# tfidf
 modelo_lr_tfidfResumen = cargar_modelo('LogisticRegression_tfidf_resumen_entrenado.pkl', 'modelo_lr_tfidfResumen')
 modelo_rf_tfidfResumen = cargar_modelo('RandomForestClassifier_tfidf_resumen_entrenado.pkl', 'modelo_rf_tfidfResumen')
 modelo_xgb_tfidfResumen = cargar_modelo('XGBClassifier_tfidf_resumen_entrenado.pkl', 'modelo_xgb_tfidfResumen')
@@ -678,13 +984,16 @@ preds_rf_tfidfResumen = predicciones(X_tfidf_valResumen, modelo_rf_tfidfResumen,
 preds_xgb_tfidfResumen = predicciones(X_tfidf_valResumen, modelo_xgb_tfidfResumen, y=y_valResumen)
 preds_svm_tfidfResumen = predicciones(X_tfidf_valResumen, modelo_svm_tfidfResumen, y=y_valResumen)
 
+
 combinacion([preds_xgb_biomedlmResumen[0], preds_lr_bioclinicalResumen[0], preds_rf_tfidfResumen[0]], y_test=y_valResumen) # votacion mayoritaria
 combinacion([preds_xgb_biomedlmResumen[1], preds_lr_bioclinicalResumen[1], preds_rf_tfidfResumen[1]], y_test=y_valResumen, tipo='promedio') # promedio simple
 best_weightsResumen = combinacion([preds_xgb_biomedlmResumen[1], preds_lr_bioclinicalResumen[1], preds_rf_tfidfResumen[1], preds_svm_tfidfResumen[1]], y_test=y_valResumen, tipo='find_promedio') # encontrar mejores pesos
 
 
+# TEST 
 ruta_tablaTest = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/df_new.csv'
 df_testResumen = pd.read_csv(ruta_tablaTest)
+
 
 # tokenizador y  modelo T5
 tokenizer_T5 = T5Tokenizer.from_pretrained('t5-base')
@@ -703,10 +1012,11 @@ df_testResumen['token_length'] = df_testResumen['cleaned_passage'].apply(lambda 
 
 df_testResumen.to_csv(f'cleanT5_test.csv', index=False)
 
-data_embeddingsResumen_test = exec_process(df_testResumen, modelos=[(biomed_model, 'biomedlm'), (bert_model, 'bioclinicalbert')], tokenizadores=[biomed_tokenizer, bert_tokenizer], attention_layers=[attention_layer_biomed, attention_layer_bert], filename='embeddingsResumen_test')
 
+data_embeddingsResumen_test = exec_process(df_testResumen, modelos=[(biomed_model, 'biomedlm'), (bert_model, 'bioclinicalbert')], tokenizadores=[biomed_tokenizer, bert_tokenizer], attention_layers=[attention_layer_biomed, attention_layer_bert], filename='embeddingsResumen_test')
 ruta_embeddingsResumen_test = '/Users/luisi/Documents/Master-Big-Data/Tecnologías de gestión de información no estructurada/Practica/Reto/embeddingsResumen_test.csv'
 data_embeddingsResumen_test = pd.read_csv(ruta_embeddingsResumen_test, sep=',')
+
 
 # modelo biomedlm
 X_biomedlm_testResumen = np.array(data_embeddingsResumen_test['biomedlm_embeddings'].apply(lambda x: np.squeeze(np.array(ast.literal_eval(x)))).tolist())
@@ -716,6 +1026,8 @@ X_bioclinical_testResumen = np.array(data_embeddingsResumen_test['bioclinicalber
 
 # modelo tfidf (convertimos matriz sparse a matriz densa)
 X_tfidf_testResumen = vectorizer.transform(data_embeddingsResumen_test['cleaned_passage']).toarray()
+
+
 
 modelo_lr_bioclinicalResumen = cargar_modelo('LogisticRegression_bioclinical_resumen_entrenado.pkl', 'modelo_lr_bioclinicalResumen')
 modelo_xgb_biomedlmResumen = cargar_modelo('XGBClassifier_biomedlm_resumen_entrenado.pkl', 'modelo_xgb_biomedlmResumen')
@@ -734,10 +1046,44 @@ combinacion([preds_xgb_biomedlm_testResumen[1], preds_lr_bioclinical_testResumen
 
 
 def mejorModeloClasificacion(x_train, y_train, type_model, data_type, param_grid=None, cv=5, scoring='accuracy', random_state=42):
+    """
+    Encuentra los mejores hiperparámetros para un modelo de clasificación utilizando GridSearchCV y guarda el mejor modelo.
+
+    Parameters
+    ----------
+    x_train : np.ndarray
+        Un array de NumPy con los datos de entrada de entrenamiento.
+    y_train : np.ndarray
+        Un array de NumPy con las etiquetas de entrenamiento.
+    type_model : str
+        El tipo de modelo a utilizar: 'lr', 'svm', 'rf' o 'xgb'.
+    data_type : str
+        El tipo de datos utilizados para entrenar el modelo. Para nombrar el archivo de forma explicita.
+    param_grid : dict, default None
+        Un diccionario con los hiperparámetros a probar.
+    cv : int, default 5
+        Número de pliegues en la validación cruzada.
+    scoring : str, default 'accuracy'
+        La métrica de evaluación a utilizar.
+    random_state : int, default 42
+        Semilla aleatoria para reproducibilidad.
+
+    Returns
+    -------
+    object
+        El mejor modelo encontrado.
+
+    Asserts
+    -------
+    Los datos de entrenamiento no deben ser nulos
+    El modelo debe ser uno de los implementados: 'lr', 'svm', 'rf', 'xgb'
+        
+    """
+    
     assert x_train is not None and y_train is not None, "Datos de entrenamiento no proporcionados"
     assert type_model in ['lr', 'svm', 'rf', 'xgb'], "Modelo no válido"
 
-    # Inicializar modelo base y parámetros por defecto si no se proporcionan
+    # inicializar modelo base y parámetros por defecto si no se proporcionan
     if type_model == 'lr':
         model = LogisticRegression(random_state=random_state, max_iter=10000)
         if param_grid is None:
@@ -775,10 +1121,10 @@ def mejorModeloClasificacion(x_train, y_train, type_model, data_type, param_grid
     
     grid_search.fit(x_train, y_train)
 
-    # Obtener el mejor modelo
+    # mejor modelo
     best_model = grid_search.best_estimator_
 
-    # Guardar el mejor modelo
+    # guardar el modelo
     os.makedirs('modelos', exist_ok=True)
     model_filename = f"{type(best_model).__name__}_{data_type}_mejor_modelo.pkl"
     joblib.dump(best_model, f'modelos/{model_filename}')
@@ -788,6 +1134,7 @@ def mejorModeloClasificacion(x_train, y_train, type_model, data_type, param_grid
     print(f"Modelo guardado como: {model_filename}")
 
     return best_model
+
 
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false" # desactivar un warning
@@ -808,6 +1155,7 @@ best_modelo_xgb_biomedlm = mejorModeloClasificacion(X_biomedlm_train, y_train, t
 best_modelo_xgb_bioclinical = mejorModeloClasificacion(X_bioclinical_train, y_train, type_model='xgb', data_type='bioclinicalBEST')
 best_modelo_xgb_tfidf = mejorModeloClasificacion(X_tfidf_train, y_train, type_model='xgb', data_type='tfidfBEST')
 
+# biomedlm
 best_modelo_lr_biomedlm = cargar_modelo('LogisticRegression_biomedlmBEST_mejor_modelo.pkl', 'best_modelo_lr_biomedlm')
 best_modelo_rf_biomedlm = cargar_modelo('RandomForestClassifier_biomedlmBEST_mejor_modelo.pkl', 'best_modelo_rf_biomedlm')
 best_modelo_xgb_biomedlm = cargar_modelo('XGBClassifier_biomedlmBEST_mejor_modelo.pkl', 'best_modelo_xgb_biomedlm')
@@ -819,6 +1167,8 @@ best_preds_rf_biomedlm = predicciones(X_biomedlm_val, best_modelo_rf_biomedlm, y
 best_preds_xgb_biomedlm = predicciones(X_biomedlm_val, best_modelo_xgb_biomedlm, y=y_val)
 best_preds_svm_biomedlm = predicciones(X_biomedlm_val, best_modelo_svm_biomedlm, y=y_val)
 
+
+# bioclinicalbert 
 best_modelo_lr_bioclinical = cargar_modelo('LogisticRegression_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_lr_bioclinical')
 best_modelo_rf_bioclinical = cargar_modelo('RandomForestClassifier_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_rf_bioclinical')
 best_modelo_xgb_bioclinical = cargar_modelo('XGBClassifier_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_xgb_bioclinical')
@@ -830,6 +1180,8 @@ best_preds_rf_bioclinical = predicciones(X_bioclinical_val, best_modelo_rf_biocl
 best_preds_xgb_bioclinical = predicciones(X_bioclinical_val, best_modelo_xgb_bioclinical, y=y_val)
 best_preds_svm_bioclinical = predicciones(X_bioclinical_val, best_modelo_svm_bioclinical, y=y_val)
 
+
+# tfidf 
 best_modelo_lr_tfidf = cargar_modelo('LogisticRegression_tfidfBEST_mejor_modelo.pkl', 'best_modelo_lr_tfidf')
 best_modelo_rf_tfidf = cargar_modelo('RandomForestClassifier_tfidfBEST_mejor_modelo.pkl', 'best_modelo_rf_tfidf')
 best_modelo_xgb_tfidf = cargar_modelo('XGBClassifier_tfidfBEST_mejor_modelo.pkl', 'best_modelo_xgb_tfidf')
@@ -841,8 +1193,12 @@ best_preds_rf_tfidf = predicciones(X_tfidf_val, best_modelo_rf_tfidf, y=y_val)
 best_preds_xgb_tfidf = predicciones(X_tfidf_val, best_modelo_xgb_tfidf, y=y_val)
 best_preds_svm_tfidf = predicciones(X_tfidf_val, best_modelo_svm_tfidf, y=y_val)
 
+
+
 best_weightsCV = combinacion([best_preds_svm_biomedlm[1], best_preds_xgb_bioclinical[1], best_preds_svm_bioclinical[1], best_preds_lr_tfidf[1], best_preds_rf_tfidf[1]], y_test=y_val, tipo='find_promedio') # encontrar mejores pesos
 
+
+# TEST 
 best_modelo_svm_biomedlm = cargar_modelo('SVC_biomedlmBEST_mejor_modelo.pkl', 'best_modelo_svm_biomedlm')
 best_modelo_xgb_bioclinical = cargar_modelo('XGBClassifier_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_xgb_bioclinical')
 best_modelo_svm_bioclinical = cargar_modelo('SVC_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_svm_bioclinical')
@@ -858,9 +1214,7 @@ best_preds_rf_tfidf_test = predicciones(X_tfidf_prueba, best_modelo_rf_tfidf, da
 combinacion([best_preds_svm_biomedlm_test[1], best_preds_xgb_bioclinical_test[1], best_preds_svm_bioclinical_test[1], best_preds_lr_tfidf_test[1], best_preds_rf_tfidf_test[1]], w=list(best_weightsCV), save=[df_new, 'best_svm_biomed_xgb_svm_bioclinical_lr_rf_tfidf'], tipo='promedio') # promedio pesado
 
 
-
-# resumidos 
-import os
+# RESUMIDOS 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 best_modelo_lr_biomedlmResumen = mejorModeloClasificacion(X_biomedlm_trainResumen, y_trainResumen, type_model='lr', data_type='biomedlmResumenBEST')
@@ -879,6 +1233,8 @@ best_modelo_xgb_biomedlmResumen = mejorModeloClasificacion(X_biomedlm_trainResum
 best_modelo_xgb_bioclinicalResumen = mejorModeloClasificacion(X_bioclinical_trainResumen, y_trainResumen, type_model='xgb', data_type='bioclinicalResumenBEST')
 best_modelo_xgb_tfidfResumen = mejorModeloClasificacion(X_tfidf_trainResumen, y_trainResumen, type_model='xgb', data_type='tfidfResumenBEST')
 
+
+# biomedlm
 best_modelo_lr_biomedlmResumen = cargar_modelo('LogisticRegression_biomedlmResumenBEST_mejor_modelo.pkl', 'best_modelo_lr_biomedlmResumen')
 best_modelo_rf_biomedlmResumen = cargar_modelo('RandomForestClassifier_biomedlmResumenBEST_mejor_modelo.pkl', 'best_modelo_rf_biomedlmResumen')
 best_modelo_xgb_biomedlmResumen = cargar_modelo('XGBClassifier_biomedlmResumenBEST_mejor_modelo.pkl', 'best_modelo_xgb_biomedlmResumen')
@@ -890,6 +1246,8 @@ best_preds_rf_biomedlmResumen = predicciones(X_biomedlm_valResumen, best_modelo_
 best_preds_xgb_biomedlmResumen = predicciones(X_biomedlm_valResumen, best_modelo_xgb_biomedlmResumen, y=y_valResumen)
 best_preds_svm_biomedlmResumen = predicciones(X_biomedlm_valResumen, best_modelo_svm_biomedlmResumen, y=y_valResumen)
 
+
+# bioclinicalbert
 best_modelo_lr_bioclinicalResumen = cargar_modelo('LogisticRegression_bioclinicalResumenBEST_mejor_modelo.pkl', 'best_modelo_lr_bioclinicalResumen')
 best_modelo_rf_bioclinicalResumen = cargar_modelo('RandomForestClassifier_bioclinicalResumenBEST_mejor_modelo.pkl', 'best_modelo_rf_bioclinicalResumen')
 best_modelo_xgb_bioclinicalResumen = cargar_modelo('XGBClassifier_bioclinicalResumenBEST_mejor_modelo.pkl', 'best_modelo_xgb_bioclinicalResumen')
@@ -901,6 +1259,8 @@ best_preds_rf_bioclinicalResumen = predicciones(X_bioclinical_valResumen, best_m
 best_preds_xgb_bioclinicalResumen = predicciones(X_bioclinical_valResumen, best_modelo_xgb_bioclinicalResumen, y=y_valResumen)
 best_preds_svm_bioclinicalResumen = predicciones(X_bioclinical_valResumen, best_modelo_svm_bioclinicalResumen, y=y_valResumen)
 
+
+# tfidf 
 best_modelo_lr_tfidfResumen = cargar_modelo('LogisticRegression_tfidfResumenBEST_mejor_modelo.pkl', 'best_modelo_lr_tfidfResumen')
 best_modelo_rf_tfidfResumen = cargar_modelo('RandomForestClassifier_tfidfResumenBEST_mejor_modelo.pkl', 'best_modelo_rf_tfidfResumen')
 best_modelo_xgb_tfidfResumen = cargar_modelo('XGBClassifier_tfidfResumenBEST_mejor_modelo.pkl', 'best_modelo_xgb_tfidfResumen')
@@ -912,9 +1272,11 @@ best_preds_rf_tfidfResumen = predicciones(X_tfidf_valResumen, best_modelo_rf_tfi
 best_preds_xgb_tfidfResumen = predicciones(X_tfidf_valResumen, best_modelo_xgb_tfidfResumen, y=y_valResumen)
 best_preds_svm_tfidfResumen = predicciones(X_tfidf_valResumen, best_modelo_svm_tfidfResumen, y=y_valResumen)
 
+
+
 best_weightsCVResumen = combinacion([best_preds_rf_biomedlmResumen[1], best_preds_svm_bioclinicalResumen[1], best_preds_rf_tfidfResumen[1], best_preds_svm_tfidfResumen[1]], y_test=y_val, tipo='find_promedio') # encontrar mejores pesos
 
-
+# TEST
 best_modelo_rf_biomedlmResumen = cargar_modelo('RandomForestClassifier_biomedlmBEST_mejor_modelo.pkl', 'best_modelo_rf_biomedlmResuem')
 best_modelo_svm_bioclinicalResumen = cargar_modelo('SVC_bioclinicalBEST_mejor_modelo.pkl', 'best_modelo_svm_bioclinicalResumen')
 best_modelo_svm_tfidfResumen = cargar_modelo('SVC_tfidfBEST_mejor_modelo.pkl', 'best_modelo_svm_tfidfResumen')
@@ -927,3 +1289,109 @@ best_preds_rf_tfidf_testResumen = predicciones(X_tfidf_testResumen, best_modelo_
 
 # combinamos las predicciones
 combinacion([best_preds_rf_biomedlm_testResumen[1], best_preds_svm_bioclinical_testResumen[1], best_preds_rf_tfidf_testResumen[1], best_preds_svm_tfidf_testResumen[1]], w=list(best_weightsCVResumen), save=[data_embeddingsResumen_test, 'best_testResumen_svm_biomed_xgb_svm_bioclinical_lr_rf_tfidf'], tipo='promedio') # promedio pesado
+
+
+
+
+
+
+# FINETUNING
+def compute_metrics(eval_pred):
+    """
+    Calcula las métricas de evaluación para el modelo en finetuning.
+
+    Parameters
+    ----------
+    eval_pred : Tuple
+        Una tupla con las predicciones del modelo.
+
+    Returns
+    -------
+    Dict
+        Un diccionario con las métricas calculadas.
+
+    """
+    
+    logits, labels = eval_pred
+    predictions = torch.argmax(torch.tensor(logits), dim=-1)
+    
+    # calculamos las métricas y el accuracy
+    precision, recall, f1, _ = precision_recall_fscore_support(labels, predictions, average='binary')
+    acc = accuracy_score(labels, predictions)
+    
+    return {'accuracy': acc, 'f1': f1, 'precision': precision, 'recall': recall}
+
+# dataset con los pasajes limpios
+data = pd.read_csv('C:/Users/cmg26/OneDrive/Escritorio/Master_Big_Data/TXINE/Data/df.csv')
+X = data['cleaned_passage']
+y = data['correctness']
+
+# dividimos en entrenamiento y validación
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# cargamos el tokenizador y modelo de bioclinicalbert
+tokenizer = BertTokenizer.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')
+model = BertForSequenceClassification.from_pretrained('emilyalsentzer/Bio_ClinicalBERT', num_labels=2)
+
+def preprocess_function(examples, tokenizador = tokenizer):
+    """
+    Tokeniza los ejemplos proporcionados.
+
+    Parameters
+    ----------
+    examples : Dict
+        Un diccionario con los ejemplos a tokenizar.
+    tokenizador : BertTokenizer
+        El tokenizador a utilizar.
+
+    Returns
+    -------
+    Dict
+        Un diccionario con los ejemplos tokenizados.
+    """
+    return tokenizador(examples['text'], truncation=True, padding="max_length", max_length=512)
+
+# convertimos los datos a datasets de huggingface
+train_data = Dataset.from_dict({'text': X_train.tolist(), 'label': y_train.tolist()})
+test_data = Dataset.from_dict({'text': X_test.tolist(), 'label': y_test.tolist()})
+
+train_data = train_data.map(preprocess_function, batched=True)
+test_data = test_data.map(preprocess_function, batched=True)
+
+
+# argumentos de entrenamiento
+training_args = TrainingArguments(
+    output_dir='./results',
+    evaluation_strategy='epoch',
+    save_strategy='epoch',
+    learning_rate=2e-5,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
+    num_train_epochs=3,
+    weight_decay=0.01,
+    logging_dir='./logs',
+    logging_steps=10,
+    load_best_model_at_end=True,
+    metric_for_best_model='accuracy'
+)
+
+# crear el objeto trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_data,
+    eval_dataset=test_data,
+    tokenizer=tokenizer,
+    compute_metrics=compute_metrics
+)
+
+# entrenar el modelo 
+trainer.train()
+
+
+# evaluamos el modelo
+results = trainer.evaluate()
+print(f"Resultados de evaluación: {results}")
+
+model.save_pretrained('./fine_tuned_bert')
+tokenizer.save_pretrained('./fine_tuned_bert')
