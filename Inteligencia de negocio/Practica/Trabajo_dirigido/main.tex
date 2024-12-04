@@ -184,25 +184,53 @@ CSF6 & PI6.3 & Formar al personal en cultura y tradición local & & 100\% del pe
 
 \subsection{Procesos de negocio}
 
-Los principales procesos de negocio identificados son los siguientes:
+A continuación, identificamos los principales procesos de negocio de El Guachinche, junto con el hecho que representa cada uno. Nos centraremos en los 3 principales, que son los que más impacto tienen en la compañía (y los que aportan un mayor número de dimensiones). Los principales procesos de negocio identificados son los siguientes:
 
-\textbf{Proceso 1:} Gestión de inventario y cadena de suministro.  
-\textbf{Granularidad:} Producto por local.  
-\textbf{Medidas:} Tiempo de reposición, coste logístico.  
-\textbf{Tasa de refresco:} Semanal.  
-\textbf{Tipo de tabla de hechos:} Hecho acumulativo.
+\subsubsection{Gestión de ventas e inventario (proceso 1)}
 
-\textbf{Proceso 2:} Gestión financiera.  
-\textbf{Granularidad:} Ingresos y gastos por local.  
-\textbf{Medidas:} Beneficio neto, coste operativo.  
-\textbf{Tasa de refresco:} Mensual.  
-\textbf{Tipo de tabla de hechos:} Hecho periódico.
+BLABLABLA
+\begin{itemize}
+\item \textbf{Granularidad:} Mensual.
+\item \textbf{Tasa de refresco:} Semanal.
+\item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
+\item \textbf{Medidas:} nombre y precio.
+\begin{itemize}
+\item nombre:
+\item precio:
+\end{itemize}
+\end{itemize}
 
-\textbf{Proceso 3:} Gestión de clientes.  
-\textbf{Granularidad:} Cliente por transacción.  
-\textbf{Medidas:} Frecuencia de visitas, satisfacción del cliente.  
-\textbf{Tasa de refresco:} Diaria.  
-\textbf{Tipo de tabla de hechos:} Hecho transaccional.
+\subsubsection{Gestión financiera (proceso 2)}
+
+BLABLABLA
+\begin{itemize}
+\item \textbf{Granularidad:} Mensual.
+\item \textbf{Tasa de refresco:} Mensual.
+\item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
+\item \textbf{Medidas:} coste, ingresos, clientes y nuevos clientes.
+\begin{itemize}
+\item coste:
+\item ingresos:
+\item clientes:
+\item nuevos\_clientes:
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Gestión de clientes (proceso 3)}
+
+BLABLABLA
+\begin{itemize}
+\item \textbf{Granularidad:} Mensual.
+\item \textbf{Tasa de refresco:} Diaria.
+\item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
+\item \textbf{Medidas:} valoración del personal, valoración del ambiente y valoración de la comida.
+\begin{itemize}
+\item num\_valoraciones
+\item valoracion\_personal:
+\item valoracion\_ambiente:
+\item valoracion\_comida:
+\end{itemize}
+\end{itemize}
 
 \subsection{Dimensiones}
 Las principales dimensiones identificadas incluyen:
@@ -245,6 +273,13 @@ PI9                          & Tasa de retención  & Gestión de clientes       
 
 
 %%%%%%%%%%%%%
+
+
+\section{Diseño y construcción del almacén de datos}
+
+\subsection{Procesos de negocio}
+
+
 
 
 \section{Diseño y construcción del almacén de datos}
@@ -409,14 +444,7 @@ Los detalles de la implementación del almacén de datos se describen en la sigu
 \multicolumn{1}{|l}{nombre} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Nombre del plato. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{precio} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Precio del plato. \end{tabular}} \\ \hline
 \multicolumn{1}{l}{} &  & \\
-\multicolumn{1}{l}{} &  & \\
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{cll}
-\hline
+\multicolumn{1}{l}{} &  & \\ \hline
 \multicolumn{3}{|c|}{Hechos} \\ \hline
 \multicolumn{1}{l}{} & & \\ \hline
 \multicolumn{3}{|c|}{Finanzas} \\ \hline \hline
@@ -431,7 +459,6 @@ Los detalles de la implementación del almacén de datos se describen en la sigu
 \multicolumn{1}{|l}{numero\_clientes\_domicilio} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número total de clientes a domicilio de un local. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{nuevos\_clientes\_presencial} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes presenciales nuevos de un local. \end{tabular}} \\ \hline
 \multicolumn{1}{|l}{nuevos\_clientes\_domicilio} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes nuevos a domicilio de un local. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\ \hline
 \end{tabular}
 \end{table}
 

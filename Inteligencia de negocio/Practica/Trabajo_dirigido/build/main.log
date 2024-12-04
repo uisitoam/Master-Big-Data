@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 19:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1273,62 +1273,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
-[7]
-Overfull \hbox (12.10887pt too wide) in paragraph at lines 230--230
+[7] [8]
+Overfull \hbox (12.10887pt too wide) in paragraph at lines 258--258
 []|\T1/ppl/b/n/12 (-20) Identificador
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 235--235
+Underfull \hbox (badness 1371) in paragraph at lines 263--263
 []|\T1/ppl/m/n/12 (+20) Nivel de in-ven-tario
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
 []|\T1/ppl/m/n/12 (+20) Satisfacción del
  []
 
 
-Overfull \hbox (9.4018pt too wide) in paragraph at lines 228--241
+Overfull \hbox (9.4018pt too wide) in paragraph at lines 256--269
  [][] 
  []
 
-[8] [9]
-<fotos/1.png, id=117, 798.985pt x 824.07875pt>
+[9]
+<fotos/1.png, id=137, 798.985pt x 824.07875pt>
 File: fotos/1.png Graphic file (type png)
 <use fotos/1.png>
-Package pdftex.def Info: fotos/1.png  used on input line 274.
+Package pdftex.def Info: fotos/1.png  used on input line 309.
 (pdftex.def)             Requested size: 314.58018pt x 324.45758pt.
- [10 <./fotos/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11 <./fotos/1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
-<fotos/2.png, id=126, 662.475pt x 346.29375pt>
+<fotos/2.png, id=151, 662.475pt x 346.29375pt>
 File: fotos/2.png Graphic file (type png)
 <use fotos/2.png>
-Package pdftex.def Info: fotos/2.png  used on input line 350.
+Package pdftex.def Info: fotos/2.png  used on input line 385.
 (pdftex.def)             Requested size: 314.58018pt x 164.43839pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11]
+[12 <./fotos/2.png>]
 
 pdfTeX warning: pdflatex (file ./fotos/3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/3.pdf, id=133, 389.35461pt x 422.77951pt>
+<fotos/3.pdf, id=159, 389.35461pt x 422.77951pt>
 File: fotos/3.pdf Graphic file (type pdf)
 <use fotos/3.pdf>
-Package pdftex.def Info: fotos/3.pdf  used on input line 372.
+Package pdftex.def Info: fotos/3.pdf  used on input line 407.
 (pdftex.def)             Requested size: 314.58018pt x 341.59152pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12 <./fotos/2.png>] [13 <./fotos/3.pdf>] [14] [15] [16]
-Overfull \hbox (10.95483pt too wide) in paragraph at lines 509--510
+[13 <./fotos/3.pdf>] [14] [15] [16] [17]
+Overfull \hbox (10.95483pt too wide) in paragraph at lines 536--537
 \T1/ppl/m/it/12 (-20) sures \T1/ppl/m/n/12 (-20) us-ando la ex-pre-sión MDX: ``[Mea-sures].[Ingresos pres-en-cial] + [Mea-sures].[Ingresos
  []
 
-[17] [18] 
+[18] [19] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux)
  ***********
@@ -1336,17 +1334,17 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 49985EBE6E2D2E2651BF539BBE10627F;2622.
+(rerunfilecheck)             Checksum: 1B9FC4B964E6EC0F86A8F3F6C335E3E7;3847.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 25 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33737 strings out of 474116
- 706525 string characters out of 5743682
+ 33750 strings out of 474116
+ 706749 string characters out of 5743682
  2008187 words of memory out of 5000000
- 55323 multiletter control sequences out of 15000+600000
+ 55331 multiletter control sequences out of 15000+600000
  637662 words of font info for 342 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,18n,107p,1092b,1336s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1354,10 +1352,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (18 pages, 379659 bytes).
+Output written on build/main.pdf (19 pages, 381443 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 87688 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 267 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 87728 words of extra memory for PDF output out of 89155 (max. 10000000)
 
