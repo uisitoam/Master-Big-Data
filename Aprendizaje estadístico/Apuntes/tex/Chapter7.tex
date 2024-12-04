@@ -466,8 +466,82 @@ Un mejor enfoque es usar las predicciones promedio sobre la colección de redes 
 
 Además, existen problemas con el descenso de gradiente: la pérdida cambia rápidamente en una dirección y lentamente en otra, la existencia de mínimos locales y puntos de silla (común en altas dimensiones) o el ruido en los gradientes generado por los mini lotes complican la búsqueda. Para solucionar estos inconvenientes, existen algoritmos de optimización más avanzados.
 
+\subsection{Velocidad de aprendizaje}
+
+Ya vimos que una velocidad de aprendizaje muy alta (mucho cambio en el peso $W$), nos aleja del mínimo en vez de acercarnos a él. Por ello, hay distintas estrategias para fijar el valor de la velocidad de aprendizaje:
+\begin{itemize}
+\item Tasa de aprendizaje fija: es la estrategia normal, muy usada en problemas reales.
+\item Decaimiento de la tasa de aprendizaje cada cierto numero de iteraciones: los incrementos o decrementos se suelen hacer en factores de 10. 
+\item Decaimiento exponencial: la tasa de aprendizaje se reduce exponencialmente con el número de iteraciones.
+\begin{equation}
+\alpha = \alpha_0 e^{-kt}
+\end{equation} 
+\item Decaimiento de la tasa de aprendizaje por 1/t: la tasa de aprendizaje se reduce por un factor de 1/t, donde t es el número de iteraciones.
+\begin{equation}
+\alpha = \frac{\alpha_0}{1 + kt}
+\end{equation}
+\item En la realidad, se suelee dejar sobreaprender a un modelo con una tasa fija. Luego, se recupera el modelo en un punto anterior al sobreajuste y se lanza un entrenamiento con una velocidad menor. Esto se repite una o dos veces. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/49.png}
+\end{figure}
+\end{itemize}
+
+\subsection{Hiperparámetros}
+
+No se puede hacer exploracion exhaustiva de todos los valores de los hiperparámetros de una red neuronal. Primero se hace una búsqueda de grano grueso con pocas épocas y luego una de grano fino (aunque no exhaustiva) con un número mayor de épocas. Es muy importante ver la curva de aprendizaje para ver si el modelo esta sobre o subaprendiendo.
+
+\subsection{Optimización}
+
+\noindent El descenso de gradiente estocástico ``vanilla'' es el método más común para entrenar redes neuronales: 
+\begin{equation}
+W_{t+1} = W_t - \alpha \nabla J (W_t)
+\end{equation}
+
+Sin embargo, existen otros métodos más avanzados que pueden ser más rápidos y más efectivos. Algunos de estos métodos son:
+\begin{itemize}
+    \item Descenso de gradiente estocástico con momento: añadimos un componente de ``memoria'' que tiene en cuenta la velocidad previa. Esto permite sortear mínimos locales.
+    \begin{equation}
+        W_{t + 1} = W_t + v_{t + 1}, \quad v_{t + 1} = \rho v_t - \alpha \nabla J (W_t) 
+    \end{equation}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{fotos/50.png}
+    \end{figure}
+    \item Descenso de gradiente estocástico con momento de Nesterov: el gradiente se calcula en otro punto (el más actual) $W + \rho v_t$.
+    \begin{equation}
+        W_{t + 1} = W_t + v_{t + 1}, \quad v_{t + 1} = \rho v_t - \alpha \nabla J (W_t + \rho v_t)
+    \end{equation}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{fotos/51.png}
+    \end{figure}
+\end{itemize}
+
+Hay otros algoritmos como AdaGrad, RMSProp, Adam, etc. que simplemente hacen correcciones de distintas formas al gradiente y a la velocidad de aprendizaje, de distintas formas. \\
+
+Todos los metodos anteriores usan optimización de primer orden (basada en el gradiente). Sin embargo, hay métodos de segundo orden que usan la matriz hessiana como aproximación cuadrática. Esta matriz nos da informacion relativa al paso (al hacer una optimizacion de segundo orden se puede ignorar la tasa de aprendizaje). Para ello, se usa el metodo de Newton: hacemos una expansión de $J(W_{t + 1})$ en serie de Taylor
+\begin{equation}
+J(W_{t + 1}) = J(W_t) + \nabla J(W_t) \cdot (W_{t + 1} - W_t) + \frac{1}{2} (W_{t + 1} - W_t)^2 \nabla^2 J (W_t)  + \dots
+\end{equation}
+
+Para resolver respecto al punto crítico, derivamos respecto al paso $(W_{t + 1} - W_t)$ y actualizamos el valor como
+\begin{equation}
+W_{t + 1} = W_t - (\nabla^2 J (W_t))^{-1} \nabla J (W_t)
+\end{equation}
+
+La inversa del hessiano será lo que sirva de velocidad de aprendizaje. Si esta matriz tiene dimension de $k \times k$, el coste computacional de invertirla sería $\mathcal{O}(k^3)$, por lo que no es viable en \textit{deep learning}. Sin embargo, hay métodos ``quasi-Newton'' que aproximan la inversa de la matriz hessiana. El más popular de ellos es el \textit{Limited memory} BFGS (L-BFGS). \\
+
+\noindent Como resumen general, en \textit{deep learning}:
+\begin{itemize}
+\item Adam es una buena elección.
+\item Descenso de gradiente estocástico con momento y con una velocidad de aprendizaje que decaiga (la más común es dejar sobreaprender una o dos veces, recuperar el modelo antes de que esté sobreaprendido y luego reducir la velocidad de aprendizaje) necesita mayor ajuste, pero puede ser mejor que Adam.
+\item L-BFGS no funciona bien con mini lotes, pero es una buena elección para problemas pequeños donde se pueda usar el lote completo.
+\end{itemize}
 
 
+
+Reglas practicas (para deep learning sobre todo)
 
 
 \section{Ejemplo: datos de \textit{ZIP code}}
@@ -516,13 +590,13 @@ Las otras tres redes tienen características adicionales que demuestran el poder
 
 Net-3 utiliza conectividad local: esto significa que cada unidad oculta está conectada solo a un pequeño parche de unidades en la capa inferior. En la primera capa oculta (una matriz de $8 \times 8$), cada unidad toma entradas de un parche de $3 \times 3$ de la capa de entrada; para unidades en la primera capa oculta que están a una unidad de distancia, sus campos receptivos se superponen por una fila o columna, y por lo tanto están a dos píxeles de distancia. En la segunda capa oculta, las entradas provienen de un parche de $5 \times 5$, y nuevamente las unidades que están a una unidad de distancia tienen campos receptivos que están a dos unidades de distancia. Los pesos para todas las demás conexiones se establecen a cero. La conectividad local hace que cada unidad sea responsable de extraer características locales de la capa inferior y reduce considerablemente el número total de pesos. Con muchas más unidades ocultas que Net-2, Net-3 tiene menos enlaces y, por lo tanto, menos pesos, logrando un rendimiento similar. \\
 
-Net-4 y Net-5 tienen conectividad local con compartición de pesos. Todas las unidades en un mapa de características local realizan la misma operación en diferentes partes de la imagen, lograda compartiendo el mismo conjunto de pesos. La primera capa oculta de Net-4 tiene dos matrices de $8 \times 8$, y cada unidad toma entrada de un parche de $3 \times 3$ al igual que en Net-3. Sin embargo, cada una de las unidades en un único mapa de características de $8 \times 8$ comparte el mismo conjunto de nueve pesos (pero tienen su propio parámetro de sesgo). Esto fuerza a que las características extraídas en diferentes partes de la imagen sean computadas por la misma función lineal, y en consecuencia, estas redes a veces se conocen como redes convolucionales. La segunda capa oculta de Net-4 no tiene compartición de pesos y es la misma que en Net-3. El gradiente de la función de error respecto a un peso compartido es la suma de los gradientes de $J$ respecto a cada conexión controlada por los pesos en cuestión. \\
+Net-4 y Net-5 tienen conectividad local con \textbf{compartición de pesos}\footnote{Descenso de gradiente con comparticion de pesos: medimos el error para todas las neuronas controladas con el mismo peso y hacemos la media.}. Todas las unidades en un mapa de características local realizan la misma operación en diferentes partes de la imagen, lograda compartiendo el mismo conjunto de pesos. La primera capa oculta de Net-4 tiene dos matrices de $8 \times 8$, y cada unidad toma entrada de un parche de $3 \times 3$ al igual que en Net-3 Una de las dos capas $8 \times 8$ busca una característica, y la otra, otra característica. Sin embargo, cada una de las unidades en un único mapa de características de $8 \times 8$ comparte el mismo conjunto de nueve pesos (pero tienen su propio parámetro de sesgo). Esto fuerza a que las características extraídas en diferentes partes de la imagen sean computadas por la misma función lineal, y en consecuencia, estas redes a veces se conocen como redes convolucionales. La segunda capa oculta de Net-4 no tiene compartición de pesos y es la misma que en Net-3. El gradiente de la función de error respecto a un peso compartido es la suma de los gradientes de $J$ respecto a cada conexión controlada por los pesos en cuestión. \\
 
 \begin{table}[h]
 \centering
 \begin{tabular}{ccccc}
 \hline \hline 
- & Arquitectura & Enlaces & Pesos & \% correctitud \\ \hline \hline 
+ & Arquitectura & Enlaces & Pesos (aprendidos) & \% correctitud \\ \hline \hline 
 Net-1 & Una única capa & 2570 & 2570 & 80.0 \\
 Net-2 & Una capa oculta & 3214 & 3214 & 87.0 \\
 Net-3 & Dos capas ocultas & 1226 & 1226 & 88.5 \\
@@ -532,7 +606,7 @@ Net-5 & Red restringida 2 & 5194 & 1060 & 98.4 \\ \hline
 \label{tab:7.1}
 \end{table}
 
-La tabla \ref{tab:7.1} da el número de enlaces, el número de pesos y el rendimiento óptimo en la prueba para cada una de las redes. Vemos que Net-4 tiene más enlaces pero menos pesos que Net-3, y un rendimiento en prueba superior. Net-5 tiene cuatro mapas de características de $4 \times 4$ en la segunda capa oculta, cada unidad conectada a un parche local de $5 \times 5$ en la capa inferior. Los pesos se comparten en cada uno de estos mapas de características. Vemos que Net-5 es la mejor, con errores de solo 1.6\%, comparado con el 13\% para la red \textit{vanilla} Net-2. El diseño ingenioso de la red Net-5, motivado por el hecho de que las características del estilo de escritura a mano deberían aparecer en más de una parte de un dígito, fue el resultado de muchos años de experimentación. Esta y redes similares dieron un mejor rendimiento en problemas de códigos ZIP que cualquier otro método de aprendizaje en ese momento (principios de los años 1990). Este ejemplo también muestra que las redes neuronales no son una herramienta completamente automática, como a veces se anuncian. Como con todos los modelos estadísticos, el conocimiento del tema puede y debe utilizarse para mejorar su rendimiento. \\
+La conectividad local hace que se tengan que aprender menos peso. La tabla \ref{tab:7.1} da el número de enlaces, el número de pesos y el rendimiento óptimo en la prueba para cada una de las redes. Vemos que Net-4 tiene más enlaces pero menos pesos que Net-3, y un rendimiento en prueba superior. Net-5 tiene cuatro mapas de características de $4 \times 4$ en la segunda capa oculta, cada unidad conectada a un parche local de $5 \times 5$ en la capa inferior. Los pesos se comparten en cada uno de estos mapas de características. Vemos que Net-5 es la mejor, con errores de solo 1.6\%, comparado con el 13\% para la red \textit{vanilla} Net-2. El diseño ingenioso de la red Net-5, motivado por el hecho de que las características del estilo de escritura a mano deberían aparecer en más de una parte de un dígito, fue el resultado de muchos años de experimentación. Esta y redes similares dieron un mejor rendimiento en problemas de códigos ZIP que cualquier otro método de aprendizaje en ese momento (principios de los años 1990). Este ejemplo también muestra que las redes neuronales no son una herramienta completamente automática, como a veces se anuncian. Como con todos los modelos estadísticos, el conocimiento del tema puede y debe utilizarse para mejorar su rendimiento. \\
 
 Esta red fue posteriormente superada por el enfoque de distancia tangente, que incorpora explícitamente invariantes afines naturales. En este punto, los conjuntos de datos de reconocimiento de dígitos se convierten en bancos de pruebas para cada nuevo procedimiento de aprendizaje, y los investigadores trabajaron arduamente para reducir las tasas de error. Por ahora, las mejores tasas de error en una base de datos grande (60000 de entrenamiento, 10000 de prueba), derivadas de bases de datos estándar NIST\textsuperscript{2}, se reportaron de la siguiente manera:
 \begin{itemize}
@@ -541,3 +615,6 @@ Esta red fue posteriormente superada por el enfoque de distancia tangente, que i
 \item 0.8\% para LeNet-5, una versión más compleja de la red convolucional descrita aquí.
 \item 0.7\% para LeNet-4 potenciado. LeNet-4 es un predecesor de LeNet-5.
 \end{itemize}
+
+
+

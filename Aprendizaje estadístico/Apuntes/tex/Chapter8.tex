@@ -1,0 +1,144 @@
+\chapter{Máquinas de vectores de soporte}\label{Chapter8} 
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+Se ha demostrado que las SVMs funcionan bien en una variedad de entornos y a menudo se consideran uno de los mejores clasificadores ``listos para usar''. \\
+
+La máquina de vectores de soporte es una generalización de un clasificador simple e intuitivo llamado clasificador de máximo margen, Aunque es elegante y simple,  este clasificador no se puede aplicar a la mayoría de los conjuntos de datos, ya que requiere que las clases sean separables por un límite lineal. El clasificador de vectores de soporte es una extensión del clasificador de máximo margen que se puede aplicar en una gama más amplia de casos. Finalmente, la máquina de vectores de soporte es una extensión adicional del clasificador de vectores de soporte para acomodar límites de clase no lineales. Las máquinas de vectores de soporte están destinadas al entorno de clasificación binaria en el que hay dos clases. 
+
+\section{Clasificador de máximo margen}
+
+\subsection{Hiperplano}
+
+En un espacio p-dimensional, un hiperplano es un subespacio afín plano de dimensión $p - 1$. Por ejemplo, en dos dimensiones, un hiperplano es un subespacio plano unidimensional, en otras palabras, una línea. En tres dimensiones, un hiperplano es un subespacio plano bidimensional, es decir, un plano. La definición matemática de un hiperplano es bastante simple. En dos dimensiones, un hiperplano se define por la ecuación
+\begin{equation}
+\beta_0 + \beta_1 X_1 + \beta_2 X_2 = 0
+\label{eq:9.1}
+\end{equation}
+
+para los parámetros $\beta_0$, $\beta_1$ y $\beta_2$. Cuando decimos que esta ecuación define el hiperplano, queremos decir que cualquier $X = (X_1, X_2)^T$ para el cual se cumple esta ecuación es un punto en el hiperplano. La ecuación anterior puede extenderse fácilmente al entorno p-dimensional:
+\begin{equation}
+\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p = 0
+\label{eq:9.2}
+\end{equation}
+
+define un hiperplano p-dimensional, nuevamente en el sentido de que si un punto $X = (X_1, X_2, \ldots, X_p)^T$ en el espacio p-dimensional (es decir, un vector de longitud $p$) satisface esta ecuación, entonces $X$ se encuentra en el hiperplano. \\
+
+\noindent Ahora, supongamos que $X$ no satisface la ecuación (\ref{eq:9.2}); más bien,
+\begin{equation}
+\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p > 0.
+\end{equation}
+
+\noindent Entonces esto nos dice que $X$ se encuentra a un lado del hiperplano. Por otro lado, si
+\begin{equation}
+\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p < 0,
+\end{equation}
+
+entonces $X$ se encuentra al otro lado del hiperplano. Así que podemos pensar en el hiperplano como una divisón del hiperespacio en dos mitades. Uno puede determinar fácilmente en qué lado del hiperplano Un hiperplano en el espacio bidimensional se muestra en la figura \ref{fig:9.1}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/52.png}
+\caption{Hiperplano $1 + 2X_1 + 3X_2 = 0$. La región azul consiste en los puntos tales que $1 + 2X_1 + 3X_2 > 0$, mientras que la región roja consiste en los puntos tales que $1 + 2X_1 + 3X_2 < 0$.}
+\label{fig:9.1}
+\end{figure}
+
+\subsection{Clasificación usando un hiperplano separador}
+
+Ahora supongamos que tenemos una matriz de datos $n \times p$ $\mathbf{X}$ consistente en $n$ observaciones de entrenamiento en un espacio p-dimensional,
+\begin{equation}
+x_1 =
+\begin{pmatrix}
+x_{11} \\
+\vdots \\
+x_{1p}
+\end{pmatrix}, \ldots, x_n =
+\begin{pmatrix}
+x_{n1} \\
+\vdots \\
+x_{np}
+\end{pmatrix},
+\end{equation}
+y que estas observaciones caen en dos clases, es decir, $y_1, \ldots, y_n \in \{-1, 1\}$ donde $-1$ representa una clase y $1$ la otra clase. También tenemos una observación de prueba, un vector p-dimensional de características observadas $x^* = (x^*_1, \ldots, x^*_p)^T$. Nuestro objetivo es desarrollar un clasificador basado en los datos de entrenamiento que clasifique correctamente la observación de prueba utilizando sus mediciones de características. Lo haremos con un nuevo enfoque basado en el concepto de un hiperplano separador. \\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/53.png}
+\caption{Izquierda: hay dos clases de observaciones (en distintos colores), cada una con medidas en dos variables. Se muestran tres posibles hiperplanos separadores en negro. Derecha: se muestra un ejemplo de hiperplano separador, los ejemplos que caigan en la zona azul serán clasificados como esa clase, mientras que los que caigan en la región morada, serán clasificados como de esa clase.}
+\label{fig:9.2}
+\end{figure}
+
+Supongamos que es posible construir un hiperplano que separe perfectamente las observaciones de entrenamiento según sus etiquetas de clase. Ejemplos de tres de estos hiperplanos separadores se muestran en el panel izquierdo de la figura \ref{fig:9.2}. Podemos etiquetar las observaciones de la clase azul como $y_i = 1$ y las de la clase púrpura como $y_i = -1$. Entonces, un hiperplano separador tiene la propiedad de que
+\begin{align}
+\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip} > 0 &\text{ si } y_i = 1, \\
+\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip} < 0 &\text{ si } y_i = -1.
+\end{align}
+
+\noindent De manera equivalente, un hiperplano separador tiene la propiedad de que
+\begin{equation}
+y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) > 0
+\end{equation}
+
+\noindent para todo $i = 1, \ldots, n$. \\
+
+Si existe un hiperplano separador, podemos usarlo para construir un clasificador muy natural: una observación de prueba se asigna a una clase dependiendo de en qué lado del hiperplano se encuentra. El panel derecho de la figura \ref{fig:9.2} muestra un ejemplo de tal clasificador. Es decir, clasificamos la observación de prueba $x^*$ basándonos en el signo de 
+\begin{equation}
+f(x^*) = \beta_0 + \beta_1 x^*_1 + \beta_2 x^*_2 + \ldots + \beta_p x^*_p
+\end{equation}
+
+Si $f(x^*)$ es positivo, entonces asignamos la observación de prueba a la clase 1, y si $f(x^*)$ es negativo, entonces la asignamos a la clase -1. También podemos hacer uso de la magnitud de $f(x^*)$. Si $f(x^*)$ está lejos de cero, esto significa que $x^*$ está lejos del hiperplano, por lo que podemos estar seguros de nuestra asignación de clase para $x^*$. Por otro lado, si $f(x^*)$ está cerca de cero, entonces $x^*$ está cerca del hiperplano, por lo que estamos menos seguros de la asignación de clase para $x^*$. Un clasificador basado en un hiperplano separador conduce, por tanto, a un límite de decisión lineal.
+
+\subsection{Clasificador de máximo margen}
+
+En general, si nuestros datos pueden ser perfectamente separados usando un hiperplano, entonces existirá un número infinito de tales hiperplanos. Para construir un clasificador basado en un hiperplano separador, debemos tener una forma razonable de decidir cuál de los infinitos hiperplanos separadores posibles usar. \\
+
+Una elección natural es el hiperplano de máximo margen (también conocido como el hiperplano separador óptimo), que es el hiperplano separador que está más alejado de las observaciones de entrenamiento. Es decir, podemos calcular la distancia (perpendicular) desde cada observación de entrenamiento hasta un hiperplano separador dado; la menor de estas distancias es la distancia mínima desde las observaciones hasta el hiperplano, y se conoce como el margen. El hiperplano de máximo margen es el hiperplano separador para el cual el margen es mayor, es decir, es el hiperplano que tiene la mayor distancia mínima a las observaciones de entrenamiento. Luego podemos clasificar una observación de prueba según el lado del hiperplano de máximo margen en el que se encuentre. Esto se conoce como el clasificador de máximo margen. Esperamos que un clasificador que tenga un gran margen en los datos de entrenamiento también tenga un gran margen en los datos de prueba, y por lo tanto clasifique correctamente las observaciones de prueba. Aunque el clasificador de máximo margen a menudo tiene éxito, también puede llevar a un sobreajuste cuando $p$ es grande. \\
+
+Si $\beta_0, \beta_1, \ldots, \beta_p$ son los coeficientes del hiperplano de máximo margen, entonces el clasificador de margen máximo clasifica la observación de prueba $x^*$ basándose en el signo de $f(x^*) = \beta_0 + \beta_1 x^*_1 + \beta_2 x^*_2 + \ldots + \beta_p x^*_p$. \\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/54.png}
+\caption{Hiperplano de margen máximo.}
+\label{fig:9.3}
+\end{figure}
+
+La figura \ref{fig:9.3} muestra el hiperplano de margen máximo en el conjunto de datos de la figura \ref{fig:9.2}. Comparando el panel derecho de la figura \ref{fig:9.2} con la figura \ref{fig:9.3}, vemos que el hiperplano de margen máximo mostrado resulta en una mayor distancia mínima entre las observaciones y el hiperplano separador, es decir, un margen mayor. \\
+
+Examinando la figura \ref{fig:9.3}, vemos que tres observaciones de entrenamiento son equidistantes al hiperplano de máximo margen y se encuentran a lo largo de las líneas discontinuas que indican el ancho del margen. Estas tres observaciones se conocen como vectores de soporte, ya que son vectores en el espacio p-dimensional (en esta figura, $p = 2$) y "soportan" el hiperplano de máximo margen en el sentido de que si estos puntos se movieran ligeramente, el hiperplano también se movería. Así, el hiperplano de margen máximo depende directamente de los vectores de soporte, pero no de las otras observaciones: un movimiento de cualquiera de las otras observaciones no afectaría el hiperplano separador, siempre que el movimiento de la observación no cause que cruce el límite establecido por el margen. \\
+
+\subsection{Construcción del clasificador de máximo margen}
+
+Ahora consideramos la tarea de construir el hiperplano de máximo margen basado en un conjunto de $n$ observaciones de entrenamiento $x_1, \ldots, x_n \in \mathbb{R}^p$ y etiquetas de clase asociadas $y_1, \ldots, y_n \in \{-1, 1\}$. Brevemente, el hiperplano de margen máximo es la solución al problema de optimización
+\begin{align}
+\underset{\beta_0, \beta_1, \ldots, \beta_p}{\text{Maximizar }} & M \label{eq:9.9}\\
+\text{sujeto a } & \sum_{j = 1}^{p} \beta_j^2 = 1, \label{eq:9.10}\\
+& y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) \geq M \quad \forall i = 1, \ldots, n \label{eq:9.11}
+\end{align}
+
+\noindent Este problema de optimización es simple. En primer lugar, la restricción 
+\begin{equation}
+y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) \geq M \quad \forall i = 1, \ldots, n
+\end{equation}
+
+garantiza que cada observación estará en el lado correcto del hiperplano, siempre que $M$ sea positivo. De hecho, para que cada observación esté en el lado correcto del hiperplano, simplemente necesitaríamos $y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) > 0$, por lo que la restricción requiere que cada observación esté en el lado correcto del hiperplano, con un cierto margen, siempre que $M$ sea positivo. \\
+
+En segundo lugar, observe que (\ref{eq:9.10}) no es realmente una restricción sobre el hiperplano, ya que si $\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip} = 0$ define un hiperplano, entonces también lo hace $k (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) = 0$ para cualquier $k \neq 0$. Sin embargo, (\ref{eq:9.10}) añade significado a (\ref{eq:9.11}); se puede demostrar que, con esta restricción, la distancia perpendicular desde la $i$-ésima observación al hiperplano está dada por
+\begin{equation}
+y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}).
+\end{equation}
+Por lo tanto, las restricciones (\ref{eq:9.10}) y (\ref{eq:9.11}) aseguran que cada observación esté en el lado correcto del hiperplano y al menos a una distancia $M$ del hiperplano. Por lo tanto, $M$ representa el margen de nuestro hiperplano, y el problema de optimización elige $\beta_0, \beta_1, \ldots, \beta_p$ para maximizar $M$. No veremos la resolución del problema de optimización.
+
+
+\subsection{El caso no separable}
+
+El clasificador de máximo margen es una forma muy natural de realizar la clasificación si existe un hiperplano separador. Sin embargo, en muchos casos este hiperplano no existe, y por lo tanto no hay un clasificador de máximo margen. En este caso, el problema de optimización anterior no tiene solución con $M > 0$. Un ejemplo se muestra en la figura \ref{fig:9.4}. En este caso, no podemos separar exactamente las dos clases. Sin embargo, podemos extender el concepto de un hiperplano separador para desarrollar un hiperplano que casi separa las clases, utilizando un llamado margen suave. La generalización del clasificador de margen máximo al caso no separable se conoce como el clasificador de vectores de soporte.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/55.png}
+\caption{Un conjunto de datos en el que no existe un hiperplano separador.}
+\label{fig:9.4}
+\end{figure}
