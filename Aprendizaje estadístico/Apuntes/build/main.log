@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 17:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1339,7 +1339,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
  []
 
 [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<fotos/1.png, id=549, 723.70375pt x 468.75125pt>
+<fotos/1.png, id=554, 723.70375pt x 468.75125pt>
 File: fotos/1.png Graphic file (type png)
 <use fotos/1.png>
 Package pdftex.def Info: fotos/1.png  used on input line 85.
@@ -1350,7 +1350,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 [3 <./fotos/1.png>]
-<fotos/2.png, id=562, 800.9925pt x 434.62375pt>
+<fotos/2.png, id=567, 800.9925pt x 434.62375pt>
 File: fotos/2.png Graphic file (type png)
 <use fotos/2.png>
 Package pdftex.def Info: fotos/2.png  used on input line 98.
@@ -1407,12 +1407,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--329
  []
 
 [12]
-<fotos/4.png, id=666, 567.11874pt x 319.1925pt>
+<fotos/4.png, id=671, 567.11874pt x 319.1925pt>
 File: fotos/4.png Graphic file (type png)
 <use fotos/4.png>
 Package pdftex.def Info: fotos/4.png  used on input line 344.
 (pdftex.def)             Requested size: 308.71107pt x 173.7592pt.
-<fotos/5.png, id=668, 839.135pt x 330.23375pt>
+<fotos/5.png, id=673, 839.135pt x 330.23375pt>
 File: fotos/5.png Graphic file (type png)
 <use fotos/5.png>
 Package pdftex.def Info: fotos/5.png  used on input line 356.
@@ -1441,7 +1441,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-<fotos/6.png, id=691, 762.85pt x 337.26pt>
+<fotos/6.png, id=696, 762.85pt x 337.26pt>
 File: fotos/6.png Graphic file (type png)
 <use fotos/6.png>
 Package pdftex.def Info: fotos/6.png  used on input line 389.
@@ -1464,7 +1464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-<fotos/7.png, id=716, 775.89874pt x 291.0875pt>
+<fotos/7.png, id=721, 775.89874pt x 291.0875pt>
 File: fotos/7.png Graphic file (type png)
 <use fotos/7.png>
 Package pdftex.def Info: fotos/7.png  used on input line 408.
@@ -1478,7 +1478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--414
  []
 
 [16 <./fotos/6.png>]
-<fotos/8.png, id=730, 758.835pt x 293.095pt>
+<fotos/8.png, id=735, 758.835pt x 293.095pt>
 File: fotos/8.png Graphic file (type png)
 <use fotos/8.png>
 Package pdftex.def Info: fotos/8.png  used on input line 419.
@@ -1513,7 +1513,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--533
  []
 
 [20]
-<fotos/19.png, id=771, 664.4825pt x 346.29375pt>
+<fotos/19.png, id=776, 664.4825pt x 346.29375pt>
 File: fotos/19.png Graphic file (type png)
 <use fotos/19.png>
 Package pdftex.def Info: fotos/19.png  used on input line 538.
@@ -1544,7 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-<fotos/9.png, id=792, 713.66624pt x 652.4375pt>
+<fotos/9.png, id=797, 713.66624pt x 652.4375pt>
 File: fotos/9.png Graphic file (type png)
 <use fotos/9.png>
 Package pdftex.def Info: fotos/9.png  used on input line 40.
@@ -1569,7 +1569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-<fotos/14.png, id=808, 752.8125pt x 286.06876pt>
+<fotos/14.png, id=813, 752.8125pt x 286.06876pt>
 File: fotos/14.png Graphic file (type png)
 <use fotos/14.png>
 Package pdftex.def Info: fotos/14.png  used on input line 99.
@@ -1610,7 +1610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
  []
 
 [29]
-<fotos/15.png, id=874, 825.0825pt x 320.19624pt>
+<fotos/15.png, id=879, 825.0825pt x 320.19624pt>
 File: fotos/15.png Graphic file (type png)
 <use fotos/15.png>
 Package pdftex.def Info: fotos/15.png  used on input line 239.
@@ -1635,7 +1635,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
-<fotos/16.png, id=895, 660.4675pt x 260.975pt>
+<fotos/16.png, id=900, 660.4675pt x 260.975pt>
 File: fotos/16.png Graphic file (type png)
 <use fotos/16.png>
 Package pdftex.def Info: fotos/16.png  used on input line 276.
@@ -1645,7 +1645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-<fotos/17.png, id=909, 618.31pt x 296.10625pt>
+<fotos/17.png, id=914, 618.31pt x 296.10625pt>
 File: fotos/17.png Graphic file (type png)
 <use fotos/17.png>
 Package pdftex.def Info: fotos/17.png  used on input line 297.
@@ -1691,7 +1691,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--349
  []
 
 [34]
-<fotos/18.png, id=944, 614.295pt x 289.08pt>
+<fotos/18.png, id=949, 614.295pt x 289.08pt>
 File: fotos/18.png Graphic file (type png)
 <use fotos/18.png>
 Package pdftex.def Info: fotos/18.png  used on input line 352.
@@ -1718,7 +1718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
 
 ]
-<fotos/21.png, id=959, 838.13126pt x 456.70625pt>
+<fotos/21.png, id=964, 838.13126pt x 456.70625pt>
 File: fotos/21.png Graphic file (type png)
 <use fotos/21.png>
 Package pdftex.def Info: fotos/21.png  used on input line 43.
@@ -1733,7 +1733,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-<fotos/3.png, id=970, 1234.6125pt x 588.1975pt>
+<fotos/3.png, id=975, 1234.6125pt x 588.1975pt>
 File: fotos/3.png Graphic file (type png)
 <use fotos/3.png>
 Package pdftex.def Info: fotos/3.png  used on input line 62.
@@ -1744,7 +1744,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fotos/22.png, id=975, 543.02875pt x 560.0925pt>
+<fotos/22.png, id=980, 543.02875pt x 560.0925pt>
 File: fotos/22.png Graphic file (type png)
 <use fotos/22.png>
 Package pdftex.def Info: fotos/22.png  used on input line 107.
@@ -1764,12 +1764,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-<fotos/23.png, id=993, 561.09625pt x 140.525pt>
+<fotos/23.png, id=998, 561.09625pt x 140.525pt>
 File: fotos/23.png Graphic file (type png)
 <use fotos/23.png>
 Package pdftex.def Info: fotos/23.png  used on input line 130.
 (pdftex.def)             Requested size: 308.71107pt x 77.31471pt.
-<fotos/24.png, id=994, 695.59875pt x 274.02374pt>
+<fotos/24.png, id=999, 695.59875pt x 274.02374pt>
 File: fotos/24.png Graphic file (type png)
 <use fotos/24.png>
 Package pdftex.def Info: fotos/24.png  used on input line 137.
@@ -1783,7 +1783,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
  []
 
 [40 <./fotos/23.png>]
-<fotos/25.png, id=1002, 557.08125pt x 294.09875pt>
+<fotos/25.png, id=1007, 557.08125pt x 294.09875pt>
 File: fotos/25.png Graphic file (type png)
 <use fotos/25.png>
 Package pdftex.def Info: fotos/25.png  used on input line 155.
@@ -1798,7 +1798,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<fotos/26.png, id=1011, 699.61375pt x 305.14pt>
+<fotos/26.png, id=1016, 699.61375pt x 305.14pt>
 File: fotos/26.png Graphic file (type png)
 <use fotos/26.png>
 Package pdftex.def Info: fotos/26.png  used on input line 171.
@@ -1809,7 +1809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
  []
 
 [42 <./fotos/26.png>]
-<fotos/27.png, id=1024, 563.10374pt x 281.05pt>
+<fotos/27.png, id=1029, 563.10374pt x 281.05pt>
 File: fotos/27.png Graphic file (type png)
 <use fotos/27.png>
 Package pdftex.def Info: fotos/27.png  used on input line 193.
@@ -1819,7 +1819,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-<fotos/28.png, id=1026, 700.6175pt x 289.08pt>
+<fotos/28.png, id=1031, 700.6175pt x 289.08pt>
 File: fotos/28.png Graphic file (type png)
 <use fotos/28.png>
 Package pdftex.def Info: fotos/28.png  used on input line 211.
@@ -1847,7 +1847,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
-<fotos/29.png, id=1040, 509.905pt x 546.04pt>
+<fotos/29.png, id=1045, 509.905pt x 546.04pt>
 File: fotos/29.png Graphic file (type png)
 <use fotos/29.png>
 Package pdftex.def Info: fotos/29.png  used on input line 237.
@@ -1855,7 +1855,7 @@ Package pdftex.def Info: fotos/29.png  used on input line 237.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fotos/30.png, id=1041, 623.32875pt x 242.9075pt>
+<fotos/30.png, id=1046, 623.32875pt x 242.9075pt>
 File: fotos/30.png Graphic file (type png)
 <use fotos/30.png>
 Package pdftex.def Info: fotos/30.png  used on input line 244.
@@ -1903,7 +1903,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<fotos/10.png, id=1090, 706.64pt x 396.48125pt>
+<fotos/10.png, id=1095, 706.64pt x 396.48125pt>
 File: fotos/10.png Graphic file (type png)
 <use fotos/10.png>
 Package pdftex.def Info: fotos/10.png  used on input line 21.
@@ -1920,12 +1920,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
  <./fotos/10.png>]
-<fotos/11.png, id=1100, 1196.47pt x 599.23875pt>
+<fotos/11.png, id=1105, 1196.47pt x 599.23875pt>
 File: fotos/11.png Graphic file (type png)
 <use fotos/11.png>
 Package pdftex.def Info: fotos/11.png  used on input line 30.
 (pdftex.def)             Requested size: 264.61333pt x 132.52785pt.
-<fotos/12.png, id=1101, 712.6625pt x 404.51125pt>
+<fotos/12.png, id=1106, 712.6625pt x 404.51125pt>
 File: fotos/12.png Graphic file (type png)
 <use fotos/12.png>
 Package pdftex.def Info: fotos/12.png  used on input line 37.
@@ -1941,612 +1941,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
  []
 
 [51 <./fotos/11.png> <./fotos/12.png>]
-<fotos/13.png, id=1116, 720.6925pt x 561.09625pt>
+<fotos/13.png, id=1121, 720.6925pt x 561.09625pt>
 File: fotos/13.png Graphic file (type png)
 <use fotos/13.png>
 Package pdftex.def Info: fotos/13.png  used on input line 48.
 (pdftex.def)             Requested size: 176.4044pt x 137.33707pt.
-<fotos/20.png, id=1119, 349.305pt x 302.12875pt>
+<fotos/20.png, id=1124, 349.305pt x 302.12875pt>
 File: fotos/20.png Graphic file (type png)
 <use fotos/20.png>
 Package pdftex.def Info: fotos/20.png  used on input line 57.
 (pdftex.def)             Requested size: 198.45663pt x 171.65274pt.
- [52 <./fotos/13.png> <./fotos/20.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-
- []
-
-) [53]
-\openout2 = `tex/Chapter6.aux'.
-
- (./tex/Chapter6.tex
-Chapter 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-<fotos/31.png, id=1141, 418.56375pt x 414.54875pt>
-File: fotos/31.png Graphic file (type png)
-<use fotos/31.png>
-Package pdftex.def Info: fotos/31.png  used on input line 17.
-(pdftex.def)             Requested size: 220.50887pt x 218.38776pt.
-<fotos/32.png, id=1142, 560.0925pt x 472.76625pt>
-File: fotos/32.png Graphic file (type png)
-<use fotos/32.png>
-Package pdftex.def Info: fotos/32.png  used on input line 24.
-(pdftex.def)             Requested size: 220.50887pt x 186.13104pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-1: section
-[54
-
-
-
-
- <./fotos/31.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-[55 <./fotos/32.png>]
-<fotos/33.png, id=1165, 649.42625pt x 659.46375pt>
-File: fotos/33.png Graphic file (type png)
-<use fotos/33.png>
-Package pdftex.def Info: fotos/33.png  used on input line 65.
-(pdftex.def)             Requested size: 308.71107pt x 313.49004pt.
- [56]
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-[57 <./fotos/33.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-<fotos/34.png, id=1184, 625.33624pt x 560.0925pt>
-File: fotos/34.png Graphic file (type png)
-<use fotos/34.png>
-Package pdftex.def Info: fotos/34.png  used on input line 105.
-(pdftex.def)             Requested size: 220.50887pt x 197.49672pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<fotos/35.png, id=1185, 448.67625pt x 320.19624pt>
-File: fotos/35.png Graphic file (type png)
-<use fotos/35.png>
-Package pdftex.def Info: fotos/35.png  used on input line 112.
-(pdftex.def)             Requested size: 220.50887pt x 157.36168pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-[58] [59 <./fotos/34.png> <./fotos/35.png>]
-<fotos/38.png, id=1208, 598.235pt x 372.39125pt>
-File: fotos/38.png Graphic file (type png)
-<use fotos/38.png>
-Package pdftex.def Info: fotos/38.png  used on input line 147.
-(pdftex.def)             Requested size: 220.50887pt x 137.26552pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-<fotos/36.png, id=1210, 644.4075pt x 728.7225pt>
-File: fotos/36.png Graphic file (type png)
-<use fotos/36.png>
-Package pdftex.def Info: fotos/36.png  used on input line 156.
-(pdftex.def)             Requested size: 220.50887pt x 249.36356pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-
- []
-
-[60 <./fotos/38.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
-
- []
-
-[61 <./fotos/36.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-
- []
-
-<fotos/37.png, id=1228, 602.25pt x 597.23125pt>
-File: fotos/37.png Graphic file (type png)
-<use fotos/37.png>
-Package pdftex.def Info: fotos/37.png  used on input line 202.
-(pdftex.def)             Requested size: 220.50887pt x 218.67561pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-[62] [63 <./fotos/37.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-<fotos/39.png, id=1246, 762.85pt x 670.505pt>
-File: fotos/39.png Graphic file (type png)
-<use fotos/39.png>
-Package pdftex.def Info: fotos/39.png  used on input line 255.
-(pdftex.def)             Requested size: 264.61333pt x 232.57266pt.
-) [64 <./fotos/39.png>]
-\openout2 = `tex/Chapter7.aux'.
-
- (./tex/Chapter7.tex
-Chapter 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-<fotos/40.png, id=1260, 818.05624pt x 401.5pt>
-File: fotos/40.png Graphic file (type png)
-<use fotos/40.png>
-Package pdftex.def Info: fotos/40.png  used on input line 17.
-(pdftex.def)             Requested size: 176.4044pt x 86.57811pt.
-1: section
-[65
-
-
-
-
- <./fotos/40.png>]
-<fotos/41.png, id=1269, 883.3pt x 663.47874pt>
-File: fotos/41.png Graphic file (type png)
-<use fotos/41.png>
-Package pdftex.def Info: fotos/41.png  used on input line 45.
-(pdftex.def)             Requested size: 264.61333pt x 198.76169pt.
- [66 <./fotos/41.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
- []
-
-<fotos/42.png, id=1284, 781.92125pt x 559.08875pt>
-File: fotos/42.png Graphic file (type png)
-<use fotos/42.png>
-Package pdftex.def Info: fotos/42.png  used on input line 84.
-(pdftex.def)             Requested size: 220.50887pt x 157.66986pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
- []
-
-[67 <./fotos/42.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-[68]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-<fotos/43.png, id=1307, 992.70876pt x 543.02875pt>
-File: fotos/43.png Graphic file (type png)
-<use fotos/43.png>
-Package pdftex.def Info: fotos/43.png  used on input line 135.
-(pdftex.def)             Requested size: 264.61333pt x 144.74709pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-[69 <./fotos/43.png>] [70] [71]
-Overfull \hbox (3.1646pt too wide) in paragraph at lines 253--263
-[][]\T1/cmr/bx/n/10.95 (-20) Ejemplo 7.4.1. []\T1/cmr/m/it/10.95 (-20) Sean tres clases mu-tu-a-mente ex-cluyentes: bi-ci-cleta, coche y camión. Suponemos
- []
-
-[72]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
-
- []
-
-[73]
-<fotos/44.png, id=1360, 364.36125pt x 337.26pt>
-File: fotos/44.png Graphic file (type png)
-<use fotos/44.png>
-Package pdftex.def Info: fotos/44.png  used on input line 328.
-(pdftex.def)             Requested size: 154.3589pt x 142.87302pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
-
- []
-
-[74 <./fotos/44.png>] [75]
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--421
-
- []
-
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 431.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
-
- []
-
-<fotos/45.png, id=1394, 918.43124pt x 463.7325pt>
-File: fotos/45.png Graphic file (type png)
-<use fotos/45.png>
-Package pdftex.def Info: fotos/45.png  used on input line 444.
-(pdftex.def)             Requested size: 352.81554pt x 178.14484pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 463--464
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
-
- []
-
-[78 <./fotos/45.png>]
-<fotos/49.png, id=1406, 394.47375pt x 280.04625pt>
-File: fotos/49.png Graphic file (type png)
-<use fotos/49.png>
-Package pdftex.def Info: fotos/49.png  used on input line 486.
-(pdftex.def)             Requested size: 264.61333pt x 187.85648pt.
- [79 <./fotos/49.png>]
-<fotos/50.png, id=1415, 217.81375pt x 127.47626pt>
-File: fotos/50.png Graphic file (type png)
-<use fotos/50.png>
-Package pdftex.def Info: fotos/50.png  used on input line 509.
-(pdftex.def)             Requested size: 132.30666pt x 77.43167pt.
-<fotos/51.png, id=1416, 202.7575pt x 130.4875pt>
-File: fotos/51.png Graphic file (type png)
-<use fotos/51.png>
-Package pdftex.def Info: fotos/51.png  used on input line 517.
-(pdftex.def)             Requested size: 132.30666pt x 85.15036pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
-
- []
-
-[80 <./fotos/50.png> <./fotos/51.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
-
- []
-
-<fotos/46.png, id=1430, 601.24625pt x 305.14pt>
-File: fotos/46.png Graphic file (type png)
-<use fotos/46.png>
-Package pdftex.def Info: fotos/46.png  used on input line 553.
-(pdftex.def)             Requested size: 352.81554pt x 179.06256pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
-
- []
-
-[81 <./fotos/46.png>]
-<fotos/47.png, id=1441, 490.83376pt x 585.18625pt>
-File: fotos/47.png Graphic file (type png)
-<use fotos/47.png>
-Package pdftex.def Info: fotos/47.png  used on input line 571.
-(pdftex.def)             Requested size: 352.81554pt x 420.64622pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 576--577
-
- []
-
-<fotos/48.png, id=1442, 532.99126pt x 383.4325pt>
-File: fotos/48.png Graphic file (type png)
-<use fotos/48.png>
-Package pdftex.def Info: fotos/48.png  used on input line 582.
-(pdftex.def)             Requested size: 352.81554pt x 253.82097pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--594
-
- []
-
-[82]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package caption Warning: \label without proper reference on input line 606.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:7.1' on page 83 undefined on input line 609.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
-
- []
-
-[83 <./fotos/47.png>] [84 <./fotos/48.png>]) [85]
-\openout2 = `tex/Chapter8.aux'.
-
- (./tex/Chapter8.tex
-Chapter 8.
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-1: section
-[86
-
-
-
-
-]
-<fotos/52.png, id=1479, 519.9425pt x 477.785pt>
-File: fotos/52.png Graphic file (type png)
-<use fotos/52.png>
-Package pdftex.def Info: fotos/52.png  used on input line 43.
-(pdftex.def)             Requested size: 220.50887pt x 202.62944pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
-
- []
-
-<fotos/53.png, id=1480, 839.135pt x 418.56375pt>
-File: fotos/53.png Graphic file (type png)
-<use fotos/53.png>
-Package pdftex.def Info: fotos/53.png  used on input line 68.
-(pdftex.def)             Requested size: 441.01775pt x 219.97917pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[87 <./fotos/52.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-[88 <./fotos/53.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-<fotos/54.png, id=1501, 573.14125pt x 569.12625pt>
-File: fotos/54.png Graphic file (type png)
-<use fotos/54.png>
-Package pdftex.def Info: fotos/54.png  used on input line 103.
-(pdftex.def)             Requested size: 220.50887pt x 218.96231pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-[89 <./fotos/54.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-
- []
-
-<fotos/56.png, id=1518, 1008.76875pt x 468.75125pt>
-File: fotos/56.png Graphic file (type png)
-<use fotos/56.png>
-Package pdftex.def Info: fotos/56.png  used on input line 148.
-(pdftex.def)             Requested size: 441.01775pt x 204.92795pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[90] [91 <./fotos/56.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-
- []
-
-[92]
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
-
-<fotos/55.png, id=1566, 514.92375pt x 473.77pt>
-File: fotos/55.png Graphic file (type png)
-<use fotos/55.png>
-Package pdftex.def Info: fotos/55.png  used on input line 257.
-(pdftex.def)             Requested size: 220.50887pt x 202.87854pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [93] [94 <./fotos/55.png>]
-
-LaTeX Warning: Empty bibliography on input line 138.
-
-(build/main.aux (build/tex/Chapter1.aux) (build/tex/Chapter2.aux) (build/tex/Chapter3.aux) (build/tex/Chapter4.aux) (build/tex/Chapter5.aux) (build/tex/Chapter6.aux) (build/tex/Chapter7.aux) (build/tex/Chapter8.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DC31FBB0B2181F793D00A8B645B23CB0;18701.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 45376 strings out of 474116
- 954359 string characters out of 5743682
- 1953187 words of memory out of 5000000
- 66054 multiletter control sequences out of 15000+600000
- 611853 words of font info for 365 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 96i,21n,102p,2040b,2742s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on build/main.pdf (98 pages, 8193739 bytes).
-PDF statistics:
- 1865 PDF objects out of 2073 (max. 8388607)
- 1551 compressed objects within 16 object streams
- 535 named destinations out of 1000 (max. 500000)
- 91701 words of extra memory for PDF output out of 106986 (max. 10000000)
-
+ [52 <./fotos/13.png> <./fotos/2

@@ -146,7 +146,7 @@ G(x) = \text{sign}(f(x)) = \text{sign}(x^T \beta + \beta_0)
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{fotos/56.png}
-\caption{Clasificadores de vectores de soporte. El panel izquierdo muestra el caso separable. El límite de decisión es la línea sólida, mientras que las líneas discontinuas delimitan el margen máximo sombreado de ancho $2M = 2/\|\beta\|$. El panel derecho muestra el caso no separable (superposición). Los puntos etiquetados como $\xi^*_j$ están en el lado incorrecto de su margen por una cantidad $\xi^*_j = M \xi_j$; los puntos en el lado correcto tienen $\xi^*_j = 0$. El margen se maximiza sujeto a un presupuesto total $\sum \xi_i \leq \text{constante}$. Por lo tanto, $\sum \xi^*_j$ es la distancia total de los puntos en el lado incorrecto de su margen.}
+\caption{Clasificadores de vectores de soporte. El panel izquierdo muestra el caso separable. El límite de decisión es la línea sólida, mientras que las líneas discontinuas delimitan el margen máximo sombreado de ancho $2M = 2/\|\beta\|$. El panel derecho muestra el caso no separable (superposición). Los puntos etiquetados como $\xi^*_j$ están en el lado incorrecto de su margen por una cantidad $\xi^*_j = M \xi_j$; los puntos en el lado correcto tienen $\xi^*_j = 0$, las observaciones que están en el lado incorrecto del margen tienen $\xi_j^* > 0$ y si $\xi_j^* > 1$, la observación están mal clasificada (en el lado incorrecto del hiperplano). El margen se maximiza sujeto a un presupuesto total $\sum \xi_i \leq \text{constante}$. Por lo tanto, $\sum \xi^*_j$ es la distancia total de los puntos en el lado incorrecto de su margen.}
 \label{fig:12.1}
 \end{figure}
 
@@ -201,27 +201,13 @@ Recordemos que, al ser nuestra función convexa, existe una equivalencia entre e
 
 \noindent De estas podemos ver que
 \begin{itemize}
-    \item si $\alpha_i > 0$, entonces $y_i (x_i^T \beta + \beta_0) = 1$, o en otras palabras, $x_i$ está en el límite de la franja.
+    \item si $\alpha_i > 0$, entonces $y_i (x_i^T \beta + \beta_0) = 1$, o en otras palabras, $x_i$ está en el límite de la franja (es un vector de soporte).
     \item si $y_i (x_i^T \beta + \beta_0) > 1$, $x_i$ no está en el límite de la franja, y $\alpha_i = 0$.
 \end{itemize}
 
-De (\ref{eq:4.50}) vemos que el vector solución $\beta$ se define en términos de una combinación lineal de los puntos de soporte $x_i$, aquellos puntos definidos para estar en el límite de la franja mediante $\alpha_i > 0$. Resolviendo \ref{eq:4.53} (para cualquier vector de suporte) se obtiene $\beta_0$. Para mantener cierta estabilidad numérica, se puede promediar sobre todas las soluciones.
+De (\ref{eq:4.50}) vemos que el vector solución $\beta$ se define en términos de una combinación lineal de los puntos de soporte $x_i$, aquellos puntos definidos para estar en el límite de la franja mediante $\alpha_i > 0$. Resolviendo \ref{eq:4.53} (para cualquier vector de suporte) se obtiene $\beta_0$. Para mantener cierta estabilidad numérica, se puede promediar sobre todas las soluciones. Debemos saber calcular esto ! En general, el clasificador de máximo margen está siempre sobreaprendido. \\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Supongamos ahora que las clases se superponen en el espacio de características. Una forma de lidiar con la superposición es seguir maximizando $M$, pero permitir que algunos puntos estén en el lado incorrecto del margen. Definimos las variables de holgura $\xi = (\xi_1, \xi_2, \ldots, \xi_N)$. Hay dos formas naturales de modificar la restriccióndel problema de optimización:
+Supongamos ahora que las clases se superponen en el espacio de características. Una forma de lidiar con la superposición es seguir maximizando $M$, pero permitir que algunos puntos estén en el lado incorrecto del margen. Definimos las variables de holgura $\xi = (\xi_1, \xi_2, \ldots, \xi_N)$; según su valor, podremos saber si las observaciones están en el lado correcto o incorrecto del plano (figura \ref{fig:12.1}). Hay dos formas naturales de modificar la restricció ndel problema de optimización:
 \begin{equation}
 y_i (x_i^T \beta + \beta_0) \geq M - \xi_i,
 \end{equation}
@@ -244,7 +230,7 @@ y_i (x_i^T \beta + \beta_0) \geq 1 - \xi_i \quad \forall i, \\
 \label{eq:12.7}
 \end{equation}
 
-Esta es la forma usual en que se define el clasificador de vectores de soporte para el caso no separable. El panel derecho de la figura \ref{fig:12.1} ilustra este caso de superposición. \\
+Si la constante es 0 tenemos sobreaprendizaje, mientras que si es muy grande, estamos subaprendidos. Esta es la forma usual en que se define el clasificador de vectores de soporte para el caso no separable. El panel derecho de la figura \ref{fig:12.1} ilustra este caso de superposición. \\
 
 Por la naturaleza del criterio (\ref{eq:12.7}), vemos que los puntos bien dentro de su límite de clase no juegan un papel importante en la formación del límite. Esto parece una propiedad atractiva, y una que lo diferencia del análisis discriminante lineal. En LDA, el límite de decisión está determinado por la covarianza de las distribuciones de clase y las posiciones de los centroides de clase. La regresión logística resulta más similar al clasificador de vectores de soporte en este aspecto.
 
@@ -258,3 +244,34 @@ El clasificador de máximo margen es una forma muy natural de realizar la clasif
 \caption{Un conjunto de datos en el que no existe un hiperplano separador.}
 \label{fig:9.4}
 \end{figure}
+
+
+
+
+
+
+
+
+\section{Nuevo}
+
+
+En ridge, con lambda 0 teniamos un metodo sobreaprendido, y en el caso de la constante muy grande era subaprendido. Para las de vectores de soporte, un C muy grande es sobreaprendido (compensa los xi yendo a 0), y un C muy pequeño es subaprendido. El papel de C es del inverso de una constante de regularización. \\
+
+
+A partir de los valores de los vectores epsilon, alpha y las ec 12.10-12.16 se puede reoslver el problema que sea con los vectores de soporte. Para un vectpr sobre el margen conocemos el valor de epsilon (0). Con los vectores de soporte calculamos beta, luego para clacular beta0 tenemos algunos epsilon desconocidos (vec soporte que no estan en el margen) en este caso calculamos los beta 0 solo para los vectores que estan sobre el margen (los unicos que tenemos e un calsificador de maiximo margen) u luego hacemos la media (como antes basicamente.)
+
+Sobre el margen: alpha mayor que 0 y menor que C, epsilon 0 y mu es mayor que 0, por lo que alpha estara entre 0 y C. Los que no estan en el margen tienen alpha igual a C porque como epsilon es distinto de 0 mu tiene que ser 0. Dentro del margen es alpha igual a C, es . El margen es la inversa del modulo de beta (no considera a beta0). SIEMPRE NOS DA LOS ALPHA Y LA C.
+
+Para calcular las epislon de los vectores de soporte (clasificadores) hay que hacerlo conociendo beta 0 y beta. Esto da la distancia en unidades del margen 
+
+
+El signo dice la clase (+ a +1 y - a -1) y la magnitud la distancia al hiperplano
+
+
+
+C COMO PARAMETRO
+C muy pequeño, permitimos mucho epsilon alto y por tant oestamos en subaprendizaje y habra muchos vectores de soporte. Si C es muy grande, estamos en sobreaprendizaje y habra muy pocos vectores de soporte. Similar a KNN. \\
+
+
+
+hasta ahora al hablar de vectores de soporte hablamos de CALSIFICADORES, NO MAQUINA
