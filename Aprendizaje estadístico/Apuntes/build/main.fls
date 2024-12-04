@@ -839,6 +839,11 @@ INPUT ./fotos/54.png
 INPUT ./fotos/54.png
 INPUT ./fotos/54.png
 INPUT ./fotos/54.png
+INPUT ./fotos/56.png
+INPUT ./fotos/56.png
+INPUT ./fotos/56.png
+INPUT ./fotos/56.png
+INPUT ./fotos/56.png
 INPUT ./fotos/55.png
 INPUT ./fotos/55.png
 INPUT ./fotos/55.png
@@ -888,6 +893,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

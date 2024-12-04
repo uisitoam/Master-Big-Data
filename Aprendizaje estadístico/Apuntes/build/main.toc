@@ -126,4 +126,5 @@
 \contentsline {subsection}{\numberline {8.1.2}Clasificación usando un hiperplano separador}{87}{subsection.399}%
 \contentsline {subsection}{\numberline {8.1.3}Clasificador de máximo margen}{88}{subsection.406}%
 \contentsline {subsection}{\numberline {8.1.4}Construcción del clasificador de máximo margen}{90}{subsection.408}%
-\contentsline {subsection}{\numberline {8.1.5}El caso no separable}{90}{subsection.414}%
+\contentsline {subsubsection}{Resolución del problema de optimización}{90}{section*.414}%
+\contentsline {subsection}{\numberline {8.1.5}El caso no separable}{93}{subsection.435}%

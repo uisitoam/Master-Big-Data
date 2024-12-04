@@ -40,7 +40,7 @@ entonces $X$ se encuentra al otro lado del hiperplano. Así que podemos pensar e
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{fotos/52.png}
+\includegraphics[width=0.5\textwidth]{fotos/52.png}
 \caption{Hiperplano $1 + 2X_1 + 3X_2 = 0$. La región azul consiste en los puntos tales que $1 + 2X_1 + 3X_2 > 0$, mientras que la región roja consiste en los puntos tales que $1 + 2X_1 + 3X_2 < 0$.}
 \label{fig:9.1}
 \end{figure}
@@ -65,7 +65,7 @@ y que estas observaciones caen en dos clases, es decir, $y_1, \ldots, y_n \in \{
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{fotos/53.png}
+\includegraphics[width=\textwidth]{fotos/53.png}
 \caption{Izquierda: hay dos clases de observaciones (en distintos colores), cada una con medidas en dos variables. Se muestran tres posibles hiperplanos separadores en negro. Derecha: se muestra un ejemplo de hiperplano separador, los ejemplos que caigan en la zona azul serán clasificados como esa clase, mientras que los que caigan en la región morada, serán clasificados como de esa clase.}
 \label{fig:9.2}
 \end{figure}
@@ -100,7 +100,7 @@ Si $\beta_0, \beta_1, \ldots, \beta_p$ son los coeficientes del hiperplano de m�
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{fotos/54.png}
+\includegraphics[width=0.5\textwidth]{fotos/54.png}
 \caption{Hiperplano de margen máximo.}
 \label{fig:9.3}
 \end{figure}
@@ -111,7 +111,7 @@ Examinando la figura \ref{fig:9.3}, vemos que tres observaciones de entrenamient
 
 \subsection{Construcción del clasificador de máximo margen}
 
-Ahora consideramos la tarea de construir el hiperplano de máximo margen basado en un conjunto de $n$ observaciones de entrenamiento $x_1, \ldots, x_n \in \mathbb{R}^p$ y etiquetas de clase asociadas $y_1, \ldots, y_n \in \{-1, 1\}$. Brevemente, el hiperplano de margen máximo es la solución al problema de optimización
+Ahora consideramos la tarea de construir el hiperplano de máximo margen basado en un conjunto de $n$ pares de observaciones de entrenamiento $(x_1, y_1) (x_2, y_2), \ldots, (x_n, y_n)$, donde $x_i \in \mathbb{R}^p$ y las etiquetas de clase asociadas $y_i \in \{-1, 1\}$. Brevemente, el hiperplano de margen máximo es la solución al problema de optimización
 \begin{align}
 \underset{\beta_0, \beta_1, \ldots, \beta_p}{\text{Maximizar }} & M \label{eq:9.9}\\
 \text{sujeto a } & \sum_{j = 1}^{p} \beta_j^2 = 1, \label{eq:9.10}\\
@@ -129,8 +129,124 @@ En segundo lugar, observe que (\ref{eq:9.10}) no es realmente una restricción s
 \begin{equation}
 y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}).
 \end{equation}
-Por lo tanto, las restricciones (\ref{eq:9.10}) y (\ref{eq:9.11}) aseguran que cada observación esté en el lado correcto del hiperplano y al menos a una distancia $M$ del hiperplano. Por lo tanto, $M$ representa el margen de nuestro hiperplano, y el problema de optimización elige $\beta_0, \beta_1, \ldots, \beta_p$ para maximizar $M$. No veremos la resolución del problema de optimización.
+Por lo tanto, las restricciones (\ref{eq:9.10}) y (\ref{eq:9.11}) aseguran que cada observación esté en el lado correcto del hiperplano y al menos a una distancia $M$ del hiperplano. Por lo tanto, $M$ representa el margen de nuestro hiperplano, y el problema de optimización elige $\beta_0, \beta_1, \ldots, \beta_p$ para maximizar $M$. 
 
+\subsubsection{Resolución del problema de optimización}
+
+Nuestro conjunto de $n$ obervaciones define un hiperplano que, de forma compacta, podemos escribir como 
+\begin{equation}
+\{x: f(x) = x^T \beta + \beta_0 = 0\}
+\end{equation}
+
+\noindent donde $\beta$ es un vector unitario ($||\beta|| = 1$). Una regla de clasificación inducida por $f(x)$ es 
+\begin{equation}
+G(x) = \text{sign}(f(x)) = \text{sign}(x^T \beta + \beta_0)
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fotos/56.png}
+\caption{Clasificadores de vectores de soporte. El panel izquierdo muestra el caso separable. El límite de decisión es la línea sólida, mientras que las líneas discontinuas delimitan el margen máximo sombreado de ancho $2M = 2/\|\beta\|$. El panel derecho muestra el caso no separable (superposición). Los puntos etiquetados como $\xi^*_j$ están en el lado incorrecto de su margen por una cantidad $\xi^*_j = M \xi_j$; los puntos en el lado correcto tienen $\xi^*_j = 0$. El margen se maximiza sujeto a un presupuesto total $\sum \xi_i \leq \text{constante}$. Por lo tanto, $\sum \xi^*_j$ es la distancia total de los puntos en el lado incorrecto de su margen.}
+\label{fig:12.1}
+\end{figure}
+
+Como las clases son separables, se puede encontrar una función $f(x) = x^T\beta + \beta_0$ con $y_i f(x_i) > 0 \; \forall i$. Por lo tanto, se puede encontrar el hiperplano que crea el mayor margen entre los puntos de entrenamiento para la clase 1 y -1 (ver figura \ref{fig:12.1}). El problema de optimización 
+\begin{align}
+\max_{\beta, \beta_0, \|\beta\|=1} & M \\
+\text{sujeto a} \quad & y_i (x_i^T \beta + \beta_0) \geq M, \quad i = 1, \ldots, N
+\end{align}
+captura este concepto. La banda en la figura está a $M$ unidades de distancia del hiperplano en ambos lados, y por lo tanto tiene un ancho de $2M$ unidades. Se llama el margen. El conjunto de condiciones asegura que todos los puntos estén al menos a una distancia firmada $M$ del límite de decisión definido por $\beta$ y $\beta_0$, y buscamos el mayor $M$ y los parámetros asociados. Podemos deshacernos de la restricción $\|\beta\| = 1$ reemplazando las condiciones con
+\begin{equation}
+\frac{1}{\|\beta\|} y_i (x_i^T \beta + \beta_0) \geq M,
+\end{equation}
+
+\noindent lo que redefine $\beta_0$ o, de forma equivalente,
+\begin{equation}
+y_i (x_i^T \beta + \beta_0) \geq M \|\beta\|.
+\end{equation}
+
+Dado que para cualquier $\beta$ y $\beta_0$ que satisfagan estas desigualdades, cualquier múltiplo escalado positivamente también las satisface, podemos establecer arbitrariamente $\|\beta\| = \frac{1}{M}$. Así, el problema de optimización puede reformularse de manera más conveniente como
+\begin{align}
+\min_{\beta, \beta_0} & \frac{1}{2} \|\beta\|^2 \\
+\text{sujeto a} \quad & y_i (x_i^T \beta + \beta_0) \geq 1, \quad i = 1, \ldots, N
+\end{align}
+\begin{align}
+\min_{\beta, \beta_0} & \|\beta\| \\
+\text{sujeto a} \quad & y_i (x_i^T \beta + \beta_0) \geq 1, \quad i = 1, \ldots, N
+\end{align}
+
+donde hemos eliminado la restricción de la norma en $\beta$. Nótese que $M = 1/\|\beta\|$. La expresión anterior es la forma usual de escribir el criterio de vectores de soporte para datos separados. Este es un problema de optimización convexa (criterio cuadrático, restricciones de desigualdad lineales) del cual conocemos la solución. \\
+
+\noindent La función lagrangiana (primal), que se debe minimizar con respecto a $\beta$ y $\beta_0$, es
+\begin{equation}
+L_P = \frac{1}{2} \|\beta\|^2 - \sum_{i=1}^N \alpha_i [y_i (x_i^T \beta + \beta_0) - 1].
+\end{equation}
+
+\noindent Al establecer las derivadas a cero, obtenemos:
+\begin{align}
+\beta &= \sum_{i=1}^N \alpha_i y_i x_i \label{eq:4.50}\\
+0 &= \sum_{i=1}^N \alpha_i y_i, \label{eq:4.51}
+\end{align}
+
+\noindent y sustituyendo estos en $L_P$ obtenemos el dual de Wolfe
+\begin{align}
+L_D =& \sum_{i=1}^N \alpha_i - \frac{1}{2} \sum_{i=1}^N \sum_{k=1}^N \alpha_i \alpha_k y_i y_k x_i^T x_k \\
+& \text{sujeto a} \quad \alpha_i \geq 0 \; \text{ y } \; \sum_{i=1}^N \alpha_i y_i = 0 \label{eq:4.52}
+\end{align}
+
+Recordemos que, al ser nuestra función convexa, existe una equivalencia entre el valor óptimo del primal y del dual. La solución se obtiene maximizando $L_D$ en el ortante positivo, un problema de optimización convexa más simple, para el cual se puede usar \textit{software} estándar. Además, la solución debe satisfacer las condiciones de Karush-Kuhn-Tucker, que incluyen (\ref{eq:4.50}), (\ref{eq:4.51}), (\ref{eq:4.52}) y
+\begin{equation}
+\alpha_i [y_i (x_i^T \beta + \beta_0) - 1] = 0 \quad \forall i \label{eq:4.53}
+\end{equation}
+
+\noindent De estas podemos ver que
+\begin{itemize}
+    \item si $\alpha_i > 0$, entonces $y_i (x_i^T \beta + \beta_0) = 1$, o en otras palabras, $x_i$ está en el límite de la franja.
+    \item si $y_i (x_i^T \beta + \beta_0) > 1$, $x_i$ no está en el límite de la franja, y $\alpha_i = 0$.
+\end{itemize}
+
+De (\ref{eq:4.50}) vemos que el vector solución $\beta$ se define en términos de una combinación lineal de los puntos de soporte $x_i$, aquellos puntos definidos para estar en el límite de la franja mediante $\alpha_i > 0$. Resolviendo \ref{eq:4.53} (para cualquier vector de suporte) se obtiene $\beta_0$. Para mantener cierta estabilidad numérica, se puede promediar sobre todas las soluciones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Supongamos ahora que las clases se superponen en el espacio de características. Una forma de lidiar con la superposición es seguir maximizando $M$, pero permitir que algunos puntos estén en el lado incorrecto del margen. Definimos las variables de holgura $\xi = (\xi_1, \xi_2, \ldots, \xi_N)$. Hay dos formas naturales de modificar la restriccióndel problema de optimización:
+\begin{equation}
+y_i (x_i^T \beta + \beta_0) \geq M - \xi_i,
+\end{equation}
+
+\noindent o
+\begin{equation}
+y_i (x_i^T \beta + \beta_0) \geq M (1 - \xi_i),
+\end{equation}
+
+$\forall i, \xi_i \geq 0, \sum_{i=1}^N \xi_i \leq \text{constante}$. Las dos opciones conducen a soluciones diferentes. La primera opción parece más natural, ya que mide la superposición en la distancia real desde el margen; la segunda opción mide la superposición en la distancia relativa, que cambia con el ancho del margen $M$. Sin embargo, la primera opción resulta en un problema de optimización no convexa, mientras que la segunda es convexa; por lo tanto, la segunda opción conduce al ``clasificador de vectores de soporte'' estándar, que usaremos de aquí en adelante. \\
+
+Aquí está la idea de la formulación. El valor $\xi_i$ en la restricción $y_i (x_i^T \beta + \beta_0) \geq M (1 - \xi_i)$ es la cantidad proporcional por la cual la predicción $f(x_i) = x_i^T \beta + \beta_0$ está en el lado incorrecto de su margen. Por lo tanto, al limitar la suma $\sum \xi_i$, limitamos la cantidad proporcional total por la cual las predicciones caen en el lado incorrecto de su margen. Las clasificaciones erróneas ocurren cuando $\xi_i > 1$, por lo que al limitar $\sum \xi_i$ a un valor $K$, limitamos el número total de clasificaciones erróneas de entrenamiento a $K$.
+Si eliminamos la restricción de la norma en $\beta$, definir $M = 1/\|\beta\|$, podemos reescribir de nuevo el problema de optimización como 
+\begin{equation}
+\min \|\beta\| \quad \text{sujeto a}
+\begin{cases}
+y_i (x_i^T \beta + \beta_0) \geq 1 - \xi_i \quad \forall i, \\
+\xi_i \geq 0, \sum \xi_i \leq \text{constante}.
+\end{cases}
+\label{eq:12.7}
+\end{equation}
+
+Esta es la forma usual en que se define el clasificador de vectores de soporte para el caso no separable. El panel derecho de la figura \ref{fig:12.1} ilustra este caso de superposición. \\
+
+Por la naturaleza del criterio (\ref{eq:12.7}), vemos que los puntos bien dentro de su límite de clase no juegan un papel importante en la formación del límite. Esto parece una propiedad atractiva, y una que lo diferencia del análisis discriminante lineal. En LDA, el límite de decisión está determinado por la covarianza de las distribuciones de clase y las posiciones de los centroides de clase. La regresión logística resulta más similar al clasificador de vectores de soporte en este aspecto.
 
 \subsection{El caso no separable}
 
@@ -138,7 +254,7 @@ El clasificador de máximo margen es una forma muy natural de realizar la clasif
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\textwidth]{fotos/55.png}
+\includegraphics[width=0.5\textwidth]{fotos/55.png}
 \caption{Un conjunto de datos en el que no existe un hiperplano separador.}
 \label{fig:9.4}
 \end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  4 DEC 2024 13:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2430,7 +2430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 File: fotos/52.png Graphic file (type png)
 <use fotos/52.png>
 Package pdftex.def Info: fotos/52.png  used on input line 43.
-(pdftex.def)             Requested size: 264.61333pt x 243.1568pt.
+(pdftex.def)             Requested size: 220.50887pt x 202.62944pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
@@ -2440,7 +2440,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 File: fotos/53.png Graphic file (type png)
 <use fotos/53.png>
 Package pdftex.def Info: fotos/53.png  used on input line 68.
-(pdftex.def)             Requested size: 264.61333pt x 131.98878pt.
+(pdftex.def)             Requested size: 441.01775pt x 219.97917pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2468,7 +2468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 File: fotos/54.png Graphic file (type png)
 <use fotos/54.png>
 Package pdftex.def Info: fotos/54.png  used on input line 103.
-(pdftex.def)             Requested size: 264.61333pt x 262.7652pt.
+(pdftex.def)             Requested size: 220.50887pt x 218.96231pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
@@ -2484,15 +2484,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-<fotos/55.png, id=1519, 514.92375pt x 473.77pt>
-File: fotos/55.png Graphic file (type png)
-<use fotos/55.png>
-Package pdftex.def Info: fotos/55.png  used on input line 141.
-(pdftex.def)             Requested size: 264.61333pt x 243.47015pt.
+<fotos/56.png, id=1518, 1008.76875pt x 468.75125pt>
+File: fotos/56.png Graphic file (type png)
+<use fotos/56.png>
+Package pdftex.def Info: fotos/56.png  used on input line 148.
+(pdftex.def)             Requested size: 441.01775pt x 204.92795pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [90] [91 <./fotos/55.png>]
+[90] [91 <./fotos/56.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+
+ []
+
+[92]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+<fotos/55.png, id=1566, 514.92375pt x 473.77pt>
+File: fotos/55.png Graphic file (type png)
+<use fotos/55.png>
+Package pdftex.def Info: fotos/55.png  used on input line 257.
+(pdftex.def)             Requested size: 220.50887pt x 202.87854pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [93] [94 <./fotos/55.png>]
 
 LaTeX Warning: Empty bibliography on input line 138.
 
@@ -2506,24 +2529,24 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DF06A47D8CECC1089EB2DA44645BC6FB;18701.
+(rerunfilecheck)             Checksum: DC31FBB0B2181F793D00A8B645B23CB0;18701.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45331 strings out of 474116
- 953825 string characters out of 5743682
+ 45376 strings out of 474116
+ 954359 string characters out of 5743682
  1953187 words of memory out of 5000000
- 66041 multiletter control sequences out of 15000+600000
- 611642 words of font info for 361 fonts, out of 8000000 for 9000
+ 66054 multiletter control sequences out of 15000+600000
+ 611853 words of font info for 365 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,21n,102p,2040b,2742s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on build/main.pdf (95 pages, 8123343 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on build/main.pdf (98 pages, 8193739 bytes).
 PDF statistics:
- 1812 PDF objects out of 2073 (max. 8388607)
- 1505 compressed objects within 16 object streams
- 511 named destinations out of 1000 (max. 500000)
- 91696 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1865 PDF objects out of 2073 (max. 8388607)
+ 1551 compressed objects within 16 object streams
+ 535 named destinations out of 1000 (max. 500000)
+ 91701 words of extra memory for PDF output out of 106986 (max. 10000000)
 
