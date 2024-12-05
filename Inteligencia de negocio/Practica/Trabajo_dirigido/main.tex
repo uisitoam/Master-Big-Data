@@ -177,60 +177,108 @@ CSF6 & PI6.3 & Formar al personal en cultura y tradición local & & 100\% del pe
 \end{longtblr}
 
 
-
-\newpage
-
 \section{Diseño lógico}
 
 \subsection{Procesos de negocio}
 
 A continuación, identificamos los principales procesos de negocio de El Guachinche, junto con el hecho que representa cada uno. Nos centraremos en los 3 principales, que son los que más impacto tienen en la compañía (y los que aportan un mayor número de dimensiones). Los principales procesos de negocio identificados son los siguientes:
 
-\subsubsection{Gestión de ventas e inventario (proceso 1)}
 
-BLABLABLA
-\begin{itemize}
-\item \textbf{Granularidad:} Mensual.
-\item \textbf{Tasa de refresco:} Semanal.
-\item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
-\item \textbf{Medidas:} nombre y precio.
-\begin{itemize}
-\item nombre:
-\item precio:
-\end{itemize}
-\end{itemize}
+\subsubsection{Gestión financiera (proceso 1)}
 
-\subsubsection{Gestión financiera (proceso 2)}
-
-BLABLABLA
+Para garantizar la rentabilidad de cada local, es necesario llevar un control de los gastos e ingresos de cada uno de ellos, así como el número de clientes que recibe. Con este proceso nos aseguramos de recopilar la información económica de cada local y concluir el rendimiento de cada uno. Este proceso queda definido por las siguientes características:
 \begin{itemize}
 \item \textbf{Granularidad:} Mensual.
 \item \textbf{Tasa de refresco:} Mensual.
 \item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
 \item \textbf{Medidas:} coste, ingresos, clientes y nuevos clientes.
 \begin{itemize}
-\item coste:
-\item ingresos:
-\item clientes:
-\item nuevos\_clientes:
+\item coste; medida aditiva: recoge los gastos de cada local durante ese mes. Se obtiene como la suma del alquiler, el salario del personal, los suministros y gastos extra, como luz, agua, limpieza, mantenimiento, etc. 
+\item ingresos; medida aditiva: recoge los ingresos de cada local durante ese mes. Se obtiene como la suma de los ingresos por vía presencial y a domicilio.
+\item clientes; medida aditiva: recoge el número total de clientes que han visitado el local durante ese mes. Se obtiene a partir de los datos proporcionados por cada local.
+\item nuevos\_clientes; medida aditiva: recoge el número de clientes nuevos que han visitado el local durante ese mes. Aunque este número está incluido en el total de clientes, se recoge por separado para poder sacar estadísticas de interés en relación al crecimiento de la clientela, entre otras. Se obtiene a partir de los datos proporcionados por cada local.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Gestión de ventas e inventario (proceso 2)}
+
+Estudiada la rentabilidad de cada local, nos gustaría también conocer el desglose de ventas de cada uno de los locales. Esto permite un análisis exhaustivo de la actividad de cada local y ayuda a identificar los productos que deben presentar mayor disponibilidad en el inventario. Este proceso queda definido por las siguientes características (está estrechamente relacionado con la dimensión ``productos'', que contendrá información sobre la oferta de platos y sus precios):
+\begin{itemize}
+\item \textbf{Granularidad:} Mensual.
+\item \textbf{Tasa de refresco:} Semanal.
+\item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
+\item \textbf{Medidas:} número de ventas de cada platos e ingresos de los mismos.
+\begin{itemize}
+\item num\_ventas; medida aditiva: recoge el número de ventas de cada plato durante ese mes. Se obtiene a partir de los datos proporcionados por cada local de forma semanal, y se acumulan los datos de cada mes.
+\item ingresos; medida calculada: recoge los ingresos generados por cada plato durante ese mes. Se obtiene como el producto del número de ventas de un plato por su precio (en la dimensión ``productos'').
 \end{itemize}
 \end{itemize}
 
 \subsubsection{Gestión de clientes (proceso 3)}
 
-BLABLABLA
+Como hemos comentado anteriormente, el cliente es nuestra prioridad. Por ello, necesitamos llevar un control de la satisfacción de los mismos con cada local. Esta satisfacción la desglosamos en 3 aspectos fundamentales: la calidad de la comida, el ambiente del local y la atención del personal. Este proceso queda definido por las siguientes características:
 \begin{itemize}
 \item \textbf{Granularidad:} Mensual.
 \item \textbf{Tasa de refresco:} Diaria.
 \item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
-\item \textbf{Medidas:} valoración del personal, valoración del ambiente y valoración de la comida.
+\item \textbf{Medidas:} valoración del personal, valoración del ambiente y valoración de la comida. Todas estas medidas se obtiene a partir de los datos proporcionados por cada local diariamente, y se acumulan los datos de cada mes
 \begin{itemize}
 \item num\_valoraciones
-\item valoracion\_personal:
-\item valoracion\_ambiente:
-\item valoracion\_comida:
+\item valoracion\_personal: satisfacción (de 0.0 a 5.0) con el servicio prestado por el personal.
+\item valoracion\_ambiente: satisfacción (de 0.0 a 5.0) con el ambiente del local.
+\item valoracion\_comida: satisfacción (de 0.0 a 5.0) con la calidad de la comida.
 \end{itemize}
 \end{itemize}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/3.pdf}
+\caption{Esquema conceptual del almacén de datos.}
+\label{fig:esquema_almacen}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Dimensiones}
 Las principales dimensiones identificadas incluyen:
@@ -380,12 +428,7 @@ Como bien describe el objetivo del negocio, cada región tiene sus platos típic
 
 Para cumplir los objetivos relacionados con la satisfacción y fidelización de clientes, cada local proporciona un segundo archivo, en este caso en formato CSV, con valoraciones de los clientes: en caso de ser clientes presenciales, se valora el ambiente del local, el personal y la calidad de la comida, mientras que los clientes a domicilio simplemente hacen llegar una valoración del servicio general. Así, cada fila del archivo da el identificador del local, la fecha de la valoración, y las votaciones correspondientes (3 en el caso de clientes presenciales, una en el caso de clientes a domicilio). Un ejemplo de este archivo se muestra en la figura \ref{fig:csv_valoraciones}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{fotos/2.png}
-\caption{Ejemplo de archivo CSV con las valoraciones de los clientes de un local.}
-\label{fig:csv_valoraciones}
-\end{figure}
+
 
 Se dará a los datos almacenados de cada uno de los archivos anteriores la máxima granularidad posible, es decir, mensual. Las dimensiones seleccionadas son las siguientes:
 \begin{itemize}
