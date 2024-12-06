@@ -1,0 +1,12 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Contents}{ii}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Máquinas de vectores de soporte}{1}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Clasificador de máximo margen}{1}{section.3}%
+\contentsline {subsection}{\numberline {1.1.1}Hiperplano}{1}{subsection.4}%
+\contentsline {subsection}{\numberline {1.1.2}Clasificación usando un hiperplano separador}{2}{subsection.10}%
+\contentsline {subsection}{\numberline {1.1.3}Clasificador de máximo margen}{3}{subsection.17}%
+\contentsline {subsection}{\numberline {1.1.4}Construcción del clasificador de máximo margen}{5}{subsection.19}%
+\contentsline {subsubsection}{Resolución del problema de optimización}{5}{section*.25}%
+\contentsline {subsection}{\numberline {1.1.5}El caso no separable}{8}{subsection.44}%
+\contentsline {subsection}{\numberline {1.1.6}Clasificador de vectores de soporte}{9}{subsection.46}%
+\contentsline {section}{\numberline {1.2}4/12}{11}{section.64}%

@@ -30,24 +30,71 @@
 
 \subsubsection*{Ejercicio 1}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{fotos/arbol.pdf}
-\end{figure}
+\begin{enumerate}
+\item 
+\begin{equation}
+z^{(2)} =
+\begin{pmatrix}
+-1 \\
+-1 \\
+3
+\end{pmatrix}; \quad 
+a^{(2)} \approx
+\begin{pmatrix}
+0.2689 \\
+0.2689 \\
+0.9526
+\end{pmatrix}; \quad 
+z^{(3)} \approx 2.2973; \quad a^{(3)} = z^{(3)} \approx 2.2973
+\end{equation}
+\item 
+\begin{equation}
+\delta^{(2)} \approx
+\begin{pmatrix}
+0.5101 \\
+0.7652 \\
+0.0586
+\end{pmatrix}; \quad 
+\delta^{(3)} \approx 1.2973
+\end{equation}
+\item 
+\begin{equation}
+W^{(1)} \approx
+\begin{pmatrix}
+-1.2551 & 0.2449 \\
+0.1175 & -0.8826 \\
+1.4707 & -0.5293
+\end{pmatrix}; \quad 
+b^{(1)} \approx 
+\begin{pmatrix}
+-0.2551 \\
+-1.3826 \\
+0.9707 
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+W^{(2)} \approx
+\begin{pmatrix}
+0.8256 & 1.3256 & -0.1179
+\end{pmatrix}; \quad 
+b^{(2)} \approx -0.6487
+\end{equation}
+\end{enumerate}
 
 \subsubsection*{Ejercicio 2}
 
 \begin{itemize}
-    \item \textbf{Menor error de validación cruzada, su desviación estándar y valor del hiperparámetro:} $\Delta = 0.217353$, $\sigma = 0.014349$, $\text{hy} = 110$.
-    \item \textbf{Con regla de una desviación estándar:} $\Delta = 0.229118$, $\sigma = 0.019768$, $\text{hy} = 119$.
-    \begin{figure}[H]
+    \item \textbf{Menor error de validación cruzada, su desviación estándar y valor del hiperparámetro:} $\Delta = 0.193992$, $\sigma = 0.023362$, $\text{hidden\_layer\_size} = 13$, $\text{param\_alpha} = 0.5$.
+    \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{fotos/ej2_1.pdf}
+    \includegraphics[width=\textwidth]{fotos/ej2_1.pdf}
+    \caption{Ejercicio 2: error de validación cruzada en datos de validación.}
     \end{figure}
-    \item \textbf{Error de test para el hiperparámetro de validación cruzada:} $\Delta = 0.253333$, $\text{hy} = 110$.
-    \begin{figure}[H]
+    \item \textbf{Error de test para el hiperparámetro de validación cruzada:} $\Delta = 0.206667$, \\ $\text{hidden\_layer\_size} = 13$, $\text{param\_alpha} = 0.5$.
+    \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{fotos/ej2_2.pdf}
+    \caption{Ejercicio 2: error de validación cruzada en datos de validación frente al mismo error en datos de test.}
     \end{figure}
 \end{itemize}
 
@@ -56,16 +103,17 @@
 
 \begin{itemize}
     \item \textbf{Menor error de validación cruzada, su desviación estándar y valor del hiperparámetro:} $\text{MSE} = 3.400035$, $\sigma = 0.68836$, $\text{hy} = 15$.
-    \item \textbf{Con regla de una desviación estándar:} $\text{MSE} = 4.024361$, $\sigma = 0.449845$, $\text{hy} = 35$.
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{fotos/ej3_1.pdf}
-    \end{figure}
+    %\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\textwidth]{fotos/ej3_1.pdf}
+    %\caption{Ejercicio 3: error de validación cruzada en datos de validación.}
+    %\end{figure}
     \item \textbf{Error de test para el hiperparámetro de validación cruzada:} $\text{MSE} = 4.87007$, $\text{hy} = 15$.
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{fotos/ej3_2.pdf}
-    \end{figure}
+    %\begin{figure}[h]
+    %\centering
+    %\includegraphics[width=0.75\textwidth]{fotos/ej3_2.pdf}
+    %\caption{Ejercicio 3: error de validación cruzada en datos de validación frente al mismo error en datos de test.}
+    %\end{figure}
 \end{itemize}
 
 

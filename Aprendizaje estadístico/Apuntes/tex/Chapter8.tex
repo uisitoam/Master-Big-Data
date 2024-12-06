@@ -146,7 +146,7 @@ G(x) = \text{sign}(f(x)) = \text{sign}(x^T \beta + \beta_0)
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{fotos/56.png}
-\caption{Clasificadores de vectores de soporte. El panel izquierdo muestra el caso separable. El límite de decisión es la línea sólida, mientras que las líneas discontinuas delimitan el margen máximo sombreado de ancho $2M = 2/\|\beta\|$. El panel derecho muestra el caso no separable (superposición). Los puntos etiquetados como $\xi^*_j$ están en el lado incorrecto de su margen por una cantidad $\xi^*_j = M \xi_j$; los puntos en el lado correcto tienen $\xi^*_j = 0$, las observaciones que están en el lado incorrecto del margen tienen $\xi_j^* > 0$ y si $\xi_j^* > 1$, la observación están mal clasificada (en el lado incorrecto del hiperplano). El margen se maximiza sujeto a un presupuesto total $\sum \xi_i \leq \text{constante}$. Por lo tanto, $\sum \xi^*_j$ es la distancia total de los puntos en el lado incorrecto de su margen.}
+\caption{Clasificadores de vectores de soporte. El panel izquierdo muestra el caso separable. El límite de decisión es la línea sólida, mientras que las líneas discontinuas delimitan el margen máximo sombreado de ancho $2M = 2/\|\beta\|$. El panel derecho muestra el caso no separable (superposición). Los puntos etiquetados como $\xi^*_j$ están en el lado incorrecto de su margen por una cantidad $\xi^*_j = M \xi_j$; los puntos en el lado correcto tienen $\xi^*_j = 0$, las observaciones que están en el lado incorrecto del margen tienen $\xi_j^* > 0$ y, si $\xi_j^* > 1$, la observación están mal clasificada (en el lado incorrecto del hiperplano). El margen se maximiza sujeto a un presupuesto total $\sum \xi_i \leq \text{constante}$. Por lo tanto, $\sum \xi^*_j$ es la distancia total de los puntos en el lado incorrecto de su margen.}
 \label{fig:12.1}
 \end{figure}
 
@@ -168,10 +168,6 @@ y_i (x_i^T \beta + \beta_0) \geq M \|\beta\|.
 Dado que para cualquier $\beta$ y $\beta_0$ que satisfagan estas desigualdades, cualquier múltiplo escalado positivamente también las satisface, podemos establecer arbitrariamente $\|\beta\| = \frac{1}{M}$. Así, el problema de optimización puede reformularse de manera más conveniente como
 \begin{align}
 \min_{\beta, \beta_0} & \frac{1}{2} \|\beta\|^2 \\
-\text{sujeto a} \quad & y_i (x_i^T \beta + \beta_0) \geq 1, \quad i = 1, \ldots, N
-\end{align}
-\begin{align}
-\min_{\beta, \beta_0} & \|\beta\| \\
 \text{sujeto a} \quad & y_i (x_i^T \beta + \beta_0) \geq 1, \quad i = 1, \ldots, N
 \end{align}
 
@@ -227,16 +223,16 @@ Si eliminamos la restricción de la norma en $\beta$, definir $M = 1/\|\beta\|$,
 y_i (x_i^T \beta + \beta_0) \geq 1 - \xi_i \quad \forall i, \\
 \xi_i \geq 0, \sum \xi_i \leq \text{constante}.
 \end{cases}
-\label{eq:12.7}
+\label{eq:12.77}
 \end{equation}
 
 Si la constante es 0 tenemos sobreaprendizaje, mientras que si es muy grande, estamos subaprendidos. Esta es la forma usual en que se define el clasificador de vectores de soporte para el caso no separable. El panel derecho de la figura \ref{fig:12.1} ilustra este caso de superposición. \\
 
-Por la naturaleza del criterio (\ref{eq:12.7}), vemos que los puntos bien dentro de su límite de clase no juegan un papel importante en la formación del límite. Esto parece una propiedad atractiva, y una que lo diferencia del análisis discriminante lineal. En LDA, el límite de decisión está determinado por la covarianza de las distribuciones de clase y las posiciones de los centroides de clase. La regresión logística resulta más similar al clasificador de vectores de soporte en este aspecto.
+Por la naturaleza del criterio (\ref{eq:12.77}), vemos que los puntos bien dentro de su límite de clase no juegan un papel importante en la formación del límite. Esto parece una propiedad atractiva, y una que lo diferencia del análisis discriminante lineal. En LDA, el límite de decisión está determinado por la covarianza de las distribuciones de clase y las posiciones de los centroides de clase. La regresión logística resulta más similar al clasificador de vectores de soporte en este aspecto.
 
 \subsection{El caso no separable}
 
-El clasificador de máximo margen es una forma muy natural de realizar la clasificación si existe un hiperplano separador. Sin embargo, en muchos casos este hiperplano no existe, y por lo tanto no hay un clasificador de máximo margen. En este caso, el problema de optimización anterior no tiene solución con $M > 0$. Un ejemplo se muestra en la figura \ref{fig:9.4}. En este caso, no podemos separar exactamente las dos clases. Sin embargo, podemos extender el concepto de un hiperplano separador para desarrollar un hiperplano que casi separa las clases, utilizando un llamado margen suave. La generalización del clasificador de margen máximo al caso no separable se conoce como el clasificador de vectores de soporte.
+El clasificador de máximo margen es una forma muy natural de realizar la clasificación si existe un hiperplano separador. Sin embargo, es un modelo sobreaprendido, al ser extremadamente sensible a una observación concreta (o varias, pero muy pocas respecto al total de muestras). Además, en muchos casos este hiperplano no existe, y por lo tanto no hay un clasificador de máximo margen. En este caso, el problema de optimización anterior no tiene solución con $M > 0$. Un ejemplo se muestra en la figura \ref{fig:9.4}. En este caso, no podemos separar exactamente las dos clases. Sin embargo, podemos extender el concepto de un hiperplano separador para desarrollar un hiperplano que casi separa las clases, utilizando un llamado margen suave; un clasificador que no separe perfectamente las dos clases sería más robusto ante cambios de observaciones puntuales y clasificará mejor la gran mayoría de muestras de entrenamiento. La generalización del clasificador de margen máximo al caso no separable se conoce como el clasificador de vectores de soporte.
 
 \begin{figure}[h]
 \centering
@@ -246,32 +242,89 @@ El clasificador de máximo margen es una forma muy natural de realizar la clasif
 \end{figure}
 
 
+\subsection{Clasificador de vectores de soporte}
+
+El problema de optimización que hay que resolver es cuadrático con restricciones de desigualdad lineales, y por lo tanto es un problema de optimización convexo. Recordemos que este problema era 
+\begin{align}
+\underset{\beta_0, \beta_1, \dots, \beta_p, \xi_1, \dots, \xi_n}{\text{minimize }} & M \\
+\text{sujeto a } \quad & \sum_{j = 1}^p \beta_j^2 = 1 \\
+&y_i (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip}) \geq M(1 - \xi_i) \\
+&\xi_i \geq 0, \quad \sum_{i = 1}^n \xi_i \leq \text{constante}
+\end{align}
+
+\noindent y lo reformulamos como 
+\begin{equation}
+\min \|\beta\| \quad \text{sujeto a}
+\begin{cases}
+y_i (x_i^T \beta + \beta_0) \geq 1 - \xi_i \quad \forall i, \\
+\xi_i \geq 0, \sum \xi_i \leq \text{constante}.
+\end{cases}
+\label{eq:12.7}
+\end{equation}
+
+\noindent No obstante, es computacionamente conveniente reescribirlo como 
+\begin{align}
+\underset{\beta, \beta_0}{\text{minimize }} & \frac{1}{2} ||\beta||^2 + C\sum_{i = 1}^N \xi_i \notag \\
+\text{sujeto a } \quad & \xi_i \geq 0, \quad y_i(x_i^T \beta + \beta_0) \geq 1 - \xi_i \; \forall i \label{eq:12.8} \\
+\end{align}
+
+donde el parámetro de ``costo'' $C$ reemplaza la constante en (\ref{eq:12.7}); el caso separable corresponde a $C \to \infty$ (es decir, actúa como el inverso de los parámetros de regularización que hemos visto hasta ahora). La función de Lagrange (primal) es
+\begin{equation}
+L_P = \frac{1}{2} \|\beta\|^2 + C \sum_{i=1}^N \xi_i - \sum_{i=1}^N \alpha_i [y_i (x_i^T \beta + \beta_0) - (1 - \xi_i)] - \sum_{i=1}^N \mu_i \xi_i
+\label{eq:12.9}
+\end{equation}
+
+que minimizamos con respecto a $\beta$, $\beta_0$ y $\xi_i$. Al igualar las respectivas derivadas a cero, obtenemos
+\begin{align}
+\beta &= \sum_{i=1}^N \alpha_i y_i x_i \label{eq:12.10} \\
+0 &= \sum_{i=1}^N \alpha_i y_i \label{eq:12.11} \\
+\alpha_i &= C - \mu_i, \quad \forall i \label{eq:12.12}
+\end{align}
+
+así como las restricciones de positividad $\alpha_i, \mu_i, \xi_i \geq 0 \quad \forall i$. Al sustituir (\ref{eq:12.10})–(\ref{eq:12.12}) en (\ref{eq:12.9}), obtenemos la función objetivo dual de Lagrange (Wolfe)
+\begin{equation}
+L_D = \sum_{i=1}^N \alpha_i - \frac{1}{2} \sum_{i=1}^N \sum_{i'}^N \alpha_i \alpha_{i'} y_i y_{i'} x_i^T x_{i'},
+\label{eq:12.13}
+\end{equation}
+
+que da un límite inferior a la función objetivo (\ref{eq:12.8}) para cualquier punto factible. Maximizamos $L_D$ sujeto a $0 \leq \alpha_i \leq C$ y $\sum_{i=1}^N \alpha_i y_i = 0$. Además de (\ref{eq:12.10})–(\ref{eq:12.12}), las condiciones de Karush-Kuhn-Tucker incluyen las restricciones
+\begin{align}
+\alpha_i [y_i (x_i^T \beta + \beta_0) - (1 - \xi_i)] &= 0, \label{eq:12.14}\\
+\mu_i \xi_i &= 0, \label{eq:12.15} \\
+y_i (x_i^T \beta + \beta_0) - (1 - \xi_i) &\geq 0, \label{eq:12.16}
+\end{align}
+
+para $i = 1, \ldots, N$. Juntas, las ecuaciones (\ref{eq:12.10})–(\ref{eq:12.16}) caracterizan de manera única la solución al problema primal y dual. De (\ref{eq:12.10}) vemos que la solución de $\beta$ tiene la forma 
+\begin{equation}
+\hat{\beta} = \sum_{i=1}^N \hat{\alpha}_i y_i x_i
+\label{eq:12.17}    
+\end{equation}
+
+con coeficientes $\hat{\alpha}_i > 0$ solo para aquellas observaciones $i$ para las cuales las restricciones en (\ref{eq:12.16}) se cumplen exactamente (debido a (\ref{eq:12.14})). Estas observaciones se llaman vectores de soporte, ya que $\hat{\beta}$ se representa solo en términos de ellas. Entre estos puntos de soporte, algunos se encontrarán en el borde del margen ($\hat{\xi}_i = 0$), y por lo tanto, de (\ref{eq:12.15}) y (\ref{eq:12.12}) se caracterizarán por $0 < \hat{\alpha}_i < C$; el resto ($\hat{\xi}_i > 0$) tienen $\hat{\alpha}_i = C$. De (\ref{eq:12.14}) podemos ver que cualquiera de estos puntos del margen ($0 < \hat{\alpha}_i, \hat{\xi}_i = 0$) puede usarse para resolver $\beta_0$, y típicamente usamos un promedio de todas las soluciones para la estabilidad numérica. Para calcular los $\xi$ de puntos que no están sobre el margne, se necesita conocer $\beta$ y $\beta_0$. Es necesario saber obtener los vectores de soporte a partir de $alpha_i$ y $C$. \\
+
+Maximizar el dual (\ref{eq:12.13}) es un problema de programación cuadrática convexa más simple que el primal (\ref{eq:12.9}), y puede resolverse con técnicas estándar. Dadas las soluciones $\hat{\beta}_0$ y $\hat{\beta}$, la función de decisión puede escribirse como
+\begin{equation}
+    \hat{G}(x) = \text{sign}[\hat{f}(x)] = \text{sign}[x^T\hat{\beta} + \hat{\beta}_0].
+\end{equation}
+
+donde el signo dice la clase (positivo corresponde a +1 y negativo a -1) y la magnitud da la distancia al hiperplano. \\
+
+\noindent El hiperparámetro de este proceso es $C$. En regresión Ridge, por ejemplo, con $\lambda = 0$ teníamos un modelos sobreaprendido (mínimos cuadrados), y con $\lambda$ muy grande teníamos un modelo subaprendido. En el caso de los clasificadores de vectores de soporte, un $C$ muy grande da un modelo sobreaprendido (que no permite $\xi$ con valores muy altos), por lo que habrá pocos vectores de soporte. Sin embargo, un $C$ muy pequeño nos da un modelo subaprendido, permite muchos $\xi$ con valores altos y, por tanto, habrá muchos vectores de soporte; esto es similar a lo que veíamos para KNN. Por tanto, $C$ actúa como el inverso de una constante de regularización. \\
 
 
 
 
 
 
-\section{Nuevo}
 
 
-En ridge, con lambda 0 teniamos un metodo sobreaprendido, y en el caso de la constante muy grande era subaprendido. Para las de vectores de soporte, un C muy grande es sobreaprendido (compensa los xi yendo a 0), y un C muy pequeño es subaprendido. El papel de C es del inverso de una constante de regularización. \\
+
+
+
+
+\section{4/12}
+
 
 
 A partir de los valores de los vectores epsilon, alpha y las ec 12.10-12.16 se puede reoslver el problema que sea con los vectores de soporte. Para un vectpr sobre el margen conocemos el valor de epsilon (0). Con los vectores de soporte calculamos beta, luego para clacular beta0 tenemos algunos epsilon desconocidos (vec soporte que no estan en el margen) en este caso calculamos los beta 0 solo para los vectores que estan sobre el margen (los unicos que tenemos e un calsificador de maiximo margen) u luego hacemos la media (como antes basicamente.)
 
-Sobre el margen: alpha mayor que 0 y menor que C, epsilon 0 y mu es mayor que 0, por lo que alpha estara entre 0 y C. Los que no estan en el margen tienen alpha igual a C porque como epsilon es distinto de 0 mu tiene que ser 0. Dentro del margen es alpha igual a C, es . El margen es la inversa del modulo de beta (no considera a beta0). SIEMPRE NOS DA LOS ALPHA Y LA C.
-
-Para calcular las epislon de los vectores de soporte (clasificadores) hay que hacerlo conociendo beta 0 y beta. Esto da la distancia en unidades del margen 
-
-
-El signo dice la clase (+ a +1 y - a -1) y la magnitud la distancia al hiperplano
-
-
-
-C COMO PARAMETRO
-C muy pequeño, permitimos mucho epsilon alto y por tant oestamos en subaprendizaje y habra muchos vectores de soporte. Si C es muy grande, estamos en sobreaprendizaje y habra muy pocos vectores de soporte. Similar a KNN. \\
-
-
-
-hasta ahora al hablar de vectores de soporte hablamos de CALSIFICADORES, NO MAQUINA
