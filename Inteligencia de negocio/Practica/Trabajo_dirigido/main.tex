@@ -200,6 +200,13 @@ Para garantizar la rentabilidad de cada local, es necesario llevar un control de
 \end{itemize}
 \end{itemize}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/fin.pdf}
+\caption{Esquema conceptual del proceso 1.}
+\label{fig:esquema_proceso1}
+\end{figure}
+
 \subsubsection{Gestión de ventas e inventario (proceso 2)}
 
 Estudiada la rentabilidad de cada local, nos gustaría también conocer el desglose de ventas de cada uno de los locales. Esto permite un análisis exhaustivo de la actividad de cada local y ayuda a identificar los productos que deben presentar mayor disponibilidad en el inventario. Este proceso queda definido por las siguientes características (está estrechamente relacionado con la dimensión ``productos'', que contendrá información sobre la oferta de platos y sus precios):
@@ -213,6 +220,13 @@ Estudiada la rentabilidad de cada local, nos gustaría también conocer el desgl
 \item ingresos; medida calculada: recoge los ingresos generados por cada plato durante ese mes. Se obtiene como el producto del número de ventas de un plato por su precio (en la dimensión ``productos'').
 \end{itemize}
 \end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/prods.pdf}
+\caption{Esquema conceptual del proceso 2.}
+\label{fig:esquema_proceso2}
+\end{figure}
 
 \subsubsection{Gestión de clientes (proceso 3)}
 
@@ -230,8 +244,16 @@ Como hemos comentado anteriormente, el cliente es nuestra prioridad. Por ello, n
 \end{itemize}
 \end{itemize}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{fotos/feed.pdf}
+\caption{Esquema conceptual del proceso 3.}
+\label{fig:esquema_proceso3}
+\end{figure}
 
-\begin{figure}[h]
+Para finalizar, mostramos un esquema reducido general de los tres procesos a implementar en la figura \ref{fig:esquema_almacen}
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{fotos/3.pdf}
 \caption{Esquema conceptual del almacén de datos.}
@@ -239,6 +261,31 @@ Como hemos comentado anteriormente, el cliente es nuestra prioridad. Por ello, n
 \end{figure}
 
 
+\subsection{Dimensiones}
+
+Las dimensiones seleccionadas para representar correctamente los procesos anteriores son las siguientes (mostradas de forma adelantada en la figura \ref{fig:esquema_almacen}, así como en las figuras \ref{fig:esquema_proceso1}, \ref{fig:esquema_proceso2} y \ref{fig:esquema_proceso3}):
+\begin{itemize}
+\item \textbf{Tiempo}: esta dimensión almacena la fecha de los datos que son agregados a las tablas de hechos, en formato YYYY-MM. La dimensión temporal de los datos se representa mediante una jerarquía de dos niveles: año y mes. Esta es un dimensión compartida entre los tres hechos antes mencionados y tiene los siguientes atributos:
+\begin{itemize}
+\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo mes.
+\item ano. Este atributo es de tipo \texttt{Integer} y representa el año.
+\item mes. Este atributo es de tipo \texttt{Integer} y representa el mes dentro del año.
+\item mes\_texto. Este atributo es de tipo \texttt{String} y representa el nombre del mes correspondiente.
+\end{itemize}
+\item \textbf{Restaurante}: la dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y se mostrarán dos niveles, uno para el país y otro para la ciudad. Esta dimensión, de nuevo, es compartida por los tres hechos ya mencionados, y tiene los siguientes atributos:
+\begin{itemize}
+\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo local.
+\item pais. Este atributo es de tipo \texttt{String} y representa el país en el que se encuentra el local.
+\item ciudad. Este atributo es de tipo \texttt{String} y representa la ciudad en la que se encuentra el local.
+\end{itemize}
+\item \textbf{Producto}: la dimensión producto recoge todos los platos ofertados en los locales de la cadena. Esta es una dimensión plana que muestra los productos y el precio asociado a cada uno de ellos. Esta dimensión es exclusiva del proceso 2, y tiene los siguientes atributos:
+\begin{itemize}
+\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo producto (plato, bebida, etc).
+\item nombre. Este atributo es de tipo \texttt{String} y representa el nombre del producto.
+\item precio. Este atributo es de tipo \texttt{Numeric} y representa el precio del producto.
+\end{itemize}
+Los precios de los platos en cada local son relativamente estáticos, pero como cualquier otro producto, pueden cambiar con el tiempo. Por ello, esto es una dimensión lentamente cambiante, donde el precio es susceptible a cambio. La solución propuesta para manejar esto es crear un nuevo registro en la dimensión
+\end{itemize}
 
 
 
@@ -323,134 +370,8 @@ PI9                          & Tasa de retención  & Gestión de clientes       
 %%%%%%%%%%%%%
 
 
-\section{Diseño y construcción del almacén de datos}
-
-\subsection{Procesos de negocio}
 
 
-
-
-\section{Diseño y construcción del almacén de datos}
-
-Nuestros locales llevan un registro cuidadoso de los aspectos más importantes de la actividad diaria, como son las ventas, los gastos o la opinion de los clientes. Cada local genera reportes mensuales que recogen estos datos y son enviados a la central para su análisis. Estos reportes son los que nos permitirán obtener la información necesaria para la toma de decisiones. 
-
-\subsection{Diseño del almacén de datos}
-
-Para realizar el diseño del almacén de datos, es necesario conocer primero la estructura de los datos recogidos en los reportes de cada local. Concretamente, cada mes se reciben dos archivos de datos por cada local de nuestra cadena. El primero de ellos contiene toda la información relacionada con la economía del restaurante: desglose de gastos en cuatro categorías (personal, suministros, alquiler y otros), ingresos por ventas (diferenciando entre los servicios presencial y domicilio) y clientela. Esto será beneficio para varios de los objetivos de la cadena. Siendo un poco más específicos, se proporcionan los siguientes datos:
-\begin{itemize}
-\item Un identificador entero para cada local, generado por la central en orden de apertura.
-\item La fecha de envío del reporte (establecida para el primer día del mes). 
-\item Los gastos en alquiler, personal, suministros (proveedores), y extras (limpieza, mantenimiento, etc.), todo en euros.
-\item Los ingresos, tanto por vía presencial como a domicilio, en euros. Como ya se ha mencionado, estos ingresos ya tienen descontada la comisión de Uber Eats o Glovo.
-\item Los clientes totales por ambos canales, así como el número de clientes nuevos.
-\item Los platos ofertados en el local, cada uno con los siguientes datos:
-\begin{itemize}
-\item Un identificador entero para cada plato, generado por la central.
-\item El nombre, precio y número de ventas del plato. 
-\end{itemize}
-\end{itemize}
-
-Estos datos se recogen en un archivo XML como el que se muestra en la figura \ref{fig:xml_economico}.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{fotos/1.png}
-\caption{Ejemplo de archivo XML con los datos económicos mensuales de un local.}
-\label{fig:xml_economico}
-\end{figure}
-
-\noindent Los identificadores de los locales son los siguientes:
-\begin{multicols}{2}
-\begin{itemize}
-\item 1: La Laguna, Tenerife.
-\item 2: Hermigua, La Gomera.
-\item 3: Cotillo, Fuerteventura.
-\item 4: Las Palmas de Gran Canaria, Gran Canaria.
-\item 5: Tazacorte, La Palma.
-\item 6: Valverde, El Hierro.
-\item 7: Arrecife, Lanzarote.
-\item 8: Granada, Granada.
-\item 9: Sevilla, Sevilla.
-\item 10: Santiago de Compostela, A Coruña.
-\item 11: Vigo, Pontevedra.
-\item 12: Alicante, Comunidad Valenciana.
-\item 13: Valencia, Comunidad Valenciana. 
-\end{itemize}
-\end{multicols}
-
-\noindent Los identificadores de los productos son los siguientes:
-\begin{multicols}{3}
-\begin{itemize}
-\item 1: Almogrote Gomero.
-\item 2: Papas arrugadas con mojo.
-\item 3: Queso asado con mojo.
-\item 4: Escaldón.
-\item 5: Ropa vieja.
-\item 6: Costilla con papas y piña.
-\item 7: Carne fiesta.
-\item 8: Quesillo.
-\item 9: Bienmesabe.
-\item 10: Arepa reina pepiada.
-\item 11: Arepa pabellón.
-\item 12: Arepa full equipo.
-\item 13: Arepa vegana.
-\item 14: Arepa blanca.
-\item 15: Vino tinto canario.
-\item 16: Vino blanco canario.
-\item 17: Agua.
-\item 18: Refresco de cola.
-\item 19: Refresco de limón.
-\item 20: Refresco de naranja.
-\item 21: Aquarius.
-\item 22: Nestea mango-piña.
-\item 23: Salmorejo.
-\item 24: Pescaito frito.
-\item 25: Gambitas de Huelva.
-\item 26: Pestiños.
-\item 27: Vino tinto andaluz.
-\item 28: Vino blanco andaluz.
-\item 29: Pulpo a feira.
-\item 30: Empanada (porción).
-\item 31: Lacon con grelos.
-\item 32: Tarta de Santiago.
-\item 33: Vino tinto gallego.
-\item 34: Vino blanco gallego.
-\item 35: Paella.
-\item 36: Arroz negro.
-\item 37: Esgarraet. 
-\item 38: Fartons. 
-\item 39: Vino tinto valenciano.
-\item 40: Vino blanco valenciano.
-\end{itemize}
-\end{multicols}
-
-Como bien describe el objetivo del negocio, cada región tiene sus platos típicos. Los 22 primeros productos son comunes a todos los locales de la cadena, mientras que a partir de ahí, cada región incorpora distintos productos, como es el caso del \textit{salmorejo} en Andalucía, el \textit{lacçon con grelos} en Galicia o el \textit{esgarraet} en la Comunidad Valenciana. Así mismo, cada local ofrece vinos de proximidad. \\
-
-Para cumplir los objetivos relacionados con la satisfacción y fidelización de clientes, cada local proporciona un segundo archivo, en este caso en formato CSV, con valoraciones de los clientes: en caso de ser clientes presenciales, se valora el ambiente del local, el personal y la calidad de la comida, mientras que los clientes a domicilio simplemente hacen llegar una valoración del servicio general. Así, cada fila del archivo da el identificador del local, la fecha de la valoración, y las votaciones correspondientes (3 en el caso de clientes presenciales, una en el caso de clientes a domicilio). Un ejemplo de este archivo se muestra en la figura \ref{fig:csv_valoraciones}.
-
-
-
-Se dará a los datos almacenados de cada uno de los archivos anteriores la máxima granularidad posible, es decir, mensual. Las dimensiones seleccionadas son las siguientes:
-\begin{itemize}
-\item \textbf{Tiempo}: la dimensión temporal de los datos se representa mediante dos niveles: año y mes.
-\item \textbf{Restaurante}: la dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y se mostrarán dos niveles, uno para el país y otro para la ciudad.
-\item \textbf{Producto}: la dimensión producto recoge todos los platos ofertados en los locales de la cadena. Esta es una dimensión plana que muestra los productos y el precio asociado a cada uno de ellos.
-\end{itemize}
-\noindent Los hechos seleccionados para el almacén de datos son los siguientes:
-\begin{itemize}
-\item \textbf{Finanzas}: se almacenan los costes e ingresos de los locales, junto con los datos de los clientes para cada combinación de las siguientes dimensiones: tiempo (mes de envío de los reportes) y restaurante (mediante el identificador de cada local).
-\item \textbf{Producto}: se almacenan los hechos relacionados con las ventas de los productos ofertados en los locales, para cada combinación de las siguientes dimensiones: tiempo (mes de envío de los reportes), restaurante (mediante el identificador de cada local) y producto (mediante el identificador de cada plato). Se tiene el númer ototal de ventas mensuales de un producto, así como un cálculo de los ingresos generados por ese producto, a partir de sus ventas y su precio.
-\item \textbf{Feedback}: se almacenan las valoraciones de los clientes para cada combinación de las siguientes dimensiones: tiempo (mes de envío de los reportes) y restaurante (mediante el identificador de cada local). Se almacena la media de las valoraciones de los clientes para cada uno de los aspectos recogidos en los reportes.
-\end{itemize}
-
-Por tanto, el modelo conceptual del almacén de datos se muestra en la figura \ref{fig:esquema_almacen}, siendo un esquema con tres estrellas y tres dimensiones.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{fotos/3.pdf}
-\caption{Esquema conceptual del almacén de datos.}
-\label{fig:esquema_almacen}
-\end{figure}
 
 Los detalles de la implementación del almacén de datos se describen en la siguiente tabla: 
 
