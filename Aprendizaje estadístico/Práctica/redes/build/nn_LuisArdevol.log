@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  6 DEC 2024 09:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  6 DEC 2024 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -651,38 +651,62 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 35.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<fotos/ej2_1.pdf, id=7, 1011.78pt x 1300.86pt>
+<fotos/ej2_1.pdf, id=7, 402.88217pt x 356.89757pt>
 File: fotos/ej2_1.pdf Graphic file (type pdf)
 <use fotos/ej2_1.pdf>
 Package pdftex.def Info: fotos/ej2_1.pdf  used on input line 90.
-(pdftex.def)             Requested size: 486.25761pt x 625.19969pt.
+(pdftex.def)             Requested size: 389.00757pt x 344.61095pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fotos/ej2_2.pdf, id=8, 1011.78pt x 1300.86pt>
+<fotos/ej2_2.pdf, id=8, 722.7pt x 578.16pt>
 File: fotos/ej2_2.pdf Graphic file (type pdf)
 <use fotos/ej2_2.pdf>
 Package pdftex.def Info: fotos/ej2_2.pdf  used on input line 96.
-(pdftex.def)             Requested size: 437.62888pt x 562.67377pt.
+(pdftex.def)             Requested size: 389.00757pt x 311.20486pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fotos/ej3_1.pdf, id=9, 681.64856pt x 393.39333pt>
+File: fotos/ej3_1.pdf Graphic file (type pdf)
+<use fotos/ej3_1.pdf>
+Package pdftex.def Info: fotos/ej3_1.pdf  used on input line 108.
+(pdftex.def)             Requested size: 389.00757pt x 224.50664pt.
+
+Overfull \hbox (0.21552pt too wide) in paragraph at lines 105--111
+\T1/cmr/bx/n/10.95 tros: $[] \OT1/cmr/m/n/10.95 = 0[]487564$\T1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 ^^[ \OT1/cmr/m/n/10.95 = 0[]040508$\T1/cmr/m/n/10.95 , $[] \OT1/cmr/m/n/10.95 = (19\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 19\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 19)$\T1/cmr/m/n/10.95 , $[] \OT1/cmr/m/n/10.95 =
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fotos/ej3_2.pdf, id=10, 677.90668pt x 387.04288pt>
+File: fotos/ej3_2.pdf Graphic file (type pdf)
+<use fotos/ej3_2.pdf>
+Package pdftex.def Info: fotos/ej3_2.pdf  used on input line 114.
+(pdftex.def)             Requested size: 389.00757pt x 222.10498pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2 <./fotos/ej2_1.pdf>] [3 <./fotos/ej2_2.pdf>] (build/nn_LuisArdevol.aux
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2 <./fotos/ej2_1.pdf>] [3 <./fotos/ej2_2.pdf> <./fotos/ej3_1.pdf
+
+pdfTeX warning: pdflatex (file ./fotos/ej3_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [4 <./fotos/ej3_2.pdf>] (build/nn_LuisArdevol.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 LaTeX Info: Redefining \. on input line 12.
@@ -696,18 +720,18 @@ Package rerunfilecheck Info: File `nn_LuisArdevol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24716 strings out of 474116
- 451305 string characters out of 5743682
- 1944187 words of memory out of 5000000
- 46680 multiletter control sequences out of 15000+600000
+ 24733 strings out of 474116
+ 451697 string characters out of 5743682
+ 1948187 words of memory out of 5000000
+ 46694 multiletter control sequences out of 15000+600000
  566969 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,8n,107p,509b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on build/nn_LuisArdevol.pdf (3 pages, 149685 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on build/nn_LuisArdevol.pdf (4 pages, 174347 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -298,6 +298,16 @@ INPUT ./fotos/ej2_2.pdf
 INPUT ./fotos/ej2_2.pdf
 INPUT ./fotos/ej2_2.pdf
 INPUT ./fotos/ej2_2.pdf
+INPUT ./fotos/ej3_1.pdf
+INPUT ./fotos/ej3_1.pdf
+INPUT ./fotos/ej3_1.pdf
+INPUT ./fotos/ej3_1.pdf
+INPUT ./fotos/ej3_1.pdf
+INPUT ./fotos/ej3_2.pdf
+INPUT ./fotos/ej3_2.pdf
+INPUT ./fotos/ej3_2.pdf
+INPUT ./fotos/ej3_2.pdf
+INPUT ./fotos/ej3_2.pdf
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT build/nn_LuisArdevol.aux
@@ -305,6 +315,7 @@ INPUT build/nn_LuisArdevol.out
 INPUT build/nn_LuisArdevol.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
