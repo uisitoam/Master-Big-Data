@@ -58,17 +58,17 @@ create type jugador_info as (
 
 -- creacion de tabla
 create table partidos (
-  torneo edicion_torneo_info,
-  fecha date,
-  num_partido integer,
-  num_sets integer,
-  info_sets set_info array, -- array de elementos de tipo set_info
-  ronda varchar(5), 
-	desenlace char(1), 
-	ganador jugador_info,
-	perdedor jugador_info,
-	ganador_stats jugador_stats,
-	perdedor_stats jugador_stats
+    torneo edicion_torneo_info,
+    fecha date,
+    num_partido integer,
+    num_sets integer,
+    info_sets set_info array, -- array de elementos de tipo set_info
+    ronda varchar(5), 
+    desenlace char(1), 
+    ganador jugador_info,
+    perdedor jugador_info,
+    ganador_stats jugador_stats,
+    perdedor_stats jugador_stats
 )
 
 
