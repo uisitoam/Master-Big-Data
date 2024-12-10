@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  28 NOV 2024 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  10 DEC 2024 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex"
-(/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/arboles/cart_LuisArdevol.tex
+**"/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/redes/nn_LuisArdevol.tex"
+(/Users/luisi/Documents/Master-Big-Data/Aprendizaje estadístico/Práctica/redes/nn_LuisArdevol.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -562,13 +562,13 @@ Package caption Info: New subtype `subtable' on input line 238.
 )
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
- (build/cart_LuisArdevol.aux
+ (build/nn_LuisArdevol.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
-\openout1 = `cart_LuisArdevol.aux'.
+\openout1 = `nn_LuisArdevol.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -626,9 +626,9 @@ LaTeX Info: Redefining \% on input line 29.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 29.
-(build/cart_LuisArdevol.out) (build/cart_LuisArdevol.out)
+(build/nn_LuisArdevol.out) (build/nn_LuisArdevol.out)
 \@outlinefile=\write4
-\openout4 = `cart_LuisArdevol.out'.
+\openout4 = `nn_LuisArdevol.out'.
 
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -651,50 +651,62 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<fotos/arbol.pdf, id=7, 1189.44376pt x 1090.0725pt>
-File: fotos/arbol.pdf Graphic file (type pdf)
-<use fotos/arbol.pdf>
-Package pdftex.def Info: fotos/arbol.pdf  used on input line 35.
-(pdftex.def)             Requested size: 243.1288pt x 222.80098pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 41.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<fotos/ej2_1.pdf, id=8, 2168.1pt x 1445.4pt>
+<fotos/ej2_1.pdf, id=7, 402.88217pt x 356.89757pt>
 File: fotos/ej2_1.pdf Graphic file (type pdf)
 <use fotos/ej2_1.pdf>
-Package pdftex.def Info: fotos/ej2_1.pdf  used on input line 45.
-(pdftex.def)             Requested size: 437.62888pt x 291.74353pt.
-<fotos/ej2_2.pdf, id=9, 2168.1pt x 1445.4pt>
+Package pdftex.def Info: fotos/ej2_1.pdf  used on input line 90.
+(pdftex.def)             Requested size: 389.00757pt x 344.61095pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fotos/ej2_2.pdf, id=8, 722.7pt x 578.16pt>
 File: fotos/ej2_2.pdf Graphic file (type pdf)
 <use fotos/ej2_2.pdf>
-Package pdftex.def Info: fotos/ej2_2.pdf  used on input line 50.
-(pdftex.def)             Requested size: 437.62888pt x 291.74353pt.
- [1
+Package pdftex.def Info: fotos/ej2_2.pdf  used on input line 96.
+(pdftex.def)             Requested size: 389.00757pt x 311.20486pt.
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/arbol.pdf> <./fotos/ej2_1.pdf>]
-<fotos/ej3_1.pdf, id=69, 1084.05pt x 578.16pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fotos/ej3_1.pdf, id=9, 654.0754pt x 360.29666pt>
 File: fotos/ej3_1.pdf Graphic file (type pdf)
 <use fotos/ej3_1.pdf>
-Package pdftex.def Info: fotos/ej3_1.pdf  used on input line 62.
-(pdftex.def)             Requested size: 364.6932pt x 194.49863pt.
-<fotos/ej3_2.pdf, id=70, 722.7pt x 578.16pt>
+Package pdftex.def Info: fotos/ej3_1.pdf  used on input line 108.
+(pdftex.def)             Requested size: 389.00757pt x 214.28296pt.
+
+Overfull \hbox (0.21552pt too wide) in paragraph at lines 105--111
+\T1/cmr/bx/n/10.95 tros: $[] \OT1/cmr/m/n/10.95 = 0[]479828$\T1/cmr/m/n/10.95 , $\OML/cmm/m/it/10.95 ^^[ \OT1/cmr/m/n/10.95 = 0[]122977$\T1/cmr/m/n/10.95 , $[] \OT1/cmr/m/n/10.95 = (32\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 32\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 32)$\T1/cmr/m/n/10.95 , $[] \OT1/cmr/m/n/10.95 =
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fotos/ej3_2.pdf, id=10, 505.89pt x 361.35pt>
 File: fotos/ej3_2.pdf Graphic file (type pdf)
 <use fotos/ej3_2.pdf>
-Package pdftex.def Info: fotos/ej3_2.pdf  used on input line 67.
-(pdftex.def)             Requested size: 364.6932pt x 291.75235pt.
- [2 <./fotos/ej2_2.pdf> <./fotos/ej3_1.pdf
+Package pdftex.def Info: fotos/ej3_2.pdf  used on input line 114.
+(pdftex.def)             Requested size: 389.00757pt x 277.86542pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2 <./fotos/ej2_1.pdf>] [3 <./fotos/ej2_2.pdf> <./fotos/ej3_1.pdf
 
 pdfTeX warning: pdflatex (file ./fotos/ej3_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [3 <./fotos/ej3_2.pdf>] (build/cart_LuisArdevol.aux
+>] [4 <./fotos/ej3_2.pdf>] (build/nn_LuisArdevol.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 LaTeX Info: Redefining \. on input line 12.
@@ -704,22 +716,22 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `cart_LuisArdevol.out' has not changed.
+Package rerunfilecheck Info: File `nn_LuisArdevol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24722 strings out of 474116
- 451601 string characters out of 5743682
- 1931187 words of memory out of 5000000
- 46691 multiletter control sequences out of 15000+600000
- 566293 words of font info for 61 fonts, out of 8000000 for 9000
+ 24733 strings out of 474116
+ 451697 string characters out of 5743682
+ 1948187 words of memory out of 5000000
+ 46694 multiletter control sequences out of 15000+600000
+ 566969 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,7n,107p,513b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on build/cart_LuisArdevol.pdf (3 pages, 362369 bytes).
+ 101i,8n,107p,509b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on build/nn_LuisArdevol.pdf (4 pages, 202468 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
