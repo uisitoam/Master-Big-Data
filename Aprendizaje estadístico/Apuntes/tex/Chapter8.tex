@@ -312,19 +312,103 @@ donde el signo dice la clase (positivo corresponde a +1 y negativo a -1) y la ma
 \noindent El hiperparámetro de este proceso es $C$. En regresión Ridge, por ejemplo, con $\lambda = 0$ teníamos un modelos sobreaprendido (mínimos cuadrados), y con $\lambda$ muy grande teníamos un modelo subaprendido. En el caso de los clasificadores de vectores de soporte, un $C$ muy grande da un modelo sobreaprendido (que no permite $\xi$ con valores muy altos), por lo que habrá pocos vectores de soporte. Sin embargo, un $C$ muy pequeño nos da un modelo subaprendido, permite muchos $\xi$ con valores altos y, por tanto, habrá muchos vectores de soporte; esto es similar a lo que veíamos para KNN. Por tanto, $C$ actúa como el inverso de una constante de regularización. \\
 
 
+\subsubsection{Frontera de decisión no lineal}
+
+En el caso de que las clases no sean linealmente separables, con LDA podíamos recurrir a la siguiente transformación: se genera una transformación de los datos de entrada, añadiendo nuevas variables que sean combinaciones de estas o transformaciones de cada una. Esto expande el espacio de entrada, lo que no da un espacio multidimensional mayor sobre el que las clases sí son linealmente separables. Al aplicar LDA sobre este nuevo espacio, se obtiene una frontera de decisión lineal que, al proyectar sobre el espacio bidimensional, da la impresión de curva y se adapta a los datos. \\
+
+Las máquinas de vectores de soporte harán algo similar a esto, pero sin dar a conocer que transformaciones se hacen sobre los datos.
+
+\section{Máquinas de vectores de soporte}
+
+El clasificador de vectores de soporte descrito hasta ahora encuentra límites lineales en el espacio de características de entrada. Al igual que con otros métodos lineales, podemos hacer el procedimiento más flexible ampliando el espacio de características utilizando expansiones de base como polinomios o splines. Generalmente, los límites lineales en el espacio ampliado logran una mejor separación de clases en el entrenamiento y se traducen en límites no lineales en el espacio original. Una vez que se seleccionan las funciones base $h_m(x)$, $m = 1, \ldots, M$, el procedimiento es el mismo que antes. Ajustamos el clasificador SV utilizando características de entrada $h(x_i) = (h_1(x_i), h_2(x_i), \ldots, h_M(x_i))$, $i = 1, \ldots, N$, y producimos la función (no lineal) $\hat{f}(x) = h(x)^T \hat{\beta} + \hat{\beta}_0$. El clasificador es $\hat{G}(x) = \text{sign}(\hat{f}(x))$ como antes. \\
+
+El clasificador de máquinas de vectores de soporte es una extensión de esta idea, donde la dimensión del espacio ampliado puede llegar a ser muy grande, infinita en algunos casos. Podría parecer que los cálculos se volverían prohibitivos. También parecería que con suficientes funciones base, los datos serían separables y ocurriría sobreajuste. Primero mostramos cómo la tecnología SVM aborda estos problemas. Luego vemos que, de hecho, el clasificador SVM está resolviendo un problema de ajuste de funciones utilizando un criterio particular y una forma de regularización, y es parte de una clase mucho más grande de problemas que incluye los splines de suavizado. \\
+
+Antes de ver cómo se hace esto, reformulemos el clasificador de vectores de soporte en función del producto interno de las observaciones:
+\begin{equation}
+\langle x_i, x_j \rangle = \sum_{j = 1}^p x_{ij} x_{i'j}
+\end{equation}
+
+\noindent Así, el problema anterior queda definido por 
+\begin{align}
+G(x) &= \text{sign} [x^T \beta + \beta_0] \\
+\beta &= \sum_{i=1}^N \alpha_i y_i x_i \\
+f(x) &= \beta_0 + \sum_{i = 1}^N \alpha_i y_i \langle x, x_i \rangle
+\end{align}
+
+\noindent donde recordemos que $x_i$ es un vector de $p$ componentes. Ahora, el problema de optimización anterior lo podemos escribir, en función del producto interno y usando ya las transformaciones $h(x_i)$ (que desconocemos) como
+\begin{equation}
+L_D = \sum_{i = 1}^N \alpha_i - \frac{1}{2} \sum_{i = 1}^N \sum_{i' = 1}^N \alpha_i \alpha_{i'} y_i y_{i'} \langle h(x_i), h(x_{i'}) \rangle
+\end{equation}
+
+\noindent y la solución la podemos escribir como 
+\begin{equation}
+f(x) = h(x)^T \beta + \beta_0 = \sum_{i = 1}^N \alpha_i y_i \langle h(x), h(x_i) \rangle + \beta_0
+\end{equation}
+
+Como vemos en la ecuación anterior, no se necesita conocer la transformación $h(\cdot)$ para representar el clasificador lineal $f(x)$ o calcular sus coeficientes, simplemente basta con conocer el producto interno en el espacio de características ampliado. Esto es lo que conocemos como la función \textit{kernel}:
+\begin{equation}
+K(x, x') = \langle h(x), h(x') \rangle
+\end{equation}
+
+donde $K$ debe ser una función simétrica semidefinida positiva. El \textit{kernel} nos permite entonces modelar el producto interno, y podemos entenderlo como una medida de la similaridad entre dos vectores. Si nos fijamos en la solución en función del \textit{kernel}, 
+\begin{equation}
+\hat{f}(x) = \sum_{i = 1}^N \hat{\alpha}_i y_i K(x, x_i) + \hat{\beta}_0
+\end{equation}
+
+\noindent siendo $\hat{\alpha}_i$ positivo y la etiqueta $y_i$ positiva o negativa. Si el ejemplo que queremos categorizar se parece mucho a un vector de soporte, el producto interno (\textit{kernel}) será grande y positivo, por lo que la categoría de ese vector de soporte contribuirá mucho a la categoría del vector. Si son perpendiculares, el producto interno será 0, y si es opuesto, será negativo. \\
+
+La ventaj de trabajar con el \textit{kernel} es clara: computacionalmente más eficiente, ya que solo es ncesario calcular $n(n-1)/2$ productors internos, y no es necesario trabajar de forma explícita en el espacio transformado. Opciones comunes de \textit{kernel} son:
+\begin{itemize}
+\item \textit{Kernel lineal:} Este es el caso más simple, que se corresponde con los clasificadores de vectores de soporte (SVC):
+\begin{equation}
+K(x_i, x_{i'}) = \langle x, x' \rangle
+\end{equation}
+\item La combinación de un SVC con un \textit{kernel} no lineal nos da una SVM: 
+\begin{itemize}
+\item \textit{Kernel polinómico de grado $d$:} 
+\begin{equation}
+K(x_i, x_{i'}) = (1 + \langle x_i, x_{i'} \rangle)^d = \left(1 + \sum_{j = 1}^p x_{ij} x_{i'j}\right)^d
+\end{equation}
+
+A menor grado del polinomio, más riesgo de subaprendizaje.
+\item \textit{Kernel radial:}
+\begin{equation}
+K(x_i, x_{i'}) = \exp \left( - \gamma \sum_{j = 1}^p (x_{ij} - x_{i'j})^2 \right)
+\end{equation}
+
+Aquí, vemos que $\gamma$ representa el inverso de la varianza de una graussiana, y la resta da la diferencia entre lo que evaluamos y los vectores de soporte. Por tanto, con este \textit{kernel} estamos tomando el elemento a evaluar, $x$, como la media de una gaussiana de varianza $\gamma$. Cuanto más se aleje el vector de soporte de este valor medio $x$, menor será el valor del \textit{kernel}. La similaridad en este caso está acotada entre 0 y 1. \\
+
+Ahora, veamos como influye aquí $\gamma$ en el aprendizaje. Con una gaussiana estrecha, habrá pocos vectores de soporte que contribuyen a la clasificación efectiva de ese ejemplo, por lo que se sobreajusta, como ocurría con KNN. Entonces, si $\sigma^2$ es pequeño, $\gamma$ es grande, llevando al extremo, solo contribuirá un único vector de soporte. Si por el contrario la gaussiana es grande ($\sigma^2$ grande), $\gamma$ será pequeño y habrá riesgo de subaprendizaje porque, llevado al extremo, todos los vectores de soporte contribuirán a la clasificación.
+\end{itemize}
+\end{itemize}
 
 
 
+\section{10/12}
 
 
+Todo los que esten entre las lineas discontinuas son vectores de soporte (las lineas son las que tienen la linea negra en medio). PAra el caso de gaussianas (circulos. Lo que esta dentro de los circulos discontinuos NO son vect de soporte, el resto si.)
+
+kernel lineal es mas simple que polinomico o gaussiano. 
+
+HAsta ahora solo podemos hacer clasificacion binaria. 
+
+En 1vs1 para deshacer empate miramos los valores.
+
+para mas de dos calses no funcionan bien. Para hacerlo con mas de dos, aprendemos varios modelos, uno para cada par de categorias. 
 
 
+No funciona tan bien en regresion por su propia definicion (usar hiperplano de separacion)
 
 
+\begin{example}
+alpha = 0 para los vectores que no son de soporte. El de alpha menor que 1 esta sobre el margen, mientras que el de alpha 1 es el unico que no esta e ne l magrne. Beta sera alpha por el vector correspondeinte para todos losq eu so nvectores de soorte. Usando la e (1) de sus diapositivas, con esos tres calculamos 3 beta 0 y obtenemos beta. Una vez tenemos estos, para el resto de vec de soporte podemos calcular las epsilon correspondientes. Para el que no esta en el margen, tiene la distancia del margen al hiperplano es 1 margen, y como el que no es vector de siporte esta sobre el hiperplano, su epsilon es 1 (1 margen). M es el inverso del modulo de beta. los de epsilon mayor a uno seran los incorrectamente clasificados.   \\
 
-\section{4/12}
 
+alpha son los multipl. de Lagrange
 
+para calcular beta hacer la suma ponderada por los alphas de todos los vec de soporte. Para beta 0 usar los vec justo en el margen y luego dar la media. PAra los vec de sop que no estan en el margen calcular epsilon (que no es cero). Para ver los incorrectamente clasif son los de epsilon mayor que 1. Diapositiva 17. (4), (1)
+\end{example}
 
-A partir de los valores de los vectores epsilon, alpha y las ec 12.10-12.16 se puede reoslver el problema que sea con los vectores de soporte. Para un vectpr sobre el margen conocemos el valor de epsilon (0). Con los vectores de soporte calculamos beta, luego para clacular beta0 tenemos algunos epsilon desconocidos (vec soporte que no estan en el margen) en este caso calculamos los beta 0 solo para los vectores que estan sobre el margen (los unicos que tenemos e un calsificador de maiximo margen) u luego hacemos la media (como antes basicamente.)
-
+con c infinito queremos que los epsilon se vayan a cero (un hiperplano donde no entren vectores de soporte casi). A veces no puede encontrar 
