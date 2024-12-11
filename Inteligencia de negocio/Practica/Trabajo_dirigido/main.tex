@@ -9,6 +9,11 @@
 \usepackage{tabularray}
 \usepackage{multicol}
 
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\definecolor{crimson}{HTML}{ca3142}
+
 %\linenumbers % Turn off line numbering for Optica Open preprint submissions.
 
 \title{El Guachinche}
@@ -17,6 +22,35 @@
 \author[1,2,3]{Luis Ardévol Mesa, Carlos Martínez García}
 
 \begin{document}
+
+\begin{titlepage}
+\begin{center}
+    \vspace*{5cm}
+    
+    {\huge\bfseries El Guachinche\par}
+    \vspace{1cm}
+    
+    {\Large\color{crimson} Sistema de Inteligencia de Negocio\par}
+    \vspace{1cm}
+    
+    \begin{tikzpicture}
+    \draw[thick, color=crimson] (0,0) -- (8,0);
+    \end{tikzpicture}
+    
+    \vspace{1.5cm}
+    {\large Luis Ardévol Mesa\\
+    Carlos Martínez García\par}
+    
+    \vfill
+    
+    {\large Análisis y estrategias para\\
+    la mejora del negocio\par}
+    
+    \vspace{2cm}
+    
+    {\large Diciembre, 2024\par}
+\end{center}
+\end{titlepage}
 
 \maketitle
 
@@ -149,31 +183,31 @@ Como se puede intuir por la descripción e idea del negocio, buscamos una imagen
 A continuación, se incluye una tabla a modo de síntesis de los factores críticos de éxito y los indicadores clave de rendimiento que se han explicado:
 
 
-\begin{longtblr}[caption = {Síntesis factores críticos de éxito.},]{colspec = {p{1.75cm}p{2.5cm}Xp{1.9cm}p{1.5cm}X}, rowhead = 1,}
+\begin{longtblr}[caption = {Síntesis factores críticos de éxito con tipo de indicador y acción},]{colspec = {p{1.75cm}p{2.5cm}Xp{1.9cm}p{1.5cm}X}, rowhead = 1,}
 \hline\hline
-\textbf{Factor Crítico de Éxito (CSF)} & \textbf{Indentificador de indicador} & \textbf{Indicador} & \textbf{Tipo de indicador} & \textbf{Meta} & \textbf{Acción} \\ \hline\hline
-CSF1 & PI1.1 & Aumentar margen de beneficio bruto & \textit{leading} & 65-70\% &  \\ \hline
-CSF1 & PI1.2 & Reducir coste operativo por local & \textit{lagging} & $-10$\% &  \\ \hline
-CSF1 & PI1.3 & Aumentar gasto por cliente & & +5-10\% & \\ \hline
-CSF1 & PI1.4 & Aumentar tasa de ocupación & & 75-80\% & \\ \hline
-CSF1 & PI1.5 & Reducir desperdicio de alimentos & & $<2$\% & \\ \hline\hline
-CSF2 & PI2.1 & Pocos nuevos locales por año & & $\leq 3$ & \\ \hline
-CSF2 & PI2.2 & Reducir tiempo de rentabilidad de nuevos locales & & $< 12$ meses & \\ \hline
-CSF2 & PI2.3 & Aumento de ingresos totales & & $+15$\% & \\ \hline
-CSF2 & PI2.4 & Fijar tasa de éxito de nuevos locales & & $\geq 90$\% & \\ \hline\hline
-CSF3 & PI3.1 & Fijar valoración de satisfacción del cleinte & & $\geq 4.5$ & \\ \hline
-CSF3 & PI3.2 & Aumentar recurrencia de visitas & & $\geq 2$/mes & \\ \hline
-CSF3 & PI3.3 & Fijar quejas resultas satisfactoriamente & & 90\% & \\ \hline
-CSF3 & PI3.4 & Aumentar nuevos clientes por recomendación & & $\geq 80$\% & \\ \hline\hline
-CSF4 & PI4.1 & Fijar tiempo de reposición de productos & & $< 48$h & \\ \hline
-CSF4 & PI4.2 & Reducir nivel de inventario crítico & & $< 5$\% & \\ \hline
-CSF4 & PI4.3 & Reducir costes logísticos por pedido & & $-10$\% & \\ \hline\hline
-CSF5 & PI5.1 & Adaptabilidad del menú & & 15\% & \\ \hline
-CSF5 & PI5.2 & Tener proveedores alternativos & & 2 & \\ \hline
-CSF5 & PI5.3 & Reducir el tiempo de parada por falta de suministros & & 0 & \\ \hline\hline
-CSF6 & PI6.1 & Cumplimiento de estándares de la marca por los locales & & 100\% & \\ \hline
-CSF6 & PI6.2 & \textit{Marketing} consistente & & Uniformidad & \\ \hline
-CSF6 & PI6.3 & Formar al personal en cultura y tradición local & & 100\% del personal & \\ \hline\hline
+\textbf{Factor Crítico de Éxito (CSF)} & \textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Tipo de indicador} & \textbf{Meta} & \textbf{Acción} \\ \hline\hline
+CSF1 & PI1.1 & Aumentar margen de beneficio bruto & \textit{Lagging} & 65-70\% & Revisar precios y optimizar costes. \\ \hline
+CSF1 & PI1.2 & Reducir coste operativo por local & \textit{Lagging} & $-10$\% & Negociar contratos y mejorar eficiencia operativa. \\ \hline
+CSF1 & PI1.3 & Aumentar gasto por cliente & \textit{Lagging} & +5-10\% & Introducir ofertas atractivas y mejorar el menú. \\ \hline
+CSF1 & PI1.4 & Aumentar tasa de ocupación & \textit{Lagging} & 75-80\% & Promociones en horarios de baja demanda. \\ \hline
+CSF1 & PI1.5 & Reducir desperdicio de alimentos & \textit{Lagging} & $<2$\% & Implementar control estricto de inventario. \\ \hline\hline
+CSF2 & PI2.1 & Pocos nuevos locales por año & \textit{Leading} & $\leq 3$ & Planificar aperturas estratégicas anuales. \\ \hline
+CSF2 & PI2.2 & Reducir tiempo de rentabilidad de nuevos locales & \textit{Lagging} & $< 12$ meses & Supervisar rendimiento inicial y ajustar estrategias. \\ \hline
+CSF2 & PI2.3 & Aumento de ingresos totales & \textit{Lagging} & $+15$\% & Incrementar promociones y optimizar márgenes. \\ \hline
+CSF2 & PI2.4 & Fijar tasa de éxito de nuevos locales & \textit{Lagging} & $\geq 90$\% & Garantizar formación adecuada y consistencia operativa. \\ \hline\hline
+CSF3 & PI3.1 & Fijar valoración de satisfacción del cliente & \textit{Lagging} & $\geq 4.5$ & Realizar encuestas de satisfacción y actuar según el feedback. \\ \hline
+CSF3 & PI3.2 & Aumentar recurrencia de visitas & \textit{Lagging} & $\geq 2$/mes & Crear programas de fidelización. \\ \hline
+CSF3 & PI3.3 & Fijar quejas resueltas satisfactoriamente & \textit{Lagging} & 90\% & Mejorar tiempos de respuesta y procesos de resolución. \\ \hline
+CSF3 & PI3.4 & Aumentar nuevos clientes por recomendación & \textit{Leading} & $\geq 80$\% & Incentivar recomendaciones mediante beneficios exclusivos. \\ \hline\hline
+CSF4 & PI4.1 & Fijar tiempo de reposición de productos & \textit{Lagging} & $< 48$h & Optimizar logística y establecer acuerdos con proveedores locales. \\ \hline
+CSF4 & PI4.2 & Reducir nivel de inventario crítico & \textit{Lagging} & $< 5$\% & Monitorear inventarios en tiempo real. \\ \hline
+CSF4 & PI4.3 & Reducir costes logísticos por pedido & \textit{Lagging} & $-10$\% & Consolidar pedidos y negociar tarifas de transporte. \\ \hline\hline
+CSF5 & PI5.1 & Adaptabilidad del menú & \textit{Leading} & 15\% & Introducir platos de temporada o adaptados regionalmente. \\ \hline
+CSF5 & PI5.2 & Tener proveedores alternativos & \textit{Leading} & 2 & Auditar y registrar opciones de suministro secundarias. \\ \hline
+CSF5 & PI5.3 & Reducir el tiempo de parada por falta de suministros & \textit{Lagging} & 0 & Establecer sistemas de alerta para reposición temprana. \\ \hline\hline
+CSF6 & PI6.1 & Cumplimiento de estándares de la marca por los locales & \textit{Leading} & 100\% & Auditorías regulares de calidad en todos los locales. \\ \hline
+CSF6 & PI6.2 & \textit{Marketing} consistente & \textit{Leading} & Campaña uniforme & Supervisar las campañas publicitarias regionales. \\ \hline
+CSF6 & PI6.3 & Formar al personal en cultura y tradición local & \textit{Leading} & 100\% del personal & Desarrollar y ejecutar programas de formación continua. \\ \hline\hline
 \end{longtblr}
 
 
@@ -272,7 +306,7 @@ Las dimensiones seleccionadas para representar correctamente los procesos anteri
 \item mes. Este atributo es de tipo \texttt{Integer} y representa el mes dentro del año.
 \item mes\_texto. Este atributo es de tipo \texttt{String} y representa el nombre del mes correspondiente.
 \end{itemize}
-\item \textbf{Restaurante}: la dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y se mostrarán dos niveles, uno para el país y otro para la ciudad. Esta dimensión, de nuevo, es compartida por los tres hechos ya mencionados, y tiene los siguientes atributos:
+\item \textbf{Restaurante}: la dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y constituirá una jerarquía de dos niveles, uno para el país y otro para la ciudad. Esta dimensión, de nuevo, es compartida por los tres hechos ya mencionados, y tiene los siguientes atributos:
 \begin{itemize}
 \item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo local.
 \item pais. Este atributo es de tipo \texttt{String} y representa el país en el que se encuentra el local.
@@ -288,255 +322,27 @@ Los precios de los platos en cada local son relativamente estáticos, pero como 
 \end{itemize}
 
 
+\subsection{Cálculo de los indicadores a partir del diseño lógico}
 
+En el apartado 2 identificamos numerosos procesos e indicadores. Por simplicidad, reduciremos la descripción del cálculo de los indicadores a los relaciones estrechamente con los hechos y dimensiones antes mencionados. Concretamente, trateremos los indicadores asociados al CSF1 (garantizar la rentabilidad de cada local), CSF3 (maximizar la satisfacción y fidelización del cliente) y CSF4 (eficiencia en la gestión de la cadena de suministro). El cálculo de los indicadores asociados a estos factores críticos de éxito es el siguiente:
 
+\begin{longtblr}[caption = {Cálculo de indicadores asociados a procesos modelados (con un $^*$ indicamos procesos para los que aún no se disponen de las medidas necesarias, que deben proporcionar los locales). Aquí, usaremos el subíndice $i$ para hacer referencia al mes, por lo que, por ejemplo, $i-1$, será una magnitud asociada al mes anterior (considerando la granularidad mensual que estamos usando)},]{colspec = {p{2.5cm}Xp{2cm}X}, rowhead = 1,}
+\hline\hline
+\textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline\hline
+PI1.1 & Aumentar margen de beneficio bruto & Proceso 1 & $\text{ingresos}_i - \text{ingresos}_{i-1}$  \\ \hline
+PI1.2 & Reducir coste operativo por local & Proceso 1 & $\text{coste}_i - \text{coste}_{i-1}$ \\ \hline
+PI1.3 & Aumentar gasto por cliente & Proceso 1 & $\displaystyle\frac{\text{ingresos}_i}{\text{clientes}_i}$ \\ \hline
+PI1.4 & Aumentar tasa de ocupación & Proceso 1 & $\displaystyle\frac{\text{clientes}_i}{\text{capacidad\_max} \times \text{num\_turnos}}$ \\ \hline
+PI1.5 & Reducir desperdicio de alimentos $^*$ & Proceso 1 & $\displaystyle\frac{\text{peso\_alimentos\_desperdiciados}_i}{\text{peso\_alimentos\_inventario}_i}$ \\ \hline\hline
+PI3.1 & Fijar valoración de satisfacción del cliente & Proceso 2 &  \\ \hline
+PI3.2 & Aumentar recurrencia de visitas & Proceso 2 &  \\ \hline
+PI3.3 & Fijar quejas resueltas satisfactoriamente & Proceso 2 &  \\ \hline
+PI3.4 & Aumentar nuevos clientes por recomendación & Proceso 2 &  \\ \hline\hline
+PI4.1 & Fijar tiempo de reposición de productos & Proceso 3 &  \\ \hline
+PI4.2 & Reducir nivel de inventario crítico & Proceso 3 &  \\ \hline
+PI4.3 & Reducir costes logísticos por pedido & Proceso 3 &  \\ \hline\hline
+\end{longtblr}
 
+Algunas requieren explicación adicional, ya que implican medidas no consideradas anteriormente. En el cálculo de la tasa de ocupación, se menciona $\text{capacidad\_max}$ y $\text{num\_turnos}$. Estos valores son (en principio) fijos para cada restaurante: el primero nos da la capacidad máxima de la sala, y el segundo el número de turnos ese mes, que deberían ser unos 48 (2 por día, 6 días por semana).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Dimensiones}
-Las principales dimensiones identificadas incluyen:
-
-\textbf{Dimensión de Producto:} 
-\begin{itemize}
-    \item Atributos: Nombre del producto, categoría, precio.
-    \item Compartida entre los procesos de producción y ventas.
-\end{itemize}
-
-\textbf{Dimensión de Cliente:} 
-\begin{itemize}
-    \item Atributos: ID de cliente, nombre, edad, preferencias de compra.
-    \item Compartida entre el proceso de gestión de clientes y ventas.
-\end{itemize}
-
-\subsection{Cálculo de indicadores}
-
-La siguiente tabla muestra el cálculo de algunos de los PIs definidos a partir de los procesos de negocio identificados:
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{7cm}|}
-\hline
-\textbf{Identificador del PI} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline
-PI1                          & Margen bruto       & Gestión financiera          & (Ingresos - Costes) / Ingresos \\ \hline
-PI2                          & Coste operativo    & Gestión financiera          & Suma de los costes operativos \\ \hline
-PI3                          & Beneficio neto     & Gestión financiera          & Ingresos - Costes \\ \hline
-PI4                          & Tiempo de reposición & Cadena de suministro       & Fecha de pedido - Fecha de entrega \\ \hline
-PI5                          & Nivel de inventario crítico & Cadena de suministro & Inventario en niveles críticos \\ \hline
-PI6                          & Coste logístico    & Cadena de suministro        & Costes asociados a la logística \\ \hline
-PI7                          & Satisfacción del cliente & Gestión de clientes     & Promedio de puntuaciones de encuestas \\ \hline
-PI8                          & Frecuencia de visitas & Gestión de clientes       & Número de visitas / cliente / mes \\ \hline
-PI9                          & Tasa de retención  & Gestión de clientes         & Porcentaje de clientes recurrentes \\ \hline
-\end{tabular}
-\caption{Cálculo de indicadores}
-\end{table}
-
-
-
-
-%%%%%%%%%%%%%
-
-
-
-
-
-Los detalles de la implementación del almacén de datos se describen en la siguiente tabla: 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{cll}
-\hline
-\multicolumn{3}{|c|}{Dimensiones} \\ \hline
-\multicolumn{1}{l}{} & & \\ \hline
-\multicolumn{3}{|c|}{Tiempo} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{id (pk)} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Identificador autoincremental generado por el almacén \\ cada vez que se inserta un nuevo mes. \end{tabular}} \\ 
-\multicolumn{1}{|l}{} &  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}\end{tabular}} \\ \hline
-\multicolumn{1}{|l}{ano} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número correspondiente al año. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{mes} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número correspondiente al mes dentro del año. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{mes\_texto} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Texto con el nombre del mes. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\
-\end{tabular}
-\end{table}
-\begin{table}[H]
-\centering
-\begin{tabular}{cll}
-\hline
-\multicolumn{3}{|c|}{Restaurante} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{id (pk)} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Identificador de cada local, generado por la central. \end{tabular}} \\ 
-\multicolumn{1}{|l}{} &  & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}\end{tabular}} \\ \hline
-\multicolumn{1}{|l}{pais} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}País donde se sitúa el local. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{ciudad} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Ciudad donde se sitúa el local. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\ \hline
-\multicolumn{3}{|c|}{Producto} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{id (pk)} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Identificador de cada plato, generado por la central. \end{tabular}} \\ \hline 
-\multicolumn{1}{|l}{nombre} & String & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Nombre del plato. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{precio} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Precio del plato. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\
-\multicolumn{1}{l}{} &  & \\ \hline
-\multicolumn{3}{|c|}{Hechos} \\ \hline
-\multicolumn{1}{l}{} & & \\ \hline
-\multicolumn{3}{|c|}{Finanzas} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{alquiler} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Gasto en alquiler de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{personal} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Gasto en personal de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{proveedores} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Gasto en suministros de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{extra} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Gasto en extras de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{ingresos\_presencial} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Ingresos por ventas presenciales de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{ingresos\_domicilio} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Ingresos por ventas a domicilio de un local, en euros. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{numero\_clientes\_presencial} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número total de clientes presenciales de un local. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{numero\_clientes\_domicilio} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número total de clientes a domicilio de un local. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{nuevos\_clientes\_presencial} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes presenciales nuevos de un local. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{nuevos\_clientes\_domicilio} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número de clientes nuevos a domicilio de un local. \end{tabular}} \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{cll}
-\hline
-\multicolumn{3}{|c|}{Producto} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{ventas} & Integer & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Número total de ventas de un producto en un local. \end{tabular}} \\ \hline
-\multicolumn{1}{l}{} &  & \\ \hline
-\multicolumn{3}{|c|}{Feedback} \\ \hline \hline
-\multicolumn{1}{|c}{Atributo} & \multicolumn{1}{c}{Tipo} & \multicolumn{1}{c|}{Descripción} \\ \hline
-\multicolumn{1}{|l}{valoracion\_ambiente} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Valoración promedio (entre 0 y 5 con un decimal) \\ del ambiente de un local, según sus clientes. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{valoracion\_personal} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Valoración promedio (entre 0 y 5 con un decimal) \\ del personal de un local, según sus clientes. \end{tabular}} \\ \hline
-\multicolumn{1}{|l}{valoracion\_comida} & Numeric & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Valoración promedio (entre 0 y 5 con un decimal) \\ de la calidad de la comida de un local, según sus clientes. \end{tabular}} \\ \hline
-\end{tabular}
-\caption{Borrar esto: Básicamente en cada tabla de estas habrá una fila por cada restaurante y por cada mes y año.}
-\end{table}
-
-\newpage 
-
-\subsection{Creación de los cubos de datos}
-
-Utilizando como base las estructuras de datos relacionales descritas en el apartado anterior, se crea un esquema multidimensional con tres cubos y tres dimensiones compartidas entre ellos. Estas se definen a nivel de esquema y posteriormente se reutilizan a nivel de cubo:
-
-\begin{itemize}
-\item Dimensión: \textbf{Tiempo}. Dimensión de tipo temporal.
-\begin{itemize}
-\item Jerarquía: \textit{jerarquiaTiempo}. Definida por el atributo \textit{id}. 
-\begin{itemize}
-\item Nivel: \textit{ano}. Nivel de tipo \textit{TimeYears} definido por el atributo \textit{ano}.
-\item Nivel: \textit{mes}. Nivel de tipo \textit{TimeMonths} definido por el atributo \textit{mes}. Se utiliza el atributo \textit{mes\_texto} para nombrar a los elementos de este nivel.
-\item Tabla: tiempo
-\end{itemize}
-\end{itemize}
-\item Dimensión: \textbf{Restaurante}. Dimensión de tipo estándar.
-\begin{itemize}
-\item Jerarquía: \textit{jerarquiaRestaurantes}. Definida por el atributo \textit{id}.
-\begin{itemize}
-\item Nivel: \textit{pais}. Nivel de tipo regular definido por el atributo \textit{pais}.
-\item Nivel: \textit{ciudad}. Nivel de tipo regular definido por el atributo \textit{ciudad}.
-\item Tabla: restaurante
-\end{itemize}
-\end{itemize}
-\item Dimensión: \textbf{Producto}. Dimensión de tipo estándar.
-\begin{itemize}
-\item Jerarquía: \textit{jerarquiaProductos}. Definida por el atributo \textit{id}.
-\begin{itemize}
-\item Nivel: \textit{nombre}. Nivel de tipo regular definido por el atributo \textit{nombre}.
-\item Tabla: producto
-\end{itemize}
-\end{itemize}
-\item Cubo: \textbf{Finanzas}. 
-\begin{itemize}
-\item Tabla: \textit{finanzas}
-\item Dimensiones 
-\begin{itemize}
-\item Dimensión usada: \textbf{Tiempo}. Se referencia a la dimensión \textit{Tiempo}. Se utiliza el atributo \textit{fecha} como clave foránea.
-\item Dimensión usada: \textbf{Restaurante}. Se referencia a la dimensión \textit{Restaurante}. Se utiliza el atributo \textit{restaurante} como clave foránea.
-\end{itemize}
-\item Medidas \textcolor{red}{MIRAR BIEN PORQUE NO SE AGREGAN ?}
-\begin{itemize}
-\item Medida: \textbf{Alquiler}. ??
-\item Medida: \textbf{Personal}. ??
-\item Medida: \textbf{Proveedores}. ??
-\item Medida: \textbf{Extra}. ??
-\item Medida: \textbf{Ingresos presencial}. ??
-\item Medida: \textbf{Ingresos domicilio}. ??
-\item Medida: \textbf{Número clientes presencial}. ??
-\item Medida: \textbf{Número clientes domicilio}. ??
-\item Medida: \textbf{Nuevos clientes presencial}. ??
-\item Medida: \textbf{Nuevos clientes domicilio}. ??
-\item Medida calculada: \textbf{Gastos totales}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Alquiler] + [Measures].[Personal] + [Measures].[Proveedores] + [Measures].[Extra]''
-\item Medida calculada: \textbf{Ingresos totales}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Ingresos presencial] + [Measures].[Ingresos domicilio]''
-\item Medida calculada: \textbf{Beneficio}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Ingresos totales] - [Measures].[Gastos totales]''
-\item Medida calculada: \textbf{Número total clientes}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Número clientes presencial] + [Measures].[Número clientes domicilio]''
-\item Medida calculada: \textbf{Número total nuevos clientes}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Nuevos clientes] + [Measures].[Nuevos clientes domicilio]''
-\item Medida calculada: \textbf{Beneficio por cliente}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Beneficio] / [Measures].[Número total clientes]''
-\end{itemize}
-\end{itemize}
-\item Cubo: \textbf{Producto}.
-\begin{itemize}
-\item Tabla: \textit{producto}
-\item Dimensiones
-\begin{itemize}
-\item Dimensión usada: \textbf{Tiempo}. Se referencia a la dimensión \textit{Tiempo}. Se utiliza el atributo \textit{fecha} como clave foránea.
-\item Dimensión usada: \textbf{Restaurante}. Se referencia a la dimensión \textit{Restaurante}. Se utiliza el atributo \textit{restaurante} como clave foránea.
-\item Dimensión usada: \textbf{Producto}. Se referencia a la dimensión \textit{Producto}. Se utiliza el atributo \textit{producto} como clave foránea.
-\end{itemize}
-\item Medidas \textcolor{red}{como trato a precio? lo meto en la dimension producto?}
-\begin{itemize}
-\item Medida: \textbf{Ventas}. ??
-\item Medida calculada: \textbf{Ingresos por producto}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``[Measures].[Ventas] * [Producto].[precio]''
-\end{itemize}
-\end{itemize}
-\item Cubo: \textbf{Feedback}.
-\begin{itemize}
-\item Tabla: \textit{feedback}
-\item Dimensiones
-\begin{itemize}
-\item Dimensión usada: \textbf{Tiempo}. Se referencia a la dimensión \textit{Tiempo}. Se utiliza el atributo \textit{fecha} como clave foránea.
-\item Dimensión usada: \textbf{Restaurante}. Se referencia a la dimensión \textit{Restaurante}. Se utiliza el atributo \textit{restaurante} como clave foránea.
-\end{itemize}
-\item Medidas
-\begin{itemize}
-\item Medida: \textbf{Valoración ambiente}. Se agrega el atributo \textit{valoracion\_ambiente} usando la funcion AVG.
-\item Medida: \textbf{Valoración personal}. Se agrega el atributo \textit{valoracion\_personal} usando la funcion AVG.
-\item Medida: \textbf{Valoración comida}. Se agrega el atributo \textit{valoracion\_comida} usando la funcion AVG.
-\item Medida calculada: \textbf{Valoración media restaurante}. Se genera un nuevo valor para la dimensión \textit{Measures} usando la expresión MDX: ``([Measures].[Valoración ambiente] + [Measures].[Valoración personal] + [Measures].[Valoración comida]) / 3''
-\end{itemize}
-\end{itemize}
-\end{itemize}
-
-\singlespacing
 \end{document}
-

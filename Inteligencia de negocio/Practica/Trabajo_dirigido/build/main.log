@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  5 DEC 2024 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  11 DEC 2024 19:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -777,45 +777,222 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \mult@nat@firstbox=\box131
 \colbreak@box=\box132
 \mc@col@check@num=\count381
-) (build/main.aux)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks52
+\pgfutil@tempdima=\dimen319
+\pgfutil@tempdimb=\dimen320
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box133
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks53
+\pgfkeys@temptoks=\toks54
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks55
+))
+\pgf@x=\dimen321
+\pgf@y=\dimen322
+\pgf@xa=\dimen323
+\pgf@ya=\dimen324
+\pgf@xb=\dimen325
+\pgf@yb=\dimen326
+\pgf@xc=\dimen327
+\pgf@yc=\dimen328
+\pgf@xd=\dimen329
+\pgf@yd=\dimen330
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count382
+\c@pgf@countb=\count383
+\c@pgf@countc=\count384
+\c@pgf@countd=\count385
+\t@pgf@toka=\toks56
+\t@pgf@tokb=\toks57
+\t@pgf@tokc=\toks58
+\pgf@sys@id@count=\count386
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count387
+\pgfsyssoftpath@bigbuffer@items=\count388
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen331
+\pgfmath@count=\count389
+\pgfmath@box=\box134
+\pgfmath@toks=\toks59
+\pgfmath@stack@operand=\toks60
+\pgfmath@stack@operation=\toks61
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count390
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen332
+\pgf@picmaxx=\dimen333
+\pgf@picminy=\dimen334
+\pgf@picmaxy=\dimen335
+\pgf@pathminx=\dimen336
+\pgf@pathmaxx=\dimen337
+\pgf@pathminy=\dimen338
+\pgf@pathmaxy=\dimen339
+\pgf@xx=\dimen340
+\pgf@xy=\dimen341
+\pgf@yx=\dimen342
+\pgf@yy=\dimen343
+\pgf@zx=\dimen344
+\pgf@zy=\dimen345
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen346
+\pgf@path@lasty=\dimen347
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen348
+\pgf@shorten@start@additional=\dimen349
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box135
+\pgf@hbox=\box136
+\pgf@layerbox@main=\box137
+\pgf@picture@serial@count=\count391
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen350
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen351
+\pgf@pt@y=\dimen352
+\pgf@pt@temp=\dimen353
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen354
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen355
+\pgf@sys@shading@range@num=\count392
+\pgf@shadingcount=\count393
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box138
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box139
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen356
+\pgf@nodesepend=\dimen357
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen358
+\pgffor@skip=\dimen359
+\pgffor@stack=\toks62
+\pgffor@toks=\toks63
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count394
+\pgfplotmarksize=\dimen360
+)
+\tikz@lastx=\dimen361
+\tikz@lasty=\dimen362
+\tikz@lastxsaved=\dimen363
+\tikz@lastysaved=\dimen364
+\tikz@lastmovetox=\dimen365
+\tikz@lastmovetoy=\dimen366
+\tikzleveldistance=\dimen367
+\tikzsiblingdistance=\dimen368
+\tikz@figbox=\box140
+\tikz@figbox@bg=\box141
+\tikz@tempbox=\box142
+\tikz@tempbox@bg=\box143
+\tikztreelevel=\count395
+\tikznumberofchildren=\count396
+\tikznumberofcurrentchild=\count397
+\tikz@fig@count=\count398
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count399
+\pgfmatrixcurrentcolumn=\count400
+\pgf@matrix@numberofcolumns=\count401
+)
+\tikz@expandcount=\count402
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-Package hyperref Info: Link coloring ON on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+Package hyperref Info: Link coloring ON on input line 24.
  (build/main.out) (build/main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count382
-\scratchdimen=\dimen319
-\scratchbox=\box133
-\nofMPsegments=\count383
-\nofMParguments=\count384
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count385
-\MPscratchDim=\dimen320
-\MPnumerator=\count386
-\makeMPintoPDFobject=\count387
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count403
+\scratchdimen=\dimen369
+\scratchbox=\box144
+\nofMPsegments=\count404
+\nofMParguments=\count405
+\everyMPshowfont=\toks64
+\MPscratchCnt=\count406
+\MPscratchDim=\dimen370
+\MPnumerator=\count407
+\makeMPintoPDFobject=\count408
+\everyMPtoPDFconversion=\toks65
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -823,7 +1000,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: Option `justification=RaggedRight' requires the `ragged2e' package on input line 19.
+Package caption Info: Option `justification=RaggedRight' requires the `ragged2e' package on input line 24.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip89
@@ -842,8 +1019,8 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \JustifyingParindent=\skip102
 )
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen321
-\caption@adjustwidth@linewidth=\dimen322
+\caption@adjustwidth@hsize=\dimen371
+\caption@adjustwidth@linewidth=\dimen372
 Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
@@ -882,21 +1059,21 @@ Package caption Info: End \AtBeginDocument code.
 
 Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
-LaTeX Info: Redefining \microtypecontext on input line 19.
-Package microtype Info: Applying patch `item' on input line 19.
-Package microtype Info: Applying patch `toc' on input line 19.
-Package microtype Info: Applying patch `eqnum' on input line 19.
+LaTeX Info: Redefining \microtypecontext on input line 24.
+Package microtype Info: Applying patch `item' on input line 24.
+Package microtype Info: Applying patch `toc' on input line 24.
+Package microtype Info: Applying patch `eqnum' on input line 24.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 19.
+Package microtype Warning: Unable to apply patch `footnote' on input line 24.
 
-Package microtype Info: Applying patch `verbatim' on input line 19.
+Package microtype Info: Applying patch `verbatim' on input line 24.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 19.
+LaTeX Info: Redefining \showhyphens on input line 24.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -904,69 +1081,71 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
-)
+) [1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 21.
+(Font)              scaled to size 11.39996pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.94994pt on input line 21.
+(Font)              scaled to size 19.94994pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 11.39996pt on input line 21.
+(Font)              scaled to size 11.39996pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 21.
+(Font)              scaled to size 11.39996pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 21.
+(Font)              scaled to size 7.59998pt on input line 55.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 21--21
+Overfull \hbox (12.0pt too wide) in paragraph at lines 55--55
 [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 23.
+(Font)              scaled to size 13.67995pt on input line 57.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 23.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 27.
+(Font)              scaled to size 13.67995pt on input line 57.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 61.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 27.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 27.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 27.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 27.
+(Font)              scaled to size 12.50409pt on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 27.
+(Font)              scaled to size 9.37807pt on input line 61.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 27.
+(Font)              scaled to size 7.29405pt on input line 61.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 27.
+(Font)              scaled to size 12.50409pt on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 27.
+(Font)              scaled to size 9.37807pt on input line 61.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 27.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 27.
+(Font)              scaled to size 7.29405pt on input line 61.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 61.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -975,60 +1154,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 27.
+(Font)              scaled to size 10.42007pt on input line 61.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 27.
+(Font)              scaled to size 7.91925pt on input line 61.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 27.
+(Font)              scaled to size 6.25204pt on input line 61.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 27.
+(Font)              scaled to size 10.42007pt on input line 61.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 27.
+(Font)              scaled to size 7.91925pt on input line 61.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 27.
+(Font)              scaled to size 6.25204pt on input line 61.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 27.
+(Font)              scaled to size 9.49997pt on input line 61.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 40.
+(Font)              scaled to size 6.64998pt on input line 74.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 40.
+(Font)              scaled to size 5.21004pt on input line 74.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 40.
-[1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
+(Font)              scaled to size 5.21004pt on input line 74.
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 40.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74     \item \textbf
+                      {√Årea de gesti√≥n y finanzas:} Este √°rea se preocupa... [1]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 74.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 63.
+(Font)              scaled to size 10.40245pt on input line 97.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 63.
+(Font)              scaled to size 10.40245pt on input line 97.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 63.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 97.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 10.40245pt on input line 63.
+(Font)              scaled to size 10.40245pt on input line 97.
  [2] [3] [4]
 > Step: init table outer spec.
 > Step: parse table options.
@@ -1038,281 +1220,395 @@ LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 177--177
+Underfull \hbox (badness 1708) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Overfull \hbox (5.06784pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/b/n/12 (-20) Indentificador
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Overfull \hbox (25.77516pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/m/n/12 (-20) Uniformidad 
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (-20) CampaÒa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) uni-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 177--177
+Underfull \hbox (badness 1708) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Overfull \hbox (5.06784pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/b/n/12 (-20) Indentificador
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 177--177
+Underfull \hbox (badness 1308) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir coste op-er-a-
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 177--177
+Underfull \hbox (badness 1418) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Aumentar gasto por
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Introducir ofer-tas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir des-perdi-cio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 3281) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Implementar con-trol
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir tiempo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/ppl/m/n/12 (+20) de rentabil-i-dad de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Supervisar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Incrementar pro-mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) ciones y op-ti-mizar
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) sat-is-fac-ciÛn y ac-tuar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 177--177
-[]\T1/ppl/m/n/12 (+20) Fijar que-jas re-sul-tas
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Aumentar nuevos
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) es-table-cer acuer-dos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) con provee-dores
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 3439) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Monitorear in-ven-tar-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Consolidar pe-di-dos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Adaptabilidad del
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 177--177
+Underfull \hbox (badness 2042) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Introducir platos de
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 211--211
 \T1/ppl/m/n/12 (+20) parada por falta de
  []
 
 
-Overfull \hbox (25.77516pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/m/n/12 (-20) Uniformidad 
+Underfull \hbox (badness 4673) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) AuditorÌas reg-u-lares
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (-20) CampaÒa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) uni-
+ []
+
+
+Underfull \hbox (badness 5288) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Supervisar las cam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 177--177
+Underfull \hbox (badness 1708) in paragraph at lines 211--211
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Overfull \hbox (5.06784pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/b/n/12 (-20) Indentificador
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 177--177
+Underfull \hbox (badness 1308) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir coste op-er-a-
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 177--177
+Underfull \hbox (badness 1418) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Aumentar gasto por
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Introducir ofer-tas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir des-perdi-cio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 3281) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Implementar con-trol
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir tiempo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 \T1/ppl/m/n/12 (+20) de rentabil-i-dad de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Supervisar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Incrementar pro-mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) ciones y op-ti-mizar
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) sat-is-fac-ciÛn y ac-tuar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 177--177
-[]\T1/ppl/m/n/12 (+20) Fijar que-jas re-sul-tas
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Aumentar nuevos
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) es-table-cer acuer-dos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) con provee-dores
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 3439) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Monitorear in-ven-tar-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Consolidar pe-di-dos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) Adaptabilidad del
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 177--177
+Underfull \hbox (badness 2042) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Introducir platos de
+ []
+
+[6]
+Underfull \hbox (badness 1953) in paragraph at lines 211--211
 \T1/ppl/m/n/12 (+20) parada por falta de
  []
 
 
-Overfull \hbox (25.77516pt too wide) in paragraph at lines 177--177
-[]\T1/ppl/m/n/12 (-20) Uniformidad 
+Underfull \hbox (badness 4673) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) AuditorÌas reg-u-lares
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (-20) CampaÒa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\T1/ppl/m/n/12 (+20) uni-
+ []
+
+
+Underfull \hbox (badness 5288) in paragraph at lines 211--211
+[]\T1/ppl/m/n/12 (+20) Supervisar las cam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
-
-
-pdfTeX warning: pdflatex (file ./fotos/fin.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/fin.pdf, id=110, 326.11836pt x 310.25912pt>
-File: fotos/fin.pdf Graphic file (type pdf)
-<use fotos/fin.pdf>
-Package pdftex.def Info: fotos/fin.pdf  used on input line 205.
-(pdftex.def)             Requested size: 314.58018pt x 299.3035pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [7]
 
-pdfTeX warning: pdflatex (file ./fotos/prods.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/prods.pdf, id=116, 326.11836pt x 298.51524pt>
-File: fotos/prods.pdf Graphic file (type pdf)
-<use fotos/prods.pdf>
-Package pdftex.def Info: fotos/prods.pdf  used on input line 226.
-(pdftex.def)             Requested size: 314.58018pt x 287.97429pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+pdfTeX warning: pdflatex (file ./fotos/fin.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fotos/fin.pdf, id=113, 326.11836pt x 310.25912pt>
+File: fotos/fin.pdf Graphic file (type pdf)
+<use fotos/fin.pdf>
+Package pdftex.def Info: fotos/fin.pdf  used on input line 239.
+(pdftex.def)             Requested size: 314.58018pt x 299.3035pt.
 [8 <./fotos/fin.pdf>]
 
-pdfTeX warning: pdflatex (file ./fotos/feed.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/feed.pdf, id=132, 389.35461pt x 290.88673pt>
-File: fotos/feed.pdf Graphic file (type pdf)
-<use fotos/feed.pdf>
-Package pdftex.def Info: fotos/feed.pdf  used on input line 249.
-(pdftex.def)             Requested size: 314.58018pt x 235.02663pt.
+pdfTeX warning: pdflatex (file ./fotos/prods.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fotos/prods.pdf, id=129, 326.11836pt x 298.51524pt>
+File: fotos/prods.pdf Graphic file (type pdf)
+<use fotos/prods.pdf>
+Package pdftex.def Info: fotos/prods.pdf  used on input line 260.
+(pdftex.def)             Requested size: 314.58018pt x 287.97429pt.
 [9 <./fotos/prods.pdf>]
 
+pdfTeX warning: pdflatex (file ./fotos/feed.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<fotos/feed.pdf, id=145, 389.35461pt x 290.88673pt>
+File: fotos/feed.pdf Graphic file (type pdf)
+<use fotos/feed.pdf>
+Package pdftex.def Info: fotos/feed.pdf  used on input line 283.
+(pdftex.def)             Requested size: 314.58018pt x 235.02663pt.
+
+
 pdfTeX warning: pdflatex (file ./fotos/3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/3.pdf, id=149, 389.35461pt x 422.77951pt>
+<fotos/3.pdf, id=147, 389.35461pt x 422.77951pt>
 File: fotos/3.pdf Graphic file (type pdf)
 <use fotos/3.pdf>
-Package pdftex.def Info: fotos/3.pdf  used on input line 258.
+Package pdftex.def Info: fotos/3.pdf  used on input line 292.
 (pdftex.def)             Requested size: 314.58018pt x 341.59152pt.
-[10 <./fotos/feed.pdf> <./fotos/3.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 270.
+[10 <./fotos/feed.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 304.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1320,32 +1616,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Overfull \hbox (12.10887pt too wide) in paragraph at lines 353--353
-[]|\T1/ppl/b/n/12 (-20) Identificador
+ [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/3.pdf>]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+[]\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
-
-Underfull \hbox (badness 1371) in paragraph at lines 358--358
-[]|\T1/ppl/m/n/12 (+20) Nivel de in-ven-tario
+> Step: build the whole table.
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
+[]\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
-[]|\T1/ppl/m/n/12 (+20) SatisfacciÛn del
- []
-
-
-Overfull \hbox (9.4018pt too wide) in paragraph at lines 351--364
- [][] 
- []
-
-[12] [13] [14] [15] [16]
-Overfull \hbox (10.95483pt too wide) in paragraph at lines 500--501
-\T1/ppl/m/it/12 (-20) sures \T1/ppl/m/n/12 (-20) us-ando la ex-pre-siÛn MDX: ``[Mea-sures].[Ingresos pres-en-cial] + [Mea-sures].[Ingresos
- []
-
-[17] [18] 
+[13] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux)
  ***********
@@ -1353,28 +1643,28 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 036AD84745C559F74EB65570FF53E75B;3028.
+(rerunfilecheck)             Checksum: 151343349F9D7BEF70A705886767E272;2868.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 25 (\begingroup)
+### semi simple group (level 1) entered at line 59 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33771 strings out of 474116
- 707611 string characters out of 5743682
- 2008187 words of memory out of 5000000
- 55356 multiletter control sequences out of 15000+600000
- 637731 words of font info for 339 fonts, out of 8000000 for 9000
+ 43735 strings out of 474116
+ 927127 string characters out of 5743682
+ 1998187 words of memory out of 5000000
+ 65123 multiletter control sequences out of 15000+600000
+ 646424 words of font info for 346 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,18n,107p,1092b,1336s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,18n,107p,1092b,1337s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (18 pages, 210546 bytes).
+Output written on build/main.pdf (14 pages, 201067 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 88221 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 102553 words of extra memory for PDF output out of 106986 (max. 10000000)
 
