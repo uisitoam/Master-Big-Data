@@ -371,7 +371,7 @@ K(x_i, x_{i'}) = \langle x, x' \rangle
 K(x_i, x_{i'}) = (1 + \langle x_i, x_{i'} \rangle)^d = \left(1 + \sum_{j = 1}^p x_{ij} x_{i'j}\right)^d
 \end{equation}
 
-A menor grado del polinomio, más riesgo de subaprendizaje.
+A menor grado del polinomio, más riesgo de subaprendizaje. Este kernel es más simple que el radial, que veremos a continuación.
 \item \textit{Kernel radial:}
 \begin{equation}
 K(x_i, x_{i'}) = \exp \left( - \gamma \sum_{j = 1}^p (x_{ij} - x_{i'j})^2 \right)
@@ -383,14 +383,43 @@ Ahora, veamos como influye aquí $\gamma$ en el aprendizaje. Con una gaussiana e
 \end{itemize}
 \end{itemize}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{fotos/57.png}
+\caption{Ejemplo de \textit{kernel} polinómico (grado 3) y \textit{kernel} radial. En el kernel polinómico, los margenes son los huecos comprendidos entre las líneas discontinuas, donde se encuentran ambas líneas continuas; todos los puntos dentro de estos márgenes son vectores de soporte. Para el caso de la gaussiana es más complicado de ver: básicamente, los puntos que están dentro de los círculos discontinuos son los que están fuera del margen y no son vectores de soporte; el resto, son los vectores de soporte.}
+\label{fig:12.2}
+\end{figure}
 
+\begin{example}
+Usamos un conjunto de datos de enefermedades cardiacas para comparar 
+Primero ajustamos LDA y el clasificador de vectores de soporte a los datos de entrenamiento.
+Nota que el clasificador de vectores de soporte es equivalente a un SVM utilizando un núcleo polinomial de grado $d = 1$.
+El panel de la izquierda de la Figura 9.10 muestra curvas ROC (descritas en la Sección 4.4.3) para las predicciones del conjunto de entrenamiento tanto para LDA como para el clasificador de vectores de soporte.
+Ambos clasificadores calculan puntuaciones de la forma
+
+\begin{equation}
+\hat{f}(X) = \hat{\beta}_0 + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2 + \dots + \hat{\beta}_p X_p
+\end{equation}
+
+para cada observación.
+Para cualquier umbral dado $t$, clasificamos las observaciones en las categorías de enfermedad cardíaca o sin enfermedad cardíaca dependiendo de si $\hat{f}(X) < t$ o $\hat{f}(X) \geq t$.
+La curva ROC se obtiene formando estas predicciones y calculando las tasas de falsos positivos y verdaderos positivos para una gama de valores de $t$.
+Un clasificador óptimo se acercará a la esquina superior izquierda del gráfico ROC.
+En este caso, LDA y el clasificador de vectores de soporte ambos se desempeñan bien, aunque existe una sugerencia de que el clasificador de vectores de soporte puede ser ligeramente superior.
+El panel de la derecha de la Figura 9.10 muestra curvas ROC para SVMs usando un núcleo radial, con varios valores de $\gamma$.
+A medida que $\gamma$ aumenta y el ajuste se vuelve más no lineal, las curvas ROC mejoran.
+Usar $\gamma = 10^{-1}$ parece dar una curva ROC casi perfecta.
+Sin embargo, estas curvas representan tasas de error de entrenamiento, lo que puede ser engañoso en términos de desempeño en nuevos datos de prueba.
+La Figura 9.11 muestra curvas ROC calculadas en las 90 observaciones de prueba.
+Observamos algunas diferencias con respecto a las curvas ROC de entrenamiento.
+En el panel de la izquierda de la Figura 9.11, el clasificador de vectores de soporte parece tener una pequeña ventaja sobre LDA (aunque estas diferencias no son estadísticamente significativas).
+En el panel de la derecha, el SVM usando $\gamma = 10^{-1}$, que mostró los mejores resultados en los datos de entrenamiento, produce las peores estimaciones en los datos de prueba.
+Esto nuevamente es evidencia de que aunque un método más flexible a menudo produce tasas de error de entrenamiento más bajas, esto no necesariamente conduce a un mejor desempeño en datos de prueba.
+Los SVMs con $\gamma = 10^{-2}$ y $\gamma = 10^{-3}$ se desempeñan de manera comparable al clasificador de vectores de soporte, y los tres superan al SVM con $\gamma = 10^{-1}$.
+\end{example}
 
 \section{10/12}
 
-
-Todo los que esten entre las lineas discontinuas son vectores de soporte (las lineas son las que tienen la linea negra en medio). PAra el caso de gaussianas (circulos. Lo que esta dentro de los circulos discontinuos NO son vect de soporte, el resto si.)
-
-kernel lineal es mas simple que polinomico o gaussiano. 
 
 HAsta ahora solo podemos hacer clasificacion binaria. 
 
