@@ -328,7 +328,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/alumnogreibd/Trabajo/ETL/CargarDatos.ktr</filename>
+      <filename>/home/alumnogreibd/Desktop/IN/Grupal/etl/CargarDatos.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -367,7 +367,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/alumnogreibd/Trabajo/ETL/CargarFinanzas.ktr</filename>
+      <filename>/home/alumnogreibd/Desktop/IN/Grupal/etl/CargarFinanzas.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -406,7 +406,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/alumnogreibd/Trabajo/ETL/CargarProducto.ktr</filename>
+      <filename>/home/alumnogreibd/Desktop/IN/Grupal/etl/CargarProducto.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -445,7 +445,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/alumnogreibd/Trabajo/ETL/cargarSatisfaccion.ktr</filename>
+      <filename>/home/alumnogreibd/Desktop/IN/Grupal/etl/cargarSatisfaccion.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -484,7 +484,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>/home/alumnogreibd/Trabajo/ETL/cargarDimensiones.ktr</filename>
+      <filename>/home/alumnogreibd/Desktop/IN/Grupal/etl/cargarDimensiones.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>

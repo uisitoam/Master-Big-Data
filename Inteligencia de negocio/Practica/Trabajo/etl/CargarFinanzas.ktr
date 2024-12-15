@@ -11,7 +11,7 @@
     <parameters>
       <parameter>
         <name>carpeta_entrada</name>
-        <default_value>/home/alumnogreibd/Trabajo/finanzas</default_value>
+        <default_value>/home/alumnogreibd/Desktop/IN/Grupal/finanzas</default_value>
         <description/>
       </parameter>
     </parameters>
@@ -446,7 +446,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>Guachinche</database>
+    <database>guachinche</database>
     <port>5432</port>
     <username>alumnogreibd</username>
     <password>Encrypted 2be98afc86aa79596ae10ac748cc2fd8b</password>
@@ -494,23 +494,28 @@
   </connection>
   <order>
     <hop>
+      <from>ObtenerDatos</from>
+      <to>CalcularAnoMes</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>CalcularAnoMes</from>
+      <to>ObtenerFecha</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ObtenerFecha</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
       <to>Group by</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Group by</from>
-      <to>CalculosIntermedios</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CalculosIntermedios</from>
       <to>Table output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>ObtenerDatos</from>
-      <to>CalcularAnoMes</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -565,123 +570,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>CalculosIntermedios</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <field_name>Porcentaje_nuevos_clientes_presencial</field_name>
-      <calc_type>PERCENT_1</calc_type>
-      <field_a>nuevos_clientes_presencial</field_a>
-      <field_b>numero_clientes_presencial</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>Porcentaje_nuevos_clientes_domicilio</field_name>
-      <calc_type>PERCENT_1</calc_type>
-      <field_a>nuevos_clientes_domicilio</field_a>
-      <field_b>numero_clientes_domicilio</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>Ratio_presencial_domicilio</field_name>
-      <calc_type>DIVIDE</calc_type>
-      <field_a>numero_clientes_presencial</field_a>
-      <field_b>numero_clientes_domicilio</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>Ratio_ingresos_presencial_domicilio</field_name>
-      <calc_type>DIVIDE</calc_type>
-      <field_a>ingresos_presencial</field_a>
-      <field_b>ingresos_domicilio</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>Ingresos_por_cliente_domicilio</field_name>
-      <calc_type>DIVIDE</calc_type>
-      <field_a>ingresos_domicilio</field_a>
-      <field_b>numero_clientes_domicilio</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>Ingresos_por_cliente_presencial</field_name>
-      <calc_type>DIVIDE</calc_type>
-      <field_a>ingresos_presencial</field_a>
-      <field_b>numero_clientes_presencial</field_b>
-      <field_c/>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
+      <xloc>400</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -710,10 +599,7 @@
         <name>id</name>
       </field>
       <field>
-        <name>ano</name>
-      </field>
-      <field>
-        <name>mes</name>
+        <name>fecha</name>
       </field>
     </group>
     <fields>
@@ -771,6 +657,12 @@
         <type>AVERAGE</type>
         <valuefield/>
       </field>
+      <field>
+        <aggregate>personal</aggregate>
+        <subject>personal</subject>
+        <type>AVERAGE</type>
+        <valuefield/>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -781,7 +673,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
+      <xloc>672</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -910,6 +802,110 @@
     </GUI>
   </step>
   <step>
+    <name>ObtenerFecha</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Restaurante</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>dim_tiempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ano</name>
+        <field>ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes</name>
+        <field>mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>fecha</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Table output</name>
     <type>TableOutput</type>
     <description/>
@@ -922,7 +918,7 @@
     </partitioning>
     <connection>Restaurante</connection>
     <schema>public</schema>
-    <table>finanzas</table>
+    <table>fact_finanzas</table>
     <commit>10000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -939,16 +935,12 @@
     <return_field/>
     <fields>
       <field>
-        <column_name>id</column_name>
+        <column_name>restaurante</column_name>
         <stream_name>id</stream_name>
       </field>
       <field>
-        <column_name>ano</column_name>
-        <stream_name>ano</stream_name>
-      </field>
-      <field>
-        <column_name>mes</column_name>
-        <stream_name>mes</stream_name>
+        <column_name>fecha</column_name>
+        <stream_name>fecha</stream_name>
       </field>
       <field>
         <column_name>alquiler</column_name>
@@ -971,28 +963,24 @@
         <stream_name>ingresos_domicilio</stream_name>
       </field>
       <field>
-        <column_name>Porcentaje_nuevos_clientes_presencial</column_name>
-        <stream_name>Porcentaje_nuevos_clientes_presencial</stream_name>
+        <column_name>numero_clientes_presencial</column_name>
+        <stream_name>numero_clientes_presencial</stream_name>
       </field>
       <field>
-        <column_name>Porcentaje_nuevos_clientes_domicilio</column_name>
-        <stream_name>Porcentaje_nuevos_clientes_domicilio</stream_name>
+        <column_name>numero_clientes_domicilio</column_name>
+        <stream_name>numero_clientes_domicilio</stream_name>
       </field>
       <field>
-        <column_name>Ratio_ingresos_presencial_domicilio</column_name>
-        <stream_name>Ratio_ingresos_presencial_domicilio</stream_name>
+        <column_name>nuevos_clientes_presencial</column_name>
+        <stream_name>nuevos_clientes_presencial</stream_name>
       </field>
       <field>
-        <column_name>Ratio_presencial_domicilio</column_name>
-        <stream_name>Ratio_presencial_domicilio</stream_name>
+        <column_name>nuevos_clientes_domicilio</column_name>
+        <stream_name>nuevos_clientes_domicilio</stream_name>
       </field>
       <field>
-        <column_name>Ingresos_por_cliente_domicilio</column_name>
-        <stream_name>Ingresos_por_cliente_domicilio</stream_name>
-      </field>
-      <field>
-        <column_name>Ingresos_por_cliente_presencial</column_name>
-        <stream_name>Ingresos_por_cliente_presencial</stream_name>
+        <column_name>personal</column_name>
+        <stream_name>personal</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -1004,7 +992,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>752</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>

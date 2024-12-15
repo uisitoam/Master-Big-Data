@@ -1,0 +1,15 @@
+WITH
+SET [~COLUMNS] AS
+    {[Restaurante.jerarquiaRestaurantes].[ciudad].Members}
+MEMBER [Measures].[valoracion_media] AS
+    ((([Measures].[Valoracion personal] + [Measures].[Valoracion ambiente]) + [Measures].[Valoracion comida]) / 3), FORMAT_STRING = "#,##0.00"
+SET [~Tiempo_Tiempo.jerarquiaTiempo_ano] AS
+    Exists({[Tiempo.jerarquiaTiempo].[ano].Members}, [~Tiempo_Tiempo.jerarquiaTiempo_mes])
+SET [~Tiempo_Tiempo.jerarquiaTiempo_mes] AS
+    {[Tiempo.jerarquiaTiempo].[2022].[Enero], [Tiempo.jerarquiaTiempo].[2023].[Enero], [Tiempo.jerarquiaTiempo].[2024].[Enero], [Tiempo.jerarquiaTiempo].[2021].[Diciembre], [Tiempo.jerarquiaTiempo].[2022].[Diciembre], [Tiempo.jerarquiaTiempo].[2023].[Diciembre]}
+SET [~ROWS] AS
+    Hierarchize({[~Tiempo_Tiempo.jerarquiaTiempo_ano], [~Tiempo_Tiempo.jerarquiaTiempo_mes]})
+SELECT
+NON EMPTY CrossJoin([~COLUMNS], {[Measures].[valoracion_media]}) ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Feedback]

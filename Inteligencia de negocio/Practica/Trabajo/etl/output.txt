@@ -1,0 +1,616 @@
+2024/12/14 20:45:39 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2024/12/14 20:46:21 - Spoon - Starting job...
+2024/12/14 20:46:21 - Etl - Start of job execution
+2024/12/14 20:46:21 - Etl - Starting entry [CargarDatos]
+2024/12/14 20:46:21 - CargarDatos - Using run configuration [Pentaho local]
+2024/12/14 20:46:21 - CargarDatos - Running transformation using the Kettle execution engine
+2024/12/14 20:46:22 - CargarDatos - Dispatching started for transformation [CargarDatos]
+2024/12/14 20:46:22 - Table output.0 - Connected to database [Restaurantes] (commit=1000)
+2024/12/14 20:46:36 - ObtenerDatosFinanzas.0 - Finished processing (I=468, O=0, R=0, W=468, U=0, E=0)
+2024/12/14 20:46:36 - OrdenarFinanzas.0 - Finished processing (I=0, O=0, R=468, W=468, U=0, E=0)
+2024/12/14 20:46:45 - ObtenerDatosPlatos.0 - Finished processing (I=11592, O=0, R=0, W=11592, U=0, E=0)
+2024/12/14 20:46:46 - OrdenarPlatos.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:46:47 - Merge join.0 - Finished processing (I=0, O=0, R=12060, W=11592, U=0, E=0)
+2024/12/14 20:46:48 - If field value is null.0 - Finished processing (I=0, O=0, R=11592, W=23184, U=0, E=0)
+2024/12/14 20:46:56 - CopiarDatosAlTrabajo.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:46:56 - Table output.0 - Finished processing (I=0, O=11592, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:46:56 - Etl - Starting entry [CargarDimensiones]
+2024/12/14 20:47:00 - CargarDimensiones - Using run configuration [Pentaho local]
+2024/12/14 20:47:00 - CargarDimensiones - Running transformation using the Kettle execution engine
+2024/12/14 20:47:00 - cargarDimensiones - Dispatching started for transformation [cargarDimensiones]
+2024/12/14 20:47:02 - ObetenerRestaurantesPlatos.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:47:05 - CalcularAnoMes.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:47:05 - Value mapper mes.0 - Finished processing (I=0, O=0, R=11592, W=46368, U=0, E=0)
+2024/12/14 20:47:05 - EliminarDuplicadosPlatos.0 - Finished processing (I=0, O=0, R=11592, W=40, U=0, E=11552)
+2024/12/14 20:47:05 - EliminarDuplicadosTiempo.0 - Finished processing (I=0, O=0, R=11592, W=36, U=0, E=11556)
+2024/12/14 20:47:05 - EliminarDuplicadosRestaurante.0 - Finished processing (I=0, O=0, R=11592, W=13, U=0, E=11579)
+2024/12/14 20:47:05 - Value mapper ciudad.0 - Finished processing (I=0, O=0, R=13, W=13, U=0, E=0)
+2024/12/14 20:47:05 - Value mapper pais.0 - Finished processing (I=0, O=0, R=13, W=13, U=0, E=0)
+2024/12/14 20:47:05 - Insert / update tiempo.0 - Finished processing (I=36, O=36, R=36, W=36, U=0, E=0)
+2024/12/14 20:47:05 - Insert / update restuarante.0 - Finished processing (I=13, O=13, R=13, W=13, U=0, E=0)
+2024/12/14 20:47:05 - Insert / update productos.0 - Finished processing (I=40, O=40, R=40, W=40, U=0, E=0)
+2024/12/14 20:47:07 - Copy rows to result.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 20:47:07 - Etl - Starting entry [CargarSatisfaccion]
+2024/12/14 20:47:09 - CargarSatisfaccion - Using run configuration [Pentaho local]
+2024/12/14 20:47:09 - CargarSatisfaccion - Running transformation using the Kettle execution engine
+2024/12/14 20:47:09 - cargarSatisfaccion - Dispatching started for transformation [cargarSatisfaccion]
+2024/12/14 20:47:10 - Table output.0 - Connected to database [Restaurantes] (commit=10000)
+2024/12/14 20:47:11 - ObtenerArchivosCsv.0 - Finished processing (I=0, O=0, R=0, W=468, U=0, E=0)
+2024/12/14 20:47:11 - CargarCSVsvotos.0 - Reading from 468 files.
+2024/12/14 20:47:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-02-01.csv'
+2024/12/14 20:47:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-03-01.csv'
+2024/12/14 20:47:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-04-01.csv'
+2024/12/14 20:47:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-05-01.csv'
+2024/12/14 20:47:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-06-01.csv'
+2024/12/14 20:47:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-07-01.csv'
+2024/12/14 20:47:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-08-01.csv'
+2024/12/14 20:47:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-09-01.csv'
+2024/12/14 20:47:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-10-01.csv'
+2024/12/14 20:47:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-11-01.csv'
+2024/12/14 20:47:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2021-12-01.csv'
+2024/12/14 20:47:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-01-01.csv'
+2024/12/14 20:47:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-02-01.csv'
+2024/12/14 20:47:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-03-01.csv'
+2024/12/14 20:47:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-04-01.csv'
+2024/12/14 20:47:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-05-01.csv'
+2024/12/14 20:47:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-06-01.csv'
+2024/12/14 20:47:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-07-01.csv'
+2024/12/14 20:48:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-08-01.csv'
+2024/12/14 20:48:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-09-01.csv'
+2024/12/14 20:48:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-10-01.csv'
+2024/12/14 20:48:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-11-01.csv'
+2024/12/14 20:48:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2022-12-01.csv'
+2024/12/14 20:48:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-01-01.csv'
+2024/12/14 20:48:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-02-01.csv'
+2024/12/14 20:48:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-03-01.csv'
+2024/12/14 20:48:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-04-01.csv'
+2024/12/14 20:48:20 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-05-01.csv'
+2024/12/14 20:48:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-06-01.csv'
+2024/12/14 20:48:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-07-01.csv'
+2024/12/14 20:48:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-08-01.csv'
+2024/12/14 20:48:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-09-01.csv'
+2024/12/14 20:48:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-10-01.csv'
+2024/12/14 20:48:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-11-01.csv'
+2024/12/14 20:48:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2023-12-01.csv'
+2024/12/14 20:48:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/10_2024-01-01.csv'
+2024/12/14 20:48:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-02-01.csv'
+2024/12/14 20:48:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-03-01.csv'
+2024/12/14 20:48:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-04-01.csv'
+2024/12/14 20:48:38 - CargarCSVsvotos.0 - Line number : 50000
+2024/12/14 20:48:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-05-01.csv'
+2024/12/14 20:48:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-06-01.csv'
+2024/12/14 20:48:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-07-01.csv'
+2024/12/14 20:48:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-08-01.csv'
+2024/12/14 20:48:45 - CalcularAnoMes.0 - Linenr 50000
+2024/12/14 20:48:46 - ObtenerFecha.0 - linenr 50000
+2024/12/14 20:48:46 - Sort rows.0 - Linenr 50000
+2024/12/14 20:48:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-09-01.csv'
+2024/12/14 20:48:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-10-01.csv'
+2024/12/14 20:48:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-11-01.csv'
+2024/12/14 20:48:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2021-12-01.csv'
+2024/12/14 20:48:55 - Database join.0 - linenr 50000
+2024/12/14 20:48:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-01-01.csv'
+2024/12/14 20:49:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-02-01.csv'
+2024/12/14 20:49:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-03-01.csv'
+2024/12/14 20:49:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-04-01.csv'
+2024/12/14 20:49:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-05-01.csv'
+2024/12/14 20:49:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-06-01.csv'
+2024/12/14 20:49:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-07-01.csv'
+2024/12/14 20:49:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-08-01.csv'
+2024/12/14 20:49:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-09-01.csv'
+2024/12/14 20:49:20 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-10-01.csv'
+2024/12/14 20:49:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-11-01.csv'
+2024/12/14 20:49:24 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2022-12-01.csv'
+2024/12/14 20:49:26 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-01-01.csv'
+2024/12/14 20:49:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-02-01.csv'
+2024/12/14 20:49:29 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-03-01.csv'
+2024/12/14 20:49:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-04-01.csv'
+2024/12/14 20:49:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-05-01.csv'
+2024/12/14 20:49:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-06-01.csv'
+2024/12/14 20:49:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-07-01.csv'
+2024/12/14 20:49:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-08-01.csv'
+2024/12/14 20:49:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-09-01.csv'
+2024/12/14 20:49:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-10-01.csv'
+2024/12/14 20:49:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-11-01.csv'
+2024/12/14 20:49:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2023-12-01.csv'
+2024/12/14 20:49:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/11_2024-01-01.csv'
+2024/12/14 20:49:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-02-01.csv'
+2024/12/14 20:49:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-03-01.csv'
+2024/12/14 20:49:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-04-01.csv'
+2024/12/14 20:49:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-05-01.csv'
+2024/12/14 20:50:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-06-01.csv'
+2024/12/14 20:50:02 - CargarCSVsvotos.0 - Line number : 100000
+2024/12/14 20:50:03 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-07-01.csv'
+2024/12/14 20:50:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-08-01.csv'
+2024/12/14 20:50:06 - CalcularAnoMes.0 - Linenr 100000
+2024/12/14 20:50:06 - ObtenerFecha.0 - linenr 100000
+2024/12/14 20:50:06 - Sort rows.0 - Linenr 100000
+2024/12/14 20:50:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-09-01.csv'
+2024/12/14 20:50:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-10-01.csv'
+2024/12/14 20:50:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-11-01.csv'
+2024/12/14 20:50:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2021-12-01.csv'
+2024/12/14 20:50:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-01-01.csv'
+2024/12/14 20:50:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-02-01.csv'
+2024/12/14 20:50:16 - Database join.0 - linenr 100000
+2024/12/14 20:50:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-03-01.csv'
+2024/12/14 20:50:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-04-01.csv'
+2024/12/14 20:50:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-05-01.csv'
+2024/12/14 20:50:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-06-01.csv'
+2024/12/14 20:50:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-07-01.csv'
+2024/12/14 20:50:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-08-01.csv'
+2024/12/14 20:50:29 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-09-01.csv'
+2024/12/14 20:50:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-10-01.csv'
+2024/12/14 20:50:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-11-01.csv'
+2024/12/14 20:50:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2022-12-01.csv'
+2024/12/14 20:50:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-01-01.csv'
+2024/12/14 20:50:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-02-01.csv'
+2024/12/14 20:50:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-03-01.csv'
+2024/12/14 20:50:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-04-01.csv'
+2024/12/14 20:50:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-05-01.csv'
+2024/12/14 20:50:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-06-01.csv'
+2024/12/14 20:50:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-07-01.csv'
+2024/12/14 20:50:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-08-01.csv'
+2024/12/14 20:50:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-09-01.csv'
+2024/12/14 20:50:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-10-01.csv'
+2024/12/14 20:50:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-11-01.csv'
+2024/12/14 20:50:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2023-12-01.csv'
+2024/12/14 20:50:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/12_2024-01-01.csv'
+2024/12/14 20:51:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-02-01.csv'
+2024/12/14 20:51:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-03-01.csv'
+2024/12/14 20:51:03 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-04-01.csv'
+2024/12/14 20:51:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-05-01.csv'
+2024/12/14 20:51:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-06-01.csv'
+2024/12/14 20:51:11 - CalcularAnoMes.0 - Linenr 150000
+2024/12/14 20:51:11 - ObtenerFecha.0 - linenr 150000
+2024/12/14 20:51:11 - Sort rows.0 - Linenr 150000
+2024/12/14 20:51:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-07-01.csv'
+2024/12/14 20:51:12 - CargarCSVsvotos.0 - Line number : 150000
+2024/12/14 20:51:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-08-01.csv'
+2024/12/14 20:51:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-09-01.csv'
+2024/12/14 20:51:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-10-01.csv'
+2024/12/14 20:51:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-11-01.csv'
+2024/12/14 20:51:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2021-12-01.csv'
+2024/12/14 20:51:24 - Database join.0 - linenr 150000
+2024/12/14 20:51:24 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-01-01.csv'
+2024/12/14 20:51:26 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-02-01.csv'
+2024/12/14 20:51:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-03-01.csv'
+2024/12/14 20:51:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-04-01.csv'
+2024/12/14 20:51:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-05-01.csv'
+2024/12/14 20:51:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-06-01.csv'
+2024/12/14 20:51:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-07-01.csv'
+2024/12/14 20:51:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-08-01.csv'
+2024/12/14 20:51:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-09-01.csv'
+2024/12/14 20:51:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-10-01.csv'
+2024/12/14 20:51:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-11-01.csv'
+2024/12/14 20:51:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2022-12-01.csv'
+2024/12/14 20:51:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-01-01.csv'
+2024/12/14 20:51:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-02-01.csv'
+2024/12/14 20:51:53 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-03-01.csv'
+2024/12/14 20:51:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-04-01.csv'
+2024/12/14 20:51:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-05-01.csv'
+2024/12/14 20:51:59 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-06-01.csv'
+2024/12/14 20:52:02 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-07-01.csv'
+2024/12/14 20:52:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-08-01.csv'
+2024/12/14 20:52:06 - CalcularAnoMes.0 - Linenr 200000
+2024/12/14 20:52:06 - ObtenerFecha.0 - linenr 200000
+2024/12/14 20:52:06 - Sort rows.0 - Linenr 200000
+2024/12/14 20:52:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-09-01.csv'
+2024/12/14 20:52:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-10-01.csv'
+2024/12/14 20:52:12 - CargarCSVsvotos.0 - Line number : 200000
+2024/12/14 20:52:13 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-11-01.csv'
+2024/12/14 20:52:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2023-12-01.csv'
+2024/12/14 20:52:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/13_2024-01-01.csv'
+2024/12/14 20:52:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-02-01.csv'
+2024/12/14 20:52:24 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-03-01.csv'
+2024/12/14 20:52:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-04-01.csv'
+2024/12/14 20:52:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-05-01.csv'
+2024/12/14 20:52:27 - Database join.0 - linenr 200000
+2024/12/14 20:52:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-06-01.csv'
+2024/12/14 20:52:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-07-01.csv'
+2024/12/14 20:52:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-08-01.csv'
+2024/12/14 20:52:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-09-01.csv'
+2024/12/14 20:52:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-10-01.csv'
+2024/12/14 20:52:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-11-01.csv'
+2024/12/14 20:52:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2021-12-01.csv'
+2024/12/14 20:52:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-01-01.csv'
+2024/12/14 20:52:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-02-01.csv'
+2024/12/14 20:52:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-03-01.csv'
+2024/12/14 20:52:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-04-01.csv'
+2024/12/14 20:52:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-05-01.csv'
+2024/12/14 20:52:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-06-01.csv'
+2024/12/14 20:52:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-07-01.csv'
+2024/12/14 20:52:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-08-01.csv'
+2024/12/14 20:52:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-09-01.csv'
+2024/12/14 20:52:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-10-01.csv'
+2024/12/14 20:52:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-11-01.csv'
+2024/12/14 20:52:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2022-12-01.csv'
+2024/12/14 20:53:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-01-01.csv'
+2024/12/14 20:53:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-02-01.csv'
+2024/12/14 20:53:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-03-01.csv'
+2024/12/14 20:53:07 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-04-01.csv'
+2024/12/14 20:53:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-05-01.csv'
+2024/12/14 20:53:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-06-01.csv'
+2024/12/14 20:53:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-07-01.csv'
+2024/12/14 20:53:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-08-01.csv'
+2024/12/14 20:53:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-09-01.csv'
+2024/12/14 20:53:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-10-01.csv'
+2024/12/14 20:53:20 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-11-01.csv'
+2024/12/14 20:53:21 - CalcularAnoMes.0 - Linenr 250000
+2024/12/14 20:53:21 - CargarCSVsvotos.0 - Line number : 250000
+2024/12/14 20:53:21 - ObtenerFecha.0 - linenr 250000
+2024/12/14 20:53:21 - Sort rows.0 - Linenr 250000
+2024/12/14 20:53:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2023-12-01.csv'
+2024/12/14 20:53:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/1_2024-01-01.csv'
+2024/12/14 20:53:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-02-01.csv'
+2024/12/14 20:53:26 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-03-01.csv'
+2024/12/14 20:53:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-04-01.csv'
+2024/12/14 20:53:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-05-01.csv'
+2024/12/14 20:53:29 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-06-01.csv'
+2024/12/14 20:53:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-07-01.csv'
+2024/12/14 20:53:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-08-01.csv'
+2024/12/14 20:53:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-09-01.csv'
+2024/12/14 20:53:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-10-01.csv'
+2024/12/14 20:53:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-11-01.csv'
+2024/12/14 20:53:33 - Database join.0 - linenr 250000
+2024/12/14 20:53:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2021-12-01.csv'
+2024/12/14 20:53:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-01-01.csv'
+2024/12/14 20:53:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-02-01.csv'
+2024/12/14 20:53:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-03-01.csv'
+2024/12/14 20:53:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-04-01.csv'
+2024/12/14 20:53:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-05-01.csv'
+2024/12/14 20:53:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-06-01.csv'
+2024/12/14 20:53:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-07-01.csv'
+2024/12/14 20:53:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-08-01.csv'
+2024/12/14 20:53:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-09-01.csv'
+2024/12/14 20:53:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-10-01.csv'
+2024/12/14 20:53:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-11-01.csv'
+2024/12/14 20:53:46 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2022-12-01.csv'
+2024/12/14 20:53:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-01-01.csv'
+2024/12/14 20:53:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-02-01.csv'
+2024/12/14 20:53:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-03-01.csv'
+2024/12/14 20:53:50 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-04-01.csv'
+2024/12/14 20:53:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-05-01.csv'
+2024/12/14 20:53:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-06-01.csv'
+2024/12/14 20:53:53 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-07-01.csv'
+2024/12/14 20:53:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-08-01.csv'
+2024/12/14 20:53:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-09-01.csv'
+2024/12/14 20:53:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-10-01.csv'
+2024/12/14 20:53:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-11-01.csv'
+2024/12/14 20:53:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2023-12-01.csv'
+2024/12/14 20:53:59 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/2_2024-01-01.csv'
+2024/12/14 20:54:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-02-01.csv'
+2024/12/14 20:54:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-03-01.csv'
+2024/12/14 20:54:03 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-04-01.csv'
+2024/12/14 20:54:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-05-01.csv'
+2024/12/14 20:54:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-06-01.csv'
+2024/12/14 20:54:07 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-07-01.csv'
+2024/12/14 20:54:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-08-01.csv'
+2024/12/14 20:54:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-09-01.csv'
+2024/12/14 20:54:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-10-01.csv'
+2024/12/14 20:54:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-11-01.csv'
+2024/12/14 20:54:13 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2021-12-01.csv'
+2024/12/14 20:54:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-01-01.csv'
+2024/12/14 20:54:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-02-01.csv'
+2024/12/14 20:54:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-03-01.csv'
+2024/12/14 20:54:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-04-01.csv'
+2024/12/14 20:54:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-05-01.csv'
+2024/12/14 20:54:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-06-01.csv'
+2024/12/14 20:54:21 - CargarCSVsvotos.0 - Line number : 300000
+2024/12/14 20:54:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-07-01.csv'
+2024/12/14 20:54:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-08-01.csv'
+2024/12/14 20:54:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-09-01.csv'
+2024/12/14 20:54:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-10-01.csv'
+2024/12/14 20:54:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-11-01.csv'
+2024/12/14 20:54:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2022-12-01.csv'
+2024/12/14 20:54:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-01-01.csv'
+2024/12/14 20:54:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-02-01.csv'
+2024/12/14 20:54:34 - CalcularAnoMes.0 - Linenr 300000
+2024/12/14 20:54:34 - ObtenerFecha.0 - linenr 300000
+2024/12/14 20:54:35 - Sort rows.0 - Linenr 300000
+2024/12/14 20:54:35 - Database join.0 - linenr 300000
+2024/12/14 20:54:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-03-01.csv'
+2024/12/14 20:54:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-04-01.csv'
+2024/12/14 20:54:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-05-01.csv'
+2024/12/14 20:54:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-06-01.csv'
+2024/12/14 20:54:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-07-01.csv'
+2024/12/14 20:54:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-08-01.csv'
+2024/12/14 20:54:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-09-01.csv'
+2024/12/14 20:54:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-10-01.csv'
+2024/12/14 20:54:46 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-11-01.csv'
+2024/12/14 20:54:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2023-12-01.csv'
+2024/12/14 20:54:50 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/3_2024-01-01.csv'
+2024/12/14 20:54:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-02-01.csv'
+2024/12/14 20:54:53 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-03-01.csv'
+2024/12/14 20:54:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-04-01.csv'
+2024/12/14 20:54:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-05-01.csv'
+2024/12/14 20:54:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-06-01.csv'
+2024/12/14 20:55:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-07-01.csv'
+2024/12/14 20:55:02 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-08-01.csv'
+2024/12/14 20:55:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-09-01.csv'
+2024/12/14 20:55:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-10-01.csv'
+2024/12/14 20:55:07 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-11-01.csv'
+2024/12/14 20:55:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2021-12-01.csv'
+2024/12/14 20:55:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-01-01.csv'
+2024/12/14 20:55:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-02-01.csv'
+2024/12/14 20:55:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-03-01.csv'
+2024/12/14 20:55:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-04-01.csv'
+2024/12/14 20:55:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-05-01.csv'
+2024/12/14 20:55:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-06-01.csv'
+2024/12/14 20:55:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-07-01.csv'
+2024/12/14 20:55:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-08-01.csv'
+2024/12/14 20:55:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-09-01.csv'
+2024/12/14 20:55:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-10-01.csv'
+2024/12/14 20:55:24 - CargarCSVsvotos.0 - Line number : 350000
+2024/12/14 20:55:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-11-01.csv'
+2024/12/14 20:55:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2022-12-01.csv'
+2024/12/14 20:55:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-01-01.csv'
+2024/12/14 20:55:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-02-01.csv'
+2024/12/14 20:55:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-03-01.csv'
+2024/12/14 20:55:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-04-01.csv'
+2024/12/14 20:55:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-05-01.csv'
+2024/12/14 20:55:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-06-01.csv'
+2024/12/14 20:55:36 - Database join.0 - linenr 350000
+2024/12/14 20:55:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-07-01.csv'
+2024/12/14 20:55:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-08-01.csv'
+2024/12/14 20:55:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-09-01.csv'
+2024/12/14 20:55:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-10-01.csv'
+2024/12/14 20:55:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-11-01.csv'
+2024/12/14 20:55:46 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2023-12-01.csv'
+2024/12/14 20:55:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/4_2024-01-01.csv'
+2024/12/14 20:55:49 - CalcularAnoMes.0 - Linenr 350000
+2024/12/14 20:55:49 - ObtenerFecha.0 - linenr 350000
+2024/12/14 20:55:49 - Sort rows.0 - Linenr 350000
+2024/12/14 20:55:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-02-01.csv'
+2024/12/14 20:55:50 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-03-01.csv'
+2024/12/14 20:55:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-04-01.csv'
+2024/12/14 20:55:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-05-01.csv'
+2024/12/14 20:55:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-06-01.csv'
+2024/12/14 20:55:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-07-01.csv'
+2024/12/14 20:55:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-08-01.csv'
+2024/12/14 20:55:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-09-01.csv'
+2024/12/14 20:55:59 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-10-01.csv'
+2024/12/14 20:56:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-11-01.csv'
+2024/12/14 20:56:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2021-12-01.csv'
+2024/12/14 20:56:03 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-01-01.csv'
+2024/12/14 20:56:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-02-01.csv'
+2024/12/14 20:56:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-03-01.csv'
+2024/12/14 20:56:07 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-04-01.csv'
+2024/12/14 20:56:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-05-01.csv'
+2024/12/14 20:56:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-06-01.csv'
+2024/12/14 20:56:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-07-01.csv'
+2024/12/14 20:56:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-08-01.csv'
+2024/12/14 20:56:13 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-09-01.csv'
+2024/12/14 20:56:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-10-01.csv'
+2024/12/14 20:56:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-11-01.csv'
+2024/12/14 20:56:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2022-12-01.csv'
+2024/12/14 20:56:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-01-01.csv'
+2024/12/14 20:56:20 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-02-01.csv'
+2024/12/14 20:56:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-03-01.csv'
+2024/12/14 20:56:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-04-01.csv'
+2024/12/14 20:56:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-05-01.csv'
+2024/12/14 20:56:24 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-06-01.csv'
+2024/12/14 20:56:25 - CargarCSVsvotos.0 - Line number : 400000
+2024/12/14 20:56:26 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-07-01.csv'
+2024/12/14 20:56:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-08-01.csv'
+2024/12/14 20:56:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-09-01.csv'
+2024/12/14 20:56:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-10-01.csv'
+2024/12/14 20:56:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-11-01.csv'
+2024/12/14 20:56:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2023-12-01.csv'
+2024/12/14 20:56:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/5_2024-01-01.csv'
+2024/12/14 20:56:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-02-01.csv'
+2024/12/14 20:56:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-03-01.csv'
+2024/12/14 20:56:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-04-01.csv'
+2024/12/14 20:56:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-05-01.csv'
+2024/12/14 20:56:37 - Database join.0 - linenr 400000
+2024/12/14 20:56:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-06-01.csv'
+2024/12/14 20:56:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-07-01.csv'
+2024/12/14 20:56:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-08-01.csv'
+2024/12/14 20:56:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-09-01.csv'
+2024/12/14 20:56:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-10-01.csv'
+2024/12/14 20:56:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-11-01.csv'
+2024/12/14 20:56:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2021-12-01.csv'
+2024/12/14 20:56:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-01-01.csv'
+2024/12/14 20:56:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-02-01.csv'
+2024/12/14 20:56:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-03-01.csv'
+2024/12/14 20:56:46 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-04-01.csv'
+2024/12/14 20:56:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-05-01.csv'
+2024/12/14 20:56:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-06-01.csv'
+2024/12/14 20:56:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-07-01.csv'
+2024/12/14 20:56:50 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-08-01.csv'
+2024/12/14 20:56:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-09-01.csv'
+2024/12/14 20:56:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-10-01.csv'
+2024/12/14 20:56:53 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-11-01.csv'
+2024/12/14 20:56:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2022-12-01.csv'
+2024/12/14 20:56:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-01-01.csv'
+2024/12/14 20:56:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-02-01.csv'
+2024/12/14 20:56:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-03-01.csv'
+2024/12/14 20:56:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-04-01.csv'
+2024/12/14 20:56:59 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-05-01.csv'
+2024/12/14 20:56:59 - CalcularAnoMes.0 - Linenr 400000
+2024/12/14 20:56:59 - ObtenerFecha.0 - linenr 400000
+2024/12/14 20:57:00 - Sort rows.0 - Linenr 400000
+2024/12/14 20:57:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-06-01.csv'
+2024/12/14 20:57:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-07-01.csv'
+2024/12/14 20:57:02 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-08-01.csv'
+2024/12/14 20:57:03 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-09-01.csv'
+2024/12/14 20:57:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-10-01.csv'
+2024/12/14 20:57:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-11-01.csv'
+2024/12/14 20:57:05 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2023-12-01.csv'
+2024/12/14 20:57:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/6_2024-01-01.csv'
+2024/12/14 20:57:07 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-02-01.csv'
+2024/12/14 20:57:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-03-01.csv'
+2024/12/14 20:57:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-04-01.csv'
+2024/12/14 20:57:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-05-01.csv'
+2024/12/14 20:57:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-06-01.csv'
+2024/12/14 20:57:13 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-07-01.csv'
+2024/12/14 20:57:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-08-01.csv'
+2024/12/14 20:57:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-09-01.csv'
+2024/12/14 20:57:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-10-01.csv'
+2024/12/14 20:57:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-11-01.csv'
+2024/12/14 20:57:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2021-12-01.csv'
+2024/12/14 20:57:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-01-01.csv'
+2024/12/14 20:57:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-02-01.csv'
+2024/12/14 20:57:23 - CargarCSVsvotos.0 - Line number : 450000
+2024/12/14 20:57:24 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-03-01.csv'
+2024/12/14 20:57:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-04-01.csv'
+2024/12/14 20:57:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-05-01.csv'
+2024/12/14 20:57:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-06-01.csv'
+2024/12/14 20:57:29 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-07-01.csv'
+2024/12/14 20:57:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-08-01.csv'
+2024/12/14 20:57:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-09-01.csv'
+2024/12/14 20:57:34 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-10-01.csv'
+2024/12/14 20:57:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-11-01.csv'
+2024/12/14 20:57:36 - Database join.0 - linenr 450000
+2024/12/14 20:57:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2022-12-01.csv'
+2024/12/14 20:57:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-01-01.csv'
+2024/12/14 20:57:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-02-01.csv'
+2024/12/14 20:57:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-03-01.csv'
+2024/12/14 20:57:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-04-01.csv'
+2024/12/14 20:57:44 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-05-01.csv'
+2024/12/14 20:57:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-06-01.csv'
+2024/12/14 20:57:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-07-01.csv'
+2024/12/14 20:57:48 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-08-01.csv'
+2024/12/14 20:57:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-09-01.csv'
+2024/12/14 20:57:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-10-01.csv'
+2024/12/14 20:57:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-11-01.csv'
+2024/12/14 20:57:54 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2023-12-01.csv'
+2024/12/14 20:57:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/7_2024-01-01.csv'
+2024/12/14 20:57:56 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-02-01.csv'
+2024/12/14 20:57:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-03-01.csv'
+2024/12/14 20:58:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-04-01.csv'
+2024/12/14 20:58:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-05-01.csv'
+2024/12/14 20:58:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-06-01.csv'
+2024/12/14 20:58:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-07-01.csv'
+2024/12/14 20:58:10 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-08-01.csv'
+2024/12/14 20:58:11 - CalcularAnoMes.0 - Linenr 450000
+2024/12/14 20:58:11 - ObtenerFecha.0 - linenr 450000
+2024/12/14 20:58:11 - Sort rows.0 - Linenr 450000
+2024/12/14 20:58:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-09-01.csv'
+2024/12/14 20:58:14 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-10-01.csv'
+2024/12/14 20:58:16 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-11-01.csv'
+2024/12/14 20:58:18 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2021-12-01.csv'
+2024/12/14 20:58:21 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-01-01.csv'
+2024/12/14 20:58:23 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-02-01.csv'
+2024/12/14 20:58:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-03-01.csv'
+2024/12/14 20:58:27 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-04-01.csv'
+2024/12/14 20:58:27 - CargarCSVsvotos.0 - Line number : 500000
+2024/12/14 20:58:29 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-05-01.csv'
+2024/12/14 20:58:30 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-06-01.csv'
+2024/12/14 20:58:33 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-07-01.csv'
+2024/12/14 20:58:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-08-01.csv'
+2024/12/14 20:58:36 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-09-01.csv'
+2024/12/14 20:58:38 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-10-01.csv'
+2024/12/14 20:58:39 - Database join.0 - linenr 500000
+2024/12/14 20:58:39 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-11-01.csv'
+2024/12/14 20:58:41 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2022-12-01.csv'
+2024/12/14 20:58:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-01-01.csv'
+2024/12/14 20:58:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-02-01.csv'
+2024/12/14 20:58:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-03-01.csv'
+2024/12/14 20:58:49 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-04-01.csv'
+2024/12/14 20:58:51 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-05-01.csv'
+2024/12/14 20:58:53 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-06-01.csv'
+2024/12/14 20:58:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-07-01.csv'
+2024/12/14 20:58:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-08-01.csv'
+2024/12/14 20:58:58 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-09-01.csv'
+2024/12/14 20:59:00 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-10-01.csv'
+2024/12/14 20:59:02 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-11-01.csv'
+2024/12/14 20:59:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2023-12-01.csv'
+2024/12/14 20:59:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/8_2024-01-01.csv'
+2024/12/14 20:59:08 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-02-01.csv'
+2024/12/14 20:59:09 - CalcularAnoMes.0 - Linenr 500000
+2024/12/14 20:59:09 - ObtenerFecha.0 - linenr 500000
+2024/12/14 20:59:09 - Sort rows.0 - Linenr 500000
+2024/12/14 20:59:11 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-03-01.csv'
+2024/12/14 20:59:13 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-04-01.csv'
+2024/12/14 20:59:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-05-01.csv'
+2024/12/14 20:59:17 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-06-01.csv'
+2024/12/14 20:59:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-07-01.csv'
+2024/12/14 20:59:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-08-01.csv'
+2024/12/14 20:59:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-09-01.csv'
+2024/12/14 20:59:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-10-01.csv'
+2024/12/14 20:59:31 - CargarCSVsvotos.0 - Line number : 550000
+2024/12/14 20:59:32 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-11-01.csv'
+2024/12/14 20:59:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2021-12-01.csv'
+2024/12/14 20:59:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-01-01.csv'
+2024/12/14 20:59:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-02-01.csv'
+2024/12/14 20:59:42 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-03-01.csv'
+2024/12/14 20:59:45 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-04-01.csv'
+2024/12/14 20:59:46 - Database join.0 - linenr 550000
+2024/12/14 20:59:47 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-05-01.csv'
+2024/12/14 20:59:50 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-06-01.csv'
+2024/12/14 20:59:52 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-07-01.csv'
+2024/12/14 20:59:55 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-08-01.csv'
+2024/12/14 20:59:57 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-09-01.csv'
+2024/12/14 20:59:59 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-10-01.csv'
+2024/12/14 21:00:01 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-11-01.csv'
+2024/12/14 21:00:04 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2022-12-01.csv'
+2024/12/14 21:00:06 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-01-01.csv'
+2024/12/14 21:00:09 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-02-01.csv'
+2024/12/14 21:00:12 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-03-01.csv'
+2024/12/14 21:00:15 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-04-01.csv'
+2024/12/14 21:00:17 - CalcularAnoMes.0 - Linenr 550000
+2024/12/14 21:00:17 - ObtenerFecha.0 - linenr 550000
+2024/12/14 21:00:17 - Sort rows.0 - Linenr 550000
+2024/12/14 21:00:19 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-05-01.csv'
+2024/12/14 21:00:22 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-06-01.csv'
+2024/12/14 21:00:25 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-07-01.csv'
+2024/12/14 21:00:28 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-08-01.csv'
+2024/12/14 21:00:31 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-09-01.csv'
+2024/12/14 21:00:35 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-10-01.csv'
+2024/12/14 21:00:37 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-11-01.csv'
+2024/12/14 21:00:40 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2023-12-01.csv'
+2024/12/14 21:00:43 - CargarCSVsvotos.0 - Header row skipped in file '/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/9_2024-01-01.csv'
+2024/12/14 21:00:44 - CargarCSVsvotos.0 - Finished processing (I=599508, O=0, R=468, W=599040, U=0, E=0)
+2024/12/14 21:00:57 - CalcularAnoMes.0 - Finished processing (I=0, O=0, R=578490, W=578490, U=0, E=0)
+2024/12/14 21:00:57 - Database join.0 - Finished processing (I=1177530, O=0, R=599040, W=578490, U=0, E=0)
+2024/12/14 21:00:57 - ObtenerFecha.0 - Finished processing (I=578490, O=0, R=578490, W=578490, U=0, E=0)
+2024/12/14 21:00:59 - Group by.0 - Linenr 50000
+2024/12/14 21:01:00 - Group by.0 - Linenr 100000
+2024/12/14 21:01:01 - Group by.0 - Linenr 150000
+2024/12/14 21:01:02 - Group by.0 - Linenr 200000
+2024/12/14 21:01:03 - Group by.0 - Linenr 250000
+2024/12/14 21:01:03 - Group by.0 - Linenr 300000
+2024/12/14 21:01:04 - Group by.0 - Linenr 350000
+2024/12/14 21:01:05 - Group by.0 - Linenr 400000
+2024/12/14 21:01:05 - Group by.0 - Linenr 450000
+2024/12/14 21:01:06 - Group by.0 - Linenr 500000
+2024/12/14 21:01:06 - Group by.0 - Linenr 550000
+2024/12/14 21:01:07 - Sort rows.0 - Finished processing (I=0, O=0, R=578490, W=578490, U=0, E=0)
+2024/12/14 21:01:07 - Group by.0 - Finished processing (I=0, O=0, R=578490, W=468, U=0, E=0)
+2024/12/14 21:01:07 - Table output.0 - Finished processing (I=0, O=468, R=468, W=468, U=0, E=0)
+2024/12/14 21:01:07 - Etl - Starting entry [Success]
+2024/12/14 21:01:09 - Etl - Finished job entry [Success] (result=[true])
+2024/12/14 21:01:09 - Etl - Finished job entry [CargarSatisfaccion] (result=[true])
+2024/12/14 21:01:09 - Etl - Starting entry [CargarProducto]
+2024/12/14 21:01:12 - CargarProducto - Using run configuration [Pentaho local]
+2024/12/14 21:01:12 - CargarProducto - Running transformation using the Kettle execution engine
+2024/12/14 21:01:12 - CargarProducto - Dispatching started for transformation [CargarProducto]
+2024/12/14 21:01:13 - Table output.0 - Connected to database [Restaurante] (commit=10000)
+2024/12/14 21:01:14 - ObtenerDatos.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:15 - CalcularAnoMes.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:19 - ObtenerFecha.0 - Finished processing (I=11592, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:20 - Sort rows.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:26 - Group by.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:26 - CalcularIngresosPlato.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:28 - Table output.0 - Finished processing (I=0, O=11592, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:28 - Etl - Starting entry [Success]
+2024/12/14 21:01:32 - Etl - Finished job entry [Success] (result=[true])
+2024/12/14 21:01:32 - Etl - Finished job entry [CargarProducto] (result=[true])
+2024/12/14 21:01:32 - Etl - Starting entry [CargarFinanzas]
+2024/12/14 21:01:34 - CargarFinanzas - Using run configuration [Pentaho local]
+2024/12/14 21:01:34 - CargarFinanzas - Running transformation using the Kettle execution engine
+2024/12/14 21:01:34 - CargarFinanzas - Dispatching started for transformation [CargarFinanzas]
+2024/12/14 21:01:35 - Table output.0 - Connected to database [Restaurante] (commit=10000)
+2024/12/14 21:01:35 - ObtenerDatos.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:36 - CalcularAnoMes.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:39 - ObtenerFecha.0 - Finished processing (I=11592, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:39 - Sort rows.0 - Finished processing (I=0, O=0, R=11592, W=11592, U=0, E=0)
+2024/12/14 21:01:40 - Group by.0 - Finished processing (I=0, O=0, R=11592, W=468, U=0, E=0)
+2024/12/14 21:01:40 - Table output.0 - Finished processing (I=0, O=468, R=468, W=468, U=0, E=0)
+2024/12/14 21:01:40 - Etl - Starting entry [Success]
+2024/12/14 21:01:43 - Etl - Finished job entry [Success] (result=[true])
+2024/12/14 21:01:43 - Etl - Finished job entry [CargarFinanzas] (result=[true])
+2024/12/14 21:01:43 - Etl - Finished job entry [CargarDimensiones] (result=[true])
+2024/12/14 21:01:43 - Etl - Finished job entry [CargarDatos] (result=[true])
+2024/12/14 21:01:43 - Etl - Job execution finished
+2024/12/14 21:01:43 - Spoon - Job has ended.

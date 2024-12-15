@@ -1,0 +1,9 @@
+WITH
+SET [~COLUMNS] AS
+    {[Restaurante.jerarquiaRestaurantes].[ciudad].Members}
+SET [~ROWS] AS
+    Hierarchize({{[Tiempo.jerarquiaTiempo].[ano].Members}, {[Tiempo.jerarquiaTiempo].[mes].Members}})
+SELECT
+NON EMPTY CrossJoin([~COLUMNS], {[Measures].[Ingresos totales], [Measures].[Gastos totales]}) ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Finanzas]

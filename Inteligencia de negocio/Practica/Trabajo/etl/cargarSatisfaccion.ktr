@@ -6,6 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -440,7 +441,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>Guachinche</database>
+    <database>guachinche</database>
     <port>5432</port>
     <username>alumnogreibd</username>
     <password>Encrypted 2be98afc86aa79596ae10ac748cc2fd8b</password>
@@ -493,11 +494,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CalcularAnoMes</from>
-      <to>Group by</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>CargarCSVsvotos</from>
       <to>Database join</to>
       <enabled>Y</enabled>
@@ -510,6 +506,21 @@
     <hop>
       <from>Group by</from>
       <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CalcularAnoMes</from>
+      <to>ObtenerFecha</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ObtenerFecha</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Group by</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -526,7 +537,7 @@
     </partitioning>
     <failIfNoFile>Y</failIfNoFile>
     <calculation>
-      <field_name>ano_votacion</field_name>
+      <field_name>ano</field_name>
       <calc_type>YEAR_OF_DATE</calc_type>
       <field_a>fecha</field_a>
       <field_b/>
@@ -541,7 +552,7 @@
       <currency_symbol/>
     </calculation>
     <calculation>
-      <field_name>mes_votacion</field_name>
+      <field_name>mes</field_name>
       <calc_type>MONTH_OF_DATE</calc_type>
       <field_a>fecha</field_a>
       <field_b/>
@@ -564,7 +575,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>624</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -660,7 +671,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>400</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -714,7 +725,7 @@ WHERE id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>528</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -743,10 +754,7 @@ WHERE id = ?
         <name>restaurante</name>
       </field>
       <field>
-        <name>ano_votacion</name>
-      </field>
-      <field>
-        <name>mes_votacion</name>
+        <name>fecha_id</name>
       </field>
     </group>
     <fields>
@@ -768,36 +776,6 @@ WHERE id = ?
         <type>AVERAGE</type>
         <valuefield/>
       </field>
-      <field>
-        <aggregate>alquiler</aggregate>
-        <subject>alquiler</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-      <field>
-        <aggregate>proveedores</aggregate>
-        <subject>proveedores</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-      <field>
-        <aggregate>extra</aggregate>
-        <subject>extra</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-      <field>
-        <aggregate>ingresos_domicilio</aggregate>
-        <subject>ingresos_domicilio</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
-      <field>
-        <aggregate>ingresos_presencial</aggregate>
-        <subject>ingresos_presencial</subject>
-        <type>AVERAGE</type>
-        <valuefield/>
-      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -808,7 +786,7 @@ WHERE id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>896</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -838,12 +816,12 @@ WHERE id = ?
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
     <limit>0</limit>
     <file>
-      <name>/home/alumnogreibd/Trabajo/satisfaccion/</name>
+      <name>/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/</name>
       <filemask>[0-9]_[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\.csv</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
-      <name>/home/alumnogreibd/Trabajo/satisfaccion/</name>
+      <name>/home/alumnogreibd/Desktop/IN/Grupal/satisfaccion/</name>
       <filemask>[0-9][0-9]_[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\.csv</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -858,7 +836,111 @@ WHERE id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>256</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ObtenerFecha</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Restaurantes</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>dim_tiempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ano</name>
+        <field>ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes</name>
+        <field>mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>fecha_id</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>restaurante</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -876,7 +958,7 @@ WHERE id = ?
     </partitioning>
     <connection>Restaurantes</connection>
     <schema>public</schema>
-    <table>satisfacción_usuarios</table>
+    <table>fact_satisfaccion</table>
     <commit>10000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -893,48 +975,24 @@ WHERE id = ?
     <return_field/>
     <fields>
       <field>
-        <column_name>id</column_name>
+        <column_name>restaurante</column_name>
         <stream_name>restaurante</stream_name>
       </field>
       <field>
-        <column_name>ano_votacion</column_name>
-        <stream_name>ano_votacion</stream_name>
-      </field>
-      <field>
-        <column_name>mes_votacion</column_name>
-        <stream_name>mes_votacion</stream_name>
-      </field>
-      <field>
-        <column_name>alquiler</column_name>
-        <stream_name>alquiler</stream_name>
-      </field>
-      <field>
-        <column_name>proveedores</column_name>
-        <stream_name>proveedores</stream_name>
-      </field>
-      <field>
-        <column_name>extra</column_name>
-        <stream_name>extra</stream_name>
-      </field>
-      <field>
-        <column_name>ingresos_presencial</column_name>
-        <stream_name>ingresos_presencial</stream_name>
+        <column_name>fecha</column_name>
+        <stream_name>fecha_id</stream_name>
       </field>
       <field>
         <column_name>valoracion_ambiente</column_name>
         <stream_name>valoracion_ambiente</stream_name>
       </field>
       <field>
-        <column_name>valoracion_personal</column_name>
-        <stream_name>valoracion_personal</stream_name>
-      </field>
-      <field>
         <column_name>valoracion_comida</column_name>
         <stream_name>valoracion_comida</stream_name>
       </field>
       <field>
-        <column_name>ingresos_domicilio</column_name>
-        <stream_name>ingresos_domicilio</stream_name>
+        <column_name>valoracion_personal</column_name>
+        <stream_name>valoracion_personal</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -946,7 +1004,7 @@ WHERE id = ?
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>992</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>

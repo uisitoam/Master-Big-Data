@@ -11,7 +11,7 @@
     <parameters>
       <parameter>
         <name>carpeta_entrada</name>
-        <default_value>/home/alumnogreibd/Trabajo/finanzas</default_value>
+        <default_value>/home/alumnogreibd/Desktop/IN/Grupal/finanzas/</default_value>
         <description/>
       </parameter>
     </parameters>
@@ -446,7 +446,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>Guachinche</database>
+    <database>guachinche</database>
     <port>5432</port>
     <username>alumnogreibd</username>
     <password>Encrypted 2be98afc86aa79596ae10ac748cc2fd8b</password>
@@ -494,11 +494,6 @@
   </connection>
   <order>
     <hop>
-      <from>CalcularAnoMes</from>
-      <to>Group by</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>CalcularIngresosPlato</from>
       <to>Table output</to>
       <enabled>Y</enabled>
@@ -511,6 +506,21 @@
     <hop>
       <from>ObtenerDatos</from>
       <to>CalcularAnoMes</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CalcularAnoMes</from>
+      <to>ObtenerFecha</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ObtenerFecha</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Group by</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -565,7 +575,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>416</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -606,7 +616,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>784</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -635,10 +645,7 @@
         <name>id</name>
       </field>
       <field>
-        <name>ano</name>
-      </field>
-      <field>
-        <name>mes</name>
+        <name>fecha</name>
       </field>
       <field>
         <name>plato_id</name>
@@ -667,7 +674,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>688</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -790,7 +797,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>320</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -808,7 +815,7 @@
     </partitioning>
     <connection>Restaurante</connection>
     <schema>public</schema>
-    <table>productos</table>
+    <table>fact_ventas</table>
     <commit>10000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -825,31 +832,23 @@
     <return_field/>
     <fields>
       <field>
-        <column_name>id</column_name>
+        <column_name>restaurante</column_name>
         <stream_name>id</stream_name>
       </field>
       <field>
-        <column_name>ano</column_name>
-        <stream_name>ano</stream_name>
+        <column_name>fecha</column_name>
+        <stream_name>fecha</stream_name>
       </field>
       <field>
-        <column_name>mes</column_name>
-        <stream_name>mes</stream_name>
-      </field>
-      <field>
-        <column_name>plato_id</column_name>
+        <column_name>producto</column_name>
         <stream_name>plato_id</stream_name>
       </field>
       <field>
-        <column_name>plato_precio</column_name>
-        <stream_name>plato_precio</stream_name>
-      </field>
-      <field>
-        <column_name>plato_ventas</column_name>
+        <column_name>ventas</column_name>
         <stream_name>plato_ventas</stream_name>
       </field>
       <field>
-        <column_name>plato_ingresos</column_name>
+        <column_name>ingresos</column_name>
         <stream_name>plato_ingresos</stream_name>
       </field>
     </fields>
@@ -862,7 +861,119 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>880</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ObtenerFecha</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Restaurante</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>dim_tiempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ano</name>
+        <field>ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes</name>
+        <field>mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>fecha</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>plato_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>

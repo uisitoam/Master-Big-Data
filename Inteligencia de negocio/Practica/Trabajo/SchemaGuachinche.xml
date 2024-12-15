@@ -1,34 +1,34 @@
-<Schema name="New Schema2">
+<Schema name="guachincheCubo" description="Cubo guachinche">
   <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Tiempo">
     <Hierarchy name="jerarquiaTiempo" visible="true" hasAll="true" primaryKey="id">
-      <Table name="tiempo" schema="public">
+      <Table name="dim_tiempo" schema="public">
       </Table>
-      <Level name="ano" visible="true" table="tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      <Level name="ano" visible="true" table="dim_tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
       </Level>
-      <Level name="mes" visible="true" table="tiempo" column="mes" nameColumn="mes_texto" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      <Level name="mes" visible="true" table="dim_tiempo" column="mes" nameColumn="mes_texto" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Restaurante">
     <Hierarchy name="jerarquiaRestaurantes" visible="true" hasAll="true" primaryKey="id">
-      <Table name="restaurante" schema="public">
+      <Table name="dim_restaurante" schema="public">
       </Table>
-      <Level name="pais" visible="true" table="restaurante" column="pais" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="pais" visible="true" table="dim_restaurante" column="pais" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="ciudad" visible="true" table="restaurante" column="ciudad" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="ciudad" visible="true" table="dim_restaurante" column="ciudad" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Productos">
-    <Hierarchy name="jerarquiaProductos" visible="true" hasAll="true" primaryKey="id">
-      <Table name="productos" schema="public">
+    <Hierarchy name="jerarquiaNombreProductos" visible="true" hasAll="true" primaryKey="id">
+      <Table name="dim_productos" schema="public">
       </Table>
-      <Level name="nombre" visible="true" table="productos" column="nombre" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="nombre" visible="true" table="dim_productos" column="nombre" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
   <Cube name="Finanzas" visible="true" cache="true" enabled="true">
-    <Table name="finanzas" schema="public">
+    <Table name="fact_finanzas" schema="public">
     </Table>
     <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha" highCardinality="false">
     </DimensionUsage>
@@ -65,8 +65,8 @@
     <CalculatedMember name="Nuevos clientes" formula="[Measures].[Nuevos clientes presencial]+[Measures].[Nuevos clientes domicilio]" dimension="Measures" visible="true">
     </CalculatedMember>
   </Cube>
-  <Cube name="Producto" visible="true" cache="true" enabled="true">
-    <Table name="producto" schema="public">
+  <Cube name="Ventas" visible="true" cache="true" enabled="true">
+    <Table name="fact_ventas" schema="public">
     </Table>
     <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha" highCardinality="false">
     </DimensionUsage>
@@ -76,15 +76,13 @@
     </DimensionUsage>
     <Measure name="Ventas" column="ventas" datatype="Integer" aggregator="sum" visible="true">
     </Measure>
-    <CalculatedMember name="Ingresos por producto" formatString="" formula="[Measures].[Ventas]*[Productos].[nombre].CurrentMember.Properties(\&#34;precio\&#34;)" dimension="Measures" visible="true">
-    </CalculatedMember>
   </Cube>
   <Cube name="Feedback" visible="true" cache="true" enabled="true">
-    <Table name="feedback" schema="public" alias="">
+    <Table name="fact_satisfaccion" schema="public">
     </Table>
-    <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha">
+    <DimensionUsage source="Tiempo" name="Tiempo" visible="true" foreignKey="fecha" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Restaurante" name="Restaurante" visible="true" foreignKey="restaurante">
+    <DimensionUsage source="Restaurante" name="Restaurante" visible="true" foreignKey="restaurante" highCardinality="false">
     </DimensionUsage>
     <Measure name="Valoracion personal" column="valoracion_personal" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>

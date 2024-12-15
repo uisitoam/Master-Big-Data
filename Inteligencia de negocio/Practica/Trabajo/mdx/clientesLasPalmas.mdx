@@ -1,0 +1,18 @@
+WITH
+SET [~Restaurante_Restaurante.jerarquiaRestaurantes_pais] AS
+    Exists({[Restaurante.jerarquiaRestaurantes].[pais].Members}, [~Restaurante_Restaurante.jerarquiaRestaurantes_ciudad])
+SET [~Restaurante_Restaurante.jerarquiaRestaurantes_ciudad] AS
+    {[Restaurante.jerarquiaRestaurantes].[España].[Las Palmas de Gran Canaria]}
+SET [~FILTER] AS
+    [~Restaurante_Restaurante.jerarquiaRestaurantes_ciudad]
+SET [~Tiempo_Tiempo.jerarquiaTiempo_ano] AS
+    {[Tiempo.jerarquiaTiempo].[2023], [Tiempo.jerarquiaTiempo].[2022]}
+SET [~Tiempo_Tiempo.jerarquiaTiempo_mes] AS
+    Exists({[Tiempo.jerarquiaTiempo].[mes].Members}, [~Tiempo_Tiempo.jerarquiaTiempo_ano])
+SET [~ROWS] AS
+    Hierarchize({[~Tiempo_Tiempo.jerarquiaTiempo_ano], [~Tiempo_Tiempo.jerarquiaTiempo_mes]})
+SELECT
+NON EMPTY {[Measures].[Numero clientes presencial], [Measures].[Nuevos clientes domicilio], [Measures].[Numero clientes domicilio], [Measures].[Nuevos clientes presencial]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Finanzas]
+WHERE [~FILTER]

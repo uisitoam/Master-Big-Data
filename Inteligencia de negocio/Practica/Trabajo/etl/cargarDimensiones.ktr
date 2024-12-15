@@ -440,7 +440,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>Guachinche</database>
+    <database>guachinche</database>
     <port>5432</port>
     <username>alumnogreibd</username>
     <password>Encrypted 2be98afc86aa79596ae10ac748cc2fd8b</password>
@@ -664,6 +664,39 @@
     </GUI>
   </step>
   <step>
+    <name>EliminarDuplicadosRestaurante</name>
+    <type>UniqueRowsByHashSet</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <store_values>N</store_values>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>id</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>EliminarDuplicadosTiempo</name>
     <type>UniqueRowsByHashSet</type>
     <description/>
@@ -718,33 +751,28 @@
     <update_bypassed>N</update_bypassed>
     <lookup>
       <schema>public</schema>
-      <table>platos</table>
+      <table>dim_productos</table>
       <key>
-        <name>plato_id</name>
-        <field>plato_id</field>
+        <name>plato_nombre</name>
+        <field>nombre</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>plato_nombre</name>
-        <field>plato_nombre</field>
-        <condition/>
+        <name>plato_precio</name>
+        <field>precio</field>
+        <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>plato_id</name>
-        <rename>plato_id</rename>
+        <name>nombre</name>
+        <rename>plato_nombre</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>plato_nombre</name>
-        <rename>plato_nombre</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>plato_precio</name>
+        <name>precio</name>
         <rename>plato_precio</rename>
-        <update>N</update>
+        <update>Y</update>
       </value>
     </lookup>
     <attributes/>
@@ -758,6 +786,60 @@
     <GUI>
       <xloc>672</xloc>
       <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / update restuarante</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Restaurantes</connection>
+    <commit>10000</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>dim_restaurante</table>
+      <key>
+        <name>ciudad</name>
+        <field>ciudad</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>pais</name>
+        <field>pais</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ciudad</name>
+        <rename>ciudad</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>pais</name>
+        <rename>pais</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>928</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -777,7 +859,7 @@
     <update_bypassed>N</update_bypassed>
     <lookup>
       <schema>public</schema>
-      <table>tiempo</table>
+      <table>dim_tiempo</table>
       <key>
         <name>ano</name>
         <field>ano</field>
@@ -944,178 +1026,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
+      <xloc>160</xloc>
       <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Value mapper mes</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>mes</field_to_use>
-    <target_field>mes_texto</target_field>
-    <non_match_default/>
-    <fields>
-      <field>
-        <source_value>1</source_value>
-        <target_value>Enero</target_value>
-      </field>
-      <field>
-        <source_value>2</source_value>
-        <target_value>Febrero</target_value>
-      </field>
-      <field>
-        <source_value>3</source_value>
-        <target_value>Marzo</target_value>
-      </field>
-      <field>
-        <source_value>4</source_value>
-        <target_value>Abril</target_value>
-      </field>
-      <field>
-        <source_value>5</source_value>
-        <target_value>Mayo</target_value>
-      </field>
-      <field>
-        <source_value>6</source_value>
-        <target_value>Junio</target_value>
-      </field>
-      <field>
-        <source_value>7</source_value>
-        <target_value>Julio</target_value>
-      </field>
-      <field>
-        <source_value>8</source_value>
-        <target_value>Agosto</target_value>
-      </field>
-      <field>
-        <source_value>9</source_value>
-        <target_value>Septiembre</target_value>
-      </field>
-      <field>
-        <source_value>10</source_value>
-        <target_value>Octubre</target_value>
-      </field>
-      <field>
-        <source_value>11</source_value>
-        <target_value>Noviembre</target_value>
-      </field>
-      <field>
-        <source_value>12</source_value>
-        <target_value>Diciembre</target_value>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / update restuarante</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Restaurantes</connection>
-    <commit>10000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>public</schema>
-      <table>restaurantes</table>
-      <key>
-        <name>id</name>
-        <field>id</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>ciudad</name>
-        <field>ciudad</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>ciudad</name>
-        <rename>ciudad</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>pais</name>
-        <rename>pais</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>EliminarDuplicadosRestaurante</name>
-    <type>UniqueRowsByHashSet</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <store_values>N</store_values>
-    <reject_duplicate_row>N</reject_duplicate_row>
-    <error_description/>
-    <fields>
-      <field>
-        <name>id</name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1198,6 +1110,84 @@
     <GUI>
       <xloc>656</xloc>
       <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Value mapper mes</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_to_use>mes</field_to_use>
+    <target_field>mes_texto</target_field>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>1</source_value>
+        <target_value>Enero</target_value>
+      </field>
+      <field>
+        <source_value>2</source_value>
+        <target_value>Febrero</target_value>
+      </field>
+      <field>
+        <source_value>3</source_value>
+        <target_value>Marzo</target_value>
+      </field>
+      <field>
+        <source_value>4</source_value>
+        <target_value>Abril</target_value>
+      </field>
+      <field>
+        <source_value>5</source_value>
+        <target_value>Mayo</target_value>
+      </field>
+      <field>
+        <source_value>6</source_value>
+        <target_value>Junio</target_value>
+      </field>
+      <field>
+        <source_value>7</source_value>
+        <target_value>Julio</target_value>
+      </field>
+      <field>
+        <source_value>8</source_value>
+        <target_value>Agosto</target_value>
+      </field>
+      <field>
+        <source_value>9</source_value>
+        <target_value>Septiembre</target_value>
+      </field>
+      <field>
+        <source_value>10</source_value>
+        <target_value>Octubre</target_value>
+      </field>
+      <field>
+        <source_value>11</source_value>
+        <target_value>Noviembre</target_value>
+      </field>
+      <field>
+        <source_value>12</source_value>
+        <target_value>Diciembre</target_value>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

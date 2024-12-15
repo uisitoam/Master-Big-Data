@@ -1,0 +1,7 @@
+WITH
+SET [~ROWS] AS
+    {[Restaurante.jerarquiaRestaurantes].[ciudad].Members}
+SELECT
+NON EMPTY {[Measures].[Beneficio], [Measures].[Numero clientes]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [Finanzas]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  11 DEC 2024 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  15 DEC 2024 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1089,63 +1089,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 55.
+(Font)              scaled to size 11.39996pt on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.94994pt on input line 55.
+(Font)              scaled to size 19.94994pt on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 11.39996pt on input line 55.
+(Font)              scaled to size 11.39996pt on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 55.
+(Font)              scaled to size 11.39996pt on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 56.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 55.
+(Font)              scaled to size 7.59998pt on input line 56.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 55--55
+Overfull \hbox (12.0pt too wide) in paragraph at lines 56--56
 [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 57.
+(Font)              scaled to size 13.67995pt on input line 58.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 57.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 61.
+(Font)              scaled to size 13.67995pt on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 62.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 61.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 61.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 61.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 61.
+(Font)              scaled to size 12.50409pt on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 61.
+(Font)              scaled to size 9.37807pt on input line 62.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 61.
+(Font)              scaled to size 7.29405pt on input line 62.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 61.
+(Font)              scaled to size 12.50409pt on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 61.
+(Font)              scaled to size 9.37807pt on input line 62.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 61.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 61.
+(Font)              scaled to size 7.29405pt on input line 62.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 62.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1154,63 +1154,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 61.
+(Font)              scaled to size 10.42007pt on input line 62.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 61.
+(Font)              scaled to size 7.91925pt on input line 62.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 61.
+(Font)              scaled to size 6.25204pt on input line 62.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 61.
+(Font)              scaled to size 10.42007pt on input line 62.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 61.
+(Font)              scaled to size 7.91925pt on input line 62.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 61.
+(Font)              scaled to size 6.25204pt on input line 62.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 61.
+(Font)              scaled to size 9.49997pt on input line 62.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 74.
+(Font)              scaled to size 6.64998pt on input line 75.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 74.
+(Font)              scaled to size 5.21004pt on input line 75.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 74.
+(Font)              scaled to size 5.21004pt on input line 75.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74     \item \textbf
+l.75     \item \textbf
                       {√Årea de gesti√≥n y finanzas:} Este √°rea se preocupa... [1]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 74.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 75.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 97.
+(Font)              scaled to size 10.40245pt on input line 98.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 97.
+(Font)              scaled to size 10.40245pt on input line 98.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 97.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 10.40245pt on input line 97.
+(Font)              scaled to size 10.40245pt on input line 98.
  [2] [3] [4]
 > Step: init table outer spec.
 > Step: parse table options.
@@ -1220,395 +1220,441 @@ LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 211--211
+Underfull \hbox (badness 1708) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[]\T1/ppl/m/it/12 (+20) Lagging
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) (aunque
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) arse para
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (-20) CampaÒa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) uni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 211--211
+Underfull \hbox (badness 1708) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[]\T1/ppl/m/it/12 (+20) Lagging
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) (aunque
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) arse para
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir coste op-er-a-
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 211--211
+Underfull \hbox (badness 1418) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Aumentar gasto por
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Introducir ofer-tas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir des-perdi-cio
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 211--211
+Underfull \hbox (badness 3281) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Implementar con-trol
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir tiempo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) de rentabil-i-dad de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Supervisar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Incrementar pro-mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) ciones y op-ti-mizar
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 211--211
+Underfull \hbox (badness 1259) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) sat-is-fac-ciÛn y ac-tuar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Aumentar nuevos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) es-table-cer acuer-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) con provee-dores
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 211--211
+Underfull \hbox (badness 1221) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-
  []
 
 
-Underfull \hbox (badness 3439) in paragraph at lines 211--211
-[]\T1/ppl/m/n/12 (+20) Monitorear in-ven-tar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Consolidar pe-di-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Adaptabilidad del
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 211--211
+Underfull \hbox (badness 2042) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Introducir platos de
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 211--211
+Underfull \hbox (badness 1953) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) parada por falta de
  []
 
 
-Underfull \hbox (badness 4673) in paragraph at lines 211--211
+Underfull \hbox (badness 4673) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) AuditorÌas reg-u-lares
  []
 
 
-Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (-20) CampaÒa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) uni-
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 211--211
+Underfull \hbox (badness 5288) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Supervisar las cam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) 100%
  []
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Factor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) CrÌtico
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 211--211
+Underfull \hbox (badness 1708) in paragraph at lines 212--212
 \T1/ppl/b/n/12 (+20) de …x-ito
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/b/n/12 (+20) Tipo de
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[]\T1/ppl/m/it/12 (+20) Lagging
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) (aunque
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 212--212
+\T1/ppl/m/n/12 (+20) arse para
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir coste op-er-a-
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 211--211
+Underfull \hbox (badness 1418) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Aumentar gasto por
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Introducir ofer-tas
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir des-perdi-cio
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 211--211
+Underfull \hbox (badness 3281) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Implementar con-trol
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir tiempo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) de rentabil-i-dad de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OML/zplm/m/it/12 < \OT1/ppl/m/n/12 (+20) 12$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Supervisar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Incrementar pro-mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) ciones y op-ti-mizar
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 211--211
+Underfull \hbox (badness 1259) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) sat-is-fac-ciÛn y ac-tuar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []$\OMS/zplm/m/n/12 ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Aumentar nuevos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) es-table-cer acuer-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) con provee-dores
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 211--211
+Underfull \hbox (badness 1221) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-
  []
 
-
-Underfull \hbox (badness 3439) in paragraph at lines 211--211
-[]\T1/ppl/m/n/12 (+20) Monitorear in-ven-tar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Consolidar pe-di-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Adaptabilidad del
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 211--211
+Underfull \hbox (badness 2042) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Introducir platos de
  []
 
-[6]
-Underfull \hbox (badness 1953) in paragraph at lines 211--211
+
+Underfull \hbox (badness 1953) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) parada por falta de
  []
 
 
-Underfull \hbox (badness 4673) in paragraph at lines 211--211
+Underfull \hbox (badness 4673) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) AuditorÌas reg-u-lares
  []
 
 
-Overfull \hbox (7.59459pt too wide) in paragraph at lines 211--211
+Overfull \hbox (7.59459pt too wide) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (-20) CampaÒa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 \T1/ppl/m/n/12 (+20) uni-
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 211--211
+Underfull \hbox (badness 5288) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) Supervisar las cam-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--212
 []\T1/ppl/m/n/12 (+20) 100%
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
  []
 
 [7]
 
 pdfTeX warning: pdflatex (file ./fotos/fin.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/fin.pdf, id=113, 326.11836pt x 310.25912pt>
+<fotos/fin.pdf, id=116, 326.11836pt x 310.25912pt>
 File: fotos/fin.pdf Graphic file (type pdf)
 <use fotos/fin.pdf>
-Package pdftex.def Info: fotos/fin.pdf  used on input line 239.
+Package pdftex.def Info: fotos/fin.pdf  used on input line 244.
 (pdftex.def)             Requested size: 314.58018pt x 299.3035pt.
-[8 <./fotos/fin.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8]
 
 pdfTeX warning: pdflatex (file ./fotos/prods.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/prods.pdf, id=129, 326.11836pt x 298.51524pt>
+<fotos/prods.pdf, id=121, 326.11836pt x 298.51524pt>
 File: fotos/prods.pdf Graphic file (type pdf)
 <use fotos/prods.pdf>
-Package pdftex.def Info: fotos/prods.pdf  used on input line 260.
+Package pdftex.def Info: fotos/prods.pdf  used on input line 265.
 (pdftex.def)             Requested size: 314.58018pt x 287.97429pt.
-[9 <./fotos/prods.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./fotos/fin.pdf>]
 
 pdfTeX warning: pdflatex (file ./fotos/feed.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/feed.pdf, id=145, 389.35461pt x 290.88673pt>
+<fotos/feed.pdf, id=137, 389.35461pt x 290.88673pt>
 File: fotos/feed.pdf Graphic file (type pdf)
 <use fotos/feed.pdf>
-Package pdftex.def Info: fotos/feed.pdf  used on input line 283.
+Package pdftex.def Info: fotos/feed.pdf  used on input line 288.
 (pdftex.def)             Requested size: 314.58018pt x 235.02663pt.
-
+[10 <./fotos/prods.pdf>]
 
 pdfTeX warning: pdflatex (file ./fotos/3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fotos/3.pdf, id=147, 389.35461pt x 422.77951pt>
+<fotos/3.pdf, id=155, 389.35461pt x 422.77951pt>
 File: fotos/3.pdf Graphic file (type pdf)
 <use fotos/3.pdf>
-Package pdftex.def Info: fotos/3.pdf  used on input line 292.
+Package pdftex.def Info: fotos/3.pdf  used on input line 297.
 (pdftex.def)             Requested size: 314.58018pt x 341.59152pt.
-[10 <./fotos/feed.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 304.
+[11 <./fotos/feed.pdf> <./fotos/3.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 309.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1616,7 +1662,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/3.pdf>]
+ [12{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1625,17 +1671,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Overfull \hbox (19.45927pt too wide) in paragraph at lines 350--350
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
 > Step: build the whole table.
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+
+Overfull \hbox (19.45927pt too wide) in paragraph at lines 350--350
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
-[13] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+[14] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux)
  ***********
@@ -1647,24 +1713,24 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 59 (\begingroup)
+### semi simple group (level 1) entered at line 60 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 43735 strings out of 474116
- 927127 string characters out of 5743682
+ 43755 strings out of 474116
+ 927309 string characters out of 5743682
  1998187 words of memory out of 5000000
- 65123 multiletter control sequences out of 15000+600000
- 646424 words of font info for 346 fonts, out of 8000000 for 9000
+ 65127 multiletter control sequences out of 15000+600000
+ 647061 words of font info for 356 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,18n,107p,1092b,1337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,19n,107p,1092b,1341s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (14 pages, 201067 bytes).
+Output written on build/main.pdf (15 pages, 203584 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
  102553 words of extra memory for PDF output out of 106986 (max. 10000000)
 
