@@ -275,9 +275,9 @@ Esta consulta la dividiremos en dos partes: primero, buscaremos los jugadores es
 \end{itemize}
 \item Como de todo lo anterior solo nos interesan los partidos finales (F) de torneos de nivel Grand Slam (G) y ganados por jugadores españoles (ES), las condiciones de selección son:
 \begin{itemize}
-\item El predicado \texttt{p.ronda = 'F'} selecciona solo los partidos que han sido finales.
-\item El predicado \texttt{et.nivel = 'G'} selecciona solo los torneos de nivel Grand Slam (G).
-\item El predicado \texttt{j.pais = 'ES'} selecciona solo los jugadores españoles.
+\item El predicado \texttt{p.ronda = `F'} selecciona solo los partidos que han sido finales.
+\item El predicado \texttt{et.nivel = `G'} selecciona solo los torneos de nivel Grand Slam (G).
+\item El predicado \texttt{j.pais = `ES'} selecciona solo los jugadores españoles.
 \end{itemize}
 \end{itemize}
 
@@ -287,18 +287,19 @@ Para obtener las estadísticas resumen de cada jugador español ganador de un Gr
 \begin{itemize}
 \item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de partidos de un jugador específico:
 \begin{itemize}
-\item El predicado \texttt{jeg.id_jugador = p.ganador or jeg.id_jugador = p.perdedor} nos permite seleccionar los partidos, tanto ganados como perdidos, en los que ha participado un jugador específico de la tabla \texttt{jugadores\_espanoles\_ganadores}.
+\item El predicado \texttt{jeg.id\_jugador = p.ganador or jeg.id\_jugador = p.perdedor} nos permite seleccionar los partidos, tanto ganados como perdidos, en los que ha participado un jugador específico de la tabla \texttt{jugadores\_espanoles\_ganadores}.
 \end{itemize}
 \end{itemize}
 
-Con esto, obtenemos una fila por cada partido de cada jugador, por lo que agrupamos por el jugador antes de agregar valores. En la proyección, obtenemos varios atributos, que redondearemos a un decimal usando \texttt{round(..., 1)}:
+Con esto, obtenemos una fila por cada partido de cada jugador, por lo que agrupamos por el jugador con \texttt{group by} antes de agregar valores. En la proyección, obtenemos varios atributos, que redondearemos a un decimal usando \texttt{round(\dots, 1)}. En general, excepto para los partidos y el porcentaje de victorias, todas las estadísticas se calculan de la misma forma cosniderando atributos distintos; por ello, daremos una explicación detallada de una de ellas, y el resto simplemente mencionaremos qué atributos hemos usado y si se siguió un proceso distinto.
 \begin{itemize}
 \item El nombre completo del jugador, que concatenamos previamente con el operador \texttt{||}.
-\item El número de partidos jugados como el conteo de los partidos en los que ha participado (\texttt{count(p.num\_partido)}).
+\item El número de partidos jugados como el conteo de los partidos en los que ha participado \\ (\texttt{count(p.num\_partido)}).
 \item El porcentaje de victorias, que calculamos como el número de partidos ganados entre el número total de partidos jugados, multiplicado por 100. Para obtener el número de partidos ganados, usamos un \texttt{case} que comprueba si el jugador es el ganador del partido o no. Esto genera una lista que contiene 1 si el jugador es el ganador y 0 si no lo es, y con \texttt{sum()} sumamos los valores de esta lista para obtener el número de partidos ganados. 
+\item El porcentaje de aces, que calculamos como el número de aces del jugador entre el número total de puntos servidos, multiplicado por 100. Para obtener el número de aces, simplemente sumamos (\texttt{sum()}) los valores la columna \texttt{num\_aces\_ganador} o \texttt{num\_aces\_perdedor} para el jugador específico. El número de puntos servidos lo obtenemos de forma análoga usando la columna \texttt{num\_ptos\_servidos\_ganador} o \texttt{num\_ptos\_servidos\_perdedor} según corresponda. Para ver si corresponde usar las estadísticas del ganador o del perdedor, se considerará un \texttt{case} que distinga si nuestro jugador está en la posición de ganador o perdedor, y se usarán las estadísticas correspondientes. Además, se implementará la función \texttt{nullif()} para gestionar las divisiones por 0. 
 \end{itemize}
 
-\begin{minted}[frame=single, fontsize=\small]{sql}
+\begin{minted}[frame=single, fontsize=\footnotesize]{sql}
 with jugadores_espanoles_ganadores as (
     select distinct j.id as id_jugador, j.nombre || ' ' || j.apellido as jugador
     from partido p, jugador j, edicion_torneo et 
@@ -311,23 +312,37 @@ with jugadores_espanoles_ganadores as (
 )
 
 select jeg.jugador, count(p.num_partido) as partidos,
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 1 else 0 end) / count(p.num_partido), 1) as pcje_victorias, 
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_aces_ganador else p.num_aces_perdedor end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador  else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_aces, 
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_dob_faltas_ganador  else p.num_dob_faltas_perdedor  end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador  else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_dobles_faltas, 
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_primeros_servicios_ganados_ganador + p.num_segundos_servicios_ganados_ganador 
-            else p.num_primeros_servicios_ganados_perdedor + p.num_segundos_servicios_ganados_perdedor end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador  else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_servicios_ganados, 
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador 
-            then p.num_ptos_servidos_perdedor - p.num_primeros_servicios_ganados_perdedor - p.num_segundos_servicios_ganados_perdedor 
-            else p.num_ptos_servidos_ganador - p.num_primeros_servicios_ganados_ganador - p.num_segundos_servicios_ganados_ganador end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_perdedor else p.num_ptos_servidos_ganador end), 0), 1) as pcje_restos_ganados,
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_break_salvados_ganador else p.num_break_salvados_perdedor end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_break_afrontados_ganador else p.num_break_afrontados_perdedor end), 0), 1) as pcje_breaks_salvados, 
-    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_break_afrontados_perdedor - p.num_break_salvados_perdedor 
-            else p.num_break_afrontados_ganador - p.num_break_salvados_ganador end) / 
-        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_break_afrontados_perdedor else p.num_break_afrontados_ganador end), 0), 1) as pcje_breaks_ganados
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 1 else 0 end) / 
+		count(p.num_partido), 1) as pcje_victorias, 
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 
+		p.num_aces_ganador else p.num_aces_perdedor end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador 
+		else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_aces, 
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_dob_faltas_ganador 
+		else p.num_dob_faltas_perdedor  end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador 
+		else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_dobles_faltas, 
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 
+		p.num_primeros_servicios_ganados_ganador + p.num_segundos_servicios_ganados_ganador 
+        else p.num_primeros_servicios_ganados_perdedor + p.num_segundos_servicios_ganados_perdedor end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_ganador 
+		else p.num_ptos_servidos_perdedor end), 0), 1) as pcje_servicios_ganados, 
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 
+		p.num_ptos_servidos_perdedor - p.num_primeros_servicios_ganados_perdedor - 
+		p.num_segundos_servicios_ganados_perdedor 
+        else p.num_ptos_servidos_ganador - p.num_primeros_servicios_ganados_ganador - 
+		p.num_segundos_servicios_ganados_ganador end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_ptos_servidos_perdedor 
+		else p.num_ptos_servidos_ganador end), 0), 1) as pcje_restos_ganados,
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then p.num_break_salvados_ganador 
+		else p.num_break_salvados_perdedor end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_break_afrontados_ganador 
+		else p.num_break_afrontados_perdedor end), 0), 1) as pcje_breaks_salvados, 
+    round(100.0 * sum(case when jeg.id_jugador = p.ganador then 
+		p.num_break_afrontados_perdedor - p.num_break_salvados_perdedor 
+        else p.num_break_afrontados_ganador - p.num_break_salvados_ganador end) / 
+        nullif(sum(case when jeg.id_jugador = p.ganador then p.num_break_afrontados_perdedor 
+		else p.num_break_afrontados_ganador end), 0), 1) as pcje_breaks_ganados
 from jugadores_espanoles_ganadores jeg, partido p
 where jeg.id_jugador = p.ganador 
 	or jeg.id_jugador = p.perdedor
