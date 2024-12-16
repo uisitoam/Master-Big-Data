@@ -79,7 +79,7 @@ create table partidos (
 insert into partidos(
 torneo, fecha, num_partido, num_sets, info_sets, ronda, desenlace, ganador, perdedor, ganador_stats, perdedor_stats)
 select
-   -- campo 'torneo' (tipo 'torneo_info')
+   -- campo 'torneo' (tipo 'edicion_torneo_info')
    case
        when t.id is null then null
        else cast((cast((t.id, t.nombre, cast((pa.codigo_iso2, pa.codigo_iso3, pa.codigo_ioc, pa.nombre) as pais_info)) as torneo_info), 

@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{table}\PYG{+w}{ }\PYG{n}{partidos}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{torneo}\PYG{+w}{ }\PYG{n}{edicion\PYGZus{}torneo\PYGZus{}info}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{fecha}\PYG{+w}{ }\PYG{n+nb}{date}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}partido}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}sets}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{info\PYGZus{}sets}\PYG{+w}{ }\PYG{n}{set\PYGZus{}info}\PYG{+w}{ }\PYG{n+nb}{array}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} array de elementos de tipo set\PYGZus{}info}
+\PYG{+w}{	}\PYG{n}{ronda}\PYG{+w}{ }\PYG{n+nb}{varchar}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{),}
+\PYG{+w}{	}\PYG{n}{desenlace}\PYG{+w}{ }\PYG{n+nb}{char}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),}
+\PYG{+w}{	}\PYG{n}{ganador}\PYG{+w}{ }\PYG{n}{jugador\PYGZus{}info}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{perdedor}\PYG{+w}{ }\PYG{n}{jugador\PYGZus{}info}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{ganador\PYGZus{}stats}\PYG{+w}{ }\PYG{n}{jugador\PYGZus{}stats}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{perdedor\PYGZus{}stats}\PYG{+w}{ }\PYG{n}{jugador\PYGZus{}stats}
+\PYG{p}{)}
+\end{Verbatim}

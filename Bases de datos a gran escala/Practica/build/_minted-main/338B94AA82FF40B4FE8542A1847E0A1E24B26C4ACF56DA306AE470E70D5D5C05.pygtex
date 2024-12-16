@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{set\PYGZus{}info}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{torneo}\PYG{+w}{ }\PYG{n}{torneo\PYGZus{}info}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{fecha}\PYG{+w}{ }\PYG{n+nb}{date}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}partido}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{num\PYGZus{}set}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{juegos\PYGZus{}ganador}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{juegos\PYGZus{}perdedor}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{puntos\PYGZus{}tiebreak\PYGZus{}perdedor}\PYG{+w}{ }\PYG{n+nb}{integer}
+\PYG{p}{)}
+\end{Verbatim}

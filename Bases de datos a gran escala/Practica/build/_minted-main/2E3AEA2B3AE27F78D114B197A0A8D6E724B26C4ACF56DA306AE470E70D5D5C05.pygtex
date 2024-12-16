@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{pais\PYGZus{}info}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{codigo\PYGZus{}iso2}\PYG{+w}{ }\PYG{n+nb}{char}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{),}
+\PYG{+w}{	}\PYG{n}{codigo\PYGZus{}iso3}\PYG{+w}{ }\PYG{n+nb}{char}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{),}
+\PYG{+w}{	}\PYG{n}{codigo\PYGZus{}ioc}\PYG{+w}{ }\PYG{n+nb}{char}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{),}
+\PYG{+w}{	}\PYG{n}{nombre}\PYG{+w}{ }\PYG{n+nb}{varchar}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{p}{)}
+\end{Verbatim}

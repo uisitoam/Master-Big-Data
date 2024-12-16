@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{create}\PYG{+w}{ }\PYG{k}{type}\PYG{+w}{ }\PYG{n}{jugador\PYGZus{}stats}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}aces}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}dob\PYGZus{}faltas}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}primeros\PYGZus{}servicios}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}primeros\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}segundos\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}juegos\PYGZus{}servidos}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}break\PYGZus{}salvados}\PYG{+w}{ }\PYG{n+nb}{integer}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}\PYG{+w}{ }\PYG{n+nb}{integer}
+\PYG{p}{)}
+\end{Verbatim}
