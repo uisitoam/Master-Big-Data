@@ -1,10 +1,6 @@
-
-
-
-
 \section{Datos agregados en SQL (PostgreSQL)}
 
-A continuación, queremos crear una tabla que contenga todos los datos de los partidos (países, torneos, ediciones, partidos, sets y jugadores), pero con datos agregados. Concretaente, debemos definir estructuras que permitan resolver de forma eficiente las consultas Q1 y Q3 de la sección anterior. Para mantener orden en nuestra bae de datos, crearemos un nueva esquema \texttt{agregados} para alojar esta nueva tabla. \\
+A continuación, queremos crear una tabla que contenga todos los datos de los partidos (países, torneos, ediciones, partidos, sets y jugadores), pero con datos agregados. Concretamente, debemos definir estructuras que permitan resolver de forma eficiente las consultas Q1 y Q3 de la sección anterior. Para mantener orden en nuestra bae de datos, crearemos un nueva esquema \texttt{agregados} para alojar esta nueva tabla. \\
 
 El sistema de tipos de PostgreSQL tiene constructores de tipo \texttt{ROW}, para tipos compuestos, y \texttt{ARRAY} para colecciones (en nuestro caso usaremos solo arrays unidimensionales). Para definir una tabla con tipos compuestos que resuelva eficientemente las consultas deseadas, el esquema debe ir orientado a los partidos en lugar de a los jugadores. Buscaremos definir entonces un esquema donde cada fila de la tabla represente un partido. Para ello, definimos los siguientes tipos:
 

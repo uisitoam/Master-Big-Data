@@ -1,6 +1,10 @@
 \section{Bases de datos NoSQL: Grafos (Neo4j)}
 
+Neo4J viene ya instalado en la máquina virtual que estamos usando, por lo que simplemente debemos arrancar el servicio con el comando \texttt{sudo systemctl start neo4j}. Trabajaremos desde la interfaz \textit{web} en \texttt{http://localhost:7474}. Esta nos da celdas para introducir consultas en Cypher, el lenguaje de Neo4J, y proporciona una visualización gráfica de los resultados (si lo permiten) y en forma de tablas. \\
+
 \subsection{Creación de índices}
+
+Lo primero es crear la estructura de nodos y enlaces adecuada para las consultas. Iremos describiendola poco a poco, pero antes introduciremos los índices necesarios para que las consultas pensadas sean eficientes:
 
 \begin{lstlisting}[language=Cypher]
 CREATE INDEX IF NOT EXISTS FOR (j:Jugador) ON (j.id);
@@ -8,13 +12,17 @@ CREATE INDEX IF NOT EXISTS FOR (et:EdicionTorneo) ON (et.torneo, et.fecha);
 CREATE INDEX IF NOT EXISTS FOR (p:Partido) ON (p.num_partido, p.fecha);
 CREATE INDEX IF NOT EXISTS FOR (p:Pais) ON (p.codigo_iso2);
 CREATE INDEX IF NOT EXISTS FOR (t:Torneo) ON (t.id);
-CREATE INDEX partido_fecha_num IF NOT EXISTS FOR (p:Partido) ON (p.num_partido, p.fecha);
 \end{lstlisting}
+
+La indexación de las originales claves primarias en las tablas de relacionales resulta en consultas mucho más eficientes. Esto lo hacemos para \texttt{Jugador}, \texttt{EdicionTorneo}, \texttt{Pais} y \texttt{Torneo}. Para facilitar la búsqueda de partidos específicos, se indexan simplemente el número de partido y la fecha.
 
 \subsection{Carga de datos con JBDC}
 
+Al estar los datos almacenados dentro de un SGBDs relacional, usaremos JDBC para acceder directamente gestor y recuperar los datos. A continuación, creamos vamos creando la base de datos de grafos a la vez que cargamos los datos de la base de datos relacional. iremos describiendo poco a poco los nodos y relaciones que compondrán la nueva BD. \\
+
+Comenzamos creamos nodos para los paises, con sus correspondientes atributos de la tabla relacional. 
+
 \begin{lstlisting}[language=Cypher]
-// cargamos los paises
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" as url
 CALL apoc.load.jdbc(url, "SELECT codigo_iso2, codigo_iso3, codigo_ioc, nombre FROM pais") YIELD row
 CREATE (p:Pais {
@@ -23,8 +31,12 @@ codigo_iso3: row.codigo_iso3,
 codigo_ioc: row.codigo_ioc,
 nombre: row.nombre
 });
+\end{lstlisting}
 
-// cargamos los jugadores
+
+Creamos nodos para los jugadores, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{REPRESENTA\_A} entre el nodo del país y el nodo del jugador, para indicar que el jugador representa a su país. Para ello, se usa \texttt{MATCH} para encontrar el nodo del país correspondiente al jugador, se crea el nodo del jugador y, posteriormente, se crea la relación (saliente desde el nodo jugador hacia el nodo país).
+
+\begin{lstlisting}[language=Cypher]
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url, 
 "SELECT id, nombre, apellido, diestro, fecha_nacimiento, pais, altura FROM jugador") YIELD row
@@ -38,7 +50,11 @@ CREATE (j:Jugador {
     altura: row.altura
 })
 CREATE (j)-[:REPRESENTA_A]->(pa);
+\end{lstlisting}
 
+Nodos para los torneos, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{SE\_CELEBRA\_EN} entre el nodo del país y el nodo del torneo, para indicar que el torneo se celebra en un país. Para ello, se usa \texttt{MATCH} para encontrar el nodo del país correspondiente al torneo, se crea el nodo del torneo y, posteriormente, se crea la relación (saliente desde el nodo torneo hacia el nodo país).
+
+\begin{lstlisting}[language=Cypher]
 // cargamos los torneos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
@@ -52,7 +68,11 @@ OPTIONAL MATCH (pa:Pais {codigo_iso2: row.pais})
 WITH t, pa
 WHERE pa IS NOT NULL
 CREATE (t)-[:SE_CELEBRA_EN]->(pa);
+\end{lstlisting}
 
+Nodos para las ediciones de los torneos, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{EDICION\_DE} entre el nodo de la edición del torneo y el nodo del torneo, para indicar que la edición del torneo pertenece a un cierto torneo. Para ello, se usa \texttt{MATCH} para encontrar el nodo del torneo correspondiente a la edición del torneo, se crea el nodo de la edición del torneo y, posteriormente, se crea la relación (saliente desde el nodo edición del torneo hacia el nodo torneo).
+
+\begin{lstlisting}[language=Cypher]
 // cargamos las ediciones de los torneos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
@@ -66,33 +86,34 @@ CREATE (et:EdicionTorneo {
     torneo: row.torneo
 })
 CREATE (et)-[:EDICION_DE]->(t);
+\end{lstlisting}
 
+A continuación, cargamos los partidos creando nodos con sus correspondientes atributos de la tabla relacional. Esta creación dio varios problemas debido al conflicto con el \textit{left join} que comentamos en la sección de agregados; con una carga estándar se omitían partidos, y por tanto la consulta 4 no devolvía los resultados esperados. Para solucionar esto, se ha optado por crear primero el nodo del partido y, posteriormente, se crean las relaciones con los jugadores, torneos y ganadores/perdedores. La creación de las mismas la haremos con un \texttt{OPTIONAL MATCH} para que se cree la relación si existe el nodo al que se quiere enlazar, pero en caso negativo, se incluya el resto de datos del partido igualmente. Además, se ha añadido un \texttt{LIMIT} para evitar problemas de rendimiento: la carga se hizo de 10000 en 10000. \\
+
+\noindent Vamos un poco más en detalle con las relaciones:
+\begin{itemize}
+\item \texttt{SE\_JUEGA\_EN}: Relación desde el nodo del partido hacia el nodo del torneo, para indicar que el partido se juega en un cierto torneo. Esta relación se crea con un \texttt{OPTIONAL MATCH} para que se cree la relación si existe el nodo del torneo al que se quiere enlazar, pero en caso negativo, se incluya el resto de datos del partido igualmente.
+\item \texttt{GANADO\_POR}: Relación desde el nodo del partido hacia el nodo del jugador, para indicar que el partido ha sido ganado por un cierto jugador. Esta relación se crea con un \texttt{OPTIONAL MATCH} para que se cree la relación si existe el nodo del jugador al que se quiere enlazar, pero en caso negativo, se incluya el resto de datos del partido igualmente. Además, esta relación contiene como atributos las estadísticas del ganador en ese partido. 
+\item \texttt{PERDIDO\_POR}: Relación completamente análoga a la anterior, pero para el perdedor del partido.
+\end{itemize}
+
+\begin{lstlisting}[language=Cypher]
 // cargamos los partidos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
-"SELECT p.torneo, p.fecha, p.num_partido, p.num_sets, p.ronda, p.desenlace,
-p.ganador, p.perdedor,
-p.num_aces_ganador, p.num_dob_faltas_ganador, p.num_ptos_servidos_ganador,
-p.num_primeros_servicios_ganador, p.num_primeros_servicios_ganados_ganador,
-p.num_segundos_servicios_ganados_ganador, p.num_juegos_servidos_ganador,
-p.num_break_salvados_ganador, p.num_break_afrontados_ganador,
-p.num_aces_perdedor, p.num_dob_faltas_perdedor, p.num_ptos_servidos_perdedor,
-p.num_primeros_servicios_perdedor, p.num_primeros_servicios_ganados_perdedor,
-p.num_segundos_servicios_ganados_perdedor, p.num_juegos_servidos_perdedor,
-p.num_break_salvados_perdedor, p.num_break_afrontados_perdedor
+"SELECT *
 FROM partido p
 WHERE p.fecha IS NOT NULL AND p.torneo IS NOT NULL
 ORDER BY p.fecha, p.torneo, p.num_partido
 LIMIT 10000 OFFSET 0") YIELD row
 
-// creamos el partido independientemente de las referencias
 CREATE (p:Partido {
 num_partido: row.num_partido,
 fecha: row.fecha,
 num_sets: row.num_sets,
 ronda: row.ronda,
 desenlace: row.desenlace,
-torneo_id: row.torneo // Guardamos la referencia al torneo aunque no exista el nodo
+torneo_id: row.torneo 
 })
 
 // vinculamos con el torneo si existe
@@ -135,7 +156,11 @@ num_juegos_servidos: row.num_juegos_servidos_perdedor,
 num_break_salvados: row.num_break_salvados_perdedor,
 num_break_afrontados: row.num_break_afrontados_perdedor
 }]->(perdedor);
+\end{lstlisting}
 
+Por último, cargamos los sets de los partidos con los atributos de la tabla relacional homónima. Se crea una relación \texttt{PERTENECE\_A} desde el nodo del set del partido hacia el nodo del partido, para indicar que el set pertenece a un cierto partido. Para ello, se usa \texttt{OPTIONAL MATCH} para encontrar el nodo del partido correspondiente al set del partido, y, si se encuentra, crea el nodo del set del partido y, posteriormente, se crea la relación. La carga de estos datos también la haremos de 10000 en 10000 para evitar problemas de rendimiento.
+
+\begin{lstlisting}[language=Cypher]
 // cargamos los sets de los partidos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
@@ -151,6 +176,11 @@ puntos_tiebreak_perdedor: row.puntos_tiebreak_perdedor
 })
 CREATE (sp)-[:PERTENECE_A]->(p);
 \end{lstlisting}
+
+
+\subsection{Consultas}
+
+Con la base de datos de grafos ya creada, podemos realizar las mismas consultas que llevamos realizando durante todo el documento. A continuación, mostramos las consultas en Cypher que hemos realizado en Neo4J para obtener los mismos resultados que en las consultas SQL. \\
 
 \subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre apellidos y año). Ordena el resultado por año.}
 
