@@ -1,4 +1,4 @@
-\documentclass[10pt]{opticajnl}
+\documentclass[11pt]{opticajnl}
 \journal{opticajournal} % use for journal or Optica Open submissions
 
 % See template introduction for guidance on setting shortarticle option
@@ -14,6 +14,7 @@
 \usepackage{lineno}
 \usepackage{listings}
 \usepackage{color}  % Para colorear el código
+\usepackage[outputdir=build]{minted}
 
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -35,8 +36,12 @@
   showstringspaces=false,
   stringstyle=\color{dkgreen},
   tabsize=3,
-  xleftmargin =1em
+  xleftmargin =1em, 
+  literate={'}{{\texttt{'}}}1
+  		   {"}{{\texttt{"}}}1
 }
+
+
 
 \lstdefinestyle{terminal}{
   backgroundcolor=\color{white},   % Fondo blanco
@@ -99,9 +104,17 @@ Usando una conjunto de datos de partidos de tenis, se usarán distintos tipos de
   \label{fig:schbd}
 \end{figure}
 
+En la figura \ref{fig:schbd} se muestra el esquema de la base de datos de partidos de tenis. Comenzaremos explicando este esquema de forma breve, pero haciendo especial hincapié en las relaciones entre las distintas tablas, ya que esto ayudará a comprender mejor las condiciones de \textit{join} a usar en las consultas que usen este esquema. Destacamos que no se hará uso de la tabla \texttt{ranking}, por lo que no se comentará en el siguiente análisis. \\
+
+La tabla \texttt{pais} contiene la información relativa a países, y se usará tanto para mostrar el país dónde se celebra un torneo como para referenciar el país de procedencia de un jugador; su clave primaria es \texttt{codigo\_iso2}. La tabla \texttt{jugador} contiene la información de los jugadores, y su clave primaria es el \texttt{id} de cada jugador; el atributo \texttt{pais} referencia a \texttt{pais(codigo\_iso2)}. La tabla \texttt{torneo} contiene la información de los torneos; su clave primaria es el \texttt{id} de cada torneo y el atributo \texttt{pais} referencia a \texttt{pais(codigo\_iso2)}. La tabla \texttt{edicion\_torneo} contiene la información de las ediciones de los torneos; su clave primaria es una combinación de los atributos \texttt{torneo} y \texttt{fecha}, donde el atributo \texttt{torneo} es una referencia a \texttt{torneo(id)}. La tabla \texttt{partido} contiene la información de los partidos disputados; su clave primaria es la combinación de los atributos \texttt{torneo}, \texttt{fecha} y \texttt{num\_partido}, y tiene una clave foránea compuesta por los atributos \texttt{torneo} y \texttt{fecha}, que referencia a la clave primaria de \texttt{edicion\_torneo}, \texttt{edicion\_torneo(torneo, fecha)}. Además, los atributos \texttt{ganador} y \texttt{perdedor} son los \texttt{id} de los jugadores, por lo que puede enlazarse esta tabla con la de \texttt{jugador} mediante \texttt{jugador(id)}. Por último, la tabla \texttt{sets\_partido} contiene la información de los sets de los partidos; su clave primaria es la combinación de los atributos \texttt{torneo}, \texttt{fecha}, \texttt{num\_partido} y \texttt{num\_set}, y tiene una clave foránea compuesta por los atributos \texttt{torneo}, \texttt{fecha} y \texttt{num\_partido}, que referencia a la clave primaria de \texttt{partido}, \texttt{partido(torneo, fecha, num\_partido)}. \\
+
+Tras ver cómo se estructura la base de datos a usar, creamos la base de datos en PostgreSQL y cargamos los datos en ella. La estructura relacional se proporciona en el archivo \texttt{schema.sql}, y los datos en los archivos \texttt{pais.csv}, \texttt{jugador.csv}, \texttt{torneo.csv}, \texttt{edicion\_torneo.csv}, \texttt{partido.csv}, \texttt{sets\_partido.csv} y \texttt{ranking.csv}. Una vez creada la base de datos \texttt{tenis}, ejecutamos el archivo \texttt{schema.sql} con la definición de los esquemas de las tablas mediante el siguiente comando en la terminal:
+
 \begin{lstlisting}[style=terminal]
 psql -U alumnogreibd -d tenis -f /home/alumnogreibd/BDGE/datos/datos_tenis/schema.sql
 \end{lstlisting}
+
+Ahora, con los esquemas definidos (pero vacíos), cargamos los datos a partir de los archivos \texttt{.csv} con los siguientes comandos en terminal (es importante seguir el orden de carga de los datos debido a las dependencias entre las tablas):
 
 \begin{lstlisting}[style=terminal]
 psql -U alumnogreibd -d tenis -c "\copy pais from /home/alumnogreibd/BDGE/datos/datos_tenis/pais.csv csv"
@@ -113,11 +126,30 @@ psql -U alumnogreibd -d tenis -c "\copy sets_partido from /home/alumnogreibd/BDG
 psql -U alumnogreibd -d tenis -c "\copy ranking from /home/alumnogreibd/BDGE/datos/datos_tenis/ranking.csv csv"
 \end{lstlisting}
 
+Este orden es lógico por las dependencias entre tablas que comentamos anteriormente: \texttt{sets\_partido} referencia a \texttt{partido}, por lo que es necesario cargar primero los datos de \texttt{partido} para poder cargar los de \texttt{sets\_partido}. Este razonamiento aplica al resto de tablas: \texttt{partido} referencia a \texttt{edicion\_torneo}, que referencia a \texttt{torneo}, que a su vez referencia a \texttt{pais}, que es referenciado por \texttt{jugador}. \\
+
+En las siguientes consultas, los \textit{join} se harán mediante \textit{theta join} (\textit{inner} por defecto). En caso de que se quiera hacer otro tipo de \textit{join}, se especificará de forma clara en la consulta. Esto considera el producto cartesiano de las tablas a unir y selecciona solo las tuplas que verifiquen el predicado (la condición o condiciones de \textit{join}). Estos \textit{join} se harán de forma general de forma implícita en la claúsula \texttt{where}, siguiendo los atributos referenciados entre las tablas. Además, trabajaremos siempre dentro del mismo esquema. \\
 
 
-\subsubsection{Muestra todos los ganadores del torneo "Wimbledon" (Nombre apellidos y año). Ordena el resultado por año.}
+\subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre, apellidos y año). Ordena el resultado por año.}
 
-\begin{lstlisting}[language=SQL]
+Para esta consulta necesitamos la información de los jugadores, los partidos y los torneos, por lo que comenzamos en el \texttt{from} con el producto cartesiano de las tablas \texttt{jugador}, \texttt{partido} y \texttt{torneo} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección: 
+\begin{itemize}
+\item Condiciones de \textit{join}:
+\begin{itemize}
+\item El predicado \texttt{j.id = p.ganador} sirve para unir la tabla \texttt{jugador} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{jugador} y el atributo \texttt{ganador} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite, para cada jugador, seleccionar solo los partidos en los que ha ganado.
+\item El predicado \texttt{t.id = p.torneo} sirve para unir la tabla \texttt{torneo} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{torneo} y el atributo \texttt{torneo} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en un torneo concreto.
+\end{itemize}
+\item Condiciones de selección:
+\begin{itemize}
+\item La condición \texttt{t.nombre = `Wimbledon'} selecciona solo el torneo cuyo nombre es ``Wimbledon''. Al hacer el \textit{join} con la tabla \texttt{torneo}, estamos seleccionando solo los partidos que se han jugado en el torneo ``Wimbledon''.
+\item La condición \texttt{p.ronda = `F'} selecciona solo los partidos que han sido finales.
+\end{itemize}
+\end{itemize}
+
+Tras seleccionar las tuplas que nos interesan, usamos el \texttt{select} para obtener la proyección de las filas que nos interesan: en esta caso, nos quedamos con los atributos \texttt{nombre} y \texttt{apellido} de la tabla \texttt{jugador} y el año de la fecha del partido, que denotaremos por el alias ``ano''. Como \texttt{p.fecha} es del tipo \texttt{date}, este último atributo lo obtenemos mediante la función \texttt{extract()}, especificando que solo queremos el año de ese atributo (\texttt{year from p.fecha}). Tras esto, ordenamos el resultado por año con \texttt{order by ano}; el orden por defecto es ascendente. El código de la consulta se muestra a continuación, y el resultado se pueden ver en la figura \ref{fig:q1_rel}.
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{sql}
 select j.nombre, j.apellido, extract(year from p.fecha) as ano
 from jugador j, partido p, torneo t
 where j.id = p.ganador 
@@ -125,13 +157,41 @@ where j.id = p.ganador
   and t.nombre = 'Wimbledon' 
   and p.ronda = 'F'
 order by ano
-\end{lstlisting}
+\end{minted}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\textheight]{fotos/q1_rel.png}
+\caption{Modelo relacional Postgresql, consulta 1.}
+\label{fig:q1_rel}
+\end{figure}
+
 
 
 \subsubsection{Muestra los años en los que Roger Federer ganó algún torneo de nivel Gran Slam (G) o Master 1000 (M). Para cada año, muestra el número de torneos y lista sus nombres (ordenados por la fecha de celebración). Ordena el resultado por el año}
 
-\begin{lstlisting}[language=SQL]
-select extract(year from et.fecha) as ano, count(distinct t.id) as numero_torneos, string_agg(t.nombre, ', ' order by et.fecha) as torneos
+Para esta consulta necesitamos información de los jugadores, los partidos, los torneos y las ediciones de los torneos. Comenzamos en el \texttt{from} con el producto cartesiano de las tablas \texttt{jugador}, \texttt{partido}, \texttt{torneo} y \texttt{edicion\_torneo} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
+\begin{itemize}
+\item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de un jugador específico que ganó un torneo específico en un año específico:
+\begin{itemize}
+\item El predicado \texttt{j.id = p.ganador} sirve para unir la tabla \texttt{jugador} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{jugador} y el atributo \texttt{ganador} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite, para cada jugador, seleccionar solo los partidos en los que ha ganado.
+\item El predicado \texttt{t.id = p.torneo} sirve para unir la tabla \texttt{torneo} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{torneo} y el atributo \texttt{torneo} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en un torneo concreto.
+\item El predicado \texttt{t.id = et.torneo} sirve para unir la tabla \texttt{torneo} con la tabla \texttt{edicion\_torneo} mediante el atributo \texttt{id} de la tabla \texttt{torneo} y el atributo \texttt{torneo} de la tabla \texttt{edicion\_torneo}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar ediciones de torneos concretos.
+\item El predicado \texttt{p.fecha = et.fecha} sirve para unir la tabla \texttt{partido} con la tabla \texttt{edicion\_torneo} mediante el atributo \texttt{fecha} de la tabla \texttt{partido} y el atributo \texttt{fecha} de la tabla \texttt{edicion\_torneo}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en una edición concreta de un torneo (concreto, por la condición anterior).
+\end{itemize}
+\item Estamos interesados específicamente en torneos de nivel Gran Slam (G) o Master 1000 (M) y en las finales ganadas por Roger Federer (lo que indica que ganó el torneo) durante varios años (es decir, varias ediciones de torneos). Por tanto, las condiciones de selección son:
+\begin{itemize}
+\item El predicado \texttt{p.ronda = 'F'} selecciona solo los partidos que han sido finales.
+\item El predicado \texttt{j.nombre = 'Roger' and j.apellido = 'Federer'} selecciona solo los partidos en los que ha ganado ``Roger Federer''.
+\item El predicado \texttt{et.nivel in ('G', 'M')} selecciona solo los torneos de nivel Gran Slam (G) o Master 1000 (M).
+\end{itemize}
+\end{itemize}
+
+Con el \texttt{group by} agrupamos los resultados por el año en que se celebraron los torneos, para su posterior concatenación. Por último, obtenemos la proyección de los atributos que nos interesan: el año, que lo obtenemos extrayendo el año de la fecha de celebración del partido; el número de torneos ganados, que lo obtenemos contando el número de torneos distintos (usamos el \texttt{id} del torneo para diferenciar) en el resultado agrupado por año (\texttt{count(distinct t.id)}). Como última proyección, obtenemos una concantenación (con \texttt{string\_agg()}) de esos torneos, separados por comas y ordenados por fecha de celebración de esa edición, en orden ascendente (\texttt{order by et.fecha}). El código de la consulta se muestra a continuación, y el resultado se pueden ver en la figura \ref{fig:q2_rel}.
+
+\begin{minted}[frame=single, fontsize=\footnotesize]{sql}
+select extract(year from et.fecha) as ano, count(distinct t.id) as numero_torneos, 
+	string_agg(t.nombre, ', ' order by et.fecha) as torneos
 from jugador j, partido p, torneo t, edicion_torneo et
 where j.id = p.ganador
   and t.id = et.torneo
@@ -142,18 +202,48 @@ where j.id = p.ganador
   and j.apellido = 'Federer'
   and et.nivel in ('G', 'M')
 group by ano
-\end{lstlisting}
+\end{minted}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/q2_rel.png}
+\caption{Modelo relacional Postgresql, consulta 2.}
+\label{fig:q2_rel}
+\end{figure}
+
 
 \subsubsection{Muestra los partidos de semiﬁnales (ronda='SF') y ﬁnal (ronda = 'F') del torneo de "Roland Garros" del 2018. Para cada partido muestra la ronda, el tipo de desenlace, el nombre y apellidos del ganador y el nombre y apellidos del perdedor y el resultado con el número de juegos del ganador y del perdedor en cada set, y opcionalmente en paréntesis el número de juegos del perdedor en el tie break}
 
-\begin{lstlisting}[language=SQL]
-select p.ronda, p.desenlace, jg.nombre || ' ' || jg.apellido AS ganador, jp.nombre || ' ' || jp.apellido AS perdedor, STRING_AGG(sp.juegos_ganador || '-' || sp.juegos_perdedor ||
-      case
-          when sp.puntos_tiebreak_perdedor is not null then
-              '(' || sp.puntos_tiebreak_perdedor || ')'
-          else
-              ''
-      end, ', ' order by sp.num_set) as resultado
+Para esta consulta necesitamos información de los partidos, los jugadores, los torneos y los sets de los partidos; como debemos distinguir entre el ganador y el perdedor, sin ningún tipo de ambigüedad, en el \texttt{from} usamos dos instancias de la tabla \texttt{jugador}, cada una con un alias distinto, por lo que estaremos haciendo el producto cartesiano de la tabla \texttt{jugador} consigo misma, así como con las tablas \texttt{partido}, \texttt{torneo} y \texttt{sets\_partido} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
+\begin{itemize}
+\item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de partidos específicos de un torneo específico en una fecha específica:
+\begin{itemize}
+\item El predicado \texttt{jg.id = p.ganador} sirve para unir la tabla \texttt{jugador} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{jugador} y el atributo \texttt{ganador} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite, para cada jugador, seleccionar solo los partidos en los que ha ganado.
+\item Del mismo modo, usamos el predicado \texttt{jp.id = p.perdedor} para eleccionar solo los partidos en los que ha perdido un determinado jugador. 
+\item El predicado \texttt{p.fecha = sp.fecha} sirve para unir la tabla \texttt{partido} con la tabla \texttt{sets\_partido} mediante el atributo \texttt{fecha} de la tabla \texttt{partido} y el atributo \texttt{fecha} de la tabla \texttt{sets\_partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los sets de los partidos que se han jugado en una fecha concreta.
+\item Como la fecha anterior no es unívoca para cada partido, necesitamos una condición adicional para obtener los sets de un partido determinado. Para ello, usamos el predicado \texttt{p.num\_partido = sp.num\_partido}, que une la tabla \texttt{partido} con la tabla \texttt{sets\_partido} mediante el atributo \texttt{num\_partido} de la tabla \texttt{partido} y el atributo \texttt{num\_partido} de la tabla \texttt{sets\_partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición.
+\item El predicado \texttt{t.id = p.torneo} sirve para unir la tabla \texttt{torneo} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{torneo} y el atributo \texttt{torneo} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en un torneo concreto.
+\end{itemize}
+\item Concretamente, estamos interesados en las semifinales (ronda='SF') y la final (ronda='F) del torneo de ``Roland Garros'' del 2018. Por tanto, las condiciones de selección son:
+\begin{itemize}
+\item El predicado \texttt{p.ronda in ('SF', 'F')} selecciona solo los partidos que han sido semifinales o finales.
+\item El predicado \texttt{t.nombre = 'Roland Garros'} selecciona solo los partidos que se han jugado en el torneo ``Roland Garros''.
+\item El predicado \texttt{extract(year from p.fecha) = '2018'} selecciona solo los partidos que se han jugado en el año 2018.
+\end{itemize}
+\end{itemize}
+
+Ahora, para cada combinación de \texttt{p.ronda}, \texttt{p.desenlace}, \texttt{jg.nombre}, \texttt{jg.apellido}, \texttt{jp.nombre} y \texttt{jp.apellido}, tendremos una fila para cada set, donde solo variará la información de los juegos ganados y perdidos. Por tanto, agrupamos por los atributos mencionados anteriormente y, en la proyección, concatenamos los resultados de los juegos ganados y perdidos en cada set, así como el resultado final del partido, para lo que usamos la función \texttt{string\_agg()}. Como también debemos especificar la puntuación del \textit{tiebreak} (en caso de haberla), usamos un \texttt{case} para comprobar si el atributo \texttt{puntos\_tiebreak\_perdedor} es \texttt{null} o no: en caso que sea nulo, concatenamos una cadena vacia, en caso de no ser nulo, concatenamos la puntuación del \textit{tiebreak}, puesta entre paréntesis. Si bien esta es una parte de la proyección, el resto incluye simplemente la ronda, el desenlace, la fecha y los nombres y apellidos de los jugadores concatenados (un atributo para el ganador y otro para el perdedor). El código de la consulta se muestra a continuación, y el resultado se pueden ver en la figura \ref{fig:q3_rel}.
+
+\begin{minted}[frame=single, fontsize=\small]{sql}
+select p.ronda, p.desenlace, jg.nombre || ' ' || jg.apellido AS ganador, 
+	jp.nombre || ' ' || jp.apellido AS perdedor, 
+	STRING_AGG(sp.juegos_ganador || '-' || sp.juegos_perdedor ||
+		case
+		  when sp.puntos_tiebreak_perdedor is not null then 
+		  	'(' || sp.puntos_tiebreak_perdedor || ')'
+		  else 
+		  	'' 
+		end, ', ' order by sp.num_set) as resultado
 from partido p, jugador jg, jugador jp, sets_partido sp, torneo t
 where jg.id = p.ganador
   and jp.id = p.perdedor
@@ -163,12 +253,52 @@ where jg.id = p.ganador
   and p.ronda in ('SF', 'F')
   and t.nombre = 'Roland Garros'
   and extract(year from p.fecha) = '2018'
-group by p.ronda, p.desenlace, jg.nombre, jg.apellido, jp.nombre, jp.apellido, p.fecha
-\end{lstlisting}
+group by p.ronda, p.desenlace, jg.nombre, jg.apellido, jp.nombre, jp.apellido
+\end{minted}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{fotos/q3_rel.png}
+\caption{Modelo relacional Postgresql, consulta 3.}
+\label{fig:q3_rel}
+\end{figure}
 
 \subsubsection{Muestra la lista de jugadores españoles (ES) que ganaron algún torneo de nivel Gran Slam (G). Para cada jugador muestra los siguientes datos resumen de todos sus partidos: número de partidos jugados, porcentaje de victorias, porcentaje de aces, porcentaje de dobles faltas, porcentaje de servicios ganados, porcentaje de restos ganados, porcentaje de break points salvados (de los sufridos en contra), porcentaje de break points ganados (de los provocados a favor)}
 
-\begin{lstlisting}[language=SQL]
+Esta consulta la dividiremos en dos partes: primero, buscaremos los jugadores españoles que ganaron algún torneo de nivel Grand Slam (G), y, a continuación, calcularemos los datos resumen que se piden de todos sus partidos. Para la primera parte, necesitamos información de los jugadores, los partidos y las ediciones de los torneos; comenzamos en el \texttt{from} con el producto cartesiano de las tablas \texttt{jugador}, \texttt{partido} y \texttt{edicion\_torneo} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
+\begin{itemize}
+\item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de un torneo específico:
+\begin{itemize}
+\item El predicado \texttt{j.id = p.ganador} sirve para unir la tabla \texttt{jugador} con la tabla \texttt{partido} mediante el atributo \texttt{id} de la tabla \texttt{jugador} y el atributo \texttt{ganador} de la tabla \texttt{partido}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite, para cada jugador, seleccionar solo los partidos en los que ha ganado. 
+\item El predicado \texttt{p.torneo = et.torneo} sirve para unir la tabla \texttt{partido} con la tabla \texttt{edicion\_torneo} mediante el atributo \texttt{torneo} de la tabla \texttt{partido} y el atributo \texttt{torneo} de la tabla \texttt{edicion\_torneo}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en una edición concreta de un torneo.
+\item El predicado \texttt{p.fecha = et.fecha} sirve para unir la tabla \texttt{partido} con la tabla \texttt{edicion\_torneo} mediante el atributo \texttt{fecha} de la tabla \texttt{partido} y el atributo \texttt{fecha} de la tabla \texttt{edicion\_torneo}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los partidos que se han jugado en una fecha concreta.
+\end{itemize}
+\item Como de todo lo anterior solo nos interesan los partidos finales (F) de torneos de nivel Grand Slam (G) y ganados por jugadores españoles (ES), las condiciones de selección son:
+\begin{itemize}
+\item El predicado \texttt{p.ronda = 'F'} selecciona solo los partidos que han sido finales.
+\item El predicado \texttt{et.nivel = 'G'} selecciona solo los torneos de nivel Grand Slam (G).
+\item El predicado \texttt{j.pais = 'ES'} selecciona solo los jugadores españoles.
+\end{itemize}
+\end{itemize}
+
+Con todo esto, obtenemos una tabla con los jugadores españoles que han ganado algún torneo de nivel Grand Slam (G), pero hay repeticion ya que estamos considerando cada edición de cada Grand Slam. Para quedarnos solo con el subconjunto que nos interesa (sin repetición), usamos un \texttt{distinct} en la proyección. Concretamente, obtenemos la proyección del \texttt{id} y el nombre completo del jugador, que concatenamos con el operador \texttt{||}, y aplicamos el \texttt{distinct} sobre la proyección. Esta tabla resultado la guardamos como \texttt{jugadores\_espanoles\_ganadores}, y la usaremos en la segunda parte de la consulta. \\
+
+Para obtener las estadísticas resumen de cada jugador español ganador de un Grand Slam, necesitamos solo información sobre quiénes son esos jugadores y sobre los partidos que han jugado. Por tanto, en el \texttt{from} usamos la tabla \texttt{jugadores\_espanoles\_ganadores} que acabamos de crear, y la tabla \texttt{partido} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
+\begin{itemize}
+\item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de partidos de un jugador específico:
+\begin{itemize}
+\item El predicado \texttt{jeg.id_jugador = p.ganador or jeg.id_jugador = p.perdedor} nos permite seleccionar los partidos, tanto ganados como perdidos, en los que ha participado un jugador específico de la tabla \texttt{jugadores\_espanoles\_ganadores}.
+\end{itemize}
+\end{itemize}
+
+Con esto, obtenemos una fila por cada partido de cada jugador, por lo que agrupamos por el jugador antes de agregar valores. En la proyección, obtenemos varios atributos, que redondearemos a un decimal usando \texttt{round(..., 1)}:
+\begin{itemize}
+\item El nombre completo del jugador, que concatenamos previamente con el operador \texttt{||}.
+\item El número de partidos jugados como el conteo de los partidos en los que ha participado (\texttt{count(p.num\_partido)}).
+\item El porcentaje de victorias, que calculamos como el número de partidos ganados entre el número total de partidos jugados, multiplicado por 100. Para obtener el número de partidos ganados, usamos un \texttt{case} que comprueba si el jugador es el ganador del partido o no. Esto genera una lista que contiene 1 si el jugador es el ganador y 0 si no lo es, y con \texttt{sum()} sumamos los valores de esta lista para obtener el número de partidos ganados. 
+\end{itemize}
+
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with jugadores_espanoles_ganadores as (
     select distinct j.id as id_jugador, j.nombre || ' ' || j.apellido as jugador
     from partido p, jugador j, edicion_torneo et 
@@ -202,11 +332,11 @@ from jugadores_espanoles_ganadores jeg, partido p
 where jeg.id_jugador = p.ganador 
 	or jeg.id_jugador = p.perdedor
 group by jeg.jugador
-\end{lstlisting}
+\end{minted}
 
 \subsubsection{Lista los jugadores que fueron derrotados (en algún partido del 2018) por el rival de Rafael Nadal de la primera ronda (R128) de Roland Garros de 2018}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with rival_nadal as (
 	select case when jg.nombre = 'Rafael' then jp.id else jg.id end as id_jugador, 
 		case when jg.nombre = 'Rafael' then jp.nombre || ' ' || jp.apellido else jg.nombre || ' ' || jg.apellido end as jugador
@@ -227,7 +357,7 @@ from rival_nadal rn, partido p, jugador j
 where rn.id_jugador = p.ganador 
 	and p.perdedor = j.id
 	and extract(year from p.fecha) = '2018'
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -267,7 +397,7 @@ where rn.id_jugador = p.ganador
 
 \subsection{Tipos compuestos}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 create type pais_info as (
 	codigo_iso2 char(2),
 	codigo_iso3 char(3),
@@ -320,9 +450,9 @@ create type jugador_info as (
    pais pais_info,
    altura integer
 )
-\end{lstlisting}
+\end{minted}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 create table partidos (
   torneo edicion_torneo_info,
   fecha date,
@@ -336,9 +466,9 @@ create table partidos (
 	ganador_stats jugador_stats,
 	perdedor_stats jugador_stats
 )
-\end{lstlisting}
+\end{minted}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 insert into partidos(
 torneo, fecha, num_partido, num_sets, info_sets, ronda, desenlace, ganador, perdedor, ganador_stats, perdedor_stats)
 select
@@ -407,7 +537,7 @@ from public.partido p join public.edicion_torneo et on et.fecha = p.fecha and et
 	left join public.pais pg on jg.pais = pg.codigo_iso2
 	left join public.jugador jp on p.perdedor = jp.id
 	left join public.pais pp on jp.pais = pp.codigo_iso2
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -415,13 +545,13 @@ from public.partido p join public.edicion_torneo et on et.fecha = p.fecha and et
 
 \subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre apellidos y año). Ordena el resultado por año.}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select (ganador).nombre, (ganador).apellido, extract(year from fecha) as ano
 from partidos
 where (torneo).torneo.nombre = 'Wimbledon'
 	and ronda = 'F'
 order by ano
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -429,7 +559,7 @@ order by ano
 
 \subsubsection{Muestra los años en los que Roger Federer ganó algún torneo de nivel Gran Slam (G) o Master 1000 (M). Para cada año, muestra el número de torneos y lista sus nombres (ordenados por la fecha de celebración). Ordena el resultado por el año}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select extract(year from (torneo).fecha) as ano, count(distinct (torneo).torneo.id) as numero_torneos, 
 	string_agg((torneo).torneo.nombre, ', ' order by (torneo).fecha) as torneos
 from partidos
@@ -438,7 +568,7 @@ where (torneo).nivel in ('G', 'M')
 	and (ganador).apellido = 'Federer'
 	and ronda = 'F'
 group by ano
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -446,7 +576,7 @@ group by ano
 
 \subsubsection{Muestra los partidos de semiﬁnales (ronda='SF') y ﬁnal (ronda = 'F') del torneo de "Roland Garros" del 2018. Para cada partido muestra la ronda, el tipo de desenlace, el nombre y apellidos del ganador y el nombre y apellidos del perdedor y el resultado con el número de juegos del ganador y del perdedor en cada set, y opcionalmente en paréntesis el número de juegos del perdedor en el tie break}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select ronda, desenlace, 
 	(ganador).nombre || ' ' || (ganador).apellido as ganador,
 	(perdedor).nombre || ' ' || (perdedor).apellido as perdedor, 
@@ -461,7 +591,7 @@ from partidos
 where ronda in ('SF', 'F')
 	and (torneo).torneo.nombre = 'Roland Garros'
 	and extract(year from fecha) = '2018'
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -469,7 +599,7 @@ where ronda in ('SF', 'F')
 
 \subsubsection{Muestra la lista de jugadores españoles (ES) que ganaron algún torneo de nivel Gran Slam (G). Para cada jugador muestra los siguientes datos resumen de todos sus partidos: número de partidos jugados, porcentaje de victorias, porcentaje de aces, porcentaje de dobles faltas, porcentaje de servicios ganados, porcentaje de restos ganados, porcentaje de break points salvados (de los sufridos en contra), porcentaje de break points ganados (de los provocados a favor)}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with jugadores_espanoles_ganadores as (
     select distinct (ganador).id as id_jugador, (ganador).nombre || ' ' || (ganador).apellido AS jugador
     from partidos
@@ -502,7 +632,7 @@ from jugadores_espanoles_ganadores jeg, partidos p
 where jeg.id_jugador = (p.ganador).id
     or jeg.id_jugador = (p.perdedor).id
 group by jeg.jugador
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -510,7 +640,7 @@ group by jeg.jugador
 
 \subsubsection{Lista los jugadores que fueron derrotados (en algún partido del 2018) por el rival de Rafael Nadal de la primera ronda (R128) de Roland Garros de 2018}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with rival_nadal as (
 	select case when (ganador).nombre = 'Rafael' then (perdedor).nombre || ' ' || (perdedor).apellido 
 						 else (ganador).nombre || ' ' || (ganador).apellido end as jugador
@@ -527,7 +657,7 @@ from partidos p, rival_nadal rn
 where (p.ganador).nombre || ' ' || (p.ganador).apellido = rn.jugador
 	and extract(year from p.fecha) = '2018'
 order by jugador
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -564,7 +694,7 @@ order by jugador
 
 \subsection{JSON}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 create table tenisjson as
 select 
 	-- columna 'jugador' como objeto json
@@ -705,7 +835,7 @@ from public.jugador j
 	left join public.pais p on j.pais = p.codigo_iso2
 where j.id in (select perdedor from public.partido)
 	or j.id in (select ganador from public.partido)
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -713,7 +843,7 @@ where j.id in (select perdedor from public.partido)
 
 \subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre apellidos y año). Ordena el resultado por año.}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select tj.jugador ->> 'nombre' as nombre, 
     tj.jugador ->> 'apellido' as apellido, 
     extract(year from (pg ->> 'fecha')::date) as ano
@@ -721,7 +851,7 @@ from tenisjson tj, jsonb_array_elements(partidos_ganados) as partidos(pg)
 where pg ->> 'ronda' = 'F' 
     and pg -> 'torneo' ->> 'nombre' = 'Wimbledon'
 order by ano
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -729,7 +859,7 @@ order by ano
 
 \subsubsection{Muestra los años en los que Roger Federer ganó algún torneo de nivel Gran Slam (G) o Master 1000 (M). Para cada año, muestra el número de torneos y lista sus nombres (ordenados por la fecha de celebración). Ordena el resultado por el año}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select extract(year from (pg -> 'torneo' ->> 'fecha')::date) as ano,
     count(distinct pg -> 'torneo'->>'nombre') as numero_torneos,
     string_agg(pg -> 'torneo'->>'nombre', ', ' order by pg -> 'torneo' ->> 'fecha') as torneos
@@ -740,7 +870,7 @@ where tj.jugador ->> 'nombre' = 'Roger'
     and pg -> 'torneo'->>'nivel' in ('G', 'M')
 group by ano
 order by ano
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -748,7 +878,7 @@ order by ano
 
 \subsubsection{Muestra los partidos de semiﬁnales (ronda='SF') y ﬁnal (ronda = 'F') del torneo de "Roland Garros" del 2018. Para cada partido muestra la ronda, el tipo de desenlace, el nombre y apellidos del ganador y el nombre y apellidos del perdedor y el resultado con el número de juegos del ganador y del perdedor en cada set, y opcionalmente en paréntesis el número de juegos del perdedor en el tie break}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 select pg ->> 'ronda' as ronda, pg ->> 'desenlace' as desenlace, 
 	(tj.jugador ->> 'nombre')::text || ' ' || (tj.jugador ->> 'apellido')::text as ganador, 
 	(tjr.jugador ->> 'nombre')::text || ' ' || (tjr.jugador ->> 'apellido')::text as perdedor, 
@@ -765,7 +895,7 @@ where pg ->'torneo' ->> 'nombre' = 'Roland Garros'
 group by pg ->> 'ronda', pg ->> 'desenlace', 
 	tj.jugador ->> 'nombre', tj.jugador ->> 'apellido', 
 	tjr.jugador ->> 'nombre', tjr.jugador ->> 'apellido', pg ->> 'fecha'
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -773,7 +903,7 @@ group by pg ->> 'ronda', pg ->> 'desenlace',
 
 \subsubsection{Muestra la lista de jugadores españoles (ES) que ganaron algún torneo de nivel Gran Slam (G). Para cada jugador muestra los siguientes datos resumen de todos sus partidos: número de partidos jugados, porcentaje de victorias, porcentaje de aces, porcentaje de dobles faltas, porcentaje de servicios ganados, porcentaje de restos ganados, porcentaje de break points salvados (de los sufridos en contra), porcentaje de break points ganados (de los provocados a favor)}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with jugadores_espanoles_ganadores as (
     select distinct (tj.jugador ->> 'id')::integer as id_jugador, 
     	(tj.jugador ->> 'nombre')::text || ' ' || (tj.jugador ->> 'apellido')::text as jugador
@@ -829,7 +959,7 @@ from jugadores_espanoles_ganadores jeg, tenisjson tj,
 where (tj.jugador ->> 'id')::integer = jeg.id_jugador 
 	or pg ->> 'rival' = jeg.id_jugador::text
 group by jeg.jugador
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -837,7 +967,7 @@ group by jeg.jugador
 
 \subsubsection{Lista los jugadores que fueron derrotados (en algún partido del 2018) por el rival de Rafael Nadal de la primera ronda (R128) de Roland Garros de 2018}
 
-\begin{lstlisting}[language=SQL]
+\begin{minted}[frame=single, fontsize=\small]{sql}
 with rival_nadal as (
 	select case when tj.jugador ->> 'nombre' = 'Rafael' 
 			then (pg ->> 'rival')::integer  
@@ -859,7 +989,7 @@ select tj.jugador->>'nombre' || ' ' || (tj.jugador->>'apellido')::text as jugado
 from rival_nadal rn, tenisjson tj, jsonb_array_elements(tj.partidos_perdidos) as partidos(pg)
 where rn.id_jugador = (pg->>'rival')::integer 
 	and extract(year from (pg->>'fecha')::date) = 2018
-\end{lstlisting}
+\end{minted}
 
 
 

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{with}\PYG{+w}{ }\PYG{n}{rival\PYGZus{}nadal}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{k}{select}\PYG{+w}{ }\PYG{k}{case}\PYG{+w}{ }\PYG{k}{when}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Rafael\PYGZsq{}}\PYG{+w}{ }\PYG{k}{then}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{apellido}
+\PYG{+w}{						 }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{apellido}\PYG{+w}{ }\PYG{k}{end}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{jugador}
+\PYG{+w}{	}\PYG{k}{from}\PYG{+w}{ }\PYG{n}{partidos}
+\PYG{+w}{	}\PYG{k}{where}\PYG{+w}{ }\PYG{p}{(((}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Rafael\PYGZsq{}}\PYG{+w}{ }\PYG{k}{and}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{apellido}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Nadal\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{or}
+\PYG{+w}{		  }\PYG{p}{((}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Rafael\PYGZsq{}}\PYG{+w}{ }\PYG{k}{and}\PYG{p}{(}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{apellido}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Nadal\PYGZsq{}}\PYG{p}{))}
+\PYG{+w}{		}\PYG{k}{and}\PYG{+w}{ }\PYG{n}{ronda}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}R128\PYGZsq{}}
+\PYG{+w}{		}\PYG{k}{and}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{torneo}\PYG{p}{).}\PYG{n}{torneo}\PYG{p}{.}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Roland Garros\PYGZsq{}}
+\PYG{+w}{		}\PYG{k}{and}\PYG{+w}{ }\PYG{k}{extract}\PYG{p}{(}\PYG{k}{year}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{fecha}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}2018\PYGZsq{}}
+\PYG{p}{)}
+
+\PYG{k}{select}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{apellido}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{perdedor}\PYG{p}{).}\PYG{n}{pais}\PYG{p}{.}\PYG{n}{codigo\PYGZus{}iso2}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{pais}
+\PYG{k}{from}\PYG{+w}{ }\PYG{n}{partidos}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rival\PYGZus{}nadal}\PYG{+w}{ }\PYG{n}{rn}
+\PYG{k}{where}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{nombre}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{ganador}\PYG{p}{).}\PYG{n}{apellido}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{rn}\PYG{p}{.}\PYG{n}{jugador}
+\PYG{+w}{	}\PYG{k}{and}\PYG{+w}{ }\PYG{k}{extract}\PYG{p}{(}\PYG{k}{year}\PYG{+w}{ }\PYG{k}{from}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{.}\PYG{n}{fecha}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}2018\PYGZsq{}}
+\PYG{k}{order}\PYG{+w}{ }\PYG{k}{by}\PYG{+w}{ }\PYG{n}{jugador}
+\end{Verbatim}

@@ -71,7 +71,7 @@ CREATE TABLE sets_partido (
 	juegos_perdedor integer,  --numero de juegos que el perdedor del partido ganó en el set
 	puntos_tiebreak_perdedor integer, --número de puntos que el perdedor del set ganó en el tie-break
 	PRIMARY KEY (torneo, fecha, num_partido,num_set),
-	FOREIGN KEY (torneo, fecha, num_partido) REFERENCES partido (torneo, fecha, num_partido)
+	FOREIGN KEY (torneo, fecha, num_partido) REFERENCES partido(torneo, fecha, num_partido)
 );
 
 CREATE TABLE ranking (

@@ -42,7 +42,7 @@ where jg.id = p.ganador
   and p.ronda in ('SF', 'F')
   and t.nombre = 'Roland Garros'
   and extract(year from p.fecha) = '2018'
-group by p.ronda, p.desenlace, jg.nombre, jg.apellido, jp.nombre, jp.apellido, p.fecha
+group by p.ronda, p.desenlace, jg.nombre, jg.apellido, jp.nombre, jp.apellido
 
 
 
