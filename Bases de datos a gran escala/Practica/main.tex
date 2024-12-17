@@ -1,8 +1,15 @@
 \documentclass[11pt]{opticajnl}
-\usepackage[utf8]{inputenc} 
 \journal{opticajournal} % use for journal or Optica Open submissions
 
-\usepackage[T1]{fontenc}    % Mejor codificación de fuente
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Añadir esta línea para mejorar el manejo de caracteres especiales
+
+\usepackage{etoolbox}
+
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdofcolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\makeatother
 % See template introduction for guidance on setting shortarticle option
 \setboolean{shortarticle}{true}
 % true = letter/tutorial
@@ -377,10 +384,10 @@ Esta consulta la dividiremos de nuevo en dos partes. Primero, buscaremos el riva
 \item El predicado \texttt{t.id = et.torneo} sirve para unir la tabla \texttt{torneo} con la tabla \texttt{edicion\_torneo} mediante el atributo \texttt{id} de la tabla \texttt{torneo} y el atributo \texttt{torneo} de la tabla \texttt{edicion\_torneo}, haciendo una selección únicamente de las tuplas que cumplan esta condición. Esto nos permite seleccionar solo los torneos que se han jugado en una edición concreta.
 \end{itemize}
 \item Ahora, queremos especificar que ese rival sea Rafael Nadal (no sabemos si ganó o perdió), que el torneo sea Roland Garros de 2018 y que la ronda sea la primera ronda (R128). Por tanto, las condiciones de selección son:
-\item El predicado \texttt{p.ronda = 'R128'} selecciona solo los partidos que han sido de la primera ronda.
-\item El predicado \texttt{t.nombre = 'Roland Garros'} selecciona solo los partidos que se han jugado en el torneo ``Roland Garros''.
-\item El predicado \texttt{extract(year from p.fecha) = '2018'} selecciona solo los partidos que se han jugado en el año 2018.
-\item El predicado \texttt{jg.nombre = 'Rafael' and jg.apellido = 'Nadal' or jp.nombre = 'Rafael' and jp.apellido = 'Nadal'} selecciona solo los partidos en los que ha participado Rafael Nadal, ya sea como ganador o como perdedor.
+\item El predicado \texttt{p.ronda = `R128'} selecciona solo los partidos que han sido de la primera ronda.
+\item El predicado \texttt{t.nombre = `Roland Garros'} selecciona solo los partidos que se han jugado en el torneo ``Roland Garros''.
+\item El predicado \texttt{extract(year from p.fecha) = `2018'} selecciona solo los partidos que se han jugado en el año 2018.
+\item El predicado \texttt{jg.nombre = `Rafael' and jg.apellido = `Nadal' or jp.nombre = `Rafael' and}\\ \texttt{jp.apellido = `Nadal'} selecciona solo los partidos en los que ha participado Rafael Nadal, ya sea como ganador o como perdedor.
 \end{itemize}
 
 El resultado es entonces una única tupla, con ese partido de primera ronda de Roland Garros 2018. Como queremos la información del rival, obtenemos como proyección su \texttt{id} y su nombre completo, que concatenamos con el operador \texttt{||}. Al no conocer de antemano si Rafael Nadal ganó o perdió, no podemos saber si el rival fue el ganador o el perdedor, por lo que debemos usar un \texttt{case} para seleccionar al ganador si Nadal fue el perdedor y viceversa. Guardamos esta información en una tabla llamada \texttt{rival\_nadal}, que usaremos en la segunda parte de la consulta. \\

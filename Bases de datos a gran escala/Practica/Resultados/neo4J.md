@@ -245,7 +245,7 @@ ORDER BY p.fecha;
 ## Q4
 ----------------------
 ```
-// Primero identificamos los jugadores españoles que han ganado finales de Grand Slam (para eliminar duplicados, sino lo haciamos directamente con las estadísticas)
+// buscamos jugadores españoles que han ganado finales de Grand Slam (para eliminar duplicados, sino lo haciamos directamente con las estadísticas)
 MATCH (j:Jugador)-[:REPRESENTA_A]->(p:Pais {codigo_iso2: 'ES'})
 MATCH (j)<-[:GANADO_POR]-(partido:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
 MATCH (et:EdicionTorneo)-[:EDICION_DE]->(t)
@@ -255,12 +255,12 @@ AND et.fecha = partido.fecha
 AND et.torneo = t.id
 WITH DISTINCT j.id AS id_jugador, j.nombre + ' ' + j.apellido AS jugador
 
-// Ahora calculamos todas las estadísticas para estos jugadores
+// calculamos las estadísticas de estos jugadores
 MATCH (j:Jugador)
 WHERE j.id = id_jugador
 MATCH (p:Partido)
 MATCH (j)<-[r:GANADO_POR|PERDIDO_POR]-(p)
-// Obtener rivales y sus estadísticas
+// necesitamos las estadisticas de sus rivales
 OPTIONAL MATCH (p)-[rp:PERDIDO_POR]->(rival_j:Jugador)
 OPTIONAL MATCH (p)-[rg:GANADO_POR]->(rival_g:Jugador)
 WITH jugador, p, j, r, type(r) AS tipo, rp, rg,
@@ -269,7 +269,7 @@ r.num_aces AS aces,
 r.num_ptos_servidos AS ptos_servidos,
 r.num_dob_faltas AS dobles_faltas,
 r.num_primeros_servicios_ganados + r.num_segundos_servicios_ganados AS servicios_ganados,
-// Calcular restos ganados
+// restos ganados
 CASE type(r)
 WHEN 'GANADO_POR' THEN rp.num_ptos_servidos - rp.num_primeros_servicios_ganados - rp.num_segundos_servicios_ganados
 ELSE rg.num_ptos_servidos - rg.num_primeros_servicios_ganados - rg.num_segundos_servicios_ganados END AS restos_ganados,
@@ -322,7 +322,7 @@ ORDER BY jugador;
 ## Q5
 ----------------------
 ```
-// Primero encontramos al rival de Nadal en Roland Garros 2018 R128
+// encontramos al rival de Nadal en Roland Garros 2018 R128
 MATCH (nadal:Jugador {nombre: 'Rafael', apellido: 'Nadal'})
 MATCH (rival:Jugador)
 MATCH (p:Partido)-[:SE_JUEGA_EN]->(t:Torneo {nombre: 'Roland Garros'})
@@ -332,7 +332,7 @@ AND ((nadal)<-[:GANADO_POR]-(p)-[:PERDIDO_POR]->(rival) OR
 (nadal)<-[:PERDIDO_POR]-(p)-[:GANADO_POR]->(rival))
 
 
-// Ahora buscamos los partidos donde este rival perdió en 2018
+// buscamos los partidos donde este rival perdió en 2018
 WITH rival
 MATCH (rival)<-[:GANADO_POR]-(derrotas:Partido)-[:PERDIDO_POR]->(perdedor:Jugador)
 WHERE substring(toString(derrotas.fecha), 0, 4) = '2018'

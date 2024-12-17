@@ -2,11 +2,7 @@
 \PYG{c+c1}{// cargamos los partidos}
 \PYG{k}{WITH}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd\PYGZam{}password=greibd2021\PYGZdq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{url}
 \PYG{k}{CALL}\PYG{+w}{ }\PYG{n}{apoc}\PYG{p}{.}\PYG{n}{load}\PYG{p}{.}\PYG{n}{jdbc}\PYG{p}{(}\PYG{n}{url}\PYG{p}{,}
-\PYG{l+s}{\PYGZdq{}SELECT *}
-\PYG{l+s}{FROM partido p}
-\PYG{l+s}{WHERE p.fecha IS NOT NULL AND p.torneo IS NOT NULL}
-\PYG{l+s}{ORDER BY p.fecha, p.torneo, p.num\PYGZus{}partido}
-\PYG{l+s}{LIMIT 10000 OFFSET 0\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{YIELD}\PYG{+w}{ }\PYG{n}{row}
+\PYG{l+s}{\PYGZdq{}SELECT * FROM partido p LIMIT 10000 OFFSET 0\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{YIELD}\PYG{+w}{ }\PYG{n}{row}
 
 \PYG{k}{CREATE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{:}\PYG{n}{Partido}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{n}{num\PYGZus{}partido}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{num\PYGZus{}partido}\PYG{p}{,}
