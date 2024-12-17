@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd\PYGZam{}password=greibd2021\PYGZdq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{url}
+\PYG{k}{CALL}\PYG{+w}{ }\PYG{n}{apoc}\PYG{p}{.}\PYG{n}{load}\PYG{p}{.}\PYG{n}{jdbc}\PYG{p}{(}\PYG{n}{url}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}SELECT id, nombre, apellido, diestro, fecha\PYGZus{}nacimiento, pais, altura FROM jugador\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{YIELD}\PYG{+w}{ }\PYG{n}{row}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{pa}\PYG{p}{:}\PYG{n}{Pais}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n}{codigo\PYGZus{}iso2}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{pais}\PYG{p}{\PYGZcb{})}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{:}\PYG{n}{Jugador}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{id}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{id}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nombre}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{nombre}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{apellido}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{apellido}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{diestro}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{diestro}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{fecha\PYGZus{}nacimiento}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{fecha\PYGZus{}nacimiento}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{altura}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{altura}
+\PYG{p}{\PYGZcb{})}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{REPRESENTA\PYGZus{}A}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{pa}\PYG{p}{);}
+\end{Verbatim}

@@ -6,13 +6,13 @@ Neo4J viene ya instalado en la máquina virtual que estamos usando, por lo que s
 
 Lo primero es crear la estructura de nodos y enlaces adecuada para las consultas. Iremos describiendola poco a poco, pero antes introduciremos los índices necesarios para que las consultas pensadas sean eficientes:
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 CREATE INDEX IF NOT EXISTS FOR (j:Jugador) ON (j.id);
 CREATE INDEX IF NOT EXISTS FOR (et:EdicionTorneo) ON (et.torneo, et.fecha);
 CREATE INDEX IF NOT EXISTS FOR (p:Partido) ON (p.num_partido, p.fecha);
 CREATE INDEX IF NOT EXISTS FOR (p:Pais) ON (p.codigo_iso2);
 CREATE INDEX IF NOT EXISTS FOR (t:Torneo) ON (t.id);
-\end{lstlisting}
+\end{minted}
 
 La indexación de las originales claves primarias en las tablas de relacionales resulta en consultas mucho más eficientes. Esto lo hacemos para \texttt{Jugador}, \texttt{EdicionTorneo}, \texttt{Pais} y \texttt{Torneo}. Para facilitar la búsqueda de partidos específicos, se indexan simplemente el número de partido y la fecha.
 
@@ -22,24 +22,26 @@ Al estar los datos almacenados dentro de un SGBDs relacional, usaremos JDBC para
 
 Comenzamos creamos nodos para los paises, con sus correspondientes atributos de la tabla relacional. 
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" as url
-CALL apoc.load.jdbc(url, "SELECT codigo_iso2, codigo_iso3, codigo_ioc, nombre FROM pais") YIELD row
+CALL apoc.load.jdbc(url, 
+    "SELECT codigo_iso2, codigo_iso3, codigo_ioc, nombre FROM pais") YIELD row
 CREATE (p:Pais {
 codigo_iso2: row.codigo_iso2,
 codigo_iso3: row.codigo_iso3,
 codigo_ioc: row.codigo_ioc,
 nombre: row.nombre
 });
-\end{lstlisting}
+\end{minted}
 
 
 Creamos nodos para los jugadores, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{REPRESENTA\_A} entre el nodo del país y el nodo del jugador, para indicar que el jugador representa a su país. Para ello, se usa \texttt{MATCH} para encontrar el nodo del país correspondiente al jugador, se crea el nodo del jugador y, posteriormente, se crea la relación (saliente desde el nodo jugador hacia el nodo país).
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url, 
-"SELECT id, nombre, apellido, diestro, fecha_nacimiento, pais, altura FROM jugador") YIELD row
+    "SELECT id, nombre, apellido, diestro, fecha_nacimiento, pais, altura FROM jugador") 
+    YIELD row
 MATCH (pa:Pais {codigo_iso2: row.pais})
 CREATE (j:Jugador {
     id: row.id,
@@ -50,15 +52,14 @@ CREATE (j:Jugador {
     altura: row.altura
 })
 CREATE (j)-[:REPRESENTA_A]->(pa);
-\end{lstlisting}
+\end{minted}
 
 Nodos para los torneos, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{SE\_CELEBRA\_EN} entre el nodo del país y el nodo del torneo, para indicar que el torneo se celebra en un país. Para ello, se usa \texttt{MATCH} para encontrar el nodo del país correspondiente al torneo, se crea el nodo del torneo y, posteriormente, se crea la relación (saliente desde el nodo torneo hacia el nodo país).
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // cargamos los torneos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
-CALL apoc.load.jdbc(url,
-"SELECT id, nombre, pais FROM torneo") YIELD row
+CALL apoc.load.jdbc(url, "SELECT id, nombre, pais FROM torneo") YIELD row
 CREATE (t:Torneo {
     id: row.id,
     nombre: row.nombre
@@ -68,15 +69,16 @@ OPTIONAL MATCH (pa:Pais {codigo_iso2: row.pais})
 WITH t, pa
 WHERE pa IS NOT NULL
 CREATE (t)-[:SE_CELEBRA_EN]->(pa);
-\end{lstlisting}
+\end{minted}
 
 Nodos para las ediciones de los torneos, con sus correspondientes atributos de la tabla relacional. Se crea una relación \texttt{EDICION\_DE} entre el nodo de la edición del torneo y el nodo del torneo, para indicar que la edición del torneo pertenece a un cierto torneo. Para ello, se usa \texttt{MATCH} para encontrar el nodo del torneo correspondiente a la edición del torneo, se crea el nodo de la edición del torneo y, posteriormente, se crea la relación (saliente desde el nodo edición del torneo hacia el nodo torneo).
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // cargamos las ediciones de los torneos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
-CALL apoc.load.jdbc(url,
-"SELECT torneo, fecha, superficie, tamano, nivel FROM edicion_torneo") YIELD row
+CALL apoc.load.jdbc(url, 
+    "SELECT torneo, fecha, superficie, tamano, nivel FROM edicion_torneo") 
+    YIELD row
 MATCH (t:Torneo {id: row.torneo})
 CREATE (et:EdicionTorneo {
     fecha: row.fecha,
@@ -86,7 +88,7 @@ CREATE (et:EdicionTorneo {
     torneo: row.torneo
 })
 CREATE (et)-[:EDICION_DE]->(t);
-\end{lstlisting}
+\end{minted}
 
 A continuación, cargamos los partidos creando nodos con sus correspondientes atributos de la tabla relacional. Esta creación dio varios problemas debido al conflicto con el \textit{left join} que comentamos en la sección de agregados; con una carga estándar se omitían partidos, y por tanto la consulta 4 no devolvía los resultados esperados. Para solucionar esto, se ha optado por crear primero el nodo del partido y, posteriormente, se crean las relaciones con los jugadores, torneos y ganadores/perdedores. La creación de las mismas la haremos con un \texttt{OPTIONAL MATCH} para que se cree la relación si existe el nodo al que se quiere enlazar, pero en caso negativo, se incluya el resto de datos del partido igualmente. Además, se ha añadido un \texttt{LIMIT} para evitar problemas de rendimiento: la carga se hizo de 10000 en 10000. \\
 
@@ -97,15 +99,11 @@ A continuación, cargamos los partidos creando nodos con sus correspondientes at
 \item \texttt{PERDIDO\_POR}: Relación completamente análoga a la anterior, pero para el perdedor del partido.
 \end{itemize}
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // cargamos los partidos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
-"SELECT *
-FROM partido p
-WHERE p.fecha IS NOT NULL AND p.torneo IS NOT NULL
-ORDER BY p.fecha, p.torneo, p.num_partido
-LIMIT 10000 OFFSET 0") YIELD row
+"SELECT * FROM partido p LIMIT 10000 OFFSET 0") YIELD row
 
 CREATE (p:Partido {
 num_partido: row.num_partido,
@@ -156,11 +154,11 @@ num_juegos_servidos: row.num_juegos_servidos_perdedor,
 num_break_salvados: row.num_break_salvados_perdedor,
 num_break_afrontados: row.num_break_afrontados_perdedor
 }]->(perdedor);
-\end{lstlisting}
+\end{minted}
 
 Por último, cargamos los sets de los partidos con los atributos de la tabla relacional homónima. Se crea una relación \texttt{PERTENECE\_A} desde el nodo del set del partido hacia el nodo del partido, para indicar que el set pertenece a un cierto partido. Para ello, se usa \texttt{OPTIONAL MATCH} para encontrar el nodo del partido correspondiente al set del partido, y, si se encuentra, crea el nodo del set del partido y, posteriormente, se crea la relación. La carga de estos datos también la haremos de 10000 en 10000 para evitar problemas de rendimiento.
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // cargamos los sets de los partidos
 WITH "jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd&password=greibd2021" AS url
 CALL apoc.load.jdbc(url,
@@ -175,7 +173,7 @@ juegos_perdedor: row.juegos_perdedor,
 puntos_tiebreak_perdedor: row.puntos_tiebreak_perdedor
 })
 CREATE (sp)-[:PERTENECE_A]->(p);
-\end{lstlisting}
+\end{minted}
 
 
 \subsection{Consultas}
@@ -184,15 +182,13 @@ Con la base de datos de grafos ya creada, podemos realizar las mismas consultas 
 
 \subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre apellidos y año). Ordena el resultado por año.}
 
-\begin{lstlisting}[language=Cypher]
-MATCH (j:Jugador)-[gp:GANADO_POR]-(p:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
+\begin{minted}{cypher}
+MATCH (j:Jugador)<-[gp:GANADO_POR]-(p:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
 WHERE t.nombre = 'Wimbledon'
-AND p.ronda = 'F'
-RETURN j.nombre AS nombre,
-j.apellido AS apellido,
-substring(toString(p.fecha), 0, 4) AS ano
+    AND p.ronda = 'F'
+RETURN j.nombre AS nombre, j.apellido AS apellido, substring(toString(p.fecha), 0, 4) AS ano
 ORDER BY ano;
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -200,8 +196,10 @@ ORDER BY ano;
 
 \subsubsection{Muestra los años en los que Roger Federer ganó algún torneo de nivel Gran Slam (G) o Master 1000 (M). Para cada año, muestra el número de torneos y lista sus nombres (ordenados por la fecha de celebración). Ordena el resultado por el año}
 
-\begin{lstlisting}[language=Cypher]
-MATCH (j:Jugador)-[:GANADO_POR]-(p:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
+
+
+\begin{minted}{cypher}
+MATCH (j:Jugador)<-[:GANADO_POR]-(p:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
 MATCH (et:EdicionTorneo)-[:EDICION_DE]->(t)
 WHERE j.nombre = 'Roger'
 AND j.apellido = 'Federer'
@@ -216,7 +214,7 @@ RETURN ano,
 num_torneos,
 reduce(s = head(torneos_nombres), x IN tail(torneos_nombres) | s + ', ' + x) AS torneos
 ORDER BY ano;
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -224,7 +222,7 @@ ORDER BY ano;
 
 \subsubsection{Muestra los partidos de semiﬁnales (ronda='SF') y ﬁnal (ronda = 'F') del torneo de "Roland Garros" del 2018. Para cada partido muestra la ronda, el tipo de desenlace, el nombre y apellidos del ganador y el nombre y apellidos del perdedor y el resultado con el número de juegos del ganador y del perdedor en cada set, y opcionalmente en paréntesis el número de juegos del perdedor en el tie break}
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 MATCH (jg:Jugador)-[:GANADO_POR]-(p:Partido)-[:PERDIDO_POR]-(jp:Jugador),
 (p)-[:SE_JUEGA_EN]->(t:Torneo),
 (sp:SetPartido)-[:PERTENECE_A]->(p)
@@ -245,7 +243,7 @@ jg.nombre + ' ' + jg.apellido as ganador,
 jp.nombre + ' ' + jp.apellido as perdedor,
 reduce(s = head(sets), x IN tail(sets) | s + ', ' + x) as resultado
 ORDER BY p.fecha;
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -253,7 +251,7 @@ ORDER BY p.fecha;
 
 \subsubsection{Muestra la lista de jugadores españoles (ES) que ganaron algún torneo de nivel Gran Slam (G). Para cada jugador muestra los siguientes datos resumen de todos sus partidos: número de partidos jugados, porcentaje de victorias, porcentaje de aces, porcentaje de dobles faltas, porcentaje de servicios ganados, porcentaje de restos ganados, porcentaje de break points salvados (de los sufridos en contra), porcentaje de break points ganados (de los provocados a favor)}
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // Primero identificamos los jugadores espanoles que han ganado finales de Grand Slam
 MATCH (j:Jugador)-[:REPRESENTA_A]->(p:Pais {codigo_iso2: 'ES'})
 MATCH (j)-[:GANADO_POR]-(partido:Partido)-[:SE_JUEGA_EN]->(t:Torneo)
@@ -329,7 +327,7 @@ round(pcje_restos_ganados, 1) as pcje_restos_ganados,
 round(pcje_breaks_salvados, 1) as pcje_breaks_salvados,
 round(pcje_breaks_ganados, 1) as pcje_breaks_ganados
 ORDER BY jugador;
-\end{lstlisting}
+\end{minted}
 
 
 
@@ -337,7 +335,7 @@ ORDER BY jugador;
 
 \subsubsection{Lista los jugadores que fueron derrotados (en algún partido del 2018) por el rival de Rafael Nadal de la primera ronda (R128) de Roland Garros de 2018}
 
-\begin{lstlisting}[language=Cypher]
+\begin{minted}{cypher}
 // Primero encontramos al rival de Nadal en Roland Garros 2018 R128
 MATCH (nadal:Jugador {nombre: 'Rafael', apellido: 'Nadal'})
 MATCH (rival:Jugador)
@@ -357,6 +355,4 @@ RETURN DISTINCT
 perdedor.nombre + ' ' + perdedor.apellido as jugador,
 pais.codigo_iso2 as pais
 ORDER BY jugador;
-\end{lstlisting}
-    
-    
+\end{minted}

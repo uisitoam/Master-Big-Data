@@ -1,6 +1,8 @@
 \documentclass[11pt]{opticajnl}
+\usepackage[utf8]{inputenc} 
 \journal{opticajournal} % use for journal or Optica Open submissions
 
+\usepackage[T1]{fontenc}    % Mejor codificación de fuente
 % See template introduction for guidance on setting shortarticle option
 \setboolean{shortarticle}{true}
 % true = letter/tutorial
@@ -15,7 +17,6 @@
 \usepackage{listings}
 \usepackage{color}  % Para colorear el código
 \usepackage[outputdir=build]{minted}
-
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -40,7 +41,6 @@
   literate={'}{{\texttt{'}}}1
   		   {"}{{\texttt{"}}}1
 }
-
 
 
 \lstdefinestyle{terminal}{

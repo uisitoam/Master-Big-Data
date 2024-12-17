@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// cargamos los torneos}
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}jdbc:postgresql://localhost:5432/tenis?user=alumnogreibd\PYGZam{}password=greibd2021\PYGZdq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{url}
+\PYG{k}{CALL}\PYG{+w}{ }\PYG{n}{apoc}\PYG{p}{.}\PYG{n}{load}\PYG{p}{.}\PYG{n}{jdbc}\PYG{p}{(}\PYG{n}{url}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}SELECT id, nombre, pais FROM torneo\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{YIELD}\PYG{+w}{ }\PYG{n}{row}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{t}\PYG{p}{:}\PYG{n}{Torneo}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{id}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{id}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nombre}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{nombre}
+\PYG{p}{\PYGZcb{})}
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{n}{t}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{row}
+\PYG{k}{OPTIONAL}\PYG{+w}{ }\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{pa}\PYG{p}{:}\PYG{n}{Pais}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n}{codigo\PYGZus{}iso2}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{row}\PYG{p}{.}\PYG{n}{pais}\PYG{p}{\PYGZcb{})}
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{n}{t}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pa}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{pa}\PYG{+w}{ }\PYG{n}{IS}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{t}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{SE\PYGZus{}CELEBRA\PYGZus{}EN}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{pa}\PYG{p}{);}
+\end{Verbatim}
