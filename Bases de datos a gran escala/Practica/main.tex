@@ -1,9 +1,6 @@
 \documentclass[11pt]{opticajnl}
 \journal{opticajournal} % use for journal or Optica Open submissions
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc} % Añadir esta línea para mejorar el manejo de caracteres especiales
-
 \usepackage{etoolbox}
 
 \makeatletter
@@ -136,7 +133,7 @@ psql -U alumnogreibd -d tenis -c "\copy ranking from /home/alumnogreibd/BDGE/dat
 
 Este orden es lógico por las dependencias entre tablas que comentamos anteriormente: \texttt{sets\_partido} referencia a \texttt{partido}, por lo que es necesario cargar primero los datos de \texttt{partido} para poder cargar los de \texttt{sets\_partido}. Este razonamiento aplica al resto de tablas: \texttt{partido} referencia a \texttt{edicion\_torneo}, que referencia a \texttt{torneo}, que a su vez referencia a \texttt{pais}, que es referenciado por \texttt{jugador}. \\
 
-En las siguientes consultas, los \textit{join} se harán mediante \textit{theta join} (\textit{inner} por defecto). En caso de que se quiera hacer otro tipo de \textit{join}, se especificará de forma clara en la consulta. Esto considera el producto cartesiano de las tablas a unir y selecciona solo las tuplas que verifiquen el predicado (la condición o condiciones de \textit{join}). Estos \textit{join} se harán de forma general de forma implícita en la claúsula \texttt{where}, siguiendo los atributos referenciados entre las tablas. El \texttt{where} hace una selección de tuplas (filas) que cumplen el predicado o los predicados mencionados. Teniendo esto muy presente, abusaremos un poco del lenguaje para ser más concisos y frases como: ``seleccionamos solo las tuplas en las que un jugador concreto es el ganador del partido'', reformularemos como ``seleccionamos los partidos que ganó un jugador concreto''. \\
+En las siguientes consultas, los \textit{join} se harán mediante \textit{theta join} (\textit{inner} por defecto). En caso de que se quiera hacer otro tipo de \textit{join}, se especificará de forma clara en la consulta. Esto considera el producto cartesiano de las tablas a unir y selecciona solo las tuplas que verifiquen el predicado (la condición o condiciones de \textit{join}). Estos \textit{join} se harán de forma general de forma implícita en la cláusula \texttt{where}, siguiendo los atributos referenciados entre las tablas. El \texttt{where} hace una selección de tuplas (filas) que cumplen el predicado o los predicados mencionados. Teniendo esto muy presente, abusaremos un poco del lenguaje para ser más concisos y frases como: ``seleccionamos solo las tuplas en las que un jugador concreto es el ganador del partido'', reformularemos como ``seleccionamos los partidos que ganó un jugador concreto''. \\
 
 
 \subsubsection{Muestra todos los ganadores del torneo ``Wimbledon'' (Nombre, apellidos y año). Ordena el resultado por año.}
@@ -155,7 +152,7 @@ Para esta consulta necesitamos la información de los jugadores, los partidos y 
 \end{itemize}
 \end{itemize}
 
-Tras seleccionar las tuplas que nos interesan, usamos el \texttt{select} para obtener la proyección de las filas que nos interesan: en esta caso, nos quedamos con los atributos \texttt{nombre} y \texttt{apellido} de la tabla \texttt{jugador} y el año de la fecha del partido, que denotaremos por el alias ``ano''. Como \texttt{p.fecha} es del tipo \texttt{date}, este último atributo lo obtenemos mediante la función \texttt{extract()}, especificando que solo queremos el año de ese atributo (\texttt{year from p.fecha}). Tras esto, ordenamos el resultado por año con \texttt{order by ano}; el orden por defecto es ascendente. El código de la consulta se muestra a continuación, y el resultado se pueden ver en la figura \ref{fig:q1_rel}.
+Tras seleccionar las tuplas que nos interesan, usamos el \texttt{select} para obtener la proyección de las filas que nos interesan: en este caso, nos quedamos con los atributos \texttt{nombre} y \texttt{apellido} de la tabla \texttt{jugador} y el año de la fecha del partido, que denotaremos por el alias ``ano''. Como \texttt{p.fecha} es del tipo \texttt{date}, este último atributo lo obtenemos mediante la función \texttt{extract()}, especificando que solo queremos el año de ese atributo (\texttt{year from p.fecha}). Tras esto, ordenamos el resultado por año con \texttt{order by ano}; el orden por defecto es ascendente. El código de la consulta se muestra a continuación, y el resultado se puede ver en la figura \ref{fig:q1_rel}.
 
 \begin{minted}[frame=single, fontsize=\footnotesize]{sql}
 select j.nombre, j.apellido, extract(year from p.fecha) as ano
@@ -289,7 +286,7 @@ Esta consulta la dividiremos en dos partes: primero, buscaremos los jugadores es
 \end{itemize}
 \end{itemize}
 
-Con todo esto, obtenemos una tabla con los jugadores españoles que han ganado algún torneo de nivel Grand Slam (G), pero hay repeticion ya que estamos considerando cada edición de cada Grand Slam. Para quedarnos solo con el subconjunto que nos interesa (sin repetición), usamos un \texttt{distinct} en la proyección. Concretamente, obtenemos la proyección del \texttt{id} y el nombre completo del jugador, que concatenamos con el operador \texttt{||}, y aplicamos el \texttt{distinct} sobre la proyección. Esta tabla resultado la guardamos como \texttt{jugadores\_espanoles\_ganadores}, y la usaremos en la segunda parte de la consulta. \\
+Con todo esto, obtenemos una tabla con los jugadores españoles que han ganado algún torneo de nivel Grand Slam (G), pero hay repetición ya que estamos considerando cada edición de cada Grand Slam. Para quedarnos solo con el subconjunto que nos interesa (sin repetición), usamos un \texttt{distinct} en la proyección. Concretamente, obtenemos la proyección del \texttt{id} y el nombre completo del jugador, que concatenamos con el operador \texttt{||}, y aplicamos el \texttt{distinct} sobre la proyección. Esta tabla resultado la guardamos como \texttt{jugadores\_espanoles\_ganadores}, y la usaremos en la segunda parte de la consulta. \\
 
 Para obtener las estadísticas resumen de cada jugador español ganador de un Grand Slam, necesitamos solo información sobre quiénes son esos jugadores y sobre los partidos que han jugado. Por tanto, en el \texttt{from} usamos la tabla \texttt{jugadores\_espanoles\_ganadores} que acabamos de crear, y la tabla \texttt{partido} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
 \begin{itemize}
@@ -299,7 +296,7 @@ Para obtener las estadísticas resumen de cada jugador español ganador de un Gr
 \end{itemize}
 \end{itemize}
 
-Con esto, obtenemos una fila por cada partido de cada jugador, por lo que agrupamos por el jugador con \texttt{group by} antes de agregar valores. En la proyección, obtenemos varios atributos, que redondearemos a un decimal usando \texttt{round(\dots, 1)}. En general, excepto para los partidos y el porcentaje de victorias, todas las estadísticas se calculan de la misma forma cosniderando atributos distintos; por ello, daremos una explicación detallada de una de ellas, y el resto simplemente mencionaremos qué atributos hemos usado y si se siguió un proceso distinto.
+Con esto, obtenemos una fila por cada partido de cada jugador, por lo que agrupamos por el jugador con \texttt{group by} antes de agregar valores. En la proyección, obtenemos varios atributos, que redondearemos a un decimal usando \texttt{round(\dots, 1)}. En general, excepto para los partidos y el porcentaje de victorias, todas las estadísticas se calculan de la misma forma considerando atributos distintos; por ello, daremos una explicación detallada de una de ellas, y el resto simplemente mencionaremos qué atributos hemos usado y si se siguió un proceso distinto.
 \begin{itemize}
 \item El nombre completo del jugador, que concatenamos previamente con el operador \texttt{||}.
 \item El número de partidos jugados como el conteo de los partidos en los que ha participado \\ (\texttt{count(p.num\_partido)}).
@@ -392,7 +389,7 @@ Esta consulta la dividiremos de nuevo en dos partes. Primero, buscaremos el riva
 
 El resultado es entonces una única tupla, con ese partido de primera ronda de Roland Garros 2018. Como queremos la información del rival, obtenemos como proyección su \texttt{id} y su nombre completo, que concatenamos con el operador \texttt{||}. Al no conocer de antemano si Rafael Nadal ganó o perdió, no podemos saber si el rival fue el ganador o el perdedor, por lo que debemos usar un \texttt{case} para seleccionar al ganador si Nadal fue el perdedor y viceversa. Guardamos esta información en una tabla llamada \texttt{rival\_nadal}, que usaremos en la segunda parte de la consulta. \\
 
-La segunda parte de la consulta es más simple: queremos ver que jugadores perdieron contra este rival en el año 2018. Por tanto, necesitamos información de los jugadores, los partidos y la tabla \texttt{rival\_nadal}; comenzamos en el \texttt{from} con el producto cartesiano de las tablas \texttt{jugador}, \texttt{partido} y \texttt{rival\_nadal} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
+La segunda parte de la consulta es más simple: queremos ver qué jugadores perdieron contra este rival en el año 2018. Por tanto, necesitamos información de los jugadores, los partidos y la tabla \texttt{rival\_nadal}; comenzamos en el \texttt{from} con el producto cartesiano de las tablas \texttt{jugador}, \texttt{partido} y \texttt{rival\_nadal} (especificando un alias para cada una de ellas). A continuación, especificamos las condiciones de \textit{join} en el \texttt{where}, así como otras condiciones de selección:
 \begin{itemize}
 \item Condiciones de \textit{join} que, en global, nos permitirán seleccionar las tuplas de partidos específicos:
 \begin{itemize}

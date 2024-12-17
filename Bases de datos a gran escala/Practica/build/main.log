@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  17 DEC 2024 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  17 DEC 2024 22:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -616,8 +616,6 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 )) (build/legacy-styles/opticajournal.sty
 Package: legacy-styles/opticajournal 2023/01/18 v1 opticajournal Journal color scheme
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count350
 \lst@gtempboxa=\box63
@@ -735,25 +733,25 @@ runsystem(rm main.aex)...executed.
  (build/main.aux (build/tex/compuesto.aux) (build/tex/json.aux) (build/tex/citus.aux) (build/tex/mongo.aux) (build/tex/neo.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-Package hyperref Info: Link coloring ON on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+Package hyperref Info: Link coloring ON on input line 98.
  (build/main.out) (build/main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -778,7 +776,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: Option `justification=RaggedRight' requires the `ragged2e' package on input line 101.
+Package caption Info: Option `justification=RaggedRight' requires the `ragged2e' package on input line 98.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip89
@@ -839,19 +837,19 @@ Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
 shortarticle: Abstract added.
-LaTeX Info: Redefining \microtypecontext on input line 101.
-Package microtype Info: Applying patch `item' on input line 101.
-Package microtype Info: Applying patch `toc' on input line 101.
-Package microtype Info: Applying patch `eqnum' on input line 101.
-Package microtype Info: Applying patch `footnote' on input line 101.
-Package microtype Info: Applying patch `verbatim' on input line 101.
+LaTeX Info: Redefining \microtypecontext on input line 98.
+Package microtype Info: Applying patch `item' on input line 98.
+Package microtype Info: Applying patch `toc' on input line 98.
+Package microtype Info: Applying patch `eqnum' on input line 98.
+Package microtype Info: Applying patch `footnote' on input line 98.
+Package microtype Info: Applying patch `verbatim' on input line 98.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 101.
+LaTeX Info: Redefining \showhyphens on input line 98.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -864,63 +862,63 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.40245pt on input line 103.
+(Font)              scaled to size 10.40245pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.94994pt on input line 103.
+(Font)              scaled to size 19.94994pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 10.40245pt on input line 103.
+(Font)              scaled to size 10.40245pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 11.39996pt on input line 103.
+(Font)              scaled to size 11.39996pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 103.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 103.
+(Font)              scaled to size 10.40245pt on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 103.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 103.
+(Font)              scaled to size 7.59998pt on input line 100.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 103--103
+Overfull \hbox (12.0pt too wide) in paragraph at lines 100--100
 [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 103.
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 103.
+(Font)              scaled to size 9.49997pt on input line 100.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 100.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 103.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 103.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 103.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 103.
+(Font)              scaled to size 11.40997pt on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 103.
+(Font)              scaled to size 8.33606pt on input line 100.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 103.
+(Font)              scaled to size 6.25204pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 103.
+(Font)              scaled to size 11.40997pt on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 103.
+(Font)              scaled to size 8.33606pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 103.
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 103.
+(Font)              scaled to size 6.25204pt on input line 100.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 100.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -929,15 +927,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 106.
+(Font)              scaled to size 11.39996pt on input line 103.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 106.
+(Font)              scaled to size 11.39996pt on input line 103.
 <fotos/esquema.png, id=164, 1002.74625pt x 883.3pt>
 File: fotos/esquema.png Graphic file (type png)
 <use fotos/esquema.png>
-Package pdftex.def Info: fotos/esquema.png  used on input line 110.
+Package pdftex.def Info: fotos/esquema.png  used on input line 107.
 (pdftex.def)             Requested size: 367.0049pt x 323.28464pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 115.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 112.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -946,53 +944,53 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 118.
+(Font)              scaled to size 6.64998pt on input line 115.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 118.
+(Font)              scaled to size 7.29405pt on input line 115.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 118.
+(Font)              scaled to size 5.21004pt on input line 115.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 118.
+(Font)              scaled to size 7.29405pt on input line 115.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 118.
+(Font)              scaled to size 5.21004pt on input line 115.
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./fotos/esquema.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 128.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 125.
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 [2]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 142.
+(Font)              scaled to size 9.49997pt on input line 139.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 142.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 139.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 9.49997pt on input line 142.
+(Font)              scaled to size 9.49997pt on input line 139.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 142.
+(hyperref)                than one, level fixed on input line 139.
 
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 146.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 143.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
@@ -1013,7 +1011,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 <fotos/q1_rel.png, id=196, 353.32pt x 672.5125pt>
 File: fotos/q1_rel.png Graphic file (type png)
 <use fotos/q1_rel.png>
-Package pdftex.def Info: fotos/q1_rel.png  used on input line 172.
+Package pdftex.def Info: fotos/q1_rel.png  used on input line 169.
 (pdftex.def)             Requested size: 144.78127pt x 275.58379pt.
  [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4 <./fotos/q1_rel.png>]
 \openout4 = `main.pyg'.
@@ -1022,10 +1020,10 @@ Package pdftex.def Info: fotos/q1_rel.png  used on input line 172.
 <fotos/q2_rel.png, id=211, 977.6525pt x 352.31625pt>
 File: fotos/q2_rel.png Graphic file (type png)
 <use fotos/q2_rel.png>
-Package pdftex.def Info: fotos/q2_rel.png  used on input line 217.
+Package pdftex.def Info: fotos/q2_rel.png  used on input line 214.
 (pdftex.def)             Requested size: 419.43759pt x 151.15434pt.
  [5 <./fotos/q2_rel.png>]
-Overfull \hbox (6.11021pt too wide) in paragraph at lines 243--244
+Overfull \hbox (6.11021pt too wide) in paragraph at lines 240--241
 []\T1/ppl/m/n/10.95 (-20) Ahora, para cada com-bi-nación de \T1/cmtt/m/n/10.95 p.ronda\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 p.desenlace\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jg.nombre\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jg.apellido\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jp.nombre \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 jp.apellido\T1/ppl/m/n/10.95 (-20) ,
  []
 
@@ -1036,20 +1034,20 @@ Overfull \hbox (6.11021pt too wide) in paragraph at lines 243--244
 <fotos/q3_rel.png, id=223, 646.415pt x 91.34125pt>
 File: fotos/q3_rel.png Graphic file (type png)
 <use fotos/q3_rel.png>
-Package pdftex.def Info: fotos/q3_rel.png  used on input line 269.
+Package pdftex.def Info: fotos/q3_rel.png  used on input line 266.
 (pdftex.def)             Requested size: 367.0049pt x 51.85876pt.
  [7 <./fotos/q3_rel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [8]
-Overfull \hbox (5.93497pt too wide) in paragraph at lines 309--310
+Overfull \hbox (5.93497pt too wide) in paragraph at lines 306--307
 \T1/ppl/m/n/10.95 (-20) una suma de las colum-nas \T1/cmtt/m/n/10.95 num_primeros_servicios_ganados_ganador \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 num_segundos_servicios_gan- 
  []
 
 
-Overfull \hbox (4.72198pt too wide) in paragraph at lines 310--311
+Overfull \hbox (4.72198pt too wide) in paragraph at lines 307--308
 \T1/cmtt/m/n/10.95 num_ptos_servidos_perdedor\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 num_primeros_servicios_ganados_perdedor \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 p.num_segundos_servi- 
  []
 
@@ -1059,10 +1057,10 @@ Overfull \hbox (4.72198pt too wide) in paragraph at lines 310--311
 <fotos/q4_rel.png, id=241, 1171.37625pt x 149.55875pt>
 File: fotos/q4_rel.png Graphic file (type png)
 <use fotos/q4_rel.png>
-Package pdftex.def Info: fotos/q4_rel.png  used on input line 369.
+Package pdftex.def Info: fotos/q4_rel.png  used on input line 366.
 (pdftex.def)             Requested size: 524.295pt x 66.94252pt.
  [10 <./fotos/q4_rel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
@@ -1073,7 +1071,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--394
 <fotos/q5_rel.png, id=252, 284.06125pt x 148.555pt>
 File: fotos/q5_rel.png Graphic file (type png)
 <use fotos/q5_rel.png>
-Package pdftex.def Info: fotos/q5_rel.png  used on input line 437.
+Package pdftex.def Info: fotos/q5_rel.png  used on input line 434.
 (pdftex.def)             Requested size: 183.50644pt x 95.9725pt.
  [12 <./fotos/q5_rel.png>]
 \openout2 = `tex/compuesto.aux'.
@@ -1429,52 +1427,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
+\openout4 = `main.pyg'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+(./build/_minted-main/A55E14AD8AA9AD0C1A7C2066E24F640AEC34428F584CB2519C22CA58CE1CFF51.pygtex)
+<fotos/q1_neo.png, id=414, 400.49625pt x 445.665pt>
+File: fotos/q1_neo.png Graphic file (type png)
+<use fotos/q1_neo.png>
+Package pdftex.def Info: fotos/q1_neo.png  used on input line 208.
+(pdftex.def)             Requested size: 183.50644pt x 204.20595pt.
+ [39 <./fotos/q1_neo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
 \openout4 = `main.pyg'.
 
-(./build/_minted-main/89DA0149948C5AB2BB0F86ACC4E7E463EC34428F584CB2519C22CA58CE1CFF51.pygtex)
-<fotos/q1_neo.png, id=413, 400.49625pt x 445.665pt>
-File: fotos/q1_neo.png Graphic file (type png)
-<use fotos/q1_neo.png>
-Package pdftex.def Info: fotos/q1_neo.png  used on input line 210.
-(pdftex.def)             Requested size: 183.50644pt x 204.20595pt.
-\openout4 = `main.pyg'.
-
- (./build/_minted-main/C13DF6D3AE70D161AB610FD0F1EDD2BBEC34428F584CB2519C22CA58CE1CFF51.pygtex [39 <./fotos/q1_neo.png>])
-<fotos/q2_neo.png, id=420, 472.01344pt x 504.38437pt>
+(./build/_minted-main/054F8D5EC452E8216E224528C79929EDEC34428F584CB2519C22CA58CE1CFF51.pygtex)
+<fotos/q2_neo.png, id=422, 472.01344pt x 504.38437pt>
 File: fotos/q2_neo.png Graphic file (type png)
 <use fotos/q2_neo.png>
-Package pdftex.def Info: fotos/q2_neo.png  used on input line 242.
+Package pdftex.def Info: fotos/q2_neo.png  used on input line 251.
 (pdftex.def)             Requested size: 235.93114pt x 252.1146pt.
+ [40]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+[41 <./fotos/q2_neo.png>]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/0F90BAA37D86894947BD66945B3F24C2EC34428F584CB2519C22CA58CE1CFF51.pygtex [40 <./fotos/q2_neo.png>])
-<fotos/q3_neo.png, id=427, 408.77719pt x 107.65219pt>
+ (./build/_minted-main/B81565BEA6DCD0C25455F8A82A9837C1EC34428F584CB2519C22CA58CE1CFF51.pygtex)
+<fotos/q3_neo.png, id=435, 408.77719pt x 107.65219pt>
 File: fotos/q3_neo.png Graphic file (type png)
 <use fotos/q3_neo.png>
-Package pdftex.def Info: fotos/q3_neo.png  used on input line 276.
+Package pdftex.def Info: fotos/q3_neo.png  used on input line 296.
 (pdftex.def)             Requested size: 340.78854pt x 89.75209pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+[42 <./fotos/q3_neo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/727EFE957AD91DAC890FC952B93EA7F1EC34428F584CB2519C22CA58CE1CFF51.pygtex [41 <./fotos/q3_neo.png>])
-<fotos/q4_neo.png, id=434, 1018.55531pt x 178.41656pt>
+(./build/_minted-main/DBDC63463387D71E3F72221B08F63260EC34428F584CB2519C22CA58CE1CFF51.pygtex [43])
+<fotos/q4_neo.png, id=448, 1018.55531pt x 178.41656pt>
 File: fotos/q4_neo.png Graphic file (type png)
 <use fotos/q4_neo.png>
-Package pdftex.def Info: fotos/q4_neo.png  used on input line 358.
+Package pdftex.def Info: fotos/q4_neo.png  used on input line 393.
 (pdftex.def)             Requested size: 524.295pt x 91.84334pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+[44 <./fotos/q4_neo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
+
+ []
+
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/2C87692EDB6BED9EEE23D5EECA9DC10AEC34428F584CB2519C22CA58CE1CFF51.pygtex [42 <./fotos/q4_neo.png>])
-<fotos/q5_neo.png, id=441, 197.98969pt x 179.92218pt>
+(./build/_minted-main/DF378E1515A135D6C87E936EEF637DB4EC34428F584CB2519C22CA58CE1CFF51.pygtex)
+<fotos/q5_neo.png, id=456, 197.98969pt x 179.92218pt>
 File: fotos/q5_neo.png Graphic file (type png)
 <use fotos/q5_neo.png>
-Package pdftex.def Info: fotos/q5_neo.png  used on input line 393.
+Package pdftex.def Info: fotos/q5_neo.png  used on input line 432.
 (pdftex.def)             Requested size: 131.07375pt x 119.11414pt.
-) [43 <./fotos/q5_neo.png>] 
+) [45 <./fotos/q5_neo.png>] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux (build/tex/compuesto.aux) (build/tex/json.aux) (build/tex/citus.aux) (build/tex/mongo.aux) (build/tex/neo.aux))
  ***********
@@ -1488,17 +1522,17 @@ runsystem(rm build//main.pyg)...executed.
  ) 
 Here is how much of TeX's memory you used:
  36449 strings out of 474116
- 767270 string characters out of 5743682
+ 767162 string characters out of 5743682
  2004187 words of memory out of 5000000
  57712 multiletter control sequences out of 15000+600000
  638234 words of font info for 343 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,19n,93p,2761b,1372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (43 pages, 3015842 bytes).
+Output written on build/main.pdf (45 pages, 3027861 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 429 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
  92586 words of extra memory for PDF output out of 106986 (max. 10000000)
 

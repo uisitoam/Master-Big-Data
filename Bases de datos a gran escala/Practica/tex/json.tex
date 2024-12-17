@@ -1,6 +1,6 @@
 \subsection{JSON}
 
-A continuación, queremos crear de nuevo una tabla que contenga todos los datos de los partidos (países, torneos, ediciones, partidos, sets y jugadores). Concretamente, está vez debe resolver de forma eficiente las consultas Q2 y Q4. Para mantener orden en nuestra bae de datos, crearemos un nueva esquema \texttt{agregadosJSON} para alojar esta nueva tabla. \\
+A continuación, queremos crear de nuevo una tabla que contenga todos los datos de los partidos (países, torneos, ediciones, partidos, sets y jugadores). Concretamente, esta vez debe resolver de forma eficiente las consultas Q2 y Q4. Para mantener orden en nuestra base de datos, crearemos un nuevo esquema \texttt{agregadosJSON} para alojar esta nueva tabla. \\
 
 PostgreSQL proporciona un tipo de datos ``json'' y un conjunto de funciones y operadores que permiten tanto generar documentos JSON a partir de datos relacionales como consultar partes de un documento JSON. Además del tipo ``json'', también se proporciona un tipo más eficiente ``jsonb'', que almacena los documentos en formato binario. Para resolver de forma eficiente las consultas deseadas, nuestra tabla deberá estar orientada a los jugadores, es decir, una tupla para cada jugador con todos sus datos y los partidos que ha jugado. \\
 
@@ -264,7 +264,7 @@ group by pg ->> 'ronda', pg ->> 'desenlace',
 \subsubsection{Muestra la lista de jugadores españoles (ES) que ganaron algún torneo de nivel Gran Slam (G). Para cada jugador muestra los siguientes datos resumen de todos sus partidos: número de partidos jugados, porcentaje de victorias, porcentaje de aces, porcentaje de dobles faltas, porcentaje de servicios ganados, porcentaje de restos ganados, porcentaje de break points salvados (de los sufridos en contra), porcentaje de break points ganados (de los provocados a favor)}
 
 
-Como anteriormente, se dividirá esta consulta en dos: una primera parte que selecciona los jugadores españoles que ganaron algún torneo de nivel Gran Slam y una segunda parte que calcula los datos resumen de todos sus partidos. \\
+Como anteriormente, se dividirá esta consulta en dos: una primera parte que selecciona los jugadores españoles que ganaron algún torneo de nivel Grand Slam y una segunda parte que calcula los datos resumen de todos sus partidos. \\
 
 Para la primera parte, partimos del producto cartesiano de la tabla \texttt{tenisjson} con la función \texttt{jsonb\_array\_el-}\\\texttt{ements(partidos\_ganados)} para extraer los elementos jsonb de partidos ganados. Seleccionamos los jugadores españoles (accedemos al código ISO2 del país como texto) que ganaron algún torneo de nivel Gran Slam (accedemos a la ronda y al nivel del torneo como texto). Con esto, tenemos una tupla para cada partido final ganado por un jugador español en un torneo de nivel Gran Slam. En la proyección, nos quedamos con el \texttt{id} y el nombre y apellido del jugador, usando \texttt{distinct} para evitar duplicados. \\
 

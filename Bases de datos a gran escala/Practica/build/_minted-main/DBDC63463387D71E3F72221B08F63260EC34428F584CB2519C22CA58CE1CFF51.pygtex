@@ -1,0 +1,68 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// buscamos jugadores españoles que han ganado finales de Grand Slam (para eliminar duplicados,}
+\PYG{n}{sino}\PYG{+w}{ }\PYG{n}{lo}\PYG{+w}{ }\PYG{n}{haciamos}\PYG{+w}{ }\PYG{n}{directamente}\PYG{+w}{ }\PYG{n}{con}\PYG{+w}{ }\PYG{n}{las}\PYG{+w}{ }\PYG{n}{estadísticas}\PYG{p}{)}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{:}\PYG{n}{Jugador}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{REPRESENTA\PYGZus{}A}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{p}\PYG{p}{:}\PYG{n}{Pais}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n}{codigo\PYGZus{}iso2}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}ES\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{)}\PYG{o}{\PYGZlt{}\PYGZhy{}[}\PYG{p}{:}\PYG{n}{GANADO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}}\PYG{p}{(}\PYG{n}{partido}\PYG{p}{:}\PYG{n}{Partido}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{SE\PYGZus{}JUEGA\PYGZus{}EN}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{t}\PYG{p}{:}\PYG{n}{Torneo}\PYG{p}{)}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{et}\PYG{p}{:}\PYG{n}{EdicionTorneo}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{EDICION\PYGZus{}DE}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{partido}\PYG{p}{.}\PYG{n}{ronda}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}F\PYGZsq{}}
+\PYG{+w}{    }\PYG{n}{AND}\PYG{+w}{ }\PYG{n}{et}\PYG{p}{.}\PYG{n}{nivel}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}G\PYGZsq{}}
+\PYG{+w}{    }\PYG{n}{AND}\PYG{+w}{ }\PYG{n}{et}\PYG{p}{.}\PYG{n}{fecha}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{partido}\PYG{p}{.}\PYG{n}{fecha}
+\PYG{+w}{    }\PYG{n}{AND}\PYG{+w}{ }\PYG{n}{et}\PYG{p}{.}\PYG{n}{torneo}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{t}\PYG{p}{.}\PYG{n}{id}
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{k}{DISTINCT}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{id\PYGZus{}jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{.}\PYG{n}{nombre}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{.}\PYG{n}{apellido}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{jugador}
+
+\PYG{c+c1}{// calculamos las estadísticas de estos jugadores}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{:}\PYG{n}{Jugador}\PYG{p}{)}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{id\PYGZus{}jugador}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{:}\PYG{n}{Partido}\PYG{p}{)}
+\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{p}{)}\PYG{o}{\PYGZlt{}\PYGZhy{}[}\PYG{n}{r}\PYG{p}{:}\PYG{n}{GANADO\PYGZus{}POR}\PYG{p}{|}\PYG{n}{PERDIDO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}
+\PYG{c+c1}{// necesitamos las estadisticas de sus rivales}
+\PYG{k}{OPTIONAL}\PYG{+w}{ }\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{n}{rp}\PYG{p}{:}\PYG{n}{PERDIDO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{rival\PYGZus{}j}\PYG{p}{:}\PYG{n}{Jugador}\PYG{p}{)}
+\PYG{k}{OPTIONAL}\PYG{+w}{ }\PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{n}{rg}\PYG{p}{:}\PYG{n}{GANADO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{rival\PYGZus{}g}\PYG{p}{:}\PYG{n}{Jugador}\PYG{p}{)}
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{tipo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}GANADO\PYGZus{}POR\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{1}\PYG{+w}{ }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{es\PYGZus{}ganador}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}aces}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{aces}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}dob\PYGZus{}faltas}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{dobles\PYGZus{}faltas}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}primeros\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}segundos\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{servicios\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{c+c1}{// restos ganados}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}GANADO\PYGZus{}POR\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}primeros\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}
+\PYG{+w}{    }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}segundos\PYGZus{}servicios\PYGZus{}ganados}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}primeros\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}
+\PYG{+w}{    }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}segundos\PYGZus{}servicios\PYGZus{}ganados}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{restos\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}GANADO\PYGZus{}POR\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}ptos\PYGZus{}servidos}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{ptos\PYGZus{}servidos\PYGZus{}rival}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}salvados}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{breaks\PYGZus{}salvados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{r}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{breaks\PYGZus{}afrontados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}GANADO\PYGZus{}POR\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}salvados}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}\PYG{+w}{ }\PYG{err}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}salvados}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{breaks\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{n}{type}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+\PYG{+w}{    }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}GANADO\PYGZus{}POR\PYGZsq{}}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{n}{rp}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{n}{rg}\PYG{p}{.}\PYG{n}{num\PYGZus{}break\PYGZus{}afrontados}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{breaks\PYGZus{}rival}
+
+\PYG{k}{WITH}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{count}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{partidos}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{es\PYGZus{}ganador}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{count}\PYG{p}{(}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}victorias}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{aces}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}aces}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{dobles\PYGZus{}faltas}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}dobles\PYGZus{}faltas}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{servicios\PYGZus{}ganados}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}servicios\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos\PYGZus{}rival}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{restos\PYGZus{}ganados}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{ptos\PYGZus{}servidos\PYGZus{}rival}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}restos\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}afrontados}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}salvados}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}afrontados}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}salvados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{k}{CASE}\PYG{+w}{ }\PYG{k}{WHEN}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}rival}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{+w}{ }\PYG{k}{THEN}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{n}{ELSE}\PYG{+w}{ }\PYG{l+m}{100}\PYG{p}{.}\PYG{l+m}{0}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}ganados}\PYG{p}{)}\PYG{+w}{ }\PYG{err}{/}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{breaks\PYGZus{}rival}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{END}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}ganados}
+\PYG{k}{RETURN}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{partidos}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}victorias}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}victorias}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}aces}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}aces}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}dobles\PYGZus{}faltas}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}dobles\PYGZus{}faltas}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}servicios\PYGZus{}ganados}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}servicios\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}restos\PYGZus{}ganados}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}restos\PYGZus{}ganados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}salvados}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}salvados}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{round}\PYG{p}{(}\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}ganados}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{pcje\PYGZus{}breaks\PYGZus{}ganados}
+\PYG{k}{ORDER}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{;}
+\end{Verbatim}

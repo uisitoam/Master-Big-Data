@@ -14,8 +14,6 @@
 \PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{rival}\PYG{p}{)}\PYG{o}{\PYGZlt{}\PYGZhy{}[}\PYG{p}{:}\PYG{n}{GANADO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}}\PYG{p}{(}\PYG{n}{derrotas}\PYG{p}{:}\PYG{n}{Partido}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{PERDIDO\PYGZus{}POR}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{perdedor}\PYG{p}{:}\PYG{n}{Jugador}\PYG{p}{)}
 \PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{substring}\PYG{p}{(}\PYG{n}{toString}\PYG{p}{(}\PYG{n}{derrotas}\PYG{p}{.}\PYG{n}{fecha}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{4}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}2018\PYGZsq{}}
 \PYG{k}{MATCH}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{perdedor}\PYG{p}{)}\PYG{o}{\PYGZhy{}[}\PYG{p}{:}\PYG{n}{REPRESENTA\PYGZus{}A}\PYG{o}{]\PYGZhy{}\PYGZgt{}}\PYG{p}{(}\PYG{n}{pais}\PYG{p}{:}\PYG{n}{Pais}\PYG{p}{)}
-\PYG{k}{RETURN}\PYG{+w}{ }\PYG{k}{DISTINCT}
-\PYG{n}{perdedor}\PYG{p}{.}\PYG{n}{nombre}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{n}{perdedor}\PYG{p}{.}\PYG{n}{apellido}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}
-\PYG{n}{pais}\PYG{p}{.}\PYG{n}{codigo\PYGZus{}iso2}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{pais}
+\PYG{k}{RETURN}\PYG{+w}{ }\PYG{k}{DISTINCT}\PYG{+w}{ }\PYG{n}{perdedor}\PYG{p}{.}\PYG{n}{nombre}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{} \PYGZsq{}}\PYG{+w}{ }\PYG{err}{+}\PYG{+w}{ }\PYG{n}{perdedor}\PYG{p}{.}\PYG{n}{apellido}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pais}\PYG{p}{.}\PYG{n}{codigo\PYGZus{}iso2}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{pais}
 \PYG{k}{ORDER}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{jugador}\PYG{p}{;}
 \end{Verbatim}
