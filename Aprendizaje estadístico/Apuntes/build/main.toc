@@ -133,10 +133,10 @@
 \contentsline {section}{\numberline {8.2}Máquinas de vectores de soporte}{96}{section.454}%
 \contentsline {section}{\numberline {8.3}SVM de clasificación con de más de dos clases}{99}{section.469}%
 \contentsline {section}{\numberline {8.4}SVMs para regresión}{100}{section.473}%
-\contentsline {chapter}{\numberline {9}Bagging}{139}{chapter.499}%
-\contentsline {section}{\numberline {9.1}Introducción}{139}{section.500}%
-\contentsline {section}{\numberline {9.2}Random Forest}{140}{section.507}%
-\contentsline {subsection}{\numberline {9.2.1}Definición}{141}{subsection.508}%
-\contentsline {subsection}{\numberline {9.2.2}Muestras \textit {out of bag}}{144}{subsection.516}%
-\contentsline {subsection}{\numberline {9.2.3}Sobreajuste en \textit {random forest}}{144}{subsection.518}%
-\contentsline {section}{\numberline {9.3}18/12}{146}{section.522}%
+\contentsline {section}{\numberline {8.5}Ejercicio}{101}{section.482}%
+\contentsline {chapter}{\numberline {9}Bagging}{139}{chapter.500}%
+\contentsline {section}{\numberline {9.1}Introducción}{139}{section.501}%
+\contentsline {section}{\numberline {9.2}Random Forest}{140}{section.508}%
+\contentsline {subsection}{\numberline {9.2.1}Definición}{141}{subsection.509}%
+\contentsline {subsection}{\numberline {9.2.2}Muestras \textit {out of bag}}{144}{subsection.517}%
+\contentsline {subsection}{\numberline {9.2.3}Sobreajuste en \textit {random forest}}{144}{subsection.519}%
