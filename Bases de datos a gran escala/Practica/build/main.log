@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  17 DEC 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  18 DEC 2024 16:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1016,14 +1016,14 @@ Package pdftex.def Info: fotos/q1_rel.png  used on input line 169.
  [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4 <./fotos/q1_rel.png>]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/61D9D8BFB1DDC53AEE69A19F07256CAA24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/066A53B6F2889C6DCA3621DB2CC495AA24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
 <fotos/q2_rel.png, id=211, 977.6525pt x 352.31625pt>
 File: fotos/q2_rel.png Graphic file (type png)
 <use fotos/q2_rel.png>
-Package pdftex.def Info: fotos/q2_rel.png  used on input line 214.
+Package pdftex.def Info: fotos/q2_rel.png  used on input line 215.
 (pdftex.def)             Requested size: 419.43759pt x 151.15434pt.
  [5 <./fotos/q2_rel.png>]
-Overfull \hbox (6.11021pt too wide) in paragraph at lines 240--241
+Overfull \hbox (6.11021pt too wide) in paragraph at lines 241--242
 []\T1/ppl/m/n/10.95 (-20) Ahora, para cada com-bi-nación de \T1/cmtt/m/n/10.95 p.ronda\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 p.desenlace\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jg.nombre\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jg.apellido\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 jp.nombre \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 jp.apellido\T1/ppl/m/n/10.95 (-20) ,
  []
 
@@ -1034,20 +1034,20 @@ Overfull \hbox (6.11021pt too wide) in paragraph at lines 240--241
 <fotos/q3_rel.png, id=223, 646.415pt x 91.34125pt>
 File: fotos/q3_rel.png Graphic file (type png)
 <use fotos/q3_rel.png>
-Package pdftex.def Info: fotos/q3_rel.png  used on input line 266.
+Package pdftex.def Info: fotos/q3_rel.png  used on input line 267.
 (pdftex.def)             Requested size: 367.0049pt x 51.85876pt.
  [7 <./fotos/q3_rel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 [8]
-Overfull \hbox (5.93497pt too wide) in paragraph at lines 306--307
+Overfull \hbox (5.93497pt too wide) in paragraph at lines 307--308
 \T1/ppl/m/n/10.95 (-20) una suma de las colum-nas \T1/cmtt/m/n/10.95 num_primeros_servicios_ganados_ganador \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 num_segundos_servicios_gan- 
  []
 
 
-Overfull \hbox (4.72198pt too wide) in paragraph at lines 307--308
+Overfull \hbox (4.72198pt too wide) in paragraph at lines 308--309
 \T1/cmtt/m/n/10.95 num_ptos_servidos_perdedor\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10.95 num_primeros_servicios_ganados_perdedor \T1/ppl/m/n/10.95 (-20) y \T1/cmtt/m/n/10.95 p.num_segundos_servi- 
  []
 
@@ -1057,10 +1057,10 @@ Overfull \hbox (4.72198pt too wide) in paragraph at lines 307--308
 <fotos/q4_rel.png, id=241, 1171.37625pt x 149.55875pt>
 File: fotos/q4_rel.png Graphic file (type png)
 <use fotos/q4_rel.png>
-Package pdftex.def Info: fotos/q4_rel.png  used on input line 366.
+Package pdftex.def Info: fotos/q4_rel.png  used on input line 367.
 (pdftex.def)             Requested size: 524.295pt x 66.94252pt.
  [10 <./fotos/q4_rel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
@@ -1071,7 +1071,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 390--391
 <fotos/q5_rel.png, id=252, 284.06125pt x 148.555pt>
 File: fotos/q5_rel.png Graphic file (type png)
 <use fotos/q5_rel.png>
-Package pdftex.def Info: fotos/q5_rel.png  used on input line 434.
+Package pdftex.def Info: fotos/q5_rel.png  used on input line 435.
 (pdftex.def)             Requested size: 183.50644pt x 95.9725pt.
  [12 <./fotos/q5_rel.png>]
 \openout2 = `tex/compuesto.aux'.
@@ -1529,7 +1529,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  90i,19n,93p,2761b,1372s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (45 pages, 3027861 bytes).
+Output written on build/main.pdf (45 pages, 3027883 bytes).
 PDF statistics:
  547 PDF objects out of 1000 (max. 8388607)
  429 compressed objects within 5 object streams
