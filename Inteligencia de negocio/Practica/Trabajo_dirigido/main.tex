@@ -67,6 +67,7 @@ No obstante, quien entra a El Guachinche no solo viene a comer. Para dar una exp
 
 Actualmente, El Guachinche cuenta con 13 locales, repartidos en Canarias (7), Galicia (2), Andalucía (2) y Comunidad Valenciana (2). El crecimiento en los últimos dos años ha sido exponencial, por lo que desde la dirección de la empresa nos vemos en la necesidad de implementar un modelo de inteligencia de negocio que nos permita tomar decisiones basadas en datos, priorizando siempre al cliente. Algunos de los objetivos perseguidos serían la fidelización de clientes y la mejora de la experiencia general de los mismos, adaptar la oferta gastronómica a las preferencias de cada región o mantener un margen de beneficio cómodo en cada uno de los locales. \\
 
+\newpage
 
 \subsection{Áreas de negocio}
 Nuestra empresa se estructura en cinco áreas fundamentales, lo que nos permite abarcar todos los aspectos necesarios para mantener el correcto funcionamiento de los locales y asegurar su éxito a largo plazo:
@@ -97,7 +98,7 @@ Nuestra empresa se estructura en cinco áreas fundamentales, lo que nos permite 
 
 \subsubsection*{CSF1: Garantizar la rentabilidad de cada local.}
 
-La rentabilidad de los locales es uno de los objetivos más importantes de cualquier negocio. A través de la gestión minuciosa de los ingresos y los costos operativos, podemos asegurar que cada local mantenga un rendimiento económico sostenible, lo que garantizará parte del éxito financiero de la cadena. Para lograr este objetivo, se utilizan los siguientes indicadores:
+La rentabilidad de los locales es uno de los objetivos más importantes de cualquier negocio. A través de la gestión minuciosa de los ingresos y los costos operativos, podemos asegurar que cada local mantenga un rendimiento económico sostenible, lo que garantizará parte del éxito financiero de la cadena. Para lograr este objetivo, fijamos los siguientes indicadores:
 
 \begin{itemize}
     \item \textbf{PI1.1: Fijar margen de beneficio bruto en un 70\%.} Este indicador mide los beneficios obtenidos tras considerar los costes directos asociados. El objetivo será que cada local fije este margen en torno a un 65-70\%, lo que aseguraría cubrir los gastos del local y permitiría un margen de beneficio neto del 10-15\%. 
@@ -290,7 +291,7 @@ Como hemos comentado anteriormente, el cliente es nuestra prioridad. Por ello, n
 \label{fig:esquema_proceso3}
 \end{figure}
 
-Para finalizar, mostramos un esquema reducido general de los tres procesos a implementar en la figura \ref{fig:esquema_almacen}
+Para finalizar, mostramos un esquema reducido general de los tres procesos a implementar en la figura \ref{fig:esquema_almacen}.
 
 \begin{figure}[H]
 \centering
@@ -323,38 +324,39 @@ Las dimensiones seleccionadas para representar correctamente los procesos anteri
 \item \textbf{nombre}. Este atributo es de tipo \texttt{String} y representa el nombre del producto.
 \item \textbf{precio}. Este atributo es de tipo \texttt{Numeric} y representa el precio del producto.
 \end{itemize}
-Los precios de los platos en cada local son relativamente estáticos, pero como cualquier otro producto, pueden cambiar con el tiempo. Por ello, esto es una dimensión lentamente cambiante, donde el precio es susceptible a cambio. La solución propuesta para manejar esto es crear un nuevo registro en la dimensión
+Los precios de los platos en cada local son relativamente estáticos, pero como cualquier otro producto, pueden cambiar con el tiempo. Por ello, esto es una dimensión lentamente cambiante, donde el precio es susceptible a cambio. La solución propuesta para manejar esto es establecer un atributo alterno: esto nos permite hacer el acceso a todos los precios que haya tenido ese plato, lo cual nos resulta completamente necesario para poder hacer analítica basados en el histórico de datos; esto no sería posible si simplimente sobreescribimos el valor. Además, elegimos esto sobre la creación de nuevos registros en la dimensión (o incluso la creación de una dimensión), ya que estas soluciones aumentan ligeramente la complejidad de las consultas: la primera opción mantiene la misma clave de negocio para los registros, por lo que habría que tener cuidado al realizar las consultas, mientras que la segunda opción implica la inclusión de una condición de \textit{join} adicional cada vez que queramos acceder a ese registro.
 \end{itemize}
 
+Tras la definición formal de las dimensiones, volvemos a ver el esquema general de la figura \ref{fig:esquema_almacen} para recordar cómo se relacionan con los procesos de negocio. Nos hemos asegurado de que el diseño de las tablas que componen la base de datos esté orientado al almacenamiento analítico, ya que buscamos optimizar las consultas y la integridad de los datos; por ello, las tablas están en al tercera forma normal (no tenemos atributos \textbf{multivaluados} y los atributos no claves dependen \textbf{únicamente} de la \textbf{clave primaria completa}, no hay atributos con dependencias parciales de las PK o dependencias en otros atributos no clave).
 
 \subsection{Cálculo de los indicadores a partir del diseño lógico} \label{sec:3c}
 
 En el apartado 2 identificamos numerosos procesos e indicadores. Por simplicidad, reduciremos la descripción del cálculo de los indicadores a los relaciones estrechamente con los hechos y dimensiones antes mencionados. Concretamente, trataremos los indicadores asociados al CSF1 (garantizar la rentabilidad de cada local), CSF3 (maximizar la satisfacción y fidelización del cliente) y CSF4 (eficiencia en la gestión de la cadena de suministro). El cálculo de los indicadores asociados a estos factores críticos de éxito es el siguiente:
 
 \begin{longtblr}[caption = {Cálculo de indicadores asociados a procesos modelados. Aquí, usaremos el subíndice $i$ para hacer referencia al mes, por lo que, por ejemplo, $i-1$, será una magnitud asociada al mes anterior (considerando la granularidad mensual que estamos usando)},]{colspec = {p{2.5cm}Xp{2cm}X}, rowhead = 1,}
-    \hline\hline
-    \textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline\hline
-    PI1.1 & Aumentar margen de beneficio bruto & Proceso 1 & $\text{ingresos}_i - \text{ingresos}_{i-1}$  \\ \hline
-    PI1.2 & Reducir coste operativo por local & Proceso 1 & $\text{coste}_i - \text{coste}_{i-1}$ \\ \hline
-    PI1.3 & Aumentar gasto por cliente & Proceso 1 & $\displaystyle\frac{\text{ingresos}_i}{\text{clientes}_i}$ \\ \hline
-    PI1.4 & Aumentar tasa de ocupación & Proceso 1 & $\displaystyle\frac{\text{clientes}_i}{\text{capacidad\_max} \times \text{num\_turnos}}$ \\ \hline
-    PI1.5 & Reducir desperdicio de alimentos $^*$ & Proceso 1 & $\displaystyle\frac{\text{peso\_alimentos\_desperdiciados}_i}{\text{peso\_alimentos\_inventario}_i}$ \\ \hline\hline
-    PI3.1 & Fijar valoración de satisfacción del cliente & Proceso 3 & 
-    $\displaystyle\frac{\text{val\_pers}_i + \text{val\_amb}_i + \text{val\_comida}_i}{3}$ \\ \hline
-    PI3.2 & Aumentar recurrencia de visitas & Proceso 3 & $\displaystyle\frac{\text{clientes}_i - \text{nuevos\_clientes}_i}{\text{clientes}_i}$ \\ \hline
-    PI3.3 & Fijar quejas resueltas satisfactoriamente $^*$ & Proceso 3 & $\displaystyle\frac{\text{quejas\_resueltas}_i}{\text{total\_quejas}_i}$ \\ \hline
-    PI3.4 & Aumentar nuevos clientes por recomendación $^*$ & Proceso 3 & $\displaystyle\frac{\text{clientes\_recomendacion}_i}{\text{nuevos\_clientes}_i}$ \\ \hline\hline
-    PI4.1 & Fijar tiempo de reposición de productos $^*$ & Proceso 3 & $\displaystyle\frac{\text{tiempo\_reposicion}_i}{\text{clientes}_i}$ \\ \hline
-    PI4.2 & Reducir nivel de inventario crítico $^*$ & Proceso 3 & $\displaystyle\frac{\text{inventario\_critico}_i}{\text{inventario\_total}_i}$ \\ \hline
-    PI4.3 & Reducir costes logísticos por pedido & Proceso 3 & $\displaystyle\frac{\text{costes}_i}{\text{clientes}_i}$ \\ \hline\hline
-    
-    \end{longtblr}
-    
-    *Algunas requieren explicación adicional, ya que implican medidas no consideradas anteriormente. En el cálculo de la tasa de ocupación, se menciona $\text{capacidad\_max}$ y $\text{num\_turnos}$. Estos valores son (en principio) fijos para cada restaurante: el primero nos da la capacidad máxima de la sala, y el segundo el número de turnos ese mes, que deberían ser unos 48 (2 por día, 6 días por semana). \\
-    
-    Para otros indicadores, como $\text{quejas\_resueltas}$ y $\text{total\_quejas}$, es necesario implementar un sistema de registro de quejas y resolución en cada local. Del mismo modo, $\text{clientes\_recomendacion}$ requiere encuestas a clientes nuevos para determinar si llegaron por recomendación. \\
-    
-    En el caso de $\text{tiempo\_reposicion}$, este valor deberá registrarse como el tiempo transcurrido desde que se realiza un pedido hasta su llegada al local. Finalmente, para $\text{inventario\_critico}$ e $\text{inventario\_total}$, se necesita monitorizar constantemente el nivel de productos disponibles para identificar aquellos en riesgo de ruptura de inventario y comparar con el total almacenado.
-    
-    
-    \end{document}
+\hline\hline
+\textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline\hline
+PI1.1 & Aumentar margen de beneficio bruto & Proceso 1 & $\text{ingresos}_i - \text{ingresos}_{i-1}$  \\ \hline
+PI1.2 & Reducir coste operativo por local & Proceso 1 & $\text{coste}_i - \text{coste}_{i-1}$ \\ \hline
+PI1.3 & Aumentar gasto por cliente & Proceso 1 & $\displaystyle\frac{\text{ingresos}_i}{\text{clientes}_i}$ \\ \hline
+PI1.4 & Aumentar tasa de ocupación & Proceso 1 & $\displaystyle\frac{\text{clientes}_i}{\text{capacidad\_max} \times \text{num\_turnos}}$ \\ \hline
+PI1.5 & Reducir desperdicio de alimentos $^*$ & Proceso 1 & $\displaystyle\frac{\text{peso\_alimentos\_desperdiciados}_i}{\text{peso\_alimentos\_inventario}_i}$ \\ \hline\hline
+PI3.1 & Fijar valoración de satisfacción del cliente & Proceso 3 & 
+$\displaystyle\frac{\text{val\_pers}_i + \text{val\_amb}_i + \text{val\_comida}_i}{3}$ \\ \hline
+PI3.2 & Aumentar recurrencia de visitas & Proceso 3 & $\displaystyle\frac{\text{clientes}_i - \text{nuevos\_clientes}_i}{\text{clientes}_i}$ \\ \hline
+PI3.3 & Fijar quejas resueltas satisfactoriamente $^*$ & Proceso 3 & $\displaystyle\frac{\text{quejas\_resueltas}_i}{\text{total\_quejas}_i}$ \\ \hline
+PI3.4 & Aumentar nuevos clientes por recomendación $^*$ & Proceso 3 & $\displaystyle\frac{\text{clientes\_recomendacion}_i}{\text{nuevos\_clientes}_i}$ \\ \hline\hline
+PI4.1 & Fijar tiempo de reposición de productos $^*$ & Proceso 3 & $\displaystyle\frac{\text{tiempo\_reposicion}_i}{\text{clientes}_i}$ \\ \hline
+PI4.2 & Reducir nivel de inventario crítico $^*$ & Proceso 3 & $\displaystyle\frac{\text{inventario\_critico}_i}{\text{inventario\_total}_i}$ \\ \hline
+PI4.3 & Reducir costes logísticos por pedido & Proceso 3 & $\displaystyle\frac{\text{costes}_i}{\text{clientes}_i}$ \\ \hline\hline
+
+\end{longtblr}
+
+*Algunas requieren explicación adicional, ya que implican medidas no consideradas anteriormente. En el cálculo de la tasa de ocupación, se menciona $\text{capacidad\_max}$ y $\text{num\_turnos}$. Estos valores son (en principio) fijos para cada restaurante: el primero nos da la capacidad máxima de la sala, y el segundo el número de turnos ese mes, que deberían ser unos 48 (2 por día, 6 días por semana). \\
+
+Para otros indicadores, como $\text{quejas\_resueltas}$ y $\text{total\_quejas}$, es necesario implementar un sistema de registro de quejas y resolución en cada local. Del mismo modo, $\text{clientes\_recomendacion}$ requiere encuestas a clientes nuevos para determinar si llegaron por recomendación. \\
+
+En el caso de $\text{tiempo\_reposicion}$, este valor deberá registrarse como el tiempo transcurrido desde que se realiza un pedido hasta su llegada al local. Finalmente, para $\text{inventario\_critico}$ e $\text{inventario\_total}$, se necesita monitorizar constantemente el nivel de productos disponibles para identificar aquellos en riesgo de ruptura de inventario y comparar con el total almacenado.
+
+
+\end{document}
