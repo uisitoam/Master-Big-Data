@@ -36,7 +36,7 @@ define un hiperplano p-dimensional, nuevamente en el sentido de que si un punto 
 \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p < 0,
 \end{equation}
 
-entonces $X$ se encuentra al otro lado del hiperplano. Así que podemos pensar en el hiperplano como una divisón del hiperespacio en dos mitades. Uno puede determinar fácilmente en qué lado del hiperplano Un hiperplano en el espacio bidimensional se muestra en la figura \ref{fig:9.1}.
+entonces $X$ se encuentra al otro lado del hiperplano. Así que podemos pensar en el hiperplano como una división del hiperespacio en dos mitades. Uno puede determinar fácilmente en qué lado del hiperplano Un hiperplano en el espacio bidimensional se muestra en la figura \ref{fig:9.1}.
 
 \begin{figure}[h]
 \centering
@@ -390,6 +390,8 @@ Ahora, veamos como influye aquí $\gamma$ en el aprendizaje. Con una gaussiana e
 \label{fig:12.2}
 \end{figure}
 
+Con el parámetro de regularización $C$ tendiendo a infinito, buscamos que los $\xi$ tiendan a 0, es decir, buscamos un hiperplano donde no entren casi vectores de soporte casi. Esto resulta muy restrictivo para valores de $C$ muy elevados, por lo que a veces no puede encontrar. 
+
 \begin{example}
 Usamos un conjunto de datos de enefermedades cardiacas para comparar 
 Primero ajustamos LDA y el clasificador de vectores de soporte a los datos de entrenamiento.
@@ -418,26 +420,222 @@ Esto nuevamente es evidencia de que aunque un método más flexible a menudo pro
 Los SVMs con $\gamma = 10^{-2}$ y $\gamma = 10^{-3}$ se desempeñan de manera comparable al clasificador de vectores de soporte, y los tres superan al SVM con $\gamma = 10^{-1}$.
 \end{example}
 
-\section{10/12}
 
 
-HAsta ahora solo podemos hacer clasificacion binaria. 
-
-En 1vs1 para deshacer empate miramos los valores.
-
-para mas de dos calses no funcionan bien. Para hacerlo con mas de dos, aprendemos varios modelos, uno para cada par de categorias. 
 
 
-No funciona tan bien en regresion por su propia definicion (usar hiperplano de separacion)
+\section{SVM de clasificación con de más de dos clases}
 
+Hasta ahora, solo se ha considerado al caso de clasificación binaria. El concepto de hiperplanos separadores sobre el que se fundamentan los SVMs no se extiende naturalmente a más de dos clases, pero existen enfoques que permite extender los SVMs al caso de $K$ clases. Dos de los más populares son los siguientes. Sea $K > 2$:
+\begin{itemize}
+\item \textbf{Clasificación uno contra uno:} también conocido como el enfoque de todos los pares, esta aproximación construye 
+\begin{equation}
+\binom{K}{2} = \frac{K(K-1)}{2}
+\end{equation} 
+
+SVMs, cada una de las cuáles compara un par de clases. Para clasificar una observación de prueba, se usan los $\binom{K}{2}$ clasificadores y se cuenta el número de veces que la observación de prueba se asigna a cada una de las $K$ clases. La clasificación final se realiza asignando la observación de prueba a la clase que se asigna con mayor frecuencia en estas $\binom{K}{2}$ clasificaciones por pares. En caso de empate, se puede usar la mayor puntuación de clasificación.
+\item \textbf{Clasificación uno contra todos:} esta aproximación ajusta $K$ SVMs, cada uno de los cuales compara una de las $K$ clases con el resto de $K - 1$ clases. Sean 
+\begin{equation}
+\beta_{0k}, \beta_{1k}, \ldots, \beta_{pk}
+\end{equation}
+
+los parámetros que resultan de ajustar un SVM comparando la $k$-ésima clase (codificada como $+1$) con las demás $K - 1$ clases (codificadas como $-1$), y sea $x^*$ una observación de prueba. La observación se asigna a la clase para la cual 
+\begin{equation}
+\beta_{0k} + \beta_{1k} x^*_1 + \beta_{2k} x^*_2 + \ldots + \beta_{pk} x^*_p
+\end{equation}
+
+es mayor, ya que esto implica un alto nivel de confianza de que la observación de prueba pertenece a la $k$-ésima clase en lugar de a cualquiera de las otras clases.
+\end{itemize}
+
+
+
+\section{SVMs para regresión}
+
+Nuevamente, debido al fundamento de usar un hiperplano de separación, los SVMs no funcionan tan bien para problemas de regresión, aunque pueden adaptarse para la regresión con una respuesta cuantitativa, de forma que heredan algunas de las propiedades del clasificador SVM. Primero, discutimos el modelo de regresión lineal
+\begin{equation}
+f(x) = x^T \beta + \beta_0, \quad (12.35)
+\end{equation}
+
+\noindent Para estimar $\beta$, consideramos la minimización de
+\begin{equation}
+H(\beta, \beta_0) = \sum_{i=1}^{N} V(y_i - f(x_i)) + \frac{\lambda}{2} \| \beta \|^2
+\label{eq:12.36}
+\end{equation}
+
+\noindent donde $\lambda$ es el parámetro de regularización y $V$ es una función de pérdida con la forma
+\begin{equation}
+V_\xi(r) =
+\begin{cases}
+0 & \text{si } |r| < \xi, \\
+|r| - \xi & \text{otro caso}.
+\end{cases}
+\end{equation}
+
+Esta es una medida de error ``insensible a $\xi$'', ya que ignora errores de tamaño menor que $\xi$ (panel izquierdo de la figura \ref{fig:12.8}). Existe una analogía aproximada con la configuración de clasificación de vectores de soporte, donde los puntos en el lado correcto de la frontera de decisión y lejos de ella, son ignorados en la optimización. En la regresión, estos puntos de ``bajo error'' son aquellos con residuos pequeños. \\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{fotos/58.png}
+\caption{El panel izquierdo muestra la ``insensibilidad'' a $\xi$ de la función de error al usar SVMs para regresión. El panel derecho muestra la función de error usada en la regresión robusta de Huber (en la que no profundizaremos); más allá de $|c|$, la función cambia de cuadrática a lineal. Hay un cambio de notación en esta imagen, $\xi \to \epsilon$.}
+\label{fig:12.8}
+\end{figure}
+
+Si $\hat{\beta}$, $\hat{\beta}_0$ son los minimizadores de $H$, se puede demostrar que la función solución tiene la forma 
+\begin{align}
+\hat{\beta} &= \sum_{i=1}^{N} (\hat{\alpha}^*_i - \hat{\alpha}_i) x_i \\
+\hat{f}(x) &= \sum_{i=1}^{N} (\hat{\alpha}^*_i - \hat{\alpha}_i) \langle x, x_i \rangle + \beta_0 
+\end{align}
+
+\noindent donde $\hat{\alpha}_i$, $\hat{\alpha}^*_i$ son positivos y resuelven el problema de programación cuadrática
+
+\begin{equation}
+\min_{\alpha_i, \alpha^*_i} \xi \sum_{i=1}^{N} (\alpha^*_i + \alpha_i) - \sum_{i=1}^{N} y_i (\alpha^*_i - \alpha_i) + \frac{1}{2} \sum_{i,i'=1}^{N} (\alpha^*_i - \alpha_i)(\alpha^*_{i'} - \alpha_{i'}) \langle x_i, x_{i'} \rangle
+\end{equation}
+
+\noindent sujeto a las restricciones
+
+\begin{align}
+0 \leq \alpha_i, \quad \alpha^*_i &\leq \frac{1}{\lambda} \notag \\
+\sum_{i=1}^{N} (\alpha^*_i - \alpha_i) &= 0 \\
+\alpha_i \alpha^*_i &= 0 \notag 
+\end{align}
+
+
+Debido a la naturaleza de estas restricciones, generalmente solo un subconjunto de los valores de la solución $(\hat{\alpha}^*_i - \hat{\alpha}_i)$ son distintos de cero, y los valores de datos asociados se llaman vectores de soporte. Como ocurría en el entorno de clasificación, la solución depende de los valores de entrada solo a través de los productos internos $\langle x_i, x_{i'} \rangle$. Así, podemos generalizar los métodos a espacios más ricos definiendo un producto interno apropiado. \\
+
+Nótese que hay parámetros, $\xi$ y $\lambda$, asociados con el criterio (\ref{eq:12.36}). Estos parecen desempeñar roles diferentes. $\xi$ es un parámetro de la función de pérdida $V_\xi$, al igual que $c$ para $V_H$. Tanto $V_\xi$ como $V_H$ dependen de la escala de $y$ y, por lo tanto, de $r$. Si escalamos nuestra respuesta (y por lo tanto usamos $V_H(r / \sigma)$ y $V_\xi(r / \sigma)$ en su lugar), entonces podríamos considerar usar valores preestablecidos para $c$ y $\xi$ (el valor $c = 1.345$ logra una eficiencia del 95\% para la gaussiana). La cantidad $\lambda$ es un parámetro de regularización más tradicional, y puede ser estimada, por ejemplo, mediante validación cruzada.
 
 \begin{example}
-alpha = 0 para los vectores que no son de soporte. El de alpha menor que 1 esta sobre el margen, mientras que el de alpha 1 es el unico que no esta e ne l magrne. Beta sera alpha por el vector correspondeinte para todos losq eu so nvectores de soorte. Usando la e (1) de sus diapositivas, con esos tres calculamos 3 beta 0 y obtenemos beta. Una vez tenemos estos, para el resto de vec de soporte podemos calcular las epsilon correspondientes. Para el que no esta en el margen, tiene la distancia del margen al hiperplano es 1 margen, y como el que no es vector de siporte esta sobre el hiperplano, su epsilon es 1 (1 margen). M es el inverso del modulo de beta. los de epsilon mayor a uno seran los incorrectamente clasificados.   \\
+\textbf{Sea el siguiente conjunto de datos de clasificación con 16 observaciones, 2 variables de entrada y una variable de salida, usando una SVM lineal con $C = 1$, se obtienen los valores de $\alpha$ mostrados en la tabla.}
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Observación & $X_1$ & $X_2$ & Y & $\alpha$ \\
+\toprule
+1 & 2 & 6 & 1 & 0 \\
+2 & 4 & 3 & 1 & 1 \\
+3 & 4 & 4 & 1 & 0.3333 (=1/3) \\
+4 & 4 & 6 & 1 & 0 \\
+5 & 6 & 3 & 1 & 1 \\
+6 & 7 & 7 & 1 & 0.1667 (=1/6) \\
+7 & 8 & 4 & 1 & 1 \\
+8 & 9 & 8 & 1 & 1 \\
+9 & 2 & 1 & -1 & 1 \\
+10 & 6 & 2 & -1 & 0.5 (=1/2) \\
+11 & 7 & 4 & -1 & 1 \\
+12 & 8 & 8 & -1 & 1 \\
+13 & 9 & 1 & -1 & 0 \\
+14 & 10 & 3 & -1 & 0 \\
+15 & 10 & 6 & -1 & 1 \\
+16 & 12 & 4 & -1 & 0 \\
+\toprule
+\end{tabular}
+\caption{Dataset con valores de $\alpha$}
+\label{tab:dataset_alpha}
+\end{table}
+\begin{enumerate}
+\item \textbf{¿Cuáles son los vectores de soporte y cuáles de ellos están en el límite del margen?}
+\item \textbf{¿Cuáles son los coeficientes de hiperplano ($\beta$, $\beta_0$) y el valor de $M$?}
+\item \textbf{¿Cuáles son los valores de $\xi_i$?}
+\item \textbf{¿Qué ejemplos están incorrectamente clasificados?}
+\end{enumerate}
 
+Sabemos que los vectores de soporte son aquellos que tienen $\alpha_i > 0$, por lo que serán vectores de soporte las observaciones 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 15. Los vectores de soporte en el límite del margen son aquellos que tienen $0 < \alpha_i < C=1$ y $\xi = 0$, por lo que serán los vectores de soporte 3, 6 y 10. \\
 
-alpha son los multipl. de Lagrange
+Para calcular $\beta_0$ necesitamos primero los coeficientes de $\beta$, que los obtenemos con la ecuación 
+\begin{equation}
+\beta = \sum_{i=1}^N \alpha_i y_i x_i
+\end{equation}
 
-para calcular beta hacer la suma ponderada por los alphas de todos los vec de soporte. Para beta 0 usar los vec justo en el margen y luego dar la media. PAra los vec de sop que no estan en el margen calcular epsilon (que no es cero). Para ver los incorrectamente clasif son los de epsilon mayor que 1. Diapositiva 17. (4), (1)
+\noindent Tenemos 2 variables de entrada, por lo que $\beta$ será un vector de 2 componentes: 
+\begin{align*}
+\beta_1 &= 4 + \frac{4}{3} + 6 + \frac{7}{6} + 8 + 9 - 2 - 3 - 7 - 8 - 10 = -0.5 \\
+\beta_2 &= 3 + \frac{4}{3} + 3 + \frac{7}{6} + 4 + 8 - 1 - 1 - 4 - 8 - 6 = 0.5
+\end{align*} 
+
+\noindent Así, $\beta = (-0.5, 0.5)$. Para calcular $\beta_0$, usamos la ecuación
+\begin{equation}
+\beta_0 = \alpha_i [y_i(x_i^T \beta + \beta_0) - (1 - \xi_i)] = 0
+\end{equation}
+
+usando solo los vectores de soporte que están en el límite del margen, es decir, $\xi_i = 0$. Con esto simplificamos y despejamos $\beta_0$:
+\begin{equation}
+\beta_0 = \frac{1}{y_i} - x_i^T \beta
+\end{equation}
+
+\noindent Ahora sustituimos valores. Denotaremos al $\beta_0$ calculado con la observación $k$ como $\beta_{0}^{(k)}$:
+\begin{align}
+\beta_0^{(3)} &= \frac{1}{1} - \begin{pmatrix} 4 & 4 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} = 1 \\
+\beta_0^{(6)} &= \frac{1}{1} - \begin{pmatrix} 7 & 7 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} = 1 \\
+\beta_0^{(10)} &= \frac{1}{-1} - \begin{pmatrix} 6 & 2 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} = 1
+\end{align}
+
+Aproximamos el valor real de $\beta_0$ por la media de estos valores, por lo que $\beta_0 = 1$. El valor de $M$ lo obtenemos como la inversa del módulo de $\beta$, es decir, 
+\begin{equation}
+M = \frac{1}{|| \beta ||} = \frac{1}{\sqrt{(-0.5)^2 + 0.5^2}} = \sqrt{2}
+\end{equation}
+
+Ahora vamos a calcular $\xi_i$. La mitad de los $\xi_i$ son 0, veamos por qué:
+\begin{itemize}
+\item Los vectores de soporte que están en el límite del margen tienen $\xi_i = 0$, por lo que $\xi_3 = \xi_6 = \xi_{10} = 0$.
+\item Si $\alpha_i = 0$, $\xi_i = 0$. Esto se debe a que $\alpha_i = C - \mu_i$. Si $\alpha_i = 0$, entonces $\mu_i = C$, que en nuestro problema es 1. Si consideramos que el producto de $\mu_i$ y $\xi_i$ debe ser nulo, 
+\begin{equation}
+\mu_i \xi_i = 0
+\end{equation}
+
+llegamos a la conclusión de que $\xi_i$ deberá ser nulo para las observaciones con $\alpha_i = 0$, ya que $\mu_i = 1 \neq 0$. De este modo, $\xi_1 = \xi_4 = \xi_{13} = \xi_{14} = \xi_{16} = 0$.
+\end{itemize}
+
+\noindent Solo nos falta entonces calcular $\xi_2, \xi_5, \xi_7, \xi_8, \xi_9, \xi_{11}, \xi_{12}, \xi_{15}$. Para ello, usamos la ecuación
+\begin{equation}
+\alpha_i [y_i (x_i^T \beta + \beta_0) - (1 - \xi_i)] = 0
+\end{equation}
+
+Como $\alpha_i$ para los vectores de soporte es estrictamente mayor que 0, tenemos que la expresión entre corchetes debe ser nula. De ahí despejamos $\xi_i$ como 
+\begin{equation}
+\xi_i = 1 - y_i (x_i^T \beta + \beta_0)
+\end{equation}
+
+\noindent Pues nada, a sustituir valores y listo:
+\begin{align*}
+\xi_2 &= 1 - \left[\begin{pmatrix} 4 & 3 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} + 1\right] = \frac{1}{2} \\
+\xi_5 &= 1 - \left[\begin{pmatrix} 6 & 3 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} + 1\right] = \frac{3}{2} \\
+\xi_7 &= 1 - \left[\begin{pmatrix} 8 & 4 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} + 1\right] = 2 \\
+\xi_8 &= 1 - \left[\begin{pmatrix} 9 & 8 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} + 1\right] = \frac{1}{2} \\
+\xi_9 &= 1 + \left[\begin{pmatrix} 2 & 1 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} - 1\right] = \frac{3}{2} \\
+\xi_{11} &= 1 + \left[\begin{pmatrix} 7 & 4 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} - 1\right] = \frac{1}{2} \\
+\xi_{12} &= 1 + \left[\begin{pmatrix} 8 & 8 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} - 1\right] = 2 \\
+\xi_{15} &= 1 + \left[\begin{pmatrix} 10 & 6 \end{pmatrix} \cdot \begin{pmatrix} -0.5 \\ 0.5 \end{pmatrix} - 1\right] = 0
+\end{align*}
+
+Las observaciones mal clasificadas serán aquellas con un $\xi_i > 1$. Resumimos estos resultados en la siguiente tabla, donde marcamos en rojo las observaciones incorrectamente clasificadas:
+\begin{table}[H]
+\centering
+\begin{tabular}{cccccc}
+\toprule
+Observación & $X_1$ & $X_2$ & Y & $\alpha$ & $\xi$ \\
+\toprule
+1 & 2 & 6 & 1 & 0 & 0 \\
+2 & 4 & 3 & 1 & 1 & 0.5 \\
+3 & 4 & 4 & 1 & 0.3333 & 0 \\
+4 & 4 & 6 & 1 & 0 & 0 \\
+\textcolor{red}{5} & \textcolor{red}{6} & \textcolor{red}{3} & \textcolor{red}{1} & \textcolor{red}{1} & \textcolor{red}{1.5} \\
+6 & 7 & 7 & 1 & 0.1667 & 0 \\
+\textcolor{red}{7} & \textcolor{red}{8} & \textcolor{red}{4} & \textcolor{red}{1} & \textcolor{red}{1} & \textcolor{red}{2} \\
+8 & 9 & 8 & 1 & 1 & 0.5 \\
+\textcolor{red}{9} & \textcolor{red}{2} & \textcolor{red}{1} & \textcolor{red}{-1} & \textcolor{red}{1} & \textcolor{red}{1.5} \\
+10 & 6 & 2 & -1 & 0.5 & 0 \\
+11 & 7 & 4 & -1 & 1 & 0.5 \\
+\textcolor{red}{12} & \textcolor{red}{8} & \textcolor{red}{8} & \textcolor{red}{-1} & \textcolor{red}{1} & \textcolor{red}{2} \\
+13 & 9 & 1 & -1 & 0 & 0 \\
+14 & 10 & 3 & -1 & 0 & 0 \\
+15 & 10 & 6 & -1 & 1 & 0 \\
+16 & 12 & 4 & -1 & 0 & 0 \\
+\toprule
+\end{tabular}
+\caption{Valores de $\xi_i$ para cada observación. En rojo, las observaciones mal clasificadas.}
+\label{tab:2}
+\end{table}
+
 \end{example}
-
-con c infinito queremos que los epsilon se vayan a cero (un hiperplano donde no entren vectores de soporte casi). A veces no puede encontrar 
