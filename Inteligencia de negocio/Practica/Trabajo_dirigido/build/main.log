@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  15 DEC 2024 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  19 DEC 2024 12:14
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/Users/luisi/Documents/Master-Big-Data/Inteligencia de negocio/Practica/Trabajo_dirigido/main.tex"
@@ -1671,33 +1671,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (19.45927pt too wide) in paragraph at lines 350--350
+Overfull \hbox (19.45927pt too wide) in paragraph at lines 351--351
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (19.45927pt too wide) in paragraph at lines 350--350
+Overfull \hbox (19.45927pt too wide) in paragraph at lines 351--351
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
 []\T1/ppl/m/n/12 (+20) Reducir nivel de in-ven-tario
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
@@ -1717,17 +1717,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### bottom level 
 Here is how much of TeX's memory you used:
  43755 strings out of 474116
- 927309 string characters out of 5743682
+ 927312 string characters out of 5743682
  1998187 words of memory out of 5000000
  65127 multiletter control sequences out of 15000+600000
- 647061 words of font info for 356 fonts, out of 8000000 for 9000
+ 646987 words of font info for 356 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,19n,107p,1092b,1341s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (15 pages, 203584 bytes).
+Output written on build/main.pdf (15 pages, 203803 bytes).
 PDF statistics:
  269 PDF objects out of 1000 (max. 8388607)
  221 compressed objects within 3 object streams

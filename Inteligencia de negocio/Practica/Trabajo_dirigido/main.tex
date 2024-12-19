@@ -44,8 +44,8 @@
     \vfill
     
     {\large Trabajo Académicamente Dirigido:
-    \\Análisis y estrategias para\\
-    la mejora del negocio\par}
+    \\Análisis y Estrategias para\\
+    la mejora del Negocio\par}
     
     \vspace{2cm}
     
@@ -59,7 +59,7 @@
 
 \spacing{1.1}
 
-Los \textit{guachinches} son establecimientos (en la propia vivienda del propietario) que surgen en la zona del norte de Tenerife como solución para vender el excedente de vino de cada cosecha. El vino se acompaña típicamente con platos tradicionales de la cocina canaria. Actualmente, según el Decreto 83/2013\footnote{\url{https://www.gobiernodecanarias.org/boc/2013/153/001.html}}, hay una regulación muy estricta amparando a estos locales y al viticultor; muchos establecimientos comúnmente denominados ``guachinches'', entran dentro de la categoría \textit{restaurante}, al salirse de lo establecido en este decreto. \\
+Los \textit{guachinches} son establecimientos (en la propia vivienda del propietario) que surgen en la zona del norte de Tenerife como solución para vender el excedente de vino de cada cosecha. El vino se acompaña típicamente con platos tradicionales de la cocina canaria. Actualmente, según el Decreto 83/2013\footnote{\url{https://www.gobiernodecanarias.org/boc/2013/153/001.html}}, hay una regulación muy estricta amparando a estos locales y al viticultor; muchos establecimientos, comúnmente denominados ``guachinches'', entran dentro de la categoría \textit{restaurante}, al salirse de lo establecido en este decreto. \\
 
 El Guachinche nace de una idea sencilla pero atractiva: traer el espíritu de los tradicionales guachinches canarios al resto de España, pero con un toque especial. En nuestra cocina, las recetas isleñas comparten protagonismo con una cuidada selección de arepas para todos los públicos, todo esto acompañado de los mejores vinos de las Islas. Es ese equilibrio entre tradición y adaptación lo que nos hace únicos: cada local incorpora platos de la región, porque creemos que la gastronomía local es parte fundamental de nuestra historia. \\
 
@@ -203,7 +203,7 @@ CSF3 & PI3.4 & Aumentar nuevos clientes por recomendación & \textit{Leading} & 
 CSF4 & PI4.1 & Fijar tiempo de reposición de productos & \textit{Leading} & $< 48$h & Optimizar logística y establecer acuerdos con proveedores locales. \\ \hline
 CSF4 & PI4.2 & Reducir nivel de inventario crítico & \textit{Leading} & $< 5$\% & Monitorizar inventarios en tiempo real. \\ \hline
 CSF4 & PI4.3 & Reducir costes logísticos por pedido & \textit{Lagging} & $-10$\% & Consolidar pedidos y negociar tarifas de transporte. \\ \hline\hline
-CSF5 & PI5.1 & Adaptabilidad del menú & \textit{Leading} & 15\% & Introducir platos de temporada o adaptados según la regional. \\ \hline
+CSF5 & PI5.1 & Adaptabilidad del menú & \textit{Leading} & 15\% & Introducir platos de temporada o adaptados según la región. \\ \hline
 CSF5 & PI5.2 & Tener proveedores alternativos & \textit{Leading} & 2 & Auditar y registrar opciones de suministro secundarias. \\ \hline
 CSF5 & PI5.3 & Reducir el tiempo de parada por falta de suministros & \textit{Lagging} & 0 & Establecer sistemas de alerta para reposición temprana. \\ \hline\hline
 CSF6 & PI6.1 & Cumplimiento de estándares de la marca por los locales & \textit{Leading} & 100\% & Auditorías regulares de calidad en todos los locales. \\ \hline
@@ -232,10 +232,10 @@ Para garantizar la rentabilidad de cada local, es necesario llevar un control de
 \item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
 \item \textbf{Medidas:} coste, ingresos, clientes y nuevos clientes.
 \begin{itemize}
-\item coste; medida aditiva: recoge los gastos de cada local durante ese mes. Se obtiene como la suma del alquiler, el salario del personal, los suministros y gastos extra, como luz, agua, limpieza, mantenimiento, etc. 
-\item ingresos; medida aditiva: recoge los ingresos de cada local durante ese mes. Se obtiene como la suma de los ingresos por vía presencial y a domicilio.
-\item clientes; medida aditiva: recoge el número total de clientes que han visitado el local durante ese mes. Se obtiene a partir de los datos proporcionados por cada local.
-\item nuevos\_clientes; medida aditiva: recoge el número de clientes nuevos que han visitado el local durante ese mes. Aunque este número está incluido en el total de clientes, se recoge por separado para poder sacar estadísticas de interés en relación al crecimiento de la clientela, entre otras. Se obtiene a partir de los datos proporcionados por cada local.
+\item \textbf{coste}; medida aditiva: recoge los gastos de cada local durante ese mes. Se obtiene como la suma del alquiler, el salario del personal, los suministros y gastos extra, como luz, agua, limpieza, mantenimiento, etc. 
+\item \textbf{ingresos}; medida aditiva: recoge los ingresos de cada local durante ese mes. Se obtiene como la suma de los ingresos por vía presencial y a domicilio.
+\item \textbf{clientes}; medida aditiva: recoge el número total de clientes que han visitado el local durante ese mes. Se obtiene a partir de los datos proporcionados por cada local.
+\item \textbf{nuevos\_clientes}; medida aditiva: recoge el número de clientes nuevos que han visitado el local durante ese mes. Aunque este número está incluido en el total de clientes, se recoge por separado para poder sacar estadísticas de interés en relación al crecimiento de la clientela, entre otras. Se obtiene a partir de los datos proporcionados por cada local.
 \end{itemize}
 \end{itemize}
 
@@ -255,8 +255,8 @@ Estudiada la rentabilidad de cada local, nos gustaría también conocer el desgl
 \item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
 \item \textbf{Medidas:} número de ventas de cada plato e ingresos de los mismos.
 \begin{itemize}
-\item num\_ventas; medida aditiva: recoge el número de ventas de cada plato durante ese mes. Se obtiene a partir de los datos proporcionados por cada local de forma semanal, y se acumulan los datos de cada mes.
-\item ingresos; medida calculada: recoge los ingresos generados por cada plato durante ese mes. Se obtiene como el producto del número de ventas de un plato por su precio (en la dimensión ``productos'').
+\item \textbf{num\_ventas}; medida aditiva: recoge el número de ventas de cada plato durante ese mes. Se obtiene a partir de los datos proporcionados por cada local de forma semanal, y se acumulan los datos de cada mes.
+\item \textbf{ingresos}; medida calculada: recoge los ingresos generados por cada plato durante ese mes. Se obtiene como el producto del número de ventas de un plato por su precio (en la dimensión ``productos'').
 \end{itemize}
 \end{itemize}
 
@@ -274,12 +274,12 @@ Como hemos comentado anteriormente, el cliente es nuestra prioridad. Por ello, n
 \item \textbf{Granularidad:} Mensual.
 \item \textbf{Tasa de refresco:} Diaria.
 \item \textbf{Tipo de tabla de hecho:} Hecho acumulativo.
-\item \textbf{Medidas:} valoración del personal, valoración del ambiente y valoración de la comida. Todas estas medidas se obtienen a partir de los datos proporcionados por cada local diariamente, y se acumulan los datos de cada mes
+\item \textbf{Medidas:} valoración del personal, valoración del ambiente y valoración de la comida. Todas estas medidas se obtienen a partir de los datos proporcionados por cada local diariamente, y se acumulan los datos de cada mes. Se presenta la lista completa:
 \begin{itemize}
-\item num\_valoraciones
-\item valoracion\_personal: satisfacción (de 0.0 a 5.0) con el servicio prestado por el personal.
-\item valoracion\_ambiente: satisfacción (de 0.0 a 5.0) con el ambiente del local.
-\item valoracion\_comida: satisfacción (de 0.0 a 5.0) con la calidad de la comida.
+\item \textbf{num\_valoraciones}
+\item \textbf{valoracion\_personal}: satisfacción (de 0.0 a 5.0) con el servicio prestado por el personal.
+\item \textbf{valoracion\_ambiente}: satisfacción (de 0.0 a 5.0) con el ambiente del local.
+\item \textbf{valoracion\_comida}: satisfacción (de 0.0 a 5.0) con la calidad de la comida.
 \end{itemize}
 \end{itemize}
 
@@ -304,24 +304,24 @@ Para finalizar, mostramos un esquema reducido general de los tres procesos a imp
 
 Las dimensiones seleccionadas para representar correctamente los procesos anteriores son las siguientes (mostradas de forma adelantada en la figura \ref{fig:esquema_almacen}, así como en las figuras \ref{fig:esquema_proceso1}, \ref{fig:esquema_proceso2} y \ref{fig:esquema_proceso3}):
 \begin{itemize}
-\item \textbf{Tiempo}: esta dimensión almacena la fecha de los datos que son agregados a las tablas de hechos, en formato YYYY-MM. La dimensión temporal de los datos se representa mediante una jerarquía de dos niveles: año y mes. Esta es un dimensión compartida entre los tres hechos antes mencionados y tiene los siguientes atributos:
+\item \textbf{Tiempo}: Esta dimensión almacena la fecha de los datos que son agregados a las tablas de hechos, en formato YYYY-MM. La dimensión temporal de los datos se representa mediante una jerarquía de dos niveles: año y mes. Esta es un dimensión compartida entre los tres hechos antes mencionados y tiene los siguientes atributos:
 \begin{itemize}
-\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo mes.
-\item ano. Este atributo es de tipo \texttt{Integer} y representa el año.
-\item mes. Este atributo es de tipo \texttt{Integer} y representa el mes dentro del año.
-\item mes\_texto. Este atributo es de tipo \texttt{String} y representa el nombre del mes correspondiente.
+\item \textbf{id}. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo mes.
+\item \textbf{ano}. Este atributo es de tipo \texttt{Integer} y representa el año.
+\item \textbf{mes}. Este atributo es de tipo \texttt{Integer} y representa el mes dentro del año.
+\item \textbf{mes\_texto}. Este atributo es de tipo \texttt{String} y representa el nombre del mes correspondiente.
 \end{itemize}
-\item \textbf{Restaurante}: la dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y constituirá una jerarquía de dos niveles, uno para el país y otro para la ciudad. Esta dimensión, de nuevo, es compartida por los tres hechos ya mencionados, y tiene los siguientes atributos:
+\item \textbf{Restaurante}: La dimensión restaurante actúa como dimensión geográfica. Se tendrán en cuenta todos los locales de la cadena y constituirá una jerarquía de dos niveles, uno para el país y otro para la ciudad. Esta dimensión, de nuevo, es compartida por los tres hechos ya mencionados, y tiene los siguientes atributos:
 \begin{itemize}
-\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo local.
-\item país. Este atributo es de tipo \texttt{String} y representa el país en el que se encuentra el local.
-\item ciudad. Este atributo es de tipo \texttt{String} y representa la ciudad en la que se encuentra el local.
+\item \textbf{id}. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo local.
+\item \textbf{país}. Este atributo es de tipo \texttt{String} y representa el país en el que se encuentra el local.
+\item \textbf{ciudad}. Este atributo es de tipo \texttt{String} y representa la ciudad en la que se encuentra el local.
 \end{itemize}
-\item \textbf{Producto}: la dimensión producto recoge todos los platos ofertados en los locales de la cadena. Esta es una dimensión plana que muestra los productos y el precio asociado a cada uno de ellos. Esta dimensión es exclusiva del proceso 2, y tiene los siguientes atributos:
+\item \textbf{Producto}: La dimensión producto recoge todos los platos ofertados en los locales de la cadena. Esta es una dimensión plana que muestra los productos y el precio asociado a cada uno de ellos. Esta dimensión es exclusiva del proceso 2, y tiene los siguientes atributos:
 \begin{itemize}
-\item id. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo producto (plato, bebida, etc).
-\item nombre. Este atributo es de tipo \texttt{String} y representa el nombre del producto.
-\item precio. Este atributo es de tipo \texttt{Numeric} y representa el precio del producto.
+\item \textbf{id}. Esta es la clave primaria, un serial de tipo \texttt{Integer} que se genera automáticamente cada vez que se inserta un nuevo producto (plato, bebida, etc).
+\item \textbf{nombre}. Este atributo es de tipo \texttt{String} y representa el nombre del producto.
+\item \textbf{precio}. Este atributo es de tipo \texttt{Numeric} y representa el precio del producto.
 \end{itemize}
 Los precios de los platos en cada local son relativamente estáticos, pero como cualquier otro producto, pueden cambiar con el tiempo. Por ello, esto es una dimensión lentamente cambiante, donde el precio es susceptible a cambio. La solución propuesta para manejar esto es crear un nuevo registro en la dimensión
 \end{itemize}
@@ -332,28 +332,29 @@ Los precios de los platos en cada local son relativamente estáticos, pero como 
 En el apartado 2 identificamos numerosos procesos e indicadores. Por simplicidad, reduciremos la descripción del cálculo de los indicadores a los relaciones estrechamente con los hechos y dimensiones antes mencionados. Concretamente, trataremos los indicadores asociados al CSF1 (garantizar la rentabilidad de cada local), CSF3 (maximizar la satisfacción y fidelización del cliente) y CSF4 (eficiencia en la gestión de la cadena de suministro). El cálculo de los indicadores asociados a estos factores críticos de éxito es el siguiente:
 
 \begin{longtblr}[caption = {Cálculo de indicadores asociados a procesos modelados. Aquí, usaremos el subíndice $i$ para hacer referencia al mes, por lo que, por ejemplo, $i-1$, será una magnitud asociada al mes anterior (considerando la granularidad mensual que estamos usando)},]{colspec = {p{2.5cm}Xp{2cm}X}, rowhead = 1,}
-\hline\hline
-\textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline\hline
-PI1.1 & Aumentar margen de beneficio bruto & Proceso 1 & $\text{ingresos}_i - \text{ingresos}_{i-1}$  \\ \hline
-PI1.2 & Reducir coste operativo por local & Proceso 1 & $\text{coste}_i - \text{coste}_{i-1}$ \\ \hline
-PI1.3 & Aumentar gasto por cliente & Proceso 1 & $\displaystyle\frac{\text{ingresos}_i}{\text{clientes}_i}$ \\ \hline
-PI1.4 & Aumentar tasa de ocupación & Proceso 1 & $\displaystyle\frac{\text{clientes}_i}{\text{capacidad\_max} \times \text{num\_turnos}}$ \\ \hline
-PI1.5 & Reducir desperdicio de alimentos $^*$ & Proceso 1 & $\displaystyle\frac{\text{peso\_alimentos\_desperdiciados}_i}{\text{peso\_alimentos\_inventario}_i}$ \\ \hline\hline
-PI3.1 & Fijar valoración de satisfacción del cliente & Proceso 3 & 
-$\displaystyle\frac{\text{val\_pers}_i + \text{val\_amb}_i + \text{val\_comida}_i}{3}$ \\ \hline
-PI3.2 & Aumentar recurrencia de visitas & Proceso 3 & $\displaystyle\frac{\text{clientes}_i - \text{nuevos\_clientes}_i}{\text{clientes}_i}$ \\ \hline
-PI3.3 & Fijar quejas resueltas satisfactoriamente $^*$ & Proceso 3 & $\displaystyle\frac{\text{quejas\_resueltas}_i}{\text{total\_quejas}_i}$ \\ \hline
-PI3.4 & Aumentar nuevos clientes por recomendación $^*$ & Proceso 3 & $\displaystyle\frac{\text{clientes\_recomendacion}_i}{\text{nuevos\_clientes}_i}$ \\ \hline\hline
-PI4.1 & Fijar tiempo de reposición de productos $^*$ & Proceso 3 & $\displaystyle\frac{\text{tiempo\_reposicion}_i}{\text{clientes}_i}$ \\ \hline
-PI4.2 & Reducir nivel de inventario crítico $^*$ & Proceso 3 & $\displaystyle\frac{\text{inventario\_critico}_i}{\text{inventario\_total}_i}$ \\ \hline
-PI4.3 & Reducir costes logísticos por pedido & Proceso 3 & $\displaystyle\frac{\text{costes}_i}{\text{clientes}_i}$ \\ \hline\hline
-\end{longtblr}
-
-*Algunas requieren explicación adicional, ya que implican medidas no consideradas anteriormente. En el cálculo de la tasa de ocupación, se menciona $\text{capacidad\_max}$ y $\text{num\_turnos}$. Estos valores son (en principio) fijos para cada restaurante: el primero nos da la capacidad máxima de la sala, y el segundo el número de turnos ese mes, que deberían ser unos 48 (2 por día, 6 días por semana). \\
-
-Para otros indicadores, como $\text{quejas\_resueltas}$ y $\text{total\_quejas}$, es necesario implementar un sistema de registro de quejas y resolución en cada local. Del mismo modo, $\text{clientes\_recomendacion}$ requiere encuestas a clientes nuevos para determinar si llegaron por recomendación. \\
-
-En el caso de $\text{tiempo\_reposicion}$, este valor deberá registrarse como el tiempo transcurrido desde que se realiza un pedido hasta su llegada al local. Finalmente, para $\text{inventario\_critico}$ e $\text{inventario\_total}$, se necesita monitorizar constantemente el nivel de productos disponibles para identificar aquellos en riesgo de ruptura de inventario y comparar con el total almacenado.
-
-
-\end{document}
+    \hline\hline
+    \textbf{Identificador de indicador} & \textbf{Indicador} & \textbf{Proceso de negocio} & \textbf{Descripción del cálculo} \\ \hline\hline
+    PI1.1 & Aumentar margen de beneficio bruto & Proceso 1 & $\text{ingresos}_i - \text{ingresos}_{i-1}$  \\ \hline
+    PI1.2 & Reducir coste operativo por local & Proceso 1 & $\text{coste}_i - \text{coste}_{i-1}$ \\ \hline
+    PI1.3 & Aumentar gasto por cliente & Proceso 1 & $\displaystyle\frac{\text{ingresos}_i}{\text{clientes}_i}$ \\ \hline
+    PI1.4 & Aumentar tasa de ocupación & Proceso 1 & $\displaystyle\frac{\text{clientes}_i}{\text{capacidad\_max} \times \text{num\_turnos}}$ \\ \hline
+    PI1.5 & Reducir desperdicio de alimentos $^*$ & Proceso 1 & $\displaystyle\frac{\text{peso\_alimentos\_desperdiciados}_i}{\text{peso\_alimentos\_inventario}_i}$ \\ \hline\hline
+    PI3.1 & Fijar valoración de satisfacción del cliente & Proceso 3 & 
+    $\displaystyle\frac{\text{val\_pers}_i + \text{val\_amb}_i + \text{val\_comida}_i}{3}$ \\ \hline
+    PI3.2 & Aumentar recurrencia de visitas & Proceso 3 & $\displaystyle\frac{\text{clientes}_i - \text{nuevos\_clientes}_i}{\text{clientes}_i}$ \\ \hline
+    PI3.3 & Fijar quejas resueltas satisfactoriamente $^*$ & Proceso 3 & $\displaystyle\frac{\text{quejas\_resueltas}_i}{\text{total\_quejas}_i}$ \\ \hline
+    PI3.4 & Aumentar nuevos clientes por recomendación $^*$ & Proceso 3 & $\displaystyle\frac{\text{clientes\_recomendacion}_i}{\text{nuevos\_clientes}_i}$ \\ \hline\hline
+    PI4.1 & Fijar tiempo de reposición de productos $^*$ & Proceso 3 & $\displaystyle\frac{\text{tiempo\_reposicion}_i}{\text{clientes}_i}$ \\ \hline
+    PI4.2 & Reducir nivel de inventario crítico $^*$ & Proceso 3 & $\displaystyle\frac{\text{inventario\_critico}_i}{\text{inventario\_total}_i}$ \\ \hline
+    PI4.3 & Reducir costes logísticos por pedido & Proceso 3 & $\displaystyle\frac{\text{costes}_i}{\text{clientes}_i}$ \\ \hline\hline
+    
+    \end{longtblr}
+    
+    *Algunas requieren explicación adicional, ya que implican medidas no consideradas anteriormente. En el cálculo de la tasa de ocupación, se menciona $\text{capacidad\_max}$ y $\text{num\_turnos}$. Estos valores son (en principio) fijos para cada restaurante: el primero nos da la capacidad máxima de la sala, y el segundo el número de turnos ese mes, que deberían ser unos 48 (2 por día, 6 días por semana). \\
+    
+    Para otros indicadores, como $\text{quejas\_resueltas}$ y $\text{total\_quejas}$, es necesario implementar un sistema de registro de quejas y resolución en cada local. Del mismo modo, $\text{clientes\_recomendacion}$ requiere encuestas a clientes nuevos para determinar si llegaron por recomendación. \\
+    
+    En el caso de $\text{tiempo\_reposicion}$, este valor deberá registrarse como el tiempo transcurrido desde que se realiza un pedido hasta su llegada al local. Finalmente, para $\text{inventario\_critico}$ e $\text{inventario\_total}$, se necesita monitorizar constantemente el nivel de productos disponibles para identificar aquellos en riesgo de ruptura de inventario y comparar con el total almacenado.
+    
+    
+    \end{document}
