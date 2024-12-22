@@ -1,0 +1,89 @@
+{
+  "sets": [
+    {
+      "num_set": 1,
+      "juegos_ganador": 6,
+      "juegos_perdedor": 4,
+      "puntos_tiebreak_perdedor": null
+    },
+    {
+      "num_set": 2,
+      "juegos_ganador": 5,
+      "juegos_perdedor": 7,
+      "puntos_tiebreak_perdedor": null
+    },
+    {
+      "num_set": 3,
+      "juegos_ganador": 6,
+      "juegos_perdedor": 4,
+      "puntos_tiebreak_perdedor": null
+    }
+  ],
+  "ronda": "R32",
+  "torneo": {
+    "id": 112,
+    "pais": {
+      "nombre": "United Kingdom",
+      "codigo_ioc": "GBR",
+      "codigo_iso2": "GB",
+      "codigo_iso3": "GBR"
+    },
+    "fecha": "2019-07-07",
+    "nivel": "A",
+    "nombre": "Newport",
+    "tamano": 32,
+    "superficie": "Hierba"
+  },
+  "ganador": {
+    "id": 105815,
+    "pais": {
+      "nombre": "United States of America",
+      "codigo_ioc": "USA",
+      "codigo_iso2": "US",
+      "codigo_iso3": "USA"
+    },
+    "stats": {
+      "aces": 8,
+      "dobles_faltas": 4,
+      "breaks_salvados": 4,
+      "juegos_servidos": 16,
+      "puntos_servidos": 113,
+      "breaks_afrontados": 6,
+      "primeros_servicios": 57,
+      "primeros_servicios_ganados": 46,
+      "segundos_servicios_ganados": 25
+    },
+    "altura": 188,
+    "nombre": "Tennys",
+    "diestro": true,
+    "apellido": "Sandgren",
+    "fecha_nacimiento": "1991-07-07"
+  },
+  "num_sets": 3,
+  "perdedor": {
+    "id": 104797,
+    "pais": {
+      "nombre": "Uzbekistan",
+      "codigo_ioc": "UZB",
+      "codigo_iso2": "UZ",
+      "codigo_iso3": "UZB"
+    },
+    "stats": {
+      "aces": 1,
+      "dobles_faltas": 4,
+      "breaks_salvados": 5,
+      "juegos_servidos": 16,
+      "puntos_servidos": 101,
+      "breaks_afrontados": 8,
+      "primeros_servicios": 60,
+      "primeros_servicios_ganados": 43,
+      "segundos_servicios_ganados": 20
+    },
+    "altura": 188,
+    "nombre": "Denis",
+    "diestro": true,
+    "apellido": "Istomin",
+    "fecha_nacimiento": "1986-09-09"
+  },
+  "desenlace": "N"
+}

@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+ch}{\PYGZsh{}!/bin/bash}
+
+\PYG{c+c1}{\PYGZsh{} ejecutar desde local: ssh user@host \PYGZsq{}bash \PYGZhy{}s\PYGZsq{} \PYGZlt{} \PYGZlt{}path\PYGZus{}to\PYGZus{}this\PYGZus{}file\PYGZgt{}}
+
+\PYG{n+nv}{POSTGRES\PYGZus{}PASSWORD}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}***\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Añadir el repositorio de Citus al empaquetador de Ubuntu}
+curl\PYG{+w}{ }https://install.citusdata.com/community/deb.sh\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }sudo\PYG{+w}{ }bash
+
+\PYG{c+c1}{\PYGZsh{} Instalar Postgres y Citus}
+sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }\PYGZhy{}y\PYG{+w}{ }install\PYG{+w}{ }postgresql\PYGZhy{}16\PYGZhy{}citus\PYGZhy{}12.1
+
+\PYG{c+c1}{\PYGZsh{} Precargar la extensión Citus}
+sudo\PYG{+w}{ }pg\PYGZus{}conftool\PYG{+w}{ }\PYG{l+m}{16}\PYG{+w}{ }main\PYG{+w}{ }\PYG{n+nb}{set}\PYG{+w}{ }shared\PYGZus{}preload\PYGZus{}libraries\PYG{+w}{ }citus
+
+\PYG{c+c1}{\PYGZsh{} Iniciar el servicio de Postgres y habilitarlo para arrancar al iniciar}
+sudo\PYG{+w}{ }systemctl\PYG{+w}{ }start\PYG{+w}{ }postgresql
+sudo\PYG{+w}{ }systemctl\PYG{+w}{ }\PYG{n+nb}{enable}\PYG{+w}{ }postgresql
+
+\PYG{c+c1}{\PYGZsh{} Modificamos la contraseña del usuario postgres}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ALTER USER postgres WITH PASSWORD \PYGZsq{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{POSTGRES\PYGZus{}PASSWORD}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZsq{};\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Modificamos el archivo /etc/postgres/16/main/postgresql.conf mediante comando}
+sudo\PYG{+w}{ }pg\PYGZus{}conftool\PYG{+w}{ }\PYG{l+m}{16}\PYG{+w}{ }main\PYG{+w}{ }\PYG{n+nb}{set}\PYG{+w}{ }listen\PYGZus{}addresses\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}*\PYGZsq{}}
+
+\PYG{c+c1}{\PYGZsh{} Al archivo pg\PYGZus{}hba.conf de nuestra versión instalada añadimos la siguiente línea}
+\PYG{c+c1}{\PYGZsh{} que otorga acceso completo a usuarios autentificados}
+\PYG{n+nb}{echo}\PYG{+w}{ }\PYGZhy{}e\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}n\PYGZsh{} Allow access from all IP addresses\PYGZbs{}nhost   all     all     0.0.0.0/0      md5\PYGZdq{}}
+\PYG{p}{|}\PYG{+w}{ }sudo\PYG{+w}{ }tee\PYG{+w}{ }\PYGZhy{}a\PYG{+w}{ }/etc/postgresql/16/main/pg\PYGZus{}hba.conf
+
+\PYG{c+c1}{\PYGZsh{} Reiniciamos el servicio de postgres}
+sudo\PYG{+w}{ }systemctl\PYG{+w}{ }restart\PYG{+w}{ }postgresql
+
+\PYG{c+c1}{\PYGZsh{} Los diferentes nodos del clúster deben de poder comunicarse entre sí}
+\PYG{c+c1}{\PYGZsh{} Para ello, creamos el archivo .pgpass en el directorio \PYGZdl{}HOME del usuario postgres}
+\PYG{c+c1}{\PYGZsh{} Postgres leerá de ese archivo las contraseñas de distintas conexiones}
+\PYG{c+c1}{\PYGZsh{} Usamos * para indicarle que use la misma contraseña para todas las conexiones, desde cada nodo a los otros 2}
+\PYG{c+c1}{\PYGZsh{} https://docs.citusdata.com/en/v8.3/admin\PYGZus{}guide/cluster\PYGZus{}management.html\PYGZsh{}increasing\PYGZhy{}worker\PYGZhy{}security}
+sudo\PYG{+w}{ }bash\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}echo \PYGZsq{}*:*:*:*:}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{POSTGRES\PYGZus{}PASSWORD}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZsq{} \PYGZgt{} /var/lib/postgresql/.pgpass\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Cambiamos permisos de lectura y escritura únicamente para el usuario postgres}
+sudo\PYG{+w}{ }chown\PYG{+w}{ }postgres:postgres\PYG{+w}{ }/var/lib/postgresql/.pgpass
+sudo\PYG{+w}{ }chmod\PYG{+w}{ }\PYG{l+m}{600}\PYG{+w}{ }/var/lib/postgresql/.pgpass
+\end{Verbatim}

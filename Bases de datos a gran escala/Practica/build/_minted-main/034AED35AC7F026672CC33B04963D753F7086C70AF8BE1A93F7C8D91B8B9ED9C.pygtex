@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{sharding}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{clusterRole}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{shardsvr}
+
+\PYG{n+nt}{replication}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{replSetName}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{rsShard\PYGZob{}1|2|3\PYGZcb{}}
+
+\PYG{n+nt}{storage}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{dbPath}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{/home/ubuntu/dbMongo/rsShard\PYGZob{}1|2|3\PYGZcb{}}
+
+\PYG{n+nt}{systemLog}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{destination}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{file}
+\PYG{+w}{  }\PYG{n+nt}{logAppend}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{true}
+\PYG{+w}{  }\PYG{n+nt}{path}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{/home/ubuntu/dbMongo/rsShard\PYGZob{}1|2|3\PYGZcb{}/mongod.log}
+
+\PYG{n+nt}{net}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{port}\PYG{p}{:}\PYG{+w}{ }\PYG{p+pIndicator}{\PYGZob{}}\PYG{n+nv}{27011 | 27012 | 27013}\PYG{p+pIndicator}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{n+nt}{bindIp}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{0.0.0.0}
+
+\PYG{n+nt}{processManagement}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{timeZoneInfo}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{/usr/share/zoneinfo}
+\PYG{+w}{  }\PYG{n+nt}{fork}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{true}
+
+\PYG{n+nt}{security}\PYG{p}{:}
+\PYG{+w}{  }\PYG{n+nt}{keyFile}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{/home/ubuntu/mongo\PYGZus{}keyfile}
+\PYG{+w}{  }\PYG{n+nt}{authorization}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{enabled}
+\end{Verbatim}

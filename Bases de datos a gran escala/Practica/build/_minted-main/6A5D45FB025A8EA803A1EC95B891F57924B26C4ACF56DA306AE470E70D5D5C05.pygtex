@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Tablas de referencia (copiadas a todos los worker)}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}reference\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}pais\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}reference\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}torneo\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}reference\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}jugador\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Tablas distribuidas}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}distributed\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}partido\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}torneo\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}distributed\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}edicion\PYGZus{}torneo\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}torneo\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{colocate\PYGZus{}with}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}partido\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}distributed\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sets\PYGZus{}partido\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}torneo\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{colocate\PYGZus{}with}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}partido\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{create\PYGZus{}distributed\PYGZus{}table}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ranking\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}jugador\PYGZsq{}}\PYG{p}{);}
+\end{Verbatim}

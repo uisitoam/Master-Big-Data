@@ -1,0 +1,76 @@
+mongod --config mongo/config/configsvr.conf
+
+mongosh --port 27010
+
+rs.initiate(
+  {
+    _id: "rsConfServer",
+    configsvr: true,
+    members: [
+      { _id : 0, host : "ovh1:27010" },
+      { _id : 1, host : "ovh2:27010" },
+      { _id : 2, host : "ovh3:27010" }
+    ]
+  }
+)
+
+mongod --config mongo/config/shard1.conf
+mongod --config mongo/config/shard2.conf
+mongod --config mongo/config/shard3.conf
+
+mongosh --port 27011
+
+rs.initiate(
+  {
+    _id : "rsShard1",
+    members: [
+      { _id : 0, host : "ovh1:27011" },
+      { _id : 1, host : "ovh2:27011" },
+      { _id : 2, host : "ovh3:27011" }
+    ]
+  }
+)
+
+mongosh --port 27012
+
+rs.initiate(
+  {
+    _id : "rsShard2",
+    members: [
+      { _id : 0, host : "ovh1:27012" },
+      { _id : 1, host : "ovh2:27012" },
+      { _id : 2, host : "ovh3:27012" }
+    ]
+  }
+)
+
+mongosh --port 27013
+
+rs.initiate(
+  {
+    _id : "rsShard3",
+    members: [
+      { _id : 0, host : "ovh1:27013" },
+      { _id : 1, host : "ovh2:27013" },
+      { _id : 2, host : "ovh3:27013" }
+    ]
+  }
+)
+
+mongos --config mongo/config/mongos.conf
+
+mongosh --port 27017
+
+sh.addShard( "rsShard1/ovh1:27011,ovh2:27011,ovh3:27011")
+sh.addShard( "rsShard2/ovh1:27012,ovh2:27012,ovh3:27012")
+sh.addShard( "rsShard3/ovh1:27013,ovh2:27013,ovh3:27013")
+
+db.createUser({
+  user: "admin",
+  pwd: "miguelovh399",
+  roles: [
+    { role: "userAdminAnyDatabase", db: "admin" },
+    { role: "clusterAdmin", db: "admin" },
+    { role: "readWriteAnyDatabase", db: "admin" }
+  ]
+});

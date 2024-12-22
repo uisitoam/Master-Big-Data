@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+mongod\PYG{+w}{ }\PYGZhy{}\PYGZhy{}config\PYG{+w}{ }mongo/config/configsvr.conf
+\end{Verbatim}

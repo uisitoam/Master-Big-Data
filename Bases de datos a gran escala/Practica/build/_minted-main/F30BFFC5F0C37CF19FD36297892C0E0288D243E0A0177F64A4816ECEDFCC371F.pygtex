@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+mongosh\PYG{+w}{ }\PYGZhy{}\PYGZhy{}port\PYG{+w}{ }\PYG{l+m}{27011}
+\end{Verbatim}

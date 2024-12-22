@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+ch}{\PYGZsh{}!/bin/bash}
+
+\PYG{c+c1}{\PYGZsh{} run from local with: ssh user@host \PYGZsq{}bash \PYGZhy{}s\PYGZsq{} \PYGZlt{} \PYGZlt{}path\PYGZus{}to\PYGZus{}this\PYGZus{}file\PYGZgt{}}
+
+\PYG{c+c1}{\PYGZsh{} Importar la clave de mongo al llavero del sistema operativo}
+wget\PYG{+w}{ }\PYGZhy{}qO\PYG{+w}{ }\PYGZhy{}\PYG{+w}{ }https://www.mongodb.org/static/pgp/server\PYGZhy{}6.0.asc\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{  }gpg\PYG{+w}{ }\PYGZhy{}\PYGZhy{}dearmor\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+sudo\PYG{+w}{ }tee\PYG{+w}{ }/usr/share/keyrings/mongodb.gpg\PYG{+w}{ }\PYGZgt{}\PYG{+w}{ }/dev/null
+
+\PYG{c+c1}{\PYGZsh{} Actualizar el repositorio de apt para incluir mongo\PYGZhy{}org}
+\PYG{n+nb}{echo}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}deb [ arch=amd64,arm64 signed\PYGZhy{}by=/usr/share/keyrings/mongodb.gpg ]\PYGZdq{}}\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+\PYG{l+s+s2}{\PYGZdq{}https://repo.mongodb.org/apt/ubuntu jammy/mongodb\PYGZhy{}org/6.0 multiverse\PYGZdq{}}\PYG{+w}{ }\PYG{p}{|}\PYG{+w}{ }\PYG{l+s+se}{\PYGZbs{}}
+sudo\PYG{+w}{ }tee\PYG{+w}{ }/etc/apt/sources.list.d/mongodb\PYGZhy{}org\PYGZhy{}6.0.list
+
+\PYG{c+c1}{\PYGZsh{} Actualizar el controlador de paquetes del sistema}
+sudo\PYG{+w}{ }apt\PYG{+w}{ }update
+
+\PYG{c+c1}{\PYGZsh{} Instalar mongo}
+sudo\PYG{+w}{ }apt\PYG{+w}{ }install\PYG{+w}{ }\PYGZhy{}y\PYG{+w}{ }mongodb\PYGZhy{}org
+
+\PYG{c+c1}{\PYGZsh{} Mostrar versiones instaladas}
+mongod\PYG{+w}{ }\PYGZhy{}\PYGZhy{}version
+mongosh\PYG{+w}{ }\PYGZhy{}\PYGZhy{}version
+
+\PYG{c+c1}{\PYGZsh{} Reiniciar el sistema}
+sudo\PYG{+w}{ }reboot
+\end{Verbatim}

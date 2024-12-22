@@ -1,0 +1,1 @@
+mongoimport --host ovh1 --port 27017 --db tenis2 --collection partidos --file /tmp/tenis.json --authenticationDatabase admin -u admin -p miguelovh399

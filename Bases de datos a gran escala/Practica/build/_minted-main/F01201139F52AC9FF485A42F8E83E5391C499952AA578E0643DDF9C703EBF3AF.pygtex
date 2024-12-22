@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Eliminar extensión y base de datos citus}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}d\PYG{+w}{ }citus\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}DROP EXTENSION citus CASCADE;\PYGZdq{}}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}DROP DATABASE citus;\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Recrear base de datos citus}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}CREATE DATABASE citus;\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Añadir la extensión citus a la base de datos citus}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}d\PYG{+w}{ }citus\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}CREATE EXTENSION citus;\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Verificamos que citus se ha instalado correctamente}
+sudo\PYG{+w}{ }\PYGZhy{}i\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }postgres\PYG{+w}{ }psql\PYG{+w}{ }\PYGZhy{}d\PYG{+w}{ }citus\PYG{+w}{ }\PYGZhy{}c\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}SELECT * FROM citus\PYGZus{}version();\PYGZdq{}}
+\end{Verbatim}

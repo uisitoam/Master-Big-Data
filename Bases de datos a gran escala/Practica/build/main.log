@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  18 DEC 2024 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  22 DEC 2024 21:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -184,6 +184,24 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
  (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
@@ -314,9 +332,7 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen166
 \Gin@req@width=\dimen167
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
@@ -326,22 +342,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box54
 \@float@everytoks=\toks32
 \@floatcapt=\box55
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
  (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
@@ -357,7 +357,12 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \everycr=\toks34
 \minrowclearance=\skip65
 \rownum=\count296
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+)
+
+LaTeX Warning: Package "xcolor" has already been loaded: ignoring load-time
+(LaTeX)        option "xcdraw".
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip66
 \multirow@cntb=\count297
@@ -450,7 +455,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen199
 \Gm@dimlist=\toks36
 )
-Package caption Info: Option `figurename' requires the `newfloat' package on input line 74.
+Package caption Info: Option `figurename' requires the `newfloat' package on input line 76.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newfloat/newfloat.sty
 Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
 Package newfloat Info: Unsupported document class, or \@chapter 
@@ -466,14 +471,14 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count319
 )
 \biblabelwidth=\skip73
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 92.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 94.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 92.
+(Font)              scaled to size 10.40245pt on input line 94.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 92.
+(Font)              scaled to size 7.59998pt on input line 94.
  (./jabbrv.sty
 Package: jabbrv 2010/08/18 v0.2 Automatic Journal Title Abbreviation Package
 \temp@journal@text=\toks37
@@ -505,11 +510,11 @@ Package: lastpagemodern 2023-10-14 v2.0e Refers to last page's name (HMM; JPG)
 ))
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 129.
+(fancyhdr)                Please consider using the `twoside' option on input line 131.
 
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is useless.
-(fancyhdr)                Please consider using the `twoside' option on input line 135.
+(fancyhdr)                Please consider using the `twoside' option on input line 137.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
@@ -751,11 +756,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
-Package hyperref Info: Link coloring ON on input line 98.
- (build/main.out) (build/main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
-
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count383
@@ -775,6 +775,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+Package hyperref Info: Link coloring ON on input line 98.
+ (build/main.out) (build/main.out)
+\@outlinefile=\write6
+\openout6 = `main.out'.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Option `justification=RaggedRight' requires the `ragged2e' package on input line 98.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
@@ -930,7 +935,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 103.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 11.39996pt on input line 103.
-<fotos/esquema.png, id=164, 1002.74625pt x 883.3pt>
+<fotos/esquema.png, id=180, 1002.74625pt x 883.3pt>
 File: fotos/esquema.png Graphic file (type png)
 <use fotos/esquema.png>
 Package pdftex.def Info: fotos/esquema.png  used on input line 107.
@@ -1008,7 +1013,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-<fotos/q1_rel.png, id=196, 353.32pt x 672.5125pt>
+<fotos/q1_rel.png, id=212, 353.32pt x 672.5125pt>
 File: fotos/q1_rel.png Graphic file (type png)
 <use fotos/q1_rel.png>
 Package pdftex.def Info: fotos/q1_rel.png  used on input line 169.
@@ -1017,7 +1022,7 @@ Package pdftex.def Info: fotos/q1_rel.png  used on input line 169.
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/066A53B6F2889C6DCA3621DB2CC495AA24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
-<fotos/q2_rel.png, id=211, 977.6525pt x 352.31625pt>
+<fotos/q2_rel.png, id=227, 977.6525pt x 352.31625pt>
 File: fotos/q2_rel.png Graphic file (type png)
 <use fotos/q2_rel.png>
 Package pdftex.def Info: fotos/q2_rel.png  used on input line 215.
@@ -1031,7 +1036,7 @@ Overfull \hbox (6.11021pt too wide) in paragraph at lines 241--242
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/0EB794B61EF1B645CBE8D8797FAFDCB224B26C4ACF56DA306AE470E70D5D5C05.pygtex)
-<fotos/q3_rel.png, id=223, 646.415pt x 91.34125pt>
+<fotos/q3_rel.png, id=239, 646.415pt x 91.34125pt>
 File: fotos/q3_rel.png Graphic file (type png)
 <use fotos/q3_rel.png>
 Package pdftex.def Info: fotos/q3_rel.png  used on input line 267.
@@ -1054,7 +1059,7 @@ Overfull \hbox (4.72198pt too wide) in paragraph at lines 308--309
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/A34F0F25E68CB500C7BB679B4FEBC2B924B26C4ACF56DA306AE470E70D5D5C05.pygtex [9])
-<fotos/q4_rel.png, id=241, 1171.37625pt x 149.55875pt>
+<fotos/q4_rel.png, id=257, 1171.37625pt x 149.55875pt>
 File: fotos/q4_rel.png Graphic file (type png)
 <use fotos/q4_rel.png>
 Package pdftex.def Info: fotos/q4_rel.png  used on input line 367.
@@ -1068,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--392
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/12AD4ADB00BC31F6B4EACC9C6B54584924B26C4ACF56DA306AE470E70D5D5C05.pygtex)
-<fotos/q5_rel.png, id=252, 284.06125pt x 148.555pt>
+<fotos/q5_rel.png, id=268, 284.06125pt x 148.555pt>
 File: fotos/q5_rel.png Graphic file (type png)
 <use fotos/q5_rel.png>
 Package pdftex.def Info: fotos/q5_rel.png  used on input line 435.
@@ -1139,7 +1144,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/05ABA67144FA081894C5DC986B75387424B26C4ACF56DA306AE470E70D5D5C05.pygtex [17])
-<fotos/q1_com.png, id=283, 346.29375pt x 642.4pt>
+<fotos/q1_com.png, id=299, 346.29375pt x 642.4pt>
 File: fotos/q1_com.png Graphic file (type png)
 <use fotos/q1_com.png>
 Package pdftex.def Info: fotos/q1_com.png  used on input line 215.
@@ -1147,7 +1152,7 @@ Package pdftex.def Info: fotos/q1_com.png  used on input line 215.
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/3B5D2635160C82B576758CBC7735CD0024B26C4ACF56DA306AE470E70D5D5C05.pygtex [18 <./fotos/q1_com.png>])
-<fotos/q2_com.png, id=292, 925.4575pt x 323.2075pt>
+<fotos/q2_com.png, id=308, 925.4575pt x 323.2075pt>
 File: fotos/q2_com.png Graphic file (type png)
 <use fotos/q2_com.png>
 Package pdftex.def Info: fotos/q2_com.png  used on input line 238.
@@ -1160,7 +1165,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/4F009744C48AC2056E840F2E77C45D2824B26C4ACF56DA306AE470E70D5D5C05.pygtex [19 <./fotos/q2_com.png>])
-<fotos/q3_com.png, id=301, 624.3325pt x 90.3375pt>
+<fotos/q3_com.png, id=317, 624.3325pt x 90.3375pt>
 File: fotos/q3_com.png Graphic file (type png)
 <use fotos/q3_com.png>
 Package pdftex.def Info: fotos/q3_com.png  used on input line 272.
@@ -1173,7 +1178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--283
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/83D7AD79997942111394FA33397FB21924B26C4ACF56DA306AE470E70D5D5C05.pygtex [20 <./fotos/q3_com.png>])
-<fotos/q4_com.png, id=309, 1127.21124pt x 134.5025pt>
+<fotos/q4_com.png, id=325, 1127.21124pt x 134.5025pt>
 File: fotos/q4_com.png Graphic file (type png)
 <use fotos/q4_com.png>
 Package pdftex.def Info: fotos/q4_com.png  used on input line 345.
@@ -1187,7 +1192,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--357
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/CC1E568B7BA201CCEF9AB8BCF769721724B26C4ACF56DA306AE470E70D5D5C05.pygtex)
-<fotos/q5_com.png, id=316, 271.0125pt x 133.49875pt>
+<fotos/q5_com.png, id=332, 271.0125pt x 133.49875pt>
 File: fotos/q5_com.png Graphic file (type png)
 <use fotos/q5_com.png>
 Package pdftex.def Info: fotos/q5_com.png  used on input line 382.
@@ -1246,7 +1251,7 @@ Overfull \hbox (17.7048pt too wide) in paragraph at lines 174--175
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/2BF0FF4ACB14EBC8B43CE26E38C6E46224B26C4ACF56DA306AE470E70D5D5C05.pygtex)
-<fotos/q1_json.png, id=342, 337.26pt x 577.15625pt>
+<fotos/q1_json.png, id=358, 337.26pt x 577.15625pt>
 File: fotos/q1_json.png Graphic file (type png)
 <use fotos/q1_json.png>
 Package pdftex.def Info: fotos/q1_json.png  used on input line 195.
@@ -1259,7 +1264,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/2F41614A63A9829C9794E52F437A6FE724B26C4ACF56DA306AE470E70D5D5C05.pygtex [27 <./fotos/q1_json.png>])
-<fotos/q2_json.png, id=351, 870.25125pt x 306.14375pt>
+<fotos/q2_json.png, id=367, 870.25125pt x 306.14375pt>
 File: fotos/q2_json.png Graphic file (type png)
 <use fotos/q2_json.png>
 Package pdftex.def Info: fotos/q2_json.png  used on input line 223.
@@ -1272,7 +1277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/38005E8A9B7AEFE0AE359C33D984E89B24B26C4ACF56DA306AE470E70D5D5C05.pygtex [28 <./fotos/q2_json.png>])
-<fotos/q3_json.png, id=359, 605.26125pt x 82.3075pt>
+<fotos/q3_json.png, id=375, 605.26125pt x 82.3075pt>
 File: fotos/q3_json.png Graphic file (type png)
 <use fotos/q3_json.png>
 Package pdftex.def Info: fotos/q3_json.png  used on input line 257.
@@ -1300,7 +1305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--272
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/1B96153D4C43D07966F59359152EC87424B26C4ACF56DA306AE470E70D5D5C05.pygtex [29 <./fotos/q3_json.png>])
-<fotos/q4_json.png, id=367, 1144.275pt x 133.49875pt>
+<fotos/q4_json.png, id=383, 1144.275pt x 133.49875pt>
 File: fotos/q4_json.png Graphic file (type png)
 <use fotos/q4_json.png>
 Package pdftex.def Info: fotos/q4_json.png  used on input line 348.
@@ -1318,7 +1323,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 366--367
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/116ADFAA5A7A32F381F487E741D9AB1524B26C4ACF56DA306AE470E70D5D5C05.pygtex [31 <./fotos/q4_json.png>])
-<fotos/q5_json.png, id=380, 273.02pt x 136.51pt>
+<fotos/q5_json.png, id=396, 273.02pt x 136.51pt>
 File: fotos/q5_json.png Graphic file (type png)
 <use fotos/q5_json.png>
 Package pdftex.def Info: fotos/q5_json.png  used on input line 397.
@@ -1327,55 +1332,380 @@ Package pdftex.def Info: fotos/q5_json.png  used on input line 397.
 \openout2 = `tex/citus.aux'.
 
  (./tex/citus.tex
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/3A07BC5DA7EC259410CC272D89A322E8C9CDBA258BF65A7D0EAC682580266369.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/C807B5D583F846B38DED1DF05B99B92EC9CDBA258BF65A7D0EAC682580266369.pygtex [33
+
+
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+\openout4 = `main.pyg'.
+
+(./build/_minted-main/770A11F6FBB2701375751C870479AA771C499952AA578E0643DDF9C703EBF3AF.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/F01201139F52AC9FF485A42F8E83E5391C499952AA578E0643DDF9C703EBF3AF.pygtex [34])
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/B66ED3C61FA692D50F30F92410B57B511C499952AA578E0643DDF9C703EBF3AF.pygtex)
+<fotos/citus/terraform.png, id=413, 312.66812pt x 458.71375pt>
+File: fotos/citus/terraform.png Graphic file (type png)
+<use fotos/citus/terraform.png>
+Package pdftex.def Info: fotos/citus/terraform.png  used on input line 130.
+(pdftex.def)             Requested size: 141.56187pt x 207.68617pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+[35 <./fotos/citus/terraform.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/6A5D45FB025A8EA803A1EC95B891F57924B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/foreig_key_error.png, id=420, 453.695pt x 144.54pt>
+File: fotos/citus/foreig_key_error.png Graphic file (type png)
+<use fotos/citus/foreig_key_error.png>
+Package pdftex.def Info: fotos/citus/foreig_key_error.png  used on input line 161.
+(pdftex.def)             Requested size: 471.86229pt x 150.32906pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+\openout4 = `main.pyg'.
+
+(./build/_minted-main/23046977046B5C0593F4F72EBF284B8724B26C4ACF56DA306AE470E70D5D5C05.pygtex [36 <./fotos/citus/foreig_key_error.png>])
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/F7B3BBA810F347AA42BA46E11CC5A24724B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/table_sizes_and_distributed.png, id=429, 1350.04375pt x 227.85126pt>
+File: fotos/citus/table_sizes_and_distributed.png Graphic file (type png)
+<use fotos/citus/table_sizes_and_distributed.png>
+Package pdftex.def Info: fotos/citus/table_sizes_and_distributed.png  used on input line 227.
+(pdftex.def)             Requested size: 471.86229pt x 79.63786pt.
+ [37 <./fotos/citus/table_sizes_and_distributed.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+\openout4 = `main.pyg'.
+
+(./build/_minted-main/2470CDA293C9D0FFA8566A731708DA83C9CDBA258BF65A7D0EAC682580266369.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/59BB68C63F44FB5D8DA3B07FF477A8E7C9CDBA258BF65A7D0EAC682580266369.pygtex)
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3.
+(hyperref)                than one, level fixed on input line 274.
 
 \openout4 = `main.pyg'.
 
-(./build/_minted-main/754AD12DDF232C0ED893B7443175719C24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+(./build/_minted-main/FE8107F212D0C0AB9A8CF268F74AFF7A24B26C4ACF56DA306AE470E70D5D5C05.pygtex [38])
+<fotos/citus/q1.png, id=452, 626.34pt x 804.00375pt>
+File: fotos/citus/q1.png Graphic file (type png)
+<use fotos/citus/q1.png>
+Package pdftex.def Info: fotos/citus/q1.png  used on input line 287.
+(pdftex.def)             Requested size: 209.7148pt x 269.19878pt.
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/196A7975EC50F2BE995AA220A00DD65D24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/066A53B6F2889C6DCA3621DB2CC495AA24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/q2.png, id=453, 1292.83pt x 449.68pt>
+File: fotos/citus/q2.png Graphic file (type png)
+<use fotos/citus/q2.png>
+Package pdftex.def Info: fotos/citus/q2.png  used on input line 313.
+(pdftex.def)             Requested size: 367.0049pt x 127.65237pt.
+ [39 <./fotos/citus/q1.png>]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/8AA59D0D452CC118B44C8B14393B1E2724B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/0EB794B61EF1B645CBE8D8797FAFDCB224B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/q3.png, id=459, 814.04124pt x 159.59625pt>
+File: fotos/citus/q3.png Graphic file (type png)
+<use fotos/citus/q3.png>
+Package pdftex.def Info: fotos/citus/q3.png  used on input line 347.
+(pdftex.def)             Requested size: 367.0049pt x 71.95157pt.
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/14ADD52EB8E1C2881E222C1D23B685B524B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/A34F0F25E68CB500C7BB679B4FEBC2B924B26C4ACF56DA306AE470E70D5D5C05.pygtex [40 <./fotos/citus/q2.png> <./fotos/citus/q3.png>])
+<fotos/citus/q4.png, id=466, 1792.6975pt x 225.84375pt>
+File: fotos/citus/q4.png Graphic file (type png)
+<use fotos/citus/q4.png>
+Package pdftex.def Info: fotos/citus/q4.png  used on input line 409.
+(pdftex.def)             Requested size: 471.86229pt x 59.4451pt.
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/AED0C6C145996820D3F767D91C1D8E5924B26C4ACF56DA306AE470E70D5D5C05.pygtex)) [33
+ (./build/_minted-main/12AD4ADB00BC31F6B4EACC9C6B54584924B26C4ACF56DA306AE470E70D5D5C05.pygtex [41 <./fotos/citus/q4.png>])
+<fotos/citus/q5.png, id=472, 625.33624pt x 225.84375pt>
+File: fotos/citus/q5.png Graphic file (type png)
+<use fotos/citus/q5.png>
+Package pdftex.def Info: fotos/citus/q5.png  used on input line 446.
+(pdftex.def)             Requested size: 340.78854pt x 123.08067pt.
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/D79E458C7DCAF04997BDE9D4221136E088D243E0A0177F64A4816ECEDFCC371F.pygtex)
+<fotos/citus/one_down_error.png, id=475, 1269.74374pt x 89.33376pt>
+File: fotos/citus/one_down_error.png Graphic file (type png)
+<use fotos/citus/one_down_error.png>
+Package pdftex.def Info: fotos/citus/one_down_error.png  used on input line 466.
+(pdftex.def)             Requested size: 419.43759pt x 29.51021pt.
+<fotos/citus/one_down_error_but_no.png, id=476, 1270.7475pt x 209.78375pt>
+File: fotos/citus/one_down_error_but_no.png Graphic file (type png)
+<use fotos/citus/one_down_error_but_no.png>
+Package pdftex.def Info: fotos/citus/one_down_error_but_no.png  used on input line 473.
+(pdftex.def)             Requested size: 419.43759pt x 69.24484pt.
+ [42 <./fotos/citus/q5.png> <./fotos/citus/one_down_error.png> <./fotos/citus/one_down_error_but_no.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/36875BAE912DDFB5B0415E156D14B52624B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/shard_rep_foreign_key_errro.png, id=487, 1886.04625pt x 180.675pt>
+File: fotos/citus/shard_rep_foreign_key_errro.png Graphic file (type png)
+<use fotos/citus/shard_rep_foreign_key_errro.png>
+Package pdftex.def Info: fotos/citus/shard_rep_foreign_key_errro.png  used on input line 503.
+(pdftex.def)             Requested size: 524.295pt x 50.22473pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+<fotos/citus/shard_tablas.png, id=490, 453.695pt x 77.28876pt>
+File: fotos/citus/shard_tablas.png Graphic file (type png)
+<use fotos/citus/shard_tablas.png>
+Package pdftex.def Info: fotos/citus/shard_tablas.png  used on input line 514.
+(pdftex.def)             Requested size: 367.0049pt x 62.52098pt.
+<fotos/citus/shard_consulta.png, id=492, 453.695pt x 89.33376pt>
+File: fotos/citus/shard_consulta.png Graphic file (type png)
+<use fotos/citus/shard_consulta.png>
+Package pdftex.def Info: fotos/citus/shard_consulta.png  used on input line 523.
+(pdftex.def)             Requested size: 367.0049pt x 72.26451pt.
+[43 <./fotos/citus/shard_rep_foreign_key_errro.png> <./fotos/citus/shard_tablas.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
+
+ []
+
+\openout4 = `main.pyg'.
+
+(./build/_minted-main/4F12EACE489BF5AF61ED60CD1B42C1FE24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+<fotos/citus/detalle_partido_columnar.png, id=504, 1523.6925pt x 711.65875pt>
+File: fotos/citus/detalle_partido_columnar.png Graphic file (type png)
+<use fotos/citus/detalle_partido_columnar.png>
+Package pdftex.def Info: fotos/citus/detalle_partido_columnar.png  used on input line 548.
+(pdftex.def)             Requested size: 524.295pt x 244.87099pt.
+ [44 <./fotos/citus/shard_consulta.png> <./fotos/citus/detalle_partido_columnar.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
-]
+ []
+
+) [45]
 \openout2 = `tex/mongo.aux'.
 
  (./tex/mongo.tex
+\openout4 = `main.pyg'.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3.
+ (./build/_minted-main/47B577952380D668C36399B7F219881188D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/C90584E0E874D4BA41E106DB659E805988D243E0A0177F64A4816ECEDFCC371F.pygtex [46
+
+
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
 
 \openout4 = `main.pyg'.
 
-(./build/_minted-main/754AD12DDF232C0ED893B7443175719C24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+(./build/_minted-main/7CA7E556165F624C6FAE68EFDA0F530CF7086C70AF8BE1A93F7C8D91B8B9ED9C.pygtex) [47]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/196A7975EC50F2BE995AA220A00DD65D24B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/034AED35AC7F026672CC33B04963D753F7086C70AF8BE1A93F7C8D91B8B9ED9C.pygtex)
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/8AA59D0D452CC118B44C8B14393B1E2724B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/3A06AF3DA7D4242B717EADCFA2DB48F9F7086C70AF8BE1A93F7C8D91B8B9ED9C.pygtex) [48]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/14ADD52EB8E1C2881E222C1D23B685B524B26C4ACF56DA306AE470E70D5D5C05.pygtex)
+ (./build/_minted-main/9573973201045AC8F257FA00FCFB57BF88D243E0A0177F64A4816ECEDFCC371F.pygtex [49])
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/AED0C6C145996820D3F767D91C1D8E5924B26C4ACF56DA306AE470E70D5D5C05.pygtex)) [34
+ (./build/_minted-main/397BAD0C745C183A0B13AA9F8A7F9B4D88D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
 
+ (./build/_minted-main/9A9A4C09DA1504DB206F6A023D951DE788D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
 
+ (./build/_minted-main/AE9946389108360EC95BFA413CA74DC121DAA1B5025470A0892FCD529E29BE74.pygtex [50])
+\openout4 = `main.pyg'.
 
-]
+ (./build/_minted-main/043071B78F7C0544A37BEF515A39C38788D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/F30BFFC5F0C37CF19FD36297892C0E0288D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/BA7F42F5032333369DA1F4E48A6A273421DAA1B5025470A0892FCD529E29BE74.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/975495B63361B00AA87444AE087A9EA588D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/8DB574F61670962FD04CF7A823E478EA88D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/5F37EC10807FEC7A5F1FD5330F276BB188D243E0A0177F64A4816ECEDFCC371F.pygtex [51])
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/34D812B2D4F08D1E81B6FDB7887E171B88D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/2144105A016CC6AEFAA2DA4E011A1F2921DAA1B5025470A0892FCD529E29BE74.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/624E8D342990A1D66141FABDF1358C0588D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/E074F0D08E1AD437B9C7EE47B99FEF6988D243E0A0177F64A4816ECEDFCC371F.pygtex)
+<fotos/mongo/matar_mongo.png, id=558, 324.21124pt x 268.00125pt>
+File: fotos/mongo/matar_mongo.png Graphic file (type png)
+<use fotos/mongo/matar_mongo.png>
+Package pdftex.def Info: fotos/mongo/matar_mongo.png  used on input line 387.
+(pdftex.def)             Requested size: 157.29008pt x 130.02133pt.
+<fotos/mongo/lanzar_mongod.png, id=560, 783.92876pt x 522.95375pt>
+File: fotos/mongo/lanzar_mongod.png Graphic file (type png)
+<use fotos/mongo/lanzar_mongod.png>
+Package pdftex.def Info: fotos/mongo/lanzar_mongod.png  used on input line 396.
+(pdftex.def)             Requested size: 314.58018pt x 209.85605pt.
+ [52 <./fotos/mongo/matar_mongo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+\openout4 = `main.pyg'.
+
+(./build/_minted-main/00670B47F66B30EE63F9C13F378106EA24B26C4ACF56DA306AE470E70D5D5C05.pygtex [53 <./fotos/mongo/lanzar_mongod.png>] [54])
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/0E4938E1CA0D25FABA1A0067B4B0E029F5AD5461C861AC28E333CC5E1772F3C7.pygtex [55]) [56]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/019EE6C93BBBD981CC6DFD7CFE0F6EBED885715E11B495472E6BC855555952C9.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/73E3079FC838995E559AEC676F8DE84688D243E0A0177F64A4816ECEDFCC371F.pygtex)
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/E125880898B44A55A05F09BEC1EE173CD885715E11B495472E6BC855555952C9.pygtex)
+<fotos/mongo/chunks.png, id=587, 285.065pt x 505.89pt>
+File: fotos/mongo/chunks.png Graphic file (type png)
+<use fotos/mongo/chunks.png>
+Package pdftex.def Info: fotos/mongo/chunks.png  used on input line 649.
+(pdftex.def)             Requested size: 157.29008pt x 279.13579pt.
+ [57 <./fotos/mongo/chunks.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/178D272CC6E8DB6501CD1DA17835C80AD885715E11B495472E6BC855555952C9.pygtex)
+<fotos/mongo/q1.png, id=595, 1035.87pt x 494.84875pt>
+File: fotos/mongo/q1.png Graphic file (type png)
+<use fotos/mongo/q1.png>
+Package pdftex.def Info: fotos/mongo/q1.png  used on input line 707.
+(pdftex.def)             Requested size: 314.58018pt x 150.2755pt.
+ [58 <./fotos/mongo/q1.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/A1DF3BA2EF7035F25E6D5A7FE89E94AFD885715E11B495472E6BC855555952C9.pygtex [59])
+<fotos/mongo/q2.png, id=618, 749.80125pt x 1103.12125pt>
+File: fotos/mongo/q2.png Graphic file (type png)
+<use fotos/mongo/q2.png>
+Package pdftex.def Info: fotos/mongo/q2.png  used on input line 795.
+(pdftex.def)             Requested size: 235.93114pt x 347.09789pt.
+ [60 <./fotos/mongo/q2.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/EDAAA300B8B1CD5F67201EE41E941385D885715E11B495472E6BC855555952C9.pygtex [61])
+<fotos/mongo/q3.png, id=634, 316.18124pt x 366.36874pt>
+File: fotos/mongo/q3.png Graphic file (type png)
+<use fotos/mongo/q3.png>
+Package pdftex.def Info: fotos/mongo/q3.png  used on input line 887.
+(pdftex.def)             Requested size: 209.7148pt x 243.00603pt.
+ [62 <./fotos/mongo/q3.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/95D62C469DD7A51E482E18DD063F8A73D885715E11B495472E6BC855555952C9.pygtex [63] [64] [65] [66] [67] [68] [69])
+<fotos/mongo/q4.png, id=676, 310.15875pt x 730.73pt>
+File: fotos/mongo/q4.png Graphic file (type png)
+<use fotos/mongo/q4.png>
+Package pdftex.def Info: fotos/mongo/q4.png  used on input line 1318.
+(pdftex.def)             Requested size: 157.29008pt x 370.57117pt.
+ [70 <./fotos/mongo/q4.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/1304FD08059D8CBFF045BDD65BDAAD55D885715E11B495472E6BC855555952C9.pygtex [71])
+<fotos/mongo/q5.png, id=694, 421.575pt x 494.84875pt>
+File: fotos/mongo/q5.png Graphic file (type png)
+<use fotos/mongo/q5.png>
+Package pdftex.def Info: fotos/mongo/q5.png  used on input line 1427.
+(pdftex.def)             Requested size: 199.23465pt x 233.86258pt.
+ [72 <./fotos/mongo/q5.png>]
+\openout4 = `main.pyg'.
+
+ (./build/_minted-main/8B864E5D6F815465A6299DF6FD715966D885715E11B495472E6BC855555952C9.pygtex)
+<fotos/mongo/1_node_Error.png, id=701, 1087.06125pt x 161.60374pt>
+File: fotos/mongo/1_node_Error.png Graphic file (type png)
+<use fotos/mongo/1_node_Error.png>
+Package pdftex.def Info: fotos/mongo/1_node_Error.png  used on input line 1449.
+(pdftex.def)             Requested size: 471.86229pt x 70.14911pt.
+<fotos/mongo/read_pref_default.png, id=703, 284.06125pt x 193.72375pt>
+File: fotos/mongo/read_pref_default.png Graphic file (type png)
+<use fotos/mongo/read_pref_default.png>
+Package pdftex.def Info: fotos/mongo/read_pref_default.png  used on input line 1460.
+(pdftex.def)             Requested size: 235.93114pt x 160.90594pt.
+<fotos/mongo/Picture 1.png, id=704, 453.695pt x 375.4025pt>
+File: fotos/mongo/Picture 1.png Graphic file (type png)
+<use fotos/mongo/Picture 1.png>
+Package pdftex.def Info: fotos/mongo/Picture 1.png  used on input line 1466.
+(pdftex.def)             Requested size: 235.93114pt x 195.21614pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+
+ []
+
+<fotos/mongo/readPRefsResults.png, id=706, 1056.94875pt x 915.42pt>
+File: fotos/mongo/readPRefsResults.png Graphic file (type png)
+<use fotos/mongo/readPRefsResults.png>
+Package pdftex.def Info: fotos/mongo/readPRefsResults.png  used on input line 1479.
+(pdftex.def)             Requested size: 367.0049pt x 317.85959pt.
+[73 <./fotos/mongo/1_node_Error.png> <./fotos/mongo/read_pref_default.png> <./fotos/mongo/Picture 1.png>]
+<fotos/mongo/read_concerns.png, id=718, 800.9925pt x 749.80125pt>
+File: fotos/mongo/read_concerns.png Graphic file (type png)
+<use fotos/mongo/read_concerns.png>
+Package pdftex.def Info: fotos/mongo/read_concerns.png  used on input line 1488.
+(pdftex.def)             Requested size: 288.36385pt x 269.93968pt.
+) [74 <./fotos/mongo/readPRefsResults.png> <./fotos/mongo/read_concerns.png>] [75]
 \openout2 = `tex/neo.aux'.
 
  (./tex/neo.tex
@@ -1391,7 +1721,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
  (./build/_minted-main/395B1CC141BD5A085D82DF7FBE349D50EC34428F584CB2519C22CA58CE1CFF51.pygtex)
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/E4A40C4664EFA5B581A8B4D4CF82E6D3EC34428F584CB2519C22CA58CE1CFF51.pygtex) [35
+ (./build/_minted-main/E4A40C4664EFA5B581A8B4D4CF82E6D3EC34428F584CB2519C22CA58CE1CFF51.pygtex) [76
 
 
 
@@ -1406,10 +1736,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-[36]
+[77]
 \openout4 = `main.pyg'.
 
- (./build/_minted-main/A5196A4A25084F486CD034BDA9B3B0EDEC34428F584CB2519C22CA58CE1CFF51.pygtex) [37]
+ (./build/_minted-main/A5196A4A25084F486CD034BDA9B3B0EDEC34428F584CB2519C22CA58CE1CFF51.pygtex) [78]
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/C5E2098553D4B247BB3CB80ECEB4020FEC34428F584CB2519C22CA58CE1CFF51.pygtex)
@@ -1422,7 +1752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[38]
+[79]
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
@@ -1430,12 +1760,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/A55E14AD8AA9AD0C1A7C2066E24F640AEC34428F584CB2519C22CA58CE1CFF51.pygtex)
-<fotos/q1_neo.png, id=414, 400.49625pt x 445.665pt>
+<fotos/q1_neo.png, id=749, 400.49625pt x 445.665pt>
 File: fotos/q1_neo.png Graphic file (type png)
 <use fotos/q1_neo.png>
 Package pdftex.def Info: fotos/q1_neo.png  used on input line 208.
 (pdftex.def)             Requested size: 183.50644pt x 204.20595pt.
- [39 <./fotos/q1_neo.png>]
+ [80 <./fotos/q1_neo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
@@ -1448,21 +1778,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/054F8D5EC452E8216E224528C79929EDEC34428F584CB2519C22CA58CE1CFF51.pygtex)
-<fotos/q2_neo.png, id=422, 472.01344pt x 504.38437pt>
+<fotos/q2_neo.png, id=758, 472.01344pt x 504.38437pt>
 File: fotos/q2_neo.png Graphic file (type png)
 <use fotos/q2_neo.png>
 Package pdftex.def Info: fotos/q2_neo.png  used on input line 251.
 (pdftex.def)             Requested size: 235.93114pt x 252.1146pt.
- [40]
+ [81]
 Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
-[41 <./fotos/q2_neo.png>]
+[82 <./fotos/q2_neo.png>]
 \openout4 = `main.pyg'.
 
  (./build/_minted-main/B81565BEA6DCD0C25455F8A82A9837C1EC34428F584CB2519C22CA58CE1CFF51.pygtex)
-<fotos/q3_neo.png, id=435, 408.77719pt x 107.65219pt>
+<fotos/q3_neo.png, id=771, 408.77719pt x 107.65219pt>
 File: fotos/q3_neo.png Graphic file (type png)
 <use fotos/q3_neo.png>
 Package pdftex.def Info: fotos/q3_neo.png  used on input line 296.
@@ -1477,15 +1807,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
-[42 <./fotos/q3_neo.png>]
+[83 <./fotos/q3_neo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
 \openout4 = `main.pyg'.
 
-(./build/_minted-main/DBDC63463387D71E3F72221B08F63260EC34428F584CB2519C22CA58CE1CFF51.pygtex [43])
-<fotos/q4_neo.png, id=448, 1018.55531pt x 178.41656pt>
+(./build/_minted-main/DBDC63463387D71E3F72221B08F63260EC34428F584CB2519C22CA58CE1CFF51.pygtex [84])
+<fotos/q4_neo.png, id=783, 1018.55531pt x 178.41656pt>
 File: fotos/q4_neo.png Graphic file (type png)
 <use fotos/q4_neo.png>
 Package pdftex.def Info: fotos/q4_neo.png  used on input line 393.
@@ -1495,7 +1825,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
-[44 <./fotos/q4_neo.png>]
+[85 <./fotos/q4_neo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
@@ -1503,12 +1833,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--407
 \openout4 = `main.pyg'.
 
 (./build/_minted-main/DF378E1515A135D6C87E936EEF637DB4EC34428F584CB2519C22CA58CE1CFF51.pygtex)
-<fotos/q5_neo.png, id=456, 197.98969pt x 179.92218pt>
+<fotos/q5_neo.png, id=791, 197.98969pt x 179.92218pt>
 File: fotos/q5_neo.png Graphic file (type png)
 <use fotos/q5_neo.png>
 Package pdftex.def Info: fotos/q5_neo.png  used on input line 432.
 (pdftex.def)             Requested size: 131.07375pt x 119.11414pt.
-) [45 <./fotos/q5_neo.png>] 
+) [86 <./fotos/q5_neo.png>] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (build/main.aux (build/tex/compuesto.aux) (build/tex/json.aux) (build/tex/citus.aux) (build/tex/mongo.aux) (build/tex/neo.aux))
  ***********
@@ -1516,23 +1846,23 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B58DAB1C282F3CD60FFB749C1C1B9157;49453.
+(rerunfilecheck)             Checksum: 982F7ED89E25D3F622A69EF382D1B6F8;50389.
 runsystem(rm build//main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36449 strings out of 474116
- 767162 string characters out of 5743682
+ 37300 strings out of 474116
+ 811355 string characters out of 5743682
  2004187 words of memory out of 5000000
- 57712 multiletter control sequences out of 15000+600000
- 638234 words of font info for 343 fonts, out of 8000000 for 9000
+ 58248 multiletter control sequences out of 15000+600000
+ 645027 words of font info for 405 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,19n,93p,2761b,1372s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/main.pdf (45 pages, 3027883 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on build/main.pdf (86 pages, 5364495 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
- 117 named destinations out of 1000 (max. 500000)
- 92586 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 910 PDF objects out of 1000 (max. 8388607)
+ 693 compressed objects within 7 object streams
+ 224 named destinations out of 1000 (max. 500000)
+ 100945 words of extra memory for PDF output out of 106986 (max. 10000000)
 

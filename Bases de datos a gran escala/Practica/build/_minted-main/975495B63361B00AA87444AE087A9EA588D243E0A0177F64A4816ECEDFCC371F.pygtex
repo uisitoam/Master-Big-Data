@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+mongosh\PYG{+w}{ }\PYGZhy{}\PYGZhy{}port\PYG{+w}{ }\PYG{l+m}{27012}
+rs.initiate\PYG{o}{(}
+\PYG{+w}{  }\PYG{o}{\PYGZob{}}
+\PYG{+w}{    }\PYGZus{}id\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}rsShard2\PYGZdq{}},
+\PYG{+w}{    }members:\PYG{+w}{ }\PYG{o}{[}
+\PYG{+w}{      }\PYG{o}{\PYGZob{}}\PYG{+w}{ }\PYGZus{}id\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+m}{0},\PYG{+w}{ }host\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ovh1:27012\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZcb{}},
+\PYG{+w}{      }\PYG{o}{\PYGZob{}}\PYG{+w}{ }\PYGZus{}id\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+m}{1},\PYG{+w}{ }host\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ovh2:27012\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZcb{}},
+\PYG{+w}{      }\PYG{o}{\PYGZob{}}\PYG{+w}{ }\PYGZus{}id\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+m}{2},\PYG{+w}{ }host\PYG{+w}{ }:\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ovh3:27012\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{o}{]}
+\PYG{+w}{  }\PYG{o}{\PYGZcb{}}
+\PYG{o}{)}
+\end{Verbatim}

@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{db}\PYG{p}{.}\PYG{n+nx}{partidos}\PYG{p}{.}\PYG{n+nx}{aggregate}\PYG{p}{([}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}match}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{l+s+s2}{\PYGZdq{}torneo.nombre\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Wimbledon\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{ronda}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}F\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}project}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{\PYGZus{}id}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{nombre}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.nombre\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{apellido}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.apellido\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{año}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}year}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{\PYGZdl{}toDate}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}torneo.fecha\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}sort}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{año}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+\PYG{p}{]);}
+\end{Verbatim}

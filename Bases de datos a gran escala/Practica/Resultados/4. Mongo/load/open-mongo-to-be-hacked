@@ -1,0 +1,102 @@
+By default, MongoDB only accepts connections from localhost (127.0.0.1). You need to change this to allow connections from external IP addresses.
+Edit the MongoDB Configuration File
+
+    Open the MongoDB configuration file (mongod.conf). The location of this file depends on your operating system:
+        On Linux (Ubuntu/Debian): /etc/mongod.conf
+        On macOS (Homebrew): /usr/local/etc/mongod.conf
+        On Windows: C:\Program Files\MongoDB\Server\version\bin\mongod.cfg
+
+Modify the bindIp Parameter:
+
+    Find the bindIp setting in the configuration file. By default, it is set to 127.0.0.1 to only allow localhost connections.
+    Change it to 0.0.0.0 to allow connections from all IP addresses, or specify specific IP addresses that should have access.
+
+For example, to allow connections from all IP addresses, modify the following in the mongod.conf file:
+
+net:
+  bindIp: 0.0.0.0  # Listen on all network interfaces
+  port: 27017      # Default MongoDB port
+
+If you only want to allow specific IP addresses, change it like this:
+
+net:
+  bindIp: 127.0.0.1,192.168.x.x  # Add the allowed IP addresses here
+  port: 27017
+
+    Save the file after making these changes.
+
+2. Restart MongoDB Service
+
+After modifying the configuration file, restart MongoDB to apply the changes.
+
+On Linux (Ubuntu/Debian), you can restart MongoDB with:
+
+sudo systemctl restart mongod
+
+On macOS (if installed via Homebrew), restart it with:
+
+brew services restart mongodb
+
+3. Allow MongoDB Port (27017) in Firewall
+
+You also need to ensure that the firewall on the server allows traffic on MongoDB's default port (27017).
+On Linux (using UFW):
+
+sudo ufw allow 27017
+
+On Windows:
+
+    Open Windows Firewall settings.
+    Go to Advanced Settings > Inbound Rules > New Rule.
+    Choose Port, specify 27017, and allow the connection.
+
+On Cloud Servers (e.g., AWS, Azure, Google Cloud):
+
+    Ensure that the security group or firewall settings for the instance allow inbound traffic on port 27017 from external IP addresses.
+
+4. MongoDB Authentication (Optional but Recommended)
+
+If you're allowing external connections, it's highly recommended to enable authentication to secure your MongoDB instance.
+
+    Open the MongoDB shell and create an admin user if you don't have one:
+
+use admin
+db.createUser({
+  user: "admin",
+  pwd: "securepassword",
+  roles: [{ role: "root", db: "admin" }]
+})
+
+    Edit your mongod.conf file to enable authentication:
+
+security:
+  authorization: "enabled"
+
+    Restart MongoDB to apply the authentication setting.
+
+5. Connecting Remotely
+
+To connect from a remote machine, use the mongo shell or any MongoDB client like MongoDB Compass or a programming language driver (e.g., Node.js, Python).
+Example using the MongoDB shell:
+
+mongo --host <your-server-ip> --port 27017 -u "admin" -p "securepassword" --authenticationDatabase "admin"
+
+
+
+
+
+
+
+
+
+use admin
+db.createUser(
+  {
+    user: "mongo",
+    pwd: "miguelovh399", // or cleartext password
+    roles: [
+      { role: "userAdminAnyDatabase", db: "admin" },
+      { role: "readWriteAnyDatabase", db: "admin" }
+    ]
+  }
+)

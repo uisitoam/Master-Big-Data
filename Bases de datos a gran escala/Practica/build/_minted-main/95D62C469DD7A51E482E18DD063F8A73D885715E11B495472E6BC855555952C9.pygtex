@@ -1,0 +1,399 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{db}\PYG{p}{.}\PYG{n+nx}{partidos}\PYG{p}{.}\PYG{n+nx}{aggregate}\PYG{p}{([}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}match}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{l+s+s2}{\PYGZdq{}torneo.nivel\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}G\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{ronda}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}F\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{l+s+s2}{\PYGZdq{}ganador.pais.codigo\PYGZus{}iso2\PYGZdq{}}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ES\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}group}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{\PYGZus{}id}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.id\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{jugador}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}first}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{\PYGZdl{}concat}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.nombre\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.apellido\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}lookup}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kr}{from}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}partidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{playerId}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pipeline}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{\PYGZdl{}match}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}expr}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{              }\PYG{n+nx}{\PYGZdl{}or}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}playerId\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}perdedor.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}playerId\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{],}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{p}{],}
+\PYG{+w}{      }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}project}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{\PYGZus{}id}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{jugador}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{partidos}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{\PYGZdl{}size}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}victorias}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}size}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}filter}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{n+nx}{cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}this.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{\PYGZdl{}size}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}aces}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.aces\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.aces\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}dobles\PYGZus{}faltas}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.dobles\PYGZus{}faltas\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.dobles\PYGZus{}faltas\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}servicios\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}add}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.primeros\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.segundos\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}add}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.primeros\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.segundos\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}restos\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}subtract}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                              }\PYG{n+nx}{\PYGZdl{}add}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                                }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.primeros\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.segundos\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                              }\PYG{p}{],}
+\PYG{+w}{                            }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}subtract}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                              }\PYG{n+nx}{\PYGZdl{}add}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                                }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.primeros\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                                }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.segundos\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                              }\PYG{p}{],}
+\PYG{+w}{                            }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.puntos\PYGZus{}servidos\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}breaks\PYGZus{}salvados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.breaks\PYGZus{}salvados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.breaks\PYGZus{}salvados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}breaks\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}multiply}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{          }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{\PYGZdl{}divide}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}subtract}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.breaks\PYGZus{}salvados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}subtract}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.breaks\PYGZus{}salvados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                          }\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{\PYGZdl{}sum}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                  }\PYG{n+nx}{\PYGZdl{}map}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                    }\PYG{n+nx}{input}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}all\PYGZus{}matches\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{k+kr}{as}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}match\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                    }\PYG{o+ow}{in}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                      }\PYG{n+nx}{\PYGZdl{}cond}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{                        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                          }\PYG{n+nx}{\PYGZdl{}eq}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.id\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZus{}id\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                        }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.perdedor.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                        }\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZdl{}match.ganador.stats.breaks\PYGZus{}afrontados\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{p}{],}
+\PYG{+w}{                    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                  }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{                }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{              }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{            }\PYG{p}{],}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{          }\PYG{l+m+mf}{100}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+
+\PYG{+w}{  }\PYG{c+c1}{// Round all percentages to 1 decimal place}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{\PYGZdl{}project}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{jugador}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{partidos}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}victorias}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}victorias\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}aces}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}aces\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}dobles\PYGZus{}faltas}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}dobles\PYGZus{}faltas\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}servicios\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}servicios\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}restos\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}restos\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}breaks\PYGZus{}salvados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}breaks\PYGZus{}salvados\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{n+nx}{pcje\PYGZus{}breaks\PYGZus{}ganados}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{\PYGZdl{}round}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}pcje\PYGZus{}breaks\PYGZus{}ganados\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{],}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}
+\PYG{p}{]);}
+\end{Verbatim}

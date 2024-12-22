@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{db}\PYG{p}{.}\PYG{n+nx}{createUser}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nx}{user}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}admin\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nx}{pwd}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}***\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nx}{roles}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{role}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}userAdminAnyDatabase\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{db}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}admin\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{role}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}clusterAdmin\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{db}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}admin\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{role}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}readWriteAnyDatabase\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{db}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}admin\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{]}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}
