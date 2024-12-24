@@ -1,0 +1,281 @@
+\begin{tikzpicture}
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=0.6\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (-3.85, 0) {
+        \textbf{\textsf{Dominio de las BD relacionales debido a }} \\[-10pt]
+        \begin{itemize}
+        \item Filtrado eficiente de los datos persistentes.
+        \item Control de acceso concurrente. Garantiza consistencia con transacciones ACID. 
+        \item Buena integración con aplicaciones.
+        \item Su estadariación: basadas en el modulo relacional y usan SQL como lenguaje. Esto permite no tener que recodificar aplicaciones al cambiar la BD.
+        \end{itemize}
+    };
+
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=0.35\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (6.3, 0) {
+        \textbf{\textsf{Modelando para el acceso a datos}} \\[2pt]
+        Debemos tener en cuenta cómo va a ser el acceso a datos. Como alternativa podemos dividir el agregado y usar referencias (en BD documentales no es necesario almacenar las referencias en ambas direcciones. Debemos calcular el agregado para hacer consultas analícas (excepto en documentales, pero no es eficiente). 
+    };
+
+    \node[fill=pastelpink, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (0, -6.3) {
+        \textbf{\textsf{Problemas con las BD relacionales}} \\[220pt]
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=12cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (-3.3, -4.25) {
+        \textbf{\textsf{Impedancia entre modelos de memoria y disco}} \\[5pt]
+        Los datos en disco se almacenan como tuplas simples (1NF), mientras que en memoria se manejan estructuras complejas (anidadas). Como soluciones se plantean:
+        \begin{itemize}
+        \item BD orientadas a objetos, pero no llegaron a triunfar.
+        \item El mapeado objeto-relacional no resuleve el problema del todo, pero induce nuevos problemas, como la ineficiencia al evitar el uso del SGBD.
+        \end{itemize}
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=12cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (-3.3, -8.2) {
+        \textbf{\textsf{Integración de aplicaciones a través de una BD centralizada}} \\[5pt]
+        Este tipo de BD es compleja y requiere de mecanismos de verificación de consistencia. Además, los cambios en la BD requieren coordinación entre las aplicaciones. Como alternativa, se plantea que cada aplicación tenga su propia BD (incluso así, el modelo relacional domina). Esto permite:
+        \begin{itemize}
+        \item El equipo de cada app conoce, mantiene y evoluciona su BD.
+        \item La verificación de integridad se realiza en cada aplicación.
+        \item Integración a través de interfaces como servicios web, con uso de XML o JSON.
+        \item Permite usar distintos modelos de BD, dependiendo de las necesidades de cada app.
+        \end{itemize}
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=5.75cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (6.5, -6.5) {
+        \textbf{\textsf{Necesidad el uso de \textit{cluster}}} \\[5pt]
+        Surge del incremento en la escala de las aplicaciones modernas. Como soluciones se plantean:
+        \begin{itemize}
+        \item Escalado vertical con máquina más potentes (limitado y costoso).
+        \item Escalado horizontal con \textit{cluster} de máquinas más pequeñas. Esto da mayor resiliencia y abarata costes.
+        \end{itemize}
+        Surgen problemas ya que las BD relacionales no están diseñadas para arquitecturas distribuidas. Implementar entonces una BD sobre sistemas de archivos induce un único punto de fallo, y el almacenamiento fragmentado requiere que la aplicación controle la distribución de datos. Aquí surgen alternativas a tener en cuenta como Big Table de Google o Dynamo de Amazon.
+    };
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (0, -13.8) {
+        \textbf{\textsf{NoSQL}} \\ [2pt]
+        No hay una definición clara del término. Inicialmente era ``BD no relaciones, distribuidas y de código abierto''.\\[105pt]
+    };
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=19cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (0, -14.3) {
+        \textbf{\textsf{Aparición}} \\ [-10pt]
+        \begin{itemize}
+        \item No usan SQL (aunque algunos lenguajes sean muy parecidos).
+        \item Funcionan sobre \textit{clusters}: importan sobre el modelo de datos y sobre la solución al problema de consistencia entre ACID y \textit{cluster} (excepto las de grafos).
+        \item Se adaptan a las nuevas necesidades y operan sin esquema, aunque se suelen usar como BD de aplicaciones, no de integración. 
+        \item Abre opciones para el almacenamiento de datos, sin restringir la incorporación de nuevos datos. 
+        \item Hay que considerar NoSQL cuando el tamaño y rendimiento hagan necesarios el uso de un \textit{cluster} y por temas de productividad, ya que dan una interacción más natural con los datos.
+        \end{itemize}
+    };
+
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=5cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (-7.23, -20.75) {
+        \textbf{\textsf{Agregados}} \\ [2pt]
+        La gran diferencia de NoSQL con las BD relacionales es el uso de agregados, ya que el relacional no permite anidar estructuras. Se diseñan las estructuras pensando en cómo va a accederse a ellas: se agrupan y replican los datos en un único documento, minimizando los accesos (desnormalización). Como consecuencia, la agregación puede beneficiar unas consultas y perjudicar otras. Además, al trabajar contra un \textit{cluster}, es necesario determinar qué datos deben ser físicamente próximos, para minimizar el acceso a varios nodos. \\
+
+        Las BD NoSQL, en general, no soportan ACID en trasacciones que se expander por varios agregados. Hay 4 grandes tipos de modelos. \\
+        \quad
+    };
+
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=13.5cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3, -18.38) {
+        \textbf{\textsf{Características comunes BD NoSQL}} \\ [-6pt]
+
+        No tener esquema; no es necesario definir un esquema para almacenar datos. Esquema en la aplicación.
+        \begin{itemize}
+        \item \textbf{Clave-valor:} Cualquier valor se puede insertar para una clave.
+        \item \textbf{Documentales:} No hay restricciones sobre el contenido de cada documento.
+        \item \textbf{Column-family:} Cualquier dato se puede almacenar sobre una columna de una fila.
+        \item \textbf{Grafos:} las propiedades de nodos y arcos son libres.
+        \end{itemize}
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=13.5cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3, -21.3) {
+        \textbf{\textsf{Modelos Key-Value}} \\ [-10pt]
+        \begin{itemize}
+        \item Estos modelos funcionan mediante pares (Clave, Agregado), donde cada clave única tiene asociado un agregado (que es opaco para la BD, y no tiene restricciones en el contenido).
+        \item Solo se puede consultar por clave, y no tiene esquema ni estructura. 
+        \end{itemize}
+    };
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=13.5cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3, -23.67) {
+        \textbf{\textsf{Modelos Documentales}} \\ [-10pt]
+        \begin{itemize}
+        \item Las BD entienden la estructura del agregado. Se permite ver y consultar dentro del agregado.
+        \item No tienen esquema y los datos se almacenan en forma de documentos, generalmente JSON o XML. 
+        \end{itemize}
+    };
+
+\end{tikzpicture}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{tikzpicture}
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (0, 0) {
+        \begin{minipage}{0.5\textwidth}
+            \textbf{\textsf{Modelos Column-Family}} \\[-10pt]
+            \begin{itemize}
+                \item No confundir con el almacenamiento columnar !
+                \item Eficientes en lectura.
+                \item Evoluciona del modelo clave-valor y añade estructura (muy poca). El esquema es el nombre de las familias, lo único que declaramos. La ventaja de estos modelos son las familias.
+                \item Tiene una estructura tabular (no es una tabla) con columnas dispersas. 
+                \item Es un clave-\textit{column family}-valor: para cada clave de una fila (cada fila es un agregado) tenemos \textit{column-families} (cada \textit{column-family} define un tipo de registro, y es un bloque dentro del agregado). Para cada familiar tenemos pares clave-valor.
+            \end{itemize}
+        \end{minipage}
+        \hspace{0.5cm}
+        \begin{minipage}{0.5\textwidth}
+            \begin{tikzpicture}
+                \node[fill=mint, fill opacity=1, text opacity=1, text width=0.8\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+                (note2) at (0, 0) {
+                    \textbf{\textsf{Cassandra}} \\[-10pt]
+                    \begin{itemize}
+                        \item Aquí una fila solo puede pertenecer a una \textit{column-family}, y una \textit{column-family} puede tener columnas anidadas (supercolumnas, equivalentes a las \textit{column-family} de HBase o Big Table). 
+                        \item La estructura y almacenamiento de las filas de una tabla puede ser:
+                        \begin{itemize}
+                        \item \textit{Skinny row:} pocas columnas. Mismas columnas en casi todas las filas.
+                        \item \textit{Wide row:} muchas columnas (miles). Filas con columnas muy variadas, qe modelan una lista.
+                        \end{itemize}
+                    \end{itemize}
+                };
+            \end{tikzpicture}
+        \end{minipage}
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (0, -5.5) {
+        \begin{minipage}{0.5\textwidth}
+            \textbf{\textsf{Modelos de grafos}} \\[-10pt]
+            \begin{itemize}
+                \item Motivado por registros simples pero con muchas relaciones entre ellos. 
+                \item Modelo compuesto por nodos y arcos, pudiendo tener datos en ambos.
+                \item Las consultas suelen centrarse en acceder a un nodo y mover por los arcos desde el mismo.
+                \item Son rápidas en navegación, pero lentas en inserción.
+                \item Ejemplo Neo4J, que tiene objetos java como propiedades de los nodos y arcos (no tiene esquema). Suele usarse para redes sociales, recomendaciones, etc.
+            \end{itemize}
+        \end{minipage}
+        \hspace{0.5cm}
+        \begin{minipage}{0.5\textwidth}
+            \begin{tikzpicture}
+                \node[fill=mint, fill opacity=1, text opacity=1, text width=0.8\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+                (note2) at (0, 0) {
+                    \textbf{\textsf{Relaciones}} \\[-10pt]
+                    \begin{itemize}
+                    \item La BD no conoce la existencia de la relaciones entre datos, se almacenan como una referencia a una clave.
+                    \item Las BD relacionales proporcionan mecanismos explícitos para gestionar las relaciones mediantes transacciones ACID o FK. Son poco eficientes si hay que seguir muchas relaciones, ya que se deben hacer muchas \textit{join}.
+                    \item Las NoSQL no suelen soportar la modificación de varios agregados en una misma transacción.
+                    \end{itemize}
+                };
+            \end{tikzpicture}
+        \end{minipage}
+    };
+
+    \node[fill=pastelpink, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (0, -12.1) {
+        \textbf{\textsf{Trabajar sin esquema}} \\[185pt]
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=12cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (-3.3, -10.5) {
+        \textbf{\textsf{Ventajas}} \\[-10pt]
+        \begin{itemize}
+        \item No hay que hacer asunciones a priori.
+        \item Facilidad para incorporar cambios en los datos y para trabajar con datos no uniformes. 
+        \item Tener esquema resulta inflexible en la inserción de datos, es común un campo de texto done va cualquier cosa.
+        \end{itemize}
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=12cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (-3.3, -13.9) {
+        \textbf{\textsf{Desventajas}} \\[-10pt]
+        \begin{itemize}
+        \item Las aplicaciones suelen necesitar cierto formato y semántica en los datos, cierto esquema implicito en los datos. Por esto, hay que minimizar el uso de literales, para que el código se pueda cambiar y mejorar de forma fácil.
+        \item Tener el esquema codificado en las aplicaciones puede dar problemas, ya que la BD no puede utilizarlo para mejorar la eficiencia.
+        \item Los esquemas tienen valor. Una BD sin esquema solo traslada el problema del esquema a la aplicación (es como usar un lenguaje de tipado débil). 
+        \end{itemize}
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=5.75cm, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (6.5, -12.45) {
+        \textbf{\textsf{Soluciones}} \\[-10pt]
+        \begin{itemize}
+        \item Integrar todo el acceso a la BD en una única app que proporciona servicios web para las demás.
+        \item Delimitar diferentes partes de cada agregado para el acceso de apps diferentes.
+        \end{itemize}
+        Los esquemas en BD relacionales son ``flexibles'', permiten añadir y quitar columnas por ejemplo. El problema de almacenar los datos de formas nuevas en BD NoSQL es que las apps deben funcionar con datos nuevos y antiguos. Esto se puede arreglar añadiendo una columna y conviviendo con dos columnas, una con nulos hacia arriba y otra con nulos hacia abajo.
+    };
+
+    \node[fill=pastelpink, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (0, -20.2) {
+        \textbf{\textsf{Cambios en el esquema}} \\
+        Se le da importancia a los métodos ágiles para cambiar fácilmente de esquema. En NoSQL se pueden hacer cambios rápidos, pero hay que tener cuidado con las migraciones de esquema. \\[170pt]
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.45\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (-4.95, -20) {
+        \textbf{\textsf{BD relacional}} \\[-10pt]
+        \begin{itemize}
+        \item Un cambio de esquema puede ser un proyecto en si mismo, ya que necesita \textit{scripts} para la migración de datos.
+        \item Con los proyectos nuevos simplemente almacenamos los cambios con los \textit{scripts} de migración de datos.
+        \item Con proyectos \textit{legacy} extraemos el esquema de la BD y procedemos con los proyectos nuevos. Es importante mantener la compatibilidad hacia atrás y tener en cuenta que hay una fase de transición, donde ambos esquemas conviven.
+        \end{itemize}
+    };
+
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.45\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note2) at (5, -20.75) {
+        \textbf{\textsf{BD NoSQL}} \\[-10pt]
+        \begin{itemize}
+        \item Se intenta no tener que realizar cambios de esquema. 
+        \item El esquema está en la aplicación ! Debe \textit{parsear} los datos obtenidos de la BD, por lo que hay que cambiar el código que la app lee y escribe. Si no cambiamos la aplicación, el error de esquema que daría la BD lo dará la aplicación.
+        \item Se hace una migración incremental, ya que mover todos los datos puede ser muy costoso. Transicionamos a partir e la propia aplicación, lee archivos de ambos esquemas (viejo y nuevo) pero escribe en el nuevo. De esta forma, hay datos que no llegan nunca a migrarse.
+        \item En el caso de una BD de grafos, se pueden definir nuevos arcos con el nuevo esquema.
+        \end{itemize}
+    };
+
+    
+    
+
+\end{tikzpicture}
+
+

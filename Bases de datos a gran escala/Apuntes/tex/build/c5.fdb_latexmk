@@ -1,0 +1,18 @@
+# Fdb version 4
+["pdflatex"] 1734978330.17366 "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Apuntes/tex/c5.tex" "build/c5.pdf" "c5" 1734978331.08383 2
+  "/Users/luisi/Documents/Master-Big-Data/Bases de datos a gran escala/Apuntes/tex/c5.tex" 1734978328.84413 16948 a6e9ca1de99284eca47b4c9779f61acc ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1136768653 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
+  "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1714491164.43273 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
+  "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714491104 8221416 71c8040c626895d4f8d14b7696612575 ""
+  "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "build/c5.aux" 1734978330.17314 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "c5.tex" 1734978328.84413 16948 a6e9ca1de99284eca47b4c9779f61acc ""
+  (generated)
+  "build/c5.aux"
+  "build/c5.log"
+  "build/c5.pdf"
+  (rewritten before read)

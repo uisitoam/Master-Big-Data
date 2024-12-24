@@ -1,0 +1,251 @@
+\begin{tikzpicture}
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=0.25\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (-3.85, 0) {
+        \textbf{\textsf{Consistencia. Relacional vs NoSQL}} \\[-10pt]
+        \begin{itemize}
+        \item Las BD NoSQL dan consistencia eventual, dada por el teorema CAP.
+        \item Las BD relacionales proporcionan alta consistencia con ACID:
+        \begin{itemize}
+        \item Atomicidad: gracias a un registro histórico.
+        \item Consistencia: la garantiza el usuario con el uso de PK, FK y otras restricciones.
+        \item Aislamiento: el SGBD garantiza la ejecución aislada.
+        \item Durabilidad: gracias al registro histórico y copias.
+        \end{itemize}
+        \end{itemize}
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=0.7\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (6.4, -0.9) {
+        \textbf{\textsf{Consistencia en modificaciones}} \\[2pt]
+        Este problema se da cuando dos usuarios intentan modificar el mismo dato en paralelo. Es un conflicto de tipo \textit{write-write}. Por ejemplo, en una \textit{peer-to-peer} dos replicas pueden aplicar las mismas modificaciones en distinto orden: uno lee, modifica y escribe, y otro modifica entre que el primero lee y modifica. El primero escribe y luego el segundo escribe. DEBE HABER UN COMPROMISO ENTRE CONSISTENCIA Y EFICIENCIA. \\ [185pt]
+    };
+
+    \node[fill=mint, fill opacity=1, text opacity=1, text width=0.65\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (6.4, -0.8) {
+        \textbf{\textsf{Estrategias}} \\[-10pt]
+        \begin{itemize}
+        \item \textbf{Pesimista}: realiza acciones para evitar casos de inconsistencia, como bloqueos o \textit{timestamps}. Son generalmente poco eficientes (poca concurrencia) y pueden tener interbloqueos.
+        \item \textbf{Optimista}: permiten la ejecución normal de la transacción y actúan en el momento del compromiso solo si se detectan problemas, mediante versiones por ejemplo. Una forma optimista de resolver conflictos \textit{write-write} sería almacenar ambos cambios, indicando que existe un conflicto, e intentar mezclar ambas versiones para obtener una versión consistente (complicado).
+        \end{itemize}
+    };
+
+    \node[fill=mint, fill opacity=1, text opacity=1, text width=0.3\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3, -4) {
+        \textbf{\textsf{Concurrencia}} \\[2pt]
+        Para gestionar el control de concurrencia en distribuido, podemos dar consistencia secuencial, aplicando las operaciones en el mismo orden en todos los nodos.
+    };
+
+    \node[fill=mint, fill opacity=1, text opacity=1, text width=0.3\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (9.8, -4) {
+        La mayoría de modelos de distribución usan una única copia de los datos para modificar, lo que simplifica las soluciones para evitar conflictos de escritura (esto no es el caso de la \textit{peer-to-peer}).
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -12) {
+        \textbf{\textsf{Consistencia en lecturas}} \\[2pt]
+        Se dan inconsistencias cuando una operación de lectura y una de escritura afectan al mismo dato o a un conjunto de datos relacionados. Hay que asegurar la consistencia lógica, varios elementos de datos deben ser consistentes cuando se tratan de forma conjunta (ejemplo de lectura de cuenta bancaria). \\
+
+        Las BD de grafos suelen dar soporte para ACID. Por el contrario, las bases de datos con agregados se aseguran de que las modificaciones sobre un agregado sean atómicas. Esto genera una ventana de inconsistencia al hacer modificaciones sobre varios agregados, ya que se ejecutan como operaciones separadas. En este intervalo de tiempo (muy corto), pueden existir inconsistencias en lectura. \\
+
+        Al introducir replicacion (y añadir redundancia), perdemos consistencia, ya que hay que gestionar las réplicas de forma correcta. En general, a mayor redundancia, menor consistencia
+        \begin{itemize}
+        \item Hay que asegurar que el mismo dato se lee igual desde todas las réplicas. 
+        \item Un problema de lectura es temporal, dando una inconsistencia eventual. 
+        \item El nivel de consistencia lo ajustamos dependiendo de la aplicación; muchas operaciones pueden hacerse con niveles bajos de consistencia. 
+        \end{itemize} 
+        \quad \\[170pt]
+    };
+
+    \node[fill=mint, fill opacity=1, text opacity=1, text width=0.6\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (0, -14.5) {
+        \textbf{\textsf{Consistencia de sesión}} \\[2pt]
+        Los problemas de consistencia con el mismo usuario son del tipo \textit{read-your-write}, y los solucionamos mediante consistencia de sesión:
+        \begin{itemize}
+        \item \textit{Sticky session}: la sesión se vincula a un nodo. El problema es que baja el rendimiento.
+        \item \textit{Version stamps}: se usan marcas de versiones, lo que asegura que cada operación actúa sobre la última versión. En caso contrario se espera para responder.
+        \item Problemas con \textit{sticky session} y maestro-esclave: se puede leer de los esclavos, pero el maestro es el que modifica. Para esto hay dos soluciones:
+        \begin{itemize}
+        \item Modificar en el esclavo y que notifique al maestro.
+        \item Mover la sesión al maestro mientras se realiza la modificación y, al actualizar cambios, volver al esclavo.
+        \end{itemize}
+        \end{itemize}
+    };
+
+    \node[fill=lavender, fill opacity=1, text opacity=1, text width=0.3\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (9.8, -14.5) {
+        \textbf{\textsf{Ejemplo. Reserva habitación}} \\[2pt]
+        Supongamos dos intentos de reserva de forma concurrente. Cuando se pulsa el botón de reservar, el estado puede haber cambiado ya y no estar disponible. Para solucionarlo, podemos dividir la transacción en dos partes:
+        \begin{itemize}
+        \item Parte 1: Interacción con el usuario (no hay transacción en la BD)
+        \item Parte 2: Finalización de la transacción (transacción en la BD, vuelve a leer y avisa si no está disponible)
+        \begin{itemize}
+        \item Ejecución atómica en una transacción de BD.
+        \item Verificación de la consistencia de los datos
+        \end{itemize}
+        \end{itemize}
+    };
+
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -20.5) {
+        \textbf{\textsf{Relajar consistencia}} \\[2pt]
+        A veces es necesario sacrificar consistencia para mejorar otras propiedades, incluso en sistemas centralizados, donde teníamos los niveles de consistencia de SQL:
+        \begin{itemize}
+        \item \textbf{Secuenciable}: ejecución secuencial casi siempre.
+        \item \textbf{Lectura repetible}: lectura de datos comprometidos y lectura repetible.
+        \item \textbf{Lectura comprometida}: lectura de datos comprometidos.
+        \item \textbf{Lectura no comprometida}: lectura de datos no comprometidos.
+        \end{itemize}
+        Muchos sistemas evitan completamente el uso de transacciones, como sitios \textit{web} muy grandes con necesidad de \textit{sharding}, como eBay.
+    };
+
+\end{tikzpicture}
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{tikzpicture}
+
+    \node[fill=pastelpink, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -20.5) {
+        \textbf{\textsf{Teorema CAP}} \\[400pt]
+    };
+
+    \node[fill=lightyellow, fill opacity=1, text opacity=1, text width=0.97\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -15.2) {
+        \textbf{\textsf{Teorema}} \\[2pt]
+        Un sistema solo puede tener dos de las tres siguientes características:
+        \begin{itemize}
+        \item Consistencia
+        \item Disponibilidad (Availability): significado aquí un poco distinto al habitual; si podemos comunicar con un nodo del cluster, entonces podemos leer y escribir datos.
+        \item Tolerancia al particionamiento: el cluster puede sobrevivir a fallos de comunicación entre los nodos que lo separan en varias partes.
+        \end{itemize}
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.2\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (11, -22.4) {
+        \begin{itemize}
+        \item En sistemas centralizados, tenemos consistencia y disponibilidad (CA), pero no tolerancia al particionamiento, ya que una sola máquina no se puede particionar. Si el nodo está levantado, entonces está disponible. 
+        \item Un \textit{cluster} puede particionarse en dos trozos no conectados. Para tener un \textit{cluster} CA; para ello, debemos pararlo por completo para que no pueda usar la partición (si existe). En este contexto, la disponibilidad significa que cada petición recibida por un nodo que no falla debe ser respondida.
+        \end{itemize}
+        En la práctica, resulta muy costoso parar todos los nodos cuando hay una partición. 
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.72\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (1, -18.5) {
+        \textbf{\textsf{Interpretación práctica}} \\[2pt]
+        Si un sistema puede sufrir particiones (sistema distribuido), hay un compromiso entre la consistencia y la disponibilidad. Aquí, si incrementamos la consistencia, disminuye la disponibilidad. Para mejorar esta última en, por ejemplo, una \textit{peer-to-peer}, podemos elegir un maestro y dirigir las modificaciones hacia él o, incluso, aceptar peticiones incluso si la red falla, perdiendo consistencia (en el caso de la reserva de habitación, tendríamos \textit{overbooking}). Otro ejemplo sería el carro de la compra de Amazon, que escribe todos los carros aunque falle y luego une. 
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.72\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (1, -21.5) {
+        \textbf{\textsf{Conclusión}} \\[-10pt]
+        \begin{itemize}
+        \item Como programador hay que buscar consistencia, pero se puede relajar para conseguir disponibilidad y mejorar eficiencia.
+        \item La consistencia de lectura es importante, junto con la duración de la ventana de inconsistencia y la toleracia a lecturas viejas. El último dato es de gran importancia.
+        \end{itemize} 
+    };
+
+    \node[fill=lemoncream, fill opacity=1, text opacity=1, text width=0.72\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (1, -25.4) {
+        \textbf{\textsf{NoSQL. Propiedades BASE}} \\[-10pt]
+        \begin{itemize}
+        \item \textit{Basically Available, Soft State, Eventual Consistency}. Las soluciones intermedias buscan un compromiso entre ACID y BASE.
+        \item Con esto, el compromison entre consistencia y latencia es más claro.
+        \begin{itemize}
+        \item Mejoramos la consistencia introduciendo más nodos en la interacción, pero empeoramos la eficiencia: cada nuevo nodo incrementa el tiempo de respuesta. Ejemplo: a leer de 5 nodos estaremos más seguros de la consistencia que si leemos de 2. Si al escribir no devolvemos el control hasta que 5 nodos hayan escrito, tendremos más consistencia que si esperamos por 2.
+        \item La disponibilidad es el límite de la latencia que podemos tolerar en la aplicación. Aquí relacionamos disponibilidad con eficiencia: cuando la latencia es muy alta, nos rendimos y asumimos que la operación no puede terminar.
+        \end{itemize}
+        \end{itemize} 
+    };
+
+    \node[fill=powderblue, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -30.7) {
+        \textbf{\textsf{Relajar durabilidad}} \\[2pt]
+        La atomicidad es la clave para la consistencia, definir unidades atómicas de ejecución (transacciones). \\
+        
+        Relajar la durabilidad implica aceptar que se pueden perder las actualizaciones de algunas transacciones terminadas con éxito (pérdida de datos en memoria si hay un fallo en el sistema). Es necesario buscar un compromiso entre durabilidad y rendimiento. Una opción es especificar en cada consulta si necesitamos o no durabilidad; esto llevaría a la posible pérdida de solo algunos datos. \\
+
+        Otro factor clave es la durabilidad de replicación. Un ejemplo de problema por falta de esta durabilidad sería cuando el maestro falla y algunos datos del maestro no se habían replicado a un esclavo; ahí, el esclavo busca otro maestro y sigue recibiendo cambios a través del nuevo
+        maestro. Si el maestro antiguo se recupera, puede haber conflictos. Una posible solución es esperar a tener las réplicas generadas para comprometer la transacción, lo que mejora la durabilidad de replicación, empeora el rendimiento de las escrituras y disminuye la disponibilidad (aumenta la probabilidad de fallo de la escritura).
+    };
+
+    \node[fill=pastelpink, fill opacity=1, text opacity=1, text width=\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (3.5, -37.4) {
+        \textbf{\textsf{Soluciones reales para la consistencia o durabilidad}} \\[200pt]
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=0.47\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (-1.4, -37.2) {
+        \textbf{\textsf{Quorums}} \\[2pt]
+        Buscamos cuántos nodos involucrar para obtener una respuesta. Así, en caso de conflicto de escritura, se puede elegir el valor que más nodos han escrito. Sean $W$ y $R$ el número de nodos que participan en la escritura y lectura, respectivamente, y $N$ el total de nodos involucrados en la replicación (factor de replicación, no el total):
+        \begin{itemize}
+        \item \textbf{Quorum de escritura:}  $W > N/2$.
+        \item \textbf{Quorum de lectura:} $R + W > N$ (asumiendo replicación \textit{peer-to-peer}). Básicamente cuántos nodos necesitamos leer para asegurar que leemos el último dato.
+        \end{itemize}
+        Hay que ajustar $W$ y $R$ a las necesidades de la aplicación: si queremos lecturas rápidas y consistentes, debemos fijar $W$ alto para que $R$ sea bajo, y las escrituras serán lentas; si queremos escrituras rápidas de baja consistencia, $W$ tiene que ser bajo y, para que $R$ también sea bajo, $N$ debe ser bajo.
+    };
+
+    \node[fill=softpeach, fill opacity=1, text opacity=1, text width=0.46\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (8.55, -36.8) {
+        \textbf{\textsf{Versiones}} \\[2pt]
+        Las transacciones del sistema no funcionan bien con la interacción con el usuario. Por eso diferenciamos entre transacción de negocio y de sistema. La primera se divide en dos partes, interacción con el usuario y transacción de sistema, donde se lee todo de nuevo para comprobar si ha cambiado (se hace por medio de marcas de versión, como contadores, \textit{timestamps} o \textit{hash} de elementos). \\[100pt]
+    };
+
+    \node[fill=mint, fill opacity=1, text opacity=1, text width=0.44\textwidth, align=justify, draw, rounded corners, inner sep=10pt] 
+    (note1) at (8.55, -38.1) {
+        \begin{tiny}
+        \textbf{\textsf{Marcas de versión en múltiples nodos}} \\[-1pt]
+        \begin{spacing}{1}
+        Funcionan bien en un nodo o maestro-esclavo (solo un nodo controla las versiones); en \textit{peer-to-peer} dos nodos pueden tener valores distintos. Lo más simple es implementar un contador, pero si tenemos más de un maestro necesitamos soluciones más avanzadas. El uso de \textit{timestamps} es problemático, ya que necesita consistencia temporal entre nodos. \\
+
+        Una solución muy común es el \textit{vector stamp}. Aquí, cada nodo tiene asociado un vector con su propio contador. Estos vectores se sincronizan cuando dos nodos se comunican. Los contadores mayor indicará el más reciente, si ambos vectores tienen un valor mayor que el otro entonces existe un conflicto de tipo \textit{write-write}. Este método solo sirve para detectar inconsistencias, se pueden dejar sin resolver o abordarlas.
+        \end{spacing}
+        \end{tiny}
+    };
+\end{tikzpicture}
