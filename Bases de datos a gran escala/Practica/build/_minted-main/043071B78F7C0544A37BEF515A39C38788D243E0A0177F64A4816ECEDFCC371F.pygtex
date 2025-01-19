@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-mongod\PYG{+w}{ }\PYGZhy{}\PYGZhy{}config\PYG{+w}{ }mongo/config/shard1.conf
-mongod\PYG{+w}{ }\PYGZhy{}\PYGZhy{}config\PYG{+w}{ }mongo/config/shard2.conf
-mongod\PYG{+w}{ }\PYGZhy{}\PYGZhy{}config\PYG{+w}{ }mongo/config/shard3.conf
-\end{Verbatim}

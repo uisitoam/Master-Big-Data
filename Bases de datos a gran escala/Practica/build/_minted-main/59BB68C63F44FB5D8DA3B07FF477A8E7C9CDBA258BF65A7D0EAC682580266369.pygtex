@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-psql\PYG{+w}{ }\PYG{n+nv}{service}\PYG{o}{=[}service\PYGZus{}name\PYG{o}{]}\PYG{+w}{ }\PYGZhy{}f\PYG{+w}{ }\PYGZlt{}path\PYGZus{}to\PYGZus{}sql\PYGZus{}file\PYGZgt{}
-\end{Verbatim}

@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-sudo\PYG{+w}{ }systemctl\PYG{+w}{ }stop\PYG{+w}{ }postgres
-\end{Verbatim}

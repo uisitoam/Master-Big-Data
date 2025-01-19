@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-psql\PYG{+w}{ }\PYG{n+nv}{service}\PYG{o}{=}citus\PYG{+w}{ }\PYGZhy{}f\PYG{+w}{ }\PYG{l+m}{4}.mongo/sql\PYGZus{}to\PYGZus{}json.sql
-mongoimport\PYG{+w}{ }\PYGZhy{}\PYGZhy{}host\PYG{+w}{ }ovh1\PYG{+w}{ }\PYGZhy{}\PYGZhy{}port\PYG{+w}{ }\PYG{l+m}{27017}\PYG{+w}{ }\PYGZhy{}\PYGZhy{}db\PYG{+w}{ }tenis2\PYG{+w}{ }\PYGZhy{}\PYGZhy{}collection\PYG{+w}{ }partidos\PYG{+w}{ }\PYGZhy{}\PYGZhy{}file\PYG{+w}{ }/tmp/tenis.json\PYG{+w}{ }\PYGZhy{}\PYGZhy{}authenticationDatabase\PYG{+w}{ }admin\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }admin\PYG{+w}{ }\PYGZhy{}p\PYG{+w}{ }***
-\end{Verbatim}

@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-mongosh\PYG{+w}{ }\PYGZhy{}\PYGZhy{}port\PYG{+w}{ }\PYG{l+m}{27017}
-sh.addShard\PYG{o}{(}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}rsShard1/ovh1:27011,ovh2:27011,ovh3:27011\PYGZdq{}}\PYG{o}{)}
-sh.addShard\PYG{o}{(}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}rsShard2/ovh1:27012,ovh2:27012,ovh3:27012\PYGZdq{}}\PYG{o}{)}
-sh.addShard\PYG{o}{(}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}rsShard3/ovh1:27013,ovh2:27013,ovh3:27013\PYGZdq{}}\PYG{o}{)}
-\end{Verbatim}

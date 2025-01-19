@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{partido}\PYG{+w}{ }\PYG{p}{(}
-\PYG{+w}{    }\PYG{n}{torneo}\PYG{+w}{                  }\PYG{n+nb}{INT}\PYG{p}{,}
-\PYG{+w}{    }\PYG{n}{fecha}\PYG{+w}{                   }\PYG{n+nb}{DATE}\PYG{p}{,}
-\PYG{+w}{     }\PYG{err}{…}
-\PYG{+w}{    }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{torneo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fecha}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{num\PYGZus{}partido}\PYG{p}{)}
-\PYG{p}{)}\PYG{+w}{ }\PYG{k}{USING}\PYG{+w}{ }\PYG{n}{columnar}\PYG{p}{;}
-\end{Verbatim}
