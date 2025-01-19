@@ -206,7 +206,7 @@ Se usará la abreviatura $p_k(X) = \Pr(Y = k | X = x)$. Esto sugiere que en luga
 
 Se sabe que el clasificador de Bayes, que clasifica una observación a la clase para la cual $p_k(X)$ es mayor, tiene la tasa de error más baja posible entre todos los clasificadores. (Esto, por supuesto, solo es cierto si los términos en (\ref{eq:4.10}) están todos especificados correctamente). Por lo tanto, si se puede encontrar una manera de estimar $f_k(X)$, entonces se puede desarrollar un clasificador que aproxime al clasificador de Bayes. Esto se verá en las próximas secciones.
 
-\subsubsection{Análisis discriminante lineal para $p = 1$}
+\subsection{Análisis discriminante lineal para $p = 1$}
 
 Por ahora, supongamos que $p = 1$, es decir, solo se tiene un predictor. Se desea obtener una estimación para $f_k(x)$ que se pueda insertar en (\ref{eq:4.10}) para estimar $p_k(x)$. Luego se clasificará una observación en la clase para la cual $p_k(x)$ sea mayor. Para estimar $f_k(x)$, primero se harán algunas suposiciones sobre su forma. \\
 
@@ -257,11 +257,11 @@ donde $n$ es el número total de observaciones de entrenamiento, y $n_k$ es el n
 
 El clasificador LDA inserta las estimaciones dadas en (\ref{eq:4.15}) y (\ref{eq:4.16}) en (\ref{eq:4.13}), y asigna una observación $X = x$ a la clase para la cual
 \begin{equation}
-\hat{delta}_k(x) = x \frac{\hat{\mu}_k}{\hat{\sigma}^2} - \frac{\hat{\mu}_k^2}{2\hat{\sigma}^2} + \log(\hat{\pi}_k)
+\hat{\delta}_k(x) = x \frac{\hat{\mu}_k}{\hat{\sigma}^2} - \frac{\hat{\mu}_k^2}{2\hat{\sigma}^2} + \log(\hat{\pi}_k)
 \label{eq:4.17}
 \end{equation}
 
-es mayor. La palabra "lineal" en el nombre del clasificador proviene del hecho de que las funciones discriminantes $\hat{\delta}_k(x)$ en (\ref{eq:4.17}) son funciones lineales de $x$ (en lugar de una función más compleja de $x$). \\
+es mayor. La palabra ``lineal'' en el nombre del clasificador proviene del hecho de que las funciones discriminantes $\hat{\delta}_k(x)$ en (\ref{eq:4.17}) son funciones lineales de $x$ (en lugar de una función más compleja de $x$). \\
 
 El panel derecho de la figura \ref{fig:4.4} muestra un histograma de una muestra aleatoria de 20 observaciones de cada clase. Para implementar LDA, se comenzó estimando $\pi_k$, $\mu_k$, y $\sigma^2$ usando (\ref{eq:4.15}) y (\ref{eq:4.16}). Luego se calculó la frontera de decisión, mostrada como una línea sólida negra, que resulta de asignar una observación a la clase para la cual (\ref{eq:4.17}) es mayor. Todos los puntos a la izquierda de esta línea se asignarán a la clase verde, mientras que los puntos a la derecha de esta línea se asignarán a la clase púrpura. En este caso, dado que $n_1 = n_2 = 20$, se tiene $\hat{\pi}_1 = \hat{\pi}_2$. Como resultado, la frontera de decisión corresponde al punto medio entre las medias muestrales para las dos clases, $(\hat{\mu}_1 + \hat{\mu}_2)/2$. La figura indica que la frontera de decisión LDA está ligeramente a la izquierda de la frontera de decisión óptima de Bayes, que en cambio es igual a $(\mu_1 + \mu_2)/2 = 0$. Dado que estos son datos simulados, se puede generar un gran número de observaciones de prueba para calcular la tasa de error de Bayes y la tasa de error de prueba de LDA. Estas son 10.6\% y 11.1\%, respectivamente. En otras palabras, la tasa de error del clasificador LDA es solo 0.5\% por encima de la tasa de error más baja posible. Esto indica que LDA está funcionando bastante bien en este conjunto de datos. \\
 
@@ -334,7 +334,7 @@ Por lo tanto, el clasificador de Bayes, y por extensión LDA, usa un umbral del 
 \end{equation}
 
 Usar un umbral de 0.5, como en (\ref{eq:4.21}), minimiza la tasa de error general. Esto es de esperar, ya que el clasificador de Bayes usa un umbral de 0.5 y se sabe que tiene la tasa de error general más baja. Pero cuando se usa un umbral de 0.5, la tasa de error entre los individuos que incumplen es bastante alta (línea discontinua azul). A medida que se reduce el umbral, la tasa de error entre los individuos que incumplen disminuye constantemente, pero la tasa de error entre los individuos que no incumplen aumenta. Variar el umbral del clasificador cambia su tasa de verdaderos positivos y su tasa de falsos positivos. Estas también se llaman la sensibilidad y uno menos la especificidad del clasificador. \\
-\subsubsection{Análisis discriminante cuadrático}
+\subsection{Análisis discriminante cuadrático}
 
 Como se ha discutido, LDA asume que las observaciones dentro de cada clase se extraen de una distribución gaussiana multivariante con un vector de media específico de la clase y una matriz de covarianza común a todas las $K$ clases. El análisis discriminante cuadrático (QDA) proporciona un enfoque alternativo. Al igual que LDA, el clasificador QDA resulta de asumir que las observaciones de cada clase se extraen de una distribución gaussiana, e insertar estimaciones para los parámetros en el teorema de Bayes para realizar la predicción. Sin embargo, a diferencia de LDA, QDA asume que cada clase tiene su propia matriz de covarianza. Es decir, asume que una observación de la $k$-ésima clase es de la forma $X \sim N(\mu_k, \Sigma_k)$, donde $\Sigma_k$ es una matriz de covarianza para la $k$-ésima clase. Bajo esta suposición, el clasificador de Bayes asigna una observación $X = x$ a la clase para la cual
 \begin{align}

@@ -37,16 +37,16 @@ Y \approx \beta_0 + \beta_1 X
 
 \subsection{Estimación de los coeficientes}
 
-En la práctica, $\beta_0$ y $\beta_1$ son desconocidos. Sea un conjunto de $n$ observaciones $\{(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\}$, donde cada pareja consiste de una medida de $X$ y otra de $Y$. Para obtener los coeficientes estimados $\hat{\beta}_0$ y $\hat{\beta}_1$, se pueden usar varios métodos. Primero veremos el método de minimización de mínimos cuadrados. 
+En la práctica, $\beta_0$ y $\beta_1$ son desconocidos. Sea un conjunto de $n$ observaciones $\{(x_1, y_1), (x_2, y_2)$, \newline $\dots, (x_n, y_n)\}$, donde cada pareja consiste de una medida de $X$ y otra de $Y$. Para obtener los coeficientes estimados $\hat{\beta}_0$ y $\hat{\beta}_1$, se pueden usar varios métodos. Primero veremos el método de minimización de mínimos cuadrados. \\
 
 Sea $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$ la predicción para $Y$ basada en el valor i-ésimo de $X$. Entonces, $e_i = y_i - \hat{y}_i$ representa el residuo i-ésimo, es decir, la diferencia entre el valor observado y el predicho.Se define la suma de residuos al cuadrado (RSS) como 
 \begin{equation}
 RSS = e_1^2 + e_2^2 + \dots + e_n^2 = \sum_{i=1}^n e_i^2 = \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \sum_{i=1}^n (y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2
 \end{equation}
 
-La aproximación de mínimos cuadrados toma los $\hat{beta}$ que minimizan el RSS, que tienen la siguiente forma 
+La aproximación de mínimos cuadrados toma los $\hat{\beta}$ que minimizan el RSS, que tienen la siguiente forma 
 \begin{equation}
-\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}
+\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}, \qquad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}
 \end{equation}
 
 \noindent siendo $\bar{x}$ y $\bar{y}$ las medias de x e y, respectivamente.
@@ -58,11 +58,11 @@ El problema inicial es estimar la relación $f$ entre las respuestas $Y$ y un co
 Y = \beta_0 + \beta_1 X + \epsilon \label{eq:3.5}
 \end{equation}
 
-Generalmente, se asume que el término de error es independiente de $X$. La expresión (\ref{eq:3.5}) define la recta de regresión poblacional, que resulta la mejor aproximación lineal de la relación real entre $X$ e $Y$. Los coeficientes $\hat{\beta}$ carcaterizan la recta de mínimos cuadrados (\ref{eq:3.2}). Esta es la recta a la que se tiene acceso generalmente, no la poblacional. \\
+Generalmente, se asume que el término de error es independiente de $X$. La expresión (\ref{eq:3.5}) define la recta de regresión poblacional, que resulta la mejor aproximación lineal de la relación real entre $X$ e $Y$. Los coeficientes $\hat{\beta}$ caracterizan la recta de mínimos cuadrados (\ref{eq:3.2}). Esta es la recta a la que se tiene acceso generalmente, no la poblacional. \\
 
-La analogía entre regresión lineal y la estimación de la media de una variable aleatoria se fndamenta en el concepto de sesgo o \textit{bias}. Si se usa la media de la muestra $\hat{\mu}$ para estimar $\mu$, esta estimación no presenta sesgo (\textit{unbiased}), en el sentido de que, en media, se espera que $\hat{\mu}$ sea igual a $\mu$. Esto quiere decir que para un conjunto de observaciones $y_1, \dots, y_n$, $\hat{\mu}$ puede estar sobreestimando $\mu$, mientras que para otro conjunto de observaciones, se puede estar subestimando. Si se pudiera promediar un gran número de conjuntos de observaciones, $\hat{\mu} = \mu$. Así, un estimador no sesgado no sobreestime ni subestima sistemáticamente los parámetros. Este mismo concepto aplica a la estimación de $\beta_0$ y $\beta_1$: si se pudiera promediar un gran número de conjuntos de datos, entonces el resultado sería $\hat{\beta} = \beta$. \\
+La analogía entre regresión lineal y la estimación de la media de una variable aleatoria se fundamenta en el concepto de sesgo o \textit{bias}. Si se usa la media de la muestra $\hat{\mu}$ para estimar $\mu$, esta estimación no presenta sesgo (\textit{unbiased}), en el sentido de que, en media, se espera que $\hat{\mu}$ sea igual a $\mu$. Esto quiere decir que para un conjunto de observaciones $y_1, \dots, y_n$, $\hat{\mu}$ puede estar sobreestimando $\mu$, mientras que para otro conjunto de observaciones, se puede estar subestimando. Si se pudiera promediar un gran número de conjuntos de observaciones, $\hat{\mu} = \mu$. Así, un estimador no sesgado no sobreestima ni subestima sistemáticamente los parámetros. Este mismo concepto aplica a la estimación de $\beta_0$ y $\beta_1$: si se pudiera promediar un gran número de conjuntos de datos, entonces el resultado sería $\hat{\beta} = \beta$. \\
 
-Continuando con esta analogía, se busca conocer cómo de precisa es la estimación $\hat{\mu}$ de $\mu$. En general, la desviación de una única estiamción $\hat{\mu}$ respecto a $\mu$ vendrá dada por el error estandar\footnote{el error estándar es la desviación estándar de la distribución muestral de un estadístico muestral.}, 
+Continuando con esta analogía, se busca conocer cómo de precisa es la estimación $\hat{\mu}$ de $\mu$. En general, la desviación de una única estimación $\hat{\mu}$ respecto a $\mu$ vendrá dada por el error estandar\footnote{el error estándar es la desviación estándar de la distribución muestral de un estadístico muestral.}, 
 \begin{equation}
 \text{Var}(\hat{\mu}) = \text{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}
 \end{equation}
@@ -79,17 +79,17 @@ RSE = \sqrt{\frac{\text{RSS}}{n-2}}
 
 Los errores estándar se pueden usar para calcular intervalos de confianza. Un intervalo de confianza al 95\% se define como un rango de valores tal que, con un 95\% de probabilidad, el valor real y desconocido del parámetro estará ahí contenido. El rango queda definido por una cota superior e inferior que se calcula a través de la muestra. En el caso de regresión lineal, el intervalo de confianza al 95\% para $\beta_0$ y $\beta_1$ es similar
 \begin{equation}
-\hat{\beta}_i \pm 2 \cdot \text{SE}(\hat{\beta}_i)
+\hat{\beta}_i \pm 2 \cdot \text{SE}(\hat{\beta}_i), \quad i = 0, 1
 \end{equation}
 
-Los errores estándar también pueden ser usados para realizar contrastes de hipótesis acerca de los coeficientes. El contraste más común implica conctrastar la hipótesis nula 
+Los errores estándar también pueden ser usados para realizar contrastes de hipótesis acerca de los coeficientes. El contraste más común implica contrastar la hipótesis nula 
 \begin{equation}
 H_0 : \text{No existe relación entre } X \text{ e } Y
 \end{equation}
 
 \noindent contra la hipótesis alternativa 
 \begin{equation}
-H_a : \textit{Existe alguna relación entre} X \text{ e } Y
+H_a : \text{Existe alguna relación entre } X \text{ e } Y
 \end{equation}
 
 \noindent Matemáticamente, esto es 
@@ -98,12 +98,12 @@ H_0 &: \beta_1 = 0 \\
 H_a &: \beta_1 \neq 0
 \end{align}
 
-ya que, si $\beta_1 = 0$, el modelo se reduce a $Y = \beta_0 + \epsilon$, por lo que no habría relación entre las variables. Para probar la hipótesis nula, senecesita determinar si $\hat{\beta}_1$ es suficientemente grande como para tener la confianza de que $\beta_1$ es distinto de cero. El tamaño dependerá de la precisión de $\hat{\beta}_1$, es decir, dependerá de $\text{SE}(\hat{\beta}_1)$. Si este valor es pequeño, entonces valores pequeños de $\hat{\beta}_1$ probarían que $\beta_1 \neq 0$ Si el valor es grande, se tiene el caso contrario. En la práctica, se hace un \textit{t-test} dado por 
+ya que, si $\beta_1 = 0$, el modelo se reduce a $Y = \beta_0 + \epsilon$, por lo que no habría relación entre las variables. Para probar la hipótesis nula, se necesita determinar si $\hat{\beta}_1$ es suficientemente grande como para tener la confianza de que $\beta_1$ es distinto de cero. El tamaño dependerá de la precisión de $\hat{\beta}_1$, es decir, dependerá de $\text{SE}(\hat{\beta}_1)$. Si este valor es pequeño, entonces valores pequeños de $\hat{\beta}_1$ probarían que $\beta_1 \neq 0$. Si el valor es grande, se tiene el caso contrario. En la práctica, se hace un \textit{t-test} dado por 
 \begin{equation}
 t = \frac{\hat{\beta}_1 - 0}{\text{SE}(\hat{\beta}_1)}
 \end{equation}
 
-que mide el número de desviaciones estándar que $\hat{\beta}_1$ se aleja de cero. Si no hay relación entre $X$ e $Y$, se espera tener una t-distribución con $n-2$ grados de libertad. La t-distribución tiene forma de campana y para valores de $n$ mayores a de 30, aproximadamente, es similar a una distribución normal. Consecuentemente, es sencillo calcular la probabilidad de observar un valor igual a $|t|$ o mayor, asumiendo $\beta_1 = 0$; esta probabilidad se conoce como p-valor. De forma poco técnica, el p-valor se interpreta de la sigueinte forma: un p-valor pequeño indica que es poco probable observar dicha asociación entre el predictor y la respuesta. Típicamente se fija una cota, la significancia; si el p-valor es menor que esta cota, se rechaza la hipótesis nula. 
+que mide el número de desviaciones estándar que $\hat{\beta}_1$ se aleja de cero. Si no hay relación entre $X$ e $Y$, se espera tener una t-distribución con $n-2$ grados de libertad. La t-distribución tiene forma de campana y para valores de $n$ mayores de 30, aproximadamente, es similar a una distribución normal. Consecuentemente, es sencillo calcular la probabilidad de observar un valor igual a $|t|$ o mayor, asumiendo $\beta_1 = 0$; esta probabilidad se conoce como p-valor. De forma poco técnica, el p-valor se interpreta de la siguiente forma: un p-valor pequeño indica que es poco probable observar dicha asociación entre el predictor y la respuesta. Típicamente se fija una cota, la significancia; si el p-valor es menor que esta cota, se rechaza la hipótesis nula. 
 
 \subsection{Exactitud del modelo}
 
@@ -211,7 +211,7 @@ Al hacer una regresión multilineal, normalmente se busca contestar las siguient
 De forma análoga al caso de la regresión simple, la relación entre los predictores y la respuesta se puede comprobar mediante un contraste de hipótesis, 
 \begin{align}
 H_0 &: \beta_1 = \beta_2 = \dots = \beta_p = 0 \\
-H_a &: text{al menos un } \beta_j \text{ es no nulo}
+H_a &: \text{al menos un } \beta_j \text{ es no nulo}
 \end{align}
 
 \noindent El \textit{test} se realiza calculando una \textit{F-statistic}, 
@@ -244,13 +244,13 @@ F = \frac{(\text{RSS}_0 - \text{RSS})/q}{\text{RSS}/(n - p - 1)}
 
 \subsubsection{Variables relevantes}
 
-Tras realizar una \textit{F-statistic} y concluir que existe relación entre los predictores y la respuesta, el siguiente paso es conocer qué predictores están involucrados. Se puede atender a los `-valores individuales, pero para valores de $p$ grandes, esto dará falsos positivos. Capitulo6
+Tras realizar una \textit{F-statistic} y concluir que existe relación entre los predictores y la respuesta, el siguiente paso es conocer qué predictores están involucrados. Se puede atender a los p-valores individuales, pero para valores de $p$ grandes, esto dará falsos positivos. 
 
 \subsubsection{Ajuste del modelo}
 
 Dos de las medidas más comunes para cuantificar el ajuste del modelo son el RSE y $R^2$. \\
 
-En regresión múltiple, $R^2$ coincide con $\text{Cor}(Y, \hat{Y})^2$, la correlación entre la respuesta real y la predicha por el modelo lineal al cuadrado. Se puede demostrar que un modelo bien ajusta es aquel que maximiza esta correlación entre todos los posibles modelos lineales. \\
+En regresión múltiple, $R^2$ coincide con $\text{Cor}(Y, \hat{Y})^2$, la correlación entre la respuesta real y la predicha por el modelo lineal al cuadrado. Se puede demostrar que un modelo bien ajustado es aquel que maximiza esta correlación entre todos los posibles modelos lineales. \\
 
 Un valor de $R^2$ próximo a 1 indica que el modelo explica una gran proporción de la varianza en la variable de respuesta. Además, este coeficiente siempre crecerá cuando se añadan más variables al modelo. Un aumento muy sútil puede sugerir que la variable recién añadida se puede obviar en el modelo. \\
 
@@ -274,7 +274,7 @@ es solo una estimación del plano de regresión poblacional real
 f(X) = \beta_0 + \beta_1 X_1 + \dots + \beta_p X_p 
 \end{equation}
 
-La falta de exactitud en la estimación de los coeficientes está relacionada con el error reducilbe. Se pueden calcular los intervalos de confianza para determinar cómo de próximo es $\hat{Y}$ a $f(X)$.
+La falta de exactitud en la estimación de los coeficientes está relacionada con el error reducible. Se pueden calcular los intervalos de confianza para determinar cómo de próximo es $\hat{Y}$ a $f(X)$.
 \item En general, asumir un modelo lineal es una aproximación, lo que resulta en un \textit{bias} para el modelo. Esto es una fuente de error potencialmente reducible. 
 \item Incluso conociendo $f(X)$, siempre existirá el error aleatorio $\epsilon$ del modelo, es decir, el error irreducible. Para ver como diferirán $Y$ e $\hat{Y}$, se usan intervalos de predicción. Estos intervalos son siempre más amplios que los de confianza, ya que incorporan el error en la estimación de $f(X)$ y la incertidumbre en cada punto dada por el error irreducible.
 \end{enumerate}
@@ -306,7 +306,7 @@ En las próximas secciones se describirán los métodos de regularización y red
 
 \section{Métodos de reducción}
 
-Como alternativa a los métodos de selección de subconjuntos que se verán más adelante, se puede ajustar un modelo que contenga los $p$ predictoes usando una técnica que penalice o regularice los coeficientes estimados o, equivalentemente, que encoja las estimaciones hacia cero. Esto puede reducir la varianza de los coeficientes estimados significativamente. A continuación, se describen dos métodos más comunes para encoger los coeficientes hacia cero: la regresión de Ridge y la regresión Lasso. El problema que resuelve la estimación por mínimos cuadrados es 
+Como alternativa a los métodos de selección de subconjuntos que se verán más adelante, se puede ajustar un modelo que contenga los $p$ predictores usando una técnica que penalice o regularice los coeficientes estimados o, equivalentemente, que encoja las estimaciones hacia cero. Esto puede reducir la varianza de los coeficientes estimados significativamente. A continuación, se describen dos métodos más comunes para encoger los coeficientes hacia cero: la regresión de Ridge y la regresión Lasso. El problema que resuelve la estimación por mínimos cuadrados es 
 \begin{equation}
 \underset{\boldsymbol{\beta}}{\text{minimize}} \quad \sum_{i=1}^{n}\left(y_i - \beta_0 - \sum_{j=1}^{p}\beta_j x_{ij}\right)^2
 \end{equation}
@@ -334,10 +334,10 @@ Nótese que no se encoge $\beta_0$, ya que simplemente es una medida del valor m
 
 Las estimaciones estándar de los coeficientes de mínimos cuadrados ya discutidas son equivariantes a escala: multiplicar $X_j$ por una constante $c$ simplemente lleva a una escala de las estimaciones de los coeficientes de mínimos cuadrados por un factor de $\frac{1}{c}$. En otras palabras, independientemente de cómo se escale el predictor $X_j$, $\hat{X}_j \beta_j$ permanecerá igual. En contraste, las estimaciones de los coeficientes de regresión Ridge pueden cambiar sustancialmente al multiplicar un predictor dado por una constante; no son equivariantes a escala. Por tanto, se deben estandarizar las entradas antes de resolver el problema de optimización con la ecuación 
 \begin{equation}
-\tilde{x}_{ij} = \frac{x_ij}{\sqrt{\frac{1}{n} \sum_{i=1}^n (x_{ij} - \bar{x}_j)^2}}
+\tilde{x}_{ij} = \frac{x_{ij}}{\sqrt{\frac{1}{n} \sum_{i=1}^n (x_{ij} - \bar{x}_j)^2}}
 \end{equation}
 
-Los coeficientes estimados por regresión Ridge tienen el menor RSS de todos los puntos que se encuentran en el hiperboloide cerrado definido por $\sum_{i=1}^p \beta_j^2y \geq s$. En el caso de tener dos predictores, $p=2$, esto no es más que los puntos que estén dentro y sobre la superficie del círculo de la figura \ref{fig:reg}.  
+Los coeficientes estimados por regresión Ridge tienen el menor RSS de todos los puntos que se encuentran en el hiperboloide cerrado definido por $\sum_{i=1}^p \beta_j^2 \leq s$. En el caso de tener dos predictores, $p=2$, esto no es más que los puntos que estén dentro y sobre la superficie del círculo de la figura \ref{fig:reg}.  
 
 \begin{figure}[h]
 \centering
@@ -366,7 +366,7 @@ Regresión Ridge también tiene una ventaja computacional sobre la elección del
 
 \subsection{Regresión Lasso}
 
-La regresión de Ridge tiene una desventaja obvia. A diferencia de la selección del mejor subconjunto, la selección hacia adelante y la selección hacia atrás, que generalmente seleccionan modelos que involucran solo un subconjunto de las variables, la regresión Ridge incluirá todos los $p$ predictores en el modelo final. La penalización $\lambda \sum \beta_j^2$ en (\ref{eq:6.5}) reducirá todos los coeficientes hacia cero, pero no establecerá ninguno de ellos exactamente en cero (a menos que $\lambda = \infty$. Esto puede no ser un problema para la precisión de la predicción, pero puede crear un desafío en la interpretación del modelo en contextos donde el número de variables $p$ es bastante grande. Sin embargo, se puede querer un modelo que incluya solo los predictores más relevantes. \\
+La regresión de Ridge tiene una desventaja obvia. A diferencia de la selección del mejor subconjunto, la selección hacia adelante y la selección hacia atrás, que generalmente seleccionan modelos que involucran solo un subconjunto de las variables, la regresión Ridge incluirá todos los $p$ predictores en el modelo final. La penalización $\lambda \sum \beta_j^2$ en (\ref{eq:6.5}) reducirá todos los coeficientes hacia cero, pero no establecerá ninguno de ellos exactamente en cero (a menos que $\lambda = \infty$). Esto puede no ser un problema para la precisión de la predicción, pero puede crear un desafío en la interpretación del modelo en contextos donde el número de variables $p$ es bastante grande. Sin embargo, se puede querer un modelo que incluya solo los predictores más relevantes. \\
 
 Lasso es una alternativa relativamente reciente a la regresión de Ridge que supera esta desventaja. Los coeficientes de Lasso, $\hat{\beta}^{L}_{\lambda}$, minimizan la cantidad
 \begin{equation}
@@ -449,7 +449,7 @@ Para un vector aleatorio $X = (X_1, \dots, X_p)^T$, el vector de medias es $\bol
 \end{pmatrix}
 \end{equation}
 
-Sean $\lambda_1 \geq \lambda_2  \geq \dots \geq \lambda_p \geq 0$ los autovalores de $\Sigma$, y $\mathbf{e}_1, \dots, \mathbf{e}_p$ los correspondientes vectores propios (debidamente normalizados). La varianza de la componente principal k-ésima será igual a $\lambda_k$, mientras que los elemtnos de $\mathbf{e}_k$ serán los coeficientes de la componente principal k-ésima. La primera componente principal será la que mayor varianza tenga, y su autovalor será el mayor. \\
+Sean $\lambda_1 \geq \lambda_2  \geq \dots \geq \lambda_p \geq 0$ los autovalores de $\Sigma$, y $\mathbf{e}_1, \dots, \mathbf{e}_p$ los correspondientes vectores propios (debidamente normalizados). La varianza de la componente principal k-ésima será igual a $\lambda_k$, mientras que los elemetnos de $\mathbf{e}_k$ serán los coeficientes de la componente principal k-ésima. La primera componente principal será la que mayor varianza tenga, y su autovalor será el mayor. \\
 
 \noindent La proporción de varianza explicada por la componente principal k-ésima es 
 \begin{equation}
@@ -479,7 +479,7 @@ Sean $\lambda_1 \geq \lambda_2  \geq \dots \geq \lambda_p \geq 0$ los autovalore
 Sea un conjunto de $n$ observaciones y $p$ características $X_1, X_2, \ldots, X_p$, 
 \begin{equation}
 X = \begin{pmatrix}
-x{11} & x_{12} & \cdots & x_{1p} \\
+x_{11} & x_{12} & \cdots & x_{1p} \\
 x_{21} & x_{22} & \cdots & x_{2p} \\
 \vdots & \vdots & \ddots & \vdots \\
 x_{n1} & x_{n2} & \cdots & x_{np}

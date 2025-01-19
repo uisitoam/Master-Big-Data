@@ -18,7 +18,7 @@
 \contentsline {subsubsection}{Error estándar residual}{7}{section*.40}%
 \contentsline {subsubsection}{Estadística $R^2$}{8}{section*.42}%
 \contentsline {section}{\numberline {2.2}Regresión multilineal}{8}{section.45}%
-\contentsline {subsection}{\numberline {2.2.1}Estimación de los coeficientes}{8}{subsection.48}%
+\contentsline {subsection}{\numberline {2.2.1}Estimación de los coeficientes}{9}{subsection.48}%
 \contentsline {subsection}{\numberline {2.2.2}Algunas preguntas importantes}{9}{subsection.53}%
 \contentsline {subsubsection}{Relación entre la respuesta y los preditores}{9}{section*.54}%
 \contentsline {subsubsection}{Variables relevantes}{10}{section*.62}%
@@ -26,10 +26,10 @@
 \contentsline {subsubsection}{Predicciones}{10}{section*.65}%
 \contentsline {subsection}{\numberline {2.2.3}Problemas potenciales}{11}{subsection.71}%
 \contentsline {section}{\numberline {2.3}Grandes conjuntos de variable correlacionadas}{11}{section.72}%
-\contentsline {section}{\numberline {2.4}Métodos de reducción}{11}{section.73}%
+\contentsline {section}{\numberline {2.4}Métodos de reducción}{12}{section.73}%
 \contentsline {subsection}{\numberline {2.4.1}Regresión de Ridge}{12}{subsection.75}%
 \contentsline {subsubsection}{Mejora de Ridge sobre mínimos cuadrados}{13}{section*.82}%
-\contentsline {subsection}{\numberline {2.4.2}Regresión Lasso}{14}{subsection.84}%
+\contentsline {subsection}{\numberline {2.4.2}Regresión Lasso}{15}{subsection.84}%
 \contentsline {subsubsection}{Propiedad de selección de variables en Lasso}{15}{section*.89}%
 \contentsline {subsubsection}{Comparación entre regresión Lasso y Ridge}{17}{section*.90}%
 \contentsline {subsection}{\numberline {2.4.3}Selección del parámetro de ajuste}{18}{subsection.93}%
@@ -54,9 +54,9 @@
 \contentsline {subsection}{\numberline {3.3.1}Teorema de Bayes para clasificación}{28}{subsection.137}%
 \contentsline {subsubsection}{Regla de Bayes}{28}{section*.138}%
 \contentsline {subsubsection}{Regla de Bayes en problemas de clasificación}{28}{section*.140}%
-\contentsline {subsubsection}{Análisis discriminante lineal para $p = 1$}{29}{section*.142}%
+\contentsline {subsection}{\numberline {3.3.2}Análisis discriminante lineal para $p = 1$}{29}{subsection.142}%
 \contentsline {subsubsection}{Análisis discriminante lineal para $p > 1$}{31}{section*.151}%
-\contentsline {subsubsection}{Análisis discriminante cuadrático}{34}{section*.160}%
+\contentsline {subsection}{\numberline {3.3.3}Análisis discriminante cuadrático}{34}{subsection.160}%
 \contentsline {chapter}{\numberline {4}Evaluación y selección de modelos}{36}{chapter.163}%
 \contentsline {section}{\numberline {4.1}Contexto de regresión}{36}{section.165}%
 \contentsline {subsection}{\numberline {4.1.1}Calidad del ajuste}{36}{subsection.167}%
