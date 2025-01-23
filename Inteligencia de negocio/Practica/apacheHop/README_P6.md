@@ -1,0 +1,3 @@
+# Práctica 6: Apache Hop.
+
+Importar las transformaciones y los trabajos realizados en la práctica 3 a Apache Hop. Comprobar que los resultados obtenidos son consistentes con los de PDI. Entregar los archivos de Apache Hop así como de un breve reporte en PDF de los resultados obtenidos y, en caso de problemas, posibles soluciones sobre uno solo de los elementos de la transformación/*pipeline* relacionados con el error.

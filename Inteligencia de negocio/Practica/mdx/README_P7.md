@@ -1,3 +1,8 @@
+# Práctica 7: Consultas MDX
+
+Para esta práctica usaremos Saiku. Proponer 5 consultas datos de finanzas o de satisfacción de usuarios. Describir la consulta y por qué puede ser interesante para una productora. Entregar el enunciado, la descripción, los resultados y el código MDX.
+
+
 ## CONSULTA 1
 --------------
 ```

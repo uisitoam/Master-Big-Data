@@ -1,3 +1,7 @@
+# Práctica 8: Creación de cuadro de mando.
+
+En esta práctica usaremos la funcionalidad de construcción de cuadros de mando que proporciona Pentaho de forma nativa. Preparar un cuadro de mando que interés para la Productora de Cine. Entregar los archivos del cuadro de mando, así como un PDF con diferentes visualizaciones del mismo en un archivo ``.zip``.
+
 ## Consulta SQL que obtiene un ranking directores
 -------------
 ```
