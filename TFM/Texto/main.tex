@@ -1,0 +1,239 @@
+\documentclass[11pt, english, singlespacing, liststotoc, toctotoc, chapterinoneline, parskip, headsepline]{MastersDoctoralThesis}
+%oneside, two side (alternating margins) for binding by default, use to switch to one side
+%nolistspacing, % if the document is onehalfspacing or doublespacing, use this to set spacing in lists to single
+
+\input{tex/preambulo}
+% chktex-file 12
+% chktex-file 13
+% chktex-file 44
+
+
+\usepackage[backend=biber, style=apa, natbib=true, maxcitenames=2, maxbibnames=20, minbibnames=1]{biblatex} 
+\addbibresource{references.bib} % filename of the bibliography
+\usepackage[autostyle=true]{csquotes} % generate language-dependent quotes in the bibliography
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper,
+	inner=2.5cm, % inner margin
+	outer=3.8cm, % outer margin
+	bindingoffset=.5cm, % Bbinding offset
+	top=1.5cm, % top margin
+	bottom=1.5cm, % bottom margin
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Predictive model for drug response \\ based on multi-omics patterns} % used in the title and abstract, print elsewhere with \ttitle
+\supervisor{Shaila Calvo Almeida} % supervisor's name, used in the title page, print elsewhere with \supname
+\degree{Master in Tecnoloxías de Análise \\ de Datos Masivos: Big Data} % masters name, used in the title page and abstract, print elsewhere with \degreename
+\author{Luis Ardévol Mesa} % name, used in the title page and abstract, print elsewhere with \authorname
+
+\keywords{} % keywords for your thesis, print elsewhere with \keywordnames
+\university{Universidad de Santiago de Compostela} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{Gradiant} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{Grupo investigación} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{Escola Técnica Superior de Enxeñería} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % set the PDF's keywords to your keywords
+}
+
+\begin{document}
+
+\frontmatter % use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{.06\textheight}
+{\scshape\LARGE \textcolor{mdtRed}{\univname}\par}\vspace{1.5cm} % university name
+\textsc{\Large Master's Thesis}\\[0.5cm] % thesis type
+
+\HRule \\[0.4cm] 
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} % thesis title
+\HRule \\[1.5cm]
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+\textcolor{mdtRed}{\authorname} % author name
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{External Supervisor:} \\
+\textcolor{mdtRed}{\supname} \\ % supervisor name
+\quad \\
+\emph{Academic Supervisor:} \\
+\textcolor{mdtRed}{Juan Carlos Vidal Aguiar} % supervisor name
+\end{flushright}
+\end{minipage}\\
+ 
+\vspace{3cm}
+
+\large \textit{A thesis submitted in fulfillment of the requirements\\ for the \degreename}\\[0.3cm] % university requirement text
+\textit{in the}\\[0.4cm]
+\textcolor{mdtRed}{\univname}\\\& \textcolor{mdtRed}{\deptname}\\ % research group name and department name
+ 
+\vspace{2cm}
+
+{\large \monthname[\the\month], \the\year}\\[4cm] % Date
+%\includegraphics{Logo} % university/department logo - uncomment to place it
+ 
+\vfill
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{declaration}
+\addchaptertocentry{\authorshipname} % add the declaration to the table of contents
+\noindent I, \authorname, declare that this thesis titled, \enquote{\ttitle} and the work presented in it are my own. I confirm that:
+
+\begin{itemize} 
+\item This work was done wholly or mainly while in candidature for a Master's degree at this University.
+\item Where I have consulted the published work of others, this is always clearly attributed.
+\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+\item I have acknowledged all main sources of help.\\
+\end{itemize}
+ 
+\noindent Signed: \authorname \\
+\rule[0.5em]{25em}{0.5pt} % prints a line for the signature
+ 
+\noindent Date: \today \\
+\rule[0.5em]{25em}{0.5pt} % prints a line to write the date
+\end{declaration}
+
+\cleardoublepage
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\vspace*{0.2\textheight}
+
+\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+
+\hfill Luis Ardévol Mesa
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\addchaptertocentry{\abstractname} % add the abstract to the table of contents
+\citet{Menyhart2021}, \citet{Eraslan2019}, \citet{Chaudhary2018}, \citet{Chakraborty2018}, \citet{Vasaikar2018}, \citet{Hasin2017}, \citet{Kourou2015}, \citet{Libbrecht2015}, \citet{Meng2016}, \citet{Misra2019}, \citet{Cai2022}, \citet{Sammut2022}, \citet{Topol2019}. The page is kept centered vertically so can expand into the blank space above the title too\ldots
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % add the acknowledgements to the table of contents
+the acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
+\end{acknowledgements}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % prints the main table of contents
+
+%\listoffigures % prints the list of figures
+
+%\listoftables % prints the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+
+\end{abbreviations}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+
+% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+
+Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+%Constant Name & $Symbol$ & $Constant Value$ with units\\
+
+\end{constants}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+\begin{comment}
+\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+
+$a$ & distance & \si{\meter} \\
+$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%Symbol & Name & Unit \\
+
+\addlinespace % Gap to separate the Roman symbols from the Greek
+
+$\omega$ & angular frequency & \si{\radian} \\
+
+\end{symbols}
+\end{comment}
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+%\dedicatory{For/Dedicated to/To my\ldots} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % return the page headers back to the "thesis" style
+
+% include the chapters of the thesis as separate files from the Chapters folder
+
+\include{tex/Chapter1}
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % cue to tell LaTeX that the following "chapters" are Appendices
+
+% include the appendices of the thesis as separate files from the Appendices folder
+
+\include{tex/AppendixA}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc, title={References}] 
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
