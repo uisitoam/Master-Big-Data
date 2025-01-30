@@ -1,0 +1,179 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Contents}{ii}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introducción a la probabilidad}{2}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Introducción}{2}{section.3}%
+\contentsline {section}{\numberline {1.2}Análisis de datos exploratorio (EDA)}{2}{section.4}%
+\contentsline {subsection}{\numberline {1.2.1}Estadísticas de resumen}{2}{subsection.5}%
+\contentsline {section}{\numberline {1.3}Fundamento de la inferencia estadística}{3}{section.7}%
+\contentsline {subsection}{\numberline {1.3.1}Intervalo de confianza}{3}{subsection.8}%
+\contentsline {subsubsection}{La distribución normal}{4}{section*.11}%
+\contentsline {subsubsection}{Distribución de Student}{4}{section*.13}%
+\contentsline {subsection}{\numberline {1.3.2}Contrastes de hipótesis}{4}{subsection.14}%
+\contentsline {subsubsection}{Procedimiento}{4}{section*.15}%
+\contentsline {subsubsection}{Errores en los contrastes de hipótesis}{5}{section*.27}%
+\contentsline {chapter}{\numberline {2}Optimización convexa}{6}{chapter.29}%
+\contentsline {section}{\numberline {2.1}Introducción}{6}{section.30}%
+\contentsline {section}{\numberline {2.2}Optimización convexa}{6}{section.34}%
+\contentsline {subsection}{\numberline {2.2.1}Conjuntos convexos}{6}{subsection.35}%
+\contentsline {subsection}{\numberline {2.2.2}Funciones convexas}{7}{subsection.39}%
+\contentsline {subsection}{\numberline {2.2.3}Caracterizaciones de primer y segundo orden}{7}{subsection.43}%
+\contentsline {subsubsection}{Caracterización de primer orden}{8}{section*.50}%
+\contentsline {subsubsection}{Caracterización de segundo orden}{8}{section*.52}%
+\contentsline {subsection}{\numberline {2.2.4}Problema de optimización convexa}{8}{subsection.54}%
+\contentsline {section}{\numberline {2.3}Métodos de descenso}{9}{section.60}%
+\contentsline {subsection}{\numberline {2.3.1}Método de descenso de gradiente}{9}{subsection.65}%
+\contentsline {chapter}{\numberline {3}Aprendizaje estadístico}{11}{chapter.69}%
+\contentsline {section}{\numberline {3.1}Motivos para estimar $f$}{11}{section.71}%
+\contentsline {subsection}{\numberline {3.1.1}Predicción}{11}{subsection.72}%
+\contentsline {subsection}{\numberline {3.1.2}Inferencia}{12}{subsection.75}%
+\contentsline {section}{\numberline {3.2}Estimación de $f$}{12}{section.76}%
+\contentsline {subsection}{\numberline {3.2.1}Métodos paramétricos}{12}{subsection.77}%
+\contentsline {subsection}{\numberline {3.2.2}Métodos no paramétricos}{13}{subsection.80}%
+\contentsline {subsection}{\numberline {3.2.3}Exactitud vs interpretabilidad}{13}{subsection.81}%
+\contentsline {subsection}{\numberline {3.2.4}Aprendizaje supervisado y no supervisado}{14}{subsection.83}%
+\contentsline {subsection}{\numberline {3.2.5}Problemas de regresión y clasificación}{14}{subsection.85}%
+\contentsline {chapter}{\numberline {4}Regresión lineal}{15}{chapter.86}%
+\contentsline {section}{\numberline {4.1}Regresión lineal simple}{15}{section.88}%
+\contentsline {subsection}{\numberline {4.1.1}Estimación de los coeficientes}{15}{subsection.91}%
+\contentsline {subsection}{\numberline {4.1.2}Exactitud de la estimación de los coeficientes}{16}{subsection.94}%
+\contentsline {subsection}{\numberline {4.1.3}Exactitud del modelo}{17}{subsection.106}%
+\contentsline {subsubsection}{Error estándar residual}{17}{section*.107}%
+\contentsline {subsubsection}{Estadística $R^2$}{18}{section*.109}%
+\contentsline {section}{\numberline {4.2}Regresión multilineal}{18}{section.112}%
+\contentsline {subsection}{\numberline {4.2.1}Estimación de los coeficientes}{19}{subsection.115}%
+\contentsline {subsection}{\numberline {4.2.2}Algunas preguntas importantes}{19}{subsection.120}%
+\contentsline {subsubsection}{Relación entre la respuesta y los preditores}{19}{section*.121}%
+\contentsline {subsubsection}{Variables relevantes}{20}{section*.129}%
+\contentsline {subsubsection}{Ajuste del modelo}{20}{section*.130}%
+\contentsline {subsubsection}{Predicciones}{20}{section*.132}%
+\contentsline {subsection}{\numberline {4.2.3}Problemas potenciales}{21}{subsection.138}%
+\contentsline {section}{\numberline {4.3}Grandes conjuntos de variable correlacionadas}{21}{section.139}%
+\contentsline {section}{\numberline {4.4}Métodos de reducción}{22}{section.140}%
+\contentsline {subsection}{\numberline {4.4.1}Regresión de Ridge}{22}{subsection.142}%
+\contentsline {subsubsection}{Mejora de Ridge sobre mínimos cuadrados}{23}{section*.149}%
+\contentsline {subsection}{\numberline {4.4.2}Regresión Lasso}{25}{subsection.151}%
+\contentsline {subsubsection}{Propiedad de selección de variables en Lasso}{25}{section*.156}%
+\contentsline {subsubsection}{Comparación entre regresión Lasso y Ridge}{27}{section*.157}%
+\contentsline {subsection}{\numberline {4.4.3}Selección del parámetro de ajuste}{28}{subsection.160}%
+\contentsline {section}{\numberline {4.5}Reducción de dimensión}{28}{section.161}%
+\contentsline {subsection}{\numberline {4.5.1}Análisis de componentes principales}{29}{subsection.162}%
+\contentsline {subsubsection}{Una única muestra}{29}{section*.163}%
+\contentsline {subsubsection}{n muestras}{29}{section*.168}%
+\contentsline {subsection}{\numberline {4.5.2}Regresión de componentes principales}{30}{subsection.173}%
+\contentsline {subsection}{\numberline {4.5.3}Consideraciones en PCA}{30}{subsection.175}%
+\contentsline {subsubsection}{Escalado de variables}{30}{section*.176}%
+\contentsline {subsubsection}{Unicidad de las componentes principales}{31}{section*.178}%
+\contentsline {chapter}{\numberline {5}Clasificacion}{32}{chapter.179}%
+\contentsline {section}{\numberline {5.1}El entorno de clasificación}{32}{section.180}%
+\contentsline {subsection}{\numberline {5.1.1}El clasificador de Bayes}{33}{subsection.183}%
+\contentsline {subsection}{\numberline {5.1.2}¿Por qué no regresión lineal?}{34}{subsection.188}%
+\contentsline {section}{\numberline {5.2}Regresión logística}{36}{section.190}%
+\contentsline {subsection}{\numberline {5.2.1}Modelo logístico}{36}{subsection.191}%
+\contentsline {subsection}{\numberline {5.2.2}Estimación de los coeficientes}{37}{subsection.196}%
+\contentsline {subsection}{\numberline {5.2.3}Regresión logística múltiple}{37}{subsection.199}%
+\contentsline {subsection}{\numberline {5.2.4}Regresión logística no binaria}{38}{subsection.202}%
+\contentsline {section}{\numberline {5.3}Análisis discriminante lineal}{38}{section.203}%
+\contentsline {subsection}{\numberline {5.3.1}Teorema de Bayes para clasificación}{38}{subsection.204}%
+\contentsline {subsubsection}{Regla de Bayes}{38}{section*.205}%
+\contentsline {subsubsection}{Regla de Bayes en problemas de clasificación}{38}{section*.207}%
+\contentsline {subsection}{\numberline {5.3.2}Análisis discriminante lineal para $p = 1$}{39}{subsection.209}%
+\contentsline {subsubsection}{Análisis discriminante lineal para $p > 1$}{41}{section*.218}%
+\contentsline {subsection}{\numberline {5.3.3}Análisis discriminante cuadrático}{44}{subsection.227}%
+\contentsline {chapter}{\numberline {6}Evaluación y selección de modelos}{46}{chapter.230}%
+\contentsline {section}{\numberline {6.1}Contexto de regresión}{46}{section.232}%
+\contentsline {subsection}{\numberline {6.1.1}Calidad del ajuste}{46}{subsection.234}%
+\contentsline {subsection}{\numberline {6.1.2}Compromiso entre \textit {bias} y varianza}{47}{subsection.238}%
+\contentsline {section}{\numberline {6.2}Contexto de clasificación}{48}{section.241}%
+\contentsline {section}{\numberline {6.3}Métodos de remuestreo}{49}{section.245}%
+\contentsline {subsection}{\numberline {6.3.1}Validación cruzada}{50}{subsection.246}%
+\contentsline {subsubsection}{Enfoque del Conjunto de Validación}{50}{section*.247}%
+\contentsline {subsection}{\numberline {6.3.2}Validación cruzada \textit {Leave-One-Out}}{51}{subsection.250}%
+\contentsline {subsection}{\numberline {6.3.3}Validación Cruzada k-Fold}{53}{subsection.257}%
+\contentsline {subsection}{\numberline {6.3.4}Compromiso \textit {bias}-varianza para la validación cruzada k-Fold}{53}{subsection.260}%
+\contentsline {subsection}{\numberline {6.3.5}Validación Cruzada en Problemas de Clasificación}{55}{subsection.261}%
+\contentsline {subsubsection}{Regla de una desviación estándar}{55}{section*.266}%
+\contentsline {subsubsection}{Forma correcta de hacer validación cruzada}{55}{section*.267}%
+\contentsline {section}{\numberline {6.4}Selección de subconjuntos}{57}{section.268}%
+\contentsline {subsection}{\numberline {6.4.1}Selección del mejor subconjunto}{57}{subsection.269}%
+\contentsline {subsection}{\numberline {6.4.2}Selección por pasos}{57}{subsection.275}%
+\contentsline {subsubsection}{Selección por pasos hacia adelante}{58}{section*.276}%
+\contentsline {subsubsection}{Selección por pasos hacia atrás}{58}{section*.282}%
+\contentsline {subsubsection}{Modelos híbridos}{59}{section*.288}%
+\contentsline {section}{\numberline {6.5}Reduciendo de error}{59}{section.289}%
+\contentsline {chapter}{\numberline {7}K vecinos más próximos}{60}{chapter.290}%
+\contentsline {section}{\numberline {7.1}Algoritmo KNN}{60}{section.291}%
+\contentsline {subsection}{\numberline {7.1.1}Alta dimensionalidad}{62}{subsection.297}%
+\contentsline {subsection}{\numberline {7.1.2}Consideraciones computacionales}{63}{subsection.300}%
+\contentsline {section}{\numberline {7.2}Ejercicio}{63}{section.301}%
+\contentsline {chapter}{\numberline {8}Árboles de decisión. Fundamentos}{64}{chapter.308}%
+\contentsline {section}{\numberline {8.1}Árboles de decisión}{64}{section.309}%
+\contentsline {subsection}{\numberline {8.1.1}Predicción mediante estratificación del espacio de características}{65}{subsection.313}%
+\contentsline {subsection}{\numberline {8.1.2}Poda del árbol}{67}{subsection.320}%
+\contentsline {subsection}{\numberline {8.1.3}Árboles de Clasificación}{68}{subsection.330}%
+\contentsline {subsection}{\numberline {8.1.4}Predictores categóricos}{71}{subsection.336}%
+\contentsline {subsection}{\numberline {8.1.5}Árboles vs Modelos lineales}{72}{subsection.339}%
+\contentsline {subsection}{\numberline {8.1.6}Ventajas y desventajas de los árboles}{72}{subsection.343}%
+\contentsline {section}{\numberline {8.2}Ejercicio}{74}{section.344}%
+\contentsline {chapter}{\numberline {9}Redes neuronales}{75}{chapter.352}%
+\contentsline {section}{\numberline {9.1}Introducción}{75}{section.353}%
+\contentsline {subsection}{\numberline {9.1.1}Función de activación}{76}{subsection.356}%
+\contentsline {subsubsection}{Función sigmoide}{76}{section*.357}%
+\contentsline {subsubsection}{Tangente hiperbólica}{76}{section*.361}%
+\contentsline {subsubsection}{Función lineal rectificada ReLU}{76}{section*.363}%
+\contentsline {subsubsection}{Funciones gaussianas de base radial}{77}{section*.365}%
+\contentsline {section}{\numberline {9.2}Modelo de red neuronal}{77}{section.367}%
+\contentsline {section}{\numberline {9.3}Arquitecturas}{79}{section.380}%
+\contentsline {section}{\numberline {9.4}Funciones de coste o error}{80}{section.385}%
+\contentsline {subsection}{\numberline {9.4.1}Logartimo negativo de la verosimilitud}{80}{subsection.386}%
+\contentsline {subsection}{\numberline {9.4.2}Suma del error cuadrático}{81}{subsection.389}%
+\contentsline {subsection}{\numberline {9.4.3}Entropía cruzada}{81}{subsection.392}%
+\contentsline {subsubsection}{Entropía cruzada binaria}{81}{section*.393}%
+\contentsline {subsubsection}{Entropía cruzada}{81}{section*.397}%
+\contentsline {section}{\numberline {9.5}Ajuste de la red}{82}{section.407}%
+\contentsline {subsection}{\numberline {9.5.1}Problema de optimización}{82}{subsection.408}%
+\contentsline {subsection}{\numberline {9.5.2}Retropropagación}{84}{subsection.414}%
+\contentsline {subsection}{\numberline {9.5.3}Descenso de gradiente}{86}{subsection.429}%
+\contentsline {subsection}{\numberline {9.5.4}Inicialización de pesos}{87}{subsection.433}%
+\contentsline {subsection}{\numberline {9.5.5}Sobreajuste}{87}{subsection.434}%
+\contentsline {subsection}{\numberline {9.5.6}Escalado de las entradas}{87}{subsection.436}%
+\contentsline {subsection}{\numberline {9.5.7}Número de unidades ocultas y capas}{88}{subsection.437}%
+\contentsline {subsection}{\numberline {9.5.8}Múltiples mínimos}{88}{subsection.438}%
+\contentsline {subsection}{\numberline {9.5.9}Velocidad de aprendizaje}{89}{subsection.439}%
+\contentsline {subsection}{\numberline {9.5.10}Hiperparámetros}{89}{subsection.443}%
+\contentsline {subsection}{\numberline {9.5.11}Optimización}{90}{subsection.444}%
+\contentsline {section}{\numberline {9.6}Ejemplo: datos de \textit {ZIP code}}{91}{section.452}%
+\contentsline {section}{\numberline {9.7}Ejercicio}{95}{section.458}%
+\contentsline {chapter}{\numberline {10}Máquinas de vectores de soporte}{97}{chapter.465}%
+\contentsline {section}{\numberline {10.1}Clasificador de máximo margen}{97}{section.466}%
+\contentsline {subsection}{\numberline {10.1.1}Hiperplano}{97}{subsection.467}%
+\contentsline {subsection}{\numberline {10.1.2}Clasificación usando un hiperplano separador}{98}{subsection.473}%
+\contentsline {subsection}{\numberline {10.1.3}Clasificador de máximo margen}{99}{subsection.480}%
+\contentsline {subsection}{\numberline {10.1.4}Construcción del clasificador de máximo margen}{101}{subsection.482}%
+\contentsline {subsubsection}{Resolución del problema de optimización}{101}{section*.488}%
+\contentsline {subsection}{\numberline {10.1.5}El caso no separable}{104}{subsection.507}%
+\contentsline {subsection}{\numberline {10.1.6}Clasificador de vectores de soporte}{105}{subsection.509}%
+\contentsline {subsubsection}{Frontera de decisión no lineal}{107}{section*.527}%
+\contentsline {section}{\numberline {10.2}Máquinas de vectores de soporte}{107}{section.528}%
+\contentsline {section}{\numberline {10.3}SVM de clasificación con de más de dos clases}{110}{section.543}%
+\contentsline {section}{\numberline {10.4}SVMs para regresión}{111}{section.547}%
+\contentsline {section}{\numberline {10.5}Ejercicio}{113}{section.556}%
+\contentsline {chapter}{\numberline {11}Boosting y árboles aditivos}{116}{chapter.574}%
+\contentsline {section}{\numberline {11.1}Ajustes de \textit {boosting} y modelos aditivos}{118}{section.579}%
+\contentsline {section}{\numberline {11.2}Modelado aditivo secuencial hacia delante}{118}{section.583}%
+\contentsline {section}{\numberline {11.3}Funciones de pérdida}{119}{section.587}%
+\contentsline {section}{\numberline {11.4}Árboles de \textit {boosting}}{120}{section.597}%
+\contentsline {section}{\numberline {11.5}Optimización numérica mediante \textit {Gradient Boosting}}{122}{section.605}%
+\contentsline {subsection}{\numberline {11.5.1}\textit {Steepest descent}}{123}{subsection.610}%
+\contentsline {subsection}{\numberline {11.5.2}\textit {Gradient Boosting}}{123}{subsection.614}%
+\contentsline {subsection}{\numberline {11.5.3}Implementación de \textit {Gradient Boosting}}{124}{subsection.617}%
+\contentsline {section}{\numberline {11.6}Regularización}{125}{section.620}%
+\contentsline {subsection}{\numberline {11.6.1}Contracción}{126}{subsection.621}%
+\contentsline {subsection}{\numberline {11.6.2}Submuestreo}{126}{subsection.623}%
+\contentsline {section}{\numberline {11.7}Interpretación}{126}{section.624}%
+\contentsline {subsubsection}{Importancia relativa de las variables predictoras}{126}{section*.625}%
+\contentsline {chapter}{\numberline {12}Bagging}{128}{chapter.628}%
+\contentsline {section}{\numberline {12.1}Introducción}{128}{section.629}%
+\contentsline {section}{\numberline {12.2}Random Forest}{129}{section.636}%
+\contentsline {subsection}{\numberline {12.2.1}Definición}{130}{subsection.637}%
+\contentsline {subsection}{\numberline {12.2.2}Muestras \textit {out of bag}}{133}{subsection.645}%
+\contentsline {subsection}{\numberline {12.2.3}Sobreajuste en \textit {random forest}}{133}{subsection.647}%
