@@ -32,3 +32,20 @@ def save_figure_with_style(fig, original_path, styled_path):
         legend.get_frame().set_edgecolor('none')
 
     fig.savefig(styled_path, bbox_inches='tight', transparent=True)
+
+def main():
+    # Crear una figura ejemplo
+    fig, ax = plt.subplots()
+    ax.plot([1, 2, 3], [4, 5, 6])
+    ax.set_title("Figura de ejemplo")
+    
+    # Rutas de ejemplo
+    original_path = "figura_original.png"
+    styled_path = "figura_estilizada.pdf"
+    
+    # Guardar la figura con estilo
+    save_figure_with_style(fig, original_path, styled_path)
+    print(f"Figura guardada en: {styled_path}")
+
+if __name__ == '__main__':
+    main()
