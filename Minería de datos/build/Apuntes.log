@@ -1,0 +1,4047 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.30)  3 FEB 2025 18:04
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/Users/luisi/Documents/Master-Big-Data/Minería de datos/Apuntes.tex"
+(/Users/luisi/Documents/Master-Big-Data/Minería de datos/Apuntes.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count196
+\calc@Bcount=\count197
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count198
+\calc@Cskip=\skip52
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen143
+\ESO@tempdimb=\dimen144
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+)
+\AM@pagewidth=\dimen147
+\AM@pageheight=\dimen148
+\AM@fboxrule=\dimen149
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count199
+\AM@pagebox=\box51
+\AM@global@opts=\toks18
+\AM@pagecnt=\count266
+\AM@toc@title=\toks19
+\AM@lof@heading=\toks20
+\c@AM@survey=\count267
+\AM@templatesizebox=\box52
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box53
+) (build/Apuntes.aux)
+\openout1 = `Apuntes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count269
+\scratchdimen=\dimen150
+\scratchbox=\box54
+\nofMPsegments=\count270
+\nofMParguments=\count271
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count272
+\MPscratchDim=\dimen151
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+<Teoria.pdf, id=1, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf>
+Package pdftex.def Info: Teoria.pdf  used on input line 5.
+(pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf>
+Package pdftex.def Info: Teoria.pdf  used on input line 5.
+(pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
+<Teoria.pdf, id=4, page=1, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 1>
+Package pdftex.def Info: Teoria.pdf , page1 used on input line 5.
+(pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 1>
+Package pdftex.def Info: Teoria.pdf , page1 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 1>
+Package pdftex.def Info: Teoria.pdf , page1 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 1>
+Package pdftex.def Info: Teoria.pdf , page1 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=5, page=2, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 2>
+Package pdftex.def Info: Teoria.pdf , page2 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 2>
+Package pdftex.def Info: Teoria.pdf , page2 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=6, page=3, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 3>
+Package pdftex.def Info: Teoria.pdf , page3 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 3>
+Package pdftex.def Info: Teoria.pdf , page3 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 1>
+Package pdftex.def Info: Teoria.pdf , page1 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 2>
+Package pdftex.def Info: Teoria.pdf , page2 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 3>
+Package pdftex.def Info: Teoria.pdf , page3 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [1
+
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=62, page=4, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 4>
+Package pdftex.def Info: Teoria.pdf , page4 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 4>
+Package pdftex.def Info: Teoria.pdf , page4 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=63, page=5, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 5>
+Package pdftex.def Info: Teoria.pdf , page5 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 5>
+Package pdftex.def Info: Teoria.pdf , page5 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=64, page=6, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 6>
+Package pdftex.def Info: Teoria.pdf , page6 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 6>
+Package pdftex.def Info: Teoria.pdf , page6 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 4>
+Package pdftex.def Info: Teoria.pdf , page4 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 5>
+Package pdftex.def Info: Teoria.pdf , page5 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 6>
+Package pdftex.def Info: Teoria.pdf , page6 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [2
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=87, page=7, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 7>
+Package pdftex.def Info: Teoria.pdf , page7 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 7>
+Package pdftex.def Info: Teoria.pdf , page7 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=88, page=8, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 8>
+Package pdftex.def Info: Teoria.pdf , page8 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 8>
+Package pdftex.def Info: Teoria.pdf , page8 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=89, page=9, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 9>
+Package pdftex.def Info: Teoria.pdf , page9 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 9>
+Package pdftex.def Info: Teoria.pdf , page9 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 7>
+Package pdftex.def Info: Teoria.pdf , page7 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 8>
+Package pdftex.def Info: Teoria.pdf , page8 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 9>
+Package pdftex.def Info: Teoria.pdf , page9 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [3
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=94, page=10, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 10>
+Package pdftex.def Info: Teoria.pdf , page10 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 10>
+Package pdftex.def Info: Teoria.pdf , page10 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=95, page=11, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 11>
+Package pdftex.def Info: Teoria.pdf , page11 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 11>
+Package pdftex.def Info: Teoria.pdf , page11 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=96, page=12, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 12>
+Package pdftex.def Info: Teoria.pdf , page12 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 12>
+Package pdftex.def Info: Teoria.pdf , page12 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 10>
+Package pdftex.def Info: Teoria.pdf , page10 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 11>
+Package pdftex.def Info: Teoria.pdf , page11 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 12>
+Package pdftex.def Info: Teoria.pdf , page12 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [4
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=112, page=13, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 13>
+Package pdftex.def Info: Teoria.pdf , page13 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 13>
+Package pdftex.def Info: Teoria.pdf , page13 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=113, page=14, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 14>
+Package pdftex.def Info: Teoria.pdf , page14 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 14>
+Package pdftex.def Info: Teoria.pdf , page14 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=114, page=15, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 15>
+Package pdftex.def Info: Teoria.pdf , page15 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 15>
+Package pdftex.def Info: Teoria.pdf , page15 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 13>
+Package pdftex.def Info: Teoria.pdf , page13 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 14>
+Package pdftex.def Info: Teoria.pdf , page14 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 15>
+Package pdftex.def Info: Teoria.pdf , page15 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [5
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=133, page=16, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 16>
+Package pdftex.def Info: Teoria.pdf , page16 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 16>
+Package pdftex.def Info: Teoria.pdf , page16 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=134, page=17, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 17>
+Package pdftex.def Info: Teoria.pdf , page17 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 17>
+Package pdftex.def Info: Teoria.pdf , page17 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=135, page=18, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 18>
+Package pdftex.def Info: Teoria.pdf , page18 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 18>
+Package pdftex.def Info: Teoria.pdf , page18 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 16>
+Package pdftex.def Info: Teoria.pdf , page16 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 17>
+Package pdftex.def Info: Teoria.pdf , page17 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 18>
+Package pdftex.def Info: Teoria.pdf , page18 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [6
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=166, page=19, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 19>
+Package pdftex.def Info: Teoria.pdf , page19 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 19>
+Package pdftex.def Info: Teoria.pdf , page19 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=167, page=20, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 20>
+Package pdftex.def Info: Teoria.pdf , page20 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 20>
+Package pdftex.def Info: Teoria.pdf , page20 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=168, page=21, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 21>
+Package pdftex.def Info: Teoria.pdf , page21 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 21>
+Package pdftex.def Info: Teoria.pdf , page21 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 19>
+Package pdftex.def Info: Teoria.pdf , page19 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 20>
+Package pdftex.def Info: Teoria.pdf , page20 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 21>
+Package pdftex.def Info: Teoria.pdf , page21 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [7
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=219, page=22, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 22>
+Package pdftex.def Info: Teoria.pdf , page22 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 22>
+Package pdftex.def Info: Teoria.pdf , page22 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=220, page=23, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 23>
+Package pdftex.def Info: Teoria.pdf , page23 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 23>
+Package pdftex.def Info: Teoria.pdf , page23 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=221, page=24, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 24>
+Package pdftex.def Info: Teoria.pdf , page24 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 24>
+Package pdftex.def Info: Teoria.pdf , page24 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 22>
+Package pdftex.def Info: Teoria.pdf , page22 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 23>
+Package pdftex.def Info: Teoria.pdf , page23 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 24>
+Package pdftex.def Info: Teoria.pdf , page24 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [8
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=270, page=25, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 25>
+Package pdftex.def Info: Teoria.pdf , page25 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 25>
+Package pdftex.def Info: Teoria.pdf , page25 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=271, page=26, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 26>
+Package pdftex.def Info: Teoria.pdf , page26 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 26>
+Package pdftex.def Info: Teoria.pdf , page26 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=272, page=27, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 27>
+Package pdftex.def Info: Teoria.pdf , page27 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 27>
+Package pdftex.def Info: Teoria.pdf , page27 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 25>
+Package pdftex.def Info: Teoria.pdf , page25 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 26>
+Package pdftex.def Info: Teoria.pdf , page26 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 27>
+Package pdftex.def Info: Teoria.pdf , page27 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [9
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=278, page=28, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 28>
+Package pdftex.def Info: Teoria.pdf , page28 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 28>
+Package pdftex.def Info: Teoria.pdf , page28 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=279, page=29, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 29>
+Package pdftex.def Info: Teoria.pdf , page29 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 29>
+Package pdftex.def Info: Teoria.pdf , page29 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=280, page=30, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 30>
+Package pdftex.def Info: Teoria.pdf , page30 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 30>
+Package pdftex.def Info: Teoria.pdf , page30 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 28>
+Package pdftex.def Info: Teoria.pdf , page28 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 29>
+Package pdftex.def Info: Teoria.pdf , page29 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 30>
+Package pdftex.def Info: Teoria.pdf , page30 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [10
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=284, page=31, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 31>
+Package pdftex.def Info: Teoria.pdf , page31 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 31>
+Package pdftex.def Info: Teoria.pdf , page31 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=285, page=32, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 32>
+Package pdftex.def Info: Teoria.pdf , page32 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 32>
+Package pdftex.def Info: Teoria.pdf , page32 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=286, page=33, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 33>
+Package pdftex.def Info: Teoria.pdf , page33 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 33>
+Package pdftex.def Info: Teoria.pdf , page33 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 31>
+Package pdftex.def Info: Teoria.pdf , page31 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 32>
+Package pdftex.def Info: Teoria.pdf , page32 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 33>
+Package pdftex.def Info: Teoria.pdf , page33 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [11
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=323, page=34, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 34>
+Package pdftex.def Info: Teoria.pdf , page34 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 34>
+Package pdftex.def Info: Teoria.pdf , page34 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=324, page=35, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 35>
+Package pdftex.def Info: Teoria.pdf , page35 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 35>
+Package pdftex.def Info: Teoria.pdf , page35 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=325, page=36, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 36>
+Package pdftex.def Info: Teoria.pdf , page36 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 36>
+Package pdftex.def Info: Teoria.pdf , page36 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 34>
+Package pdftex.def Info: Teoria.pdf , page34 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 35>
+Package pdftex.def Info: Teoria.pdf , page35 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 36>
+Package pdftex.def Info: Teoria.pdf , page36 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [12
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=349, page=37, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 37>
+Package pdftex.def Info: Teoria.pdf , page37 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 37>
+Package pdftex.def Info: Teoria.pdf , page37 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=350, page=38, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 38>
+Package pdftex.def Info: Teoria.pdf , page38 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 38>
+Package pdftex.def Info: Teoria.pdf , page38 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=351, page=39, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 39>
+Package pdftex.def Info: Teoria.pdf , page39 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 39>
+Package pdftex.def Info: Teoria.pdf , page39 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 37>
+Package pdftex.def Info: Teoria.pdf , page37 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 38>
+Package pdftex.def Info: Teoria.pdf , page38 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 39>
+Package pdftex.def Info: Teoria.pdf , page39 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [13
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=359, page=40, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 40>
+Package pdftex.def Info: Teoria.pdf , page40 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 40>
+Package pdftex.def Info: Teoria.pdf , page40 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=360, page=41, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 41>
+Package pdftex.def Info: Teoria.pdf , page41 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 41>
+Package pdftex.def Info: Teoria.pdf , page41 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=361, page=42, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 42>
+Package pdftex.def Info: Teoria.pdf , page42 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 42>
+Package pdftex.def Info: Teoria.pdf , page42 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 40>
+Package pdftex.def Info: Teoria.pdf , page40 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 41>
+Package pdftex.def Info: Teoria.pdf , page41 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 42>
+Package pdftex.def Info: Teoria.pdf , page42 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [14
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=377, page=43, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 43>
+Package pdftex.def Info: Teoria.pdf , page43 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 43>
+Package pdftex.def Info: Teoria.pdf , page43 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=378, page=44, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 44>
+Package pdftex.def Info: Teoria.pdf , page44 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 44>
+Package pdftex.def Info: Teoria.pdf , page44 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=379, page=45, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 45>
+Package pdftex.def Info: Teoria.pdf , page45 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 45>
+Package pdftex.def Info: Teoria.pdf , page45 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 43>
+Package pdftex.def Info: Teoria.pdf , page43 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 44>
+Package pdftex.def Info: Teoria.pdf , page44 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 45>
+Package pdftex.def Info: Teoria.pdf , page45 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [15
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=394, page=46, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 46>
+Package pdftex.def Info: Teoria.pdf , page46 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 46>
+Package pdftex.def Info: Teoria.pdf , page46 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=395, page=47, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 47>
+Package pdftex.def Info: Teoria.pdf , page47 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 47>
+Package pdftex.def Info: Teoria.pdf , page47 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=396, page=48, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 48>
+Package pdftex.def Info: Teoria.pdf , page48 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 48>
+Package pdftex.def Info: Teoria.pdf , page48 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 46>
+Package pdftex.def Info: Teoria.pdf , page46 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 47>
+Package pdftex.def Info: Teoria.pdf , page47 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 48>
+Package pdftex.def Info: Teoria.pdf , page48 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [16
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=414, page=49, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 49>
+Package pdftex.def Info: Teoria.pdf , page49 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 49>
+Package pdftex.def Info: Teoria.pdf , page49 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=415, page=50, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 50>
+Package pdftex.def Info: Teoria.pdf , page50 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 50>
+Package pdftex.def Info: Teoria.pdf , page50 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=416, page=51, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 51>
+Package pdftex.def Info: Teoria.pdf , page51 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 51>
+Package pdftex.def Info: Teoria.pdf , page51 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 49>
+Package pdftex.def Info: Teoria.pdf , page49 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 50>
+Package pdftex.def Info: Teoria.pdf , page50 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 51>
+Package pdftex.def Info: Teoria.pdf , page51 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [17
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=445, page=52, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 52>
+Package pdftex.def Info: Teoria.pdf , page52 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 52>
+Package pdftex.def Info: Teoria.pdf , page52 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=446, page=53, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 53>
+Package pdftex.def Info: Teoria.pdf , page53 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 53>
+Package pdftex.def Info: Teoria.pdf , page53 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=447, page=54, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 54>
+Package pdftex.def Info: Teoria.pdf , page54 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 54>
+Package pdftex.def Info: Teoria.pdf , page54 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 52>
+Package pdftex.def Info: Teoria.pdf , page52 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 53>
+Package pdftex.def Info: Teoria.pdf , page53 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 54>
+Package pdftex.def Info: Teoria.pdf , page54 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [18
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=453, page=55, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 55>
+Package pdftex.def Info: Teoria.pdf , page55 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 55>
+Package pdftex.def Info: Teoria.pdf , page55 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=454, page=56, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 56>
+Package pdftex.def Info: Teoria.pdf , page56 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 56>
+Package pdftex.def Info: Teoria.pdf , page56 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=455, page=57, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 57>
+Package pdftex.def Info: Teoria.pdf , page57 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 57>
+Package pdftex.def Info: Teoria.pdf , page57 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 55>
+Package pdftex.def Info: Teoria.pdf , page55 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 56>
+Package pdftex.def Info: Teoria.pdf , page56 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 57>
+Package pdftex.def Info: Teoria.pdf , page57 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [19
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=461, page=58, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 58>
+Package pdftex.def Info: Teoria.pdf , page58 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 58>
+Package pdftex.def Info: Teoria.pdf , page58 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=462, page=59, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 59>
+Package pdftex.def Info: Teoria.pdf , page59 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 59>
+Package pdftex.def Info: Teoria.pdf , page59 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=463, page=60, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 60>
+Package pdftex.def Info: Teoria.pdf , page60 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 60>
+Package pdftex.def Info: Teoria.pdf , page60 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 58>
+Package pdftex.def Info: Teoria.pdf , page58 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 59>
+Package pdftex.def Info: Teoria.pdf , page59 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 60>
+Package pdftex.def Info: Teoria.pdf , page60 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [20
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=468, page=61, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 61>
+Package pdftex.def Info: Teoria.pdf , page61 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 61>
+Package pdftex.def Info: Teoria.pdf , page61 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=469, page=62, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 62>
+Package pdftex.def Info: Teoria.pdf , page62 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 62>
+Package pdftex.def Info: Teoria.pdf , page62 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=470, page=63, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 63>
+Package pdftex.def Info: Teoria.pdf , page63 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 63>
+Package pdftex.def Info: Teoria.pdf , page63 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 61>
+Package pdftex.def Info: Teoria.pdf , page61 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 62>
+Package pdftex.def Info: Teoria.pdf , page62 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 63>
+Package pdftex.def Info: Teoria.pdf , page63 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [21
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=486, page=64, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 64>
+Package pdftex.def Info: Teoria.pdf , page64 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 64>
+Package pdftex.def Info: Teoria.pdf , page64 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=487, page=65, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 65>
+Package pdftex.def Info: Teoria.pdf , page65 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 65>
+Package pdftex.def Info: Teoria.pdf , page65 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=488, page=66, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 66>
+Package pdftex.def Info: Teoria.pdf , page66 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 66>
+Package pdftex.def Info: Teoria.pdf , page66 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 64>
+Package pdftex.def Info: Teoria.pdf , page64 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 65>
+Package pdftex.def Info: Teoria.pdf , page65 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 66>
+Package pdftex.def Info: Teoria.pdf , page66 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [22
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=528, page=67, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 67>
+Package pdftex.def Info: Teoria.pdf , page67 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 67>
+Package pdftex.def Info: Teoria.pdf , page67 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=529, page=68, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 68>
+Package pdftex.def Info: Teoria.pdf , page68 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 68>
+Package pdftex.def Info: Teoria.pdf , page68 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=530, page=69, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 69>
+Package pdftex.def Info: Teoria.pdf , page69 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 69>
+Package pdftex.def Info: Teoria.pdf , page69 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 67>
+Package pdftex.def Info: Teoria.pdf , page67 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 68>
+Package pdftex.def Info: Teoria.pdf , page68 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 69>
+Package pdftex.def Info: Teoria.pdf , page69 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [23
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=588, page=70, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 70>
+Package pdftex.def Info: Teoria.pdf , page70 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 70>
+Package pdftex.def Info: Teoria.pdf , page70 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=589, page=71, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 71>
+Package pdftex.def Info: Teoria.pdf , page71 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 71>
+Package pdftex.def Info: Teoria.pdf , page71 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=590, page=72, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 72>
+Package pdftex.def Info: Teoria.pdf , page72 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 72>
+Package pdftex.def Info: Teoria.pdf , page72 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 70>
+Package pdftex.def Info: Teoria.pdf , page70 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 71>
+Package pdftex.def Info: Teoria.pdf , page71 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 72>
+Package pdftex.def Info: Teoria.pdf , page72 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [24
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=606, page=73, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 73>
+Package pdftex.def Info: Teoria.pdf , page73 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 73>
+Package pdftex.def Info: Teoria.pdf , page73 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=607, page=74, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 74>
+Package pdftex.def Info: Teoria.pdf , page74 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 74>
+Package pdftex.def Info: Teoria.pdf , page74 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=608, page=75, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 75>
+Package pdftex.def Info: Teoria.pdf , page75 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 75>
+Package pdftex.def Info: Teoria.pdf , page75 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 73>
+Package pdftex.def Info: Teoria.pdf , page73 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 74>
+Package pdftex.def Info: Teoria.pdf , page74 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 75>
+Package pdftex.def Info: Teoria.pdf , page75 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [25
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=617, page=76, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 76>
+Package pdftex.def Info: Teoria.pdf , page76 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 76>
+Package pdftex.def Info: Teoria.pdf , page76 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=618, page=77, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 77>
+Package pdftex.def Info: Teoria.pdf , page77 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 77>
+Package pdftex.def Info: Teoria.pdf , page77 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=619, page=78, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 78>
+Package pdftex.def Info: Teoria.pdf , page78 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 78>
+Package pdftex.def Info: Teoria.pdf , page78 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 76>
+Package pdftex.def Info: Teoria.pdf , page76 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 77>
+Package pdftex.def Info: Teoria.pdf , page77 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 78>
+Package pdftex.def Info: Teoria.pdf , page78 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [26
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=623, page=79, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 79>
+Package pdftex.def Info: Teoria.pdf , page79 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 79>
+Package pdftex.def Info: Teoria.pdf , page79 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=624, page=80, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 80>
+Package pdftex.def Info: Teoria.pdf , page80 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 80>
+Package pdftex.def Info: Teoria.pdf , page80 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=625, page=81, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 81>
+Package pdftex.def Info: Teoria.pdf , page81 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 81>
+Package pdftex.def Info: Teoria.pdf , page81 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 79>
+Package pdftex.def Info: Teoria.pdf , page79 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 80>
+Package pdftex.def Info: Teoria.pdf , page80 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 81>
+Package pdftex.def Info: Teoria.pdf , page81 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [27
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=646, page=82, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 82>
+Package pdftex.def Info: Teoria.pdf , page82 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 82>
+Package pdftex.def Info: Teoria.pdf , page82 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=647, page=83, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 83>
+Package pdftex.def Info: Teoria.pdf , page83 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 83>
+Package pdftex.def Info: Teoria.pdf , page83 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=648, page=84, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 84>
+Package pdftex.def Info: Teoria.pdf , page84 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 84>
+Package pdftex.def Info: Teoria.pdf , page84 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 82>
+Package pdftex.def Info: Teoria.pdf , page82 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 83>
+Package pdftex.def Info: Teoria.pdf , page83 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 84>
+Package pdftex.def Info: Teoria.pdf , page84 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [28
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=657, page=85, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 85>
+Package pdftex.def Info: Teoria.pdf , page85 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 85>
+Package pdftex.def Info: Teoria.pdf , page85 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=658, page=86, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 86>
+Package pdftex.def Info: Teoria.pdf , page86 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 86>
+Package pdftex.def Info: Teoria.pdf , page86 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=659, page=87, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 87>
+Package pdftex.def Info: Teoria.pdf , page87 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 87>
+Package pdftex.def Info: Teoria.pdf , page87 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 85>
+Package pdftex.def Info: Teoria.pdf , page85 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 86>
+Package pdftex.def Info: Teoria.pdf , page86 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 87>
+Package pdftex.def Info: Teoria.pdf , page87 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [29
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=665, page=88, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 88>
+Package pdftex.def Info: Teoria.pdf , page88 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 88>
+Package pdftex.def Info: Teoria.pdf , page88 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=666, page=89, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 89>
+Package pdftex.def Info: Teoria.pdf , page89 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 89>
+Package pdftex.def Info: Teoria.pdf , page89 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=667, page=90, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 90>
+Package pdftex.def Info: Teoria.pdf , page90 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 90>
+Package pdftex.def Info: Teoria.pdf , page90 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 88>
+Package pdftex.def Info: Teoria.pdf , page88 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 89>
+Package pdftex.def Info: Teoria.pdf , page89 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 90>
+Package pdftex.def Info: Teoria.pdf , page90 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [30
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=680, page=91, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 91>
+Package pdftex.def Info: Teoria.pdf , page91 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 91>
+Package pdftex.def Info: Teoria.pdf , page91 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=681, page=92, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 92>
+Package pdftex.def Info: Teoria.pdf , page92 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 92>
+Package pdftex.def Info: Teoria.pdf , page92 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=682, page=93, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 93>
+Package pdftex.def Info: Teoria.pdf , page93 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 93>
+Package pdftex.def Info: Teoria.pdf , page93 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 91>
+Package pdftex.def Info: Teoria.pdf , page91 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 92>
+Package pdftex.def Info: Teoria.pdf , page92 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 93>
+Package pdftex.def Info: Teoria.pdf , page93 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [31
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=693, page=94, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 94>
+Package pdftex.def Info: Teoria.pdf , page94 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 94>
+Package pdftex.def Info: Teoria.pdf , page94 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=694, page=95, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 95>
+Package pdftex.def Info: Teoria.pdf , page95 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 95>
+Package pdftex.def Info: Teoria.pdf , page95 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=695, page=96, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 96>
+Package pdftex.def Info: Teoria.pdf , page96 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 96>
+Package pdftex.def Info: Teoria.pdf , page96 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 94>
+Package pdftex.def Info: Teoria.pdf , page94 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 95>
+Package pdftex.def Info: Teoria.pdf , page95 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 96>
+Package pdftex.def Info: Teoria.pdf , page96 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [32
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=700, page=97, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 97>
+Package pdftex.def Info: Teoria.pdf , page97 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 97>
+Package pdftex.def Info: Teoria.pdf , page97 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=701, page=98, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 98>
+Package pdftex.def Info: Teoria.pdf , page98 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 98>
+Package pdftex.def Info: Teoria.pdf , page98 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=702, page=99, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 99>
+Package pdftex.def Info: Teoria.pdf , page99 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 99>
+Package pdftex.def Info: Teoria.pdf , page99 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 97>
+Package pdftex.def Info: Teoria.pdf , page97 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 98>
+Package pdftex.def Info: Teoria.pdf , page98 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 99>
+Package pdftex.def Info: Teoria.pdf , page99 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [33
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=706, page=100, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 100>
+Package pdftex.def Info: Teoria.pdf , page100 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 100>
+Package pdftex.def Info: Teoria.pdf , page100 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=707, page=101, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 101>
+Package pdftex.def Info: Teoria.pdf , page101 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 101>
+Package pdftex.def Info: Teoria.pdf , page101 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=708, page=102, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 102>
+Package pdftex.def Info: Teoria.pdf , page102 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 102>
+Package pdftex.def Info: Teoria.pdf , page102 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 100>
+Package pdftex.def Info: Teoria.pdf , page100 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 101>
+Package pdftex.def Info: Teoria.pdf , page101 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 102>
+Package pdftex.def Info: Teoria.pdf , page102 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [34
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=735, page=103, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 103>
+Package pdftex.def Info: Teoria.pdf , page103 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 103>
+Package pdftex.def Info: Teoria.pdf , page103 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=736, page=104, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 104>
+Package pdftex.def Info: Teoria.pdf , page104 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 104>
+Package pdftex.def Info: Teoria.pdf , page104 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=737, page=105, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 105>
+Package pdftex.def Info: Teoria.pdf , page105 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 105>
+Package pdftex.def Info: Teoria.pdf , page105 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 103>
+Package pdftex.def Info: Teoria.pdf , page103 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 104>
+Package pdftex.def Info: Teoria.pdf , page104 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 105>
+Package pdftex.def Info: Teoria.pdf , page105 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [35
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=774, page=106, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 106>
+Package pdftex.def Info: Teoria.pdf , page106 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 106>
+Package pdftex.def Info: Teoria.pdf , page106 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=775, page=107, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 107>
+Package pdftex.def Info: Teoria.pdf , page107 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 107>
+Package pdftex.def Info: Teoria.pdf , page107 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=776, page=108, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 108>
+Package pdftex.def Info: Teoria.pdf , page108 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 108>
+Package pdftex.def Info: Teoria.pdf , page108 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 106>
+Package pdftex.def Info: Teoria.pdf , page106 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 107>
+Package pdftex.def Info: Teoria.pdf , page107 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 108>
+Package pdftex.def Info: Teoria.pdf , page108 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [36
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=804, page=109, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 109>
+Package pdftex.def Info: Teoria.pdf , page109 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 109>
+Package pdftex.def Info: Teoria.pdf , page109 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=805, page=110, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 110>
+Package pdftex.def Info: Teoria.pdf , page110 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 110>
+Package pdftex.def Info: Teoria.pdf , page110 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=806, page=111, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 111>
+Package pdftex.def Info: Teoria.pdf , page111 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 111>
+Package pdftex.def Info: Teoria.pdf , page111 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 109>
+Package pdftex.def Info: Teoria.pdf , page109 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 110>
+Package pdftex.def Info: Teoria.pdf , page110 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 111>
+Package pdftex.def Info: Teoria.pdf , page111 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [37
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=815, page=112, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 112>
+Package pdftex.def Info: Teoria.pdf , page112 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 112>
+Package pdftex.def Info: Teoria.pdf , page112 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=816, page=113, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 113>
+Package pdftex.def Info: Teoria.pdf , page113 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 113>
+Package pdftex.def Info: Teoria.pdf , page113 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=817, page=114, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 114>
+Package pdftex.def Info: Teoria.pdf , page114 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 114>
+Package pdftex.def Info: Teoria.pdf , page114 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 112>
+Package pdftex.def Info: Teoria.pdf , page112 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 113>
+Package pdftex.def Info: Teoria.pdf , page113 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 114>
+Package pdftex.def Info: Teoria.pdf , page114 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [38
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=821, page=115, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 115>
+Package pdftex.def Info: Teoria.pdf , page115 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 115>
+Package pdftex.def Info: Teoria.pdf , page115 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=822, page=116, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 116>
+Package pdftex.def Info: Teoria.pdf , page116 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 116>
+Package pdftex.def Info: Teoria.pdf , page116 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=823, page=117, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 117>
+Package pdftex.def Info: Teoria.pdf , page117 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 117>
+Package pdftex.def Info: Teoria.pdf , page117 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 115>
+Package pdftex.def Info: Teoria.pdf , page115 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 116>
+Package pdftex.def Info: Teoria.pdf , page116 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 117>
+Package pdftex.def Info: Teoria.pdf , page117 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [39
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=841, page=118, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 118>
+Package pdftex.def Info: Teoria.pdf , page118 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 118>
+Package pdftex.def Info: Teoria.pdf , page118 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=842, page=119, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 119>
+Package pdftex.def Info: Teoria.pdf , page119 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 119>
+Package pdftex.def Info: Teoria.pdf , page119 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=843, page=120, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 120>
+Package pdftex.def Info: Teoria.pdf , page120 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 120>
+Package pdftex.def Info: Teoria.pdf , page120 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 118>
+Package pdftex.def Info: Teoria.pdf , page118 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 119>
+Package pdftex.def Info: Teoria.pdf , page119 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 120>
+Package pdftex.def Info: Teoria.pdf , page120 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [40
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=869, page=121, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 121>
+Package pdftex.def Info: Teoria.pdf , page121 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 121>
+Package pdftex.def Info: Teoria.pdf , page121 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=870, page=122, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 122>
+Package pdftex.def Info: Teoria.pdf , page122 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 122>
+Package pdftex.def Info: Teoria.pdf , page122 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=871, page=123, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 123>
+Package pdftex.def Info: Teoria.pdf , page123 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 123>
+Package pdftex.def Info: Teoria.pdf , page123 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 121>
+Package pdftex.def Info: Teoria.pdf , page121 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 122>
+Package pdftex.def Info: Teoria.pdf , page122 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 123>
+Package pdftex.def Info: Teoria.pdf , page123 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [41
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=894, page=124, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 124>
+Package pdftex.def Info: Teoria.pdf , page124 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 124>
+Package pdftex.def Info: Teoria.pdf , page124 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=895, page=125, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 125>
+Package pdftex.def Info: Teoria.pdf , page125 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 125>
+Package pdftex.def Info: Teoria.pdf , page125 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=896, page=126, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 126>
+Package pdftex.def Info: Teoria.pdf , page126 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 126>
+Package pdftex.def Info: Teoria.pdf , page126 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 124>
+Package pdftex.def Info: Teoria.pdf , page124 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 125>
+Package pdftex.def Info: Teoria.pdf , page125 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 126>
+Package pdftex.def Info: Teoria.pdf , page126 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [42
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=920, page=127, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 127>
+Package pdftex.def Info: Teoria.pdf , page127 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 127>
+Package pdftex.def Info: Teoria.pdf , page127 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=921, page=128, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 128>
+Package pdftex.def Info: Teoria.pdf , page128 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 128>
+Package pdftex.def Info: Teoria.pdf , page128 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=922, page=129, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 129>
+Package pdftex.def Info: Teoria.pdf , page129 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 129>
+Package pdftex.def Info: Teoria.pdf , page129 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 127>
+Package pdftex.def Info: Teoria.pdf , page127 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 128>
+Package pdftex.def Info: Teoria.pdf , page128 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 129>
+Package pdftex.def Info: Teoria.pdf , page129 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [43
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=930, page=130, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 130>
+Package pdftex.def Info: Teoria.pdf , page130 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 130>
+Package pdftex.def Info: Teoria.pdf , page130 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=931, page=131, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 131>
+Package pdftex.def Info: Teoria.pdf , page131 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 131>
+Package pdftex.def Info: Teoria.pdf , page131 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=932, page=132, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 132>
+Package pdftex.def Info: Teoria.pdf , page132 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 132>
+Package pdftex.def Info: Teoria.pdf , page132 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 130>
+Package pdftex.def Info: Teoria.pdf , page130 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 131>
+Package pdftex.def Info: Teoria.pdf , page131 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 132>
+Package pdftex.def Info: Teoria.pdf , page132 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [44
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=939, page=133, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 133>
+Package pdftex.def Info: Teoria.pdf , page133 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 133>
+Package pdftex.def Info: Teoria.pdf , page133 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=940, page=134, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 134>
+Package pdftex.def Info: Teoria.pdf , page134 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 134>
+Package pdftex.def Info: Teoria.pdf , page134 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=941, page=135, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 135>
+Package pdftex.def Info: Teoria.pdf , page135 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 135>
+Package pdftex.def Info: Teoria.pdf , page135 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 133>
+Package pdftex.def Info: Teoria.pdf , page133 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 134>
+Package pdftex.def Info: Teoria.pdf , page134 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 135>
+Package pdftex.def Info: Teoria.pdf , page135 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [45
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=950, page=136, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 136>
+Package pdftex.def Info: Teoria.pdf , page136 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 136>
+Package pdftex.def Info: Teoria.pdf , page136 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=951, page=137, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 137>
+Package pdftex.def Info: Teoria.pdf , page137 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 137>
+Package pdftex.def Info: Teoria.pdf , page137 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=952, page=138, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 138>
+Package pdftex.def Info: Teoria.pdf , page138 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 138>
+Package pdftex.def Info: Teoria.pdf , page138 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 136>
+Package pdftex.def Info: Teoria.pdf , page136 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 137>
+Package pdftex.def Info: Teoria.pdf , page137 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 138>
+Package pdftex.def Info: Teoria.pdf , page138 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [46
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=966, page=139, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 139>
+Package pdftex.def Info: Teoria.pdf , page139 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 139>
+Package pdftex.def Info: Teoria.pdf , page139 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=967, page=140, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 140>
+Package pdftex.def Info: Teoria.pdf , page140 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 140>
+Package pdftex.def Info: Teoria.pdf , page140 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=968, page=141, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 141>
+Package pdftex.def Info: Teoria.pdf , page141 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 141>
+Package pdftex.def Info: Teoria.pdf , page141 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 139>
+Package pdftex.def Info: Teoria.pdf , page139 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 140>
+Package pdftex.def Info: Teoria.pdf , page140 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 141>
+Package pdftex.def Info: Teoria.pdf , page141 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [47
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=973, page=142, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 142>
+Package pdftex.def Info: Teoria.pdf , page142 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 142>
+Package pdftex.def Info: Teoria.pdf , page142 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=974, page=143, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 143>
+Package pdftex.def Info: Teoria.pdf , page143 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 143>
+Package pdftex.def Info: Teoria.pdf , page143 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=975, page=144, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 144>
+Package pdftex.def Info: Teoria.pdf , page144 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 144>
+Package pdftex.def Info: Teoria.pdf , page144 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 142>
+Package pdftex.def Info: Teoria.pdf , page142 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 143>
+Package pdftex.def Info: Teoria.pdf , page143 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 144>
+Package pdftex.def Info: Teoria.pdf , page144 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [48
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=980, page=145, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 145>
+Package pdftex.def Info: Teoria.pdf , page145 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 145>
+Package pdftex.def Info: Teoria.pdf , page145 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=981, page=146, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 146>
+Package pdftex.def Info: Teoria.pdf , page146 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 146>
+Package pdftex.def Info: Teoria.pdf , page146 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=982, page=147, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 147>
+Package pdftex.def Info: Teoria.pdf , page147 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 147>
+Package pdftex.def Info: Teoria.pdf , page147 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 145>
+Package pdftex.def Info: Teoria.pdf , page145 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 146>
+Package pdftex.def Info: Teoria.pdf , page146 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 147>
+Package pdftex.def Info: Teoria.pdf , page147 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [49
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=987, page=148, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 148>
+Package pdftex.def Info: Teoria.pdf , page148 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 148>
+Package pdftex.def Info: Teoria.pdf , page148 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=988, page=149, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 149>
+Package pdftex.def Info: Teoria.pdf , page149 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 149>
+Package pdftex.def Info: Teoria.pdf , page149 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=989, page=150, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 150>
+Package pdftex.def Info: Teoria.pdf , page150 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 150>
+Package pdftex.def Info: Teoria.pdf , page150 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 148>
+Package pdftex.def Info: Teoria.pdf , page148 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 149>
+Package pdftex.def Info: Teoria.pdf , page149 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 150>
+Package pdftex.def Info: Teoria.pdf , page150 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [50
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=993, page=151, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 151>
+Package pdftex.def Info: Teoria.pdf , page151 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 151>
+Package pdftex.def Info: Teoria.pdf , page151 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=994, page=152, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 152>
+Package pdftex.def Info: Teoria.pdf , page152 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 152>
+Package pdftex.def Info: Teoria.pdf , page152 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=995, page=153, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 153>
+Package pdftex.def Info: Teoria.pdf , page153 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 153>
+Package pdftex.def Info: Teoria.pdf , page153 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 151>
+Package pdftex.def Info: Teoria.pdf , page151 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 152>
+Package pdftex.def Info: Teoria.pdf , page152 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 153>
+Package pdftex.def Info: Teoria.pdf , page153 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [51
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1003, page=154, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 154>
+Package pdftex.def Info: Teoria.pdf , page154 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 154>
+Package pdftex.def Info: Teoria.pdf , page154 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1004, page=155, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 155>
+Package pdftex.def Info: Teoria.pdf , page155 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 155>
+Package pdftex.def Info: Teoria.pdf , page155 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1005, page=156, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 156>
+Package pdftex.def Info: Teoria.pdf , page156 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 156>
+Package pdftex.def Info: Teoria.pdf , page156 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 154>
+Package pdftex.def Info: Teoria.pdf , page154 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 155>
+Package pdftex.def Info: Teoria.pdf , page155 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 156>
+Package pdftex.def Info: Teoria.pdf , page156 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [52
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1009, page=157, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 157>
+Package pdftex.def Info: Teoria.pdf , page157 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 157>
+Package pdftex.def Info: Teoria.pdf , page157 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1010, page=158, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 158>
+Package pdftex.def Info: Teoria.pdf , page158 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 158>
+Package pdftex.def Info: Teoria.pdf , page158 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1011, page=159, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 159>
+Package pdftex.def Info: Teoria.pdf , page159 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 159>
+Package pdftex.def Info: Teoria.pdf , page159 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 157>
+Package pdftex.def Info: Teoria.pdf , page157 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 158>
+Package pdftex.def Info: Teoria.pdf , page158 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 159>
+Package pdftex.def Info: Teoria.pdf , page159 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [53
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1015, page=160, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 160>
+Package pdftex.def Info: Teoria.pdf , page160 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 160>
+Package pdftex.def Info: Teoria.pdf , page160 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1016, page=161, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 161>
+Package pdftex.def Info: Teoria.pdf , page161 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 161>
+Package pdftex.def Info: Teoria.pdf , page161 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1017, page=162, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 162>
+Package pdftex.def Info: Teoria.pdf , page162 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 162>
+Package pdftex.def Info: Teoria.pdf , page162 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 160>
+Package pdftex.def Info: Teoria.pdf , page160 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 161>
+Package pdftex.def Info: Teoria.pdf , page161 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 162>
+Package pdftex.def Info: Teoria.pdf , page162 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [54
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1062, page=163, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 163>
+Package pdftex.def Info: Teoria.pdf , page163 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 163>
+Package pdftex.def Info: Teoria.pdf , page163 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1063, page=164, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 164>
+Package pdftex.def Info: Teoria.pdf , page164 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 164>
+Package pdftex.def Info: Teoria.pdf , page164 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1064, page=165, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 165>
+Package pdftex.def Info: Teoria.pdf , page165 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 165>
+Package pdftex.def Info: Teoria.pdf , page165 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 163>
+Package pdftex.def Info: Teoria.pdf , page163 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 164>
+Package pdftex.def Info: Teoria.pdf , page164 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 165>
+Package pdftex.def Info: Teoria.pdf , page165 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [55
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1095, page=166, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 166>
+Package pdftex.def Info: Teoria.pdf , page166 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 166>
+Package pdftex.def Info: Teoria.pdf , page166 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1096, page=167, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 167>
+Package pdftex.def Info: Teoria.pdf , page167 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 167>
+Package pdftex.def Info: Teoria.pdf , page167 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1097, page=168, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 168>
+Package pdftex.def Info: Teoria.pdf , page168 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 168>
+Package pdftex.def Info: Teoria.pdf , page168 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 166>
+Package pdftex.def Info: Teoria.pdf , page166 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 167>
+Package pdftex.def Info: Teoria.pdf , page167 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 168>
+Package pdftex.def Info: Teoria.pdf , page168 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [56
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1122, page=169, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 169>
+Package pdftex.def Info: Teoria.pdf , page169 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 169>
+Package pdftex.def Info: Teoria.pdf , page169 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1123, page=170, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 170>
+Package pdftex.def Info: Teoria.pdf , page170 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 170>
+Package pdftex.def Info: Teoria.pdf , page170 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1124, page=171, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 171>
+Package pdftex.def Info: Teoria.pdf , page171 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 171>
+Package pdftex.def Info: Teoria.pdf , page171 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 169>
+Package pdftex.def Info: Teoria.pdf , page169 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 170>
+Package pdftex.def Info: Teoria.pdf , page170 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 171>
+Package pdftex.def Info: Teoria.pdf , page171 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [57
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1140, page=172, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 172>
+Package pdftex.def Info: Teoria.pdf , page172 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 172>
+Package pdftex.def Info: Teoria.pdf , page172 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1141, page=173, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 173>
+Package pdftex.def Info: Teoria.pdf , page173 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 173>
+Package pdftex.def Info: Teoria.pdf , page173 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1142, page=174, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 174>
+Package pdftex.def Info: Teoria.pdf , page174 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 174>
+Package pdftex.def Info: Teoria.pdf , page174 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 172>
+Package pdftex.def Info: Teoria.pdf , page172 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 173>
+Package pdftex.def Info: Teoria.pdf , page173 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 174>
+Package pdftex.def Info: Teoria.pdf , page174 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [58
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1153, page=175, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 175>
+Package pdftex.def Info: Teoria.pdf , page175 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 175>
+Package pdftex.def Info: Teoria.pdf , page175 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1154, page=176, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 176>
+Package pdftex.def Info: Teoria.pdf , page176 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 176>
+Package pdftex.def Info: Teoria.pdf , page176 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1155, page=177, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 177>
+Package pdftex.def Info: Teoria.pdf , page177 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 177>
+Package pdftex.def Info: Teoria.pdf , page177 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 175>
+Package pdftex.def Info: Teoria.pdf , page175 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 176>
+Package pdftex.def Info: Teoria.pdf , page176 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 177>
+Package pdftex.def Info: Teoria.pdf , page177 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [59
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1163, page=178, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 178>
+Package pdftex.def Info: Teoria.pdf , page178 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 178>
+Package pdftex.def Info: Teoria.pdf , page178 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1164, page=179, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 179>
+Package pdftex.def Info: Teoria.pdf , page179 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 179>
+Package pdftex.def Info: Teoria.pdf , page179 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1165, page=180, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 180>
+Package pdftex.def Info: Teoria.pdf , page180 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 180>
+Package pdftex.def Info: Teoria.pdf , page180 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 178>
+Package pdftex.def Info: Teoria.pdf , page178 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 179>
+Package pdftex.def Info: Teoria.pdf , page179 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 180>
+Package pdftex.def Info: Teoria.pdf , page180 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [60
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1170, page=181, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 181>
+Package pdftex.def Info: Teoria.pdf , page181 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 181>
+Package pdftex.def Info: Teoria.pdf , page181 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1171, page=182, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 182>
+Package pdftex.def Info: Teoria.pdf , page182 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 182>
+Package pdftex.def Info: Teoria.pdf , page182 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1172, page=183, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 183>
+Package pdftex.def Info: Teoria.pdf , page183 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 183>
+Package pdftex.def Info: Teoria.pdf , page183 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 181>
+Package pdftex.def Info: Teoria.pdf , page181 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 182>
+Package pdftex.def Info: Teoria.pdf , page182 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 183>
+Package pdftex.def Info: Teoria.pdf , page183 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [61
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1192, page=184, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 184>
+Package pdftex.def Info: Teoria.pdf , page184 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 184>
+Package pdftex.def Info: Teoria.pdf , page184 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1193, page=185, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 185>
+Package pdftex.def Info: Teoria.pdf , page185 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 185>
+Package pdftex.def Info: Teoria.pdf , page185 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1194, page=186, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 186>
+Package pdftex.def Info: Teoria.pdf , page186 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 186>
+Package pdftex.def Info: Teoria.pdf , page186 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 184>
+Package pdftex.def Info: Teoria.pdf , page184 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 185>
+Package pdftex.def Info: Teoria.pdf , page185 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 186>
+Package pdftex.def Info: Teoria.pdf , page186 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [62
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1200, page=187, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 187>
+Package pdftex.def Info: Teoria.pdf , page187 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 187>
+Package pdftex.def Info: Teoria.pdf , page187 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1201, page=188, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 188>
+Package pdftex.def Info: Teoria.pdf , page188 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 188>
+Package pdftex.def Info: Teoria.pdf , page188 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1202, page=189, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 189>
+Package pdftex.def Info: Teoria.pdf , page189 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 189>
+Package pdftex.def Info: Teoria.pdf , page189 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 187>
+Package pdftex.def Info: Teoria.pdf , page187 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 188>
+Package pdftex.def Info: Teoria.pdf , page188 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 189>
+Package pdftex.def Info: Teoria.pdf , page189 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [63
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1208, page=190, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 190>
+Package pdftex.def Info: Teoria.pdf , page190 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 190>
+Package pdftex.def Info: Teoria.pdf , page190 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1209, page=191, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 191>
+Package pdftex.def Info: Teoria.pdf , page191 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 191>
+Package pdftex.def Info: Teoria.pdf , page191 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1210, page=192, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 192>
+Package pdftex.def Info: Teoria.pdf , page192 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 192>
+Package pdftex.def Info: Teoria.pdf , page192 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 190>
+Package pdftex.def Info: Teoria.pdf , page190 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 191>
+Package pdftex.def Info: Teoria.pdf , page191 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 192>
+Package pdftex.def Info: Teoria.pdf , page192 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [64
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1217, page=193, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 193>
+Package pdftex.def Info: Teoria.pdf , page193 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 193>
+Package pdftex.def Info: Teoria.pdf , page193 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1218, page=194, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 194>
+Package pdftex.def Info: Teoria.pdf , page194 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 194>
+Package pdftex.def Info: Teoria.pdf , page194 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1219, page=195, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 195>
+Package pdftex.def Info: Teoria.pdf , page195 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 195>
+Package pdftex.def Info: Teoria.pdf , page195 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 193>
+Package pdftex.def Info: Teoria.pdf , page193 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 194>
+Package pdftex.def Info: Teoria.pdf , page194 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 195>
+Package pdftex.def Info: Teoria.pdf , page195 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [65
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1230, page=196, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 196>
+Package pdftex.def Info: Teoria.pdf , page196 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 196>
+Package pdftex.def Info: Teoria.pdf , page196 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1231, page=197, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 197>
+Package pdftex.def Info: Teoria.pdf , page197 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 197>
+Package pdftex.def Info: Teoria.pdf , page197 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1232, page=198, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 198>
+Package pdftex.def Info: Teoria.pdf , page198 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 198>
+Package pdftex.def Info: Teoria.pdf , page198 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 196>
+Package pdftex.def Info: Teoria.pdf , page196 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 197>
+Package pdftex.def Info: Teoria.pdf , page197 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 198>
+Package pdftex.def Info: Teoria.pdf , page198 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [66
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1245, page=199, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 199>
+Package pdftex.def Info: Teoria.pdf , page199 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 199>
+Package pdftex.def Info: Teoria.pdf , page199 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1246, page=200, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 200>
+Package pdftex.def Info: Teoria.pdf , page200 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 200>
+Package pdftex.def Info: Teoria.pdf , page200 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1247, page=201, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 201>
+Package pdftex.def Info: Teoria.pdf , page201 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 201>
+Package pdftex.def Info: Teoria.pdf , page201 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 199>
+Package pdftex.def Info: Teoria.pdf , page199 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 200>
+Package pdftex.def Info: Teoria.pdf , page200 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 201>
+Package pdftex.def Info: Teoria.pdf , page201 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [67
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1252, page=202, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 202>
+Package pdftex.def Info: Teoria.pdf , page202 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 202>
+Package pdftex.def Info: Teoria.pdf , page202 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1253, page=203, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 203>
+Package pdftex.def Info: Teoria.pdf , page203 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 203>
+Package pdftex.def Info: Teoria.pdf , page203 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1254, page=204, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 204>
+Package pdftex.def Info: Teoria.pdf , page204 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 204>
+Package pdftex.def Info: Teoria.pdf , page204 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 202>
+Package pdftex.def Info: Teoria.pdf , page202 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 203>
+Package pdftex.def Info: Teoria.pdf , page203 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 204>
+Package pdftex.def Info: Teoria.pdf , page204 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [68
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1265, page=205, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 205>
+Package pdftex.def Info: Teoria.pdf , page205 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 205>
+Package pdftex.def Info: Teoria.pdf , page205 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1266, page=206, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 206>
+Package pdftex.def Info: Teoria.pdf , page206 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 206>
+Package pdftex.def Info: Teoria.pdf , page206 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1267, page=207, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 207>
+Package pdftex.def Info: Teoria.pdf , page207 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 207>
+Package pdftex.def Info: Teoria.pdf , page207 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 205>
+Package pdftex.def Info: Teoria.pdf , page205 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 206>
+Package pdftex.def Info: Teoria.pdf , page206 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 207>
+Package pdftex.def Info: Teoria.pdf , page207 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [69
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1273, page=208, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 208>
+Package pdftex.def Info: Teoria.pdf , page208 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 208>
+Package pdftex.def Info: Teoria.pdf , page208 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1274, page=209, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 209>
+Package pdftex.def Info: Teoria.pdf , page209 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 209>
+Package pdftex.def Info: Teoria.pdf , page209 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1275, page=210, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 210>
+Package pdftex.def Info: Teoria.pdf , page210 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 210>
+Package pdftex.def Info: Teoria.pdf , page210 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 208>
+Package pdftex.def Info: Teoria.pdf , page208 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 209>
+Package pdftex.def Info: Teoria.pdf , page209 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 210>
+Package pdftex.def Info: Teoria.pdf , page210 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [70
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1279, page=211, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 211>
+Package pdftex.def Info: Teoria.pdf , page211 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 211>
+Package pdftex.def Info: Teoria.pdf , page211 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1280, page=212, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 212>
+Package pdftex.def Info: Teoria.pdf , page212 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 212>
+Package pdftex.def Info: Teoria.pdf , page212 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1281, page=213, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 213>
+Package pdftex.def Info: Teoria.pdf , page213 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 213>
+Package pdftex.def Info: Teoria.pdf , page213 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 211>
+Package pdftex.def Info: Teoria.pdf , page211 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 212>
+Package pdftex.def Info: Teoria.pdf , page212 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 213>
+Package pdftex.def Info: Teoria.pdf , page213 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [71
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1290, page=214, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 214>
+Package pdftex.def Info: Teoria.pdf , page214 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 214>
+Package pdftex.def Info: Teoria.pdf , page214 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1291, page=215, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 215>
+Package pdftex.def Info: Teoria.pdf , page215 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 215>
+Package pdftex.def Info: Teoria.pdf , page215 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1292, page=216, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 216>
+Package pdftex.def Info: Teoria.pdf , page216 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 216>
+Package pdftex.def Info: Teoria.pdf , page216 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 214>
+Package pdftex.def Info: Teoria.pdf , page214 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 215>
+Package pdftex.def Info: Teoria.pdf , page215 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 216>
+Package pdftex.def Info: Teoria.pdf , page216 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [72
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1297, page=217, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 217>
+Package pdftex.def Info: Teoria.pdf , page217 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 217>
+Package pdftex.def Info: Teoria.pdf , page217 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1298, page=218, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 218>
+Package pdftex.def Info: Teoria.pdf , page218 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 218>
+Package pdftex.def Info: Teoria.pdf , page218 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1299, page=219, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 219>
+Package pdftex.def Info: Teoria.pdf , page219 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 219>
+Package pdftex.def Info: Teoria.pdf , page219 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 217>
+Package pdftex.def Info: Teoria.pdf , page217 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 218>
+Package pdftex.def Info: Teoria.pdf , page218 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 219>
+Package pdftex.def Info: Teoria.pdf , page219 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [73
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1306, page=220, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 220>
+Package pdftex.def Info: Teoria.pdf , page220 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 220>
+Package pdftex.def Info: Teoria.pdf , page220 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1307, page=221, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 221>
+Package pdftex.def Info: Teoria.pdf , page221 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 221>
+Package pdftex.def Info: Teoria.pdf , page221 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1308, page=222, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 222>
+Package pdftex.def Info: Teoria.pdf , page222 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 222>
+Package pdftex.def Info: Teoria.pdf , page222 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 220>
+Package pdftex.def Info: Teoria.pdf , page220 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 221>
+Package pdftex.def Info: Teoria.pdf , page221 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 222>
+Package pdftex.def Info: Teoria.pdf , page222 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [74
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1312, page=223, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 223>
+Package pdftex.def Info: Teoria.pdf , page223 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 223>
+Package pdftex.def Info: Teoria.pdf , page223 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1313, page=224, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 224>
+Package pdftex.def Info: Teoria.pdf , page224 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 224>
+Package pdftex.def Info: Teoria.pdf , page224 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1314, page=225, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 225>
+Package pdftex.def Info: Teoria.pdf , page225 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 225>
+Package pdftex.def Info: Teoria.pdf , page225 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 223>
+Package pdftex.def Info: Teoria.pdf , page223 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 224>
+Package pdftex.def Info: Teoria.pdf , page224 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 225>
+Package pdftex.def Info: Teoria.pdf , page225 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [75
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1319, page=226, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 226>
+Package pdftex.def Info: Teoria.pdf , page226 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 226>
+Package pdftex.def Info: Teoria.pdf , page226 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1320, page=227, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 227>
+Package pdftex.def Info: Teoria.pdf , page227 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 227>
+Package pdftex.def Info: Teoria.pdf , page227 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1321, page=228, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 228>
+Package pdftex.def Info: Teoria.pdf , page228 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 228>
+Package pdftex.def Info: Teoria.pdf , page228 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 226>
+Package pdftex.def Info: Teoria.pdf , page226 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 227>
+Package pdftex.def Info: Teoria.pdf , page227 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 228>
+Package pdftex.def Info: Teoria.pdf , page228 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [76
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1329, page=229, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 229>
+Package pdftex.def Info: Teoria.pdf , page229 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 229>
+Package pdftex.def Info: Teoria.pdf , page229 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1330, page=230, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 230>
+Package pdftex.def Info: Teoria.pdf , page230 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 230>
+Package pdftex.def Info: Teoria.pdf , page230 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1331, page=231, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 231>
+Package pdftex.def Info: Teoria.pdf , page231 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 231>
+Package pdftex.def Info: Teoria.pdf , page231 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 229>
+Package pdftex.def Info: Teoria.pdf , page229 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 230>
+Package pdftex.def Info: Teoria.pdf , page230 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 231>
+Package pdftex.def Info: Teoria.pdf , page231 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [77
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1340, page=232, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 232>
+Package pdftex.def Info: Teoria.pdf , page232 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 232>
+Package pdftex.def Info: Teoria.pdf , page232 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1341, page=233, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 233>
+Package pdftex.def Info: Teoria.pdf , page233 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 233>
+Package pdftex.def Info: Teoria.pdf , page233 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1342, page=234, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 234>
+Package pdftex.def Info: Teoria.pdf , page234 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 234>
+Package pdftex.def Info: Teoria.pdf , page234 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 232>
+Package pdftex.def Info: Teoria.pdf , page232 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 233>
+Package pdftex.def Info: Teoria.pdf , page233 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 234>
+Package pdftex.def Info: Teoria.pdf , page234 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [78
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1346, page=235, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 235>
+Package pdftex.def Info: Teoria.pdf , page235 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 235>
+Package pdftex.def Info: Teoria.pdf , page235 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1347, page=236, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 236>
+Package pdftex.def Info: Teoria.pdf , page236 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 236>
+Package pdftex.def Info: Teoria.pdf , page236 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1348, page=237, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 237>
+Package pdftex.def Info: Teoria.pdf , page237 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 237>
+Package pdftex.def Info: Teoria.pdf , page237 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 235>
+Package pdftex.def Info: Teoria.pdf , page235 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 236>
+Package pdftex.def Info: Teoria.pdf , page236 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 237>
+Package pdftex.def Info: Teoria.pdf , page237 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [79
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1355, page=238, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 238>
+Package pdftex.def Info: Teoria.pdf , page238 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 238>
+Package pdftex.def Info: Teoria.pdf , page238 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1356, page=239, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 239>
+Package pdftex.def Info: Teoria.pdf , page239 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 239>
+Package pdftex.def Info: Teoria.pdf , page239 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1357, page=240, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 240>
+Package pdftex.def Info: Teoria.pdf , page240 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 240>
+Package pdftex.def Info: Teoria.pdf , page240 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 238>
+Package pdftex.def Info: Teoria.pdf , page238 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 239>
+Package pdftex.def Info: Teoria.pdf , page239 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 240>
+Package pdftex.def Info: Teoria.pdf , page240 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [80
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1364, page=241, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 241>
+Package pdftex.def Info: Teoria.pdf , page241 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 241>
+Package pdftex.def Info: Teoria.pdf , page241 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1365, page=242, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 242>
+Package pdftex.def Info: Teoria.pdf , page242 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 242>
+Package pdftex.def Info: Teoria.pdf , page242 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1366, page=243, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 243>
+Package pdftex.def Info: Teoria.pdf , page243 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 243>
+Package pdftex.def Info: Teoria.pdf , page243 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 241>
+Package pdftex.def Info: Teoria.pdf , page241 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 242>
+Package pdftex.def Info: Teoria.pdf , page242 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 243>
+Package pdftex.def Info: Teoria.pdf , page243 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [81
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1404, page=244, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 244>
+Package pdftex.def Info: Teoria.pdf , page244 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 244>
+Package pdftex.def Info: Teoria.pdf , page244 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1405, page=245, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 245>
+Package pdftex.def Info: Teoria.pdf , page245 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 245>
+Package pdftex.def Info: Teoria.pdf , page245 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1406, page=246, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 246>
+Package pdftex.def Info: Teoria.pdf , page246 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 246>
+Package pdftex.def Info: Teoria.pdf , page246 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 244>
+Package pdftex.def Info: Teoria.pdf , page244 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 245>
+Package pdftex.def Info: Teoria.pdf , page245 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 246>
+Package pdftex.def Info: Teoria.pdf , page246 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [82
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1448, page=247, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 247>
+Package pdftex.def Info: Teoria.pdf , page247 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 247>
+Package pdftex.def Info: Teoria.pdf , page247 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1449, page=248, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 248>
+Package pdftex.def Info: Teoria.pdf , page248 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 248>
+Package pdftex.def Info: Teoria.pdf , page248 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1450, page=249, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 249>
+Package pdftex.def Info: Teoria.pdf , page249 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 249>
+Package pdftex.def Info: Teoria.pdf , page249 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 247>
+Package pdftex.def Info: Teoria.pdf , page247 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 248>
+Package pdftex.def Info: Teoria.pdf , page248 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 249>
+Package pdftex.def Info: Teoria.pdf , page249 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [83
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1464, page=250, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 250>
+Package pdftex.def Info: Teoria.pdf , page250 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 250>
+Package pdftex.def Info: Teoria.pdf , page250 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1465, page=251, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 251>
+Package pdftex.def Info: Teoria.pdf , page251 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 251>
+Package pdftex.def Info: Teoria.pdf , page251 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1466, page=252, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 252>
+Package pdftex.def Info: Teoria.pdf , page252 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 252>
+Package pdftex.def Info: Teoria.pdf , page252 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 250>
+Package pdftex.def Info: Teoria.pdf , page250 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 251>
+Package pdftex.def Info: Teoria.pdf , page251 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 252>
+Package pdftex.def Info: Teoria.pdf , page252 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [84
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1486, page=253, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 253>
+Package pdftex.def Info: Teoria.pdf , page253 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 253>
+Package pdftex.def Info: Teoria.pdf , page253 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1487, page=254, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 254>
+Package pdftex.def Info: Teoria.pdf , page254 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 254>
+Package pdftex.def Info: Teoria.pdf , page254 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1488, page=255, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 255>
+Package pdftex.def Info: Teoria.pdf , page255 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 255>
+Package pdftex.def Info: Teoria.pdf , page255 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 253>
+Package pdftex.def Info: Teoria.pdf , page253 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 254>
+Package pdftex.def Info: Teoria.pdf , page254 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 255>
+Package pdftex.def Info: Teoria.pdf , page255 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [85
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1525, page=256, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 256>
+Package pdftex.def Info: Teoria.pdf , page256 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 256>
+Package pdftex.def Info: Teoria.pdf , page256 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1526, page=257, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 257>
+Package pdftex.def Info: Teoria.pdf , page257 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 257>
+Package pdftex.def Info: Teoria.pdf , page257 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1527, page=258, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 258>
+Package pdftex.def Info: Teoria.pdf , page258 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 258>
+Package pdftex.def Info: Teoria.pdf , page258 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 256>
+Package pdftex.def Info: Teoria.pdf , page256 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 257>
+Package pdftex.def Info: Teoria.pdf , page257 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 258>
+Package pdftex.def Info: Teoria.pdf , page258 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [86
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1537, page=259, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 259>
+Package pdftex.def Info: Teoria.pdf , page259 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 259>
+Package pdftex.def Info: Teoria.pdf , page259 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1538, page=260, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 260>
+Package pdftex.def Info: Teoria.pdf , page260 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 260>
+Package pdftex.def Info: Teoria.pdf , page260 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1539, page=261, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 261>
+Package pdftex.def Info: Teoria.pdf , page261 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 261>
+Package pdftex.def Info: Teoria.pdf , page261 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 259>
+Package pdftex.def Info: Teoria.pdf , page259 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 260>
+Package pdftex.def Info: Teoria.pdf , page260 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 261>
+Package pdftex.def Info: Teoria.pdf , page261 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [87
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1547, page=262, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 262>
+Package pdftex.def Info: Teoria.pdf , page262 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 262>
+Package pdftex.def Info: Teoria.pdf , page262 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1548, page=263, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 263>
+Package pdftex.def Info: Teoria.pdf , page263 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 263>
+Package pdftex.def Info: Teoria.pdf , page263 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1549, page=264, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 264>
+Package pdftex.def Info: Teoria.pdf , page264 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 264>
+Package pdftex.def Info: Teoria.pdf , page264 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 262>
+Package pdftex.def Info: Teoria.pdf , page262 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 263>
+Package pdftex.def Info: Teoria.pdf , page263 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 264>
+Package pdftex.def Info: Teoria.pdf , page264 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [88
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1557, page=265, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 265>
+Package pdftex.def Info: Teoria.pdf , page265 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 265>
+Package pdftex.def Info: Teoria.pdf , page265 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1558, page=266, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 266>
+Package pdftex.def Info: Teoria.pdf , page266 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 266>
+Package pdftex.def Info: Teoria.pdf , page266 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1559, page=267, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 267>
+Package pdftex.def Info: Teoria.pdf , page267 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 267>
+Package pdftex.def Info: Teoria.pdf , page267 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 265>
+Package pdftex.def Info: Teoria.pdf , page265 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 266>
+Package pdftex.def Info: Teoria.pdf , page266 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 267>
+Package pdftex.def Info: Teoria.pdf , page267 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [89
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1569, page=268, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 268>
+Package pdftex.def Info: Teoria.pdf , page268 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 268>
+Package pdftex.def Info: Teoria.pdf , page268 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1570, page=269, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 269>
+Package pdftex.def Info: Teoria.pdf , page269 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 269>
+Package pdftex.def Info: Teoria.pdf , page269 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1571, page=270, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 270>
+Package pdftex.def Info: Teoria.pdf , page270 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 270>
+Package pdftex.def Info: Teoria.pdf , page270 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 268>
+Package pdftex.def Info: Teoria.pdf , page268 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 269>
+Package pdftex.def Info: Teoria.pdf , page269 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 270>
+Package pdftex.def Info: Teoria.pdf , page270 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [90
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1579, page=271, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 271>
+Package pdftex.def Info: Teoria.pdf , page271 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 271>
+Package pdftex.def Info: Teoria.pdf , page271 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1580, page=272, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 272>
+Package pdftex.def Info: Teoria.pdf , page272 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 272>
+Package pdftex.def Info: Teoria.pdf , page272 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1581, page=273, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 273>
+Package pdftex.def Info: Teoria.pdf , page273 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 273>
+Package pdftex.def Info: Teoria.pdf , page273 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 271>
+Package pdftex.def Info: Teoria.pdf , page271 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 272>
+Package pdftex.def Info: Teoria.pdf , page272 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 273>
+Package pdftex.def Info: Teoria.pdf , page273 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [91
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>]
+<Teoria.pdf, id=1589, page=274, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 274>
+Package pdftex.def Info: Teoria.pdf , page274 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 274>
+Package pdftex.def Info: Teoria.pdf , page274 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1590, page=275, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 275>
+Package pdftex.def Info: Teoria.pdf , page275 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 275>
+Package pdftex.def Info: Teoria.pdf , page275 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+<Teoria.pdf, id=1591, page=276, 963.6pt x 542.025pt>
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 276>
+Package pdftex.def Info: Teoria.pdf , page276 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 276>
+Package pdftex.def Info: Teoria.pdf , page276 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 274>
+Package pdftex.def Info: Teoria.pdf , page274 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 275>
+Package pdftex.def Info: Teoria.pdf , page275 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+File: Teoria.pdf Graphic file (type pdf)
+<use Teoria.pdf, page 276>
+Package pdftex.def Info: Teoria.pdf , page276 used on input line 5.
+(pdftex.def)             Requested size: 500.78082pt x 281.68921pt.
+ [92
+
+ <./Teoria.pdf> <./Teoria.pdf> <./Teoria.pdf>] (build/Apuntes.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 3536 strings out of 474116
+ 68243 string characters out of 5743682
+ 1927187 words of memory out of 5000000
+ 25901 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,17n,79p,299b,427s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on build/Apuntes.pdf (92 pages, 18990495 bytes).
+PDF statistics:
+ 1602 PDF objects out of 1728 (max. 8388607)
+ 654 compressed objects within 7 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1396 words of extra memory for PDF output out of 10000 (max. 10000000)
+
