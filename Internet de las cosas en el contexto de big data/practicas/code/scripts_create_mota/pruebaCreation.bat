@@ -1,0 +1,1 @@
+curl 172.16.240.27:2310/v2/entities -s -S --header "Content-Type: application/json" -d @jsonpruebaCreation.txt
