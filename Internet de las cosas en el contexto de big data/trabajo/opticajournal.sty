@@ -15,15 +15,4 @@
 
 % Boolean for Optica ONLY: choosing between Letters and Memorandum
 \newboolean{memo}
-
-% Set bibliography style
-\AtBeginDocument{\ifthenelse{\boolean{shortarticle}}
-  {\bibliographystyle{opticajnlnt}
-   \ifthenelse{\boolean{memo}}
-     {\renewcommand*{\journalshorttype}{Memorandum}}
-     {}
-  }
-  {\bibliographystyle{opticajnl}}
-}
-
 \endinput

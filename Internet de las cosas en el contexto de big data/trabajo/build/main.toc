@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Aplicaciones generales}{2}{section.2}%
+\contentsline {subsection}{\numberline {A}\textit {Edge computing} en salud}{3}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Monitorización de pacientes}{3}{section.3}%
+\contentsline {subsection}{\numberline {A}\textit {Edge computing} como solución}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {B}Internet de las Cosas Médicas}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {C}Casos prácticos}{4}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {C.1}Pacientes crónicos}{4}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {C.2}Telemedicina}{5}{subsubsection.3.3.2}%
+\contentsline {section}{\numberline {4}Privacidad y gobernanza del dato médico}{6}{section.4}%
+\contentsline {section}{\numberline {5}Retos y líneas de trabajo futuras}{7}{section.5}%
+\contentsline {section}{\numberline {6}Conclusión}{8}{section.6}%
+\contentsline {section}{Referencias}{8}{section.6}%

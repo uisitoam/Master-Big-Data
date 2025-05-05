@@ -13,9 +13,9 @@
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{url}
-\usepackage{xcolor}
-\colorlet{mdtRed}{red!50!black}
-\RequirePackage[colorlinks=true, allcolors=mdtRed]{hyperref}
+\RequirePackage[table,xcdraw]{xcolor} % colores (incluye colortbl la cargarlo con table)
+\definecolor{blueish}{HTML}{007bd1}
+\RequirePackage[colorlinks=true, allcolors=blueish]{hyperref}
 
 \newcommand{\headerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
 \newcommand{\titlefont}{\normalfont\sffamily\bfseries\fontsize{21}{23}\selectfont}
@@ -33,7 +33,7 @@
 
 % Set journal type
 \newcommand*{\journal}[1]{%
-  \RequirePackage{legacy-styles/#1}% Choose the corresponding style file
+  \RequirePackage{#1}% Choose the corresponding style file
   \def\journalref{#1}}% Set a reference for the chosen journal type
   
 % Choose article type
@@ -52,7 +52,6 @@
 
 % Graphics, tables and other formatting
 \RequirePackage{graphicx, float}
-\RequirePackage[table,xcdraw]{xcolor} % colores (incluye colortbl la cargarlo con table)
 \usepackage{multirow} % redimensionar, unir celdas, ...
 \RequirePackage{caption} % pie de foto
 \RequirePackage{subcaption} % pie de ''subfoto''
@@ -61,10 +60,10 @@
 \RequirePackage{algorithm}
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
-\RequirePackage[left=48pt,%
-                right=42pt,%
-                top=46pt,%
-                bottom=60pt,%
+\RequirePackage[left=75pt,%
+                right=75pt,%
+                top=50pt,%
+                bottom=100pt,%
                 headheight=15pt,%
                 headsep=10pt,%
                 letterpaper]{geometry}%
@@ -84,14 +83,6 @@
 \definecolor{color1}{RGB}{59,90,198} % author email, doi
 % color2 defined by the specific journal style file
 
-% Bibliography
-\RequirePackage[numbers,sort&compress]{natbib}
-\setlength{\bibsep}{0.0pt}
-% bibliography style defined by the specific journal style file
-
-\def\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont}
-\newlength{\biblabelwidth}
-\settowidth{\biblabelwidth}{\bibfont 00. }
 
 % \makeatletter
 \renewcommand\@biblabel[1]{\makebox[\biblabelwidth][l]{#1.}} % Remove brackets from label
@@ -263,30 +254,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \RequirePackage{lineno}
 
 %%%%%%%%%%%%%
-%% LLT: Providing the list of full refs
-% Creating a new bibliography
-\RequirePackage[resetlabels]{multibib}
-\newcites{fullrefs}{Full References}  %% Or whatever the heading might be
-\bibliographystylefullrefs{opticajnl}    %% The full style
-
-% Patching \cite to automatically add cite
-% to fullrefs list
-\RequirePackage{letltxmacro}
-\RequirePackage{xparse}
-\LetLtxMacro\oldcite\cite
-\RenewDocumentCommand{\cite}{O{} O{} m}{\oldcite[#1][#2]{#3}\nocitefullrefs{#3}}
-%% 13 Jul 2016: Patch the same for \citep and \citet
-\LetLtxMacro\oldcitep\citep
-\RenewDocumentCommand{\citep}{O{} O{} m}{\oldcitep[#1][#2]{#3}\nocitefullrefs{#3}}
-\LetLtxMacro\oldcitet\citet
-\RenewDocumentCommand{\citet}{O{} O{} m}{\oldcitet[#1][#2]{#3}\nocitefullrefs{#3}}
-
-% Silence the "citation multiply defined" warning
-\RequirePackage{silence}
-\WarningFilter{natbib}{Citation `}
-\WarningFilter{natbib}{There were multiply}
-\WarningFilter{caption}{Unused \captionsetup}
-
 % Delay certain patches/options till \begin{document} when all the booleans are set
 \RequirePackage{xpatch}
 %% Change pagestyle to fancy after \maketitle

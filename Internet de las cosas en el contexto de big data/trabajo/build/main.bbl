@@ -1,0 +1,3319 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Alshareef2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=320e6c03c0d6a7b1386de09bb3ad5d17}{%
+           family={Alshareef},
+           familyi={A\bibinitperiod},
+           given={Hazzaa\bibnamedelima N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{fullhash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{bibnamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authorbibnamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authornamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authorfullhash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{21565570}
+      \field{issue}{3}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{title}{Current Development, Challenges, and Future Trends in Cloud Computing: A Survey}
+      \field{volume}{14}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.14569/IJACSA.2023.0140337
+      \endverb
+    \endentry
+    \entry{Bajic2019}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=01c117ac64fcba8f43938aa69b7903f4}{%
+           family={Bajic},
+           familyi={B\bibinitperiod},
+           given={Bojana},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d6ea377c34c0eec25a6b398fd421e65}{%
+           family={Cosic},
+           familyi={C\bibinitperiod},
+           given={Ilija},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb74e40428fd040dc36765a9e70c5101}{%
+           family={Katalinic},
+           familyi={K\bibinitperiod},
+           given={Branko},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=939e56c33d1f3ee8ce8cd367e54968bc}{%
+           family={Moraca},
+           familyi={M\bibinitperiod},
+           given={Slobodan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e3f8e0a5ea45b4f16bdc2bfa78b0477}{%
+           family={Lazarevic},
+           familyi={L\bibinitperiod},
+           given={Milovan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=680bd379b62662a8739d5d2653cf5372}{%
+           family={Rikalovic},
+           familyi={R\bibinitperiod},
+           given={Aleksandar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Danube Adria Association for Automation}%
+        {Manufacturing, DAAAM}%
+      }
+      \strng{namehash}{be06c53443dd6a9f1c25757f45f46684}
+      \strng{fullhash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{bibnamehash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{authorbibnamehash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{authornamehash}{be06c53443dd6a9f1c25757f45f46684}
+      \strng{authorfullhash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{17269679}
+      \field{issue}{1}
+      \field{journaltitle}{Annals of DAAAM and Proceedings of the International DAAAM Symposium}
+      \field{title}{Edge computing vs. Cloud computing: Challenges and opportunities in industry 4.0}
+      \field{volume}{30}
+      \field{year}{2019}
+      \field{pages}{864\bibrangedash 871}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.2507/30th.daaam.proceedings.120
+      \endverb
+      \keyw{Cloud Computing,Data Analytics,Edge Computing,Industry 4.0,Internet of Things (IoT)}
+    \endentry
+    \entry{Cao2023}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0979631962d67da3f16e265d34392902}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90f8a7dec91013c744b8df318c2d0cb4}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Wenting},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97a6a6260b50685e877df213b42d0f46}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhixiang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=697fd343883f28bcc58dffdf5acded14}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2ec325965ef3492a7737e21e4aa22c8}
+      \strng{fullhash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{bibnamehash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{authorbibnamehash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{authornamehash}{c2ec325965ef3492a7737e21e4aa22c8}
+      \strng{authorfullhash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01674048}
+      \field{journaltitle}{Computers \& Security}
+      \field{month}{11}
+      \field{title}{Privacy-preserving healthcare monitoring for IoT devices under edge computing}
+      \field{volume}{134}
+      \field{year}{2023}
+      \field{pages}{103464}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cose.2023.103464
+      \endverb
+    \endentry
+    \entry{Carvalho2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f8caeb925304855001e40ffc04f22e41}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Gonçalo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56b958440a1514bef0fa981d5e83a1a0}{%
+           family={Cabral},
+           familyi={C\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=373f111d0e57c3122eb76357f763f269}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Vasco},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=251db60f77d96aa82892e32418380cf1}{%
+           family={Bernardino},
+           familyi={B\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{db0c2aec7bfc2a33c1f44e56e66a9da8}
+      \strng{fullhash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{bibnamehash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{authorbibnamehash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{authornamehash}{db0c2aec7bfc2a33c1f44e56e66a9da8}
+      \strng{authorfullhash}{bf2e9f791c7b4cab9226314c70369a42}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-485X}
+      \field{issue}{5}
+      \field{journaltitle}{Computing}
+      \field{month}{5}
+      \field{title}{Edge computing: current trends, research challenges and future directions}
+      \field{volume}{103}
+      \field{year}{2021}
+      \field{pages}{993\bibrangedash 1023}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/s00607-020-00896-5
+      \endverb
+    \endentry
+    \entry{Chen2014}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fb194450e9046854896c4ca5f2dc8d01}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f96ac342ca3c4d48bb3a476628f38ec7}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Shiwen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33f3892f364ace97b23d47eb1f1eebc0}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yunhao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2eae75f66e5c3ec60399f4c040eab07c}
+      \strng{fullhash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{bibnamehash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{authorbibnamehash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{authornamehash}{2eae75f66e5c3ec60399f4c040eab07c}
+      \strng{authorfullhash}{0440f102283a6234baa6bfac8eb2af9c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1383-469X}
+      \field{issue}{2}
+      \field{journaltitle}{Mobile Networks and Applications}
+      \field{month}{4}
+      \field{title}{Big Data: A Survey}
+      \field{volume}{19}
+      \field{year}{2014}
+      \field{pages}{171\bibrangedash 209}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1007/s11036-013-0489-0
+      \endverb
+    \endentry
+    \entry{Christo2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d716c3fb672f10d8aec508afdccbae3f}{%
+           family={Christo},
+           familyi={C\bibinitperiod},
+           given={Mary\bibnamedelima Subaja},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69793d93fa5ac96bfbb1974d5ecc5e20}{%
+           family={Jesi},
+           familyi={J\bibinitperiod},
+           given={V.\bibnamedelimi Elizabeth},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=beea923f54c8c9ee2f2c43a87ab9f8bb}{%
+           family={Priyadarsini},
+           familyi={P\bibinitperiod},
+           given={Uma},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c6e6d9b9dc3c19b921b805c5b53a647}{%
+           family={Anbarasu},
+           familyi={A\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3dbafe8df2665cbca4449fc80288d4e}{%
+           family={Venugopal},
+           familyi={V\bibinitperiod},
+           given={Hridya},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81584ababc9dfe487baae50ab6f0ca8a}{%
+           family={Karuppiah},
+           familyi={K\bibinitperiod},
+           given={Marimuthu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d48110892b531fd72e8137df72b6d4fc}
+      \strng{fullhash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{bibnamehash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{authorbibnamehash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{authornamehash}{d48110892b531fd72e8137df72b6d4fc}
+      \strng{authorfullhash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-0122}
+      \field{journaltitle}{Security and Communication Networks}
+      \field{month}{10}
+      \field{title}{Ensuring Improved Security in Medical Data Using ECC and Blockchain Technology with Edge Devices}
+      \field{volume}{2021}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1155/2021/6966206
+      \endverb
+    \endentry
+    \entry{Dave2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=97a8d43975d689b036acd41d81b848cb}{%
+           family={Dave},
+           familyi={D\bibinitperiod},
+           given={Rushit},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d4268ba79504e7a9abdca44dc36929b}{%
+           family={Seliya},
+           familyi={S\bibinitperiod},
+           given={Naeem},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fab51c915c2390223ef84e6e39896a5f}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Nyle},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f62a558d3796185c6327835d314c0eeb}
+      \strng{fullhash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{bibnamehash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{authorbibnamehash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{authornamehash}{f62a558d3796185c6327835d314c0eeb}
+      \strng{authorfullhash}{6117fa91ea0d49459136e4f6e570af90}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{x}
+      \field{journaltitle}{Journal of Computer Sciences and Applications}
+      \field{title}{The Benefits of Edge Computing in Healthcare, Smart Cities, and IoT}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{pages}{XX\bibrangedash XX}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.12691/jcsa-9-x-x
+      \endverb
+      \verb{urlraw}
+      \verb http://pubs.sciepub.com/jcsa/9/x/x
+      \endverb
+      \verb{url}
+      \verb http://pubs.sciepub.com/jcsa/9/x/x
+      \endverb
+      \keyw{Internet of Things (IoT),cloud computing,edge computing,healthcare,smart city}
+    \endentry
+    \entry{Ghadi2024}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fcaf52b23a484b88aea3ed91309ebcb8}{%
+           family={Ghadi},
+           familyi={G\bibinitperiod},
+           given={Yazeed\bibnamedelima Yasin},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1aa43370228a3e6ea526796393b0e53}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Syed\bibnamedelimb Faisal\bibnamedelima Abbas},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71a96bfdc453fa6065d37d2faf007da4}{%
+           family={Mazhar},
+           familyi={M\bibinitperiod},
+           given={Tehseen},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd2c3af0b7184ca4d1f4de08da2a8f46}{%
+           family={Shahzad},
+           familyi={S\bibinitperiod},
+           given={Tariq},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50f9dc45e1967ade94812f2e6142b9de}{%
+           family={Ouahada},
+           familyi={O\bibinitperiod},
+           given={Khmaies},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a40229d672c63153ec006f11b0e11d8f}{%
+           family={Hamam},
+           familyi={H\bibinitperiod},
+           given={Habib},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{159683673b857abe51a6815bf7540543}
+      \strng{fullhash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{bibnamehash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{authorbibnamehash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{authornamehash}{159683673b857abe51a6815bf7540543}
+      \strng{authorfullhash}{304a59334759ae83624c7a63ca87a51b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2192-113X}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of Cloud Computing}
+      \field{month}{5}
+      \field{title}{Enhancing patient healthcare with mobile edge computing and 5G: challenges and solutions for secure online health tools}
+      \field{volume}{13}
+      \field{year}{2024}
+      \field{pages}{93}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s13677-024-00654-4
+      \endverb
+    \endentry
+    \entry{Ghazizadeh2024}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bad47f762452c798f63d917150510953}{%
+           family={Ghazizadeh},
+           familyi={G\bibinitperiod},
+           given={Elham},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=360cfe28279a62efa9d35dd5c52ec099}{%
+           family={Naseri},
+           familyi={N\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=249c8cb9f2eb8ed89122b56e0e506eb4}{%
+           family={Deigner},
+           familyi={D\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aec6a52dc947350677d7c56f368d0343}{%
+           family={Rahimi},
+           familyi={R\bibinitperiod},
+           given={Hossein},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07d2a0401232169835bae578ea576e19}{%
+           family={Altintas},
+           familyi={A\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5910a806a3526250ff2cce4cc1a39348}
+      \strng{fullhash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{bibnamehash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{authorbibnamehash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{authornamehash}{5910a806a3526250ff2cce4cc1a39348}
+      \strng{authorfullhash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2296-858X}
+      \field{journaltitle}{Frontiers in Medicine}
+      \field{month}{7}
+      \field{title}{Approaches of wearable and implantable biosensor towards of developing in precision medicine}
+      \field{volume}{11}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3389/fmed.2024.1390634
+      \endverb
+    \endentry
+    \entry{Joshi2020}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=51bf81320637a9d0a00b5d05bde12635}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Amit\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbeb5a488714394fadfaff285a9b2a13}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Prateek},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b35662467cce3b00db9f3ee839800fb}{%
+           family={Mohanty},
+           familyi={M\bibinitperiod},
+           given={Saraju\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5df152ed20f2ed3c3ed7dbe11768a00}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Navneet},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{6e0d2e0fcb58a05180b2a085ec5aeeda}
+      \strng{fullhash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{bibnamehash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{authorbibnamehash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{authornamehash}{6e0d2e0fcb58a05180b2a085ec5aeeda}
+      \strng{authorfullhash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15584127}
+      \field{issue}{4}
+      \field{journaltitle}{IEEE Transactions on Consumer Electronics}
+      \field{month}{11}
+      \field{title}{IGLU 2.0: A New Wearable for Accurate Non-Invasive Continuous Serum Glucose Measurement in IoMT Framework}
+      \field{volume}{66}
+      \field{year}{2020}
+      \field{pages}{327\bibrangedash 335}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TCE.2020.3011966
+      \endverb
+      \keyw{Internet-of-Medical-Things (IoMT),Smart home,capillary and serum glucose,deep neural network (DNN),glucose measurement,near infrared (NIR) spectroscopy,non-invasive device,regression model,smart healthcare,smart wearable}
+    \endentry
+    \entry{9063670}{article}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=319d9d772da09e3f30773f1bcd8fc4d1}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Latif\bibnamedelima U.},
+           giveni={L\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cee774c0ad382b494f7b8f032a335fb}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Nguyen\bibnamedelima H.},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9832f7f5a1d56fadf26070916d580f0d}{%
+           family={Kazmi},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi M.\bibnamedelimi Ahsan},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5d2793648ef724c7a05f84d3e3c479e}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Tri\bibnamedelima Nguyen},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1383f5ef4e6c3639dc82c6aa8af308d7}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Choong\bibnamedelima Seon},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{036c96ce40574cb2ce9063349d7ce8c7}
+      \strng{fullhash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{bibnamehash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{authorbibnamehash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{authornamehash}{036c96ce40574cb2ce9063349d7ce8c7}
+      \strng{authorfullhash}{0a7dedd131f365a6a490e0802bc26018}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Internet of Things Journal}
+      \field{number}{10}
+      \field{title}{Edge-Computing-Enabled Smart Cities: A Comprehensive Survey}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{10200\bibrangedash 10232}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1109/JIOT.2020.2987070
+      \endverb
+      \keyw{Edge computing;Smart cities;Cloud computing;Internet of Things;Autonomous automobiles;Accidents;Cloudlet;fog computing;Internet of Things (IoT);micro data centers;mobile cloud computing (MCC);mobile-edge computing;smart cities}
+    \endentry
+    \entry{Khan2014}{article}{}
+      \name{author}{8}{}{%
+        {{un=1,uniquepart=given,hash=fd07a008c4e8e707036e38fff70a1022}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Nawsher},
+           giveni={N\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3db72b28ca88d09572cce78216bd22f0}{%
+           family={Hashem},
+           familyi={H\bibinitperiod},
+           given={Ibrahim\bibnamedelimb Abaker\bibnamedelima Targio},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4fa0e16486d7223586d0528593ff09}{%
+           family={Inayat},
+           familyi={I\bibinitperiod},
+           given={Zakira},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db1e786d70c458cecff1b6fc9c31b289}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Waleed\bibnamedelimb Kamaleldin\bibnamedelima Mahmoud},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05a67486caf22976335f82295c563794}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10179f9b08e17ea793fa16b9d85a3e62}{%
+           family={Shiraz},
+           familyi={S\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12a2bdd5a21b830affa3f042add044de}{%
+           family={Gani},
+           familyi={G\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{daf141b5dd3556c441c77d68fbb5b0cc}
+      \strng{fullhash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{bibnamehash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{authorbibnamehash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{authornamehash}{daf141b5dd3556c441c77d68fbb5b0cc}
+      \strng{authorfullhash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2356-6140}
+      \field{journaltitle}{The Scientific World Journal}
+      \field{title}{Big Data: Survey, Technologies, Opportunities, and Challenges}
+      \field{volume}{2014}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 18}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1155/2014/712826
+      \endverb
+    \endentry
+    \entry{Khan2019}{article}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=48d08bd456b93d769a30df7c8afcef80}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Wazir\bibnamedelima Zada},
+           giveni={W\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=e871883725e9da401320f620cea1bf68}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Ejaz},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79db860a1a0490de9fd85361f223a42a}{%
+           family={Hakak},
+           familyi={H\bibinitperiod},
+           given={Saqib},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd71c3872ce570ec1d80f140a1bad118}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Arif},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{4a4c44e16a5d7b3101eba39985652054}
+      \strng{fullhash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{bibnamehash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{authorbibnamehash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{authornamehash}{4a4c44e16a5d7b3101eba39985652054}
+      \strng{authorfullhash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0167739X}
+      \field{journaltitle}{Future Generation Computer Systems}
+      \field{month}{8}
+      \field{title}{Edge computing: A survey}
+      \field{volume}{97}
+      \field{year}{2019}
+      \field{pages}{219\bibrangedash 235}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.future.2019.02.050
+      \endverb
+      \keyw{Cloud computing,Cloudlets,Edge computing,Fog computing,Micro clouds,Mobile edge computing}
+    \endentry
+    \entry{Kireev2022}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f2e567fb56999c6896c666f502c33afd}{%
+           family={Kireev},
+           familyi={K\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=295420b68bb4ed7580eec4d26dac978d}{%
+           family={Kampfe},
+           familyi={K\bibinitperiod},
+           given={Jameson},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2432f539835ec884067bd3826e291388}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Alena},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4308fbb2cdd3686adf12147a8490ea3}{%
+           family={Akinwande},
+           familyi={A\bibinitperiod},
+           given={Deji},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{06449d5b4d4e378c5f9180e755d28154}
+      \strng{fullhash}{080bb55535b383fd4e40451f566bc824}
+      \strng{bibnamehash}{080bb55535b383fd4e40451f566bc824}
+      \strng{authorbibnamehash}{080bb55535b383fd4e40451f566bc824}
+      \strng{authornamehash}{06449d5b4d4e378c5f9180e755d28154}
+      \strng{authorfullhash}{080bb55535b383fd4e40451f566bc824}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2397-7132}
+      \field{issue}{1}
+      \field{journaltitle}{npj 2D Materials and Applications}
+      \field{month}{7}
+      \field{title}{Graphene electronic tattoos 2.0 with enhanced performance, breathability and robustness}
+      \field{volume}{6}
+      \field{year}{2022}
+      \field{pages}{46}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41699-022-00324-6
+      \endverb
+    \endentry
+    \entry{Klonoff2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6aae282f10b9e1b45a89e95c205ebcae}{%
+           family={Klonoff},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{fullhash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{bibnamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authorbibnamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authornamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authorfullhash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-2968}
+      \field{issue}{4}
+      \field{journaltitle}{Journal of Diabetes Science and Technology}
+      \field{month}{7}
+      \field{title}{Fog Computing and Edge Computing Architectures for Processing Data From Diabetes Devices Connected to the Medical Internet of Things}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{pages}{647\bibrangedash 652}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1177/1932296817717007
+      \endverb
+    \endentry
+    \entry{BOE}{legislation}{}
+      \list{institution}{1}{%
+        {Jefatura del Estado}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{12}
+      \field{number}{3/2018}
+      \field{series}{Boletín Oficial del Estado}
+      \field{title}{Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf
+      \endverb
+    \endentry
+    \entry{Matsumura2024}{article}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=c441b83c747893ec816e0fe829cc92c9}{%
+           family={Matsumura},
+           familyi={M\bibinitperiod},
+           given={Guren},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e55e95a1eaa868f19978bcee9576fd1}{%
+           family={Honda},
+           familyi={H\bibinitperiod},
+           given={Satoko},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6800355937e78f23d70fc3f250937875}{%
+           family={Kikuchi},
+           familyi={K\bibinitperiod},
+           given={Takamasa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=806e4df4ed3c8e7435aecff885c06671}{%
+           family={Mizuno},
+           familyi={M\bibinitperiod},
+           given={Yuuki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff7819eb7392dad56ffe07037751e553}{%
+           family={Hara},
+           familyi={H\bibinitperiod},
+           given={Hyuga},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f0dd99f154a44fe0a191826f8d61bb5}{%
+           family={Kondo},
+           familyi={K\bibinitperiod},
+           given={Yoshiki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0de8c063e0419be56232fe383bb0d22c}{%
+           family={Nakamura},
+           familyi={N\bibinitperiod},
+           given={Haruki},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=405e0a36d4e932ba72891e1168a78795}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Shin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f628467ac4ef956bdd0d0167e01695da}{%
+           family={Hayakawa},
+           familyi={H\bibinitperiod},
+           given={Kiyoshi},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c715e6b6169b5097eb9e26b48892ddc6}{%
+           family={Nakajima},
+           familyi={N\bibinitperiod},
+           given={Kohei},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61064ae6559f20a0d98a33d5e61ba810}{%
+           family={Takei},
+           familyi={T\bibinitperiod},
+           given={Kuniharu},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cell Press}%
+      }
+      \strng{namehash}{7b4d71c2197405f5483ebef1e3a20b6e}
+      \strng{fullhash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{bibnamehash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{authorbibnamehash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{authornamehash}{7b4d71c2197405f5483ebef1e3a20b6e}
+      \strng{authorfullhash}{e5987b8fa6262d6c72e62761f9413f52}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{26669986}
+      \field{journaltitle}{Device}
+      \field{month}{2}
+      \field{title}{Real-time personal healthcare data analysis using edge computing for multimodal wearable sensors}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1016/j.device.2024.100597
+      \endverb
+      \keyw{DTI-4: Validate,echo state network,edge computing,flexible sensors,healthcare,multimodal sensor patch,remote monitoring,reservoir computing,wearable sensors}
+    \endentry
+    \entry{Nguyen2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c9ae518402261d528d1d325e3575e2f7}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Dinh\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528c6837e62a20bb6691e4832906ee0e}{%
+           family={Pathirana},
+           familyi={P\bibinitperiod},
+           given={Pubudu\bibnamedelima N.},
+           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46a3f0b5c048254bc7f6910cd7e8cd63}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87e0902bc41d8bb2bce8de7c1c37afa4}{%
+           family={Seneviratne},
+           familyi={S\bibinitperiod},
+           given={Aruna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{75ebdd0dbc8dee82e3b3c79121f04007}
+      \strng{fullhash}{a840eadcc979d5b70a05146907340444}
+      \strng{bibnamehash}{a840eadcc979d5b70a05146907340444}
+      \strng{authorbibnamehash}{a840eadcc979d5b70a05146907340444}
+      \strng{authornamehash}{75ebdd0dbc8dee82e3b3c79121f04007}
+      \strng{authorfullhash}{a840eadcc979d5b70a05146907340444}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2327-4662}
+      \field{issue}{14}
+      \field{journaltitle}{IEEE Internet of Things Journal}
+      \field{month}{7}
+      \field{title}{BEdgeHealth: A Decentralized Architecture for Edge-Based IoMT Networks Using Blockchain}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{11743\bibrangedash 11757}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/JIOT.2021.3058953
+      \endverb
+    \endentry
+    \entry{Osama2023}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=fc9ef9258fa3d26042a66243183121c5}{%
+           family={Osama},
+           familyi={O\bibinitperiod},
+           given={Manar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea1947aee42316b0fe12b92fd1b704c2}{%
+           family={Ateya},
+           familyi={A\bibinitperiod},
+           given={Abdelhamied\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c3f8918c19c93b2efb3c1ec08b09f86}{%
+           family={Sayed},
+           familyi={S\bibinitperiod},
+           given={Mohammed\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb4f5dd4b542a4e86828bd72460883c9}{%
+           family={Hammad},
+           familyi={H\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8cbe17a659da7863a20369c14149107}{%
+           family={Pławiak},
+           familyi={P\bibinitperiod},
+           given={Paweł},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fa7a2ab6d2b05b9ca7231076fd126ff}{%
+           family={El-Latif},
+           familyi={E\bibinithyphendelim L\bibinitperiod},
+           given={Ahmed\bibnamedelimb A.\bibnamedelimi Abd},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30d363939bb3b23399d3abaefdb54f94}{%
+           family={Elsayed},
+           familyi={E\bibinitperiod},
+           given={Rania\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa02780875f294a45afc281d511de190}
+      \strng{fullhash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{bibnamehash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{authorbibnamehash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{authornamehash}{fa02780875f294a45afc281d511de190}
+      \strng{authorfullhash}{617d6a31819e8482e0f24efb90c1a362}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1424-8220}
+      \field{issue}{17}
+      \field{journaltitle}{Sensors}
+      \field{month}{8}
+      \field{title}{Internet of Medical Things and Healthcare 4.0: Trends, Requirements, Challenges, and Research Directions}
+      \field{volume}{23}
+      \field{year}{2023}
+      \field{pages}{7435}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s23177435
+      \endverb
+    \endentry
+    \entry{Prabhu2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a19262fe294aa725cac2e736e2f576bf}{%
+           family={Prabhu},
+           familyi={P\bibinitperiod},
+           given={Makarand},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5c6ba6d974aaf0f17cf01a80056c90b}{%
+           family={Hanumanthaiah},
+           familyi={H\bibinitperiod},
+           given={Aravind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{fullhash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{bibnamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authorbibnamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authornamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authorfullhash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781665496483}
+      \field{journaltitle}{2022 International Conference on Wireless Communications, Signal Processing and Networking, WiSPNET 2022}
+      \field{title}{Edge Computing-Enabled Healthcare Framework to Provide Telehealth Services}
+      \field{year}{2022}
+      \field{pages}{349\bibrangedash 353}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/WiSPNET54241.2022.9767142
+      \endverb
+      \keyw{Edge Computing,EdgeX Foundry,Internet of Things,telemedicine}
+    \endentry
+    \entry{Rancea2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3ab1eb38b39d79b193a7e1769926562f}{%
+           family={Rancea},
+           familyi={R\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=681b6a1a5abf5f792d90a02f125423d8}{%
+           family={Anghel},
+           familyi={A\bibinitperiod},
+           given={Ionut},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=981dbe4cf783d460a0fad67dbd2d9ae3}{%
+           family={Cioara},
+           familyi={C\bibinitperiod},
+           given={Tudor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{8b3655152a67f435eb0f13e6a9cf8e0a}
+      \strng{fullhash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{bibnamehash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{authorbibnamehash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{authornamehash}{8b3655152a67f435eb0f13e6a9cf8e0a}
+      \strng{authorfullhash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{19995903}
+      \field{issue}{9}
+      \field{journaltitle}{Future Internet}
+      \field{month}{9}
+      \field{title}{Edge Computing in Healthcare: Innovations, Opportunities, and Challenges}
+      \field{volume}{16}
+      \field{year}{2024}
+      \field{pages}{329}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/fi16090329
+      \endverb
+    \endentry
+    \entry{EEDS}{legislation}{}
+      \list{institution}{1}{%
+        {Parlamento Europeo y Consejo}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{2}
+      \field{number}{2025/327}
+      \field{series}{Diario Oficial de la Unión Europea, Serie L}
+      \field{title}{Reglamento (UE) 2025/327 del Parlamento Europeo y del Consejo, de 11 de febrero de 2025, relativo al Espacio Europeo de Datos de Salud, y por el que se modifican la Directiva 2011/24/UE y el Reglamento (UE) 2024/2847}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{327}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 96}
+      \range{pages}{96}
+      \verb{urlraw}
+      \verb https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=OJ:L_202500327
+      \endverb
+      \verb{url}
+      \verb https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=OJ:L_202500327
+      \endverb
+    \endentry
+    \entry{Rieke2020}{article}{}
+      \name{author}{17}{}{%
+        {{un=0,uniquepart=base,hash=1e2eba5122411135dccbe9935828473b}{%
+           family={Rieke},
+           familyi={R\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e355d441b2142a0af46b5f9a48576257}{%
+           family={Hancox},
+           familyi={H\bibinitperiod},
+           given={Jonny},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d32ec3dde5f923678d38244353a95911}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenqi},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6666cd091720791f26f874376aa4563}{%
+           family={Milletarì},
+           familyi={M\bibinitperiod},
+           given={Fausto},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04c08832941bceae0bfee57a4113dd33}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Holger\bibnamedelima R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2627324e68cc256cc982b8c816041c31}{%
+           family={Albarqouni},
+           familyi={A\bibinitperiod},
+           given={Shadi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=492e29a8f843b2425b1ad81806f1307f}{%
+           family={Bakas},
+           familyi={B\bibinitperiod},
+           given={Spyridon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68a8b89b93885b94e0a2a8689f604f81}{%
+           family={Galtier},
+           familyi={G\bibinitperiod},
+           given={Mathieu\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97f6985f9c2acc2c5cb994b321131d1e}{%
+           family={Landman},
+           familyi={L\bibinitperiod},
+           given={Bennett\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=114f1f4d61f0bb02e9a8b368c52702bc}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81ba59598fdce027a3a694c8dd331fe7}{%
+           family={Ourselin},
+           familyi={O\bibinitperiod},
+           given={Sébastien},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70a9538cd20302b8cbe3f57120c959b4}{%
+           family={Sheller},
+           familyi={S\bibinitperiod},
+           given={Micah},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cb874838345a043921eea69ab2809ee}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Ronald\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27cd1df7880d14dc1dab23f4d06dfd30}{%
+           family={Trask},
+           familyi={T\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40c221ac11c898cb10013b2468fc229b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Daguang},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8692a977eded1f016170c5ec5ecb4493}{%
+           family={Baust},
+           familyi={B\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da7555ed408fdfa8a4bf2b6aa96e7e75}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi Jorge},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ce9efa37ce660289f28fb5d0724f3268}
+      \strng{fullhash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{bibnamehash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{authorbibnamehash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{authornamehash}{ce9efa37ce660289f28fb5d0724f3268}
+      \strng{authorfullhash}{787f6dccb3383ac7750364bb7961aca8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2398-6352}
+      \field{issue}{1}
+      \field{journaltitle}{npj Digital Medicine}
+      \field{month}{9}
+      \field{title}{The future of digital health with federated learning}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{pages}{119}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41746-020-00323-1
+      \endverb
+    \endentry
+    \entry{Sadiku2014}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=acd2910fdff85c25e324e4401e07500d}{%
+           family={Sadiku},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelima N.O.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25764b86ca42b4aa4af03e54bb10e02b}{%
+           family={Musa},
+           familyi={M\bibinitperiod},
+           given={Sarhan\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d89428de2c0f3cc8220be8ed596d8b73}{%
+           family={Momoh},
+           familyi={M\bibinitperiod},
+           given={Omonowo\bibnamedelima D.},
+           giveni={O\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ba87cb2de8d8de70269d1100cb465d88}
+      \strng{fullhash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{bibnamehash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{authorbibnamehash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{authornamehash}{ba87cb2de8d8de70269d1100cb465d88}
+      \strng{authorfullhash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{02786648}
+      \field{issue}{1}
+      \field{journaltitle}{IEEE Potentials}
+      \field{month}{2}
+      \field{title}{Cloud computing: Opportunities and challenges}
+      \field{volume}{33}
+      \field{year}{2014}
+      \field{pages}{34\bibrangedash 36}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/MPOT.2013.2279684
+      \endverb
+    \endentry
+    \entry{Singh2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=82b79742d5dde913c71b884eef9993fa}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f81de88b3ebac6842cbe0d450af319e}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Kakali},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{fullhash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{bibnamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authorbibnamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authornamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authorfullhash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01674048}
+      \field{journaltitle}{Computers \& Security}
+      \field{month}{9}
+      \field{title}{Securing smart healthcare system with edge computing}
+      \field{volume}{108}
+      \field{year}{2021}
+      \field{pages}{102353}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cose.2021.102353
+      \endverb
+    \endentry
+    \entry{Tlemcani2025}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fdf6e7cd22148c337f133325e694029d}{%
+           family={Tlemcani},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0ebfa0f464fc863c9a1a5ef596303b0}{%
+           family={Azbeg},
+           familyi={A\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c3dd25ddb9652f9e1d77ca87c7805e7}{%
+           family={Saoudi},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9816aff2ab81382106c7304ca28b5913}{%
+           family={Fetjah},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50ba1319ca6eb0ced9bbcda3ad98b728}{%
+           family={Ouchetto},
+           familyi={O\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dce7020966d2d67e1564c3e1eee1c2a5}{%
+           family={Andaloussi},
+           familyi={A\bibinitperiod},
+           given={S.\bibnamedelimi Jai},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{ad27c16e2f64371b6658372eb76fffe8}
+      \strng{fullhash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{bibnamehash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{authorbibnamehash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{authornamehash}{ad27c16e2f64371b6658372eb76fffe8}
+      \strng{authorfullhash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{21693536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Empowering Diabetes Management Through Blockchain and Edge Computing: A Systematic Review of Healthcare Innovations and Challenges}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{pages}{14426\bibrangedash 14443}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2025.3531350
+      \endverb
+      \keyw{Blockchain technology,IoT,diabetes management,edge computing,healthcare management,scalability challenges}
+    \endentry
+    \entry{Veeramachaneni2025}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cacb050be4a877231dab9582ca5cfd87}{%
+           family={Veeramachaneni},
+           familyi={V\bibinitperiod},
+           given={Vinod},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{fullhash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{bibnamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authorbibnamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authornamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authorfullhash}{cacb050be4a877231dab9582ca5cfd87}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Recent Trends in Computer Graphics and Multimedia Technology}
+      \field{title}{Edge Computing: Architecture, Applications, and Future Challenges in a Decentralized Era}
+      \field{volume}{7}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.5281/zenodo.14166793
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.14166793
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.14166793
+      \endverb
+      \keyw{5G,Adaptive Resource Management,Data Privacy,Decentralized Architecture,Edge Computing,Industry 50,IoT Integration,Latency Reduction,Real-Time Processing}
+    \endentry
+    \entry{Wang2024}{article}{}
+      \name{author}{7}{}{%
+        {{un=1,uniquepart=given,hash=97af6121b9cba782523c5cb725bdcd41}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lianhai},
+           giveni={L\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=602447aa6b2017709809182e973ada91}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaoqian},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349faac9cd775a5a8d09f8cef1c0fd43}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22eac51011dde379fe765f6a43c651d5}{%
+           family={Guan},
+           familyi={G\bibinitperiod},
+           given={Chenxi},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1533793a2288ea930afc5133e10f4b3}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Qihao},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc47176e605975d79333fe46c076922b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shujiang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bce12a6509e18fb81742cb644a48e955}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuhui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26806a10d1cf3e1592ca84f78c9cc80e}
+      \strng{fullhash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{bibnamehash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{authorbibnamehash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{authornamehash}{26806a10d1cf3e1592ca84f78c9cc80e}
+      \strng{authorfullhash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2073-8994}
+      \field{issue}{1}
+      \field{journaltitle}{Symmetry}
+      \field{month}{1}
+      \field{title}{A Blockchain-Based Privacy-Preserving Healthcare Data Sharing Scheme for Incremental Updates}
+      \field{volume}{16}
+      \field{year}{2024}
+      \field{pages}{89}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/sym16010089
+      \endverb
+    \endentry
+    \entry{Wang2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=330e18fb499a5fa7fa598125962993f7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=5c4e3a412b37031c88be1072015e3aa6}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96018e95ae970c73c10754eea4456b93}{%
+           family={Wojtusiak},
+           familyi={W\bibinitperiod},
+           given={Janusz},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{fullhash}{b1999921432916facd33771114d6f015}
+      \strng{bibnamehash}{b1999921432916facd33771114d6f015}
+      \strng{authorbibnamehash}{b1999921432916facd33771114d6f015}
+      \strng{authornamehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{authorfullhash}{b1999921432916facd33771114d6f015}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{15th International Conference on Health Informatics}
+      \field{month}{01}
+      \field{title}{From Wearable Device to OpenEMR: 5G Edge Centered Telemedicine and Decision Support System}
+      \field{year}{2022}
+      \field{pages}{491\bibrangedash 498}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5220/0010837600003123
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{Alshareef2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=320e6c03c0d6a7b1386de09bb3ad5d17}{%
+           family={Alshareef},
+           familyi={A\bibinitperiod},
+           given={Hazzaa\bibnamedelima N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{fullhash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{bibnamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authorbibnamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authornamehash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \strng{authorfullhash}{320e6c03c0d6a7b1386de09bb3ad5d17}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{21565570}
+      \field{issue}{3}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{title}{Current Development, Challenges, and Future Trends in Cloud Computing: A Survey}
+      \field{volume}{14}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.14569/IJACSA.2023.0140337
+      \endverb
+    \endentry
+    \entry{Bajic2019}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=01c117ac64fcba8f43938aa69b7903f4}{%
+           family={Bajic},
+           familyi={B\bibinitperiod},
+           given={Bojana},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d6ea377c34c0eec25a6b398fd421e65}{%
+           family={Cosic},
+           familyi={C\bibinitperiod},
+           given={Ilija},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb74e40428fd040dc36765a9e70c5101}{%
+           family={Katalinic},
+           familyi={K\bibinitperiod},
+           given={Branko},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=939e56c33d1f3ee8ce8cd367e54968bc}{%
+           family={Moraca},
+           familyi={M\bibinitperiod},
+           given={Slobodan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e3f8e0a5ea45b4f16bdc2bfa78b0477}{%
+           family={Lazarevic},
+           familyi={L\bibinitperiod},
+           given={Milovan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=680bd379b62662a8739d5d2653cf5372}{%
+           family={Rikalovic},
+           familyi={R\bibinitperiod},
+           given={Aleksandar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Danube Adria Association for Automation}%
+        {Manufacturing, DAAAM}%
+      }
+      \strng{namehash}{be06c53443dd6a9f1c25757f45f46684}
+      \strng{fullhash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{bibnamehash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{authorbibnamehash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \strng{authornamehash}{be06c53443dd6a9f1c25757f45f46684}
+      \strng{authorfullhash}{32e1c530413f6ffd7dee43b3c1e0d89d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{17269679}
+      \field{issue}{1}
+      \field{journaltitle}{Annals of DAAAM and Proceedings of the International DAAAM Symposium}
+      \field{title}{Edge computing vs. Cloud computing: Challenges and opportunities in industry 4.0}
+      \field{volume}{30}
+      \field{year}{2019}
+      \field{pages}{864\bibrangedash 871}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.2507/30th.daaam.proceedings.120
+      \endverb
+      \keyw{Cloud Computing,Data Analytics,Edge Computing,Industry 4.0,Internet of Things (IoT)}
+    \endentry
+    \entry{Cao2023}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0979631962d67da3f16e265d34392902}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90f8a7dec91013c744b8df318c2d0cb4}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Wenting},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97a6a6260b50685e877df213b42d0f46}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhixiang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=697fd343883f28bcc58dffdf5acded14}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2ec325965ef3492a7737e21e4aa22c8}
+      \strng{fullhash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{bibnamehash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{authorbibnamehash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \strng{authornamehash}{c2ec325965ef3492a7737e21e4aa22c8}
+      \strng{authorfullhash}{d5769bef76bc9d4c8959c2c102ff4d6e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01674048}
+      \field{journaltitle}{Computers \& Security}
+      \field{month}{11}
+      \field{title}{Privacy-preserving healthcare monitoring for IoT devices under edge computing}
+      \field{volume}{134}
+      \field{year}{2023}
+      \field{pages}{103464}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cose.2023.103464
+      \endverb
+    \endentry
+    \entry{Carvalho2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f8caeb925304855001e40ffc04f22e41}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Gonçalo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56b958440a1514bef0fa981d5e83a1a0}{%
+           family={Cabral},
+           familyi={C\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=373f111d0e57c3122eb76357f763f269}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Vasco},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=251db60f77d96aa82892e32418380cf1}{%
+           family={Bernardino},
+           familyi={B\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{db0c2aec7bfc2a33c1f44e56e66a9da8}
+      \strng{fullhash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{bibnamehash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{authorbibnamehash}{bf2e9f791c7b4cab9226314c70369a42}
+      \strng{authornamehash}{db0c2aec7bfc2a33c1f44e56e66a9da8}
+      \strng{authorfullhash}{bf2e9f791c7b4cab9226314c70369a42}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-485X}
+      \field{issue}{5}
+      \field{journaltitle}{Computing}
+      \field{month}{5}
+      \field{title}{Edge computing: current trends, research challenges and future directions}
+      \field{volume}{103}
+      \field{year}{2021}
+      \field{pages}{993\bibrangedash 1023}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/s00607-020-00896-5
+      \endverb
+    \endentry
+    \entry{Chen2014}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fb194450e9046854896c4ca5f2dc8d01}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f96ac342ca3c4d48bb3a476628f38ec7}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Shiwen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33f3892f364ace97b23d47eb1f1eebc0}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yunhao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2eae75f66e5c3ec60399f4c040eab07c}
+      \strng{fullhash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{bibnamehash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{authorbibnamehash}{0440f102283a6234baa6bfac8eb2af9c}
+      \strng{authornamehash}{2eae75f66e5c3ec60399f4c040eab07c}
+      \strng{authorfullhash}{0440f102283a6234baa6bfac8eb2af9c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1383-469X}
+      \field{issue}{2}
+      \field{journaltitle}{Mobile Networks and Applications}
+      \field{month}{4}
+      \field{title}{Big Data: A Survey}
+      \field{volume}{19}
+      \field{year}{2014}
+      \field{pages}{171\bibrangedash 209}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1007/s11036-013-0489-0
+      \endverb
+    \endentry
+    \entry{Christo2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d716c3fb672f10d8aec508afdccbae3f}{%
+           family={Christo},
+           familyi={C\bibinitperiod},
+           given={Mary\bibnamedelima Subaja},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69793d93fa5ac96bfbb1974d5ecc5e20}{%
+           family={Jesi},
+           familyi={J\bibinitperiod},
+           given={V.\bibnamedelimi Elizabeth},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=beea923f54c8c9ee2f2c43a87ab9f8bb}{%
+           family={Priyadarsini},
+           familyi={P\bibinitperiod},
+           given={Uma},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c6e6d9b9dc3c19b921b805c5b53a647}{%
+           family={Anbarasu},
+           familyi={A\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3dbafe8df2665cbca4449fc80288d4e}{%
+           family={Venugopal},
+           familyi={V\bibinitperiod},
+           given={Hridya},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81584ababc9dfe487baae50ab6f0ca8a}{%
+           family={Karuppiah},
+           familyi={K\bibinitperiod},
+           given={Marimuthu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d48110892b531fd72e8137df72b6d4fc}
+      \strng{fullhash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{bibnamehash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{authorbibnamehash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \strng{authornamehash}{d48110892b531fd72e8137df72b6d4fc}
+      \strng{authorfullhash}{8a2074ecf8b0a9d58dbd463095f47d38}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-0122}
+      \field{journaltitle}{Security and Communication Networks}
+      \field{month}{10}
+      \field{title}{Ensuring Improved Security in Medical Data Using ECC and Blockchain Technology with Edge Devices}
+      \field{volume}{2021}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1155/2021/6966206
+      \endverb
+    \endentry
+    \entry{Dave2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=97a8d43975d689b036acd41d81b848cb}{%
+           family={Dave},
+           familyi={D\bibinitperiod},
+           given={Rushit},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d4268ba79504e7a9abdca44dc36929b}{%
+           family={Seliya},
+           familyi={S\bibinitperiod},
+           given={Naeem},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fab51c915c2390223ef84e6e39896a5f}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Nyle},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f62a558d3796185c6327835d314c0eeb}
+      \strng{fullhash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{bibnamehash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{authorbibnamehash}{6117fa91ea0d49459136e4f6e570af90}
+      \strng{authornamehash}{f62a558d3796185c6327835d314c0eeb}
+      \strng{authorfullhash}{6117fa91ea0d49459136e4f6e570af90}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{x}
+      \field{journaltitle}{Journal of Computer Sciences and Applications}
+      \field{title}{The Benefits of Edge Computing in Healthcare, Smart Cities, and IoT}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{pages}{XX\bibrangedash XX}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.12691/jcsa-9-x-x
+      \endverb
+      \verb{urlraw}
+      \verb http://pubs.sciepub.com/jcsa/9/x/x
+      \endverb
+      \verb{url}
+      \verb http://pubs.sciepub.com/jcsa/9/x/x
+      \endverb
+      \keyw{Internet of Things (IoT),cloud computing,edge computing,healthcare,smart city}
+    \endentry
+    \entry{Ghadi2024}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fcaf52b23a484b88aea3ed91309ebcb8}{%
+           family={Ghadi},
+           familyi={G\bibinitperiod},
+           given={Yazeed\bibnamedelima Yasin},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1aa43370228a3e6ea526796393b0e53}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Syed\bibnamedelimb Faisal\bibnamedelima Abbas},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71a96bfdc453fa6065d37d2faf007da4}{%
+           family={Mazhar},
+           familyi={M\bibinitperiod},
+           given={Tehseen},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd2c3af0b7184ca4d1f4de08da2a8f46}{%
+           family={Shahzad},
+           familyi={S\bibinitperiod},
+           given={Tariq},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50f9dc45e1967ade94812f2e6142b9de}{%
+           family={Ouahada},
+           familyi={O\bibinitperiod},
+           given={Khmaies},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a40229d672c63153ec006f11b0e11d8f}{%
+           family={Hamam},
+           familyi={H\bibinitperiod},
+           given={Habib},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{159683673b857abe51a6815bf7540543}
+      \strng{fullhash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{bibnamehash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{authorbibnamehash}{304a59334759ae83624c7a63ca87a51b}
+      \strng{authornamehash}{159683673b857abe51a6815bf7540543}
+      \strng{authorfullhash}{304a59334759ae83624c7a63ca87a51b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2192-113X}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of Cloud Computing}
+      \field{month}{5}
+      \field{title}{Enhancing patient healthcare with mobile edge computing and 5G: challenges and solutions for secure online health tools}
+      \field{volume}{13}
+      \field{year}{2024}
+      \field{pages}{93}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/s13677-024-00654-4
+      \endverb
+    \endentry
+    \entry{Ghazizadeh2024}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bad47f762452c798f63d917150510953}{%
+           family={Ghazizadeh},
+           familyi={G\bibinitperiod},
+           given={Elham},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=360cfe28279a62efa9d35dd5c52ec099}{%
+           family={Naseri},
+           familyi={N\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=249c8cb9f2eb8ed89122b56e0e506eb4}{%
+           family={Deigner},
+           familyi={D\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aec6a52dc947350677d7c56f368d0343}{%
+           family={Rahimi},
+           familyi={R\bibinitperiod},
+           given={Hossein},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07d2a0401232169835bae578ea576e19}{%
+           family={Altintas},
+           familyi={A\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5910a806a3526250ff2cce4cc1a39348}
+      \strng{fullhash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{bibnamehash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{authorbibnamehash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \strng{authornamehash}{5910a806a3526250ff2cce4cc1a39348}
+      \strng{authorfullhash}{750fc9f22e0ff5ab8ae65685943574b8}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2296-858X}
+      \field{journaltitle}{Frontiers in Medicine}
+      \field{month}{7}
+      \field{title}{Approaches of wearable and implantable biosensor towards of developing in precision medicine}
+      \field{volume}{11}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3389/fmed.2024.1390634
+      \endverb
+    \endentry
+    \entry{Joshi2020}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=51bf81320637a9d0a00b5d05bde12635}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Amit\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbeb5a488714394fadfaff285a9b2a13}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Prateek},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b35662467cce3b00db9f3ee839800fb}{%
+           family={Mohanty},
+           familyi={M\bibinitperiod},
+           given={Saraju\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5df152ed20f2ed3c3ed7dbe11768a00}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Navneet},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{6e0d2e0fcb58a05180b2a085ec5aeeda}
+      \strng{fullhash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{bibnamehash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{authorbibnamehash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \strng{authornamehash}{6e0d2e0fcb58a05180b2a085ec5aeeda}
+      \strng{authorfullhash}{f9c3de4b8620b793de8e4b794e0b912e}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{15584127}
+      \field{issue}{4}
+      \field{journaltitle}{IEEE Transactions on Consumer Electronics}
+      \field{month}{11}
+      \field{title}{IGLU 2.0: A New Wearable for Accurate Non-Invasive Continuous Serum Glucose Measurement in IoMT Framework}
+      \field{volume}{66}
+      \field{year}{2020}
+      \field{pages}{327\bibrangedash 335}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TCE.2020.3011966
+      \endverb
+      \keyw{Internet-of-Medical-Things (IoMT),Smart home,capillary and serum glucose,deep neural network (DNN),glucose measurement,near infrared (NIR) spectroscopy,non-invasive device,regression model,smart healthcare,smart wearable}
+    \endentry
+    \entry{9063670}{article}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=319d9d772da09e3f30773f1bcd8fc4d1}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Latif\bibnamedelima U.},
+           giveni={L\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cee774c0ad382b494f7b8f032a335fb}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Nguyen\bibnamedelima H.},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9832f7f5a1d56fadf26070916d580f0d}{%
+           family={Kazmi},
+           familyi={K\bibinitperiod},
+           given={S.\bibnamedelimi M.\bibnamedelimi Ahsan},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5d2793648ef724c7a05f84d3e3c479e}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Tri\bibnamedelima Nguyen},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1383f5ef4e6c3639dc82c6aa8af308d7}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Choong\bibnamedelima Seon},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{036c96ce40574cb2ce9063349d7ce8c7}
+      \strng{fullhash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{bibnamehash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{authorbibnamehash}{0a7dedd131f365a6a490e0802bc26018}
+      \strng{authornamehash}{036c96ce40574cb2ce9063349d7ce8c7}
+      \strng{authorfullhash}{0a7dedd131f365a6a490e0802bc26018}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Internet of Things Journal}
+      \field{number}{10}
+      \field{title}{Edge-Computing-Enabled Smart Cities: A Comprehensive Survey}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{10200\bibrangedash 10232}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1109/JIOT.2020.2987070
+      \endverb
+      \keyw{Edge computing;Smart cities;Cloud computing;Internet of Things;Autonomous automobiles;Accidents;Cloudlet;fog computing;Internet of Things (IoT);micro data centers;mobile cloud computing (MCC);mobile-edge computing;smart cities}
+    \endentry
+    \entry{Khan2014}{article}{}
+      \name{author}{8}{}{%
+        {{un=1,uniquepart=given,hash=fd07a008c4e8e707036e38fff70a1022}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Nawsher},
+           giveni={N\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3db72b28ca88d09572cce78216bd22f0}{%
+           family={Hashem},
+           familyi={H\bibinitperiod},
+           given={Ibrahim\bibnamedelimb Abaker\bibnamedelima Targio},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4fa0e16486d7223586d0528593ff09}{%
+           family={Inayat},
+           familyi={I\bibinitperiod},
+           given={Zakira},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db1e786d70c458cecff1b6fc9c31b289}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Waleed\bibnamedelimb Kamaleldin\bibnamedelima Mahmoud},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05a67486caf22976335f82295c563794}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10179f9b08e17ea793fa16b9d85a3e62}{%
+           family={Shiraz},
+           familyi={S\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12a2bdd5a21b830affa3f042add044de}{%
+           family={Gani},
+           familyi={G\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{daf141b5dd3556c441c77d68fbb5b0cc}
+      \strng{fullhash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{bibnamehash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{authorbibnamehash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \strng{authornamehash}{daf141b5dd3556c441c77d68fbb5b0cc}
+      \strng{authorfullhash}{6cbc4863653dab83f9a66de8daa37ad6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2356-6140}
+      \field{journaltitle}{The Scientific World Journal}
+      \field{title}{Big Data: Survey, Technologies, Opportunities, and Challenges}
+      \field{volume}{2014}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 18}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1155/2014/712826
+      \endverb
+    \endentry
+    \entry{Khan2019}{article}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=48d08bd456b93d769a30df7c8afcef80}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Wazir\bibnamedelima Zada},
+           giveni={W\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=e871883725e9da401320f620cea1bf68}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Ejaz},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79db860a1a0490de9fd85361f223a42a}{%
+           family={Hakak},
+           familyi={H\bibinitperiod},
+           given={Saqib},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=446d935cc3981c652f747abe3a5227f0}{%
+           family={Yaqoob},
+           familyi={Y\bibinitperiod},
+           given={Ibrar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd71c3872ce570ec1d80f140a1bad118}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Arif},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier B.V.}%
+      }
+      \strng{namehash}{4a4c44e16a5d7b3101eba39985652054}
+      \strng{fullhash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{bibnamehash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{authorbibnamehash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \strng{authornamehash}{4a4c44e16a5d7b3101eba39985652054}
+      \strng{authorfullhash}{ffa5d8d22e522165e4910c7ff4fe09fe}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0167739X}
+      \field{journaltitle}{Future Generation Computer Systems}
+      \field{month}{8}
+      \field{title}{Edge computing: A survey}
+      \field{volume}{97}
+      \field{year}{2019}
+      \field{pages}{219\bibrangedash 235}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.future.2019.02.050
+      \endverb
+      \keyw{Cloud computing,Cloudlets,Edge computing,Fog computing,Micro clouds,Mobile edge computing}
+    \endentry
+    \entry{Kireev2022}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f2e567fb56999c6896c666f502c33afd}{%
+           family={Kireev},
+           familyi={K\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=295420b68bb4ed7580eec4d26dac978d}{%
+           family={Kampfe},
+           familyi={K\bibinitperiod},
+           given={Jameson},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2432f539835ec884067bd3826e291388}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Alena},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4308fbb2cdd3686adf12147a8490ea3}{%
+           family={Akinwande},
+           familyi={A\bibinitperiod},
+           given={Deji},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{06449d5b4d4e378c5f9180e755d28154}
+      \strng{fullhash}{080bb55535b383fd4e40451f566bc824}
+      \strng{bibnamehash}{080bb55535b383fd4e40451f566bc824}
+      \strng{authorbibnamehash}{080bb55535b383fd4e40451f566bc824}
+      \strng{authornamehash}{06449d5b4d4e378c5f9180e755d28154}
+      \strng{authorfullhash}{080bb55535b383fd4e40451f566bc824}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2397-7132}
+      \field{issue}{1}
+      \field{journaltitle}{npj 2D Materials and Applications}
+      \field{month}{7}
+      \field{title}{Graphene electronic tattoos 2.0 with enhanced performance, breathability and robustness}
+      \field{volume}{6}
+      \field{year}{2022}
+      \field{pages}{46}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41699-022-00324-6
+      \endverb
+    \endentry
+    \entry{Klonoff2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6aae282f10b9e1b45a89e95c205ebcae}{%
+           family={Klonoff},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{fullhash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{bibnamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authorbibnamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authornamehash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \strng{authorfullhash}{6aae282f10b9e1b45a89e95c205ebcae}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-2968}
+      \field{issue}{4}
+      \field{journaltitle}{Journal of Diabetes Science and Technology}
+      \field{month}{7}
+      \field{title}{Fog Computing and Edge Computing Architectures for Processing Data From Diabetes Devices Connected to the Medical Internet of Things}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{pages}{647\bibrangedash 652}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1177/1932296817717007
+      \endverb
+    \endentry
+    \entry{BOE}{legislation}{}
+      \list{institution}{1}{%
+        {Jefatura del Estado}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{12}
+      \field{number}{3/2018}
+      \field{series}{Boletín Oficial del Estado}
+      \field{title}{Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf
+      \endverb
+    \endentry
+    \entry{Matsumura2024}{article}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=c441b83c747893ec816e0fe829cc92c9}{%
+           family={Matsumura},
+           familyi={M\bibinitperiod},
+           given={Guren},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e55e95a1eaa868f19978bcee9576fd1}{%
+           family={Honda},
+           familyi={H\bibinitperiod},
+           given={Satoko},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6800355937e78f23d70fc3f250937875}{%
+           family={Kikuchi},
+           familyi={K\bibinitperiod},
+           given={Takamasa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=806e4df4ed3c8e7435aecff885c06671}{%
+           family={Mizuno},
+           familyi={M\bibinitperiod},
+           given={Yuuki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff7819eb7392dad56ffe07037751e553}{%
+           family={Hara},
+           familyi={H\bibinitperiod},
+           given={Hyuga},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f0dd99f154a44fe0a191826f8d61bb5}{%
+           family={Kondo},
+           familyi={K\bibinitperiod},
+           given={Yoshiki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0de8c063e0419be56232fe383bb0d22c}{%
+           family={Nakamura},
+           familyi={N\bibinitperiod},
+           given={Haruki},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=405e0a36d4e932ba72891e1168a78795}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Shin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f628467ac4ef956bdd0d0167e01695da}{%
+           family={Hayakawa},
+           familyi={H\bibinitperiod},
+           given={Kiyoshi},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c715e6b6169b5097eb9e26b48892ddc6}{%
+           family={Nakajima},
+           familyi={N\bibinitperiod},
+           given={Kohei},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61064ae6559f20a0d98a33d5e61ba810}{%
+           family={Takei},
+           familyi={T\bibinitperiod},
+           given={Kuniharu},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cell Press}%
+      }
+      \strng{namehash}{7b4d71c2197405f5483ebef1e3a20b6e}
+      \strng{fullhash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{bibnamehash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{authorbibnamehash}{e5987b8fa6262d6c72e62761f9413f52}
+      \strng{authornamehash}{7b4d71c2197405f5483ebef1e3a20b6e}
+      \strng{authorfullhash}{e5987b8fa6262d6c72e62761f9413f52}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{26669986}
+      \field{journaltitle}{Device}
+      \field{month}{2}
+      \field{title}{Real-time personal healthcare data analysis using edge computing for multimodal wearable sensors}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1016/j.device.2024.100597
+      \endverb
+      \keyw{DTI-4: Validate,echo state network,edge computing,flexible sensors,healthcare,multimodal sensor patch,remote monitoring,reservoir computing,wearable sensors}
+    \endentry
+    \entry{Nguyen2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c9ae518402261d528d1d325e3575e2f7}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Dinh\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=528c6837e62a20bb6691e4832906ee0e}{%
+           family={Pathirana},
+           familyi={P\bibinitperiod},
+           given={Pubudu\bibnamedelima N.},
+           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46a3f0b5c048254bc7f6910cd7e8cd63}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87e0902bc41d8bb2bce8de7c1c37afa4}{%
+           family={Seneviratne},
+           familyi={S\bibinitperiod},
+           given={Aruna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{75ebdd0dbc8dee82e3b3c79121f04007}
+      \strng{fullhash}{a840eadcc979d5b70a05146907340444}
+      \strng{bibnamehash}{a840eadcc979d5b70a05146907340444}
+      \strng{authorbibnamehash}{a840eadcc979d5b70a05146907340444}
+      \strng{authornamehash}{75ebdd0dbc8dee82e3b3c79121f04007}
+      \strng{authorfullhash}{a840eadcc979d5b70a05146907340444}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2327-4662}
+      \field{issue}{14}
+      \field{journaltitle}{IEEE Internet of Things Journal}
+      \field{month}{7}
+      \field{title}{BEdgeHealth: A Decentralized Architecture for Edge-Based IoMT Networks Using Blockchain}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{11743\bibrangedash 11757}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/JIOT.2021.3058953
+      \endverb
+    \endentry
+    \entry{Osama2023}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=fc9ef9258fa3d26042a66243183121c5}{%
+           family={Osama},
+           familyi={O\bibinitperiod},
+           given={Manar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea1947aee42316b0fe12b92fd1b704c2}{%
+           family={Ateya},
+           familyi={A\bibinitperiod},
+           given={Abdelhamied\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c3f8918c19c93b2efb3c1ec08b09f86}{%
+           family={Sayed},
+           familyi={S\bibinitperiod},
+           given={Mohammed\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb4f5dd4b542a4e86828bd72460883c9}{%
+           family={Hammad},
+           familyi={H\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8cbe17a659da7863a20369c14149107}{%
+           family={Pławiak},
+           familyi={P\bibinitperiod},
+           given={Paweł},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fa7a2ab6d2b05b9ca7231076fd126ff}{%
+           family={El-Latif},
+           familyi={E\bibinithyphendelim L\bibinitperiod},
+           given={Ahmed\bibnamedelimb A.\bibnamedelimi Abd},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30d363939bb3b23399d3abaefdb54f94}{%
+           family={Elsayed},
+           familyi={E\bibinitperiod},
+           given={Rania\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa02780875f294a45afc281d511de190}
+      \strng{fullhash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{bibnamehash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{authorbibnamehash}{617d6a31819e8482e0f24efb90c1a362}
+      \strng{authornamehash}{fa02780875f294a45afc281d511de190}
+      \strng{authorfullhash}{617d6a31819e8482e0f24efb90c1a362}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1424-8220}
+      \field{issue}{17}
+      \field{journaltitle}{Sensors}
+      \field{month}{8}
+      \field{title}{Internet of Medical Things and Healthcare 4.0: Trends, Requirements, Challenges, and Research Directions}
+      \field{volume}{23}
+      \field{year}{2023}
+      \field{pages}{7435}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s23177435
+      \endverb
+    \endentry
+    \entry{Prabhu2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a19262fe294aa725cac2e736e2f576bf}{%
+           family={Prabhu},
+           familyi={P\bibinitperiod},
+           given={Makarand},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5c6ba6d974aaf0f17cf01a80056c90b}{%
+           family={Hanumanthaiah},
+           familyi={H\bibinitperiod},
+           given={Aravind},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{fullhash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{bibnamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authorbibnamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authornamehash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \strng{authorfullhash}{778df47aeb5d6d8a16e147b3e45e1c22}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781665496483}
+      \field{journaltitle}{2022 International Conference on Wireless Communications, Signal Processing and Networking, WiSPNET 2022}
+      \field{title}{Edge Computing-Enabled Healthcare Framework to Provide Telehealth Services}
+      \field{year}{2022}
+      \field{pages}{349\bibrangedash 353}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/WiSPNET54241.2022.9767142
+      \endverb
+      \keyw{Edge Computing,EdgeX Foundry,Internet of Things,telemedicine}
+    \endentry
+    \entry{Rancea2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3ab1eb38b39d79b193a7e1769926562f}{%
+           family={Rancea},
+           familyi={R\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=681b6a1a5abf5f792d90a02f125423d8}{%
+           family={Anghel},
+           familyi={A\bibinitperiod},
+           given={Ionut},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=981dbe4cf783d460a0fad67dbd2d9ae3}{%
+           family={Cioara},
+           familyi={C\bibinitperiod},
+           given={Tudor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{8b3655152a67f435eb0f13e6a9cf8e0a}
+      \strng{fullhash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{bibnamehash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{authorbibnamehash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \strng{authornamehash}{8b3655152a67f435eb0f13e6a9cf8e0a}
+      \strng{authorfullhash}{2a09ecf3127d7a2e61d8e1e69f3a0d27}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{19995903}
+      \field{issue}{9}
+      \field{journaltitle}{Future Internet}
+      \field{month}{9}
+      \field{title}{Edge Computing in Healthcare: Innovations, Opportunities, and Challenges}
+      \field{volume}{16}
+      \field{year}{2024}
+      \field{pages}{329}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/fi16090329
+      \endverb
+    \endentry
+    \entry{EEDS}{legislation}{}
+      \list{institution}{1}{%
+        {Parlamento Europeo y Consejo}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{2}
+      \field{number}{2025/327}
+      \field{series}{Diario Oficial de la Unión Europea, Serie L}
+      \field{title}{Reglamento (UE) 2025/327 del Parlamento Europeo y del Consejo, de 11 de febrero de 2025, relativo al Espacio Europeo de Datos de Salud, y por el que se modifican la Directiva 2011/24/UE y el Reglamento (UE) 2024/2847}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{327}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 96}
+      \range{pages}{96}
+      \verb{urlraw}
+      \verb https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=OJ:L_202500327
+      \endverb
+      \verb{url}
+      \verb https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=OJ:L_202500327
+      \endverb
+    \endentry
+    \entry{Rieke2020}{article}{}
+      \name{author}{17}{}{%
+        {{un=0,uniquepart=base,hash=1e2eba5122411135dccbe9935828473b}{%
+           family={Rieke},
+           familyi={R\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e355d441b2142a0af46b5f9a48576257}{%
+           family={Hancox},
+           familyi={H\bibinitperiod},
+           given={Jonny},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d32ec3dde5f923678d38244353a95911}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wenqi},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6666cd091720791f26f874376aa4563}{%
+           family={Milletarì},
+           familyi={M\bibinitperiod},
+           given={Fausto},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04c08832941bceae0bfee57a4113dd33}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Holger\bibnamedelima R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2627324e68cc256cc982b8c816041c31}{%
+           family={Albarqouni},
+           familyi={A\bibinitperiod},
+           given={Shadi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=492e29a8f843b2425b1ad81806f1307f}{%
+           family={Bakas},
+           familyi={B\bibinitperiod},
+           given={Spyridon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68a8b89b93885b94e0a2a8689f604f81}{%
+           family={Galtier},
+           familyi={G\bibinitperiod},
+           given={Mathieu\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97f6985f9c2acc2c5cb994b321131d1e}{%
+           family={Landman},
+           familyi={L\bibinitperiod},
+           given={Bennett\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=114f1f4d61f0bb02e9a8b368c52702bc}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81ba59598fdce027a3a694c8dd331fe7}{%
+           family={Ourselin},
+           familyi={O\bibinitperiod},
+           given={Sébastien},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70a9538cd20302b8cbe3f57120c959b4}{%
+           family={Sheller},
+           familyi={S\bibinitperiod},
+           given={Micah},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cb874838345a043921eea69ab2809ee}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Ronald\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27cd1df7880d14dc1dab23f4d06dfd30}{%
+           family={Trask},
+           familyi={T\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40c221ac11c898cb10013b2468fc229b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Daguang},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8692a977eded1f016170c5ec5ecb4493}{%
+           family={Baust},
+           familyi={B\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da7555ed408fdfa8a4bf2b6aa96e7e75}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi Jorge},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ce9efa37ce660289f28fb5d0724f3268}
+      \strng{fullhash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{bibnamehash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{authorbibnamehash}{787f6dccb3383ac7750364bb7961aca8}
+      \strng{authornamehash}{ce9efa37ce660289f28fb5d0724f3268}
+      \strng{authorfullhash}{787f6dccb3383ac7750364bb7961aca8}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2398-6352}
+      \field{issue}{1}
+      \field{journaltitle}{npj Digital Medicine}
+      \field{month}{9}
+      \field{title}{The future of digital health with federated learning}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{pages}{119}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41746-020-00323-1
+      \endverb
+    \endentry
+    \entry{Sadiku2014}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=acd2910fdff85c25e324e4401e07500d}{%
+           family={Sadiku},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelima N.O.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25764b86ca42b4aa4af03e54bb10e02b}{%
+           family={Musa},
+           familyi={M\bibinitperiod},
+           given={Sarhan\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d89428de2c0f3cc8220be8ed596d8b73}{%
+           family={Momoh},
+           familyi={M\bibinitperiod},
+           given={Omonowo\bibnamedelima D.},
+           giveni={O\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ba87cb2de8d8de70269d1100cb465d88}
+      \strng{fullhash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{bibnamehash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{authorbibnamehash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \strng{authornamehash}{ba87cb2de8d8de70269d1100cb465d88}
+      \strng{authorfullhash}{20382f187d5e96f54edc2c7c0d9f1fcf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{02786648}
+      \field{issue}{1}
+      \field{journaltitle}{IEEE Potentials}
+      \field{month}{2}
+      \field{title}{Cloud computing: Opportunities and challenges}
+      \field{volume}{33}
+      \field{year}{2014}
+      \field{pages}{34\bibrangedash 36}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/MPOT.2013.2279684
+      \endverb
+    \endentry
+    \entry{Singh2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=82b79742d5dde913c71b884eef9993fa}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f81de88b3ebac6842cbe0d450af319e}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Kakali},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{fullhash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{bibnamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authorbibnamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authornamehash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \strng{authorfullhash}{49d89200aa1eb094336d0cc75c3dcc36}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01674048}
+      \field{journaltitle}{Computers \& Security}
+      \field{month}{9}
+      \field{title}{Securing smart healthcare system with edge computing}
+      \field{volume}{108}
+      \field{year}{2021}
+      \field{pages}{102353}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cose.2021.102353
+      \endverb
+    \endentry
+    \entry{Tlemcani2025}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fdf6e7cd22148c337f133325e694029d}{%
+           family={Tlemcani},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0ebfa0f464fc863c9a1a5ef596303b0}{%
+           family={Azbeg},
+           familyi={A\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c3dd25ddb9652f9e1d77ca87c7805e7}{%
+           family={Saoudi},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9816aff2ab81382106c7304ca28b5913}{%
+           family={Fetjah},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50ba1319ca6eb0ced9bbcda3ad98b728}{%
+           family={Ouchetto},
+           familyi={O\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dce7020966d2d67e1564c3e1eee1c2a5}{%
+           family={Andaloussi},
+           familyi={A\bibinitperiod},
+           given={S.\bibnamedelimi Jai},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{ad27c16e2f64371b6658372eb76fffe8}
+      \strng{fullhash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{bibnamehash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{authorbibnamehash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \strng{authornamehash}{ad27c16e2f64371b6658372eb76fffe8}
+      \strng{authorfullhash}{ed0d9a6937155361728ad7af57e7dbcd}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{21693536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Empowering Diabetes Management Through Blockchain and Edge Computing: A Systematic Review of Healthcare Innovations and Challenges}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{pages}{14426\bibrangedash 14443}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2025.3531350
+      \endverb
+      \keyw{Blockchain technology,IoT,diabetes management,edge computing,healthcare management,scalability challenges}
+    \endentry
+    \entry{Veeramachaneni2025}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cacb050be4a877231dab9582ca5cfd87}{%
+           family={Veeramachaneni},
+           familyi={V\bibinitperiod},
+           given={Vinod},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{fullhash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{bibnamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authorbibnamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authornamehash}{cacb050be4a877231dab9582ca5cfd87}
+      \strng{authorfullhash}{cacb050be4a877231dab9582ca5cfd87}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Recent Trends in Computer Graphics and Multimedia Technology}
+      \field{title}{Edge Computing: Architecture, Applications, and Future Challenges in a Decentralized Era}
+      \field{volume}{7}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.5281/zenodo.14166793
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.14166793
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.14166793
+      \endverb
+      \keyw{5G,Adaptive Resource Management,Data Privacy,Decentralized Architecture,Edge Computing,Industry 50,IoT Integration,Latency Reduction,Real-Time Processing}
+    \endentry
+    \entry{Wang2024}{article}{}
+      \name{author}{7}{}{%
+        {{un=1,uniquepart=given,hash=97af6121b9cba782523c5cb725bdcd41}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lianhai},
+           giveni={L\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=602447aa6b2017709809182e973ada91}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xiaoqian},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349faac9cd775a5a8d09f8cef1c0fd43}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22eac51011dde379fe765f6a43c651d5}{%
+           family={Guan},
+           familyi={G\bibinitperiod},
+           given={Chenxi},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1533793a2288ea930afc5133e10f4b3}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Qihao},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc47176e605975d79333fe46c076922b}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shujiang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bce12a6509e18fb81742cb644a48e955}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shuhui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26806a10d1cf3e1592ca84f78c9cc80e}
+      \strng{fullhash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{bibnamehash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{authorbibnamehash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \strng{authornamehash}{26806a10d1cf3e1592ca84f78c9cc80e}
+      \strng{authorfullhash}{57ecb79f2ce74f62d87c3b83a7218103}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2073-8994}
+      \field{issue}{1}
+      \field{journaltitle}{Symmetry}
+      \field{month}{1}
+      \field{title}{A Blockchain-Based Privacy-Preserving Healthcare Data Sharing Scheme for Incremental Updates}
+      \field{volume}{16}
+      \field{year}{2024}
+      \field{pages}{89}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/sym16010089
+      \endverb
+    \endentry
+    \entry{Wang2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=330e18fb499a5fa7fa598125962993f7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=5c4e3a412b37031c88be1072015e3aa6}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96018e95ae970c73c10754eea4456b93}{%
+           family={Wojtusiak},
+           familyi={W\bibinitperiod},
+           given={Janusz},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{fullhash}{b1999921432916facd33771114d6f015}
+      \strng{bibnamehash}{b1999921432916facd33771114d6f015}
+      \strng{authorbibnamehash}{b1999921432916facd33771114d6f015}
+      \strng{authornamehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{authorfullhash}{b1999921432916facd33771114d6f015}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{15th International Conference on Health Informatics}
+      \field{month}{01}
+      \field{title}{From Wearable Device to OpenEMR: 5G Edge Centered Telemedicine and Decision Support System}
+      \field{year}{2022}
+      \field{pages}{491\bibrangedash 498}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.5220/0010837600003123
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

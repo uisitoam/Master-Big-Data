@@ -585,12 +585,12 @@
 
 % Process the option list and input the language definitions
 \ProcessKeyvalOptions{jabbrv}
-\InputIfFileExists{jabbrv-ltwa-all.ldf}{}{%
-	\@latex@error{The master abbreviation language file `jabbrv-ltwa-all.ldf' was not found}{Make sure the file is in the appropriate folder and recompile.}%
-}
-\InputIfFileExists{jabbrv-ltwa-\jabbrv@lang.ldf}{}{%
-	\@latex@error{Abbreviation language `jabbrv-ltwa-\jabbrv@lang.ldf' not found}{Select a valid language and recompile.}%
-}
+%\InputIfFileExists{jabbrv-ltwa-all.ldf}{}{%
+%	\@latex@error{The master abbreviation language file `jabbrv-ltwa-all.ldf' was not found}{Make sure the file is in the appropriate folder and recompile.}%
+%}
+%\InputIfFileExists{jabbrv-ltwa-\jabbrv@lang.ldf}{}{%
+%	\@latex@error{Abbreviation language `jabbrv-ltwa-\jabbrv@lang.ldf' not found}{Select a valid language and recompile.}%
+%}
 
 % If working with biblatex then apply the journal title as a "field handler"
 \@ifl@t@r\fmtversion{2020-10-01}{%
