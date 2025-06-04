@@ -1,1 +1,0 @@
-curl 172.16.240.27:2310/v2/entities/Mota10Final?options=keyValues -s -S --header 'Accept: application/json'
